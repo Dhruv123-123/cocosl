@@ -138,6 +138,7 @@ Highest-risk facts this month (check these first): the 2027 filing-season openin
 - [ ] Free weekly credit reports; checking your own does not affect your score; freezes are free at all three bureaus
 - [ ] 2026 IRA contributions allowed until April 15, 2027
 - [ ] Asking for a lower APR is not a credit inquiry (generally true; confirm wording)
+- [ ] Chart 'Tu colchón de mil dólares': Mes 1 250, Mes 2 500, Mes 3 750, Mes 4 1000 (Ejemplo: $125 por quincena, dos quincenas al mes)
 
 ### 24. Temporada de impuestos 2027: la guía en español antes de declarar
 - [ ] Native Spanish read (screen, caption, narration)
@@ -150,3 +151,4 @@ Highest-risk facts this month (check these first): the 2027 filing-season openin
 - [ ] IRS typically initiates contact by mail; never demands gift cards, crypto or wire transfers
 - [ ] IP PIN available to any taxpayer who can verify identity
 - [ ] Form 1095-A needed for Marketplace coverage (premium tax credit reconciliation)
+- [ ] Chart 'Un reembolso de $2,000 en cuatro partes': Colchón 600, Deuda más cara 800, Tu meta 400, Para ti 200 (Ejemplo ilustrativo, no es un consejo)

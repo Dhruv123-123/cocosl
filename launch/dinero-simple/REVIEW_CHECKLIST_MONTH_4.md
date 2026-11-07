@@ -120,6 +120,7 @@ Highest-risk facts this month (check these first): the overdraft opt-in rule for
 - [ ] Credit repair organizations can't charge before services are performed (CROA)
 - [ ] Selling a 'new credit identity' (CPN) is fraud
 - [ ] Rent reporting not used by all scoring models
+- [ ] Chart 'Qué pesa en tu puntaje': Pagar a tiempo 35, Uso del límite 30, Antigüedad 15, Solicitudes nuevas 10, Tipos de crédito 10 (Pesos aproximados que publica FICO)
 
 ### 24. Tu cuenta de banco sin cargos (con o sin Seguro Social): la guía completa
 - [ ] Native Spanish read (screen, caption, narration)
@@ -128,3 +129,4 @@ Highest-risk facts this month (check these first): the overdraft opt-in rule for
 - [ ] Remittance error claims within 180 days
 - [ ] Check-cashing example: $800 x 3% = $24, x 24 = $576/year (illustrative)
 - [ ] Some remittance providers charge less when funded from a bank account (varies)
+- [ ] Chart 'Cambiar cheques te cuesta al año': Un cheque 24, Un mes 48, Un año 576 (Ejemplo: cheque de $800 cada quincena, cuota de 3%)

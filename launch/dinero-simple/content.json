@@ -1778,7 +1778,26 @@
      "heading": "Por qué importa el tiempo",
      "narration": "Un ejemplo hipotético para que veas la forma. Inviertes $100 al mes durante cuarenta años y supones un promedio de siete por ciento al año. Pondrías $48,000 y la cuenta valdría unos $262,000. Si empiezas diez años después, con los mismos $100 y el mismo supuesto, pondrías $36,000 y terminarías con unos $122,000. Diez años menos te cuestan más de la mitad del resultado, porque el crecimiento de las últimas décadas es crecimiento sobre crecimiento. Los mercados de verdad no dan un siete por ciento parejito, y nadie promete rendimientos. Pero la lección se mantiene: empezar con poco y temprano casi siempre le gana a empezar con mucho y tarde.",
      "on_screen_text": "40 años ≈ $262k · 30 años ≈ $122k",
-     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two coin trees, one planted earlier and much taller than the other, same-size watering cans. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two coin trees, one planted earlier and much taller than the other, same-size watering cans. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "$100 al mes: 40 años contra 30",
+      "labels": [
+       "40 años: pones",
+       "40 años: vale",
+       "30 años: pones",
+       "30 años: vale"
+      ],
+      "values": [
+       48000,
+       262000,
+       36000,
+       122000
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Hipotético: 7% al año parejo; nadie promete rendimientos"
+     }
     },
     {
      "heading": "Antes de invertir",
@@ -1865,10 +1884,12 @@
     "Employee 401(k) contributions are always 100% vested",
     "Broad US stock market has declined 20%+ multiple times in recent decades (e.g., 2000–02, 2008–09, 2020, 2022)",
     "Broad index funds from large providers often charge a few hundredths of a percent",
-    "Spanish narration runs ~15% longer than English; re-time the chapter markers in the description after voicing"
+    "Spanish narration runs ~15% longer than English; re-time the chapter markers in the description after voicing",
+    "Chart '$100 al mes: 40 años contra 30': 40 años: pones 48000, 40 años: vale 262000, 30 años: pones 36000, 30 años: vale 122000 (Hipotético: 7% al año parejo; nadie promete rendimientos)"
    ],
    "title_variants": [],
-   "hook_variants": []
+   "hook_variants": [],
+   "original_element": "Graba la pantalla de una calculadora pública de interés compuesto (Investor.gov) con $100 al mes y 7%"
   }
  },
  {
@@ -1921,7 +1942,26 @@
      "heading": "Semana 3: empieza el colchón",
      "narration": "Días dieciocho al veintiuno: abre una cuenta de ahorro aparte para emergencias en un banco o cooperativa de crédito asegurados. Las cuentas de ahorro de alto rendimiento muchas veces pagan mucho más interés que una cuenta normal de un banco grande; revisa que esté asegurada por la FDIC o la NCUA y que no cobre cuota mensual. Luego programa una transferencia automática, aunque sean $25 a la semana. La primera meta es $1,000. La meta a largo plazo es de tres a seis meses de gastos básicos. Este fondo es lo que evita que la próxima sorpresa se vuelva deuda nueva en la tarjeta, que es como mucha gente se queda atorada.",
      "on_screen_text": "Semana 3: empieza un colchón de $1,000",
-     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a jar under an umbrella, slowly filling with a steady drip of coins. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a jar under an umbrella, slowly filling with a steady drip of coins. No text, no logos, no real people.",
+     "chart": {
+      "kind": "line",
+      "title": "$25 a la semana hasta $1,000",
+      "labels": [
+       "Sem 10",
+       "Sem 20",
+       "Sem 30",
+       "Sem 40"
+      ],
+      "values": [
+       250,
+       500,
+       750,
+       1000
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Ejemplo: transferencia automática de $25 cada semana"
+     }
     },
     {
      "heading": "Semana 4: activa tu retiro",
@@ -1978,10 +2018,12 @@
     "Emergency fund guidance of 3–6 months of essential expenses",
     "High-yield savings accounts often pay well above big-bank standard savings rates (check FDIC national rate)",
     "Spanish narration runs ~15% longer than English; re-time the chapter markers after voicing",
-    "Confirm studentaid.gov Loan Simulator is still the right tool name and that the repayment-plan changes line is current"
+    "Confirm studentaid.gov Loan Simulator is still the right tool name and that the repayment-plan changes line is current",
+    "Chart '$25 a la semana hasta $1,000': Sem 10 250, Sem 20 500, Sem 30 750, Sem 40 1000 (Ejemplo: transferencia automática de $25 cada semana)"
    ],
    "title_variants": [],
-   "hook_variants": []
+   "hook_variants": [],
+   "original_element": "Graba la pantalla de El Presupuesto con números de ejemplo: el número semanal de la semana 2"
   }
  }
 ]

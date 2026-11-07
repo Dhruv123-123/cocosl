@@ -1605,7 +1605,28 @@
      "heading": "El puntaje",
      "narration": "Tu puntaje de crédito es un número que usan los prestamistas para adivinar si vas a pagar. El más usado se calcula con cinco cosas. La más importante, más o menos un tercio, es si pagas a tiempo. La segunda es cuánto de tu límite usas: entre menos, mejor. Después cuentan la antigüedad de tus cuentas, las solicitudes nuevas y los tipos de crédito. Con eso ya sabes lo principal: paga siempre a tiempo y usa poco.",
      "on_screen_text": "Pagos a tiempo y poco uso: casi todo",
-     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a pie chart with two big slices highlighted. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a pie chart with two big slices highlighted. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Qué pesa en tu puntaje",
+      "labels": [
+       "Pagar a tiempo",
+       "Uso del límite",
+       "Antigüedad",
+       "Solicitudes nuevas",
+       "Tipos de crédito"
+      ],
+      "values": [
+       35,
+       30,
+       15,
+       10,
+       10
+      ],
+      "unit_prefix": "",
+      "unit_suffix": "%",
+      "note": "Pesos aproximados que publica FICO"
+     }
     },
     {
      "heading": "Lo que no cuenta",
@@ -1692,10 +1713,12 @@
     "Bureaus can keep files under ITIN; merging ITIN and SSN history requires contacting bureaus/lenders",
     "Credit repair organizations can't charge before services are performed (CROA)",
     "Selling a 'new credit identity' (CPN) is fraud",
-    "Rent reporting not used by all scoring models"
+    "Rent reporting not used by all scoring models",
+    "Chart 'Qué pesa en tu puntaje': Pagar a tiempo 35, Uso del límite 30, Antigüedad 15, Solicitudes nuevas 10, Tipos de crédito 10 (Pesos aproximados que publica FICO)"
    ],
    "title_variants": [],
-   "hook_variants": []
+   "hook_variants": [],
+   "original_element": "Graba la pantalla de AnnualCreditReport.com mostrando dónde se piden los tres reportes gratis (sin poner datos)"
   }
  },
  {
@@ -1717,7 +1740,24 @@
      "heading": "Por qué",
      "narration": "Primero, por qué tener cuenta. El dinero en casa se puede perder en un robo o un incendio, y nadie te lo repone. En una cuenta asegurada, está protegido hasta doscientos cincuenta mil dólares aunque el banco quiebre. Además, con depósito directo tu sueldo llega gratis, en vez de pagar por cambiar cada cheque. Con un cheque de ochocientos dólares y una cuota de tres por ciento, son veinticuatro dólares cada vez, casi seiscientos al año si te pagan cada quincena.",
      "on_screen_text": "Tu dinero, asegurado y sin costo",
-     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a shield over a stack of coins. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a shield over a stack of coins. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Cambiar cheques te cuesta al año",
+      "labels": [
+       "Un cheque",
+       "Un mes",
+       "Un año"
+      ],
+      "values": [
+       24,
+       48,
+       576
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Ejemplo: cheque de $800 cada quincena, cuota de 3%"
+     }
     },
     {
      "heading": "Banco o cooperativa",
@@ -1797,10 +1837,12 @@
     "Reg E overdraft opt-in for debit/ATM",
     "Remittance error claims within 180 days",
     "Check-cashing example: $800 x 3% = $24, x 24 = $576/year (illustrative)",
-    "Some remittance providers charge less when funded from a bank account (varies)"
+    "Some remittance providers charge less when funded from a bank account (varies)",
+    "Chart 'Cambiar cheques te cuesta al año': Un cheque 24, Un mes 48, Un año 576 (Ejemplo: cheque de $800 cada quincena, cuota de 3%)"
    ],
    "title_variants": [],
-   "hook_variants": []
+   "hook_variants": [],
+   "original_element": "Graba la pantalla del buscador de cuentas Bank On certificadas (joinbankon.org), filtrando por tu código postal"
   }
  }
 ]

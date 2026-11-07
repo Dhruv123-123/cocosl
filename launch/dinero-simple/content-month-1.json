@@ -2200,13 +2200,47 @@
      "heading": "El costo real",
      "narration": "Cada envío tiene dos costos. El primero es la comisión, la que ves: tres, cinco, ocho dólares, o un porcentaje. El segundo es el tipo de cambio. Si el mercado está a, digamos, 18 pesos por dólar y a ti te dan 17.60, esos cuarenta centavos por dólar se los queda la empresa. En $300 son unos $6.70 más, escondidos. Por eso un envío 'sin comisión' puede salir más caro que uno con comisión de $3. El único número que de verdad sirve para comparar es uno: cuánto recibe tu familia allá por los mismos dólares.",
      "on_screen_text": "Comisión + tipo de cambio = costo real",
-     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two price tags, one visible and one half hidden behind an envelope. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two price tags, one visible and one half hidden behind an envelope. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Lo que recibe tu familia por $300",
+      "labels": [
+       "Al tipo del mercado (18)",
+       "A 17.60, 'sin comisión'"
+      ],
+      "values": [
+       5400,
+       5280
+      ],
+      "unit_prefix": "",
+      "unit_suffix": " pesos",
+      "note": "Ejemplo: 120 pesos menos, unos $6.70 escondidos en el tipo de cambio"
+     }
     },
     {
      "heading": "Cuánto suma",
      "narration": "Hagamos la cuenta del año. Si entre comisión y tipo de cambio pierdes $10 en cada envío de $300 y mandas cada mes, son $120 al año. Si mandas cada semana con una comisión fija, puede ser el doble. Y en muchos servicios, enviar desde una tienda en efectivo cuesta más que enviar desde una app conectada a tu cuenta. Los números exactos cambian por empresa, país y día, por eso no te damos una tabla. Te damos el método.",
      "on_screen_text": "$10 por envío × 12 = $120 al año",
-     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. twelve small coins falling off a calendar. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. twelve small coins falling off a calendar. No text, no logos, no real people.",
+     "chart": {
+      "kind": "line",
+      "title": "Lo que pierdes en un año",
+      "labels": [
+       "3 meses",
+       "6 meses",
+       "9 meses",
+       "12 meses"
+      ],
+      "values": [
+       30,
+       60,
+       90,
+       120
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Ejemplo: $10 perdidos en cada envío de $300, uno al mes"
+     }
     },
     {
      "heading": "Cómo comparar",
@@ -2275,10 +2309,13 @@
     "CFPB Remittance Rule: pre-payment disclosures, 30-minute cancellation, 180-day error window",
     "1% excise tax on cash-funded remittances after Dec 31, 2025; exempt from US accounts and US-issued cards",
     "Some card issuers treat money transfers as cash advances",
-    "World Bank Remittance Prices Worldwide compares corridor prices"
+    "World Bank Remittance Prices Worldwide compares corridor prices",
+    "Chart 'Lo que recibe tu familia por $300': Al tipo del mercado (18) 5400, A 17.60, 'sin comisión' 5280 (Ejemplo: 120 pesos menos, unos $6.70 escondidos en el tipo de cambio)",
+    "Chart 'Lo que pierdes en un año': 3 meses 30, 6 meses 60, 9 meses 90, 12 meses 120 (Ejemplo: $10 perdidos en cada envío de $300, uno al mes)"
    ],
    "title_variants": [],
-   "hook_variants": []
+   "hook_variants": [],
+   "original_element": "Graba la pantalla comparando cuánto recibe tu familia por $300 en dos apps de envío, el mismo día (sin iniciar sesión, solo el cotizador)"
   }
  },
  {
@@ -2306,7 +2343,30 @@
      "heading": "El fondo semanal",
      "narration": "Paso dos: divide el total entre las semanas que faltan para tu último día de compras. Si son $480 y faltan seis semanas, son $80 a la semana. Abre un apartado en tu cuenta de ahorro solo para diciembre, y cada día de pago pasa esa cantidad. Todo lo de las fiestas sale de ahí. Así el dinero de los regalos nunca se mezcla con el del súper.",
      "on_screen_text": "Paso 2: total ÷ semanas = número semanal",
-     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a ribboned jar receiving coins on a weekly calendar. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a ribboned jar receiving coins on a weekly calendar. No text, no logos, no real people.",
+     "chart": {
+      "kind": "line",
+      "title": "Tu fondo de diciembre, semana a semana",
+      "labels": [
+       "Sem 1",
+       "Sem 2",
+       "Sem 3",
+       "Sem 4",
+       "Sem 5",
+       "Sem 6"
+      ],
+      "values": [
+       80,
+       160,
+       240,
+       320,
+       400,
+       480
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Ejemplo: $480 en seis semanas, $80 cada semana"
+     }
     },
     {
      "heading": "Los regalos",
@@ -2372,10 +2432,12 @@
    "claims_to_verify": [
     "22% optional flat federal withholding on supplemental wages",
     "1% excise tax on cash-funded remittances from 2026",
-    "Example amounts are illustrative"
+    "Example amounts are illustrative",
+    "Chart 'Tu fondo de diciembre, semana a semana': Sem 1 80, Sem 2 160, Sem 3 240, Sem 4 320, Sem 5 400, Sem 6 480 (Ejemplo: $480 en seis semanas, $80 cada semana)"
    ],
    "title_variants": [],
-   "hook_variants": []
+   "hook_variants": [],
+   "original_element": "Graba la pantalla abriendo un apartado de ahorro llamado 'Diciembre' en una app de banco de demostración, o la hoja del presupuesto con el total de diciembre"
   }
  }
 ]

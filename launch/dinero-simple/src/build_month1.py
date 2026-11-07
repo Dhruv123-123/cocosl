@@ -16,6 +16,7 @@ sys.path.insert(0, str(HERE))
 import month1_carousels, month1_long, month1_shorts_a, month1_shorts_b  # noqa: E402
 from build_content import MASCOT_ES, STYLE_ES  # noqa: E402
 from links import add_youtube_links  # noqa: E402
+from originals import apply as add_original_elements  # noqa: E402
 
 # Long videos: site pages linked at the end of the YouTube description (UTM campaign = the key).
 YOUTUBE_LINKS = {"l-mandar-dinero": ["presupuesto", "gratis"],
@@ -44,7 +45,7 @@ def build() -> list[dict]:
                   "claims_to_verify": it["claims"], "title_variants": [], "hook_variants": []}
         out.append({"key": it["key"], "format": it["format"], "pillar": it["pillar"], "idea_angle": it["angle"],
                     "script": script})
-    return out
+    return add_original_elements(out)
 
 
 if __name__ == "__main__":

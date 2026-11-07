@@ -19,6 +19,7 @@ sys.path.insert(0, str(HERE))
 import month2_carousels, month2_long, month2_shorts  # noqa: E402
 from build_month1 import visual  # noqa: E402
 from links import add_youtube_links  # noqa: E402
+from originals import apply as add_original_elements  # noqa: E402
 from month1_shorts_a import CTA  # noqa: E402
 
 YOUTUBE_LINKS = {"l-plan-2027": ["paquete", "presupuesto", "gratis"],
@@ -76,7 +77,7 @@ def build(sources: list | None = None, youtube_links: dict | None = None) -> lis
                   "claims_to_verify": it["claims"], "title_variants": [], "hook_variants": []}
         out.append({"key": it["key"], "format": it["format"], "pillar": it["pillar"], "idea_angle": it["angle"],
                     "script": script})
-    return out
+    return add_original_elements(out)
 
 
 def folder(items: list[dict], key: str) -> str:

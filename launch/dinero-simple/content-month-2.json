@@ -1708,7 +1708,26 @@
      "heading": "Colchón",
      "narration": "Paso cinco: el colchón. Si no tienes un fondo de emergencias, la meta de enero no es tener seis meses de gastos. Es llegar a mil dólares. Con eso, una llanta ponchada o una visita al doctor ya no va a la tarjeta. Si apartas $125 por quincena, llegas en cuatro meses. Tu reembolso de impuestos puede adelantarlo mucho. Después de los mil, sigues subiendo poco a poco hacia tres meses de gastos básicos.",
      "on_screen_text": "Paso 5: tu colchón, primero $1,000",
-     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an umbrella over a jar slowly filling with coins. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an umbrella over a jar slowly filling with coins. No text, no logos, no real people.",
+     "chart": {
+      "kind": "line",
+      "title": "Tu colchón de mil dólares",
+      "labels": [
+       "Mes 1",
+       "Mes 2",
+       "Mes 3",
+       "Mes 4"
+      ],
+      "values": [
+       250,
+       500,
+       750,
+       1000
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Ejemplo: $125 por quincena, dos quincenas al mes"
+     }
     },
     {
      "heading": "Retiro",
@@ -1758,10 +1777,12 @@
     "$125 per biweekly paycheck reaches $1,000 in 8 paychecks (about 4 months)",
     "Free weekly credit reports; checking your own does not affect your score; freezes are free at all three bureaus",
     "2026 IRA contributions allowed until April 15, 2027",
-    "Asking for a lower APR is not a credit inquiry (generally true; confirm wording)"
+    "Asking for a lower APR is not a credit inquiry (generally true; confirm wording)",
+    "Chart 'Tu colchón de mil dólares': Mes 1 250, Mes 2 500, Mes 3 750, Mes 4 1000 (Ejemplo: $125 por quincena, dos quincenas al mes)"
    ],
    "title_variants": [],
-   "hook_variants": []
+   "hook_variants": [],
+   "original_element": "Graba la pantalla llenando la hoja de gastos sorpresa de El Presupuesto con números de ejemplo"
   }
  },
  {
@@ -1817,9 +1838,28 @@
     },
     {
      "heading": "Qué hacer con él",
-     "narration": "Séptimo, qué hacer con el reembolso. Decídelo antes de que llegue, porque con el dinero en la cuenta todo parece urgente. Un plan en cuatro partes: tu colchón si tienes menos de mil dólares, la deuda más cara, una meta con nombre y algo para ti, con tope. Y si cada año te regresan mucho, significa que te retuvieron de más todo el año: puedes revisar tu W-4 con tu trabajo y tener ese dinero en cada cheque.",
+     "narration": "Séptimo, qué hacer con el reembolso. Decídelo antes de que llegue, porque con el dinero en la cuenta todo parece urgente. Un plan en cuatro partes: tu colchón si tienes menos de mil dólares, la deuda más cara, una meta con nombre y algo para ti, con tope. Por ejemplo, de $2,000: $600 al colchón, $800 a la deuda más cara, $400 a tu meta y $200 para ti. Y si cada año te regresan mucho, significa que te retuvieron de más todo el año: puedes revisar tu W-4 con tu trabajo y tener ese dinero en cada cheque.",
      "on_screen_text": "Dale trabajo antes de que llegue",
-     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. four labeled jars receiving coins from one envelope. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. four labeled jars receiving coins from one envelope. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Un reembolso de $2,000 en cuatro partes",
+      "labels": [
+       "Colchón",
+       "Deuda más cara",
+       "Tu meta",
+       "Para ti"
+      ],
+      "values": [
+       600,
+       800,
+       400,
+       200
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Ejemplo ilustrativo, no es un consejo"
+     }
     },
     {
      "heading": "Estafas",
@@ -1865,10 +1905,12 @@
     "Most e-file + direct deposit refunds in under 21 days",
     "IRS typically initiates contact by mail; never demands gift cards, crypto or wire transfers",
     "IP PIN available to any taxpayer who can verify identity",
-    "Form 1095-A needed for Marketplace coverage (premium tax credit reconciliation)"
+    "Form 1095-A needed for Marketplace coverage (premium tax credit reconciliation)",
+    "Chart 'Un reembolso de $2,000 en cuatro partes': Colchón 600, Deuda más cara 800, Tu meta 400, Para ti 200 (Ejemplo ilustrativo, no es un consejo)"
    ],
    "title_variants": [],
-   "hook_variants": []
+   "hook_variants": [],
+   "original_element": "Graba la pantalla de la página '¿Dónde está mi reembolso?' de irs.gov en español (sin poner datos)"
   }
  }
 ]

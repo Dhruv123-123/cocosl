@@ -149,6 +149,7 @@ Highest-risk facts this month (check these first): anything about the IRS sharin
 - [ ] CalEITC accepts ITIN filers
 - [ ] ITIN: 9 digits starting with 9; W-7 with paper return; passport stand-alone; expiry after 3 unused years
 - [ ] Self-employment filing threshold $400 net
+- [ ] Chart 'Cambiar cheques te cuesta al año': Un cheque 24, Un mes 48, Un año 576 (Ejemplo: cheque de $800 cada quincena, cuota de 3%)
 
 ### 24. Si debes al IRS o te llega una carta: qué hacer, paso a paso
 - [ ] Native Spanish read (screen, caption, narration)
@@ -158,3 +159,4 @@ Highest-risk facts this month (check these first): anything about the IRS sharin
 - [ ] Hardship: currently not collectible status
 - [ ] Form 14039 with paper return; IP PIN for SSN or ITIN holders
 - [ ] Quarterly estimated payments for self-employed
+- [ ] Chart 'Multa por 4 meses de atraso': No declarar 200, Declarar y no pagar 20 (Ejemplo: debes $1,000; 5% al mes contra 0.5% al mes, sin intereses)

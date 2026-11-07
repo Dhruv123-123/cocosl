@@ -18,6 +18,7 @@ sys.path.insert(0, str(HERE))
 
 import carousels_a, carousels_b, long_videos, shorts_a, shorts_b  # noqa: E402
 from links import add_youtube_links  # noqa: E402
+from originals import apply as add_original_elements  # noqa: E402
 
 # Long videos: UTM campaign id and the site pages linked at the end of the YouTube description.
 YOUTUBE_LINKS = {22: ("launch-invertir-100", ["invertir", "gratis"]),
@@ -67,7 +68,7 @@ def build() -> list[dict]:
         }
         out.append({"format": src["format"], "pillar": src.get("pillar", ""), "idea_angle": src.get("idea_angle", ""),
                     "source_index": idx, "source_title": en_script["title"], "script": script})
-    return out
+    return add_original_elements(out)
 
 
 if __name__ == "__main__":

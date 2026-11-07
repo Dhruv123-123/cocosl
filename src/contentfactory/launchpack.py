@@ -37,6 +37,13 @@ def caption_text(brand: BrandProfile, item: dict) -> str:
                          "caption and in the narration, and fixed anything that sounds translated")
     out = [sc.title, f"Format: {fmt}", "", "--- CAPTION (paste as-is) ---", paste, "",
            "--- CHECK BEFORE POSTING ---", *checks]
+    if fmt == "long":
+        charts = [f"- {s.heading}: chart '{s.chart.title}' ({s.chart.note or 'exact numbers'})" for s in sc.segments if s.chart]
+        if charts or sc.original_element:
+            out += ["", "--- ORIGINAL ELEMENT (YouTube's inauthentic-content rule) ---", *charts]
+            if sc.original_element:
+                out.append(f"- To make it stronger, record: {sc.original_element}. Add the clip to a beat's "
+                           "footage before rendering.")
     if sc.sources:
         out += ["", "Sources:", *sc.sources]
     if fmt == "long" and sc.description.strip():

@@ -1749,9 +1749,26 @@
     },
     {
      "heading": "Banco y crédito",
-     "narration": "Fuera de los impuestos, el ITIN te abre puertas. Muchos bancos y cooperativas de crédito abren cuentas con ITIN, y con una cuenta tu reembolso llega más rápido y no pagas para cambiar cheques. También puedes empezar tu historial de crédito con una tarjeta asegurada que acepte ITIN y reporte a las tres agencias. Y cuidado con quien te vende un 'número de privacidad de crédito': usarlo puede ser un delito.",
+     "narration": "Fuera de los impuestos, el ITIN te abre puertas. Muchos bancos y cooperativas de crédito abren cuentas con ITIN, y con una cuenta tu reembolso llega más rápido y no pagas para cambiar cheques: con un cheque de $800 y una cuota de 3%, son $24 cada vez, casi $600 al año si te pagan cada quincena. También puedes empezar tu historial de crédito con una tarjeta asegurada que acepte ITIN y reporte a las tres agencias. Y cuidado con quien te vende un 'número de privacidad de crédito': usarlo puede ser un delito.",
      "on_screen_text": "Con ITIN: cuenta de banco y crédito",
-     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bank door opening and a small card with a lock. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bank door opening and a small card with a lock. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Cambiar cheques te cuesta al año",
+      "labels": [
+       "Un cheque",
+       "Un mes",
+       "Un año"
+      ],
+      "values": [
+       24,
+       48,
+       576
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Ejemplo: cheque de $800 cada quincena, cuota de 3%"
+     }
     },
     {
      "heading": "Privacidad",
@@ -1799,10 +1816,12 @@
     "EITC requires SSNs; ITIN filers cannot claim it",
     "CalEITC accepts ITIN filers",
     "ITIN: 9 digits starting with 9; W-7 with paper return; passport stand-alone; expiry after 3 unused years",
-    "Self-employment filing threshold $400 net"
+    "Self-employment filing threshold $400 net",
+    "Chart 'Cambiar cheques te cuesta al año': Un cheque 24, Un mes 48, Un año 576 (Ejemplo: cheque de $800 cada quincena, cuota de 3%)"
    ],
    "title_variants": [],
-   "hook_variants": []
+   "hook_variants": [],
+   "original_element": "Graba la pantalla de la página del formulario W-7 en irs.gov en español, mostrando dónde se descarga"
   }
  },
  {
@@ -1824,7 +1843,22 @@
      "heading": "Declara a tiempo",
      "narration": "Regla número uno: aunque no puedas pagar, declara a tiempo. La multa por no declarar es de 5% de lo que debes por cada mes de atraso, hasta 25%. La de no pagar es de medio por ciento al mes. O sea, no declarar cuesta unas diez veces más que no pagar. Si debes $1,000 y declaras cuatro meses tarde, la multa por no declarar ya va en unos $200.",
      "on_screen_text": "Debes: declara a tiempo igual",
-     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two stacks of coins, one ten times taller. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two stacks of coins, one ten times taller. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Multa por 4 meses de atraso",
+      "labels": [
+       "No declarar",
+       "Declarar y no pagar"
+      ],
+      "values": [
+       200,
+       20
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Ejemplo: debes $1,000; 5% al mes contra 0.5% al mes, sin intereses"
+     }
     },
     {
      "heading": "Paga lo que puedas",
@@ -1904,10 +1938,12 @@
     "Card payments go through processors that charge a fee",
     "Hardship: currently not collectible status",
     "Form 14039 with paper return; IP PIN for SSN or ITIN holders",
-    "Quarterly estimated payments for self-employed"
+    "Quarterly estimated payments for self-employed",
+    "Chart 'Multa por 4 meses de atraso': No declarar 200, Declarar y no pagar 20 (Ejemplo: debes $1,000; 5% al mes contra 0.5% al mes, sin intereses)"
    ],
    "title_variants": [],
-   "hook_variants": []
+   "hook_variants": [],
+   "original_element": "Graba la pantalla de la página de planes de pago de irs.gov en español (sin iniciar sesión)"
   }
  }
 ]

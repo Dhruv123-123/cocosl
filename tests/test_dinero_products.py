@@ -171,3 +171,27 @@ def test_month4_plan_is_complete_and_names_no_bank():
         assert not any(b in text for b in banned), i["key"]
     rows = [r for r in plan.splitlines() if r.startswith("| ") and " mar |" in r]
     assert len(rows) == 24 and len({(r.split("|")[1], r.split("|")[2]) for r in rows}) == 24
+
+
+def test_every_dinero_long_video_has_an_original_element():
+    """YouTube's inauthentic-content rule: each long video carries a chart of its own numbers (passes the
+    factory's original_element check) and names a screen recording to add later."""
+    sys.path.insert(0, str(ROOT / "src"))
+    from contentfactory.guardrails import check_original_element
+    from contentfactory.launchpack import caption_text
+    from contentfactory.config import load_brand
+    brand = load_brand(ROOT / "brands", "dinero-simple")
+    longs = 0
+    for f in ("content.json", "content-month-1.json", "content-month-2.json", "content-month-3.json", "content-month-4.json"):
+        for it in json.loads((DS / f).read_text()):
+            if it["format"] != "long":
+                continue
+            longs += 1
+            s = it["script"]
+            assert check_original_element({"format": "long", "script": s}).level == "ok", s["title"]
+            assert s["original_element"].startswith("Graba la pantalla"), s["title"]
+            for seg in s["segments"]:
+                if seg.get("chart"):
+                    assert any(c.startswith(f"Chart '{seg['chart']['title']}'") for c in s["claims_to_verify"])
+            assert "--- ORIGINAL ELEMENT" in caption_text(brand, it)
+    assert longs == 10
