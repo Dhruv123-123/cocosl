@@ -88,6 +88,11 @@ const checks = [
     if (!/\.pdf$/.test(dl.suggestedFilename())) throw new Error('no pdf');
   }],
   ['/money-calculators/emergency-fund/?stability=variable', '#result .timeline'],
+  ['/budget/holiday.html', '#bnpl table', async (page) => {
+    await page.fill('#cap', '800');
+    await page.fill('#person-form [name=name]', 'Sam'); await page.fill('#person-form [name=budget]', '200'); await page.click('#person-form button');
+    await page.fill('#gift-form [name=item]', 'Headphones'); await page.fill('#gift-form [name=price]', '249.99'); await page.selectOption('#g-pay', 'bnpl'); await page.click('#gift-form button[type=submit]');
+  }],
   ['/budget/disputes.html', '#disputes .dispute', async (page) => { await page.fill('[name=item]', 'Metro Bank Card'); await page.click('#dispute-form button[type=submit]'); await page.selectOption('[data-outcome] select', 'verified'); await page.click('[data-outcome] button'); }],
   ['/scam-checker/vendor/', '#result .score', async (page) => { await page.click('#example'); }],
   ['/budget/pricing.html?from=goals', '#compare tr', async (page) => { if (!(await page.locator('#from').isVisible())) throw new Error('limit message hidden'); }],

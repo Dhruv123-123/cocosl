@@ -11,6 +11,10 @@
 <meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#0b1d13">
 <link rel="icon" href="budget/icon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="budget/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Money Tools">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Free money and scam safety tools","itemListElement":[
 {"@type":"ListItem","position":1,"name":"Debt payoff calculator","url":"money-calculators/debt-payoff/"},
 {"@type":"ListItem","position":2,"name":"Compound interest calculator","url":"money-calculators/compound-interest/"},
@@ -35,7 +39,8 @@
 {"@type":"ListItem","position":21,"name":"Credit dispute tracker","url":"budget/disputes.html"},
 {"@type":"ListItem","position":22,"name":"Vendor payment check for small businesses","url":"scam-checker/vendor/"},
 {"@type":"ListItem","position":23,"name":"Freelance invoice tracker and late fee calculator","url":"freelance-invoices/"},
-{"@type":"ListItem","position":24,"name":"Net worth snapshot","url":"budget/networth.html"}
+{"@type":"ListItem","position":24,"name":"Net worth snapshot","url":"budget/networth.html"},
+{"@type":"ListItem","position":25,"name":"Holiday spending planner","url":"budget/holiday.html"}
 ]}</script>
 <style>
 :root{--ink:#0b1d13;--paper:#f4f1e8;--card:#fffdf7;--line:#ddd6c4;--muted:#5b6b61;--gold:#f2b134;--green:#2fbf71}
@@ -61,6 +66,12 @@ a.card p{color:var(--muted);margin:6px 0 0;font-size:15px}
 .feature{border:2px solid var(--gold)}
 .pro{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;background:var(--card);border:2px solid var(--gold);border-radius:16px;padding:18px;margin-top:16px}
 .pro p{margin:0;color:var(--muted)}
+[hidden]{display:none!important}
+.install{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px;margin:18px 0 0}
+.install p{margin:0;color:var(--muted);font-size:15px}
+.install .row{display:flex;gap:8px;align-items:center}
+.link{background:none;border:0;color:inherit;font:inherit;text-decoration:underline;cursor:pointer;padding:6px}
+button.btn{border:0;font:inherit;font-weight:700;cursor:pointer}
 .btn{display:inline-block;background:var(--gold);color:#0b1d13;border-radius:999px;padding:10px 18px;font-weight:700;text-decoration:none}
 footer{color:var(--muted);font-size:13px;text-align:center}
 footer a{color:inherit}
@@ -70,6 +81,10 @@ footer a{color:inherit}
 <main>
   <h1>Free tools for your money and your safety</h1>
   <p class="lede">Calculators, a budget app, letters that lower bills, and a scam checker. No sign-up, and everything you type stays in your browser.</p>
+  <div id="install" class="install" hidden>
+    <p id="install-text">Add these tools to your home screen. They open like an app, and the ones you've used work offline.</p>
+    <div class="row"><button id="install-btn" class="btn" type="button">Install</button><button id="install-later" class="link" type="button">Not now</button></div>
+  </div>
   <ul class="jump" aria-label="Jump to">
     <li><a href="#budgeting">Budget and bills</a></li>
     <li><a href="#calculators">Calculators</a></li>
@@ -86,6 +101,7 @@ footer a{color:inherit}
       <a class="card" href="budget/bills.html"><span class="tag free">Free</span><h3>Bill negotiation tracker</h3><p>Promo end dates, call scripts for internet, phone and insurance, and a running total of what your calls saved.</p></a>
       <a class="card" href="budget/deals.html"><span class="tag free">Free</span><h3>0% deal countdown</h3><p>The monthly payment that clears a 0% or deferred-interest deal before the interest hits.</p></a>
       <a class="card" href="budget/subscriptions.html"><span class="tag free">Free</span><h3>Subscription audit</h3><p>Upload a bank export or paste your statement to see every recurring charge and what it costs you a year.</p></a>
+      <a class="card" href="budget/holiday.html"><span class="tag free">Free</span><h3>Holiday spending planner</h3><p>A gift list with a budget per person, a total cap, and what buy now, pay later really costs.</p></a>
       <a class="card" href="budget/networth.html"><span class="tag free">Free</span><h3>Net worth snapshot</h3><p>What you own minus what you owe, monthly snapshots to watch it grow, and a PDF to keep. Saved on your device only.</p></a>
       <a class="card" href="budget/rate.html"><span class="tag free">Free</span><h3>Rate my budget</h3><p>Eight numbers, a score out of 100 and your three best next moves.</p></a>
     </div>
@@ -146,5 +162,6 @@ import config from './budget/config.js';
 import { initTracking } from './budget/lib/track.js';
 initTracking({ config, app: 'hub', page: 'hub' });
 </script>
+<script type="module" src="install.js"></script>
 </body>
 </html>

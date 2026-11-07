@@ -6,3 +6,13 @@
 
 [functions]
   directory = "functions"
+
+# Service workers must never be served stale, or updates get stuck.
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"
+[[headers]]
+  for = "/budget/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"
