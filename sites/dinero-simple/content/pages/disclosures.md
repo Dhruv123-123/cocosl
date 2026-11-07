@@ -4,6 +4,8 @@ description: Cómo gana dinero Dinero Simple, cómo funcionan los enlaces de afi
 ---
 ## Cómo ganamos dinero
 
+Aquí va el resumen. La versión completa, con lo que nunca vamos a aceptar, está en [Cómo ganamos dinero](/como-ganamos-dinero/).
+
 1. **Nuestros propios productos**, como [El Presupuesto de 20 Minutos](/products/el-presupuesto-de-20-minutos/). Pagas una vez y tienes 14 días para pedir tu reembolso sin preguntas.
 2. **Enlaces de afiliado.** Algunos enlaces a bancos, apps o herramientas son de afiliado. Si te registras o compras con uno, podríamos recibir una comisión sin costo extra para ti. Los señalamos donde aparecen y van marcados con `rel="sponsored"` para los buscadores.
 3. **Patrocinios**, si algún día los aceptamos, van a decir "patrocinado" en la misma publicación o correo.

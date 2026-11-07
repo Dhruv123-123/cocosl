@@ -60,6 +60,7 @@
     "como-funciona-el-puntaje-de-credito",
     "invertir-con-100-al-mes"
   ],
+  "footer_links": [["Cómo ganamos dinero", "/como-ganamos-dinero/"], ["Glosario", "/glosario/"]],
   "affiliates": [],
   "go_links": {
     "_note": "Articles link to /go/<slug>/. Until `url` is a real affiliate link it redirects to `home`. `card` (text, button) adds a labelled partner box where an article has {{partner:<slug>}}; add it only after checking the offer accepts ITIN.",

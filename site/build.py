@@ -25,6 +25,7 @@ import os
 import re
 import shutil
 import sys
+import unicodedata
 from datetime import date, datetime, timezone
 from pathlib import Path
 from urllib.parse import urlencode, urlparse
@@ -210,7 +211,9 @@ def inline(s: str) -> str:
 
 
 def slug_id(text: str) -> str:
-    return re.sub(r"[^a-z0-9]+", "-", re.sub(r"<[^>]+>", "", text).lower()).strip("-")
+    """Heading anchor: "Crédito y deudas" -> "credito-y-deudas" (accents folded, so Spanish anchors stay readable)."""
+    plain = unicodedata.normalize("NFKD", re.sub(r"<[^>]+>", "", text)).encode("ascii", "ignore").decode()
+    return re.sub(r"[^a-z0-9]+", "-", plain.lower()).strip("-")
 
 
 def markdown(text: str, shortcodes=None) -> tuple[str, list[tuple[str, str]]]:
@@ -526,6 +529,8 @@ def layout(*, title: str, description: str, path: str, body: str, og_type: str =
                  for x in (jsonld or []))
     soc = " · ".join(f'<a href="{esc(h)}" rel="me noopener">{esc(n)}</a>' for n, h in CFG["socials"].items())
     analytics = CFG.get("analytics_snippet", "") + plausible_snippet()
+    # site.json "footer_links": [[label, path], ...] adds pages such as a "how we make money" page to the footer.
+    extra_foot = "".join(f' · <a href="{esc(u(h))}">{esc(t)}</a>' for t, h in CFG.get("footer_links", []))
     return f"""<!doctype html>
 <html lang="{esc(T('lang'))}">
 <head>
@@ -564,7 +569,7 @@ def layout(*, title: str, description: str, path: str, body: str, og_type: str =
   <div class="wrap">
     <p class="foot-brand"><strong>{esc(CFG['name'])}</strong> · {esc(CFG['tagline'])}</p>
     <p>{soc}</p>
-    <p><a href="{u('/privacy/')}">{esc(T('privacy'))}</a> · <a href="{u('/disclosures/')}">{esc(T('disclosures'))}</a> · <a href="{u('/terms/')}">{esc(T('terms'))}</a> · <a href="{u('/links/')}">{esc(T('links'))}</a> · <a href="{u('/feed.xml')}">RSS</a></p>
+    <p><a href="{u('/privacy/')}">{esc(T('privacy'))}</a> · <a href="{u('/disclosures/')}">{esc(T('disclosures'))}</a> · <a href="{u('/terms/')}">{esc(T('terms'))}</a> · <a href="{u('/links/')}">{esc(T('links'))}</a>{extra_foot} · <a href="{u('/feed.xml')}">RSS</a></p>
     <p class="small">{esc(CFG['disclaimer'])}</p>
     <p class="small">{esc(CFG['ai_disclosure'])}</p>
     <p class="small">&copy; {date.today().year} {esc(CFG['name'])}</p>

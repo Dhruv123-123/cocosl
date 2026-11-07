@@ -24,7 +24,7 @@ Usamos herramientas de IA para las imágenes, la voz y los primeros borradores. 
 - Recomendar acciones individuales ni promover cripto.
 - Prometer rendimientos o ingresos, ni enseñar capturas de "gané $X".
 - Publicar reseñas falsas ni testimonios hechos con IA. Si algún día citamos a un comprador, es una persona real, palabra por palabra y con su permiso.
-- Esconder enlaces de afiliado. Siempre los señalamos. Mira [Transparencia](/disclosures/).
+- Esconder enlaces de afiliado. Siempre los señalamos. Mira [Cómo ganamos dinero](/como-ganamos-dinero/) y [Transparencia](/disclosures/).
 
 ## No es asesoría financiera
 

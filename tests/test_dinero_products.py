@@ -319,3 +319,28 @@ def test_whatsapp_kit_has_30_linkless_messages_and_is_current():
         build_whatsapp.check(1, "consejo", "Visita irs.gov", None)
     polls = [m[3] for m in build_whatsapp.M if m[3]]
     assert polls and all(2 <= len(p[1]) <= 12 for p in polls)
+
+
+def test_glossary_has_50_terms_links_every_article_and_is_current():
+    sys.path.insert(0, str(DS / "glossary"))
+    import build_glossary
+    page = (ROOT / "sites" / "dinero-simple" / "content" / "pages" / "glosario.md").read_text()
+    assert page == build_glossary.page()
+    assert (DS / "GLOSSARY_REVIEW.md").read_text() == build_glossary.review()
+    assert len(build_glossary.T) == 50 and page.count("\n### ") == 50
+    itin = [t for t in build_glossary.T if t[0] == "ITIN"][0]
+    assert build_glossary.ATTORNEY_LINE in itin[3] and "notario" in itin[3]
+    assert build_glossary.exists("/blog/fondo-de-emergencia/") and not build_glossary.exists("/blog/no-existe/")
+    ld = json.loads(page.split('<script type="application/ld+json">')[1].split("</script>")[0])
+    assert ld["@type"] == "DefinedTermSet" and len(ld["hasDefinedTerm"]) == 50
+
+
+def test_how_we_make_money_page_is_linked_from_the_footer_and_about():
+    pages = ROOT / "sites" / "dinero-simple" / "content" / "pages"
+    body = (pages / "como-ganamos-dinero.md").read_text()
+    for must in ("rel=\"sponsored\"", "Tú pagas lo mismo", "nunca tienes que comprar nada", "Notarios", "$29"):
+        assert must in body
+    cfg = json.loads((ROOT / "sites" / "dinero-simple" / "site.json").read_text())
+    assert ["Cómo ganamos dinero", "/como-ganamos-dinero/"] in cfg["footer_links"]
+    assert "/como-ganamos-dinero/" in (pages / "about.md").read_text()
+    assert "/como-ganamos-dinero/" in (pages / "disclosures.md").read_text()
