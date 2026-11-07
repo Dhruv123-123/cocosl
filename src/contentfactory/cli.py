@@ -199,9 +199,18 @@ def cmd_rerender(args):
 
 
 def cmd_calendar(args):
+    from .planner import entries, export, flag
     from .scheduler import calendar
-    rows = calendar(_factory(args).db, days=args.days, brand=args.brand)
+    f = _factory(args)
+    rows = calendar(f.db, days=args.days, brand=args.brand)
     _table(rows, ["scheduled_at", "platform", "status", "brand", "format", "title"])
+    problems = flag(f, entries(f, args.days))
+    print("\nProblems:" if problems else "\nNo cap or collision problems.")
+    for p in problems:
+        print("  - " + p)
+    if args.export:
+        res = export(f, Path(args.export), days=max(args.days, 7))
+        print(f"Wrote {res['ics']} (subscribe or import in any calendar app) and {res['html']}")
 
 
 def cmd_publish(args):
@@ -384,6 +393,7 @@ def build_parser() -> argparse.ArgumentParser:
     s = sub.add_parser("calendar", help="upcoming publications")
     s.add_argument("--days", type=int, default=14)
     s.add_argument("--brand")
+    s.add_argument("--export", metavar="DIR", help="also write calendar.ics and calendar.html (all brands) there")
     s.set_defaults(func=cmd_calendar)
 
     sub.add_parser("publish", help="publish everything that is due").set_defaults(func=cmd_publish)
@@ -453,7 +463,8 @@ def _extend(sub) -> None:
     for mod in ("contentfactory.business.cli", "contentfactory.publish.cli", "contentfactory.funnel.cli",
                 "contentfactory.community.cli", "contentfactory.site",
                 "contentfactory.renderq", "contentfactory.doctor", "contentfactory.backup",
-                "contentfactory.publish.preflight", "contentfactory.cleanup"):
+                "contentfactory.publish.preflight", "contentfactory.cleanup",
+                "contentfactory.planner"):
         try:
             module = __import__(mod, fromlist=["register"])
         except ImportError:
