@@ -23,6 +23,7 @@ free for the first 3 organizations.
 | `sales-sheet.html` | One-page sales sheet (renders to `out/sales-sheet.pdf`). |
 | `COMPLIANCE_NOTE.md` | Not legal advice, sourcing, large-print standards, public-sector buying, no endorsements, what staff should and shouldn't do. |
 | `COLD_EMAILS.md` | Emails for library adult-services staff, senior center directors and Area Agencies on Aging; follow-ups; replies. |
+| `FOLLOW_UP_SEQUENCE.md` | 3 emails for prospects who got the sample and went quiet (days 3, 10, 21), linking the live sample page. |
 | `PROSPECTS.csv`, `PROSPECTS.md` | 30 prospects: 8 Montana Area Agencies on Aging, 10 Idaho senior centers (from the state's public list), 12 public libraries. |
 
 Each issue builds into: a large-print handout (18 pt, front and back), a bulletin board flyer, a

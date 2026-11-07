@@ -15,6 +15,7 @@ months free for the first 3 employers. Annual plans get 2 months free.
 | `sales-sheet.html` | One-page sales sheet (renders to `out/sales-sheet.pdf`). |
 | `COMPLIANCE_NOTE.md` | Education vs advice (ERISA, DOL Interpretive Bulletin 96-1), tax, privacy, accessibility, what the employer must supply. |
 | `COLD_EMAILS.md` | Emails for HR managers, SHRM chapters and benefits brokers; follow-ups; replies. |
+| `FOLLOW_UP_SEQUENCE.md` | 3 emails for prospects who got the sample and went quiet (days 3, 10, 21), linking the live sample page. |
 | `PROSPECTS.csv`, `PROSPECTS.md` | 51 prospects: 11 partners (8 HR associations, 2 benefits brokers, 1 PEO) and 40 employers from public "Top Workplaces" and "Top Companies" lists in Montana and Idaho, each with a 1–5 `fit_score` and reason. |
 
 Each issue builds into: employee email (HTML + text), an intranet, Teams or Slack post with a

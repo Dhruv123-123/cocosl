@@ -5,7 +5,7 @@
 ## Before the first email (one-time)
 
 1. Build a sample pack with the prospect's name on it? **No.** Use the fictional *Sample Community Credit
-   Union* pack (`out/sample-community-cu.zip`) for first contact. Branding a pack with a real credit
+   Union* pack (`out/demo-packet.zip`) for first contact. Branding a pack with a real credit
    union's name and logo before they ask can look like you're using their brand without permission.
    Offer to make one with their logo once they reply.
 2. Fill `{{YOUR_NAME}}`, `{{YOUR_EMAIL}}`, `{{YOUR_PHONE}}` in `sales-sheet.html` and re-render the PDF.
@@ -63,7 +63,7 @@ news, such as a merger, a new branch, a fraud warning they posted), `{Your name}
 > Imposter scams were the most-reported fraud in the US last year, with more than $3.5 billion lost
 > (FTC, March 2026). When members get a strange call, they call you.
 >
-> Can I send you a free 4-week sample pack? It's built for a made-up credit union so you can see
+> Can I send you a free 3-week sample pack? It's built for a made-up credit union so you can see
 > exactly what members would get.
 >
 > Thanks,
@@ -84,7 +84,7 @@ news, such as a merger, a new branch, a fraud warning they posted), `{Your name}
 > a social post and a lobby slide, delivered 7 days early for review. $49 to $99 a month, and the first
 > 3 credit unions get 2 months free.
 >
-> Want me to send the 4-week sample?
+> Want me to send the 3-week sample?
 >
 > {Your name}
 > Scam Decoded · {Your mailing address}
@@ -95,7 +95,7 @@ news, such as a merger, a new branch, a fraud warning they posted), `{Your name}
 > Hi, I'm {Your name} from Scam Decoded. I make a weekly scam alert that credit unions send to members
 > under their own brand (email, social post and lobby slide, delivered 7 days early for compliance
 > review, no member data shared). Could you pass this to whoever handles marketing or member
-> education? I'd be glad to send a free 4-week sample. {Your email} · {Your mailing address} · Reply
+> education? I'd be glad to send a free 3-week sample. {Your email} · {Your mailing address} · Reply
 > "no thanks" and I won't write again.
 
 A form message isn't email, but keep the address and opt-out anyway: it's often forwarded as one.
@@ -114,7 +114,7 @@ email from then on gets the full signature with address and opt-out line.
 
 ## Follow-up 1 (day 4, same thread)
 
-> Hi {First name}, just floating this back up. Happy to send the 4-week sample if it's useful; if
+> Hi {First name}, just floating this back up. Happy to send the 3-week sample if it's useful; if
 > someone else handles member education, I'd be grateful for their name.
 >
 > {Your name}
@@ -154,12 +154,12 @@ email from then on gets the full signature with address and opt-out line.
 Every reply below goes out with the same signature as email 1: your name, `{Your mailing address}` and the "no thanks" line.
 
 **"Yes, send the sample."**
-> Here it is: the 4-week sample (emails, social images, lobby slides, posters, staff briefs and
+> Here it is: the 3-week sample (emails, social images, lobby slides, posters, staff briefs and
 > sources) for a made-up credit union, plus a one-page overview and our compliance note. If you send
 > me your logo, brand color and member service number, I'll make a version with your branding so your
 > team can see it as members would.
 
-Attach: `sample-community-cu.zip`, `sales-sheet.pdf`, `roi.pdf` and `COMPLIANCE_NOTE.pdf` (all in `out/`).
+Attach: `demo-packet.zip`, `sales-sheet.pdf`, `roi.pdf` and `COMPLIANCE_NOTE.pdf` (all in `out/`).
 
 **"Send me the branded version."** Make `clients/<slug>.json` (see `DELIVERY_WORKFLOW.md`), run
 `python3 build.py credit-union-alert --brand credit-union-alert/clients/<slug>.json` (from `launch/b2b/`), and send the zip. Ask them to confirm the "never ask"

@@ -21,6 +21,7 @@ Nothing was bought.
 | `roi.html` | ROI one-pager: cost vs writing it in-house, break-even, fill-in table for their own numbers (renders to `out/roi.pdf`). |
 | `COMPLIANCE_NOTE.md` | No legal advice; sourcing rules; NCUA advertising, UDAAP, Reg E, CAN-SPAM, GLBA/vendor, accessibility, social, SMS; fact-check list. |
 | `COLD_EMAILS.md` | Email 1 (two versions), contact form, LinkedIn note, 2 follow-ups, final note, and replies to 9 common answers. |
+| `FOLLOW_UP_SEQUENCE.md` | 3 emails for prospects who got the sample and went quiet (days 3, 10, 21), linking the live sample page. |
 | `PROSPECTS.csv` + `PROSPECTS.md` | 60 credit unions from NCUA call report data (Q2 2026): batch 1 in MT/ID/OR/WA, batch 2 in WY/UT/CO. |
 | `CONTENT_CALENDAR.md` + `.csv` | 12 weeks of planned issues after the samples (member sends Feb 2 to Apr 20 2027), with delivery, fact-check and write-by dates, Scam Decoded source issue and official sources. |
 | `es/` | Spanish edition of the 4 samples (Plus tier), in Dinero Simple's style using usted. **Not yet reviewed by a native speaker**: see `es/REVIEW_CHECKLIST.md`. |
@@ -49,7 +50,7 @@ The full list for all three products is in `../LAUNCH_CHECKLIST.md`. For credit 
    `python3 build.py credit-union-alert` from `launch/b2b/` (it also writes `out/sales-sheet.pdf` and `out/COMPLIANCE_NOTE.pdf`).
 2. Fill `website` and `contact_route` for the first 8 rows of `PROSPECTS.csv` (about 3 minutes each).
 3. Send email 1 from `COLD_EMAILS.md` to 5 to 8 a day. Attach nothing to the first email.
-4. When someone says yes: send `out/sample-community-cu.zip`, `out/sales-sheet.pdf` and the compliance
+4. When someone says yes: send `out/demo-packet.zip`, `out/sales-sheet.pdf` and the compliance
    note. Then make their branded version (`DELIVERY_WORKFLOW.md`, onboarding).
 
 ## Open decisions

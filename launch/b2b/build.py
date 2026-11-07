@@ -419,8 +419,8 @@ def sales_doc_jobs(pdir: Path) -> list[dict]:
 
 
 def demo_packet(pdir: Path, count: int = 3) -> None:
-    """A pitch attachment: the first 3 sample issues (email HTML + email PDF + print files) for the fictional
-    example brand, plus the sales sheet, in out/demo-packet/, zipped, and one combined PDF (sales sheet + emails)."""
+    """The sample pack to send prospects: the first 3 sample issues in every format for the fictional example
+    brand, plus the sales sheet (and ROI sheet and compliance note where they exist), in out/demo-packet/, zipped, and one combined PDF (sales sheet + emails)."""
     out = pdir / "out"
     slug = json.loads((pdir / "brands/example.json").read_text())["slug"]
     issue_dirs = sorted((out / slug).iterdir(), key=lambda d: int(d.name.split("-")[1]))[:count]
@@ -432,7 +432,8 @@ def demo_packet(pdir: Path, count: int = 3) -> None:
     for d in issue_dirs:
         dest = demo / d.name
         dest.mkdir()
-        for name in ("email.html", "email.txt", "social.png", "poster.pdf", "handout.pdf", "lobby.png"):
+        for name in ("email.html", "email.txt", "social.png", "social.txt", "poster.pdf", "handout.pdf", "lobby.png",
+                     "brief.txt", "sources.md"):
             if (d / name).exists():
                 shutil.copy(d / name, dest / name)
         # the PDF keeps the email's 600 px layout, centred on a letter page
@@ -443,7 +444,7 @@ def demo_packet(pdir: Path, count: int = 3) -> None:
     render_all(jobs)
     for j in jobs:
         Path(j["html"]).unlink(missing_ok=True)
-    for name in ("sales-sheet.pdf", "roi.pdf"):
+    for name in ("sales-sheet.pdf", "roi.pdf", "COMPLIANCE_NOTE.pdf"):
         if (out / name).exists():
             shutil.copy(out / name, demo / name)
     pdfs = [str(demo / "sales-sheet.pdf")] if (demo / "sales-sheet.pdf").exists() else []

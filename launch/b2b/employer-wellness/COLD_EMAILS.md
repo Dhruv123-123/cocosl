@@ -35,7 +35,7 @@ Workplaces award), `{Your name}`, `{Your mailing address}`.
 >
 > Most of it is nudging people to use benefits you already pay for, like the 401(k) match.
 >
-> Can I send you a free 4-month sample? It's built for a made-up company so you can see exactly what
+> Can I send you a free 3-month sample? It's built for a made-up company so you can see exactly what
 > employees would get.
 >
 > Thanks,
@@ -51,7 +51,7 @@ Workplaces award), `{Your name}`, `{Your mailing address}`.
 >
 > I make a monthly financial-wellness newsletter that employers send to staff under their own brand
 > (tax season, credit, retirement basics; education only, no product pitches). I'd like to offer it to
-> {Chapter} members: a free 4-month sample pack any member can use, and a short talk at a meeting if
+> {Chapter} members: a free 3-month sample pack any member can use, and a short talk at a meeting if
 > that's useful ("What employees actually want to know about money", 10 minutes, no selling).
 >
 > Would either be helpful for your members this spring?
@@ -70,7 +70,7 @@ Workplaces award), `{Your name}`, `{Your mailing address}`.
 > a breakroom slide, branded for each employer (or for you), delivered 2 weeks early for review. It's
 > education only, with no product pitches, so it doesn't compete with anything you offer.
 >
-> Some brokers include it for clients at renewal. Can I send the 4-month sample and the partner rate?
+> Some brokers include it for clients at renewal. Can I send the 3-month sample and the partner rate?
 >
 > {Your name}
 > Money Made Simple · {Your mailing address}
@@ -78,7 +78,7 @@ Workplaces award), `{Your name}`, `{Your mailing address}`.
 
 ## Follow-up 1 (day 4)
 
-> Hi {First name}, floating this back up. Happy to send the 4-month sample; if someone else handles
+> Hi {First name}, floating this back up. Happy to send the 3-month sample; if someone else handles
 > benefits communication, I'd be grateful for their name.
 >
 > {Your name} · Money Made Simple · {Your mailing address} · Reply "no thanks" and I won't write again.
@@ -98,7 +98,7 @@ Workplaces award), `{Your name}`, `{Your mailing address}`.
 
 Every reply below goes out with the same signature as email 1: your name, `{Your mailing address}` and the "no thanks" line.
 
-- **"Send the sample."** Attach `out/sample-outfitters.zip`, `out/sales-sheet.pdf` and `out/COMPLIANCE_NOTE.pdf`.
+- **"Send the sample."** Attach `out/demo-packet.zip`, `out/sales-sheet.pdf` and `out/COMPLIANCE_NOTE.pdf`.
   Offer a branded version: ask for their logo, colors, benefits contact, portal name and exact match wording.
 - **"What does it cost?"** Starter $59 a month (up to 100 employees), Growth $129 (100 to 499; adds
   the breakroom flyer and manager talking points), Plus $249 (500+; adds Spanish and 2 custom issues a

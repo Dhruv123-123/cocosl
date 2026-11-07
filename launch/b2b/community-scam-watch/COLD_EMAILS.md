@@ -22,7 +22,7 @@ Tokens: `{First name}`, `{Organization}`, `{City}`, `{Personal line}`, `{Your na
 >
 > This month's sample covers the "grandchild in trouble" call, which now uses AI-copied voices.
 >
-> Can I send you the free 4-month sample to look at?
+> Can I send you the free 3-month sample to look at?
 >
 > Thanks,
 > {Your name}
@@ -40,7 +40,7 @@ Tokens: `{First name}`, `{Organization}`, `{City}`, `{Personal line}`, `{Your na
 > covers up to 10 senior centers, and centers can print as many copies as they need.
 >
 > Every claim is checked against FTC, Justice Department, Social Security and Medicare sources, and it
-> points people to the free Elder Fraud Hotline. Could I send the 4-month sample?
+> points people to the free Elder Fraud Hotline. Could I send the 3-month sample?
 >
 > {Your name}
 > Scam Decoded · {Your mailing address}
@@ -77,7 +77,7 @@ and mark it.
 
 Every reply below goes out with the same signature as email 1: your name, `{Your mailing address}` and the "no thanks" line.
 
-- **"Send the sample."** Attach `out/sample-county-library.zip` and `out/sales-sheet.pdf`. Offer a
+- **"Send the sample."** Attach `out/demo-packet.zip` and `out/sales-sheet.pdf`. Offer a
   branded version: ask for their logo, color and the help line to print.
 - **"What does it cost?"** $19 a month for one location, $49 for 2 to 4, $12 a location for 5 to
   20, and a quote from $250 for bigger systems or a whole AAA region; yearly gets 2 months free. No

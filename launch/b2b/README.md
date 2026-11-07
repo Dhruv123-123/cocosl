@@ -42,6 +42,14 @@ inbox shared with the ad studio. The cap is 10 emails a day (5 new), and from 1 
 reads the ad studio's `OUTREACH_CALENDAR.md` and warns if that calendar uses more than its 6. Rerun it after either
 calendar changes. `OUTREACH_DATES_OWN_INBOX.md` is the second-inbox alternative, which costs money, so it isn't the plan.
 
+## Live sample pages
+
+`python3 site/build_site.py` also writes one sample issue per offer, as readers get it, with a banner that says it's a
+sample for a fictional organization: `dist/samples/credit-union/`, `employer/`, `scam-watch/` and `accounting-firm/`.
+Once the site is on Netlify they live at `https://YOUR-SITE.netlify.app/samples/<offer>/`, which is the link each
+product's `FOLLOW_UP_SEQUENCE.md` uses. The site's downloads are the 3-issue demo packs. The full 12-issue packs
+are for paying clients only.
+
 ## Pitch attachments
 
 Every product's build also writes `out/demo-packet.pdf`: the sales sheet, then the first 3 sample emails, as

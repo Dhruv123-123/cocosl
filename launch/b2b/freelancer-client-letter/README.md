@@ -16,6 +16,8 @@ nothing was bought.
 | `brands/placeholders.json` | Every brand slot shown as a token, for the firm's review. |
 | `samples/month-1.md` … `month-3.md` | Readable master copy of each issue. |
 | `sales-sheet.html` | One-page sales sheet with the 3 plans; `../build.py` writes `out/sales-sheet.pdf`. |
+| `TAX_SEASON_LEAD_IN.md` | **Use this for Dec–Jan sends.** Email 1 tied to 1099 Money's tax-season series (Jan 19 – Apr 14) and the free 2027 tax calendar. |
+| `FOLLOW_UP_SEQUENCE.md` | 3 emails for firms that got the sample and went quiet (days 3, 10, 21). |
 | `PROSPECTS.csv` | 40 firms in Montana (25) and Idaho (15), sorted by a 1–5 `fit_score` (tax and bookkeeping practices first). |
 
 Build from `launch/b2b/`: `python3 build.py freelancer-client-letter` (or `--brand freelancer-client-letter/clients/<slug>.json` for a client).
@@ -87,6 +89,6 @@ as plain text and say: "Feel free to send that to your clients as it is. If you'
 month with your branding, the first 3 firms get 2 months free." Sign it with the same two lines
 as email 1. Then stop.
 
-**When they reply "yes" or "send it":** send `out/sample-ledger.zip` and `out/sales-sheet.pdf`. When
+**When they reply "yes" or "send it":** send `out/demo-packet.zip` and `out/sales-sheet.pdf`. When
 they want to go ahead, use `../credit-union-alert/onboarding/` and change the product name. The
 intake asks for the firm phone, booking link and client portal name instead of the credit union fields.

@@ -60,11 +60,15 @@ Never guess an address, buy a list or scrape a directory.
 | 21 | Final note | Only if they replied once and then went quiet. Otherwise stop after day 10. |
 
 - **Stop at the first "no" or "unsubscribe"**, and note it in the CSV.
+- **Got the sample, then went quiet?** Use that product's `FOLLOW_UP_SEQUENCE.md` (days 3, 10, 21). It links the
+  live sample page: `https://YOUR-SITE.netlify.app/samples/<offer>/` once the landing page is up.
+- **Accounting firms in December and January:** use `freelancer-client-letter/TAX_SEASON_LEAD_IN.md` for email 1.
 - Replies to common questions ("send pricing", "talk to compliance", "we already do this") are in each
   `COLD_EMAILS.md` under **Replies**.
 - **When someone asks for a sample,** attach `out/demo-packet.pdf` (sales sheet and 3 sample emails in one
-  file), plus the compliance note (and `roi.pdf` for credit unions). Send the full sample pack zip if they want
-  every format. For brokers, send `employer-wellness/out/broker/broker-one-pager.pdf` and the co-branded zip
+  file), plus the compliance note (and `roi.pdf` for credit unions). If they want every format, send
+  `out/demo-packet.zip` (the same 3 issues as email, images, print files, staff notes and sources). Keep the
+  full 12-issue packs for paying clients. For brokers, send `employer-wellness/out/broker/broker-one-pager.pdf` and the co-branded zip
   (`employer-wellness/broker/BROKER_PARTNER_KIT.md`). Fill in its referral-fee placeholders first. Never brand a pack with their logo until they ask.
 - **When someone says yes,** follow `credit-union-alert/onboarding/README.md`. It covers kickoff,
   intake, approval, the first send and the invoice. For the other products, use the same kit and
