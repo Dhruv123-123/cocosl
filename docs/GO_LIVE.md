@@ -205,12 +205,28 @@ Manual posting is fine for the first weeks. Do this when it isn't.
       **green** and one manual test post looks right, then set `0`. Yellow usually means placeholder links in
       `brands/<slug>.yaml`; red names the post to fix. 10 min
 
-## Stage 9 · More brands, one at a time (after Money Made Simple is posting)
+## Stage 9 · More brands, one at a time (Scam Decoded in week 2; brand 3 only after the gates)
 
 Each brand repeats Stage 4 (accounts, brand kit, first posts) and the relevant parts of 3, 5 and 7. Each
 brand gets its own accounts: run the auth commands with `--brand <slug>` (e.g.
 `factory auth youtube --brand scam-decoded`) and the tokens are saved under that brand's name. Do one
-brand properly before starting the next. Order below is by how soon each can earn.
+brand properly before starting the next.
+
+Order (suggested by `research/scouting/two-brand-launch-plan.md` on PR #2, which replaces the 1099 + MMS week-1
+order in `launch-playbook.md`): **9b Scam Decoded and 9a free apps in week 2** (Mon Nov 23; the scam checker is
+the Scam site's lead tool), Scam posts at half cadence from week 3. **Brand 3 is 9d 1099 Money**, and only when
+all five gates below pass (checked at the end of week 8, around Jan 10). **9c Dinero Simple comes last**, once a
+paid Spanish reviewer is booked.
+
+Brand-3 gates (all five must pass):
+1. Both brands take under 1 h a day combined, for 4 weeks.
+2. No account warnings for 4 weeks.
+3. No open "change" rule in `check_thresholds.py` for 2 weeks.
+4. 2 weeks of approved posts are queued.
+5. The email list is growing on both brands.
+
+Steady state with two brands is about 9–10 h a week: R6 (about 3.5 h across both), ad studio (about 3.75 h),
+the Monday report (0.5 h) and Saturday recording (1–1.5 h).
 
 ### 9a · Free web apps (PR #8, ≈ 1 h): search traffic with no audience needed
 - [ ] Netlify > Add new site > Import `cocosl`, base directory `apps` (one site), or one site each for
@@ -231,6 +247,7 @@ brand properly before starting the next. Order below is by how soon each can ear
       and the email provider. Load its 7-email sequence. 40 min
 - [ ] Affiliates: Aura on Impact, 1Password on FlexOffers, NordVPN direct, once the account has posts. 20 min
 - [ ] Before posting: no real phone numbers or links on any slide; update figures flagged in its README.
+- [ ] A long video uploads only after its recording in `LONG_VIDEO_RECORDINGS.md` is done (R5).
 
 ### 9c · Dinero Simple, Spanish (PR #11, ≈ 3 h plus a reviewer)
 - [ ] **Find a fluent Spanish reviewer first.** Nothing goes live until they've read it: posts are blocked
@@ -244,7 +261,8 @@ brand properly before starting the next. Order below is by how soon each can ear
 - [ ] Spanish voice: set `PIPER_MODEL_ES` (or a Spanish Kokoro/OpenAI voice), never the English one. 10 min
 
 ### 9d · 1099 Money, freelancers (PR #10, ≈ 2 h): $15 Quarterly Tax Tracker
-- [ ] Accounts from `brands/1099-money.yaml`; its posting plan starts **Nov 16**. 30 min
+- [ ] Accounts from `brands/1099-money.yaml`; its posting plan starts **when the brand-3 gates pass** (its
+      dates are written from Nov 16; shift them). 30 min
 - [ ] Gumroad product from `launch/1099-money/product/LISTING.md` ($15). 15 min
 - [ ] Deploy `apps/freelance-tax/` (calculator + Tax Calendar lead magnet), set `siteUrl`, product URL and the
       7-email sequence. 40 min
@@ -333,7 +351,7 @@ order below, so you're never learning two sets of accounts at once.
   AI voice clone* (kit) · Day 3 *That $3.95 'unpaid toll' text* · Day 4 *0 real banks ask you to move money* ·
   Day 5 *$110M+ lost at Bitcoin ATMs* · Day 6 *Read back a 6-digit code…* · Day 7 *3 ways to pay only
   scammers insist on*.
-- **1099 Money** (`launch/1099-money/POSTING_PLAN.md`, starts **Mon Nov 16**, 12:30 and 19:00 ET):
+- **1099 Money** (`launch/1099-money/POSTING_PLAN.md`, written from Mon Nov 16 but held until the brand-3 gates pass (Stage 9), 12:30 and 19:00 ET):
   Day 1 short *Your first 1099 has no tax taken out* + carousel *$60K freelance income: what you actually owe* ·
   Day 2 short *The 15.3% tax nobody warned you about* · Day 3 short *Made $400 on the side? Read this* +
   carousel *The freelancer tax calendar for 2027* · Day 4 short *No 1099? You still owe tax on it* ·
@@ -634,7 +652,7 @@ can do. Open `factory ui` (the Today page) and do these in order; stop at 15 min
 | Mondays | +20 min | `factory report` and its "Next actions"; `factory launch-check` |
 | Saturdays | +45–60 min | the recording session from R5 (prep sheets: `docs/RECORDING_PREP_2026-11-14.md`, `-11-21`, `-11-28`, `-12-05`) |
 | Sat Nov 14 | +10 min | the `LAUNCH` codes end today (the welcome emails print that date): check they've expired on Gumroad |
-| Day 7 | +30 min | if Money Made Simple is steady, start the next brand's accounts (Stage 9) |
+| Day 7 | +30 min | if Money Made Simple is steady, start Scam Decoded's accounts (Stage 9b) |
 | Day 10 | +30 min | ~10 posts are live: apply to the affiliate programs (Stage 7) with the kit's answers |
 | Sat Nov 21 | +15 min | Month 1 starts: import `calendar.ics`, confirm its first week is approved |
 | Day 21 | +20 min | look at what worked (`factory report`): keep the hooks that held viewers, drop the rest |
