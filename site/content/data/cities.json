@@ -1,0 +1,268 @@
+{
+ "_about": "Rent = HUD Fair Market Rent (FMR) for the metro: the 40th-percentile gross rent (rent + utilities) for a standard unit. FY2027 FMRs took effect Oct 1, 2026. Figures were read from sites that republish HUD's tables (see sources); before promoting a page, spot-check it against HUD's FMR query tool at https://www.huduser.gov/portal/datasets/fmr.html. Tax rules: tax_rules.json.",
+ "as_of": "November 7, 2026",
+ "sources": {
+  "fy2027": "https://startbusinessbystate.com/?p=20015",
+  "fy2027_tx": "https://fairmarketrentmap.com/blog/fair-market-rent-texas-2026",
+  "fy2027_se": "https://fairmarketrentmap.com/blog/fair-market-rent-southeast-2026",
+  "fy2027_oh": "https://fairmarketrentmap.com/blog/fair-market-rent-ohio-2026",
+  "fy2026": "https://www.lendingtree.com/home/mortgage/fair-market-rents-study/",
+  "hud": "https://www.huduser.gov/portal/datasets/fmr.html"
+ },
+ "cities": [
+  {
+   "slug": "new-york",
+   "name": "New York City",
+   "state": "NY",
+   "metro": "New York, NY HUD Metro FMR Area",
+   "br1": 2729,
+   "br2": 2971,
+   "fy": 2027,
+   "src": "fy2027",
+   "local": "nyc"
+  },
+  {
+   "slug": "los-angeles",
+   "name": "Los Angeles",
+   "state": "CA",
+   "metro": "Los Angeles-Long Beach-Glendale, CA",
+   "br1": 2402,
+   "br2": 2964,
+   "fy": 2027,
+   "src": "fy2027"
+  },
+  {
+   "slug": "chicago",
+   "name": "Chicago",
+   "state": "IL",
+   "metro": "Chicago-Joliet-Naperville, IL",
+   "br1": 1780,
+   "br2": 2011,
+   "fy": 2027,
+   "src": "fy2027"
+  },
+  {
+   "slug": "houston",
+   "name": "Houston",
+   "state": "TX",
+   "metro": "Houston-The Woodlands-Sugar Land, TX",
+   "br1": 1261,
+   "br2": 1497,
+   "fy": 2027,
+   "src": "fy2027"
+  },
+  {
+   "slug": "phoenix",
+   "name": "Phoenix",
+   "state": "AZ",
+   "metro": "Phoenix-Mesa-Chandler, AZ",
+   "br1": 1493,
+   "br2": 1734,
+   "fy": 2027,
+   "src": "fy2027"
+  },
+  {
+   "slug": "philadelphia",
+   "name": "Philadelphia",
+   "state": "PA",
+   "metro": "Philadelphia-Camden-Wilmington, PA-NJ-DE-MD",
+   "br1": 1558,
+   "br2": 1860,
+   "fy": 2027,
+   "src": "fy2027",
+   "local": "philadelphia"
+  },
+  {
+   "slug": "san-antonio",
+   "name": "San Antonio",
+   "state": "TX",
+   "metro": "San Antonio-New Braunfels, TX",
+   "br1": 1196,
+   "br2": 1441,
+   "fy": 2027,
+   "src": "fy2027_tx"
+  },
+  {
+   "slug": "san-diego",
+   "name": "San Diego",
+   "state": "CA",
+   "metro": "San Diego-Chula Vista-Carlsbad, CA",
+   "br1": 2335,
+   "br2": 2823,
+   "fy": 2027,
+   "src": "fy2027"
+  },
+  {
+   "slug": "dallas",
+   "name": "Dallas",
+   "state": "TX",
+   "metro": "Dallas, TX HUD Metro FMR Area",
+   "br1": 1536,
+   "br2": 1807,
+   "fy": 2027,
+   "src": "fy2027"
+  },
+  {
+   "slug": "jacksonville",
+   "name": "Jacksonville",
+   "state": "FL",
+   "metro": "Jacksonville, FL",
+   "br1": 1421,
+   "br2": 1694,
+   "fy": 2027,
+   "src": "fy2027"
+  },
+  {
+   "slug": "fort-worth",
+   "name": "Fort Worth",
+   "state": "TX",
+   "metro": "Fort Worth-Arlington, TX",
+   "br1": 1481,
+   "br2": 1745,
+   "fy": 2027,
+   "src": "fy2027"
+  },
+  {
+   "slug": "san-jose",
+   "name": "San Jose",
+   "state": "CA",
+   "metro": "San Jose-Sunnyvale-Santa Clara, CA",
+   "br1": 2778,
+   "br2": 3272,
+   "fy": 2027,
+   "src": "fy2027"
+  },
+  {
+   "slug": "austin",
+   "name": "Austin",
+   "state": "TX",
+   "metro": "Austin-Round Rock-San Marcos, TX",
+   "br1": 1530,
+   "br2": 1817,
+   "fy": 2027,
+   "src": "fy2027_tx"
+  },
+  {
+   "slug": "charlotte",
+   "name": "Charlotte",
+   "state": "NC",
+   "metro": "Charlotte-Concord-Gastonia, NC-SC",
+   "br1": 1640,
+   "br2": 1785,
+   "fy": 2027,
+   "src": "fy2027_se"
+  },
+  {
+   "slug": "columbus",
+   "name": "Columbus",
+   "state": "OH",
+   "metro": "Columbus, OH HUD Metro FMR Area",
+   "br1": 1346,
+   "br2": 1602,
+   "fy": 2027,
+   "src": "fy2027_oh",
+   "local": "columbus"
+  },
+  {
+   "slug": "indianapolis",
+   "name": "Indianapolis",
+   "state": "IN",
+   "metro": "Indianapolis-Carmel, IN",
+   "br1": 1336,
+   "br2": 1536,
+   "fy": 2027,
+   "src": "fy2027",
+   "local": "marion_county"
+  },
+  {
+   "slug": "san-francisco",
+   "name": "San Francisco",
+   "state": "CA",
+   "metro": "San Francisco, CA HUD Metro FMR Area",
+   "br1": 3003,
+   "br2": 3697,
+   "fy": 2027,
+   "src": "fy2027"
+  },
+  {
+   "slug": "seattle",
+   "name": "Seattle",
+   "state": "WA",
+   "metro": "Seattle-Bellevue, WA",
+   "br1": 2180,
+   "br2": 2549,
+   "fy": 2027,
+   "src": "fy2027"
+  },
+  {
+   "slug": "denver",
+   "name": "Denver",
+   "state": "CO",
+   "metro": "Denver-Aurora-Centennial, CO",
+   "br1": 1831,
+   "br2": 2169,
+   "fy": 2027,
+   "src": "fy2027"
+  },
+  {
+   "slug": "oklahoma-city",
+   "name": "Oklahoma City",
+   "state": "OK",
+   "metro": "Oklahoma City, OK HUD Metro FMR Area",
+   "br1": 1017,
+   "br2": 1244,
+   "fy": 2026,
+   "src": "fy2026"
+  },
+  {
+   "slug": "nashville",
+   "name": "Nashville",
+   "state": "TN",
+   "metro": "Nashville-Davidson--Murfreesboro--Franklin, TN",
+   "br1": 1650,
+   "br2": 1798,
+   "fy": 2027,
+   "src": "fy2027_se"
+  },
+  {
+   "slug": "washington-dc",
+   "name": "Washington, DC",
+   "state": "DC",
+   "metro": "Washington-Arlington-Alexandria, DC-VA-MD",
+   "br1": 2204,
+   "br2": 2438,
+   "fy": 2027,
+   "src": "fy2027"
+  },
+  {
+   "slug": "el-paso",
+   "name": "El Paso",
+   "state": "TX",
+   "metro": "El Paso, TX HUD Metro FMR Area",
+   "br1": 969,
+   "br2": 1146,
+   "fy": 2027,
+   "src": "fy2027_tx"
+  },
+  {
+   "slug": "las-vegas",
+   "name": "Las Vegas",
+   "state": "NV",
+   "metro": "Las Vegas-Henderson-North Las Vegas, NV",
+   "br1": 1478,
+   "br2": 1735,
+   "fy": 2026,
+   "src": "fy2026"
+  },
+  {
+   "slug": "boston",
+   "name": "Boston",
+   "state": "MA",
+   "metro": "Boston-Cambridge-Quincy, MA-NH",
+   "br1": 2518,
+   "br2": 3008,
+   "fy": 2027,
+   "src": "fy2027"
+  }
+ ]
+}
