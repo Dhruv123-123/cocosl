@@ -45,6 +45,7 @@ official Business Discovery API (see `watchlist.py`).
 | [`integration-plan.md`](integration-plan.md) | Ranked changes to cocosl, each with the file it touches and effort |
 | [`creators.md`](creators.md) | 20 finance and scam-awareness creators: hooks, formats, cadence, how they make money |
 | [`software-ideas.md`](software-ideas.md) | 10 small software products ranked, with demand evidence, competitors, pricing, build effort and how each makes money |
+| [`distribution.md`](distribution.md), [`distribution-drafts.md`](distribution-drafts.md) | Where each brand's audience gathers off the big platforms, the self-promotion rules, a 30-day plan, and draft posts (nothing posted) |
 | [`hooks.md`](hooks.md) | 30 hook templates, now used by the writer (`src/contentfactory/hooks_library.json`) |
 | [`repos.csv`](repos.csv) | Raw repo metadata pulled 2026-11-07 |
 | [`watchlist.csv`](watchlist.csv), [`watchlist.py`](watchlist.py) | Accounts to watch, and a script that snapshots their public follower and engagement numbers through the official Business Discovery API |
