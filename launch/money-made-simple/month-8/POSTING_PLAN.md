@@ -9,7 +9,7 @@ Window: Mon Jun 21 – Tue Jul 20, 2027. All times America/New_York.
 
 Rules this plan follows:
 - At most 2 posts per platform per day (brand cap).
-- Shorts go to instagram, youtube, tiktok, facebook at the first post time; carousels to instagram, pinterest and long videos to youtube, pinterest at the last post time.
+- Shorts go to instagram, youtube, tiktok, facebook at the first post time; carousels to instagram, pinterest and long videos to youtube, pinterest at the last post time. TikTok-only videos go to tiktok at the last post time.
 - Before each post: human review in the dashboard, tick every line under CHECK BEFORE POSTING, keep the AI disclosure in the caption and set the platform AI-label toggle where required.
 - Revenue pieces are marked: **affiliate** (has the affiliate disclosure) and **product** (mentions the product). Make sure the link-in-bio page has both links on those days.
 
