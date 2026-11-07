@@ -47,6 +47,13 @@ Ready-made launch material lives in `launch/`: two weeks of scripts for the exam
 a sellable product (guide PDF + spreadsheet), the ad studio's website, rate card, pitch templates,
 contract template and the launch-day plan.
 
+## Website and email funnel
+
+`site/` is the brand's static website: home, 13 SEO articles, product pages, a free lead magnet
+(The 7-Day Money Reset PDF), a link-in-bio page and a 10-email welcome sequence that sells the products.
+It deploys free to Netlify (`netlify.toml`) or GitHub Pages (`.github/workflows/pages.yml`).
+See **`site/README.md`**.
+
 ## Everyday commands
 
 ```bash
