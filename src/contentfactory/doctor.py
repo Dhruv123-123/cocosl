@@ -2,7 +2,9 @@
 
 Each check is ok / warn / fail with a one-line fix. Nothing is posted; the
 voice test writes one short WAV to a temp folder. `--online` also checks that
-your public media URL and Kokoro server answer.
+your public media URL and Kokoro server answer. `--offline` runs everything that needs no network
+(plus Python, packages, fonts, .env permissions, brand time zones, database integrity and a test encode),
+for a fresh laptop.
 """
 from __future__ import annotations
 
@@ -80,14 +82,32 @@ def _llm(f: Factory) -> Result:
     return Result("writing", "ok", f"Claude ({f.settings.anthropic_model})")
 
 
-def _voice(f: Factory) -> Result:
+NETWORK_TTS = ("elevenlabs", "openai")
+
+
+def _voice(f: Factory, offline: bool = False) -> Result:
     from .media import tts
     brand = next(iter(f.brands().values()), None)
     if brand is None:
         return Result("voice", "warn", "skipped (no brand)")
+    wanted = (f.settings.tts_provider or "auto").lower()
+    if offline and (wanted in NETWORK_TTS or (wanted == "kokoro" and os.environ.get("KOKORO_URL"))):
+        return Result("voice", "warn", f"skipped offline: {wanted} needs the network")
     with tempfile.TemporaryDirectory() as tmp:
         try:
-            r = tts.synthesize_segments(f.settings, brand, ["This is a quick voice check."], Path(tmp))
+            if offline:  # only voices that run on this machine
+                local = [n for n in tts.ORDER if n not in NETWORK_TTS]
+                saved = dict(os.environ)
+                os.environ.pop("KOKORO_URL", None)
+                try:
+                    order, tts.ORDER = tts.ORDER, local
+                    r = tts.synthesize_segments(f.settings, brand, ["This is a quick voice check."], Path(tmp))
+                finally:
+                    tts.ORDER = order
+                    os.environ.clear()
+                    os.environ.update(saved)
+            else:
+                r = tts.synthesize_segments(f.settings, brand, ["This is a quick voice check."], Path(tmp))
         except Exception as e:
             return Result("voice", "fail", f"no voice works: {e}")
     if r.provider == "silent":
@@ -167,14 +187,64 @@ def _queued_media(f: Factory) -> Result:
     return Result("queued media", "ok", f"{len(rows)} queued publication(s) pass platform limits")
 
 
-def run_checks(f: Factory, online: bool = False, voice: bool = True) -> list[Result]:
+def _local(f: Factory) -> list[Result]:
+    """Checks that need nothing but this machine: Python, packages, fonts, .env, brand clocks,
+    database integrity, a tiny local render."""
+    import importlib
+    import sys
+    res = [Result("python", "ok" if sys.version_info >= (3, 11) else "fail",
+                  f"{sys.version.split()[0]}" + ("" if sys.version_info >= (3, 11) else " (needs 3.11+)"))]
+    missing = [m for m in ("PIL", "pydantic", "fastapi", "jinja2", "httpx", "yaml")
+               if importlib.util.find_spec(m) is None]
+    res.append(Result("packages", "fail" if missing else "ok",
+                      f"missing {', '.join(missing)}: pip install -e ." if missing else "core packages import"))
+    try:
+        from .media import fonts
+        fam = next(iter(f.brands().values())).visual.font if f.brands() else "Inter"
+        path = fonts.font_path(fam, "black")
+        res.append(Result("fonts", "ok" if Path(path).exists() else "warn", f"{fam}: {Path(path).name}"))
+    except Exception as e:
+        res.append(Result("fonts", "warn", f"font lookup failed: {e}"))
+    env = f.settings.home / ".env"
+    if not env.exists():
+        res.append(Result(".env", "warn", "no .env yet: factory init"))
+    else:
+        mode = env.stat().st_mode & 0o777
+        res.append(Result(".env", "ok" if mode & 0o077 == 0 else "warn",
+                          "private (600)" if mode & 0o077 == 0 else f"readable by others ({oct(mode)}): chmod 600 .env"))
+    from zoneinfo import ZoneInfo
+    for slug, b in f.brands().items():
+        try:
+            ZoneInfo(b.cadence.timezone)
+        except Exception:
+            res.append(Result(f"brand {slug}", "fail", f"unknown timezone {b.cadence.timezone!r}"))
+    try:
+        ok = f.db.scalar("PRAGMA quick_check")
+        res.append(Result("db integrity", "ok" if ok == "ok" else "fail", str(ok)))
+    except sqlite3.Error as e:
+        res.append(Result("db integrity", "fail", str(e)))
+    if shutil.which("ffmpeg"):
+        with tempfile.TemporaryDirectory() as tmp:
+            try:
+                subprocess.run(["ffmpeg", "-v", "error", "-f", "lavfi", "-i", "color=c=black:s=320x568:d=1",
+                                "-c:v", "libx264", "-pix_fmt", "yuv420p", str(Path(tmp) / "t.mp4")],
+                               check=True, capture_output=True, timeout=60)
+                res.append(Result("test render", "ok", "ffmpeg encoded a 1 s H.264 clip"))
+            except Exception as e:
+                res.append(Result("test render", "fail", f"ffmpeg couldn't encode: {str(e)[:120]}"))
+    return res
+
+
+def run_checks(f: Factory, online: bool = False, voice: bool = True, offline: bool = False) -> list[Result]:
     out = [_ffmpeg(), *_storage(f), *_brands(f), _llm(f)]
+    if offline:
+        out += _local(f)
     if voice:
-        out.append(_voice(f))
-    out += _publishing(f, online)
+        out.append(_voice(f, offline=offline))
+    out += _publishing(f, online and not offline)
     out.append(_queued_media(f))
     out.append(_worker(f))
-    if online and os.environ.get("KOKORO_URL"):
+    if online and not offline and os.environ.get("KOKORO_URL"):
         import httpx
         url = os.environ["KOKORO_URL"].rstrip("/")
         try:
@@ -189,9 +259,11 @@ def register(sub, factory_fn) -> None:
     s = sub.add_parser("doctor", help="check this install can make and post content (posts nothing)")
     s.add_argument("--online", action="store_true", help="also check the media URL and Kokoro server answer")
     s.add_argument("--no-voice", action="store_true", help="skip the voice test clip")
+    s.add_argument("--offline", action="store_true",
+                   help="fresh-laptop check: everything that works without the network, plus local extras")
 
     def run(a):
-        results = run_checks(factory_fn(a), online=a.online, voice=not a.no_voice)
+        results = run_checks(factory_fn(a), online=a.online, voice=not a.no_voice, offline=a.offline)
         mark = {"ok": "ok  ", "warn": "WARN", "fail": "FAIL"}
         for r in results:
             print(f"[{mark[r.level]}] {r.name:12s} {r.message}")
