@@ -396,3 +396,34 @@ def test_today_post_by_hand(client, factory):
     r = client.post(f"/manual/{pub}/done", data={"url": "https://www.tiktok.com/@x/video/1"}, follow_redirects=False)
     assert r.status_code in (302, 303)
     assert factory.db.get("publications", pub)["status"] == "published"
+
+
+def test_fast_review(client, factory):
+    ids = factory.seed_ids
+    r = client.get("/review/fast")
+    assert r.status_code == 200 and "Fast review" in r.text and "Approve a whole week" in r.text
+    assert "2 claim(s) not ticked" in r.text or "Not ready" in r.text
+    rid = ids["review"]
+    r = client.post(f"/review/fast/{rid}/tick", data={"claims": ["0"]})
+    assert r.json()["why"] == "1 claim(s) not ticked"
+    client.post(f"/review/fast/{rid}/tick", data={"claims": ["0", "1"]})
+    from contentfactory.web.fastreview import week_of
+    wk = week_of(factory.db.get("posts", rid)).isoformat()
+    r = client.post("/review/fast/approve-week", data={"week": wk, "brand": BRAND}, follow_redirects=False)
+    assert r.status_code == 303 and "Approved" in r.headers["location"]
+    assert factory.db.get("posts", rid)["status"] == "approved"
+    assert factory.db.get("posts", ids["blocked"])["status"] == "blocked"  # never batch-approved
+    assert "Skipped" in r.headers["location"] or "err=" in r.headers["location"]
+
+
+def test_fast_review_gate(client, factory):
+    from contentfactory import review
+    pid = add_post(factory, "Needs a native read", claims=[])
+    review.require(factory, pid, "native_review")
+    from contentfactory.web.queries import review_queue
+    idx = [p["id"] for p in review_queue(factory)].index(pid)
+    r = client.get(f"/review/fast?i={idx}")
+    assert "needs native review" in r.text and "Native review passed" in r.text
+    r = client.post(f"/review/fast/{pid}/pass", data={"stage": "native_review", "by": "Ana"}, follow_redirects=False)
+    assert r.status_code == 303
+    assert review.status(factory.db.get("posts", pid), factory.brand(BRAND)) == "draft"
