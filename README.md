@@ -74,6 +74,8 @@ factory numbers <post id>  (or --text "...")  # recompute loan, payoff, growth a
 factory youtube-plan --brand <slug> [--write]   # playlists, end screens, Shorts related videos -> launch/<slug>/YOUTUBE_PLAN.md
 factory report --html                         # weekly one-page HTML per brand from imported stats: best/worst posts, next topics
 factory triage [--save]                       # everything waiting on you across brands, most urgent first
+factory challenge new --brand <slug> --days 30 [--kind ladder|fixed|envelope|no-spend] --import   # daily tracker posts + printable tracker
+factory whitelabel <brand> --client client.json [--posts 1,2]   # rebrand a batch for a B2B client (name, colours, links)
 factory brand new <slug> --name ... --import  # scaffold a brand: YAML, caps, voice/footage folders, 3 sample posts
 factory brand remove <slug> --yes            # undo a scaffold (refuses if anything is scheduled or published)
 factory launch-check [--online]             # red/yellow/green: links, UTM tags, placeholders, disclosures, caption limits
