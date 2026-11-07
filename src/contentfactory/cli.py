@@ -222,6 +222,23 @@ def cmd_import(args):
         print(f"post #{pid} [{post['format']}/{post['status']}] {post['title']}")
 
 
+def cmd_review_language(args):
+    result = _factory(args).mark_language_reviewed(args.id, args.by)
+    print(f"Post #{args.id}: native-speaker review recorded ({args.by}); checks now {result['status']}")
+
+
+def cmd_pack(args):
+    from .launchpack import export_pack
+    f = _factory(args)
+    items = json.loads(Path(args.file).read_text())
+    if args.format:
+        items = [i for i in items if i.get("format") in args.format]
+    folders = export_pack(f.settings, f.brand(args.brand), items[: args.limit or None], Path(args.out),
+                          video=args.video)
+    for folder in folders:
+        print(folder)
+
+
 def cmd_niche(args):
     from .niche import score_niche
     for n in args.niches:
@@ -369,6 +386,20 @@ def build_parser() -> argparse.ArgumentParser:
     s.add_argument("--limit", type=int, default=0)
     s.add_argument("--no-render", action="store_true")
     s.set_defaults(func=cmd_import)
+
+    s = sub.add_parser("review-language", help="record that a fluent speaker checked a non-English post")
+    s.add_argument("id", type=int)
+    s.add_argument("--by", required=True, help="reviewer's name")
+    s.set_defaults(func=cmd_review_language)
+
+    s = sub.add_parser("pack", help="export a content.json as a hand-off folder (slides, thumbnails, captions)")
+    s.add_argument("file")
+    s.add_argument("--brand", required=True)
+    s.add_argument("--out", required=True)
+    s.add_argument("--format", action="append", help="only these formats (repeatable)")
+    s.add_argument("--limit", type=int, default=0)
+    s.add_argument("--video", action="store_true", help="also render full videos (needs a voice for narration)")
+    s.set_defaults(func=cmd_pack)
 
     s = sub.add_parser("niche", help="score niche candidates (ad value, demand, risk, saturation)")
     s.add_argument("niches", nargs="+")

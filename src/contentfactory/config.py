@@ -91,6 +91,7 @@ class VoiceStyle(BaseModel):
     persona: str = "a knowledgeable friend"
     tts_voice: str = ""  # provider-specific voice id; must be your own or licensed
     words_per_minute: int = 160
+    piper_model: str = ""  # path to a Piper .onnx voice in the brand's language (overrides PIPER_MODEL)
     banned_phrases: list[str] = Field(default_factory=list)
 
 
@@ -131,9 +132,12 @@ class BrandProfile(BaseModel):
     avoid_topics: list[str] = Field(default_factory=list)
     subreddits: list[str] = Field(default_factory=list)  # read-only topic signals
     hashtags: list[str] = Field(default_factory=list)
+    highlights: list[str] = Field(default_factory=list)  # optional Instagram highlight titles (≤15 chars)
+    bios: dict[str, str] = Field(default_factory=dict)  # optional hand-written bios: instagram, tiktok, x, threads, youtube_about
     cta: str = "Follow for more."
     link_in_bio: str = ""
-    language: str = "en"
+    language: str = "en"  # ISO 639-1; script copy, on-screen labels, bios and TTS follow it (see i18n.py)
+    region: str = ""  # optional market, e.g. "US" -> locale es-US; also used for trend signals
     visual: VisualStyle = Field(default_factory=VisualStyle)
     voice: VoiceStyle = Field(default_factory=VoiceStyle)
     cadence: Cadence = Field(default_factory=Cadence)

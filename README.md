@@ -41,9 +41,11 @@ only you can do: payouts, accounts, API keys).
 | Analytics | Metrics collection, rollups by format/pillar/platform/hour, feedback into idea scores | `insights.py` |
 | Funnel | Link-in-bio page, double opt-in email capture, weekly digest, Stripe/Gumroad sale webhooks | `funnel/` |
 | Business | UGC clients CRM, packages & quotes, ad scripts (no fake testimonials), pitch drafts, invoices (PDF), digital products (PDF), affiliate link tracking, P&L, goal tracking | `business/` |
+| Languages | Per-brand `language`/`region` (Spanish built in): writer and idea prompts, on-slide labels, bios, banner, highlights, TTS voice, trend locale, Spanish guardrail patterns, and a native-speaker sign-off (`factory review-language`) | `i18n.py` |
+| Hand-off packs | `factory pack content.json --brand X --out DIR`: slides, thumbnails and caption.txt files with facts to check | `launchpack.py` |
 | Ops | CLI, Docker Compose (app, worker, media host), n8n workflow, CI | `cli.py`, `worker.py`, `integrations/` |
 
-Ready-made launch material lives in `launch/`: two weeks of scripts for the example finance brand,
+Ready-made launch material lives in `launch/` (`launch/dinero-simple/` is the Spanish sister brand, pending native-speaker review): two weeks of scripts for the example finance brand,
 a sellable product (guide PDF + spreadsheet), the ad studio's website, rate card, pitch templates,
 contract template and the launch-day plan.
 

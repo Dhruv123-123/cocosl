@@ -220,10 +220,14 @@ def gradient(size: tuple[int, int], a: RGB, b: RGB, vertical: bool = False) -> I
 
 # ---------------------------------------------------------------- icons
 ICON_KEYWORDS: list[tuple[str, tuple[str, ...]]] = [
-    ("coin", ("budget", "money", "saving", "cash", "spend", "price", "cost")),
-    ("chart", ("invest", "index", "stock", "growth", "retire", "fund", "market", "data")),
-    ("card", ("credit", "debt", "loan", "card", "bank", "payoff")),
-    ("phone", ("app", "tool", "tech", "software", "phone", "compare", "review")),
+    ("coin", ("budget", "money", "saving", "cash", "spend", "price", "cost",
+              "presupuesto", "dinero", "ahorr", "gasto", "precio", "costo")),
+    ("chart", ("invest", "index", "stock", "growth", "retire", "fund", "market", "data",
+               "inversi", "invertir", "acciones", "jubila", "retiro", "fondo", "mercado")),
+    ("card", ("credit", "debt", "loan", "card", "bank", "payoff",
+              "crédito", "credito", "deuda", "préstamo", "prestamo", "tarjeta", "banco")),
+    ("phone", ("app", "tool", "tech", "software", "phone", "compare", "review",
+               "herramienta", "celular", "compar")),
     ("bulb", ("invent", "idea", "tip", "hack", "learn", "trick", "science")),
     ("hourglass", ("history", "origin", "old", "time", "ancient", "story", "past")),
     ("scales", ("law", "custom", "rule", "legal", "right", "ethic")),

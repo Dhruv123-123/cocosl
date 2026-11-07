@@ -121,7 +121,7 @@ def _render_slides(settings: Settings, brand: BrandProfile, script: Script, fmt:
     imgs = generate_images(settings, brand, [s.visual_prompt for s in segments], SLIDE_SIZE, ASPECTS[fmt],
                            out / "images", family=family)
     kit = SlideKit(Palette.from_brand(brand), brand.visual.font, brand.visual.watermark, brand.name,
-                   script.cta or brand.cta)
+                   script.cta or brand.cta, language=brand.language)
     texts = []
     for i, s in enumerate(segments):
         head = s.on_screen_text or s.heading or script.title
@@ -182,7 +182,7 @@ def _image_provenance(imgs) -> list[dict]:
 
 
 def _norm(text: str) -> str:
-    return re.sub(r"[^a-z0-9 ]", "", (text or "").lower()).strip()
+    return re.sub(r"[^\w ]", "", (text or "").lower()).strip()
 
 
 def _relativize(assets: dict, build: Path, final: Path, root: Path) -> dict:

@@ -1,0 +1,1761 @@
+[
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Split checking into a 'bills' account and a 'spending' account so fixed costs can never be accidentally spent.",
+  "source_index": 0,
+  "source_title": "The two-account trick that stops overdrafts",
+  "script": {
+   "title": "El truco de las dos cuentas que evita sobregiros",
+   "hook": "Si revisas tu saldo antes de comprar el almuerzo, tus cuentas están mal organizadas.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si revisas tu saldo antes de comprar el almuerzo, tus cuentas están mal organizadas.",
+     "on_screen_text": "¿Revisas tu saldo antes de almorzar?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf nervously peeking at a giant bank balance meter next to a sandwich. No text, no logos, no real people."
+    },
+    {
+     "heading": "El problema",
+     "narration": "Con una sola cuenta de cheques, el dinero de la renta se mezcla con el de salir, y cada compra se siente como adivinar.",
+     "on_screen_text": "La renta y la diversión en el mismo montón",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a single jar overflowing with mixed coins labeled only by color, rent house icon and coffee cup icon tangled together. No text, no logos, no real people."
+    },
+    {
+     "heading": "La solución",
+     "narration": "Abre una segunda cuenta de cheques sin comisiones. La cuenta uno es para gastos fijos. La cuenta dos, para gastos libres.",
+     "on_screen_text": "Cuenta 1: Gastos fijos. Cuenta 2: Gastos libres.",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two tidy jars side by side, one with a house icon and one with a shopping bag icon, the small round coral piggy bank mascot with big eyes and a tiny teal scarf between them. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo llenarla",
+     "narration": "Suma tus gastos fijos del mes. Digamos que renta, celular, seguro y suscripciones dan $1,450. Divídelo entre tus pagos del mes y programa una transferencia automática a la cuenta de gastos fijos cada día de pago.",
+     "on_screen_text": "Gastos fijos ÷ quincenas = transferencia automática",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with two highlighted paydays and arrows carrying coins into the house jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Gasta tranquilo",
+     "narration": "Lo que cae en gastos libres es tuyo para el súper, la gasolina y la vida. Sin hacer cuentas en la cabeza, sin sobregiros sorpresa.",
+     "on_screen_text": "Lo que hay en Gastos libres, se puede gastar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf relaxed in a cafe chair holding a coffee, shopping-bag jar half full. No text, no logos, no real people."
+    },
+    {
+     "heading": "Colchón",
+     "narration": "Deja una semana extra de gastos fijos en esa cuenta, como colchón por si un pago se atrasa.",
+     "on_screen_text": "Agrega una semana de colchón",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small cushion pillow under the house jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Conclusión",
+     "narration": "Dos cuentas, una transferencia automática, y dejas de hacer tu presupuesto de memoria.",
+     "on_screen_text": "Dos cuentas. Una transferencia.",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf giving a thumbs up beside the two jars connected by an arrow. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Mezclar el dinero de la renta con el de salir en una sola cuenta de cheques es la razón por la que cada compra se siente arriesgada.\n\nLa solución: una cuenta de gastos fijos (que se llena sola cada día de pago con tus gastos fijos ÷ número de pagos al mes) y una cuenta de gastos libres para todo lo demás. Deja una semana de gastos fijos como colchón. Para la segunda cuenta, busca una sin comisión mensual ni saldo mínimo.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "finanzaspersonales",
+    "cuentadecheques",
+    "sobregiro",
+    "presupuesto",
+    "diadepago",
+    "educacionfinanciera",
+    "dinerosimple"
+   ],
+   "description": "Un sistema de dos cuentas de cheques que separa los gastos fijos del dinero para gastar, con un ejemplo con números y una semana de colchón.",
+   "thumbnail_text": "Adiós sobregiros",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/bank-accounts/",
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-overdraft-and-how-do-overdraft-fees-work-en-1047/"
+   ],
+   "claims_to_verify": [
+    "Example bills total of $1,450 is illustrative, not an average",
+    "Many banks and credit unions offer checking with no monthly fee or minimum balance (confirm before recommending)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Monthly category budgets break in week three; convert flexible spending into one weekly number instead.",
+  "source_index": 1,
+  "source_title": "Budget weekly, not monthly",
+  "script": {
+   "title": "Haz tu presupuesto por semana, no por mes",
+   "hook": "Tu presupuesto no falla el primer mes. Falla en la tercera semana.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Tu presupuesto no falla el primer mes. Falla en la tercera semana.",
+     "on_screen_text": "Los presupuestos mueren en la semana tres",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf looking at a calendar with week three circled and wilting. No text, no logos, no real people."
+    },
+    {
+     "heading": "Por qué",
+     "narration": "Por mes, cada categoría se ve enorme el día primero y vacía para el veinte, y no te das cuenta de que te pasaste hasta que ya es tarde.",
+     "on_screen_text": "El día 1 te sientes rico; el 20, en cero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a tall stack of coins on day 1 shrinking to a single coin by day 20 on a calendar strip. No text, no logos, no real people."
+    },
+    {
+     "heading": "El cambio",
+     "narration": "Junta todo lo flexible: súper, comer fuera, gasolina, compras. Digamos que son $1,000 al mes.",
+     "on_screen_text": "Suma tus gastos flexibles",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. grocery bag, fuel can, takeout box and shopping bag icons flowing into one basket. No text, no logos, no real people."
+    },
+    {
+     "heading": "Los números",
+     "narration": "Multiplica por doce y divide entre cincuenta y dos. Son unos $230 a la semana.",
+     "on_screen_text": "$1,000 × 12 ÷ 52 ≈ $230 por semana",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a basket of coins split into seven small even piles on a weekly planner. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo usarlo",
+     "narration": "Cada lunes, pasa $230 a tu cuenta o tarjeta de gastos. Cuando se acaba, se acabó la semana. Lo que sobre, pasa a la siguiente.",
+     "on_screen_text": "Recarga cada lunes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf refilling a small wallet on a Monday sunrise. No text, no logos, no real people."
+    },
+    {
+     "heading": "Conclusión",
+     "narration": "Un número que revisas una vez por semana le gana a doce categorías que nunca miras.",
+     "on_screen_text": "Un solo número por semana",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a single large coin proudly. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Los presupuestos mensuales se ven bien el día primero y se desarman para el 20.\n\nSuma tus gastos flexibles (súper, comer fuera, gasolina, compras), multiplica por 12 y divide entre 52. $1,000 al mes ≈ $230 por semana. Recárgalo cada lunes; lo que sobre pasa a la semana siguiente.\n\n¿Lo quieres ya armado? La plantilla El Presupuesto de 20 Minutos (Notion + Sheets) está en el link de la bio.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "presupuestosemanal",
+    "presupuesto",
+    "ahorro",
+    "habitosfinancieros",
+    "plantilladepresupuesto",
+    "dinerosimple"
+   ],
+   "description": "Convierte tus gastos flexibles del mes en un solo número semanal: $1,000 × 12 ÷ 52 ≈ $230 por semana.",
+   "thumbnail_text": "Presupuesto semanal",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/money-as-you-grow/",
+    "https://www.consumerfinance.gov/about-us/blog/budgeting-how-to-create-a-budget-and-stick-with-it/"
+   ],
+   "claims_to_verify": [
+    "$1,000 × 12 ÷ 52 = $230.77 (rounded to $230)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "first-time investing basics (index funds, retirement accounts)",
+  "idea_angle": "Fear of locking money away stops people from opening a Roth IRA; contributions (not earnings) can be withdrawn.",
+  "source_index": 2,
+  "source_title": "Roth IRA money isn't locked away",
+  "script": {
+   "title": "Tu dinero en una Roth IRA no está encerrado",
+   "hook": "La razón por la que no has abierto una Roth IRA probablemente está equivocada.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "La razón por la que no has abierto una Roth IRA probablemente está equivocada.",
+     "on_screen_text": "¿Miedo a encerrar tu dinero?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf hesitating in front of a vault door with a padlock. No text, no logos, no real people."
+    },
+    {
+     "heading": "El mito",
+     "narration": "Mucha gente cree que el dinero para el retiro se queda trabado hasta los sesenta.",
+     "on_screen_text": "\"No lo puedo tocar hasta los 60\"",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an hourglass with a tiny piggy bank trapped inside, cartoonish and soft. No text, no logos, no real people."
+    },
+    {
+     "heading": "La regla",
+     "narration": "En una Roth IRA, el dinero que aportas lo puedes sacar cuando quieras, sin impuestos ni multa.",
+     "on_screen_text": "Tus aportaciones pueden salir",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf lifting coins back out of an open vault door. No text, no logos, no real people."
+    },
+    {
+     "heading": "La letra chica",
+     "narration": "Eso aplica solo a lo que aportaste. Si sacas las ganancias antes de tiempo, puedes deber impuesto sobre la renta más una multa del diez por ciento, con algunas excepciones.",
+     "on_screen_text": "Las ganancias tienen reglas más estrictas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a plant growing out of a pile of coins with a gentle caution sign shape (no words). No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo",
+     "narration": "Pones $3,000 y crece a $3,400. Podrías sacar los $3,000. Los $400 mejor déjalos ahí.",
+     "on_screen_text": "Pones $3,000 → puedes sacar $3,000",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two stacks of coins, a large one sliding out of a vault and a small sprout stack staying in. No text, no logos, no real people."
+    },
+    {
+     "heading": "Conclusión",
+     "narration": "No es tu fondo de emergencia, pero la puerta no está soldada. Necesitas ingresos de trabajo y hay límites de ingreso, así que revisa irs.gov.",
+     "on_screen_text": "No está encerrado. Pero mejor no tocarlo.",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf closing the vault door gently and walking away calmly. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Las aportaciones a una Roth IRA (los dólares que tú pones) se pueden retirar en cualquier momento sin impuestos ni multa. Las ganancias son otra cosa: si las sacas antes de tiempo, podrías deber impuesto sobre la renta más una multa del 10%, salvo que aplique una excepción.\n\nEso hace que empezar dé menos miedo, pero aun así no debería ser tu fondo de emergencia. Para abrirla necesitas ingresos de trabajo y hay límites de ingreso.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "rothira",
+    "retiro",
+    "invertir",
+    "inversionparaprincipiantes",
+    "ira",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Las aportaciones a una Roth IRA se pueden retirar sin impuestos ni multa; las ganancias siguen reglas más estrictas (59½ años y la regla de cinco años, con excepciones).",
+   "thumbnail_text": "Tu Roth no está trabada",
+   "sources": [
+    "https://www.irs.gov/retirement-plans/roth-iras",
+    "https://www.irs.gov/publications/p590b",
+    "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-ira-contribution-limits"
+   ],
+   "claims_to_verify": [
+    "Roth IRA regular contributions can be withdrawn at any time tax- and penalty-free (IRS Pub 590-B ordering rules)",
+    "Early withdrawal of Roth earnings can be subject to income tax plus 10% additional tax, with exceptions (age 59½, five-year rule)",
+    "Roth IRA eligibility requires taxable compensation and is subject to MAGI income limits"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "first-time investing basics (index funds, retirement accounts)",
+  "idea_angle": "Not contributing enough to get the full 401(k) match is turning down part of your pay; worked example on a $50k salary.",
+  "source_index": 3,
+  "source_title": "The raise you're ignoring: your 401(k) match",
+  "script": {
+   "title": "El aumento que estás ignorando: el match de tu 401(k)",
+   "hook": "Es muy posible que parte de tu sueldo esté ahí, sin que nadie lo reclame.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Es muy posible que parte de tu sueldo esté ahí, sin que nadie lo reclame.",
+     "on_screen_text": "¿Sueldo sin reclamar?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf finding an envelope of coins tucked behind a desk. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo funciona",
+     "narration": "Muchas empresas igualan una parte de lo que aportas a tu 401(k). Una fórmula común es el cincuenta por ciento de lo que pones, hasta el seis por ciento de tu sueldo.",
+     "on_screen_text": "Común: 50% hasta el 6% de tu sueldo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two hands of different shapes (abstract, not human faces) each dropping coins into one jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Los números",
+     "narration": "Con un sueldo de $50,000, aportas el seis por ciento: $3,000 al año. Tu empresa agrega $1,500.",
+     "on_screen_text": "Tú: $3,000. Tu empresa: +$1,500",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a big stack and a half-size stack of coins merging into one jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "El error",
+     "narration": "Si aportas solo el tres por ciento, recibes apenas $750 de match. Los otros $750 se pierden ese año.",
+     "on_screen_text": "Aportas 3% → pierdes $750",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf watching coins float away like balloons. No text, no logos, no real people."
+    },
+    {
+     "heading": "Revisa dos cosas",
+     "narration": "Busca la fórmula exacta de tu plan y su calendario de vesting, que define cuándo ese dinero ya es totalmente tuyo.",
+     "on_screen_text": "Revisa: fórmula del match + vesting",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a checklist clipboard with two big check circles. No text, no logos, no real people."
+    },
+    {
+     "heading": "Conclusión",
+     "narration": "Entra esta semana al portal de beneficios de tu trabajo y sube tu aportación al menos hasta el match completo.",
+     "on_screen_text": "Primero, el match completo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf pressing a large green button on a laptop. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Un match común en el 401(k): tu empresa pone el 50% de lo que tú aportas, hasta el 6% de tu sueldo. Con $50k, si aportas el 6% ($3,000), tu empresa agrega $1,500. Si aportas el 3%, recibes $750 y el resto no se agrega ese año.\n\nLa fórmula de tu plan puede ser distinta, así que revisa los documentos del plan y el calendario de vesting (cuándo el match ya es tuyo).\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "401k",
+    "retiro",
+    "beneficios",
+    "primertrabajo",
+    "finanzaspersonales",
+    "invertir",
+    "dinerosimple"
+   ],
+   "description": "Ejemplo con números de un match del 50% hasta el 6% sobre un sueldo de $50,000, y por qué importa el vesting.",
+   "thumbnail_text": "Dinero gratis en tu 401(k)",
+   "sources": [
+    "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-vesting",
+    "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/publications/what-you-should-know-about-your-retirement-plan"
+   ],
+   "claims_to_verify": [
+    "50% match up to 6% of pay is a common formula (illustrative; plans vary)",
+    "$50,000 × 6% = $3,000; 50% match = $1,500; at 3% contribution match = $750",
+    "Employer contributions may be subject to a vesting schedule; employee contributions are always 100% vested"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "first-time investing basics (index funds, retirement accounts)",
+  "idea_angle": "Same index, different price tag: a 0.03% vs 1% expense ratio turns $10,000 into about $75k vs $57k over 30 years.",
+  "source_index": 4,
+  "source_title": "The fee that eats $18,000",
+  "script": {
+   "title": "La comisión que se come $18,000",
+   "hook": "Dos fondos pueden tener exactamente las mismas acciones y dejarte con cantidades muy distintas.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Dos fondos pueden tener exactamente las mismas acciones y dejarte con cantidades muy distintas.",
+     "on_screen_text": "Mismas acciones. Distinto resultado.",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two identical baskets of fruit, one with a small mouse quietly nibbling. No text, no logos, no real people."
+    },
+    {
+     "heading": "Expense ratio",
+     "narration": "La diferencia es el expense ratio: la comisión anual que cobra el fondo, como porcentaje de tu saldo.",
+     "on_screen_text": "Expense ratio = comisión anual",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a tiny percent-sign-shaped creature carrying away a coin each year (no letters). No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo",
+     "narration": "Inviertes $10,000 por treinta años. Supongamos un siete por ciento al año antes de comisiones, como ejemplo hipotético.",
+     "on_screen_text": "$10,000 · 30 años · 7% hipotético",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf planting a coin seed in a garden plot. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fondo barato",
+     "narration": "Con una comisión de 0.03 por ciento, terminas con unos $75,000.",
+     "on_screen_text": "Comisión de 0.03% → ~$75,000",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a tall healthy coin tree. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fondo caro",
+     "narration": "Con una comisión del uno por ciento, unos $57,000. Casi $18,000 menos por tener lo mismo.",
+     "on_screen_text": "Comisión de 1% → ~$57,000",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a shorter coin tree next to the tall one, with a gap between their heights. No text, no logos, no real people."
+    },
+    {
+     "heading": "Conclusión",
+     "narration": "Antes de comprar cualquier fondo, busca su nombre más 'expense ratio'. En un fondo índice amplio, es común ver unas pocas centésimas de por ciento.",
+     "on_screen_text": "Primero revisa el expense ratio",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf using a magnifying glass on a fund fact sheet with only shapes and bars. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "El expense ratio se ve pequeñito, pero se acumula. Ejemplo hipotético: $10,000 por 30 años al 7% anual antes de comisiones.\nComisión de 0.03% → unos $75,000\nComisión de 1% → unos $57,000\n\nNadie promete rendimientos y el mercado real no sube 7% cada año, pero el costo de la comisión es real de cualquier forma. Revisa el expense ratio en la ficha del fondo antes de comprar.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "expenseratio",
+    "fondosindexados",
+    "invertir",
+    "inversionparaprincipiantes",
+    "etfs",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Cómo un expense ratio de 0.03% contra 1% cambia $10,000 hipotéticos en 30 años (unos $75k contra $57k al 7% bruto). Solo es un ejemplo.",
+   "thumbnail_text": "1% te cuesta $18,000",
+   "sources": [
+    "https://www.investor.gov/financial-tools-calculators/calculators/mutual-fund-analyzer",
+    "https://www.investor.gov/introduction-investing/investing-basics/glossary/expense-ratio",
+    "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator"
+   ],
+   "claims_to_verify": [
+    "$10,000 × (1.0697)^30 ≈ $75,485; $10,000 × (1.06)^30 ≈ $57,435 (simple net-of-fee approximation)",
+    "Broad index funds commonly have expense ratios of a few hundredths of a percent (check current fund fact sheets)",
+    "7% annual return is a hypothetical assumption, not a forecast"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "credit scores and debt payoff",
+  "idea_angle": "Paying in full on the due date can still report high utilization because issuers usually report the statement balance.",
+  "source_index": 5,
+  "source_title": "Paid in full, score still dropped?",
+  "script": {
+   "title": "¿Pagaste completo y tu puntaje bajó?",
+   "hook": "Pagaste tu tarjeta completa y aun así tu puntaje de crédito bajó. Te explico por qué.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Pagaste tu tarjeta completa y aun así tu puntaje de crédito bajó. Te explico por qué.",
+     "on_screen_text": "¿Pagaste todo y tu puntaje bajó?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf confused, looking at a gauge needle that slipped slightly. No text, no logos, no real people."
+    },
+    {
+     "heading": "Dos fechas",
+     "narration": "Tu tarjeta tiene dos fechas: la fecha de corte del estado de cuenta y la fecha límite de pago, normalmente con unas semanas de diferencia.",
+     "on_screen_text": "Fecha de corte ≠ fecha de pago",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with two different days circled in green and mustard. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué se reporta",
+     "narration": "La mayoría de los bancos reportan a los burós de crédito el saldo de tu estado de cuenta, aunque lo pagues después.",
+     "on_screen_text": "Se reporta el saldo del estado de cuenta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope flying from a card-shaped building to three abstract tower shapes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo",
+     "narration": "Si gastas $1,800 con un límite de $2,000, ese estado de cuenta muestra un uso del noventa por ciento, aunque lo vayas a pagar completo.",
+     "on_screen_text": "$1,800 / $2,000 = 90% usado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a fuel-gauge style meter almost full. No text, no logos, no real people."
+    },
+    {
+     "heading": "La solución",
+     "narration": "Haz un pago unos días antes de la fecha de corte, para que se reporte un saldo más bajo. Luego paga el resto antes de la fecha límite.",
+     "on_screen_text": "Paga antes de la fecha de corte",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf dropping coins into a card slot before a calendar page flips. No text, no logos, no real people."
+    },
+    {
+     "heading": "Conclusión",
+     "narration": "El uso de crédito solo refleja saldos recientes, así que esto se arregla rápido. Pero nunca te pases de la fecha límite. Eso sí te pega de verdad.",
+     "on_screen_text": "Nunca te pases de la fecha límite",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf smiling beside a meter with a low reading. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Los bancos normalmente reportan a los burós el saldo de tu estado de cuenta, no lo que debes después de pagar. Si gastas $1,800 con un límite de $2,000, puedes mostrar 90% de uso aunque pagues todo.\n\nLa solución: abona antes de la fecha de corte y paga el resto antes de la fecha límite. El uso de crédito se basa en saldos recientes, así que se recupera rápido. Pagar a tiempo es lo que más importa.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "puntajedecredito",
+    "credito",
+    "tarjetadecredito",
+    "historialcrediticio",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Por qué tu puntaje puede bajar aunque pagues completo: los bancos suelen reportar el saldo del estado de cuenta. Paga antes de la fecha de corte para bajar el uso reportado.",
+   "thumbnail_text": "Paga ANTES del corte",
+   "sources": [
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-a-credit-utilization-rate-en-1997/",
+    "https://www.myfico.com/credit-education/credit-scores/amount-of-debt",
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-a-statement-balance-en-1966/"
+   ],
+   "claims_to_verify": [
+    "Most card issuers report the statement balance to credit bureaus around the statement closing date (practice varies by issuer)",
+    "Credit utilization is a large factor in common scoring models and reflects recent reported balances",
+    "Payment history is the most heavily weighted FICO score factor"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "credit scores and debt payoff",
+  "idea_angle": "A credit freeze is free at all three bureaus, doesn't hurt your score, and takes about 15 minutes; how to thaw it when you apply.",
+  "source_index": 6,
+  "source_title": "Freeze your credit for free tonight",
+  "script": {
+   "title": "Congela tu crédito gratis esta noche",
+   "hook": "Cualquiera con tu número de Seguro Social puede intentar abrir crédito a tu nombre. Puedes ponérselo mucho más difícil, gratis.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Cualquiera con tu número de Seguro Social puede intentar abrir crédito a tu nombre. Puedes ponérselo mucho más difícil, gratis.",
+     "on_screen_text": "Bloquea cuentas falsas por $0",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding an ice cube shaped like a padlock. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué es",
+     "narration": "Congelar tu crédito impide que los prestamistas consulten tu reporte, así que casi ninguna cuenta nueva se puede abrir.",
+     "on_screen_text": "Congelar = nadie consulta tu crédito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a frosted file cabinet with a snowflake on the drawer. No text, no logos, no real people."
+    },
+    {
+     "heading": "Costo",
+     "narration": "Desde 2018, la ley federal hace que congelar y descongelar sea gratis en Equifax, Experian y TransUnion.",
+     "on_screen_text": "Gratis en los 3 burós",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three simple building shapes each with a small snowflake on top. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tu puntaje",
+     "narration": "No afecta tu puntaje de crédito, y tus tarjetas actuales siguen funcionando.",
+     "on_screen_text": "No afecta tu puntaje",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf swiping a plain card at a register while a snowflake floats nearby. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cuando solicites",
+     "narration": "¿Vas a pedir un apartamento o una tarjeta? Levántalo temporalmente en línea. Si lo pides en línea o por teléfono, tienen que hacerlo en menos de una hora.",
+     "on_screen_text": "Descongélalo cuando lo necesites",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a padlock-shaped ice cube melting slightly under a small sun. No text, no logos, no real people."
+    },
+    {
+     "heading": "Conclusión",
+     "narration": "Crea una cuenta en cada buró, congela tu crédito y guarda los accesos en un lugar seguro.",
+     "on_screen_text": "3 cuentas. 3 congelamientos. Listo.",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf checking three boxes on a clipboard. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Congelar tu crédito es gratis en Equifax, Experian y TransUnion, no cambia tu puntaje y no afecta las tarjetas que ya tienes. Hace mucho más difícil que alguien abra crédito nuevo a tu nombre.\n\nCongélalo en los tres. Cuando necesites crédito (apartamento, préstamo, tarjeta nueva), levántalo temporalmente en línea y luego vuelve a congelarlo.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "congelarcredito",
+    "robodeidentidad",
+    "reportedecredito",
+    "fraude",
+    "educacionfinanciera",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Cómo congelar tu crédito gratis en los tres burós, por qué no daña tu puntaje y cómo levantarlo cuando solicites crédito.",
+   "thumbnail_text": "Congela tu crédito",
+   "sources": [
+    "https://consumer.ftc.gov/articles/what-know-about-credit-freezes-fraud-alerts",
+    "https://www.consumerfinance.gov/ask-cfpb/what-does-it-mean-to-put-a-security-freeze-on-my-credit-report-en-1341/",
+    "https://www.usa.gov/credit-freeze"
+   ],
+   "claims_to_verify": [
+    "Credit freezes and lifts are free at all three nationwide bureaus under federal law effective September 2018",
+    "A freeze does not affect credit scores and does not block existing creditors",
+    "Bureaus must lift a freeze within one hour for online or phone requests"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "credit scores and debt payoff",
+  "idea_angle": "Minimum-ish payments on a $3,000 card at 22% APR: $60/month takes 11+ years and $5,200 interest; $150/month takes ~2 years and ~$770.",
+  "source_index": 7,
+  "source_title": "$60 vs $150 on a $3,000 card",
+  "script": {
+   "title": "$60 contra $150 en una tarjeta de $3,000",
+   "hook": "Pagar $60 al mes en una tarjeta con $3,000 de saldo te cuesta más en intereses que la deuda misma.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Pagar $60 al mes en una tarjeta con $3,000 de saldo te cuesta más en intereses que la deuda misma.",
+     "on_screen_text": "Tarjeta de $3,000. $60 al mes.",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf carrying a heavy backpack of coins up a long hill. No text, no logos, no real people."
+    },
+    {
+     "heading": "El escenario",
+     "narration": "Digamos que la tarjeta cobra veintidós por ciento de interés anual, el APR, y ya no la usas.",
+     "on_screen_text": "22% APR · sin compras nuevas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a credit card shape put away in a drawer. No text, no logos, no real people."
+    },
+    {
+     "heading": "$60 al mes",
+     "narration": "Con $60 al mes, tardas unos 137 meses, más de once años, y pagas cerca de $5,200 de interés.",
+     "on_screen_text": "$60/mes → 11+ años, ~$5,200 de interés",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a very long winding road with tiny mile markers. No text, no logos, no real people."
+    },
+    {
+     "heading": "$150 al mes",
+     "narration": "Con $150 al mes: unos 26 meses y cerca de $770 de interés.",
+     "on_screen_text": "$150/mes → ~2 años, ~$770",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a short straight road ending at a finish flag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Dónde verlo",
+     "narration": "Tu estado de cuenta trae un recuadro de aviso del pago mínimo que dice cuánto tardarías pagando solo el mínimo. Léelo una vez. Te va a motivar.",
+     "on_screen_text": "Lee el aviso en tu estado de cuenta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf reading a document with a highlighted box shape (no text). No text, no logos, no real people."
+    },
+    {
+     "heading": "Conclusión",
+     "narration": "Elige un pago fijo que sí puedas sostener, ponlo en automático y súbele cada vez que puedas.",
+     "on_screen_text": "Pago fijo. Automático.",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf setting a gear-shaped automation dial. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Saldo de $3,000 en una tarjeta con 22% de APR, sin compras nuevas:\n$60 al mes → ~137 meses, ~$5,200 de interés\n$150 al mes → ~26 meses, ~$770 de interés\n\nTu estado de cuenta incluye un aviso del pago mínimo que muestra cuánto tardarías pagando solo el mínimo. Elige una cantidad fija que sí puedas mantener, ponla en automático y auméntala cuando puedas.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "deudas",
+    "tarjetadecredito",
+    "pagominimo",
+    "salirdedeudas",
+    "finanzaspersonales",
+    "educacionfinanciera",
+    "dinerosimple"
+   ],
+   "description": "Ejemplo con números: un saldo de $3,000 en tarjeta de crédito al 22% de APR, pagando $60 al mes contra $150 al mes.",
+   "thumbnail_text": "$5,200 vs $770",
+   "sources": [
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-a-minimum-payment-on-a-credit-card-en-50/",
+    "https://www.consumerfinance.gov/consumer-tools/credit-cards/",
+    "https://www.federalreserve.gov/releases/g19/current/default.htm"
+   ],
+   "claims_to_verify": [
+    "Amortization: $3,000 at 22% APR (monthly compounding) paid $60/mo ≈ 137 months and ≈ $5,207 interest; $150/mo ≈ 26 months and ≈ $771 interest",
+    "22% APR is a realistic card rate (check current Fed G.19 average)",
+    "Credit card statements must include a minimum payment warning showing payoff time (CARD Act)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "What 'FDIC insured' on a high-yield savings app actually covers, and the fintech-vs-bank catch.",
+  "source_index": 8,
+  "source_title": "Is your savings app actually insured?",
+  "script": {
+   "title": "¿Tu app de ahorro de verdad está asegurada?",
+   "hook": "Esa app de ahorro que paga buena tasa tal vez no es un banco.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Esa app de ahorro que paga buena tasa tal vez no es un banco.",
+     "on_screen_text": "¿Tu app de ahorro es un banco?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf squinting at a phone screen that shows only shapes and a coin icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "La cobertura",
+     "narration": "El seguro de la FDIC cubre depósitos de hasta $250,000 por depositante, por banco asegurado y por tipo de cuenta, si el banco quiebra.",
+     "on_screen_text": "$250k por persona, por banco",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a sturdy umbrella shielding a stack of coins from rain. No text, no logos, no real people."
+    },
+    {
+     "heading": "La letra chica",
+     "narration": "Muchas apps no son bancos. Guardan tu dinero en un banco socio. El seguro te protege si quiebra ese banco, no si quiebra la empresa de la app.",
+     "on_screen_text": "App ≠ banco",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small kiosk standing in front of a large columned bank building, a bridge between them. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo revisarlo",
+     "narration": "Busca el nombre del banco socio en la letra chica de la app y luego búscalo en FDIC BankFind.",
+     "on_screen_text": "Busca el banco en BankFind",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with a magnifying glass over a building with columns. No text, no logos, no real people."
+    },
+    {
+     "heading": "Elige bien",
+     "narration": "Prefiere cuentas directamente en un banco o cooperativa de crédito asegurados, sin comisión mensual y con transferencias fáciles hacia afuera.",
+     "on_screen_text": "Asegurada. Sin comisiones. Fácil de sacar.",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three checkmark tiles beside a savings jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Conclusión",
+     "narration": "Una tasa alta está bien. Saber exactamente quién guarda tu dinero, mejor.",
+     "on_screen_text": "Sabe quién guarda tu dinero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf hugging a savings jar under an umbrella. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "El seguro de la FDIC cubre hasta $250,000 por depositante, por banco asegurado y por tipo de cuenta, si el banco quiebra. Muchas apps de ahorro no son bancos; guardan los depósitos en bancos socios. La cobertura aplica si quiebra ese banco, no la app.\n\nBusca el nombre del banco socio en los avisos legales de la app y búscalo en FDIC BankFind (para cooperativas de crédito: NCUA).\n\nLa cuenta de ahorro de alto rendimiento en el link de la bio es un enlace de afiliado: podríamos recibir una comisión si abres y depositas en una cuenta, sin costo extra para ti. Compara tasas y condiciones tú mismo primero.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "cuentadeahorro",
+    "ahorro",
+    "fdic",
+    "fondodeemergencia",
+    "bancos",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Qué cubre el seguro de la FDIC ($250,000 por depositante, por banco asegurado y por tipo de cuenta) y por qué las apps fintech que no son bancos son diferentes.",
+   "thumbnail_text": "¿De verdad asegurado?",
+   "sources": [
+    "https://www.fdic.gov/resources/deposit-insurance",
+    "https://banks.data.fdic.gov/bankfind-suite/bankfind",
+    "https://www.fdic.gov/resources/deposit-insurance/understanding-deposit-insurance",
+    "https://ncua.gov/consumers/share-insurance-coverage"
+   ],
+   "claims_to_verify": [
+    "FDIC standard maximum deposit insurance amount is $250,000 per depositor, per insured bank, per ownership category",
+    "FDIC insurance covers insured bank failure only, not failure of a non-bank fintech company",
+    "Confirm the affiliate HYSA is held at an FDIC-insured bank before posting"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "Three free bank alerts (low balance, large transaction, payment due) that replace daily balance-checking anxiety.",
+  "source_index": 9,
+  "source_title": "Set these 3 bank alerts today",
+  "script": {
+   "title": "Activa estas 3 alertas del banco hoy",
+   "hook": "No necesitas una app de presupuesto para evitar sorpresas con tu dinero. Necesitas tres alertas.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "No necesitas una app de presupuesto para evitar sorpresas con tu dinero. Necesitas tres alertas.",
+     "on_screen_text": "3 alertas > 1 app",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf wearing a tiny bell around its neck. No text, no logos, no real people."
+    },
+    {
+     "heading": "Alerta uno",
+     "narration": "Una alerta de saldo bajo. Ponla en lo que gastas en una semana normal, para que te avise cuando todavía hay tiempo de mover dinero.",
+     "on_screen_text": "1. Saldo bajo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a gauge with the needle near a highlighted low zone and a bell icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Alerta dos",
+     "narration": "Una alerta de compras grandes, de unos cincuenta o cien dólares. Detecta fraudes y compras por impulso en el momento.",
+     "on_screen_text": "2. Compra grande",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a big coin rolling past a bell that rings. No text, no logos, no real people."
+    },
+    {
+     "heading": "Alerta tres",
+     "narration": "Una alerta de pago en cada tarjeta y préstamo, cinco días antes de la fecha límite. Un solo pago con treinta días de atraso puede aparecer en tu reporte de crédito.",
+     "on_screen_text": "3. Pago próximo (5 días antes)",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar page with a bell on the corner. No text, no logos, no real people."
+    },
+    {
+     "heading": "Dónde",
+     "narration": "Las tres suelen estar en la app de tu banco o tarjeta, en configuración, notificaciones o alertas. Son gratis.",
+     "on_screen_text": "Configuración → Alertas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf tapping a gear icon on a phone with shapes only. No text, no logos, no real people."
+    },
+    {
+     "heading": "Conclusión",
+     "narration": "Diez minutos de configuración y tus cuentas empiezan a decirte qué está pasando, en vez de que tú adivines.",
+     "on_screen_text": "Que tus cuentas te avisen",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf relaxing while three small bells sit on a shelf. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Tres alertas gratis que ofrecen casi todos los bancos y tarjetas:\n1. Saldo bajo (ponla en lo que gastas en una semana)\n2. Compra grande ($50–$100)\n3. Pago próximo, 5 días antes de cada fecha límite\n\nBúscalas en Configuración → Notificaciones/Alertas de tu app (si tu app está en inglés: Settings → Alerts). Toma unos diez minutos.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "bancos",
+    "alertasbancarias",
+    "fraude",
+    "presupuesto",
+    "organizaciondinero",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Tres alertas gratis (saldo bajo, compra grande, pago próximo) que evitan sobregiros, detectan fraudes a tiempo y te ayudan a no pagar tarde.",
+   "thumbnail_text": "3 alertas, cero sorpresas",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/bank-accounts/",
+    "https://www.consumerfinance.gov/ask-cfpb/how-long-does-negative-information-remain-on-my-credit-report-en-323/"
+   ],
+   "claims_to_verify": [
+    "Late payments are generally reported to credit bureaus once 30 or more days past due",
+    "Most major banks and card issuers offer free customizable alerts (confirm wording is not overstated)",
+    "App menu names are given in Spanish and English (Configuración / Settings); check they match common bank apps"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Irregular yearly costs (registration, gifts, renewals) aren't emergencies; turn each into a monthly sinking fund.",
+  "source_index": 10,
+  "source_title": "That 'surprise' bill was on the calendar",
+  "script": {
+   "title": "Esa cuenta 'sorpresa' estaba en el calendario",
+   "hook": "El registro del carro no es una emergencia. Llega cada año.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "El registro del carro no es una emergencia. Llega cada año.",
+     "on_screen_text": "No es emergencia. Es anual.",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf surprised by an envelope-shaped bill popping out of a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "El patrón",
+     "narration": "El registro, las renovaciones, los regalos de diciembre, la suscripción anual: todo es predecible, pero no mensual. Por eso destruyen el presupuesto del mes.",
+     "on_screen_text": "Predecible, pero no mensual",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with small icons on random months: car, gift box, umbrella, phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "Haz la lista",
+     "narration": "Revisa tus estados de cuenta del año pasado y anota cada gasto que no fue mensual.",
+     "on_screen_text": "Anota los gastos irregulares del año pasado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf unrolling a long receipt-shaped scroll with only lines. No text, no logos, no real people."
+    },
+    {
+     "heading": "Divide entre 12",
+     "narration": "Súmalos y divide entre doce. Digamos que dan $1,800 al año. Son $150 al mes, mucho más fácil de planear.",
+     "on_screen_text": "$1,800 ÷ 12 = $150 al mes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a large coin split into twelve slices like a pie. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ponlo en automático",
+     "narration": "Programa una transferencia automática de $150 a un apartado de ahorro cada mes. Muchos bancos te dejan ponerle nombre, como 'Carro' o 'Regalos'.",
+     "on_screen_text": "Ahorro automático cada mes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. several small labeled-by-icon jars receiving coins from a pipe. No text, no logos, no real people."
+    },
+    {
+     "heading": "Conclusión",
+     "narration": "Cuando llega la cuenta, el dinero ya está ahí, esperando. Sin pánico, sin tarjeta de crédito. Eso es un fondo de previsión.",
+     "on_screen_text": "El dinero ya te está esperando",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf calmly paying a bill from a full jar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Los gastos irregulares no son emergencias. Anota los gastos no mensuales del año pasado (registro del carro, renovaciones, regalos, suscripciones anuales), súmalos y divide entre 12. $1,800 al año = $150 al mes.\n\nPrograma esa transferencia automática a un apartado de ahorro. Cuando llegue la cuenta, ya estará cubierta.\n\n¿Lo quieres ya armado? La plantilla El Presupuesto de 20 Minutos (Notion + Sheets) está en el link de la bio.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "ahorro",
+    "presupuesto",
+    "gastosirregulares",
+    "metasdeahorro",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Fondos de previsión (sinking funds): suma tus gastos irregulares del año, divide entre 12 y automatiza la transferencia mensual.",
+   "thumbnail_text": "Fondos de previsión",
+   "sources": [
+    "https://www.consumerfinance.gov/about-us/blog/budgeting-how-to-create-a-budget-and-stick-with-it/"
+   ],
+   "claims_to_verify": [
+    "$1,800 ÷ 12 = $150 (illustrative total, not an average)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "first-time investing basics (index funds, retirement accounts)",
+  "idea_angle": "A target-date fund is a legit one-fund start for a beginner IRA; the two catches are fees and stacking it with other funds.",
+  "source_index": 11,
+  "source_title": "The one-fund retirement option",
+  "script": {
+   "title": "La opción de retiro de un solo fondo",
+   "hook": "Si elegir inversiones es lo que no te deja empezar, un solo fondo puede hacer casi todo.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si elegir inversiones es lo que no te deja empezar, un solo fondo puede hacer casi todo.",
+     "on_screen_text": "¿Demasiadas opciones?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf overwhelmed by a wall of identical doors. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué es",
+     "narration": "Un fondo con fecha objetivo, o target-date fund, mezcla fondos índice de acciones y bonos, armado según el año en que piensas retirarte, como 2065 o 2070.",
+     "on_screen_text": "Un fondo, armado según un año",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a single basket holding smaller baskets of different colors. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo cambia",
+     "narration": "Empieza casi todo en acciones y poco a poco pasa a bonos conforme se acerca ese año. A ese camino se le llama glide path.",
+     "on_screen_text": "Pasa a bonos con el tiempo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a gentle slope with a paper airplane gliding down from green to cream. No text, no logos, no real people."
+    },
+    {
+     "heading": "Detalle uno",
+     "narration": "Las comisiones cambian mucho entre proveedores. Revisa el expense ratio antes de elegir uno.",
+     "on_screen_text": "Detalle 1: revisa la comisión",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small price-tag shape hanging off a basket. No text, no logos, no real people."
+    },
+    {
+     "heading": "Detalle dos",
+     "narration": "Está diseñado para ser todo tu portafolio. Si lo combinas con otros cinco fondos, desarmas la mezcla que debía manejar por ti.",
+     "on_screen_text": "Detalle 2: no lo mezcles",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a neat basket being buried under a pile of extra baskets. No text, no logos, no real people."
+    },
+    {
+     "heading": "Conclusión",
+     "narration": "Puede perder valor, y no es una promesa. Pero un fondo barato que sí tienes le gana a un plan perfecto que nunca empiezas.",
+     "on_screen_text": "Empezar le gana a lo perfecto",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf placing one basket on a shelf and smiling. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Los fondos con fecha objetivo (target-date funds) mezclan fondos de acciones y bonos, y poco a poco pasan a bonos conforme se acerca el año objetivo. Para alguien que empieza, un solo fondo puede ser todo el plan.\n\nDos detalles: las comisiones cambian mucho según el proveedor (revisa el expense ratio), y combinarlo con muchos otros fondos deshace la mezcla que maneja por ti. Pueden perder valor, incluso cerca de la fecha objetivo.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "retiro",
+    "targetdatefund",
+    "rothira",
+    "401k",
+    "invertir",
+    "inversionparaprincipiantes",
+    "dinerosimple"
+   ],
+   "description": "Qué es un fondo con fecha objetivo, cómo funciona su glide path y los dos errores que hay que evitar: comisiones altas y mezclarlo con otros fondos.",
+   "thumbnail_text": "Un fondo y listo",
+   "sources": [
+    "https://www.investor.gov/introduction-investing/investing-basics/glossary/target-date-funds",
+    "https://www.sec.gov/investor/alerts/tdf.htm",
+    "https://www.investor.gov/introduction-investing/investing-basics/glossary/expense-ratio"
+   ],
+   "claims_to_verify": [
+    "Target-date funds shift asset allocation toward bonds/conservative investments as the target date approaches (glide path)",
+    "Target-date funds are not guaranteed and can lose money, including near and after the target date (SEC investor bulletin)",
+    "2065/2070 vintages exist at major providers (verify current availability)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "credit scores and debt payoff",
+  "idea_angle": "Closing an old no-fee card can raise utilization and shorten average age; utilization math with a $4,000 limit.",
+  "source_index": 12,
+  "source_title": "Don't cancel that old card yet",
+  "script": {
+   "title": "No canceles esa tarjeta vieja todavía",
+   "hook": "Cerrar una tarjeta de crédito que nunca usas puede bajar tu puntaje.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Cerrar una tarjeta de crédito que nunca usas puede bajar tu puntaje.",
+     "on_screen_text": "¿Cerrar una tarjeta te afecta?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf about to cut a card with oversized scissors, pausing. No text, no logos, no real people."
+    },
+    {
+     "heading": "Uso de crédito",
+     "narration": "El puntaje mira qué parte de tu límite total de crédito estás usando. Cerrar una tarjeta achica ese total.",
+     "on_screen_text": "Menos límite total = % más alto",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a pie shape where one slice is removed and the remaining filled portion looks bigger. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo",
+     "narration": "Debes $2,000 entre tus tarjetas y tienes $10,000 de límite total: veinte por ciento. Cierras una tarjeta vieja de $4,000 y sube a cerca de treinta y tres por ciento.",
+     "on_screen_text": "De 20% a 33% de un día a otro",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two meters side by side, the second needle noticeably higher. No text, no logos, no real people."
+    },
+    {
+     "heading": "Antigüedad",
+     "narration": "Las cuentas cerradas al corriente pueden quedarse en tu reporte por años, pero al final se borran, y tu historial puede verse más joven.",
+     "on_screen_text": "Las cuentas viejas ayudan a tu historial",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an old tree with rings next to a young sapling. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cuándo cerrarla",
+     "narration": "Hay buenas razones para cerrarla: una anualidad alta que no te quieren quitar, o que no confías en ti con ella. Primero pregunta por una versión sin anualidad.",
+     "on_screen_text": "¿Cobra anualidad? Pide un cambio",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf on a phone call, speech bubble with only a downward arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "Conclusión",
+     "narration": "¿No cobra anualidad y no te tienta? Ponle un cargo chico recurrente con pago automático y déjala abierta.",
+     "on_screen_text": "Un cargo chico + pago automático",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf placing a tiny coin on a card with a looping arrow. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Cerrar una tarjeta reduce tu crédito disponible total, y eso puede subir tu uso de crédito. Saldo de $2,000 con $10,000 de límite = 20%. Cierras una tarjeta con límite de $4,000 y queda en ~33%.\n\nSi no cobra anualidad, considera dejarla abierta con un cargo chico recurrente en pago automático. Si cobra anualidad, pregúntale al banco por una versión sin anualidad antes de cerrarla.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "tarjetadecredito",
+    "puntajedecredito",
+    "historialcrediticio",
+    "credito",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Por qué cerrar una tarjeta que no usas puede bajar tu puntaje (uso de crédito y antigüedad), con un ejemplo y cuándo sí conviene cerrarla.",
+   "thumbnail_text": "¿Cerrar la tarjeta vieja?",
+   "sources": [
+    "https://www.myfico.com/credit-education/whats-in-your-credit-score",
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-a-credit-utilization-rate-en-1997/",
+    "https://www.experian.com/blogs/ask-experian/credit-education/report-basics/how-long-do-closed-accounts-stay-on-credit-report/"
+   ],
+   "claims_to_verify": [
+    "$2,000/$10,000 = 20%; $2,000/$6,000 ≈ 33%",
+    "Closed accounts in good standing generally remain on credit reports for up to about 10 years",
+    "Issuers may close inactive accounts; a small recurring charge keeps the account active (policies vary)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "A 10-minute subscription audit using a bank-statement search, sorted by 'use it weekly / monthly / forgot'.",
+  "source_index": 13,
+  "source_title": "Find your forgotten subscriptions in 10 minutes",
+  "script": {
+   "title": "Encuentra tus suscripciones olvidadas en 10 minutos",
+   "hook": "Busca una sola palabra en tu estado de cuenta y probablemente encuentres dinero que se te está yendo.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Busca una sola palabra en tu estado de cuenta y probablemente encuentres dinero que se te está yendo.",
+     "on_screen_text": "¿Se te va dinero cada mes?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf noticing a slow drip of coins from a pipe. No text, no logos, no real people."
+    },
+    {
+     "heading": "Paso uno",
+     "narration": "Abre las apps de tu banco y tus tarjetas. Busca palabras como 'monthly', 'subscription', 'renewal' o 'auto-pay', porque casi todos los cargos llegan en inglés, en los últimos noventa días.",
+     "on_screen_text": "Busca en 90 días de movimientos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a magnifying glass sliding over a long statement made of lines and shapes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Paso dos",
+     "narration": "Anota cada cargo que se repite, incluidos los anuales que solo caen una vez.",
+     "on_screen_text": "Anota cada cargo recurrente",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a clipboard filling with small icons: music note, play button, cloud, dumbbell. No text, no logos, no real people."
+    },
+    {
+     "heading": "Paso tres",
+     "narration": "Sepáralos: lo usas cada semana, lo usas cada mes, o ni sabías que lo tenías.",
+     "on_screen_text": "Semanal · Mensual · Olvidado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three bins in green, cream and mustard. No text, no logos, no real people."
+    },
+    {
+     "heading": "Paso cuatro",
+     "narration": "Cancela hoy mismo el montón de 'olvidados'. Para los mensuales, busca un plan más barato, o rota: quédate con un solo servicio de streaming a la vez.",
+     "on_screen_text": "Cancela lo olvidado. Rota lo demás.",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf tossing shapes from the third bin into a recycling bin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Conclusión",
+     "narration": "Pon un recordatorio para repetir esto cada tres meses. Las pruebas gratis tienen la costumbre de volverse para siempre.",
+     "on_screen_text": "Repite cada 3 meses",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with a small repeat-arrow on every third page. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Revisión de suscripciones en 10 minutos:\n1. Busca en 90 días de movimientos del banco y las tarjetas: monthly, subscription, renewal, auto-pay (casi todos los cargos llegan en inglés)\n2. Anota cada cargo recurrente (incluidos los anuales)\n3. Sepáralos: lo uso cada semana / cada mes / ni sabía que lo tenía\n4. Cancela los olvidados; baja de plan o rota los demás\n\nPon un recordatorio para repetirlo cada tres meses.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "suscripciones",
+    "ahorrardinero",
+    "presupuesto",
+    "finanzaspersonales",
+    "educacionfinanciera",
+    "dinerosimple"
+   ],
+   "description": "Una revisión de suscripciones en cuatro pasos y 10 minutos, con tus propios estados de cuenta del banco y la tarjeta, sin apps extra.",
+   "thumbnail_text": "Revisa tus suscripciones",
+   "sources": [
+    "https://consumer.ftc.gov/articles/free-trial-offers-and-subscriptions",
+    "https://www.consumerfinance.gov/consumer-tools/bank-accounts/"
+   ],
+   "claims_to_verify": [
+    "Statement search terms vary by bank; generic advice only (no specific figures to verify)",
+    "Most US bank/card statements show subscription charges with English words (monthly, subscription, renewal); confirm before saying 'casi todos los cargos llegan en inglés'"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "A fixed 20-minute monthly 'money date' agenda with timed steps, so budgeting becomes a calendar habit rather than willpower.",
+  "source_index": 14,
+  "source_title": "The 20-minute monthly money date",
+  "script": {
+   "title": "Tu cita mensual de 20 minutos con tu dinero",
+   "hook": "Hacer presupuesto no es cosa de personalidad. Es una reunión de 20 minutos contigo.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Hacer presupuesto no es cosa de personalidad. Es una reunión de 20 minutos, una vez al mes.",
+     "on_screen_text": "Tu presupuesto es una reunión de 20 minutos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf sitting at a small cafe table with a laptop and a timer. No text, no logos, no real people."
+    },
+    {
+     "heading": "Agéndala",
+     "narration": "Pon un evento que se repita en tu calendario el día después de tu primer pago del mes. Trátalo como una cita con el dentista que no puedes cancelar.",
+     "on_screen_text": "Agéndala después del día de pago",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar page with a recurring loop arrow on one day. No text, no logos, no real people."
+    },
+    {
+     "heading": "Minutos 0–5",
+     "narration": "Abre todas tus cuentas de una vez: cheques, ahorro, tarjetas, préstamos. Anota cada saldo. Solo mira, sin juzgarte.",
+     "on_screen_text": "0–5 min: mira todos tus saldos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a row of simple account cards with blank number bars. No text, no logos, no real people."
+    },
+    {
+     "heading": "Minutos 5–10",
+     "narration": "Compara lo que gastaste el mes pasado con tu plan. Busca la categoría que más se pasó y pregúntate por qué, no a quién culpar.",
+     "on_screen_text": "5–10 min: encuentra la fuga",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bar chart with one bar taller than its line marker. No text, no logos, no real people."
+    },
+    {
+     "heading": "Minutos 10–15",
+     "narration": "Pon los números del próximo mes: gastos fijos, transferencia al ahorro, monto semanal para gastar, fondos de previsión. Ajusta la categoría que se fugó a algo realista.",
+     "on_screen_text": "10–15 min: arma el próximo mes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf turning dials on a simple control panel. No text, no logos, no real people."
+    },
+    {
+     "heading": "Minutos 15–18",
+     "narration": "Revisa los gastos únicos que vienen: cumpleaños, renovaciones, viajes. Mueve dinero a tus fondos de previsión ahora, antes de que lleguen.",
+     "on_screen_text": "15–18 min: revisa gastos únicos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a telescope pointed at a calendar with small gift and plane icons. No text, no logos, no real people."
+    },
+    {
+     "heading": "Minutos 18–20",
+     "narration": "Elige un solo paso de dinero para el mes. Sube tu 401(k) un uno por ciento, llama para que te quiten una comisión o agrega $25 al ahorro. Solo uno.",
+     "on_screen_text": "18–20 min: elige un paso",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding up a single shining coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Hazla agradable",
+     "narration": "Júntala con algo que te guste: tu café favorito, una playlist, una caminata después. Estás creando un hábito, no haciendo una auditoría.",
+     "on_screen_text": "Con cafecito. Y corta.",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a coffee cup steaming beside a closed laptop and headphones. No text, no logos, no real people."
+    },
+    {
+     "heading": "Guárdalo",
+     "narration": "Guarda esto para tener la agenda lista en tu próxima cita con tu dinero. La plantilla El Presupuesto de 20 Minutos, en el link de la bio, ya la trae incluida.",
+     "on_screen_text": "Guárdalo para tu próxima cita",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf waving next to a bookmark ribbon shape. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Guárdalo para tu próxima cita con tu dinero. Síguenos para un paso de dinero cada semana.",
+   "caption": "El presupuesto funciona cuando es una cita corta que se repite, no cuando depende de tu humor. La agenda:\n0–5 min: abre todas tus cuentas y anota los saldos\n5–10: encuentra la categoría que se pasó\n10–15: pon los números del próximo mes\n15–18: revisa los gastos únicos que vienen\n18–20: elige un paso de dinero\n\n¿La quieres ya armada? La plantilla El Presupuesto de 20 Minutos (Notion + Sheets) está en el link de la bio.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "presupuesto",
+    "citaconmidinero",
+    "presupuestomensual",
+    "finanzaspersonales",
+    "plantilladepresupuesto",
+    "notion",
+    "dinerosimple"
+   ],
+   "description": "Una agenda mensual de presupuesto de 20 minutos: revisa saldos, encuentra la fuga, arma el próximo mes, planea gastos únicos y elige un paso de dinero.",
+   "thumbnail_text": "Cita de 20 minutos",
+   "sources": [
+    "https://www.consumerfinance.gov/about-us/blog/budgeting-how-to-create-a-budget-and-stick-with-it/",
+    "https://www.consumerfinance.gov/consumer-tools/money-as-you-grow/"
+   ],
+   "claims_to_verify": [
+    "No numeric claims; confirm product name/price ($12) and link before posting"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "An 8-week plan to a $1,000 starter emergency fund at $125/week, with specific places the money comes from.",
+  "source_index": 15,
+  "source_title": "$1,000 emergency fund in 8 weeks",
+  "script": {
+   "title": "Fondo de emergencia de $1,000 en 8 semanas",
+   "hook": "$1,000 en 8 semanas son $125 por semana. Así puedes sacarlos.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Un fondo de emergencia inicial convierte una llanta ponchada de crisis en un mandado. $1,000 en 8 semanas son $125 por semana.",
+     "on_screen_text": "$1,000 en 8 semanas = $125 por semana",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf standing proudly next to a jar labeled only with a shield icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Por qué $1,000 primero",
+     "narration": "No es la meta final. Lo normal es juntar de tres a seis meses de gastos. Pero los primeros $1,000 cubren muchas sorpresas comunes y rompen el ciclo de la tarjeta de crédito.",
+     "on_screen_text": "Primero el fondo inicial, luego el completo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small jar in front of a much larger jar on a shelf. No text, no logos, no real people."
+    },
+    {
+     "heading": "Dónde guardarlo",
+     "narration": "Aparte de tu cuenta de cheques, en una cuenta de ahorro de un banco asegurado. Las cuentas de ahorro de alto rendimiento suelen pagar mucho más que una cuenta de ahorro normal.",
+     "on_screen_text": "Cuenta aparte, banco asegurado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a jar under an umbrella, away from a busy wallet. No text, no logos, no real people."
+    },
+    {
+     "heading": "Semanas 1–2",
+     "narration": "Vende dos cosas que no hayas usado en un año: un celular viejo, una consola, muebles, ropa. Mucha gente encuentra $100–$300 guardados en el clóset.",
+     "on_screen_text": "Semanas 1–2: vende lo que no usas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a cardboard box with a headset, a lamp and a jacket. No text, no logos, no real people."
+    },
+    {
+     "heading": "Semanas 3–4",
+     "narration": "Pausa dos suscripciones y un hábito de comida a domicilio por un mes. El mismo día, mueve al ahorro exactamente lo que habrías gastado.",
+     "on_screen_text": "Semanas 3–4: pausa y transfiere",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a pause symbol over a takeout bag, arrow toward a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Semanas 5–6",
+     "narration": "Toma un turno extra, un trabajito de fin de semana o unas horas de freelance, y manda todo al ahorro antes de que llegue a tus gastos.",
+     "on_screen_text": "Semanas 5–6: un ingreso extra",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf wearing a tiny work apron carrying coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Semanas 7–8",
+     "narration": "Redondea: si te faltan $40, recorta una cena fuera y mueve la diferencia. Cierra la brecha a propósito.",
+     "on_screen_text": "Semanas 7–8: cierra la diferencia",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a puzzle with one last piece clicking in. No text, no logos, no real people."
+    },
+    {
+     "heading": "Reglas de uso",
+     "narration": "Úsalo para sorpresas de verdad: reparación del carro, una cuenta médica, un viaje urgente. No para ofertas. Si lo usas, rellénalo antes que cualquier otra cosa.",
+     "on_screen_text": "Solo sorpresas. Rellénalo después.",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a jar with a small wrench and a bandage icon floating above. No text, no logos, no real people."
+    },
+    {
+     "heading": "Guárdalo",
+     "narration": "Guarda esto y toma captura del plan semanal. Tu yo del futuro, con la llanta ponchada, te lo va a agradecer.",
+     "on_screen_text": "Guárdalo. Empieza la semana uno hoy.",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf saluting next to a bookmark ribbon. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Guárdalo y empieza la semana uno hoy. Síguenos para un paso de dinero cada semana.",
+   "caption": "Fondo de emergencia inicial de $1,000 en 8 semanas = $125 por semana:\nSemanas 1–2: vende lo que no usas\nSemanas 3–4: pausa suscripciones y mueve esa cantidad exacta\nSemanas 5–6: un turno o trabajito extra, directo al ahorro\nSemanas 7–8: cierra la diferencia a propósito\n\nGuárdalo en una cuenta de ahorro aparte, en un banco asegurado, y rellénalo después de usarlo.\n\nLa cuenta de ahorro de alto rendimiento en el link de la bio es un enlace de afiliado: podríamos recibir una comisión si abres y depositas en una cuenta, sin costo extra para ti. Compara tasas y condiciones tú mismo primero.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "fondodeemergencia",
+    "retodeahorro",
+    "ahorro",
+    "cuentadeahorro",
+    "ahorrardinero",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Un plan de 8 semanas para juntar un fondo de emergencia inicial de $1,000 ($125 por semana), dónde guardarlo y reglas para usarlo.",
+   "thumbnail_text": "$1,000 en 8 semanas",
+   "sources": [
+    "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/",
+    "https://www.fdic.gov/resources/deposit-insurance",
+    "https://www.fdic.gov/national-rates-and-rate-caps"
+   ],
+   "claims_to_verify": [
+    "Common guidance: emergency fund of 3–6 months of expenses",
+    "High-yield savings accounts often pay well above the FDIC national average savings rate (check current national rate)",
+    "$100–$300 from selling unused items is illustrative, not a statistic"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "first-time investing basics (index funds, retirement accounts)",
+  "idea_angle": "Roth vs Traditional IRA decided by one question (is your tax rate likely higher now or later?), with early-career defaults.",
+  "source_index": 16,
+  "source_title": "Roth or Traditional IRA? One question",
+  "script": {
+   "title": "¿Roth o Traditional IRA? Una sola pregunta",
+   "hook": "Roth contra Traditional se reduce a una pregunta: ¿pagas el impuesto ahora o después?",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Roth contra Traditional IRA suena complicado. Casi todo se reduce a una pregunta: ¿pagas el impuesto ahora o después?",
+     "on_screen_text": "¿Roth o Traditional? ¿Ahora o después?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf standing at a fork in a path with two signposts showing a sun and a moon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Traditional",
+     "narration": "Quizá puedas deducirlo de tus impuestos ahora. El dinero crece, y cuando lo retiras en el retiro, se cobra impuesto como ingreso.",
+     "on_screen_text": "Traditional: deducción hoy, impuesto después",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a coin entering a jar with a small discount tag, then exiting through a toll gate. No text, no logos, no real people."
+    },
+    {
+     "heading": "Roth",
+     "narration": "No hay deducción ahora. El dinero crece, y los retiros calificados en tu retiro son libres de impuestos.",
+     "on_screen_text": "Roth: impuesto hoy, libre de impuestos después",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a coin passing a toll gate first, then flowing freely out of a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "La pregunta",
+     "narration": "Si crees que tu tasa de impuestos será más alta después que ahora, la Roth suele ganar. Si será más baja después, suele ganar la Traditional.",
+     "on_screen_text": "¿Más impuestos después? Inclínate por Roth.",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a balance scale with a sun on one side and a moon on the other. No text, no logos, no real people."
+    },
+    {
+     "heading": "Al empezar tu carrera",
+     "narration": "Mucha gente de veintitantos está en una tasa de impuestos más baja que la que tendrá en sus mejores años de ingresos, por eso la Roth es una opción común al principio.",
+     "on_screen_text": "Tasa baja hoy → la Roth es común",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small step at the bottom of a staircase, a tiny plant on it. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mismo límite",
+     "narration": "El límite anual se comparte entre las dos. Para 2026 es $7,500 si tienes menos de 50 años, sumando todas tus IRAs.",
+     "on_screen_text": "Límite 2026: $7,500 en total (menores de 50)",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. one jar split into two halves of different colors. No text, no logos, no real people."
+    },
+    {
+     "heading": "Letra chica",
+     "narration": "La Roth tiene límites de ingreso. La deducción de la Traditional puede bajar si tienes plan de retiro en el trabajo e ingresos altos. Revisa las tablas del IRS para tu caso.",
+     "on_screen_text": "Revisa los límites de ingreso en irs.gov",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf reading a long scroll of table-like lines. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fecha límite",
+     "narration": "Puedes hacer aportaciones para 2026 hasta la fecha límite de la declaración de impuestos, en abril de 2027.",
+     "on_screen_text": "Aportaciones de 2026: hasta abril de 2027",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar flipping from one year to the next with a coin in between. No text, no logos, no real people."
+    },
+    {
+     "heading": "Guárdalo",
+     "narration": "¿No estás seguro? Dividir entre las dos es una forma razonable de cubrirte. Guarda esto antes de abrir tu IRA.",
+     "on_screen_text": "¿No estás seguro? Divídelo. Guárdalo.",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding two coins, one in each hand, next to a bookmark. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Guárdalo antes de abrir tu IRA. Síguenos para un paso de dinero cada semana.",
+   "caption": "Traditional IRA: posible deducción ahora, pagas impuesto cuando retiras en tu retiro.\nRoth IRA: sin deducción ahora, los retiros calificados son libres de impuestos.\n\n¿Crees que tendrás una tasa de impuestos más alta después? La Roth suele salir ganando. ¿Más baja después? La Traditional. El límite anual se comparte entre las dos, la Roth tiene límites de ingreso, y las aportaciones de 2026 se pueden hacer hasta la fecha límite de impuestos de abril de 2027.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "rothira",
+    "traditionalira",
+    "ira",
+    "retiro",
+    "impuestos",
+    "inversionparaprincipiantes",
+    "dinerosimple"
+   ],
+   "description": "Cómo elegir entre una Roth y una Traditional IRA comparando tu tasa de impuestos de hoy con la de después, más el límite de 2026, los límites de ingreso y la fecha límite.",
+   "thumbnail_text": "¿Roth o Traditional?",
+   "sources": [
+    "https://www.irs.gov/retirement-plans/traditional-and-roth-iras",
+    "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-ira-contribution-limits",
+    "https://www.irs.gov/retirement-plans/ira-deduction-limits",
+    "https://www.irs.gov/publications/p590a"
+   ],
+   "claims_to_verify": [
+    "2026 IRA contribution limit is $7,500 for those under 50 (IRS announced Nov 2025; combined across Traditional and Roth IRAs)",
+    "2026 IRA contributions may be made until the 2027 tax filing deadline (normally April 15, 2027)",
+    "Roth IRA contributions are subject to MAGI income limits; Traditional IRA deductibility phases out for those covered by a workplace plan above certain incomes",
+    "Qualified Roth IRA distributions are tax-free"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "first-time investing basics (index funds, retirement accounts)",
+  "idea_angle": "What you actually own when you buy an index fund, explained via S&P 500 vs total market, ETF vs mutual fund, and what it can't do.",
+  "source_index": 17,
+  "source_title": "What you actually own in an index fund",
+  "script": {
+   "title": "Qué tienes de verdad en un fondo índice",
+   "hook": "Cuando compras un fondo índice, compras un pedacito de cientos o miles de empresas.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Cuando compras una acción de un fondo índice, tienes un pedacito de cientos o miles de empresas.",
+     "on_screen_text": "Una acción, miles de empresas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a single slice cut from a giant mosaic of tiny squares. No text, no logos, no real people."
+    },
+    {
+     "heading": "El índice",
+     "narration": "Un índice es una lista con reglas. El S&P 500 sigue a unas 500 empresas grandes de Estados Unidos. Un índice del mercado total sigue a miles de empresas de EE. UU., grandes y chicas.",
+     "on_screen_text": "Un índice es una lista con reglas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a long scroll of small icons arranged in neat rows. No text, no logos, no real people."
+    },
+    {
+     "heading": "El fondo",
+     "narration": "Un fondo índice simplemente compra lo que está en la lista, en las mismas proporciones, sin un administrador tratando de adivinar ganadores. Por eso las comisiones pueden ser muy bajas.",
+     "on_screen_text": "El fondo copia la lista",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a photocopier shape copying a grid of icons. No text, no logos, no real people."
+    },
+    {
+     "heading": "Diversificación",
+     "narration": "Si a una empresa le va muy mal, es una parte chica del total. Le estás apostando al mercado en general, no a un solo nombre.",
+     "on_screen_text": "Una manzana podrida, un golpe chico",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a big basket of apples with one small bruised apple. No text, no logos, no real people."
+    },
+    {
+     "heading": "ETF o fondo mutuo",
+     "narration": "La misma idea, distinto empaque. Los ETF se compran y venden como una acción durante el día. Los fondos mutuos tienen un solo precio al cierre y muchas veces te dejan invertir cantidades exactas en dólares.",
+     "on_screen_text": "ETF o fondo mutuo: la misma idea",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two different gift boxes holding the same item. No text, no logos, no real people."
+    },
+    {
+     "heading": "Lo que no puede hacer",
+     "narration": "No se salta las caídas. Los fondos índice bajan cuando baja el mercado, a veces bastante, y los rendimientos pasados no predicen los futuros.",
+     "on_screen_text": "También baja cuando el mercado cae",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a gentle hill line with a dip, a small umbrella shape over the piggy. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué revisar",
+     "narration": "Antes de comprar: qué índice sigue, su expense ratio y si pide inversión mínima. Con eso tienes casi toda la tarea hecha.",
+     "on_screen_text": "Revisa: índice, comisión, mínimo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a three-item checklist with green check circles. No text, no logos, no real people."
+    },
+    {
+     "heading": "Dónde tenerlo",
+     "narration": "Dentro de una Roth IRA o un 401(k) para tu retiro, o en una cuenta de inversión normal para otras metas a largo plazo. No para dinero que necesitas este año.",
+     "on_screen_text": "Solo dinero de largo plazo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf placing a basket on a high shelf labeled with a calendar icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Guárdalo",
+     "narration": "Guarda esto para cuando hagas tu primera compra.",
+     "on_screen_text": "Guárdalo para tu primera compra",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf next to a bookmark ribbon. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Guárdalo para tu primera compra. Síguenos para un paso de dinero cada semana.",
+   "caption": "Un fondo índice compra todo lo que está en una lista con reglas (como el S&P 500 o un índice del mercado total de EE. UU.), así que una sola acción reparte tu dinero entre cientos o miles de empresas, normalmente con comisiones bajas.\n\nAun así baja cuando el mercado baja. Antes de comprar, revisa: qué índice sigue, el expense ratio y si hay mínimo. Úsalo para dinero de largo plazo, no para la renta de este año.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "fondosindexados",
+    "sp500",
+    "etfs",
+    "invertir",
+    "inversionparaprincipiantes",
+    "diversificacion",
+    "dinerosimple"
+   ],
+   "description": "Qué es un fondo índice, qué tienes realmente, ETF contra fondo mutuo, sus límites y tres cosas que revisar antes de comprar.",
+   "thumbnail_text": "Fondos índice, explicados",
+   "sources": [
+    "https://www.investor.gov/introduction-investing/investing-basics/glossary/index-funds",
+    "https://www.investor.gov/introduction-investing/investing-basics/investment-products/mutual-funds-and-exchange-traded-funds-etfs",
+    "https://www.investor.gov/introduction-investing/investing-basics/save-and-invest/diversify-your-investments"
+   ],
+   "claims_to_verify": [
+    "The S&P 500 tracks about 500 large US companies (actual constituent count is slightly above 500 due to share classes)",
+    "Total US stock market indexes hold thousands of companies",
+    "ETFs trade intraday; mutual funds are priced once per day at NAV"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "credit scores and debt payoff",
+  "idea_angle": "Audit your credit report like an auditor: 7 specific line items to check, using free weekly reports, and how to dispute.",
+  "source_index": 18,
+  "source_title": "Check your credit report like an auditor",
+  "script": {
+   "title": "Revisa tu reporte de crédito como auditor",
+   "hook": "Tu reporte de crédito puede tener errores. Aquí van 7 cosas que revisar.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Tu reporte de crédito puede tener errores, y te toca a ti encontrarlos. Aquí van siete cosas que revisar.",
+     "on_screen_text": "7 cosas que revisar en tu reporte",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf wearing tiny reading glasses with a magnifying glass. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pídelo gratis",
+     "narration": "AnnualCreditReport.com es el sitio oficial para pedir gratis tus reportes de Equifax, Experian y TransUnion. Los puedes sacar cada semana.",
+     "on_screen_text": "Reportes gratis cada semana, los 3 burós",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three simple document stacks side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "1. Tus datos",
+     "narration": "Nombres, direcciones y empleadores. Una dirección donde nunca viviste puede ser señal de expedientes mezclados o de fraude.",
+     "on_screen_text": "1. Nombres y direcciones",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a house icon with a small question mark shape (no letters). No text, no logos, no real people."
+    },
+    {
+     "heading": "2. Cuentas desconocidas",
+     "narration": "Cada cuenta de la lista debe ser una que tú abriste. Las que no conoces hay que revisarlas de inmediato.",
+     "on_screen_text": "2. Cuentas que no reconoces",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a stack of cards with one odd-colored card sticking out. No text, no logos, no real people."
+    },
+    {
+     "heading": "3. Pagos atrasados",
+     "narration": "Busca pagos marcados como atrasados que tú no crees que lo fueron. Compáralos con tus propios registros del banco.",
+     "on_screen_text": "3. Atrasos que no cuadran",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with one day marked by a red dot. No text, no logos, no real people."
+    },
+    {
+     "heading": "4–5. Saldos y límites",
+     "narration": "Revisa que los saldos y los límites de crédito estén bien. Si falta un límite, tu uso de crédito puede verse más alto de lo que es.",
+     "on_screen_text": "4–5. Saldos y límites",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a meter next to a card shape. No text, no logos, no real people."
+    },
+    {
+     "heading": "6–7. Consultas y cobranzas",
+     "narration": "Consultas duras que no autorizaste, y cuentas en cobranza que no reconoces o que ya pagaste: las dos merecen una disputa.",
+     "on_screen_text": "6–7. Consultas y cobranzas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small knocking hand shape at a door, and a folder with a paperclip. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo disputar",
+     "narration": "Presenta la disputa en línea con el buró e incluye documentos. También conviene contactar a la empresa que lo reportó. Los burós por lo general tienen unos 30 días para investigar.",
+     "on_screen_text": "Disputa con documentos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf sliding a folder through a mail slot. No text, no logos, no real people."
+    },
+    {
+     "heading": "Guárdalo",
+     "narration": "El reporte y el puntaje son cosas distintas. Tu reporte es gratis, y es la fuente con la que se calcula tu puntaje. Guarda esto para tu revisión.",
+     "on_screen_text": "Guárdalo para revisar tu reporte",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf next to a bookmark ribbon. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Guárdalo para cuando revises tu reporte. Síguenos para un paso de dinero cada semana.",
+   "caption": "Puedes pedir gratis tus reportes de crédito de los tres burós cada semana en AnnualCreditReport.com (el sitio oficial). Revisa: datos personales, cuentas desconocidas, pagos atrasados, saldos, límites de crédito, consultas duras y cobranzas.\n\nDisputa los errores con el buró, con documentos, y contacta a la empresa que lo reportó. Los burós por lo general tienen unos 30 días para investigar.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "reportedecredito",
+    "credito",
+    "puntajedecredito",
+    "repararcredito",
+    "robodeidentidad",
+    "educacionfinanciera",
+    "dinerosimple"
+   ],
+   "description": "Una lista de 7 puntos para revisar tu reporte de crédito con los reportes semanales gratis de AnnualCreditReport.com, y cómo disputar errores.",
+   "thumbnail_text": "Audita tu reporte",
+   "sources": [
+    "https://www.annualcreditreport.com",
+    "https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-credit-report-en-314/",
+    "https://consumer.ftc.gov/articles/free-credit-reports",
+    "https://consumer.ftc.gov/articles/disputing-errors-your-credit-reports"
+   ],
+   "claims_to_verify": [
+    "Free weekly credit reports from all three nationwide bureaus are available at AnnualCreditReport.com (made permanent in 2023)",
+    "Credit bureaus generally must investigate disputes within 30 days (FCRA; can be 45 in some cases)",
+    "AnnualCreditReport.com is the only federally authorized source for free reports under federal law"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "credit scores and debt payoff",
+  "idea_angle": "Avalanche vs snowball run on the same three debts with $200 extra/month: avalanche saves ~$106 but snowball gives a first win 12 months sooner.",
+  "source_index": 19,
+  "source_title": "Avalanche vs snowball, with real math",
+  "script": {
+   "title": "Avalancha contra bola de nieve, con números reales",
+   "hook": "Las mismas tres deudas, los mismos $200 extra al mes. Los dos métodos se diferencian en unos $106.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "En internet discuten avalancha contra bola de nieve como si fuera fútbol. Estos son los números reales con las mismas tres deudas.",
+     "on_screen_text": "Avalancha vs bola de nieve: los números reales",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf standing between a snowball and a small mountain with a rolling rock. No text, no logos, no real people."
+    },
+    {
+     "heading": "Las deudas",
+     "narration": "Tarjeta de tienda: $900 al 18 por ciento. Tarjeta de crédito: $4,200 al 27 por ciento. Préstamo personal: $6,500 al 9 por ciento. Los pagos mínimos suman $350, más $200 extra cada mes.",
+     "on_screen_text": "$900 · $4,200 · $6,500 + $200 extra",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three stacks of different heights each with a small tag shape. No text, no logos, no real people."
+    },
+    {
+     "heading": "Avalancha",
+     "narration": "Pones el extra primero en la tasa de interés más alta: la tarjeta al 27 por ciento. Luego en la que sigue.",
+     "on_screen_text": "Avalancha: primero la tasa más alta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a rock rolling down from the tallest peak. No text, no logos, no real people."
+    },
+    {
+     "heading": "Bola de nieve",
+     "narration": "Pones el extra primero en el saldo más chico: la tarjeta de tienda de $900. Luego en el que sigue.",
+     "on_screen_text": "Bola de nieve: primero el saldo más chico",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small snowball growing as it rolls. No text, no logos, no real people."
+    },
+    {
+     "heading": "Resultado",
+     "narration": "Las dos terminan en unos 25 meses. La avalancha paga unos $1,850 de interés; la bola de nieve, unos $1,950. Una diferencia de unos $106.",
+     "on_screen_text": "Aquí la avalancha ahorra ~$106",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two finish flags at the same distance, one coin pile slightly larger. No text, no logos, no real people."
+    },
+    {
+     "heading": "El giro",
+     "narration": "La bola de nieve liquida su primera deuda en el mes 5. La avalancha, hasta el mes 17. Es mucho tiempo esperando un triunfo.",
+     "on_screen_text": "Primera victoria: mes 5 vs mes 17",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf celebrating early with confetti on a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo elegir",
+     "narration": "Con tasas muy distintas o saldos grandes, la avalancha casi siempre ahorra más. Si necesitas ver avances pronto para no rendirte, el pequeño costo extra de la bola de nieve puede valer la pena.",
+     "on_screen_text": "¿Mucha diferencia de tasas? Avalancha",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a balance scale with a coin on one side and a small trophy on the other. No text, no logos, no real people."
+    },
+    {
+     "heading": "La regla real",
+     "narration": "Cualquiera de los dos le gana a pagar solo el mínimo. Pagando solo mínimos en estas mismas deudas, tardas unos 46 meses y pagas cerca de $4,300 de interés.",
+     "on_screen_text": "Cualquier plan le gana al mínimo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a long winding road next to a short straight one. No text, no logos, no real people."
+    },
+    {
+     "heading": "Guárdalo",
+     "narration": "Guarda esto y pon tus propios números antes de elegir.",
+     "on_screen_text": "Guárdalo. Haz tus números.",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with a calculator and a bookmark ribbon. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Guárdalo y haz tus propios números. Síguenos para un paso de dinero cada semana.",
+   "caption": "Las mismas deudas ($900 al 18%, $4,200 al 27%, $6,500 al 9%), los mismos $200 extra al mes:\nAvalancha: ~25 meses, ~$1,850 de interés, primera deuda liquidada en el mes 17\nBola de nieve: ~25 meses, ~$1,950 de interés, primera deuda liquidada en el mes 5\nSolo mínimos: ~46 meses, ~$4,300 de interés\n\nElige el que sí vas a sostener. La diferencia en números suele ser menor de lo que dice internet.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "salirdedeudas",
+    "deudas",
+    "boladenieve",
+    "metodoavalancha",
+    "tarjetadecredito",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Avalancha contra bola de nieve con las mismas tres deudas y $200 extra al mes: interés total, tiempo para liquidar y cuándo desaparece la primera deuda.",
+   "thumbnail_text": "Avalancha vs bola de nieve",
+   "sources": [
+    "https://www.consumerfinance.gov/about-us/blog/how-to-reduce-your-debt/",
+    "https://www.consumerfinance.gov/consumer-tools/debt-collection/"
+   ],
+   "claims_to_verify": [
+    "Simulation (monthly compounding, minimums $30/$110/$210 + $200 extra): avalanche 25 months, $1,848 interest, first payoff month 17; snowball 25 months, $1,954 interest, first payoff month 5; minimums only 46 months, $4,326 interest",
+    "Debts and rates are hypothetical illustrations"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "Budgeting app vs spreadsheet vs notebook compared on cost, effort, accuracy and what breaks, with a 'who it fits' verdict for each.",
+  "source_index": 20,
+  "source_title": "App vs spreadsheet vs notebook",
+  "script": {
+   "title": "App, hoja de cálculo o libreta",
+   "hook": "La mejor herramienta para tu presupuesto es la que vas a abrir el próximo mes. Una comparación honesta.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "La mejor herramienta para tu presupuesto es la que todavía vas a abrir el próximo mes. Aquí va una comparación honesta de las tres opciones.",
+     "on_screen_text": "¿App, hoja de cálculo o libreta?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf looking at a phone, a laptop and a paper notebook on a table. No text, no logos, no real people."
+    },
+    {
+     "heading": "Apps: a favor",
+     "narration": "Las apps de presupuesto pueden jalar tus movimientos automáticamente y ponerles categoría. Menos trabajo manual, buenas si tienes poco tiempo.",
+     "on_screen_text": "Apps: automáticas, poco esfuerzo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with small gear shapes and arrows flowing in. No text, no logos, no real people."
+    },
+    {
+     "heading": "Apps: en contra",
+     "narration": "Casi todas las buenas cobran suscripción. La conexión con el banco a veces falla. Y las apps gratis pueden cerrar: Mint cerró en 2024.",
+     "on_screen_text": "Apps: suscripción, fallas de conexión",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a small broken chain link icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Hojas de cálculo: a favor",
+     "narration": "Gratis o barata, la adaptas como quieras y tus datos son tuyos. Escribir cada movimiento te obliga a fijarte en él.",
+     "on_screen_text": "Hoja de cálculo: gratis y flexible",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a laptop showing a simple grid of colored cells (no text). No text, no logos, no real people."
+    },
+    {
+     "heading": "Hojas de cálculo: en contra",
+     "narration": "Capturar a mano toma unos diez minutos por semana. Si te saltas dos semanas, ponerte al día se siente horrible.",
+     "on_screen_text": "Hoja de cálculo: requiere hábito semanal",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a growing pile of paper receipts beside a laptop. No text, no logos, no real people."
+    },
+    {
+     "heading": "Libreta: a favor",
+     "narration": "Cero configuración, cero tecnología, muy a la vista. Ideal para llevar un número semanal de efectivo o de gastos.",
+     "on_screen_text": "Libreta: lo más simple",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an open notebook with simple lines and a pencil. No text, no logos, no real people."
+    },
+    {
+     "heading": "Libreta: en contra",
+     "narration": "No hace cuentas por ti, no guarda historial y es difícil ver tendencias entre meses.",
+     "on_screen_text": "Libreta: sin tendencias ni cálculos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a notebook with pages fluttering away. No text, no logos, no real people."
+    },
+    {
+     "heading": "Para quién es",
+     "narration": "¿Odias el trabajo manual? App. ¿Quieres control y sin suscripción? Hoja de cálculo. ¿Vas empezando y quieres un número semanal? Libreta.",
+     "on_screen_text": "Elige por tu forma de ser, no por funciones",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three paths leading to the phone, the laptop and the notebook. No text, no logos, no real people."
+    },
+    {
+     "heading": "Guárdalo",
+     "narration": "Guarda esto. Si eliges la hoja de cálculo, la plantilla El Presupuesto de 20 Minutos en nuestra bio te deja todo armado.",
+     "on_screen_text": "Guárdalo antes de elegir",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf next to a bookmark ribbon. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Guárdalo antes de elegir tu herramienta. Síguenos para un paso de dinero cada semana.",
+   "caption": "App: automática, poco esfuerzo, casi siempre con suscripción, la conexión puede fallar.\nHoja de cálculo: gratis, flexible, tus datos son tuyos, pide ~10 min por semana.\nLibreta: lo más simple, pero sin cálculos ni tendencias.\n\nElige según lo que de verdad vas a seguir haciendo, no por las funciones.\n\n¿Te vas por la hoja de cálculo? La plantilla El Presupuesto de 20 Minutos (Notion + Sheets) está en el link de la bio. Es un producto nuestro.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "presupuesto",
+    "appsdefinanzas",
+    "plantilladepresupuesto",
+    "hojadecalculo",
+    "finanzaspersonales",
+    "notion",
+    "dinerosimple"
+   ],
+   "description": "Una comparación honesta de apps de presupuesto, hojas de cálculo y libretas: costo, esfuerzo, qué falla y para quién es cada una.",
+   "thumbnail_text": "App vs hoja vs papel",
+   "sources": [
+    "https://www.consumerfinance.gov/about-us/blog/budgeting-how-to-create-a-budget-and-stick-with-it/",
+    "https://www.consumerfinance.gov/personal-financial-data-rights/"
+   ],
+   "claims_to_verify": [
+    "Intuit shut down the Mint budgeting app in 2024 (March 2024)",
+    "Most full-featured budgeting apps charge a subscription (general statement; no specific prices quoted)",
+    "Spreadsheet upkeep of ~10 minutes/week is an estimate"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "Opening a first brokerage/IRA account screen by screen, including the step people miss: money sits in cash until you actually buy.",
+  "source_index": 21,
+  "source_title": "Opening your first investment account",
+  "script": {
+   "title": "Cómo abrir tu primera cuenta de inversión",
+   "hook": "Mucha gente 'invierte' por un año y luego descubre que su dinero estaba en efectivo.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Muchísima gente deposita dinero en una cuenta de inversión y nunca compra nada. Aquí va cada pantalla, para que no te pase.",
+     "on_screen_text": "Depositar no es lo mismo que invertir",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf looking puzzled at a jar of coins sitting next to an unopened basket. No text, no logos, no real people."
+    },
+    {
+     "heading": "Elige el tipo de cuenta",
+     "narration": "Para el retiro, una Roth o Traditional IRA. Para otras metas de largo plazo, una cuenta de corretaje individual gravable. Puedes tener las dos.",
+     "on_screen_text": "Paso 1: IRA o cuenta gravable",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two doors, one with a palm tree icon and one with a house icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tus datos",
+     "narration": "Te van a pedir tu número de Seguro Social, dirección, fecha de nacimiento y datos de empleo. Es normal: las casas de bolsa están obligadas a verificar tu identidad.",
+     "on_screen_text": "Paso 2: es normal que pidan SSN e ID",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an ID card shape with a blank photo square and a checkmark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Contacto de confianza",
+     "narration": "Muchas veces te piden un contacto de confianza. Es opcional, y le permite a la empresa contactar a alguien si sospecha fraude o no te localiza.",
+     "on_screen_text": "Paso 3: contacto de confianza (opcional)",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two simple speech bubble shapes connected by a dotted line. No text, no logos, no real people."
+    },
+    {
+     "heading": "Conecta tu banco",
+     "narration": "Conecta tu cuenta de cheques y transfiere dinero. Las transferencias pueden tardar unos días hábiles en reflejarse.",
+     "on_screen_text": "Paso 4: conecta tu banco y transfiere",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bridge carrying coins from a bank building to a basket. No text, no logos, no real people."
+    },
+    {
+     "heading": "El paso que se olvida",
+     "narration": "Tu depósito normalmente cae en efectivo o en un fondo del mercado monetario. Tienes que hacer la orden de compra del fondo que elegiste.",
+     "on_screen_text": "Paso 5: compra el fondo de verdad",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf pressing a big buy button with a basket icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Automatiza",
+     "narration": "Programa una transferencia recurrente y, si lo ofrecen, la inversión automática en ese fondo. Revisa la cuenta un mes después para confirmar que sí compró.",
+     "on_screen_text": "Paso 6: automatiza y confirma",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a looping arrow around a calendar and basket. No text, no logos, no real people."
+    },
+    {
+     "heading": "Protección",
+     "narration": "SIPC protege hasta $500,000, incluidos hasta $250,000 en efectivo, si quiebra una casa de bolsa miembro. No te protege si tus inversiones pierden valor.",
+     "on_screen_text": "SIPC cubre quiebras, no pérdidas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an umbrella over a basket while a gentle wavy line moves below. No text, no logos, no real people."
+    },
+    {
+     "heading": "Guárdalo",
+     "narration": "Guarda esto y tenlo abierto mientras te registras.",
+     "on_screen_text": "Guárdalo para el día del registro",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf next to a bookmark ribbon. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Guárdalo para el día que te registres. Síguenos para un paso de dinero cada semana.",
+   "caption": "Cómo abrir tu primera cuenta de inversión:\n1. Elige IRA (retiro) o cuenta de corretaje gravable\n2. Es normal que pregunten tu SSN, dirección y empleo\n3. El contacto de confianza es opcional, pero útil\n4. Conecta tu banco y transfiere\n5. Compra tu fondo de verdad: el depósito suele quedarse en efectivo hasta que lo hagas\n6. Automatiza y confirma un mes después\n\nSIPC cubre la quiebra de una casa de bolsa miembro, no las pérdidas del mercado.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "invertir",
+    "rothira",
+    "inversionparaprincipiantes",
+    "casadebolsa",
+    "fondosindexados",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Guía pantalla por pantalla para abrir tu primera IRA o cuenta de corretaje, incluida la compra del fondo después de depositar, y qué cubre y qué no cubre SIPC.",
+   "thumbnail_text": "¿De verdad invertiste?",
+   "sources": [
+    "https://www.sipc.org/for-investors/what-sipc-protects",
+    "https://www.investor.gov/introduction-investing/investing-basics/how-stock-markets-work/opening-brokerage-account",
+    "https://www.finra.org/investors/insights/trusted-contact"
+   ],
+   "claims_to_verify": [
+    "SIPC protection up to $500,000 per customer, including a $250,000 limit for cash, when a member broker-dealer fails; it does not cover investment losses",
+    "Brokerages are required to collect identity information (Customer Identification Program) and to ask for a trusted contact (FINRA Rule 4512), which customers may decline",
+    "Deposits typically go to a cash sweep or money market settlement fund until an order is placed (varies by broker)",
+    "Some readers may only have an ITIN; consider adding a line on whether the brokerages you recommend accept an ITIN instead of an SSN (do not claim this without checking)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ }
+]

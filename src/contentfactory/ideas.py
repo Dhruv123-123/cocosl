@@ -8,6 +8,7 @@ import xml.etree.ElementTree as ET
 
 import httpx
 
+from . import i18n
 from .config import BrandProfile
 from .db import DB
 from .guardrails import jaccard, shingles
@@ -31,11 +32,14 @@ def google_trends_daily(geo: str = "US", timeout: float = 8.0) -> list[str]:
         return []
 
 
-def youtube_suggestions(query: str, timeout: float = 6.0) -> list[str]:
+def youtube_suggestions(query: str, timeout: float = 6.0, hl: str = "en", gl: str = "") -> list[str]:
     """Autocomplete suggestions reflect what people actually search for."""
+    params = {"client": "firefox", "ds": "yt", "q": query, "hl": hl}
+    if gl:
+        params["gl"] = gl
     try:
         r = httpx.get("https://suggestqueries.google.com/complete/search",
-                      params={"client": "firefox", "ds": "yt", "q": query},
+                      params=params,
                       timeout=timeout, headers={"User-Agent": USER_AGENT})
         r.raise_for_status()
         data = r.json()
@@ -62,8 +66,9 @@ def gather_signals(brand: BrandProfile, online: bool = True) -> list[str]:
     if not online:
         return []
     signals: list[str] = []
+    hl, gl = i18n.lang_of(brand), (brand.region or "").upper()
     for topic in brand.seed_topics[:4]:
-        signals += youtube_suggestions(topic)
+        signals += youtube_suggestions(topic, hl=hl, gl=gl)
     for sub in brand.subreddits:
         signals += reddit_questions(sub)
     return list(dict.fromkeys(s for s in signals if s))[:60]
@@ -103,6 +108,13 @@ def _offline_ideas(brand: BrandProfile, n: int, signals: list[str], seed: int) -
     return IdeaBatch(ideas=ideas)
 
 
+def _lang(brand: BrandProfile) -> str:
+    if i18n.is_english(brand):
+        return ""
+    return ("\nWrite title, angle, hook and why_now in the channel's language. "
+            + i18n.writing_instruction(brand))
+
+
 def score_idea(d: IdeaDraft, brand: BrandProfile) -> float:
     s = d.search_demand * 1.5 - d.competition * 1.0 - d.effort * 0.4
     if d.monetization in ("affiliate", "product") and (brand.affiliates or brand.products):
@@ -139,7 +151,7 @@ What people are searching for right now (signals, may be noisy):
 Recent ideas already in the backlog (do NOT repeat or lightly reword these):
 {chr(10).join('- ' + t for t in recent_titles[:60]) or '- (none yet)'}
 
-Each idea must have a distinct angle, not a template with the noun swapped."""
+Each idea must have a distinct angle, not a template with the noun swapped.{_lang(brand)}"""
     seed = int(hashlib.sha1(f"{brand.slug}{len(recent_titles)}".encode()).hexdigest(), 16) % 10_000
     batch = llm.structured(IdeaBatch, system=system, prompt=prompt, purpose="ideas",
                            offline=lambda: _offline_ideas(brand, n, signals, seed))

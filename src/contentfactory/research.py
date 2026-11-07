@@ -41,8 +41,8 @@ def wikipedia(query: str, k: int = 3, lang: str = "en", timeout: float = 8.0) ->
         return []
 
 
-def gather(topic: str, online: bool = True) -> list[Source]:
-    return wikipedia(topic) if online else []
+def gather(topic: str, online: bool = True, lang: str = "en") -> list[Source]:
+    return wikipedia(topic, lang=lang) if online else []
 
 
 def as_prompt(sources: list[Source]) -> str:

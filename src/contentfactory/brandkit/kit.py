@@ -14,6 +14,7 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw
 
+from .. import i18n
 from ..config import BrandProfile, Settings
 from ..llm import LLM
 from . import bios as bio_mod
@@ -108,10 +109,10 @@ def banner(pal: Palette, brand: BrandProfile, letters: str, guides: bool = False
 def _cadence_line(brand: BrandProfile) -> str:
     c = brand.cadence
     if c.long_per_week and "long" in brand.formats:
-        return "New videos every week"
+        return i18n.t(brand, "new_videos_weekly")
     if c.shorts_per_week >= 5:
-        return "New shorts most days"
-    return "New videos every week"
+        return i18n.t(brand, "new_shorts_daily")
+    return i18n.t(brand, "new_videos_weekly")
 
 
 def highlight_cover(pal: Palette, icon: str, variant: int) -> Image.Image:
@@ -131,34 +132,47 @@ def highlight_cover(pal: Palette, icon: str, variant: int) -> Image.Image:
 
 
 def pillar_labels(brand: BrandProfile, n: int = 5) -> list[tuple[str, str]]:
-    """(label, icon) for n highlights: the brand pillars first, then fillers."""
+    """(label, icon) for n highlights: the brand pillars first, then fillers.
+    Icons are matched on the pillar text (any language)."""
     out: list[tuple[str, str]] = []
     used: set[str] = set()
     for p in brand.pillars[:n]:
         icon = pick_icon(p, used)
         used.add(icon)
         out.append((p, icon))
-    for icon, label in FILLER_ICONS:
+    fillers = i18n.filler_labels(brand)
+    for icon, _label in FILLER_ICONS:
         if len(out) >= n:
             break
         if icon in used:
             continue
         used.add(icon)
-        out.append((label, icon))
+        out.append((fillers.get(icon, _label), icon))
     return out[:n]
 
 
-def short_label(text: str, limit: int = 15) -> str:
-    """Highlight titles are cut at ~15 chars by Instagram."""
-    words = [w for w in text.replace("(", " ").replace(")", " ").split() if w.lower() not in
-             {"the", "a", "an", "of", "and", "that", "actually", "for", "to", "why", "they", "exist"}]
+def highlight_titles(brand: BrandProfile, labels: list[tuple[str, str]]) -> list[str]:
+    """brand.highlights (hand-picked titles) win; otherwise shorten each label."""
+    picked = [h.strip() for h in brand.highlights if h.strip()]
+    return [picked[i] if i < len(picked) else short_label(label, lang=brand.language)
+            for i, (label, _icon) in enumerate(labels)]
+
+
+def short_label(text: str, limit: int = 15, lang: str = "en") -> str:
+    """Highlight titles are cut at ~15 chars by Instagram. English is Title Cased;
+    other languages use sentence case, which is the norm in Spanish."""
+    stop = i18n.stopwords(lang)
+    words = [w for w in text.replace("(", " ").replace(")", " ").split() if w.lower() not in stop]
     out = ""
     for w in words:
         trial = f"{out} {w}".strip()
         if len(trial) > limit:
             break
         out = trial
-    return (out or text[:limit]).title()
+    out = out or text[:limit]
+    if i18n.is_english(lang):
+        return out.title()
+    return out[:1].upper() + out[1:]
 
 
 # ---------------------------------------------------------------- style sheet
@@ -248,7 +262,7 @@ def style_sheet_html(pal: Palette, brand: BrandProfile, logo_png: bytes) -> str:
         for role, c, use in pal.roles())
     logo = base64.b64encode(logo_png).decode()
     li = lambda xs: "".join(f"<li>{e(x)}</li>" for x in xs)  # noqa: E731
-    return f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
+    return f"""<!doctype html><html lang="{e(i18n.locale_of(brand))}"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(brand.name)} brand style sheet</title>
 <style>
@@ -308,9 +322,10 @@ def build_brand_kit(settings: Settings, brand: BrandProfile, llm: LLM | None = N
     logo = logo_mark(1024, pal, letters)
     save("logo_mark", logo, "logo-mark.png")
     labels = []
-    for i, (label, icon) in enumerate(pillar_labels(brand)):
+    pairs = pillar_labels(brand)
+    for i, ((label, icon), title) in enumerate(zip(pairs, highlight_titles(brand, pairs))):
         save(f"highlight_{i + 1}", highlight_cover(pal, icon, i), f"highlights/{i + 1:02d}-{icon}.png")
-        labels.append({"file": f"highlights/{i + 1:02d}-{icon}.png", "title": short_label(label), "pillar": label})
+        labels.append({"file": f"highlights/{i + 1:02d}-{icon}.png", "title": title, "pillar": label})
     save("style_sheet_png", style_sheet_png(pal, brand, letters), "style-sheet.png")
     html_path = out / "style-sheet.html"
     html_path.write_text(style_sheet_html(pal, brand, _png_bytes(logo_mark(192, pal, letters))))
@@ -322,7 +337,7 @@ def build_brand_kit(settings: Settings, brand: BrandProfile, llm: LLM | None = N
     bio_path.write_text(bio_mod.render_text(brand, pack))
     paths["bio_pack"] = bio_path
     manifest = {
-        "brand": brand.slug, "palette": {r: rgb_to_hex(c) for r, c, _ in pal.roles()}, "initials": letters,
+        "brand": brand.slug, "language": i18n.locale_of(brand), "palette": {r: rgb_to_hex(c) for r, c, _ in pal.roles()}, "initials": letters,
         "highlights": labels, "bios": pack.model_dump(),
         "files": {k: str(v.relative_to(out)) for k, v in paths.items()},
         "notes": {"youtube_banner": "2560x1440; text inside the centred 1546x423 safe area",
