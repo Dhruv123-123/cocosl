@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S Corp Calculator for Freelancers: Should You Elect? (2026) | 1099 Money</title>
+<meta name="description" content="Free S corp vs sole proprietor calculator with 2026 federal numbers: payroll tax on a reasonable salary, the QBI deduction, payroll and tax-prep costs, and the profit where an S corp starts to pay off. Sources cited.">
+<link rel="canonical" href="https://1099money.netlify.app/s-corp-calculator/">
+<meta property="og:title" content="S corp or not? A calculator for freelancers (2026)">
+<meta property="og:description" content="See what an S corp election would save or cost at your profit and salary, with 2026 federal figures.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://1099money.netlify.app/s-corp-calculator/">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#14213d">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"S corp or not? calculator","url":"https://1099money.netlify.app/s-corp-calculator/","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does an S corp save a freelancer tax?","acceptedAnswer":{"@type":"Answer","text":"As a sole proprietor, all profit is subject to 15.3% self-employment tax. With an S corp, you pay yourself a reasonable salary that carries the same Social Security and Medicare taxes, and the rest of the profit comes out without them. Against that, you pay for payroll, a separate business return and sometimes state fees, and the QBI deduction applies only to the profit after salary."}},{"@type":"Question","name":"What is a reasonable salary for an S corp owner?","acceptedAnswer":{"@type":"Answer","text":"The IRS requires S corporation officers who work in the business to be paid reasonable compensation for their services before taking distributions. There is no fixed percentage; it depends on what the business would pay someone else to do the same work."}}]}</script>
+</head>
+<body>
+<header class="top"><a class="logo" href="../"><span class="mark">1M</span> <span data-brand>1099 Money</span></a>
+<nav class="nav"><a href="../">Calculator</a><a href="../mileage/">Driver mileage</a><a href="../compare/">Compare tools</a><a href="../free/">Free calendar</a></nav></header>
+<main>
+
+<h1>S corp or not? A calculator for freelancers</h1>
+<p class="lede">Compare staying a sole proprietor with electing S corp status, at your profit and the salary you'd pay yourself. 2026 federal figures, every assumption shown, sources at the bottom.</p>
+
+<div class="layout">
+  <form id="scorp-form" class="card" autocomplete="off" onsubmit="return false">
+    <div class="grid">
+      <label>Yearly profit before paying yourself ($)<input name="profit" inputmode="decimal" value="100000"><small>Business income minus business expenses (Schedule C line 31 today).</small></label>
+      <label>Salary you'd pay yourself ($)<input name="salary" inputmode="decimal" value="60000"><small>Must be reasonable for the work you do. See the FAQ.</small></label>
+      <label>Extra yearly cost of running an S corp ($)<input name="costs" inputmode="decimal" value="3000"><small>Payroll service, the separate business return (Form 1120-S), state fees.</small></label>
+      <label>Filing status<select name="status"><option value="single">Single</option><option value="mfj">Married filing jointly (no other household income)</option></select></label>
+    </div>
+    <button type="button" id="share" class="link">Copy a link to these numbers</button>
+  </form>
+  <section class="card result" aria-live="polite"><div id="result"></div></section>
+</div>
+
+<section class="card signup-box">
+  <h2>Free: the 2027 Freelancer Tax Calendar</h2>
+  <p class="signup-pitch"></p>
+  <form class="signup" name="tax-calendar" method="POST" action="../free/thanks/" data-thanks="../free/thanks/" data-netlify="true" netlify-honeypot="website">
+    <input type="hidden" name="form-name" value="tax-calendar"><input type="hidden" name="source" value="s-corp-calculator">
+    <p class="hp"><label>Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label></p>
+    <label class="sr" for="signup-email">Email</label>
+    <input id="signup-email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+    <button class="btn">Send me the calendar</button>
+  </form>
+  <p class="tiny">Deadline reminders plus one short email a week. Unsubscribe in one click.</p>
+</section>
+
+<section class="faq"><h2>S corp questions, answered</h2>
+<h3>Where does the saving come from?</h3><p>As a sole proprietor, all of your profit carries self-employment tax: 15.3% on 92.35% of it, up to the Social Security wage base ($184,500 for 2026), then 2.9%. As an S corp, only the salary carries payroll tax (7.65% from you plus 7.65% from the business). Profit above the salary comes out as a distribution without it. Income tax still applies to all of it.</p>
+<h3>What does it cost?</h3><p>Running payroll for yourself, a separate business tax return (Form 1120-S) every year, federal unemployment tax on the first $7,000 of salary ($42 after the usual state credit), state unemployment tax in most states, and in some states an annual S corp tax or fee. Two more costs don't show up as a bill: the qualified business income (QBI) deduction only applies to the profit after salary, and a lower salary means lower Social Security earnings on your record and, with a Solo 401(k), a lower employer contribution limit.</p>
+<h3>What's a reasonable salary?</h3><p>The IRS says S corporation officers who work in the business must be paid reasonable compensation before taking distributions, and it can reclassify distributions as wages if the salary is too low. There's no set percentage. A common approach is what you'd have to pay someone else to do your job. This calculator uses whatever salary you enter; it doesn't tell you what's reasonable.</p>
+<h3>When can I elect?</h3><p>You form an LLC or corporation under state law, then file Form 2553. For the election to apply to the current year, it's generally due within 2 months and 15 days of the start of the tax year (March 15 for a calendar year), with relief available for late elections in some cases. See the <a href="../compare/s-corp-services/">S corp services comparison</a> for providers that run payroll and the return for you.</p>
+<h3>What does this leave out?</h3><p>State income tax (often similar either way) and state S corp taxes beyond what you enter as extra cost, health insurance (for a more-than-2% shareholder it goes through payroll), retirement contributions, credits and other household income. It's built for profits up to $200,000 (single) or $250,000 (joint), below the Additional Medicare Tax thresholds; above that, the result is flagged. Talk to a CPA or enrolled agent before electing.</p>
+<h3>Sources</h3>
+<ul>
+<li>IRS: <a href="https://www.irs.gov/businesses/small-businesses-self-employed/s-corporations" rel="noopener">S corporations</a> and <a href="https://www.irs.gov/businesses/small-businesses-self-employed/s-corporation-compensation-and-medical-insurance-issues" rel="noopener">S corporation compensation and medical insurance issues</a></li>
+<li>IRS: <a href="https://www.irs.gov/forms-pubs/about-form-2553" rel="noopener">Form 2553</a> (the election) and <a href="https://www.irs.gov/forms-pubs/about-form-1120-s" rel="noopener">Form 1120-S</a> (the return)</li>
+<li>IRS: <a href="https://www.irs.gov/publications/p15" rel="noopener">Publication 15</a> (Social Security 6.2% and Medicare 1.45% each side) and <a href="https://www.irs.gov/forms-pubs/about-form-940" rel="noopener">Form 940</a> (FUTA)</li>
+<li>IRS: <a href="https://www.irs.gov/forms-pubs/about-schedule-se-form-1040" rel="noopener">Schedule SE</a> (self-employment tax) and <a href="https://www.irs.gov/forms-pubs/about-form-8995" rel="noopener">Form 8995</a> (QBI deduction)</li>
+<li>IRS Rev. Proc. 2025-32 (2026 brackets and standard deduction); SSA (2026 wage base, $184,500)</li>
+</ul>
+</section>
+</main>
+<footer>
+<p>Educational tool, not tax, legal or financial advice. 2026 federal figures; check irs.gov and a tax professional before electing.</p>
+<p>Your numbers stay in your browser; nothing you type is sent anywhere. Some links may be to our own paid products.</p>
+<p><span data-brand>1099 Money</span> · get paid, keep more, never fear April. <a href="../about/">About these pages</a> · <a href="../how-we-make-money/">How we make money</a></p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>

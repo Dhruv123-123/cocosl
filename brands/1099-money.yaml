@@ -1,0 +1,96 @@
+# Third brand from research/04-adjacent-niches.md: money and taxes for US freelancers.
+# One brand = one niche = one account per platform. Tax figures are dated: re-check every January.
+name: 1099 Money
+niche: money and taxes for US freelancers, creators and side hustlers
+audience: first-year freelancers, creators and gig workers in the US who just got (or are about to get) their first 1099
+promise: get paid, keep more, never fear April
+pillars:
+  - quarterly estimated taxes
+  - deductions with sources
+  - separating business money
+  - invoicing and getting paid
+  - benefits without an employer
+formats: [short, carousel, long]
+seed_topics:
+  - quarterly estimated taxes
+  - self employment tax
+  - 1099-nec
+  - sep ira
+  - solo 401k
+  - business bank account
+  - home office deduction
+  - mileage deduction
+  - freelance invoice
+  - hsa for self employed
+avoid_topics:
+  - tax evasion or hiding income
+  - aggressive write-off hacks
+  - state-specific advice without sources
+  - crypto tax schemes
+subreddits: [freelance, tax, smallbusiness, sidehustle, selfemployed]
+hashtags: [freelancetips, selfemployed, "1099", freelancetaxes, sidehustle, smallbusinesstips, 1099money]
+cta: Follow for one freelancer money move a week.
+link_in_bio: https://example.com/1099money
+voice:
+  tone: calm, practical, numbers-first, a little dry, zero hype
+  persona: a friend who does the books for creators and freelancers and hates jargon
+  tts_voice: ""          # your own cloned voice or a licensed stock voice id
+  banned_phrases: ["write off everything", "tax-free money", "the IRS won't know", "guaranteed refund", "this one trick"]
+visual:
+  palette: ["#14213d", "#f7f3ea", "#ff7a45", "#3cc6a0"]
+  font: Inter
+  image_style: clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper textures, no text, no logos
+  mascot: a small paper receipt character with a folded corner, round glasses and big eyes (original design)
+  watermark: "@1099money"
+cadence:
+  shorts_per_week: 5
+  long_per_week: 1
+  carousels_per_week: 3
+  max_posts_per_day_per_platform: 2
+  post_times: ["12:30", "19:00"]
+  timezone: America/New_York
+accounts:
+  - {platform: instagram, handle: "@1099money", formats: [short, carousel, image]}
+  - {platform: youtube, handle: "@1099money", formats: [short, long]}
+  - {platform: tiktok, handle: "@1099money", formats: [short]}
+# Placeholder links: replace each url with your real tracking link once the program approves you
+# (research/02-affiliate-programs.md). Terms below were the published terms in Nov 2026; confirm them.
+affiliates:
+  - name: FreshBooks (invoicing + accounting)
+    url: https://example.com/go/freshbooks
+    slug: freshbooks
+    keywords: [invoice, invoicing, accounting software, bookkeeping, late payment]
+    commission: "$88 per sale, $8 per trial (Impact)"
+  - name: QuickBooks Self-Employed / Solopreneur
+    url: https://example.com/go/quickbooks
+    slug: quickbooks
+    keywords: [mileage tracking, expense tracking, bookkeeping app]
+    commission: "10% per sale (Impact)"
+  - name: Gusto (payroll, once you hire)
+    url: https://example.com/go/gusto
+    slug: gusto
+    keywords: [payroll, contractor payments, s corp salary, hiring]
+    commission: "$50-$100 per lead"
+  - name: Novo (business checking)
+    url: https://example.com/go/novo
+    slug: novo
+    keywords: [business bank account, business checking, separate business money]
+    commission: "not published (PartnerStack)"
+  - name: TaxAct (self-employed filing)
+    url: https://example.com/go/taxact
+    slug: taxact
+    keywords: [file taxes, tax software, schedule c]
+    commission: "15% per sale (CJ)"
+  - name: Lively (HSA)
+    url: https://example.com/go/lively
+    slug: lively
+    keywords: [hsa, health savings account]
+    commission: "$10 per sale (Impact)"
+products:
+  - {name: "The Quarterly Tax Tracker (guide + spreadsheet)", url: "https://example.gumroad.com/l/quarterly-tax-tracker", price: 15}
+  - {name: "The Rate & Contract Kit (rate calculator + proposal, contract, invoice templates)", url: "https://example.gumroad.com/l/rate-contract-kit", price: 29}
+  - {name: "The Freelancer Money Bundle (tracker + kit + client email scripts)", url: "https://example.gumroad.com/l/freelancer-money-bundle", price: 49}
+ai_disclosure: "Visuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person. Educational only, not tax, legal or financial advice."
+scripts_by: ai_assisted   # or person, if you write the scripts yourself (then you may say so in ai_disclosure)
+realistic_synthetic_media: false
+require_human_review: true

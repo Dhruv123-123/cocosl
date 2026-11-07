@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Freelancer Money Bundle</title>
+<style>
+  :root{
+    --ink:#14213d; --cream:#f7f3ea; --green:#3cc6a0; --green-d:#1f8f72; --gold:#ff7a45;
+    --muted:#4d566b; --line:#d9d3c3; --paper:#fffdf8; --tint:#e8f7f2; --gold-t:#ffece3;
+  }
+  @page{ size: Letter; margin:0; }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; background:#c9cbd3; color:var(--ink);
+    font-family:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size:10.2pt; line-height:1.48; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .page{ width:8.5in; height:11in; margin:24px auto; background:var(--paper); position:relative;
+    padding:0.7in 0.85in 0.85in; overflow:hidden; box-shadow:0 4px 24px rgba(0,0,0,.18);
+    page-break-after:always; break-after:page; }
+  .page:last-child{ page-break-after:auto; break-after:auto; }
+  @media print{ html,body{ background:none; } .page{ margin:0; box-shadow:none; } }
+
+  .folio{ position:absolute; left:0.85in; right:0.85in; bottom:0.45in; display:flex;
+    justify-content:space-between; font-size:8pt; color:var(--muted); border-top:1px solid var(--line); padding-top:6px; }
+
+  h1,h2,h3,h4{ font-family:"Inter Display","Inter",system-ui,sans-serif; line-height:1.15; margin:0; }
+  h2{ font-size:24pt; font-weight:800; letter-spacing:-.02em; margin-bottom:6px; }
+  h3{ font-size:13pt; font-weight:700; margin:18px 0 6px; }
+  h4{ font-size:10.5pt; font-weight:700; margin:12px 0 4px; }
+  p{ margin:0 0 9px; }
+  .kicker{ text-transform:uppercase; letter-spacing:.14em; font-size:8pt; font-weight:700; color:var(--green-d); margin-bottom:6px; }
+  .lede{ font-size:11.5pt; color:var(--muted); margin-bottom:12px; }
+  ul,ol{ margin:0 0 10px; padding-left:20px; } li{ margin-bottom:4px; }
+  strong{ font-weight:700; }
+  .num{ font-variant-numeric:tabular-nums; }
+
+  .box{ border-radius:10px; padding:12px 16px; margin:12px 0; }
+  .box.tip{ background:var(--tint); border-left:4px solid var(--green); }
+  .box.warn{ background:var(--gold-t); border-left:4px solid var(--gold); }
+  .box.dark{ background:var(--ink); color:var(--cream); }
+  .box.dark .kicker{ color:var(--gold); }
+  .box p:last-child, .box ul:last-child{ margin-bottom:0; }
+
+  table{ width:100%; border-collapse:collapse; margin:8px 0 12px; font-size:9.5pt; }
+  th{ text-align:left; font-weight:700; background:var(--cream); border-bottom:2px solid var(--ink); padding:5px 8px; }
+  td{ border-bottom:1px solid var(--line); padding:4px 8px; }
+  td.r, th.r{ text-align:right; font-variant-numeric:tabular-nums; }
+  tr.total td{ font-weight:800; border-top:2px solid var(--ink); border-bottom:none; background:var(--tint); }
+  tr.sub td{ font-weight:700; background:#f3f0e8; }
+
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .grid4{ display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:14px 0; }
+  .card{ border:1.5px solid var(--ink); border-radius:12px; padding:12px; background:#fff; }
+  .card .big{ font-size:20pt; font-weight:800; font-family:"Inter Display","Inter",sans-serif; }
+  .card .lbl{ font-size:8pt; text-transform:uppercase; letter-spacing:.1em; color:var(--muted); font-weight:700; }
+  .pill{ display:inline-block; background:var(--green); color:#fff; font-weight:700; border-radius:999px; padding:1px 9px; font-size:8.5pt; }
+  .step{ display:flex; gap:12px; margin:10px 0; }
+  .step .n{ flex:0 0 30px; height:30px; border-radius:50%; background:var(--ink); color:var(--cream);
+    display:flex; align-items:center; justify-content:center; font-weight:800; }
+  .step .b{ flex:1; }
+  .timer{ display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin:12px 0 16px; border:1.5px solid var(--ink); border-radius:12px; overflow:hidden; }
+  .timer div{ padding:10px 12px; border-right:1.5px solid var(--ink); background:#fff; }
+  .timer div:last-child{ border-right:none; }
+  .timer .t{ font-weight:800; font-size:16pt; color:var(--green-d); }
+  .timer .h{ font-weight:700; font-size:9.5pt; }
+  .timer .d{ font-size:8.5pt; color:var(--muted); }
+  .formula{ font-family:"JetBrains Mono", ui-monospace, monospace; background:var(--ink); color:var(--cream);
+    padding:10px 14px; border-radius:8px; font-size:10pt; margin:10px 0; }
+  .check li{ list-style:none; position:relative; padding-left:4px; }
+  .check{ padding-left:22px; }
+  .check li::before{ content:""; position:absolute; left:-20px; top:3px; width:12px; height:12px; border:1.5px solid var(--ink); border-radius:3px; }
+  .faq h4{ margin-top:12px; }
+  .blank td{ height:24px; }
+  .toc{ list-style:none; padding:0; margin:12px 0; }
+  .toc li{ display:flex; border-bottom:1px dotted var(--line); padding:6px 0; margin:0; font-size:11pt; }
+  .toc li span:first-child{ flex:1; } .toc li span:last-child{ font-weight:700; }
+
+  /* cover */
+  .cover{ background:var(--ink); color:var(--cream); padding:0.9in; }
+  .cover .tag{ color:var(--gold); letter-spacing:.2em; text-transform:uppercase; font-weight:700; font-size:9pt; }
+  .cover h1{ font-size:58pt; font-weight:900; letter-spacing:-.035em; line-height:.95; margin:24px 0 18px; }
+  .cover h1 em{ font-style:normal; color:var(--green); }
+  .cover .sub{ font-size:15pt; max-width:5.2in; color:#c9d0de; line-height:1.4; }
+  .cover .clock{ position:absolute; right:0.9in; bottom:1.4in; width:3.1in; height:3.1in; }
+  .cover .bottom{ position:absolute; left:0.9in; right:0.9in; bottom:0.8in; display:flex; justify-content:space-between; align-items:flex-end; font-size:9pt; color:#9aa5bd; }
+  .cover .chips{ display:flex; gap:8px; flex-wrap:wrap; margin-top:28px; }
+  .cover .chips span{ border:1px solid #33456b; border-radius:999px; padding:5px 12px; font-size:9pt; color:var(--cream); }
+</style>
+</head>
+<body>
+
+<section class="page cover">
+  <div class="tag">1099 Money &middot; Freelancer Money Bundle</div>
+  <h1>Your whole<br><em>freelance money</em><br>system.</h1>
+  <p class="sub">Price your work, get it in writing, get paid on time, and know exactly what to pay the IRS. Two kits, one bonus, one plan.</p>
+  <div class="chips"><span>Quarterly Tax Tracker</span><span>Rate &amp; Contract Kit</span><span>Client Email Scripts (bonus)</span><span>2027 Tax Calendar</span></div>
+  <div class="bottom"><span>Edition 2027.1 &middot; 2026 federal tax figures</span><span>Educational content. Not tax or legal advice.</span></div>
+</section>
+
+<section class="page">
+  <div class="kicker">Start here</div>
+  <h2>What's inside, and the order to use it</h2>
+  <table>
+    <tr><th style="width:34%">Part</th><th>Files</th><th class="r" style="width:14%">Alone</th></tr>
+    <tr><td><strong>The Quarterly Tax Tracker</strong></td><td>Quarterly-Tax-Tracker.xlsx + 10-page guide. What to pay before each deadline, from your own logs.</td><td class="r">$15</td></tr>
+    <tr><td><strong>The Rate &amp; Contract Kit</strong></td><td>Rate-and-Invoice-Kit.xlsx, proposal, services agreement, change order, invoice + 7-page guide.</td><td class="r">$29</td></tr>
+    <tr><td><strong>Client Email Scripts</strong> (bonus)</td><td>14 emails from first inquiry to final notice. Bundle only.</td><td class="r">&mdash;</td></tr>
+    <tr><td><strong>2027 Freelancer Tax Calendar</strong></td><td>Every federal date, the payment routine, a wall page.</td><td class="r">Free</td></tr>
+  </table>
+  <h3 style="margin-top:16px">Your first afternoon (about 90 minutes)</h3>
+  <div class="step"><div class="n">1</div><div class="b"><strong>Rate Calculator</strong> (20 min): your hourly floor and your tax set-aside %.</div></div>
+  <div class="step"><div class="n">2</div><div class="b"><strong>Tracker Setup tab</strong> (20 min): filing status, last year's tax, your set-aside %. Then log this year's income and expenses so far.</div></div>
+  <div class="step"><div class="n">3</div><div class="b"><strong>Templates</strong> (30 min): put your name, terms, deposit and late fee into the proposal and agreement once. Save them as your masters.</div></div>
+  <div class="step"><div class="n">4</div><div class="b"><strong>Calendar</strong> (10 min): the four tax dates plus a monthly 10-minute check, with reminders.</div></div>
+  <div class="step"><div class="n">5</div><div class="b"><strong>Email Scripts</strong> (10 min): save the invoice and reminder emails as templates in your email app.</div></div>
+  <div class="folio"><span>Freelancer Money Bundle</span><span>2</span></div>
+</section>
+
+<section class="page">
+  <div class="kicker">The rhythm</div>
+  <h2>How it runs all year</h2>
+  <table>
+    <tr><th style="width:22%">When</th><th>What you do</th><th style="width:28%">With</th></tr>
+    <tr><td>New inquiry</td><td>Reply, price it, send a proposal, follow up in 3&ndash;4 days.</td><td>Emails 1&ndash;3, Project Pricer, Proposal</td></tr>
+    <tr><td>Yes from a client</td><td>Agreement + deposit invoice. Start when both are done.</td><td>Agreement, Invoice</td></tr>
+    <tr><td>"Can you also..."</td><td>Change order the same day.</td><td>Change Order, Email 4</td></tr>
+    <tr><td>Delivery</td><td>Invoice the same day; log it.</td><td>Invoice, Invoice Log, Email 6</td></tr>
+    <tr><td>Payment lands</td><td>Log it; move your set-aside % to tax savings.</td><td>Tracker Income tab</td></tr>
+    <tr><td>Monthly (10 min)</td><td>Catch up logs, chase overdue invoices, pay yourself.</td><td>Tracker, Invoice Log, Emails 7&ndash;11</td></tr>
+    <tr><td>Before each tax date</td><td>The 15-minute payment routine.</td><td>Tracker Quarterly tab, Calendar</td></tr>
+    <tr><td>Every January</td><td>Update tax tables, re-run your rate, raise it if needed.</td><td>Rate Calculator, Email 5</td></tr>
+  </table>
+  <div class="box tip"><div class="kicker">Updates</div><p>Tax tables change every January. Updated editions of both spreadsheets are free for bundle buyers: re-download from your purchase email.</p></div>
+  <p style="font-size:8.5pt;color:var(--muted);margin-top:16px">&copy; 1099 Money. Educational content only, not tax, legal or financial advice. Templates are starting points; have a lawyer review your agreement. For your own business use; please don't resell or share the files.</p>
+  <div class="folio"><span>Freelancer Money Bundle</span><span>3</span></div>
+</section>
+</body>
+</html>

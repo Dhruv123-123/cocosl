@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mileage Deduction Calculator for Gig Drivers (2026) | 1099 Money</title>
+<meta name="description" content="Free 2026 mileage deduction calculator for Uber, Lyft, DoorDash, Uber Eats and Instacart drivers: what your logged miles save in tax at 2026's two rates (72.5¢, then 76¢ from July 1), and how much of each payout to set aside.">
+<link rel="canonical" href="https://1099money.netlify.app/mileage/">
+<meta property="og:title" content="Mileage Deduction Calculator for Gig Drivers (2026)">
+<meta property="og:description" content="What your logged miles save in tax, and what to set aside per delivery. Free, private, no signup.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://1099money.netlify.app/mileage/">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#14213d">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Mileage deduction calculator for gig drivers","url":"https://1099money.netlify.app/mileage/","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the 2026 standard mileage rate?","acceptedAnswer":{"@type":"Answer","text":"2026 has two: 72.5 cents a mile for business driving from January 1 to June 30, and 76 cents from July 1 to December 31 (the IRS raised it mid-year, Announcement 2026-11). You multiply your business miles by the rate and deduct the result on Schedule C, instead of deducting gas, repairs, insurance and depreciation."}},{"@type":"Question","name":"Which miles count for a delivery or rideshare driver?","acceptedAnswer":{"@type":"Answer","text":"Miles driven for the business: to a pickup, during a trip or delivery, and between jobs. Commuting to a regular workplace and personal errands do not count. Miles from home to a first pickup are a grey area, so many drivers start logging when they go online and keep a log that shows it."}},{"@type":"Question","name":"Can I use the miles the app reports?","acceptedAnswer":{"@type":"Answer","text":"The app's figure is often only on-trip miles and can leave out driving to pickups and between jobs. The IRS expects your own record made at or near the time: date, miles, and the business purpose. A mileage app or a notebook both work."}}]}</script>
+</head>
+<body>
+<header class="top"><a class="logo" href="../"><span class="mark">1M</span> <span data-brand>1099 Money</span></a>
+<nav class="nav"><a href="../">Calculator</a><a href="./" aria-current="page">Driver mileage</a><a href="../compare/">Compare tools</a><a href="../free/">Free calendar</a></nav></header>
+<main>
+
+<h1>Mileage deduction calculator for gig drivers</h1>
+<p class="lede">For Uber, Lyft, DoorDash, Uber Eats, Instacart and other app-based drivers. See what your logged miles save you in tax, and how much of every payout to set aside. 2026 tax year: 72.5¢ a mile to June 30, 76¢ from July 1.</p>
+
+<div class="layout">
+  <form id="mileage-form" class="card" autocomplete="off" onsubmit="return false">
+    <div class="grid">
+      <label>What the apps paid you this year ($)<input name="earnings" inputmode="decimal" value="30000"><small>All platforms, tips included. Tips are taxable income.</small></label>
+      <label>Business miles you logged<input name="miles" inputmode="decimal" value="15000"><small>Driving to pickups, on trips and between jobs. Not commuting or personal errands.</small></label>
+      <label>Of those, miles from July 1<input name="milesFromJuly" inputmode="decimal" value="" placeholder="half, if blank"><small>2026 has two rates: 72.5¢ a mile to June 30, 76¢ from July 1. Leave blank to assume half.</small></label>
+      <label>Filing status<select name="status"><option value="single">Single</option><option value="mfj">Married filing jointly</option></select></label>
+      <details class="more-fields"><summary>More (optional)</summary>
+        <label>Miles the app reports<input name="appMiles" inputmode="decimal" value="0"><small>From the app's tax summary. Shows what your own log adds.</small></label>
+        <label>Other business costs ($)<input name="otherCosts" inputmode="decimal" value="0"><small>Business share of your phone, insulated bags, parking and tolls on jobs. Not gas or car repairs: the mileage rate already covers those.</small></label>
+        <label>Deliveries or trips this year<input name="deliveries" inputmode="decimal" value="0"></label>
+        <label>W-2 wages from another job ($)<input name="w2Wages" inputmode="decimal" value="0"></label>
+        <label>State income tax, rough rate (%)<input name="stateRate" inputmode="decimal" value="0"><small>0 if your state has no income tax.</small></label>
+      </details>
+    </div>
+    <button type="button" id="share" class="link">Copy a link to these numbers</button>
+  </form>
+  <section class="card result" aria-live="polite"><div id="result"></div></section>
+</div>
+
+<section class="card signup-box">
+  <h2>Free: the 2027 Freelancer Tax Calendar</h2>
+  <p class="signup-pitch"></p>
+  <form class="signup" name="tax-calendar" method="POST" action="../free/thanks/" data-thanks="../free/thanks/" data-netlify="true" netlify-honeypot="website">
+    <input type="hidden" name="form-name" value="tax-calendar"><input type="hidden" name="source" value="mileage">
+    <p class="hp"><label>Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label></p>
+    <label class="sr" for="signup-email">Email</label>
+    <input id="signup-email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+    <button class="btn">Send me the calendar</button>
+  </form>
+  <p class="tiny">Deadline reminders plus one short email a week. Unsubscribe in one click.</p>
+</section>
+
+<section class="faq"><h2>Questions</h2>
+<h3>What is the standard mileage rate for 2026?</h3><p>There are two. 72.5 cents a mile for business driving from January 1 to June 30, and 76 cents from July 1 to December 31: the IRS raised it mid-year (Announcement 2026-11). Your log's dates show which miles get which rate. Multiply each half's business miles by its rate and deduct the total on Schedule C. It replaces gas, oil, repairs, tires, insurance and depreciation, so you don't deduct those as well. Parking and tolls on jobs are still deductible on top.</p>
+<h3>Which miles count?</h3><p>Miles you drive for the business: heading to a pickup, during the trip or delivery, and driving between jobs. Commuting to a regular workplace and personal errands don't count. Miles from home to your first pickup are a grey area, so a common, defensible habit is to start the log when you go online and stop when you go offline, and to keep the log that shows it.</p>
+<h3>Why isn't the app's mileage enough?</h3><p>Many apps report only on-trip miles, which can leave out the drive to each pickup and the miles between jobs. The IRS expects a record you make at or near the time: the date, the miles and the business purpose. A mileage-tracking app or a notebook in the car both work. Enter the app's figure above to see what your own log is worth.</p>
+<h3>Standard rate or actual costs?</h3><p>The other choice is actual expenses: the business share of gas, repairs, insurance, registration and depreciation. It needs every receipt and a mileage log anyway, to work out the business share. For most drivers with an ordinary car the standard rate is simpler and often bigger. If you want the standard rate for a car you own, use it in the first year the car is used for business.</p>
+<h3>How much should I set aside per delivery?</h3><p>On $30,000 of payouts with 15,000 logged miles, half of them from July, a single driver with no other job deducts about $11,138 and owes about $2,780 in 2026 federal tax: about 9.3% of payouts, or roughly 93¢ for each of 3,000 deliveries. Without the mileage deduction it would be about $5,180. The result above works out your own rate and, if you enter your delivery count, a per-delivery amount.</p>
+<h3>Do I have to pay quarterly?</h3><p>Generally yes, if you expect to owe $1,000 or more when you file. For 2026 income the dates are April 15, June 15 and September 15, 2026, and January 15, 2027. The <a href="../">quarterly calculator</a> works out each payment.</p>
+<h3>What doesn't this handle?</h3><p>The new deduction for qualified tips (2025–2028, which lowers income tax but not self-employment tax, for jobs on the IRS list), actual-expense deductions, depreciation, a car used for both rideshare and another business, credits such as the earned income credit, and anything above the QBI threshold. Check irs.gov (Publication 463 and the Gig Economy Tax Center) or a tax professional for those.</p>
+</section>
+</main>
+<footer>
+<p>Educational tool, not tax, legal or financial advice. Results are estimates from the numbers you enter, using the 2026 IRS standard mileage rates (Notice 2026-10, Announcement 2026-11) and 2026 federal figures (IRS Rev. Proc. 2025-32, SSA wage base). Check irs.gov before acting.</p>
+<p>Your numbers stay in your browser; nothing you type is sent anywhere.</p>
+<p><span data-brand>1099 Money</span> · get paid, keep more, never fear April. <a href="../about/">About these pages</a> · <a href="../how-we-make-money/">How we make money</a></p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>

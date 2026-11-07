@@ -93,6 +93,7 @@ factory launch-check                          # red/yellow/green: links, placeho
 # Schedule and post
 factory reslot [--yes]                        # queued posts onto the current slots, zero collisions
 factory export-week <brand> --weeks 4         # one zip per week, posting order, captions ready to paste
+factory channels export --brand <slug> --config channels/config.json --out channels/   # Pinterest pins, X/Threads threads, newsletter issues
 factory manual [build|copy <pub>|done <pub> --url]   # TikTok + Pinterest post-by-hand packages
 factory publish                               # post what's due (dry run until FACTORY_DRY_RUN=0)
 

@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The 2027 Freelancer Tax Calendar</title>
+<meta name="description" content="Every 2027 federal tax deadline for US freelancers, month by month: estimated payments, 1099s, filing day and extensions.">
+<style>
+  :root{
+    --ink:#14213d; --cream:#f7f3ea; --green:#3cc6a0; --green-d:#1f8f72; --gold:#ff7a45;
+    --muted:#4d566b; --line:#d9d3c3; --paper:#fffdf8; --tint:#e8f7f2; --gold-t:#ffece3;
+  }
+  @page{ size: Letter; margin:0; }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; background:#c9cbd3; color:var(--ink);
+    font-family:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size:10.2pt; line-height:1.48; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .page{ width:8.5in; height:11in; margin:24px auto; background:var(--paper); position:relative;
+    padding:0.7in 0.85in 0.85in; overflow:hidden; box-shadow:0 4px 24px rgba(0,0,0,.18);
+    page-break-after:always; break-after:page; }
+  .page:last-child{ page-break-after:auto; break-after:auto; }
+  @media print{ html,body{ background:none; } .page{ margin:0; box-shadow:none; } }
+
+  .folio{ position:absolute; left:0.85in; right:0.85in; bottom:0.45in; display:flex;
+    justify-content:space-between; font-size:8pt; color:var(--muted); border-top:1px solid var(--line); padding-top:6px; }
+
+  h1,h2,h3,h4{ font-family:"Inter Display","Inter",system-ui,sans-serif; line-height:1.15; margin:0; }
+  h2{ font-size:24pt; font-weight:800; letter-spacing:-.02em; margin-bottom:6px; }
+  h3{ font-size:13pt; font-weight:700; margin:18px 0 6px; }
+  h4{ font-size:10.5pt; font-weight:700; margin:12px 0 4px; }
+  p{ margin:0 0 9px; }
+  .kicker{ text-transform:uppercase; letter-spacing:.14em; font-size:8pt; font-weight:700; color:var(--green-d); margin-bottom:6px; }
+  .lede{ font-size:11.5pt; color:var(--muted); margin-bottom:12px; }
+  ul,ol{ margin:0 0 10px; padding-left:20px; } li{ margin-bottom:4px; }
+  strong{ font-weight:700; }
+  .num{ font-variant-numeric:tabular-nums; }
+
+  .box{ border-radius:10px; padding:12px 16px; margin:12px 0; }
+  .box.tip{ background:var(--tint); border-left:4px solid var(--green); }
+  .box.warn{ background:var(--gold-t); border-left:4px solid var(--gold); }
+  .box.dark{ background:var(--ink); color:var(--cream); }
+  .box.dark .kicker{ color:var(--gold); }
+  .box p:last-child, .box ul:last-child{ margin-bottom:0; }
+
+  table{ width:100%; border-collapse:collapse; margin:8px 0 12px; font-size:9.5pt; }
+  th{ text-align:left; font-weight:700; background:var(--cream); border-bottom:2px solid var(--ink); padding:5px 8px; }
+  td{ border-bottom:1px solid var(--line); padding:4px 8px; }
+  td.r, th.r{ text-align:right; font-variant-numeric:tabular-nums; }
+  tr.total td{ font-weight:800; border-top:2px solid var(--ink); border-bottom:none; background:var(--tint); }
+  tr.sub td{ font-weight:700; background:#f3f0e8; }
+
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .grid4{ display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:14px 0; }
+  .card{ border:1.5px solid var(--ink); border-radius:12px; padding:12px; background:#fff; }
+  .card .big{ font-size:20pt; font-weight:800; font-family:"Inter Display","Inter",sans-serif; }
+  .card .lbl{ font-size:8pt; text-transform:uppercase; letter-spacing:.1em; color:var(--muted); font-weight:700; }
+  .pill{ display:inline-block; background:var(--green); color:#fff; font-weight:700; border-radius:999px; padding:1px 9px; font-size:8.5pt; }
+  .step{ display:flex; gap:12px; margin:10px 0; }
+  .step .n{ flex:0 0 30px; height:30px; border-radius:50%; background:var(--ink); color:var(--cream);
+    display:flex; align-items:center; justify-content:center; font-weight:800; }
+  .step .b{ flex:1; }
+  .timer{ display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin:12px 0 16px; border:1.5px solid var(--ink); border-radius:12px; overflow:hidden; }
+  .timer div{ padding:10px 12px; border-right:1.5px solid var(--ink); background:#fff; }
+  .timer div:last-child{ border-right:none; }
+  .timer .t{ font-weight:800; font-size:16pt; color:var(--green-d); }
+  .timer .h{ font-weight:700; font-size:9.5pt; }
+  .timer .d{ font-size:8.5pt; color:var(--muted); }
+  .formula{ font-family:"JetBrains Mono", ui-monospace, monospace; background:var(--ink); color:var(--cream);
+    padding:10px 14px; border-radius:8px; font-size:10pt; margin:10px 0; }
+  .check li{ list-style:none; position:relative; padding-left:4px; }
+  .check{ padding-left:22px; }
+  .check li::before{ content:""; position:absolute; left:-20px; top:3px; width:12px; height:12px; border:1.5px solid var(--ink); border-radius:3px; }
+  .faq h4{ margin-top:12px; }
+  .blank td{ height:24px; }
+  .toc{ list-style:none; padding:0; margin:12px 0; }
+  .toc li{ display:flex; border-bottom:1px dotted var(--line); padding:6px 0; margin:0; font-size:11pt; }
+  .toc li span:first-child{ flex:1; } .toc li span:last-child{ font-weight:700; }
+
+  /* cover */
+  .cover{ background:var(--ink); color:var(--cream); padding:0.9in; }
+  .cover .tag{ color:var(--gold); letter-spacing:.2em; text-transform:uppercase; font-weight:700; font-size:9pt; }
+  .cover h1{ font-size:58pt; font-weight:900; letter-spacing:-.035em; line-height:.95; margin:24px 0 18px; }
+  .cover h1 em{ font-style:normal; color:var(--green); }
+  .cover .sub{ font-size:15pt; max-width:5.2in; color:#c9d0de; line-height:1.4; }
+  .cover .clock{ position:absolute; right:0.9in; bottom:1.4in; width:3.1in; height:3.1in; }
+  .cover .bottom{ position:absolute; left:0.9in; right:0.9in; bottom:0.8in; display:flex; justify-content:space-between; align-items:flex-end; font-size:9pt; color:#9aa5bd; }
+  .cover .chips{ display:flex; gap:8px; flex-wrap:wrap; margin-top:28px; }
+  .cover .chips span{ border:1px solid #33456b; border-radius:999px; padding:5px 12px; font-size:9pt; color:var(--cream); }
+  .wall{ display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:12px; }
+  .wall div{ border:1.5px solid var(--ink); border-radius:12px; padding:10px 12px; min-height:1.55in; background:#fff; display:flex; flex-direction:column; gap:4px; }
+  .wall b{ font-size:15pt; font-weight:900; letter-spacing:.04em; }
+  .wall span{ font-size:9pt; }
+  .wall .hot{ background:var(--gold-t); border-color:var(--gold); }
+</style>
+</head>
+<body>
+
+<!-- 1. COVER -->
+<section class="page cover">
+  <div class="tag">1099 Money &middot; Free printable</div>
+  <h1>The 2027<br><em>Freelancer</em><br>Tax Calendar</h1>
+  <p class="sub">Every federal date a US freelancer needs next year, what to do on each one, and a 10-minute monthly routine so April is boring.</p>
+  <div class="chips"><span>Every deadline, dated</span><span>Quarterly payment checklist</span><span>Set-aside table</span><span>Printable wall page</span></div>
+  <svg class="clock" viewBox="0 0 200 200" aria-hidden="true">
+    <rect x="22" y="34" width="156" height="140" rx="16" fill="#f7f3ea"/>
+    <rect x="22" y="34" width="156" height="40" rx="16" fill="#ff7a45"/>
+    <rect x="22" y="58" width="156" height="16" fill="#ff7a45"/>
+    <rect x="58" y="18" width="12" height="32" rx="6" fill="#3cc6a0"/><rect x="130" y="18" width="12" height="32" rx="6" fill="#3cc6a0"/>
+    <text x="100" y="138" text-anchor="middle" font-family="Inter Display, Inter, sans-serif" font-weight="900" font-size="64" fill="#14213d">15</text>
+    <text x="100" y="62" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="16" letter-spacing="3" fill="#14213d">JAN</text>
+  </svg>
+  <div class="bottom"><span>Edition 2027.1 &middot; 2026 and 2027 federal dates</span><span>Educational content. Not tax advice.</span></div>
+</section>
+
+<!-- 2. YEAR AT A GLANCE -->
+<section class="page">
+  <div class="kicker">Year at a glance</div>
+  <h2>Every date that matters</h2>
+  <p class="lede">Federal dates for a sole proprietor filing Schedule C. A date on a weekend or federal holiday moves to the next business day (already applied below). Your state has its own dates: add them in the blank rows.</p>
+  <table>
+    <tr><th style="width:24%">Date</th><th>What's due</th><th style="width:16%">Covers</th></tr>
+    <tr><td><strong>Fri Jan 15, 2027</strong></td><td>4th estimated payment for your 2026 income. <em>Skip it only if you file your 2026 return and pay in full by Feb 1.</em></td><td>Sep&ndash;Dec 2026</td></tr>
+    <tr><td>Fri Jan 15, 2027</td><td>Last day of marketplace open enrollment (healthcare.gov) for 2027 coverage.</td><td>Health</td></tr>
+    <tr><td><strong>Mon Feb 1, 2027</strong></td><td>1099-NEC / 1099-K forms due <em>to you</em>. Also the day <em>your</em> 1099-NECs are due to any contractor you paid $2,000+ directly.</td><td>2026</td></tr>
+    <tr><td><strong>Thu Apr 15, 2027</strong></td><td>File your 2026 return (or an extension) and pay any balance. Last day for 2026 IRA contributions. <strong>Plus</strong> the 1st estimated payment for 2027.</td><td>2026 + Jan&ndash;Mar 2027</td></tr>
+    <tr><td><strong>Tue Jun 15, 2027</strong></td><td>2nd estimated payment for 2027. Only two months after April.</td><td>Apr&ndash;May</td></tr>
+    <tr><td><strong>Wed Sep 15, 2027</strong></td><td>3rd estimated payment for 2027.</td><td>Jun&ndash;Aug</td></tr>
+    <tr><td><strong>Fri Oct 15, 2027</strong></td><td>Extended 2026 return due (if you filed an extension). Last day to fund a 2026 SEP IRA on extension.</td><td>2026</td></tr>
+    <tr><td>Mon Nov 1, 2027</td><td>Marketplace open enrollment starts for 2028 coverage (pick by Dec 15 for a Jan 1 start).</td><td>Health</td></tr>
+    <tr><td>Fri Dec 31, 2027</td><td>Year-end: equipment you need placed in service, Solo 401(k) setup questions answered, logs caught up.</td><td>2027</td></tr>
+    <tr><td><strong>Jan 18, 2028</strong>*</td><td>4th estimated payment for 2027.</td><td>Sep&ndash;Dec 2027</td></tr>
+    <tr class="blank"><td></td><td>My state: </td><td></td></tr>
+    <tr class="blank"><td></td><td>My state: </td><td></td></tr>
+    <tr class="blank"><td></td><td>My state: </td><td></td></tr>
+  </table>
+  <p style="font-size:8.5pt;color:var(--muted)">*Jan 15, 2028 is a Saturday and Jan 17 is a federal holiday, so the payment should be due Tue Jan 18, 2028. Confirm on irs.gov when the 2027 Form 1040-ES is published. Dates checked against IRS rules as of November 2026.</p>
+  <div class="box tip"><div class="kicker">Tip</div><p>Put every bold date in your phone calendar now, with a reminder <strong>one week before</strong>. That week is when you do the 15-minute routine on the next page.</p></div>
+  <div class="folio"><span>The 2027 Freelancer Tax Calendar</span><span>2</span></div>
+</section>
+
+<!-- 3. THE QUARTERLY ROUTINE -->
+<section class="page">
+  <div class="kicker">Before each payment</div>
+  <h2>The 15-minute payment routine</h2>
+  <p class="lede">Do this one week before each estimated-tax date.</p>
+  <div class="step"><div class="n">1</div><div class="b"><strong>Catch up your records.</strong> Every client payment since last time in your income log; every business cost in your expense log; every business drive in your mileage log.</div></div>
+  <div class="step"><div class="n">2</div><div class="b"><strong>Pick your number.</strong> Either the <em>safe harbor</em> (a quarter of last year's total tax, or 110% of it if last year's AGI was over $150,000) or the <em>current-year</em> amount (90% of this year's projected tax, spread out). Paying the lesser on time generally avoids the underpayment penalty.</div></div>
+  <div class="step"><div class="n">3</div><div class="b"><strong>Pay.</strong> irs.gov/payments &rarr; Direct Pay (free) or your IRS Online Account &rarr; Estimated tax &rarr; 1040-ES &rarr; <strong>the right tax year</strong>. January's payment is for the year before.</div></div>
+  <div class="step"><div class="n">4</div><div class="b"><strong>Save the confirmation.</strong> Screenshot or email it to yourself, and log the amount.</div></div>
+  <div class="step"><div class="n">5</div><div class="b"><strong>Pay your state</strong> if it has an income tax: separate website, often the same dates.</div></div>
+  <div class="step"><div class="n">6</div><div class="b"><strong>Check your tax savings.</strong> Does it cover the rest of the year plus any April balance? If not, raise your set-aside percentage.</div></div>
+  <h3>Payment log</h3>
+  <table>
+    <tr><th>Payment</th><th>Due</th><th class="r">Amount paid</th><th>Date paid</th><th>Confirmation #</th></tr>
+    <tr class="blank"><td>Q4 2026</td><td>Jan 15, 2027</td><td></td><td></td><td></td></tr>
+    <tr class="blank"><td>Q1 2027</td><td>Apr 15, 2027</td><td></td><td></td><td></td></tr>
+    <tr class="blank"><td>Q2 2027</td><td>Jun 15, 2027</td><td></td><td></td><td></td></tr>
+    <tr class="blank"><td>Q3 2027</td><td>Sep 15, 2027</td><td></td><td></td><td></td></tr>
+    <tr class="blank"><td>Q4 2027</td><td>Jan 18, 2028*</td><td></td><td></td><td></td></tr>
+  </table>
+  <div class="box dark"><div class="kicker">Want the math done for you?</div><p>The free calculator on our site works out the payment from your profit. The <strong>Quarterly Tax Tracker</strong> ($15 spreadsheet + guide) does it from your own income and expense logs, all year.</p></div>
+  <div class="folio"><span>The 2027 Freelancer Tax Calendar</span><span>3</span></div>
+</section>
+
+<!-- 4. MONTHLY + SET-ASIDE -->
+<section class="page">
+  <div class="kicker">Every month</div>
+  <h2>The 10-minute monthly check</h2>
+  <ul class="check">
+    <li>Label anything unclear on last month's business bank statement.</li>
+    <li>Add missing income, expenses and mileage to your logs.</li>
+    <li>Move any set-aside you forgot into the tax savings account.</li>
+    <li>Send or chase invoices: anything overdue gets a reminder today.</li>
+    <li>Pay yourself the usual amount from business to personal.</li>
+  </ul>
+  <h3>How much to set aside from every payment</h3>
+  <p>Federal tax for a single filer with no other income, 2026 figures (self-employment tax + income tax, standard deduction, QBI deduction). Add your state on top.</p>
+  <table>
+    <tr><th>Net profit for the year</th><th class="r">Federal tax (approx.)</th><th class="r">Share of profit</th><th class="r">Set aside (with ~5% state)</th></tr>
+    <tr><td>$20,000</td><td class="r">$3,025</td><td class="r">15%</td><td class="r">20%</td></tr>
+    <tr><td>$40,000</td><td class="r">$7,427</td><td class="r">19%</td><td class="r">24%</td></tr>
+    <tr><td>$60,000</td><td class="r">$12,037</td><td class="r">20%</td><td class="r">25%</td></tr>
+    <tr><td>$80,000</td><td class="r">$16,647</td><td class="r">21%</td><td class="r">26%</td></tr>
+    <tr><td>$120,000</td><td class="r">$28,462</td><td class="r">24%</td><td class="r">29%</td></tr>
+  </table>
+  <p style="font-size:8.5pt;color:var(--muted)">Married filing jointly with no other household income usually owes less; a W-2 job on top usually means more. Round up for a cushion. Re-check each January when the tax tables change.</p>
+  <h3>Three accounts</h3>
+  <div class="grid4" style="grid-template-columns:repeat(3,1fr)">
+    <div class="card"><div class="lbl">1 &middot; Income</div><p style="margin:4px 0 0">Business checking. Clients pay here.</p></div>
+    <div class="card"><div class="lbl">2 &middot; Tax</div><p style="margin:4px 0 0">Separate savings. Your % moves here the same day.</p></div>
+    <div class="card"><div class="lbl">3 &middot; Pay</div><p style="margin:4px 0 0">Personal account. A fixed "paycheck" every two weeks.</p></div>
+  </div>
+  <div class="folio"><span>The 2027 Freelancer Tax Calendar</span><span>4</span></div>
+</section>
+
+<!-- 5. WALL PAGE -->
+<section class="page">
+  <div class="kicker">Print me</div>
+  <h2>2027 on one page</h2>
+  <div class="wall">
+    <div><b>JAN</b><span>15 · Q4 2026 payment</span><span>15 · Open enrollment ends</span></div>
+    <div><b>FEB</b><span>1 · 1099s in (and out)</span><span>Close the 2026 books</span></div>
+    <div><b>MAR</b><span>File 2026 early</span><span>Decide SEP / IRA amount</span></div>
+    <div class="hot"><b>APR</b><span>15 · File + pay 2026</span><span>15 · Q1 2027 payment</span><span>15 · 2026 IRA deadline</span></div>
+    <div><b>MAY</b><span>Monthly check</span></div>
+    <div class="hot"><b>JUN</b><span>15 · Q2 payment</span></div>
+    <div><b>JUL</b><span>Mid-year: is your % right?</span></div>
+    <div><b>AUG</b><span>Monthly check</span></div>
+    <div class="hot"><b>SEP</b><span>15 · Q3 payment</span></div>
+    <div><b>OCT</b><span>15 · Extended return due</span></div>
+    <div><b>NOV</b><span>1 · Open enrollment starts</span><span>Year-end plan</span></div>
+    <div><b>DEC</b><span>15 · Pick health plan</span><span>31 · Year-end moves</span></div>
+  </div>
+  <p style="margin-top:14px"><strong>Every month:</strong> the 10-minute check. <strong>Every payment:</strong> the 15-minute routine. <strong>Jan 18, 2028:</strong> Q4 2027 payment.</p>
+  <p style="font-size:8.5pt;color:var(--muted)">&copy; 1099 Money. Educational content only, not tax, legal or financial advice. Dates are federal, for sole proprietors; confirm on irs.gov and add your state's dates. Free to print and share unchanged.</p>
+  <div class="folio"><span>The 2027 Freelancer Tax Calendar</span><span>5</span></div>
+</section>
+</body>
+</html>

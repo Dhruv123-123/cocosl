@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How 1099 Money Makes Money: Products, Affiliates, Sponsors | 1099 Money</title>
+<meta name="description" content="Exactly how 1099 Money pays for its free tax tools: our own products, labeled affiliate links, sponsors (none yet), and what we never do for money.">
+<link rel="canonical" href="https://1099money.netlify.app/how-we-make-money/">
+<meta property="og:title" content="How 1099 Money Makes Money: Products, Affiliates, Sponsors">
+<meta property="og:description" content="Exactly how 1099 Money pays for its free tax tools: our own products, labeled affiliate links, sponsors (none yet), and what we never do for money.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://1099money.netlify.app/how-we-make-money/">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#14213d">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"1099 Money","item":"https://1099money.netlify.app/"},{"@type":"ListItem","position":2,"name":"How we make money","item":"https://1099money.netlify.app/how-we-make-money/"}]}</script>
+</head>
+<body>
+<header class="top"><a class="logo" href="../"><span class="mark">1M</span> <span>1099 Money</span></a>
+<nav class="nav"><a href="../">Calculator</a><a href="../mileage/">Driver mileage</a><a href="../compare/">Compare tools</a><a href="../free/">Free calendar</a></nav></header>
+<main>
+<h1>How 1099 Money makes money</h1>
+<p class="lede">Everything on this site is free to use. Here's exactly how it pays for itself, and what we don't do for money.</p>
+<section class="prose">
+<h2>1. Our own products</h2>
+<p>We sell spreadsheets, templates and guides that do the same math as the free tools in more depth. This is the main way the site is meant to earn.</p>
+<ul>
+<li><b>The Quarterly Tax Tracker</b>, $15 (not on sale yet)</li>
+<li><b>The Freelancer Money Bundle</b>, $49 (not on sale yet)</li>
+<li><b>The Rate &amp; Contract Kit</b>, $29 (not on sale yet)</li>
+</ul>
+<p>The free calculators never need a purchase, and they aren't cut down to push you toward one.</p>
+<h2>2. Affiliate links</h2>
+<p>We have no active affiliate partnerships right now. Buttons on the comparison pages go straight to each provider's own site, and we earn nothing from them. When that changes, partners will be listed here and every affiliate button will be labeled.</p>
+<p>An affiliate payment doesn't change which tools a comparison page includes or the order they're in. Each comparison page says how its picks were made, and some picks can never pay us, like HealthCare.gov and a local CPA or enrolled agent.</p>
+<h2>3. Sponsors</h2>
+<p>None. If that changes, sponsors will be listed here, and sponsored videos and posts will be labeled as paid promotion.</p>
+<h2>What we don't do</h2>
+<ul>
+<li>We don't take money for a review, a better position in a comparison, or a mention in a guide.</li>
+<li>We don't give investment or trading tips, and we don't sell courses that promise income.</li>
+<li>We don't sell or rent email addresses. Emails come from us, about taxes and money, and every one has a one-click unsubscribe.</li>
+<li>We never ask for your Social Security number, bank details or tax documents.</li>
+<li>Calculator inputs stay in your browser. The one exception: if you ask the deduction finder to email you your list, the items you ticked are sent with your email address.</li>
+</ul>
+<h2>How AI is used</h2>
+<p>Pages, posts and videos are drafted with help from AI tools, then checked against IRS, SSA and healthcare.gov sources before they're published. Video narration may use an AI voice. A person decides what goes up. See <a href="../about/">About these pages</a> for how pages are made and checked.</p>
+<h2>What we collect</h2>
+<p>We count visits with Plausible, which uses no cookies and doesn't track you across sites. If you sign up for the free calendar or the deduction list, we keep your email address (and, for the list, the items you ticked) to send it and the reminders. That's all.</p>
+<p class="tiny">This page is built from the same settings file as the rest of the site, so the lists above update when a product goes on sale or a partnership starts.</p>
+</section>
+</main>
+<footer>
+<p>Educational content, not tax, legal or financial advice. Features and prices change: check each provider's site before you sign up. Picks are ours; some links are affiliate links, and we may earn a commission at no cost to you. That never changes the order.</p>
+<p>1099 Money · get paid, keep more, never fear April. Written with help from AI tools. <a href="../about/">About these pages</a> · <a href="../how-we-make-money/">How we make money</a></p>
+</footer>
+<script type="module">
+import config from '../config.js';
+import { setupSite, live } from '../site.js';
+import { setupSignup } from '../signup.js';
+const p = config.product, box = document.getElementById('our-tool');
+if (box && live(p.url)) {
+  box.innerHTML = '<h2></h2><p></p><a class="btn"></a>';
+  box.querySelector('h2').textContent = p.name + ' · ' + p.price;
+  box.querySelector('p').textContent = p.pitch;
+  const a = box.querySelector('a'); a.href = p.url; a.textContent = 'Get the tracker'; a.rel = 'noopener';
+  box.hidden = false;
+}
+setupSignup();
+setupSite();
+</script>
+</body>
+</html>
