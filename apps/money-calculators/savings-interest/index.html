@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>High-Yield Savings Calculator: How Much Interest Will I Earn? | Money Made Simple</title>
+<meta name="description" content="Compare the interest a high-yield savings account pays with a typical big-bank savings account, based on your balance and monthly deposits.">
+<link rel="canonical" href="https://moneymadesimple.netlify.app/calculators/savings-interest/">
+<meta property="og:title" content="High-Yield Savings Calculator: How Much Interest Will I Earn?">
+<meta property="og:description" content="Compare the interest a high-yield savings account pays with a typical big-bank savings account, based on your balance and monthly deposits.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://moneymadesimple.netlify.app/calculators/savings-interest/">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0b1d13">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"High-yield savings interest calculator","url":"https://moneymadesimple.netlify.app/calculators/savings-interest/","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is APY?","acceptedAnswer":{"@type":"Answer","text":"Annual percentage yield: the yearly return including compounding. A 4% APY on $10,000 earns about $400 in a year if the rate stays the same."}},{"@type":"Question","name":"Are high-yield savings accounts safe?","acceptedAnswer":{"@type":"Answer","text":"Ones at FDIC insured banks or NCUA insured credit unions are protected up to $250,000 per depositor, per bank, per ownership category. Check the insurance before you open one."}},{"@type":"Question","name":"Do rates change?","acceptedAnswer":{"@type":"Answer","text":"Yes. Savings rates are variable and usually move with the Federal Reserve's rate. Re-check every few months."}}]}</script>
+</head>
+<body data-calc="savings-interest">
+<header class="top"><a class="logo" href="../"><span class="mark">MS</span> <span data-brand>Money Made Simple</span> calculators</a>
+<a class="home" data-site href="https://moneymadesimple.netlify.app">Main site</a></header>
+<main>
+
+<h1>High-yield savings interest calculator</h1>
+<p class="lede">Most big-bank savings accounts pay close to nothing. Put in your balance and see what a higher APY would add.</p>
+<div class="layout">
+  <form id="calc-form" class="card" autocomplete="off"><div id="fields" class="grid"></div>
+    <button type="button" id="share" class="link">Copy a link to these numbers</button>
+  </form>
+  <section class="card result" aria-live="polite"><div id="result"></div><div id="offers"></div></section>
+</div>
+
+<section class="card signup-box">
+  <h2>Free: The 7-Day Money Reset</h2>
+  <p class="signup-pitch"></p>
+  <form class="signup" name="calculator-signup" method="POST" data-netlify="true" netlify-honeypot="website">
+    <input type="hidden" name="form-name" value="calculator-signup">
+    <p class="hp"><label>Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label></p>
+    <label class="sr" for="signup-email">Email</label>
+    <input id="signup-email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+    <button class="btn">Send it to me</button>
+  </form>
+  <p class="tiny">One useful email a week. Unsubscribe in one click.</p>
+</section>
+<section class="faq"><h2>Questions</h2><h3>What is APY?</h3><p>Annual percentage yield: the yearly return including compounding. A 4% APY on $10,000 earns about $400 in a year if the rate stays the same.</p>
+<h3>Are high-yield savings accounts safe?</h3><p>Ones at FDIC insured banks or NCUA insured credit unions are protected up to $250,000 per depositor, per bank, per ownership category. Check the insurance before you open one.</p>
+<h3>Do rates change?</h3><p>Yes. Savings rates are variable and usually move with the Federal Reserve's rate. Re-check every few months.</p></section>
+<p class="more"><a href="../">More calculators</a></p>
+</main>
+<footer>
+<p>Educational tools, not financial, tax or investment advice. Results are estimates from the numbers you enter. Check current rules and rates with the official source before acting.</p>
+<p>Your numbers stay in your browser; nothing you type into a calculator is sent anywhere. Some links are affiliate links.</p>
+<p><a href="../">All calculators</a> · <a data-site href="https://moneymadesimple.netlify.app">Money Made Simple</a></p>
+</footer>
+<script type="module" src="../app.js"></script>
+</body>
+</html>

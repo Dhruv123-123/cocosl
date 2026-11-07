@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Money Calculators | Money Made Simple</title>
+<meta name="description" content="Free debt payoff, compound interest, emergency fund, savings, credit card and Roth vs Traditional calculators.">
+<link rel="canonical" href="https://moneymadesimple.netlify.app/calculators/">
+<meta property="og:title" content="Free Money Calculators">
+<meta property="og:description" content="Free debt payoff, compound interest, emergency fund, savings, credit card and Roth vs Traditional calculators.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://moneymadesimple.netlify.app/calculators/">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0b1d13">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body data-calc="">
+<header class="top"><a class="logo" href="./"><span class="mark">MS</span> <span data-brand>Money Made Simple</span> calculators</a>
+<a class="home" data-site href="https://moneymadesimple.netlify.app">Main site</a></header>
+<main>
+
+<h1>Free money calculators</h1>
+<p class="lede">Plain-English calculators for the money questions we get most. No sign-up, and your numbers never leave your browser.</p>
+<div class="tiles"><a class="card tile" href="./debt-payoff/"><h2>Debt payoff</h2><p>Enter your debts and see your debt-free date, total interest, and how much the avalanche method saves compared with the snowball.</p></a>
+<a class="card tile" href="./compound-interest/"><h2>Compound interest</h2><p>See how a starting amount plus a monthly contribution could grow over time, and how much of the total is growth rather than money you put in.</p></a>
+<a class="card tile" href="./emergency-fund/"><h2>Emergency fund</h2><p>Work out how big your emergency fund should be and how many months it will take to build it, with interest from a high-yield savings account.</p></a>
+<a class="card tile" href="./savings-interest/"><h2>High-yield savings interest</h2><p>Compare the interest a high-yield savings account pays with a typical big-bank savings account, based on your balance and monthly deposits.</p></a>
+<a class="card tile" href="./credit-card-minimum/"><h2>Credit card minimum payment</h2><p>See how long paying only the minimum on a credit card takes and how much interest it costs, compared with a fixed monthly payment.</p></a>
+<a class="card tile" href="./roth-vs-traditional/"><h2>Roth vs Traditional</h2><p>Compare the after-tax value of Roth and Traditional retirement contributions using your tax rate now and your expected rate in retirement.</p></a></div>
+
+<section class="card signup-box">
+  <h2>Free: The 7-Day Money Reset</h2>
+  <p class="signup-pitch"></p>
+  <form class="signup" name="calculator-signup" method="POST" data-netlify="true" netlify-honeypot="website">
+    <input type="hidden" name="form-name" value="calculator-signup">
+    <p class="hp"><label>Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label></p>
+    <label class="sr" for="signup-email">Email</label>
+    <input id="signup-email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+    <button class="btn">Send it to me</button>
+  </form>
+  <p class="tiny">One useful email a week. Unsubscribe in one click.</p>
+</section>
+</main>
+<footer>
+<p>Educational tools, not financial, tax or investment advice. Results are estimates from the numbers you enter. Check current rules and rates with the official source before acting.</p>
+<p>Your numbers stay in your browser; nothing you type into a calculator is sent anywhere. Some links are affiliate links.</p>
+<p><a href="./">All calculators</a> · <a data-site href="https://moneymadesimple.netlify.app">Money Made Simple</a></p>
+</footer>
+<script type="module" src="./app.js"></script>
+</body>
+</html>

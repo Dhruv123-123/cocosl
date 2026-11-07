@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Debt Payoff Calculator: Avalanche vs Snowball | Money Made Simple</title>
+<meta name="description" content="Enter your debts and see your debt-free date, total interest, and how much the avalanche method saves compared with the snowball.">
+<link rel="canonical" href="https://moneymadesimple.netlify.app/calculators/debt-payoff/">
+<meta property="og:title" content="Debt Payoff Calculator: Avalanche vs Snowball">
+<meta property="og:description" content="Enter your debts and see your debt-free date, total interest, and how much the avalanche method saves compared with the snowball.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://moneymadesimple.netlify.app/calculators/debt-payoff/">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0b1d13">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Debt payoff calculator: avalanche vs snowball","url":"https://moneymadesimple.netlify.app/calculators/debt-payoff/","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the avalanche method?","acceptedAnswer":{"@type":"Answer","text":"Pay the minimum on everything, then put every extra dollar on the debt with the highest APR. When it is gone, roll that payment to the next-highest. It costs the least interest."}},{"@type":"Question","name":"What is the snowball method?","acceptedAnswer":{"@type":"Answer","text":"Same idea, but you target the smallest balance first. You pay a little more interest, but you clear whole debts sooner, which keeps many people going."}},{"@type":"Question","name":"Which one should I use?","acceptedAnswer":{"@type":"Answer","text":"The one you will stick with. If avalanche saves only a few dollars, snowball is fine. If it saves hundreds, it is usually worth the patience."}}]}</script>
+</head>
+<body data-calc="debt-payoff">
+<header class="top"><a class="logo" href="../"><span class="mark">MS</span> <span data-brand>Money Made Simple</span> calculators</a>
+<a class="home" data-site href="https://moneymadesimple.netlify.app">Main site</a></header>
+<main>
+
+<h1>Debt payoff calculator: avalanche vs snowball</h1>
+<p class="lede">List what you owe. We run both payoff orders month by month and show your debt-free date and the interest each one costs.</p>
+<div class="layout">
+  <form id="calc-form" class="card" autocomplete="off"><div id="debts"></div>
+       <button type="button" id="add-debt" class="link">+ Add a debt</button>
+       <label>Extra each month on top of minimums ($)<input name="extra" type="number" min="0" step="any" value="150"></label>
+    <button type="button" id="share" class="link">Copy a link to these numbers</button>
+  </form>
+  <section class="card result" aria-live="polite"><div id="result"></div><div id="offers"></div></section>
+</div>
+
+<section class="card signup-box">
+  <h2>Free: The 7-Day Money Reset</h2>
+  <p class="signup-pitch"></p>
+  <form class="signup" name="calculator-signup" method="POST" data-netlify="true" netlify-honeypot="website">
+    <input type="hidden" name="form-name" value="calculator-signup">
+    <p class="hp"><label>Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label></p>
+    <label class="sr" for="signup-email">Email</label>
+    <input id="signup-email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+    <button class="btn">Send it to me</button>
+  </form>
+  <p class="tiny">One useful email a week. Unsubscribe in one click.</p>
+</section>
+<section class="faq"><h2>Questions</h2><h3>What is the avalanche method?</h3><p>Pay the minimum on everything, then put every extra dollar on the debt with the highest APR. When it is gone, roll that payment to the next-highest. It costs the least interest.</p>
+<h3>What is the snowball method?</h3><p>Same idea, but you target the smallest balance first. You pay a little more interest, but you clear whole debts sooner, which keeps many people going.</p>
+<h3>Which one should I use?</h3><p>The one you will stick with. If avalanche saves only a few dollars, snowball is fine. If it saves hundreds, it is usually worth the patience.</p></section>
+<p class="more"><a href="../">More calculators</a></p>
+</main>
+<footer>
+<p>Educational tools, not financial, tax or investment advice. Results are estimates from the numbers you enter. Check current rules and rates with the official source before acting.</p>
+<p>Your numbers stay in your browser; nothing you type into a calculator is sent anywhere. Some links are affiliate links.</p>
+<p><a href="../">All calculators</a> · <a data-site href="https://moneymadesimple.netlify.app">Money Made Simple</a></p>
+</footer>
+<script type="module" src="../app.js"></script>
+</body>
+</html>

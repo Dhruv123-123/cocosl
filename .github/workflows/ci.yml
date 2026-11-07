@@ -19,3 +19,17 @@ jobs:
         env:
           FACTORY_LLM: offline
         run: python -m pytest
+  apps:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apps
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Unit tests
+        run: npm test
+      - name: Pages are up to date
+        run: node money-calculators/build.mjs && git diff --exit-code -- money-calculators

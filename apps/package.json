@@ -1,0 +1,11 @@
+{
+  "name": "cocosl-apps",
+  "private": true,
+  "type": "module",
+  "description": "Static money-making web apps for the Money Made Simple and Scam Shield brands",
+  "scripts": {
+    "test": "node --test",
+    "smoke": "node tools/smoke.mjs"
+  },
+  "engines": { "node": ">=20" }
+}

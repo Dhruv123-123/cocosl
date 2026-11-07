@@ -1,0 +1,8 @@
+# Deploy all three apps as one free Netlify site: base directory "apps".
+# (Each app folder also has its own netlify.toml if you'd rather give each brand its own site.)
+[build]
+  publish = "."
+  command = "node money-calculators/build.mjs"
+
+[functions]
+  directory = "budget/netlify/functions"

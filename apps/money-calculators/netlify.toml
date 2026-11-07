@@ -1,0 +1,4 @@
+# Deploy this folder on its own: Netlify > Add new site > Import > base directory apps/money-calculators
+[build]
+  publish = "."
+  command = "node build.mjs"

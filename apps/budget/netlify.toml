@@ -1,0 +1,7 @@
+# Deploy on its own: Netlify > Add new site > Import > base directory apps/budget.
+# Then Site settings > Environment variables: GUMROAD_PRODUCT_ID and/or STRIPE_SECRET_KEY.
+[build]
+  publish = "."
+
+[functions]
+  directory = "netlify/functions"
