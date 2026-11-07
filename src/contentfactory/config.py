@@ -7,6 +7,7 @@ is for, how it sounds, how it looks, where it posts and how it makes money.
 from __future__ import annotations
 
 import os
+import re
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Literal
@@ -43,6 +44,7 @@ class Settings:
     dry_run: bool = True  # never call publishing APIs unless explicitly turned off
     dashboard_token: str = ""
     extra: dict = field(default_factory=dict)
+    brand_scope: str = ""  # set by for_brand(): env() prefers <BRAND>__KEY over KEY
 
     @classmethod
     def load(cls, home: str | Path | None = None) -> "Settings":
@@ -68,14 +70,48 @@ class Settings:
         return s
 
     def env(self, key: str, default: str = "") -> str:
+        """A setting from the environment. Inside a brand scope, `MONEY_MADE_SIMPLE__IG_ACCESS_TOKEN`
+        wins over `IG_ACCESS_TOKEN`, so each brand can post to its own accounts while app-level
+        values (client ids, secrets) stay shared."""
+        if self.brand_scope:
+            scoped = os.environ.get(scoped_key(self.brand_scope, key))
+            if scoped:
+                return scoped
         return os.environ.get(key, default)
+
+    def env_key(self, key: str, write_scoped: bool | None = None) -> str:
+        """The variable name to write a refreshed/new value to: the brand-scoped name if this brand
+        already uses one (or write_scoped=True), else the shared name."""
+        if self.brand_scope:
+            name = scoped_key(self.brand_scope, key)
+            if write_scoped or (write_scoped is None and os.environ.get(name)):
+                return name
+        return key
+
+    def for_brand(self, slug: str | None) -> "Settings":
+        from dataclasses import replace
+        return replace(self, brand_scope=slug or "")
+
+
+def scoped_key(brand_slug: str, key: str) -> str:
+    return re.sub(r"[^A-Z0-9]+", "_", brand_slug.upper()).strip("_") + "__" + key
 
 
 # ---------------------------------------------------------------------------
 # Brand profile
 # ---------------------------------------------------------------------------
 
-Platform = Literal["instagram", "youtube", "tiktok", "facebook", "threads", "postiz"]
+Platform = Literal["instagram", "youtube", "tiktok", "facebook", "threads", "postiz", "pinterest"]
+
+
+class SignatureVisual(BaseModel):
+    """One recurring graphic device (see media/signature.py). auto = picked from the slug."""
+    device: Literal["auto", "corner_block", "stripe", "ring", "bracket", "dot_grid", "none"] = "auto"
+    color: str = "accent"  # accent | accent2 | light | dark | #hex
+    corner: Literal["top-left", "top-right", "bottom-left", "bottom-right"] = "top-right"
+    size: float = Field(0.14, ge=0.04, le=0.4)
+    label: str = Field("", max_length=6)
+    where: list[Literal["thumbnail", "intro", "cover"]] = Field(default_factory=lambda: ["thumbnail", "intro", "cover"])
 
 
 class VisualStyle(BaseModel):
@@ -84,6 +120,7 @@ class VisualStyle(BaseModel):
     image_style: str = "clean flat editorial illustration, soft lighting, no text"
     mascot: str = ""  # optional recurring character description (original, never a real person)
     watermark: str = ""  # e.g. @handle
+    signature: SignatureVisual = Field(default_factory=SignatureVisual)
 
 
 class VoiceStyle(BaseModel):
@@ -101,6 +138,7 @@ class Cadence(BaseModel):
     carousels_per_week: int = 3
     max_posts_per_day_per_platform: int = 2
     post_times: list[str] = Field(default_factory=lambda: ["12:30", "18:30"])  # local times
+    platform_times: dict[str, list[str]] = Field(default_factory=dict)  # e.g. {tiktok: ["19:00", "21:00"]}
     timezone: str = "America/New_York"
     # Worker settings for this brand (multi-brand runner)
     daily_at: str = ""            # local HH:MM for the daily ideas+drafts run; "" = DAILY_AT env (07:00)
@@ -122,6 +160,7 @@ class PlatformAccount(BaseModel):
     handle: str = ""
     enabled: bool = True
     formats: list[str] = Field(default_factory=lambda: ["short"])
+    board: str = ""  # Pinterest board the pin goes on
 
 
 class BrandProfile(BaseModel):
@@ -149,6 +188,7 @@ class BrandProfile(BaseModel):
     ai_disclosure: str = "Made with AI tools; written and fact-checked by a human."
     realistic_synthetic_media: bool = False  # True if visuals/voices could pass as real people/events
     require_human_review: bool = True
+    own_voice: bool = False  # videos wait for the owner's recorded narration (`factory voice`) before scheduling
 
     def account(self, platform: str) -> PlatformAccount | None:
         return next((a for a in self.accounts if a.platform == platform and a.enabled), None)

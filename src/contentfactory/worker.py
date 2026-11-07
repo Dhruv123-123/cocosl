@@ -13,6 +13,8 @@ Every brand runs on its own clock (brand.cadence.timezone):
 * every COMMENTS_EVERY minutes (default 60, 0 = off): collect comments and
   draft replies into the inbox. Replies are only ever sent by a human click.
 * Mondays after DAILY_AT (first brand's zone): save the weekly report to output/reports/
+* with BACKUP_DIR set: one database backup a day (keeps BACKUP_KEEP, default 14)
+* with CLEANUP_AFTER_DAYS set (14+): delete videos/audio of posts live everywhere for that long (cleanup.py)
 
 Daily runs and the weekly report are recorded in the audit log, so a restart
 never runs them twice on the same day. Each step has its own error handling:
@@ -162,6 +164,16 @@ class Worker:
         if self._due("comments", self.comments_every, now):
             self._step("comments", self.collect_comments)
             ran["comments"] = True
+        if os.environ.get("BACKUP_DIR") and not self._ran_since("worker.backup", "", now - timedelta(hours=23)):
+            from .backup import backup_db
+            self._mark("worker.backup", "", now)
+            ran["backup"] = str(self._step("backup", backup_db, self.factory, None,
+                                           int(os.environ.get("BACKUP_KEEP", "14"))))
+        from .cleanup import from_env as cleanup_days
+        if (days := cleanup_days()) and not self._ran_since("worker.cleanup", "", now - timedelta(hours=23)):
+            from .cleanup import run as cleanup
+            self._mark("worker.cleanup", "", now)
+            ran["cleanup"] = self._step("cleanup", cleanup, self.factory, days, True)
         if self._step("report_due", self.weekly_report_due, now):
             from .reports import save_report
             self._mark("worker.report", "", now)

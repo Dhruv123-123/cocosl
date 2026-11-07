@@ -114,7 +114,9 @@ def score_idea(d: IdeaDraft, brand: BrandProfile) -> float:
 
 def generate_ideas(db: DB, llm: LLM, brand: BrandProfile, n: int = 10, online: bool = True,
                    dedupe_threshold: float = 0.5) -> list[int]:
+    from .insights import winners_prompt
     signals = gather_signals(brand, online=online)
+    learned = winners_prompt(db, brand.slug)
     recent = db.query("SELECT title FROM ideas WHERE brand = ? ORDER BY id DESC LIMIT 300", [brand.slug])
     recent_titles = [r["title"] for r in recent]
     system = (
@@ -129,7 +131,7 @@ Niche: {brand.niche}
 Audience: {brand.audience}
 Promise to viewers: {brand.promise}
 Pillars: {', '.join(brand.pillars)}
-Formats available: {', '.join(brand.formats)} (short = 30-60s vertical video, long = 6-12 min video, carousel = 6-10 slide image post)
+Formats available: {', '.join(brand.formats)} (short = 30-60s vertical video, mid = 65-90s vertical video for TikTok only, long = 6-12 min video, carousel = 6-10 slide image post)
 Topics to avoid: {', '.join(brand.avoid_topics) or 'none'}
 Monetization: affiliate offers [{', '.join(a.name for a in brand.affiliates) or 'none'}], products [{', '.join(p.get('name', '') for p in brand.products) or 'none'}]
 
@@ -138,6 +140,8 @@ What people are searching for right now (signals, may be noisy):
 
 Recent ideas already in the backlog (do NOT repeat or lightly reword these):
 {chr(10).join('- ' + t for t in recent_titles[:60]) or '- (none yet)'}
+
+{learned}
 
 Each idea must have a distinct angle, not a template with the noun swapped."""
     seed = int(hashlib.sha1(f"{brand.slug}{len(recent_titles)}".encode()).hexdigest(), 16) % 10_000

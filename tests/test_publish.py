@@ -288,6 +288,17 @@ def test_youtube_short_no_thumbnail_and_schedule(settings, brand, files, yt_env)
     assert res.url.endswith("/shorts/VID1") and not r.find("POST", "thumbnails/set")
 
 
+def test_youtube_sponsored_stays_private_for_studio(settings, brand, files, yt_env, monkeypatch):
+    monkeypatch.setenv("YT_PRIVACY", "public")
+    r = yt_router()
+    pub = YouTubePublisher(settings, transport=r.transport, sleep=noop_sleep)
+    res = pub.publish(make_req(brand, settings, "youtube", "short", files, has_paid_promotion=True,
+                               scheduled_at="2026-12-01T17:00:00Z"))
+    meta = body_json(r.find("POST", "upload/youtube/v3/videos")[0])
+    assert meta["status"]["privacyStatus"] == "private" and "publishAt" not in meta["status"]
+    assert "paid promotion" in res.raw["needs_studio"]
+
+
 def test_youtube_resumes_after_server_error(settings, brand, files, yt_env):
     calls = {"n": 0}
 
@@ -591,3 +602,47 @@ def test_local_callback_server():
         httpx.Client(trust_env=False).get(srv.redirect_uri + "?code=abc&state=xyz", timeout=5)
         res = srv.wait(5)
     assert res.code == "abc" and res.state == "xyz"
+
+
+def test_youtube_caption_track_best_effort(settings, brand, files, yt_env, tmp_path, monkeypatch):
+    srt = tmp_path / "output" / "captions.srt"
+    srt.write_text("1\n00:00:00,000 --> 00:00:01,500\nHello there\n")
+    r = yt_router().add("POST", "upload/youtube/v3/captions", {"id": "CAP1"})
+    pub = YouTubePublisher(settings, transport=r.transport, sleep=noop_sleep)
+    res = pub.publish(make_req(brand, settings, "youtube", "short", files, captions_path=srt))
+    assert res.raw["captions"] == {"ok": True, "id": "CAP1"}
+    cap = r.find("POST", "upload/youtube/v3/captions")[0]
+    assert cap.url.params["uploadType"] == "multipart" and b'"videoId": "VID1"' in cap.content
+    assert b"Hello there" in cap.content and cap.headers["Content-Type"].startswith("multipart/related")
+    # a refused caption upload never fails the finished video
+    r2 = yt_router().add("POST", "upload/youtube/v3/captions", httpx.Response(403, json={"error": {"message": "no"}}))
+    res2 = YouTubePublisher(settings, transport=r2.transport, sleep=noop_sleep).publish(
+        make_req(brand, settings, "youtube", "short", files, captions_path=srt))
+    assert res2.remote_id == "VID1" and res2.raw["captions"]["ok"] is False
+    monkeypatch.setenv("YT_UPLOAD_CAPTIONS", "0")
+    r3 = yt_router()
+    YouTubePublisher(settings, transport=r3.transport, sleep=noop_sleep).publish(
+        make_req(brand, settings, "youtube", "short", files, captions_path=srt))
+    assert not r3.find("POST", "captions")
+
+
+def test_youtube_expired_sign_in_explains_fix(settings, brand, files, yt_env):
+    r = yt_router()
+    r.routes.insert(0, ("POST", "oauth2.googleapis.com/token", httpx.Response(400, json={
+        "error": "invalid_grant", "error_description": "Token has been expired or revoked."})))
+    with pytest.raises(PublishError) as e:
+        YouTubePublisher(settings, transport=r.transport, sleep=noop_sleep).publish(
+            make_req(brand, settings, "youtube", "short", files))
+    assert not e.value.retryable and "factory auth youtube" in str(e.value) and "7 days" in str(e.value)
+    assert not r.find("POST", "upload/youtube/v3/videos")
+
+
+def test_doctor_warns_on_old_youtube_sign_in(factory, monkeypatch):
+    import time
+
+    from contentfactory.doctor import _publishing
+    for k, v in {"YT_CLIENT_ID": "a", "YT_CLIENT_SECRET": "b", "YT_REFRESH_TOKEN": "c",
+                 "YT_REFRESH_TOKEN_SET_AT": str(int(time.time() - 6.5 * 86400))}.items():
+        monkeypatch.setenv(k, v)
+    msgs = [r.message for r in _publishing(factory, online=False) if r.name.endswith("sign-in")]
+    assert msgs and "Testing" in msgs[0]

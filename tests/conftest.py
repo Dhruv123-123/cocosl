@@ -17,6 +17,8 @@ def home(tmp_path, monkeypatch):
     monkeypatch.setenv("FACTORY_TTS", "silent")
     monkeypatch.setenv("FACTORY_IMAGES", "cards")
     monkeypatch.setenv("FACTORY_DRY_RUN", "1")
+    monkeypatch.setenv("PUBLISH_LATE_HOURS", "0")  # tests jump the clock ahead; the late guard has its own test
+    monkeypatch.setenv("FACTORY_PREFLIGHT", "0")  # fake media; tests/test_preflight.py turns it on
     monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
     shutil.copytree(ROOT / "brands", tmp_path / "brands")
     return tmp_path

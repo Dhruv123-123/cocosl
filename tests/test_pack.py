@@ -4,7 +4,7 @@ from pathlib import Path
 
 import pytest
 
-from contentfactory.pack import caption_txt, est_seconds, plan, revenue_tags, tiktok_segments
+from contentfactory.pack import caption_txt, est_seconds, plan, platforms_for, revenue_tags, tiktok_segments
 
 ROOT = Path(__file__).resolve().parents[1]
 MONTHS = sorted((ROOT / "launch" / "money-made-simple").glob("month-*/content.json"))
@@ -47,8 +47,10 @@ def test_plan_respects_cadence_and_cap(factory):
             per[(s.day, p)] = per.get((s.day, p), 0) + 1
     assert max(per.values()) <= brand.cadence.max_posts_per_day_per_platform
     longs = [s for s in slots if s.fmt == "long"]
-    assert all(s.when.weekday() == 6 and s.platforms == ["youtube"] for s in longs)
-    assert all(s.platforms == ["instagram"] for s in slots if s.fmt == "carousel")
+    assert all(s.when.weekday() == 6 and "youtube" in s.platforms
+               and set(s.platforms) <= set(platforms_for(brand, "long")) for s in longs)
+    assert all("instagram" in s.platforms and set(s.platforms) <= set(platforms_for(brand, "carousel"))
+               for s in slots if s.fmt == "carousel")
     assert [s.index for s in slots if s.fmt == "short"] == sorted(s.index for s in slots if s.fmt == "short")
 
 

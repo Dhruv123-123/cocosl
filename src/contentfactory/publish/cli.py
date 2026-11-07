@@ -16,14 +16,21 @@ def cmd_auth(args, factory_fn):
     from .tokens import write_env
     f = factory_fn(args)
     s = f.settings
+    if getattr(args, "brand", None):
+        f.brand(args.brand)  # must exist
+        s = s.for_brand(args.brand)
     env = s.home / ".env"
+    _write = write_env
+
+    def write_env(path, values):  # noqa: F811 - per-brand names when --brand is given
+        _write(path, {s.env_key(k, write_scoped=bool(s.brand_scope)): v for k, v in values.items()})
     if args.platform == "youtube":
         _need(s, "YT_CLIENT_ID", "YT_CLIENT_SECRET")
         tok = oauth.youtube_authorize_interactive(s.env("YT_CLIENT_ID"), s.env("YT_CLIENT_SECRET"),
                                                   open_browser=not args.no_browser)
         if not tok.get("refresh_token"):
             sys.exit("Google returned no refresh token. Remove the app's access at myaccount.google.com/permissions and retry.")
-        write_env(env, {"YT_REFRESH_TOKEN": tok["refresh_token"]})
+        write_env(env, {"YT_REFRESH_TOKEN": tok["refresh_token"], "YT_REFRESH_TOKEN_SET_AT": str(int(time.time()))})
         print("YouTube connected. YT_REFRESH_TOKEN saved to .env")
     elif args.platform == "tiktok":
         _need(s, "TIKTOK_CLIENT_KEY", "TIKTOK_CLIENT_SECRET")
@@ -68,6 +75,7 @@ def register(sub, factory_fn) -> None:
     s.add_argument("platform", choices=["youtube", "tiktok", "meta", "threads"])
     s.add_argument("--token", help="short-lived token (meta/threads)")
     s.add_argument("--page", help="Facebook Page id (meta)")
+    s.add_argument("--brand", help="save tokens for this brand only (e.g. a second brand's own accounts)")
     s.add_argument("--user-id", help="Threads user id")
     s.add_argument("--port", type=int, default=8765, help="local callback port (tiktok)")
     s.add_argument("--no-browser", action="store_true")

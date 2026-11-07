@@ -72,6 +72,7 @@ def _post_view(factory: Factory, request: Request, post: dict) -> dict:
         "check_status": (post.get("checks") or {}).get("status", ""),
         "editor": (post.get("meta") or {}).get("editor") or {},
         "job": _jobs(request).active_for("post", post["id"]),
+        "render_queued": factory.render_pending(post["id"]),
         "pubs": queries.publications_for(factory, post["id"]),
     }
 
@@ -119,12 +120,49 @@ def overview(request: Request, factory: Factory = Depends(get_factory)) -> HTMLR
     )
 
 
+@router.get("/today")
+def today(request: Request, factory: Factory = Depends(get_factory)) -> HTMLResponse:
+    """Calendar, review queue, recordings to do and the launch check on one page."""
+    from datetime import datetime, timezone
+
+    from ..launch_check import Report
+    from ..launch_check import run as launch_run
+    from ..planner import entries, flag, recordings
+    rows = entries(factory, 7)
+    problems = flag(factory, rows)
+    try:
+        launch = launch_run(factory)
+    except Exception as e:  # the page must still load
+        launch = Report()
+        launch.add("red", "-", "launch check", f"couldn't run: {e}")
+    from ..manual import pending
+    return render(request, "today.html", calendar=rows, problems=problems, review=queries.review_queue(factory),
+                  recordings=recordings(factory), launch=launch, by_hand_items=pending(factory)[:20],
+                  now=datetime.now(timezone.utc).strftime("%a %d %b %Y, %H:%M UTC"))
+
+
+@router.post("/manual/{pub_id}/done")
+def manual_done(pub_id: int, request: Request, url: str = Form(""), factory: Factory = Depends(get_factory)):
+    from ..manual import mark_done
+    try:
+        mark_done(factory, pub_id, url.strip(), actor="dashboard")
+    except (KeyError, ValueError) as e:
+        return back(request, "/today", err=str(e))
+    return back(request, "/today", msg=f"Publication #{pub_id} recorded as posted")
+
+
 def _ops(factory: Factory) -> dict | None:
     try:
         from ..health import system_status
         return system_status(factory)
     except Exception:  # the overview must never fail because of the ops panel
         return None
+
+
+@router.post("/posts/{post_id}/thumbnail")
+def post_thumbnail(post_id: int, request: Request, index: int = Form(...), factory: Factory = Depends(get_factory)):
+    factory.choose_thumbnail(post_id, index)
+    return back(request, f"/posts/{post_id}", msg="Thumbnail updated")
 
 
 @router.post("/publications/{pub_id}/resolve")
@@ -218,6 +256,15 @@ def post_reject(post_id: int, request: Request, reason: str = Form(""),
 
 @router.post("/posts/{post_id}/rerender")
 def post_rerender(post_id: int, request: Request, factory: Factory = Depends(get_factory)):
+    import os
+    if os.environ.get("RENDER_QUEUE") == "1":  # the renderer service does it; the dashboard stays snappy
+        from ..renderq import enqueue
+        post = queries.require_post(factory, post_id)
+        if post["status"] in ("scheduled", "published"):
+            raise PermissionError(f"Post #{post_id} is {post['status']}; re-rendering would not update the platforms")
+        job = enqueue(factory, post_id, reason="manual", priority=5)
+        return back(request, "/review", msg=f"Post #{post_id} queued for rendering" if job else
+                    f"Post #{post_id} is already in the render queue", anchor=f"post-{post_id}")
     job = actions.start_render(factory, _jobs(request), post_id)
     return back(request, "/review", msg=f"Re-rendering post #{post_id} (job #{job.id})", anchor=f"post-{post_id}")
 
@@ -234,7 +281,16 @@ def post_detail(post_id: int, request: Request, factory: Factory = Depends(get_f
     view = _post_view(factory, request, post)
     tz = factory.brand(post["brand"]).cadence.timezone if post["brand"] in factory.brands() else "UTC"
     idea = factory.db.get("ideas", post["idea_id"]) if post.get("idea_id") else None
-    return render(request, "post.html", **view, idea=idea, history=queries.post_history(factory, post_id), tz=tz)
+    media_checks = []
+    if post["status"] in ("in_review", "rendered", "approved", "scheduled") and post["brand"] in factory.brands():
+        from ..publish.preflight import check_post
+        try:
+            media_checks = [i for i in check_post(factory, post)
+                            if not (factory.settings.dry_run and "PUBLIC_MEDIA_BASE_URL" in i.message)]
+        except Exception:  # a broken asset record shouldn't take the page down
+            media_checks = []
+    return render(request, "post.html", **view, idea=idea, history=queries.post_history(factory, post_id), tz=tz,
+                  media_checks=media_checks)
 
 
 # --------------------------------------------------------------------------- calendar / published
@@ -250,13 +306,16 @@ def calendar_page(request: Request, factory: Factory = Depends(get_factory)) -> 
 @router.post("/publish/due")
 def publish_due(request: Request, factory: Factory = Depends(get_factory)):
     results = factory.publish_due()
+    moved = sum(1 for r in results if r["status"] == "rescheduled")
+    results = [r for r in results if r["status"] != "rescheduled"]
     ok = sum(1 for r in results if r["status"] != "failed")
     failed = len(results) - ok
     word = "recorded (dry run)" if factory.settings.dry_run else "published"
     if failed:
         return back(request, "/calendar", err=f"{ok} {word}, {failed} failed: "
                     + "; ".join(r.get("error", "")[:120] for r in results if r["status"] == "failed")[:400])
-    return back(request, "/calendar", msg=f"{ok} publication(s) {word}" if results else "Nothing due right now")
+    note = f"; {moved} overdue post(s) moved to the next free slot" if moved else ""
+    return back(request, "/calendar", msg=(f"{ok} publication(s) {word}" if results else "Nothing due right now") + note)
 
 
 @router.get("/published")

@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS publications (
   post_id INTEGER NOT NULL REFERENCES posts(id),
   platform TEXT NOT NULL,
   account TEXT DEFAULT '',
-  status TEXT NOT NULL DEFAULT 'queued',  -- queued | publishing | published | failed | dry_run | needs_check | cancelled
+  status TEXT NOT NULL DEFAULT 'queued',  -- queued | publishing | published | failed | dry_run | needs_check | manual | cancelled
   scheduled_at TEXT,
   remote_id TEXT DEFAULT '',
   url TEXT DEFAULT '',
