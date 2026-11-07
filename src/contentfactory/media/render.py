@@ -17,7 +17,7 @@ from .carousel import SlideKit, SlideText, render_carousel
 from .images import generate_images
 from .thumbnail import render_thumbnail
 from .tts import concat_narration, synthesize_segments
-from .util import (ASPECTS, SHORT_MAX_SECONDS, SLIDE_SIZE, VIDEO_SIZES, MediaError, Palette, RenderOptions,
+from .util import (ASPECTS, SHORT_MAX_SECONDS, SLIDE_SIZE, TIKTOK_CUT_MAX_SECONDS, VIDEO_SIZES, MediaError, Palette, RenderOptions,
                    probe, provenance)
 from .video import Beat, VideoSpec, assemble, pick_music
 
@@ -92,9 +92,12 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
     duration = probe(video)["duration"] or duration
 
     notes = list(tts.notes)
-    if fmt == "short" and duration > SHORT_MAX_SECONDS:
-        notes.append(f"WARNING: short runs {duration:.1f}s (> {SHORT_MAX_SECONDS:.0f}s); trim the script "
-                     "before posting as a Reel/Short. Nothing was cut automatically.")
+    meta = post.get("meta") or {}
+    tiktok_only = isinstance(meta, dict) and meta.get("platforms") == ["tiktok"]
+    limit = TIKTOK_CUT_MAX_SECONDS if tiktok_only else SHORT_MAX_SECONDS
+    if fmt == "short" and duration > limit:
+        notes.append(f"WARNING: short runs {duration:.1f}s (> {limit:.0f}s); trim the script "
+                     "before posting. Nothing was cut automatically.")
     thumb = render_thumbnail(images[0], script.thumbnail_text or script.title, palette, brand.visual.font,
                              brand.visual.watermark, out / "thumbnail.png")
 

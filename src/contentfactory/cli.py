@@ -217,9 +217,20 @@ def cmd_import(args):
     items = json.loads(Path(args.file).read_text())
     for item in items[: args.limit or None]:
         pid = f.import_script(args.brand, item["script"], item["format"], item.get("pillar", ""),
-                              item.get("idea_angle", ""), render=not args.no_render)
+                              item.get("idea_angle", ""), render=not args.no_render,
+                              platforms=item.get("platforms"))
         post = f.db.get("posts", pid)
         print(f"post #{pid} [{post['format']}/{post['status']}] {post['title']}")
+
+
+def cmd_pack(args):
+    from .pack import build_pack
+    f = _factory(args)
+    res = build_pack(f, args.brand, Path(args.file), Path(args.out),
+                     render_videos=True if args.render_videos else None, extras=not args.no_extras)
+    for r in res["items"]:
+        print(f"post #{r['post_id']} [{r['format']}] {r['folder']}")
+    print(f"\nPack written to {res['out']} (see CONTENTS.md). Everything is in the review queue, unapproved.")
 
 
 def cmd_niche(args):
@@ -369,6 +380,14 @@ def build_parser() -> argparse.ArgumentParser:
     s.add_argument("--limit", type=int, default=0)
     s.add_argument("--no-render", action="store_true")
     s.set_defaults(func=cmd_import)
+
+    s = sub.add_parser("pack", help="export a postable launch pack (slides, thumbnails, captions, brand kit)")
+    s.add_argument("file", help="content.json (same shape as for import)")
+    s.add_argument("--brand", required=True)
+    s.add_argument("--out", required=True)
+    s.add_argument("--render-videos", action="store_true", help="render videos even without a real voice")
+    s.add_argument("--no-extras", action="store_true", help="skip brand kit and link page")
+    s.set_defaults(func=cmd_pack)
 
     s = sub.add_parser("niche", help="score niche candidates (ad value, demand, risk, saturation)")
     s.add_argument("niches", nargs="+")

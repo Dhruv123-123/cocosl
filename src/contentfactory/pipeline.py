@@ -90,11 +90,18 @@ class Factory:
         return post_id
 
     def import_script(self, brand_slug: str, script: dict, fmt: str, pillar: str = "", angle: str = "",
-                      render: bool = True, source: str = "import") -> int:
-        """Load a hand-written or externally written script as a post for review."""
+                      render: bool = True, source: str = "import", platforms: list[str] | None = None) -> int:
+        """Load a hand-written or externally written script as a post for review.
+
+        `platforms` pins the post to some of the brand's accounts, e.g. a 60-90s
+        cut that should only go to TikTok while the 30-45s version goes elsewhere."""
         from .schemas import Script
         brand = self.brand(brand_slug)
         sc = Script.model_validate(script)
+        platforms = [p for p in (platforms or []) if p]
+        unknown = [p for p in platforms if not brand.account(p)]
+        if unknown:
+            raise ValueError(f"{brand.slug} has no enabled account for: {', '.join(unknown)}")
         idea_id = self.db.insert("ideas", {"brand": brand.slug, "title": sc.title, "angle": angle,
                                            "format": fmt, "pillar": pillar, "source": source, "status": "used"})
         affiliate_slugs, affiliate_ideas = _affiliates_in(brand, sc.caption, sc.title)
@@ -102,7 +109,8 @@ class Factory:
             "brand": brand.slug, "idea_id": idea_id, "format": fmt, "status": "scripted",
             "title": sc.title, "script": sc.model_dump(), "caption": sc.caption, "hashtags": sc.hashtags,
             "disclosure": brand.ai_disclosure, "meta": {"affiliate_slugs": affiliate_slugs, "affiliate_suggestions": affiliate_ideas, "llm": source,
-                                                         "human_edited": True},
+                                                         "human_edited": True,
+                                                         **({"platforms": platforms} if platforms else {})},
         })
         self.db.log("post.imported", "post", post_id, {"source": source})
         if render:
@@ -186,8 +194,10 @@ class Factory:
         if post["status"] != "approved":
             raise PermissionError("Only approved posts can be scheduled")
         brand = self.brand(post["brand"])
+        pinned = (post.get("meta") or {}).get("platforms") or []
         targets = platforms or [a.platform for a in brand.accounts
-                                if a.enabled and post["format"] in a.formats]
+                                if a.enabled and post["format"] in a.formats
+                                and (not pinned or a.platform in pinned)]
         if not targets:
             raise ValueError(f"No enabled account in {brand.slug} accepts format '{post['format']}'")
         pub_ids = []
