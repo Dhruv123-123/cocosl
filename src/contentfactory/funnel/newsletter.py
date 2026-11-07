@@ -145,7 +145,18 @@ SYSTEM = ("You write a short weekly email for a small creator brand. Plain langu
 
 
 # ---------------------------------------------------------------- draft
-def draft_digest(factory, brand, days: int = 7, *, base_url: str | None = None) -> int:
+def upcoming_posts(db: DB, brand: str, since: str, until: str, limit: int = 8) -> list[dict]:
+    """Before launch: posts scheduled (or approved) for [since, until), one row each, no URLs yet."""
+    rows = db.query(
+        "SELECT DISTINCT p.id, p.title, p.caption FROM posts p LEFT JOIN publications pub ON pub.post_id = p.id "
+        "WHERE p.brand = ? AND p.format != 'image' AND (p.status = 'approved' OR (pub.status IN ('queued', 'published', "
+        "'dry_run', 'manual') AND pub.scheduled_at >= ? AND pub.scheduled_at < ?)) ORDER BY p.id LIMIT ?",
+        [brand, since, until, limit])
+    return [{"id": r["id"], "title": r["title"], "caption": r["caption"] or "", "platform": "youtube", "url": ""}
+            for r in rows]
+
+
+def draft_digest(factory, brand, days: int = 7, *, base_url: str | None = None, upcoming: bool = False) -> int:
     """Build and store a digest draft for the last `days` days. Returns the draft id."""
     b = _brand(factory, brand)
     db: DB = factory.db
@@ -153,7 +164,8 @@ def draft_digest(factory, brand, days: int = 7, *, base_url: str | None = None) 
     now = datetime.now(timezone.utc).replace(microsecond=0)
     since = (now - timedelta(days=days)).isoformat()
     base = mailer.public_url(factory.settings, base_url or "")
-    posts = week_posts(db, b.slug, since, now.isoformat())
+    posts = upcoming_posts(db, b.slug, now.isoformat(), (now + timedelta(days=days)).isoformat()) if upcoming \
+        else week_posts(db, b.slug, since, now.isoformat())
     mention = pick_mention(db, b, base, now, factory.settings)
     copy = factory.llm.structured(DigestCopy, system=SYSTEM, prompt=_prompt(b, posts, mention),
                                   offline=lambda: offline_copy(b, posts, mention), purpose="funnel.digest",
