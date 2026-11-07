@@ -6,6 +6,7 @@
 | `compare/` | Hub + 5 comparison pages: freelancer banking, tax software, invoicing tools, S corp services, health insurance |
 | `deduction-finder/`, `lib/deductions.js` | Deduction finder: 18 yes/no questions → a personal list of 2026 freelance deductions (rule, where it goes, source), what each $100 saves, print to PDF, and an email opt-in (Netlify form `deduction-finder`, with the ticked items in a hidden `deductions` field) |
 | `q4/`, `lib/q4.js` | January 15 (Q4) estimated payment calculator: the Jan 15, 2027 amount, the catch-up share for missed quarters, the file-by-Feb-1 alternative, what's left for April |
+| `rate-calculator/`, `lib/rate.js` | Freelance rate calculator: take-home + health + retirement + costs → profit needed after 2026 SE and income tax → hourly floor, day rate, revenue per month, set-aside %. Same method as the paid kit's Rate Calculator sheet ($55K take-home → $75/hour) |
 | `mileage/`, `lib/mileage.js` | Gig-driver mileage deduction calculator (72.5¢/mile for 2026): tax saved by logged miles, set-aside per payout and per delivery, own log vs the app's miles |
 | `about/` | Who writes the site, how pages are made (AI-assisted, sourced, dated), how it makes money |
 | `free/`, `free/thanks/` | Lead magnet landing page and download page |
@@ -42,7 +43,7 @@ Same layout as the other apps (plain HTML/CSS/JS, no build step). The math in `l
 ```bash
 cd apps/freelance-tax
 npm test              # unit tests (Node 20+, no dependencies)
-npm run smoke         # Chromium at desktop + phone width: calculator, mileage/, compare pages, free/, free/thanks/ (needs Playwright)
+npm run smoke         # Chromium at desktop + phone width: calculator, rate-calculator/, mileage/, compare pages, free/, free/thanks/ (needs Playwright)
 node tools/build-pages.mjs   # regenerate compare/, about/ and sitemap.xml after editing tools/compare-data.mjs
 node tools/seo-audit.mjs     # near-duplicate check: shared wording between pages (fails over 50%)
 ```

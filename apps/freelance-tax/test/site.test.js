@@ -76,7 +76,7 @@ test('release build leaves out pages that are not due yet', () => {
 });
 
 test('every page links to about/', () => {
-  for (const f of ['index.html', 'q4/index.html', 'deduction-finder/index.html', 'mileage/index.html', 'free/index.html', 'free/thanks/index.html', 'compare/index.html', 'about/index.html']) {
+  for (const f of ['index.html', 'q4/index.html', 'rate-calculator/index.html', 'deduction-finder/index.html', 'mileage/index.html', 'free/index.html', 'free/thanks/index.html', 'compare/index.html', 'about/index.html']) {
     assert.match(readFileSync(new URL(`../${f}`, import.meta.url), 'utf8'), /href="(\.\.\/)*about\/">About these pages/, f);
   }
 });

@@ -63,6 +63,16 @@ for (const [name, viewport] of [['desktop', { width: 1280, height: 900 }], ['pho
     console.log(name, 'q4/', good ? 'ok' : 'FAIL', { big, wide, errors });
     if (shots) await page.screenshot({ path: `${shots}/${name}-q4.png`, fullPage: true });
   }
+  // Rate calculator: the kit's example gives $75/hour.
+  await page.goto(url + 'rate-calculator/');
+  {
+    const big = await page.locator('#result .big').textContent();
+    const wide = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth);
+    const good = big === '$75/hour' && !wide && !errors.length;
+    if (!good) failed = true;
+    console.log(name, 'rate-calculator/', good ? 'ok' : 'FAIL', { big, wide, errors });
+    if (shots) await page.screenshot({ path: `${shots}/${name}-rate.png`, fullPage: true });
+  }
   // Driver mileage page: the result renders from URL inputs and nothing overflows.
   await page.goto(url + 'mileage/?earnings=30000&miles=15000&deliveries=3000');
   {
