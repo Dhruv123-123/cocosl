@@ -31,6 +31,7 @@ cadence:
 accounts:
   - {platform: youtube, handle: "@tinyhistories", formats: [long, short]}
   - {platform: instagram, handle: "@tinyhistories", formats: [short, carousel]}
+  - {platform: facebook, handle: "Tiny Histories", formats: [short]}   # Reels to the Page (same Meta login)
 affiliates: []
 products:
   - {name: "Tiny Histories: 50 Origin Stories (PDF)", url: "https://example.gumroad.com/l/tiny", price: 9}

@@ -27,6 +27,7 @@ VIDEO_SECONDS = {
     ("threads", "long"): (1, 5 * 60),
     ("tiktok", "short"): (3, 10 * 60),     # the real cap is per creator (creator_info); 10 min is the common one
     ("tiktok", "long"): (3, 10 * 60),
+    ("tiktok", "mid"): (3, 10 * 60),
 }
 VIDEO_BYTES = {"youtube": 256 * 1024 * MB, "instagram": 300 * MB, "facebook": 1024 * MB, "threads": 1024 * MB,
                "tiktok": 4096 * MB}
@@ -64,7 +65,7 @@ def check(post: dict, platform: str, output_dir: Path, public_base: str = "") ->
         add("block", f"doesn't take {fmt} posts")
         return issues
 
-    if fmt in ("short", "long"):
+    if fmt in ("short", "mid", "long"):
         video = assets.get("video")
         path = output_dir / video if video else None
         if not path or not path.is_file():
@@ -85,6 +86,8 @@ def check(post: dict, platform: str, output_dir: Path, public_base: str = "") ->
                     f"video is {seconds:.0f}s; the limit is {hi}s" + (" unless the channel is verified" if soft else ""))
         if platform in ("instagram", "threads") and not public_base:
             add("block", "PUBLIC_MEDIA_BASE_URL is not set; Meta fetches video from a public HTTPS URL")
+        if fmt == "mid" and seconds and seconds <= 60:
+            add("warn", f"TikTok cut is {seconds:.0f}s; Creator Rewards only count videos over a minute")
         if platform == "youtube" and fmt == "long" and not assets.get("thumbnail"):
             add("warn", "no thumbnail; YouTube will pick a frame")
     else:

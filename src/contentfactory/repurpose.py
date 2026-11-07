@@ -13,7 +13,7 @@ from .writer import SYSTEM, _brand_brief
 
 
 def _offline_derivative(parent: Script, section: Segment, fmt: str, brand: BrandProfile) -> Script:
-    beats = 6 if fmt == "short" else 7
+    beats = {"short": 6, "mid": 9}.get(fmt, 7)
     sentences = [s.strip() for s in section.narration.replace("!", ".").split(".") if s.strip()]
     segs = [Segment(heading="Hook", narration=f"{section.heading}: the part of {parent.title.lower()} nobody mentions.",
                     on_screen_text=section.heading[:50], visual_prompt=section.visual_prompt)]
@@ -57,6 +57,8 @@ def repurpose_post(factory, post_id: int, n_shorts: int = 3, carousel: bool = Tr
     brand = factory.brand(post["brand"])
     parent = Script.model_validate(post["script"])
     plan = [(i, "short") for i in pick_sections(parent, n_shorts)]
+    if any(a.enabled and "mid" in a.formats for a in brand.accounts):  # a TikTok-only 65-90 s cut
+        plan.append((pick_sections(parent, 1)[0], "mid"))
     if carousel and "carousel" in brand.formats:
         plan.append((pick_sections(parent, 1)[0], "carousel"))
     new_ids = []

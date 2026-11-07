@@ -32,7 +32,7 @@ LEAD = 0.1          # captions start just after the cut
 
 def render_post(settings: Settings, brand: BrandProfile, post: dict) -> dict:
     fmt = post.get("format") or "short"
-    if fmt not in ("short", "long", "carousel", "image"):
+    if fmt not in ("short", "mid", "long", "carousel", "image"):
         raise MediaError(f"Unknown post format '{fmt}'")
     script = _script(post)
     root = Path(settings.output_dir).resolve()
@@ -41,7 +41,7 @@ def render_post(settings: Settings, brand: BrandProfile, post: dict) -> dict:
     shutil.rmtree(build, ignore_errors=True)
     build.mkdir(parents=True)
     try:
-        if fmt in ("short", "long"):
+        if fmt in ("short", "mid", "long"):
             assets = _render_video(settings, brand, script, fmt, build, post)
         else:
             assets = _render_slides(settings, brand, script, fmt, build, post)
@@ -65,17 +65,24 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
     segments = script.segments
     family = f"{brand.slug}:{script.title}"
 
-    imgs = _images_with_charts(settings, brand, segments, size, ASPECTS[fmt], out / "images", family, palette)
+    imgs = _images_with_charts(settings, brand, segments, size, ASPECTS[fmt], out / "images", family, palette,
+                               reserve_bottom=0.22 if fmt == "long" else 0.36)  # caption zone
     lines = [(s.narration or s.on_screen_text or s.heading).strip() for s in segments]
     heads = [s.on_screen_text for s in segments]
-    images = [r.path for r in imgs]
+    from .looks import choose, compose
+    look = post.get("look") or choose(post.get("_recent_looks") or [], seed=int(post.get("id") or 0))
+    images = [r.path if (i < len(segments) and segments[i].chart) else
+              compose(r.path, size, look["layout"], palette, work / f"look-{i:02d}.png")
+              for i, r in enumerate(imgs)]
     if script.cta and _norm(script.cta) not in _norm(" ".join(lines)):
         lines.append(script.cta)
         heads.append(brand.name)
         images.append(images[-1])
 
-    tts = synthesize_segments(settings, brand, lines, work / "voice")
-    beats, cues, slots, t, starts = [], [], [], 0.0, []
+    from .tts import human_voice
+    tts = human_voice(settings, brand, post.get("id"), lines, work / "voice") \
+        or synthesize_segments(settings, brand, lines, work / "voice")
+    beats, cues, slots, t, starts, owned = [], [], [], 0.0, [], []
     seg_words = tts.words or [None] * len(lines)
     from .charts import render_chart_clip
     for i, (line, head, img, dur) in enumerate(zip(lines, heads, images, tts.durations)):
@@ -83,13 +90,17 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
         chart = segments[i].chart if i < len(segments) else None
         clip = render_chart_clip(chart, size, palette, work / f"chart-{i:02d}.mp4", seconds=min(slot, 4.0)) \
             if chart else None
-        beats.append(Beat(img, "" if chart else head, t, slot, clip=clip))  # charts carry their own title
+        own = _footage(settings, segments[i]) if i < len(segments) else None
+        if own:
+            clip, chart = own, None  # the person's own recording beats any generated visual
+            owned.append(own)
+        beats.append(Beat(img, "" if chart else head, t, slot, clip=clip, still=bool(chart)))  # charts: own title, no pan
         if seg_words[i]:
             cues += time_segment_words(line, t, dur, seg_words[i])
         else:
             cues += time_segment(line, t + LEAD, max(0.4, dur - LEAD))
         slots.append(slot)
-        starts.append((t, segments[i].heading if i < len(segments) else ""))
+        starts.append((round(t, 2), segments[i].heading if i < len(segments) else ""))
         t += slot
 
     audio = out / "audio.wav"
@@ -97,7 +108,7 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
     srt = out / "captions.srt"
     write_srt(cues, srt)
     music = pick_music(f"{brand.slug}:{post.get('id')}:{script.title}")
-    spec = VideoSpec(fmt, size, palette, brand.visual.font, brand.visual.watermark, opts)
+    spec = VideoSpec(fmt, size, palette, brand.visual.font, brand.visual.watermark, opts, look=look)
     video = out / "video.mp4"
     duration = assemble(spec, beats, cues, audio, video, work, music=music, voiced=tts.provider != "silent")
     duration = probe(video)["duration"] or duration
@@ -106,6 +117,9 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
     if fmt == "short" and duration > SHORT_MAX_SECONDS:
         notes.append(f"WARNING: short runs {duration:.1f}s (> {SHORT_MAX_SECONDS:.0f}s); trim the script "
                      "before posting as a Reel/Short. Nothing was cut automatically.")
+    if fmt == "mid" and not 61 <= duration <= 95:
+        notes.append(f"WARNING: TikTok cut runs {duration:.1f}s; aim for 65-90s (TikTok's Creator Rewards "
+                     "only count videos over a minute).")
     thumb = render_thumbnail(images[0], script.thumbnail_text or script.title, palette, brand.visual.font,
                              brand.visual.watermark, out / "thumbnail.png")
 
@@ -122,7 +136,8 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
     for v in variants:
         prov.append(provenance(str(v), "rendered", "pillow", "thumbnail variant"))
         prov.append(provenance(str(v.with_suffix(".jpg")), "rendered", "pillow", "thumbnail variant (JPEG)"))
-    prov.append(provenance(str(audio), "generated", tts.tool, " ".join(lines), provider=tts.provider,
+    prov.append(provenance(str(audio), "own" if tts.provider == "human" else "generated", tts.tool, " ".join(lines),
+                           provider=tts.provider,
                            note="Voice must be your own or licensed."))
     prov.append(provenance(str(srt), "rendered", "contentfactory.captions",
                            note="word timing from the voice" if tts.timing != "estimated"
@@ -132,12 +147,14 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
                            note="JPEG copy for APIs that require JPEG"))
     prov.append(provenance(str(video), "rendered", "ffmpeg", "", fps=opts.fps, notes=notes,
                            music=music.name if music else None))
+    for own in dict.fromkeys(owned):
+        prov.append(provenance(str(own), "own", "footage", "", "recorded by the channel owner"))
     if music:
         prov.append(provenance(str(music), "licensed", "user-music", "",
                                "user-supplied via FACTORY_MUSIC_DIR; keep the licence on file"))
     return {"video": video, "audio": audio, "captions_srt": srt, "images": [r.path for r in imgs], "slides": [],
             "thumbnail": thumb, "thumbnail_variants": [thumb, *variants], "duration": round(duration, 3),
-            "chapters": chapters.build(starts, duration) if fmt == "long" else [], "provenance": prov}
+            "chapters": chapters.build(starts, duration) if fmt == "long" else [], "look": look, "provenance": prov}
 
 
 # ---------------------------------------------------------------- slides
@@ -210,7 +227,19 @@ def _script(post: dict) -> Script:
     return script
 
 
-def _images_with_charts(settings, brand, segments, size, aspect, out_dir, family, palette):
+def _footage(settings, seg) -> Path | None:
+    """A person's own screen recording or camera clip for this beat (Segment.footage), if it exists."""
+    raw = (getattr(seg, "footage", "") or "").strip()
+    if not raw:
+        return None
+    p = Path(raw).expanduser()
+    p = p if p.is_absolute() else settings.home / p
+    if not p.is_file():
+        raise MediaError(f"footage not found: {raw} (paths are relative to {settings.home})")
+    return p
+
+
+def _images_with_charts(settings, brand, segments, size, aspect, out_dir, family, palette, reserve_bottom=0.0):
     """Illustrations for ordinary beats; exact data charts (no AI) for beats that carry a chart."""
     import json as _json
 
@@ -223,7 +252,8 @@ def _images_with_charts(settings, brand, segments, size, aspect, out_dir, family
     out = []
     for i, s in enumerate(segments):
         if s.chart:
-            path = render_chart(s.chart, size, palette, brand.visual.font, out_dir / f"chart-{i:02d}.png")
+            path = render_chart(s.chart, size, palette, brand.visual.font, out_dir / f"chart-{i:02d}.png",
+                                reserve_bottom=reserve_bottom)
             out.append(ImageResult(path, "chart", "contentfactory.charts", _json.dumps(s.chart.model_dump())[:500],
                                    note="drawn from the script's numbers; check them"))
         else:
