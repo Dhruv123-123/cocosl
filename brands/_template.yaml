@@ -35,13 +35,17 @@ visual:
   image_style: warm flat vector illustration, muted greens and cream, simple shapes, no text, no logos
   mascot: a small round green piggy bank character with big eyes (original design)
   watermark: "@moneymadesimple"
+  # One recurring graphic device on every thumbnail, intro and carousel cover (media/signature.py).
+  # device: corner_block | stripe | ring | bracket | dot_grid | none | auto
+  signature: {device: corner_block, color: accent, corner: top-right, size: 0.16, label: MMS}
 cadence:
   shorts_per_week: 5
   long_per_week: 1
   carousels_per_week: 3
   max_posts_per_day_per_platform: 2
   post_times: ["12:30", "19:00"]
-  platform_times: {}        # optional per-platform times, e.g. {tiktok: ["19:00", "21:00"], youtube: ["15:00"]}
+  platform_times: {}        # merged over the defaults (tiktok 18:00, pinterest 11:00, "youtube:short" 12:30); "platform:format" wins
+  platform_weekly_caps: {}  # optional, e.g. {"instagram:short": 3}: past it that platform is left out of the post
   timezone: America/New_York
   daily_at: "07:00"        # local time the worker drafts new posts into your review queue
   daily_drafts: 2          # drafts per day
@@ -58,6 +62,9 @@ affiliates:
     commission: "$50 per funded account"
 products:
   - {name: "The 20-Minute Budget (Notion + Sheets template)", url: "https://example.gumroad.com/l/budget", price: 12}
-ai_disclosure: "Visuals and voice made with AI tools. Script written and fact-checked by a human. Not financial advice."
+ai_disclosure: "Visuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person. Not financial advice."
+scripts_by: ai_assisted   # or person, if you write the scripts yourself (then you may say so in ai_disclosure)
+welcome_via: factory      # or sender / kit once the welcome automation is built there (`factory sequence-export`)
+review_stages: []         # extra reviews before you can approve: [native_review] and/or [legal_review] (`factory review-gate`)
 realistic_synthetic_media: false
 require_human_review: true

@@ -59,7 +59,7 @@ def _check_provenance(assets: dict, settings) -> None:
     assert all(p["source"] in ("generated", "rendered", "own", "licensed") for p in assets["provenance"])
 
 
-@pytest.mark.parametrize("fmt,size", [("short", (1080, 1920)), ("long", (1920, 1080))])
+@pytest.mark.parametrize("fmt,size", [("short", (1080, 1920)), ("mid", (1080, 1920)), ("long", (1920, 1080))])
 def test_render_video(media_env, tmp_path, fmt, size):
     settings, brand = media_env
     assets = render_post(settings, brand, make_post(1, fmt, 3))
@@ -68,7 +68,9 @@ def test_render_video(media_env, tmp_path, fmt, size):
     assert (info["width"], info["height"]) == size
     assert set(info["streams"]) == {"video", "audio"}
     # 3 lines + CTA at 160 wpm, each beat >= 1.5s plus gaps
-    assert 8 < info["duration"] < 25
+    slate = assets.get("end_slate_seconds") or 0
+    assert slate == (20 if fmt == "long" else 0)  # long videos close on a slate for the Studio end screen
+    assert 8 < info["duration"] - slate < 25
     assert abs(info["duration"] - assets["duration"]) < 0.5
     assert len(assets["images"]) == 3 and assets["slides"] == []
     assert probe(settings.output_dir / assets["thumbnail"])["width"] == 1280
@@ -77,8 +79,19 @@ def test_render_video(media_env, tmp_path, fmt, size):
         assert len(variants) == 3 and variants[0] == assets["thumbnail"]
         assert all((settings.output_dir / v).is_file() and (settings.output_dir / v[:-4]).with_suffix(".jpg").is_file()
                    for v in variants)
+        tc = assets["test_compare"]  # A/B/C for YouTube Test & compare
+        assert [p.rsplit("/", 1)[1] for p in tc] == ["A.jpg", "B.jpg", "C.jpg"]
+        assert all((settings.output_dir / p).stat().st_size < 2 * 1024 * 1024 for p in tc)
+        from PIL import Image as _I
+        a, b = (_I.open(settings.output_dir / tc[i]).convert("L").resize((64, 36)) for i in (0, 1))
+        assert sum(abs(x - y) for x, y in zip(a.getdata(), b.getdata())) / (64 * 36) > 8  # visibly different
     srt = (settings.output_dir / assets["captions_srt"]).read_text()
     assert "Follow for one" in srt and "-->" in srt
+    if slate:  # no captions run into the end slate
+        import re as _re
+        ends = [sum(float(x) * m for x, m in zip(_re.split("[:,]", t)[:3], (3600, 60, 1))) for t in
+                _re.findall(r"--> (\d+:\d+:\d+),", srt)]
+        assert max(ends) <= info["duration"] - slate + 1
     video_prov = next(p for p in assets["provenance"] if p["path"] == assets["video"])
     assert video_prov["tool"] == "ffmpeg"
     assert not (settings.output_dir / brand.slug / "post-1" / "_work").exists()
@@ -198,3 +211,49 @@ def test_render_chart_sizes_and_line(media_env, tmp_path):
         assert img.size == size and ImageStat.Stat(img.convert("L")).stddev[0] > 5
     assert _fmt(12_345, "$", "") == "$12k" and _fmt(1.5, "", "%") == "1.50%" and _fmt(2_500_000, "", "") == "2.5M"
     assert render_chart_clip(spec, (1080, 1920), pal, tmp_path / "x.mp4") is None  # FACTORY_CHARTS unset
+
+
+def test_own_footage_beat(media_env, monkeypatch):
+    settings, brand = media_env
+    clip = settings.home / "footage" / "irs.mp4"
+    clip.parent.mkdir(parents=True, exist_ok=True)
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "lavfi", "-i", "testsrc=s=1280x720:d=3",
+                    "-pix_fmt", "yuv420p", str(clip)], check=True)
+    post = make_post(7, "long", 3)
+    post["script"]["segments"][1]["footage"] = "footage/irs.mp4"
+    assets = render_post(settings, brand, post)
+    own = [p for p in assets["provenance"] if p["source"] == "own"]
+    assert own and own[0]["tool"] == "footage"
+    post["script"]["segments"][1]["footage"] = "footage/missing.mp4"
+    from contentfactory.media.util import MediaError
+    with pytest.raises(MediaError, match="footage not found"):
+        render_post(settings, brand, post)
+
+
+def test_long_video_needs_original_element():
+    from contentfactory.guardrails import check_original_element
+    seg = {"heading": "h", "narration": "n", "on_screen_text": "o", "visual_prompt": "v"}
+    long = {"format": "long", "script": {"segments": [dict(seg)] * 3}}
+    assert check_original_element(long).level == "block"
+    long["script"]["original_element"] = "Record the IRS payment page"
+    c = check_original_element(long)
+    assert c.level == "block" and "not in the video yet" in c.message
+    long["script"]["segments"] = [dict(seg, footage="footage/irs.mp4"), seg]
+    assert check_original_element(long).level == "ok"
+    assert check_original_element({"format": "short", "script": {}}) is None
+
+
+def test_whisper_model_follows_brand_language(monkeypatch):
+    from contentfactory.media.tts import TTSResult, align_with_whisper, whisper_model_name
+    monkeypatch.delenv("WHISPER_MODEL", raising=False)
+    assert whisper_model_name("en") == "base.en" and whisper_model_name("es") == "base"
+    monkeypatch.setenv("WHISPER_MODEL", "small")
+    assert whisper_model_name("es") == "small"
+    import sys
+    import types
+    monkeypatch.setitem(sys.modules, "faster_whisper", types.SimpleNamespace(WhisperModel=object))
+    monkeypatch.setenv("FACTORY_ALIGN", "whisper")
+    monkeypatch.setenv("WHISPER_MODEL", "base.en")
+    res = TTSResult("x", "x", [], [], [], [])
+    align_with_whisper(res, "es")
+    assert "English-only" in res.notes[0]

@@ -45,7 +45,7 @@ def test_full_flow_dry_run(factory, fake_render):
     assert len(pubs) >= 1
     # Publish everything regardless of slot time
     results = factory.publish_due(now=datetime.now(timezone.utc) + timedelta(days=30))
-    assert results and all(r["status"] == "dry_run" for r in results)
+    assert results and all(r["status"] in ("dry_run", "manual") for r in results)  # manual = post-by-hand package
     assert factory.db.get("posts", post_id)["status"] == "published"
 
 
@@ -191,3 +191,27 @@ def test_weekly_report_posted_platforms_and_campaigns(factory, fake_render):
     md = to_markdown(r)
     assert "money-made-simple · youtube: 1 post(s); 1,500 views, 40 likes, 12 link clicks" in md
     assert "budget-launch: 1 sale(s), $12.00 (from youtube)" in md
+
+
+def test_repurpose_text_drafts(factory):
+    import pytest
+
+    from contentfactory.repurpose import text_drafts
+    from contentfactory.writer import _offline_script
+    brand = factory.brand("money-made-simple")
+    script = _offline_script(brand, "How a high-yield savings account works", "the math", "long")
+    pid = factory.db.insert("posts", {"brand": brand.slug, "format": "long", "status": "approved",
+                                      "title": script.title, "script": script.model_dump()})
+    with pytest.raises(ValueError, match="isn't published"):
+        text_drafts(factory, pid)
+    factory.db.insert("publications", {"post_id": pid, "platform": "youtube", "status": "published",
+                                       "url": "https://www.youtube.com/watch?v=VID9"})
+    paths = text_drafts(factory, pid)
+    assert set(paths) == {"blog.md", "newsletter.md", "pins.md", "thread.md"}
+    blog = paths["blog.md"].read_text()
+    assert blog.startswith("---\n") and "draft: true" in blog and "DRAFT" in blog
+    assert "utm_source=blog" in blog and "watch?v=VID9" in blog
+    assert paths["pins.md"].read_text().count("## Pin") == 3
+    thread = paths["thread.md"].read_text()
+    assert thread.count("---") >= 4 and all(len(p) <= 300 for p in thread.split("---"))
+    assert factory.db.get("posts", pid)["meta"]["text_drafts"]["blog.md"].endswith("blog.md")

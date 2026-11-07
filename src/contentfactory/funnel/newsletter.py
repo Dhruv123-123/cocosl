@@ -145,7 +145,18 @@ SYSTEM = ("You write a short weekly email for a small creator brand. Plain langu
 
 
 # ---------------------------------------------------------------- draft
-def draft_digest(factory, brand, days: int = 7, *, base_url: str | None = None) -> int:
+def upcoming_posts(db: DB, brand: str, since: str, until: str, limit: int = 8) -> list[dict]:
+    """Before launch: posts scheduled (or approved) for [since, until), one row each, no URLs yet."""
+    rows = db.query(
+        "SELECT DISTINCT p.id, p.title, p.caption FROM posts p LEFT JOIN publications pub ON pub.post_id = p.id "
+        "WHERE p.brand = ? AND p.format != 'image' AND (p.status = 'approved' OR (pub.status IN ('queued', 'published', "
+        "'dry_run', 'manual') AND pub.scheduled_at >= ? AND pub.scheduled_at < ?)) ORDER BY p.id LIMIT ?",
+        [brand, since, until, limit])
+    return [{"id": r["id"], "title": r["title"], "caption": r["caption"] or "", "platform": "youtube", "url": ""}
+            for r in rows]
+
+
+def draft_digest(factory, brand, days: int = 7, *, base_url: str | None = None, upcoming: bool = False) -> int:
     """Build and store a digest draft for the last `days` days. Returns the draft id."""
     b = _brand(factory, brand)
     db: DB = factory.db
@@ -153,7 +164,8 @@ def draft_digest(factory, brand, days: int = 7, *, base_url: str | None = None) 
     now = datetime.now(timezone.utc).replace(microsecond=0)
     since = (now - timedelta(days=days)).isoformat()
     base = mailer.public_url(factory.settings, base_url or "")
-    posts = week_posts(db, b.slug, since, now.isoformat())
+    posts = upcoming_posts(db, b.slug, now.isoformat(), (now + timedelta(days=days)).isoformat()) if upcoming \
+        else week_posts(db, b.slug, since, now.isoformat())
     mention = pick_mention(db, b, base, now, factory.settings)
     copy = factory.llm.structured(DigestCopy, system=SYSTEM, prompt=_prompt(b, posts, mention),
                                   offline=lambda: offline_copy(b, posts, mention), purpose="funnel.digest",
@@ -309,6 +321,44 @@ border-radius:8px;font-weight:700;text-decoration:none">Yes, subscribe me</a></p
 
 
 # ---------------------------------------------------------------- export
+def _sender_ts(value) -> str:
+    """Sender's importer wants 'YYYY-MM-DD hh:mm:ss' in UTC."""
+    from datetime import datetime, timezone
+    if not value:
+        return ""
+    try:
+        dt = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+    except ValueError:
+        return str(value)
+    if dt.tzinfo:
+        dt = dt.astimezone(timezone.utc)
+    return dt.strftime("%Y-%m-%d %H:%M:%S")
+
+
+def export_subscribers_sender(factory, brand, out_dir: Path | None = None) -> list[Path]:
+    """Two CSVs for Sender: people who already got a live welcome email (import them with
+    "Trigger active automations upon import" unticked) and people who didn't (ticked)."""
+    b = _brand(factory, brand)
+    rows = store.list_subscribers(factory.db, b.slug, "confirmed", limit=1_000_000)
+    welcomed = {r["subscriber_id"] for r in factory.db.query(
+        "SELECT DISTINCT subscriber_id FROM emails_sent WHERE brand = ? AND kind LIKE 'sequence:%' AND status = 'sent'",
+        [b.slug])}
+    out_dir = out_dir or _newsletter_dir(factory, b)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    day = now_iso()[:10]
+    paths = []
+    for name, keep in (("welcomed", True), ("not-welcomed", False)):
+        path = out_dir / f"subscribers-{b.slug}-{day}-sender-{name}.csv"
+        with path.open("w", newline="") as f:
+            w = csv.writer(f)
+            w.writerow(["email", "source", "subscribed_at", "confirmed_at"])
+            for r in rows:
+                if (r["id"] in welcomed) == keep:
+                    w.writerow([r["email"], r["source"], _sender_ts(r["created_at"]), _sender_ts(r["confirmed_at"])])
+        paths.append(path)
+    return paths
+
+
 def export_subscribers_csv(factory, brand, path: Path | None = None) -> Path:
     """Confirmed subscribers as CSV (email first; works with Beehiiv, Kit and
     Mailchimp importers). Pending and unsubscribed people are never exported."""

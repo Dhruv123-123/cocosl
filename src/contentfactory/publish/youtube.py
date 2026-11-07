@@ -13,6 +13,11 @@ Docs used:
 - captions.insert (multipart: snippet + SRT; youtube.force-ssl scope; ~400 quota units):
   https://developers.google.com/youtube/v3/docs/captions/insert
 - containsSyntheticMedia / unverified-project changes: https://developers.google.com/youtube/v3/revision_history
+- Paid promotion: YouTube requires the "includes paid promotion" box for sponsored
+  videos. The Data API documents paidProductPlacementDetails.hasPaidProductPlacement
+  only as a response field, so a sponsored upload is always kept private (no
+  publishAt) and flagged in raw["needs_studio"] for a person to tick the box in
+  Studio and publish. See research/scouting/youtube-monetization.md.
 - Token refresh: https://developers.google.com/identity/protocols/oauth2/native-app
 
 Setup / review:
@@ -45,6 +50,10 @@ DESCRIPTION_MAX_BYTES = 5000
 TAGS_MAX_CHARS = 500
 CHUNK = 8 * 1024 * 1024
 PRIVACY = ("private", "unlisted", "public")
+SIGNED_OUT = ("youtube: the saved sign-in no longer works (invalid_grant). Run `factory auth youtube` again "
+              "(add --brand <slug> for a brand's own channel). If the Google OAuth consent screen is still in "
+              "Testing, Google expires these sign-ins after 7 days: publish the consent screen to stop that.")
+TESTING_TOKEN_DAYS = 7
 
 
 def fit_tags(tags: list[str], limit: int = TAGS_MAX_CHARS) -> list[str]:
@@ -77,8 +86,13 @@ class YouTubePublisher(HttpPublisher):
         if self._token and time.time() < self._token_expiry - 60:
             return self._token
         env = self.settings.env
-        body = youtube_refresh(env("YT_CLIENT_ID"), env("YT_CLIENT_SECRET"), env("YT_REFRESH_TOKEN"),
-                               client=self.http)
+        try:
+            body = youtube_refresh(env("YT_CLIENT_ID"), env("YT_CLIENT_SECRET"), env("YT_REFRESH_TOKEN"),
+                                   client=self.http)
+        except PublishError as e:
+            if "invalid_grant" in str(e):
+                raise PublishError(SIGNED_OUT, retryable=False) from e
+            raise
         if not body.get("access_token"):
             raise PublishError("youtube: token refresh returned no access_token", retryable=False)
         self._token = body["access_token"]
@@ -101,12 +115,14 @@ class YouTubePublisher(HttpPublisher):
         privacy = (self.settings.env("YT_PRIVACY", "private") or "private").lower()
         if privacy not in PRIVACY:
             raise PublishError(f"youtube: YT_PRIVACY must be one of {PRIVACY}", retryable=False)
+        if req.has_paid_promotion:
+            privacy = "private"  # the paid-promotion box has to be ticked in Studio before it goes public
         status = {
             "privacyStatus": privacy,
             "selfDeclaredMadeForKids": False,
             "containsSyntheticMedia": bool(req.realistic_synthetic),
         }
-        if req.scheduled_at:
+        if req.scheduled_at and not req.has_paid_promotion:
             if privacy != "private":
                 raise PublishError("youtube: publishAt requires YT_PRIVACY=private", retryable=False)
             status["publishAt"] = req.scheduled_at
@@ -139,6 +155,9 @@ class YouTubePublisher(HttpPublisher):
         raw = {"privacy": resource["status"]["privacyStatus"],
                "containsSyntheticMedia": resource["status"]["containsSyntheticMedia"],
                "probe": probe, "upload_status": (video.get("status") or {}).get("uploadStatus")}
+        if req.has_paid_promotion:
+            raw["needs_studio"] = ("sponsored: tick 'includes paid promotion' in YouTube Studio, then publish "
+                                   "(uploaded as private, schedule ignored)")
         if req.format == "long" and req.thumbnail_path:
             raw["thumbnail"] = self._set_thumbnail(video_id, Path(req.thumbnail_path))
         if req.captions_path and self.settings.env("YT_UPLOAD_CAPTIONS", "1") != "0":

@@ -32,7 +32,9 @@ def _fmt(v: float, prefix: str, suffix: str) -> str:
     return f"{prefix}{s}{suffix}"
 
 
-def render_chart(spec, size: tuple[int, int], palette: Palette, family: str, out: Path) -> Path:
+def render_chart(spec, size: tuple[int, int], palette: Palette, family: str, out: Path,
+                 reserve_bottom: float = 0.0) -> Path:
+    """`reserve_bottom` keeps that fraction of the height clear (videos burn captions in there)."""
     w, h = size
     img = Image.new("RGB", size, palette.dark)
     d = ImageDraw.Draw(img)
@@ -43,7 +45,7 @@ def render_chart(spec, size: tuple[int, int], palette: Palette, family: str, out
                       int(min(w, h) * 0.075), 28, leading=1.05, max_lines=2)
     fonts.draw_block(img, title, (m, m), (*palette.light, 255))
     top = m + title.height + int(h * 0.05)
-    bottom = h - m - int(h * 0.07)
+    bottom = h - m - int(h * 0.07) - int(h * reserve_bottom)
     left, right = m, w - m
     vals = [float(v) for v in spec.values] or [0.0]
     labels = list(spec.labels) + [""] * (len(vals) - len(spec.labels))
@@ -82,7 +84,8 @@ def render_chart(spec, size: tuple[int, int], palette: Palette, family: str, out
             d.text((x0 + (bw - tw) / 2, bottom + 12), lab, font=label_font, fill=muted)
     if spec.note:
         note_font = fonts.load(fonts.font_path(family, "regular"), max(16, int(min(w, h) * 0.024)))
-        d.text((m, h - m + 4 - note_font.size), textwrap.shorten(spec.note, 90, placeholder="…"), font=note_font,
+        note_y = bottom + label_font.size + 30 if reserve_bottom else h - m + 4 - note_font.size
+        d.text((m, note_y), textwrap.shorten(spec.note, 90, placeholder="…"), font=note_font,
                fill=muted)
     out.parent.mkdir(parents=True, exist_ok=True)
     img.save(out)

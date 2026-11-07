@@ -9,7 +9,7 @@ pillars:
   - first-time investing basics (index funds, retirement accounts)
   - credit scores and debt payoff
   - money apps and tools, honestly compared
-formats: [short, carousel, long]
+formats: [short, carousel, long, mid]
 seed_topics:
   - high yield savings account
   - roth ira for beginners
@@ -36,6 +36,9 @@ visual:
   image_style: warm flat vector illustration, muted greens and cream, simple shapes, no text, no logos
   mascot: a small round green piggy bank character with big eyes (original design)
   watermark: "@moneymadesimple"
+  # Signature visual: the one thing that never changes between videos (layouts, motion and captions
+  # rotate; see media/looks.py). A green corner tab with "MMS" on every thumbnail, intro and cover.
+  signature: {device: corner_block, color: accent, corner: top-right, size: 0.16, label: MMS}
 cadence:
   shorts_per_week: 5
   long_per_week: 1
@@ -46,7 +49,11 @@ cadence:
 accounts:
   - {platform: instagram, handle: "@moneymadesimple", formats: [short, carousel, image]}
   - {platform: youtube, handle: "@moneymadesimple", formats: [short, long]}
-  - {platform: tiktok, handle: "@moneymadesimple", formats: [short]}
+  - {platform: tiktok, handle: "@moneymadesimple", formats: [short, mid]}   # mid = TikTok-only 65-90 s cut
+  # Reels go natively to the Facebook Page too (same `factory auth meta` login as Instagram)
+  - {platform: facebook, handle: "Money Made Simple", formats: [short]}
+  # Pins are post-by-hand for now: packages in output/manual, scheduled in Pinterest's own scheduler
+  - {platform: pinterest, handle: "@moneymadesimple", formats: [carousel, long], board: "Money Made Simple: budgeting & saving"}
 affiliates:
   - name: Example HYSA
     url: https://example.com/go/hysa
@@ -60,6 +67,7 @@ products:   # flagship first; ladder and upsell codes: launch/products/UPSELL_PA
   - {name: "The Debt-Free Date Planner", slug: debt-free-date-planner, url: "https://example.gumroad.com/l/debt-free-date", price: 17}
   - {name: "Start Investing With $100 a Month", slug: investing-starter-kit, url: "https://example.gumroad.com/l/start-investing", price: 19}
   - {name: "The Money Made Simple Toolkit (all 5 kits)", slug: money-toolkit-bundle, url: "https://example.gumroad.com/l/toolkit", price: 39}
-ai_disclosure: "Visuals and voice made with AI tools. Script written and fact-checked by a human. Not financial advice."
+ai_disclosure: "Visuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person. Not financial advice."
+scripts_by: ai_assisted   # or person, if you write the scripts yourself (then you may say so in ai_disclosure)
 realistic_synthetic_media: false
 require_human_review: true

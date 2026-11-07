@@ -288,6 +288,17 @@ def test_youtube_short_no_thumbnail_and_schedule(settings, brand, files, yt_env)
     assert res.url.endswith("/shorts/VID1") and not r.find("POST", "thumbnails/set")
 
 
+def test_youtube_sponsored_stays_private_for_studio(settings, brand, files, yt_env, monkeypatch):
+    monkeypatch.setenv("YT_PRIVACY", "public")
+    r = yt_router()
+    pub = YouTubePublisher(settings, transport=r.transport, sleep=noop_sleep)
+    res = pub.publish(make_req(brand, settings, "youtube", "short", files, has_paid_promotion=True,
+                               scheduled_at="2026-12-01T17:00:00Z"))
+    meta = body_json(r.find("POST", "upload/youtube/v3/videos")[0])
+    assert meta["status"]["privacyStatus"] == "private" and "publishAt" not in meta["status"]
+    assert "paid promotion" in res.raw["needs_studio"]
+
+
 def test_youtube_resumes_after_server_error(settings, brand, files, yt_env):
     calls = {"n": 0}
 
@@ -613,3 +624,25 @@ def test_youtube_caption_track_best_effort(settings, brand, files, yt_env, tmp_p
     YouTubePublisher(settings, transport=r3.transport, sleep=noop_sleep).publish(
         make_req(brand, settings, "youtube", "short", files, captions_path=srt))
     assert not r3.find("POST", "captions")
+
+
+def test_youtube_expired_sign_in_explains_fix(settings, brand, files, yt_env):
+    r = yt_router()
+    r.routes.insert(0, ("POST", "oauth2.googleapis.com/token", httpx.Response(400, json={
+        "error": "invalid_grant", "error_description": "Token has been expired or revoked."})))
+    with pytest.raises(PublishError) as e:
+        YouTubePublisher(settings, transport=r.transport, sleep=noop_sleep).publish(
+            make_req(brand, settings, "youtube", "short", files))
+    assert not e.value.retryable and "factory auth youtube" in str(e.value) and "7 days" in str(e.value)
+    assert not r.find("POST", "upload/youtube/v3/videos")
+
+
+def test_doctor_warns_on_old_youtube_sign_in(factory, monkeypatch):
+    import time
+
+    from contentfactory.doctor import _publishing
+    for k, v in {"YT_CLIENT_ID": "a", "YT_CLIENT_SECRET": "b", "YT_REFRESH_TOKEN": "c",
+                 "YT_REFRESH_TOKEN_SET_AT": str(int(time.time() - 6.5 * 86400))}.items():
+        monkeypatch.setenv(k, v)
+    msgs = [r.message for r in _publishing(factory, online=False) if r.name.endswith("sign-in")]
+    assert msgs and "Testing" in msgs[0]

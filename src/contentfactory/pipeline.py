@@ -25,6 +25,14 @@ from .llm import LLM
 from .writer import write_with_review
 
 
+def voice_of_assets(assets: dict) -> str | None:
+    """The voice provider a rendered video used (human = the owner's recording)."""
+    for e in (assets or {}).get("provenance") or []:
+        if str(e.get("path", "")).endswith("audio.wav"):
+            return e.get("provider") or e.get("tool")
+    return None
+
+
 def _affiliates_in(brand: BrandProfile, caption: str, title: str) -> tuple[list[str], list[str]]:
     """(offers whose link is actually in the caption, offers that would fit by keyword)."""
     present = [a.slug or a.name for a in brand.affiliates
@@ -122,6 +130,13 @@ class Factory:
         from .media import render_post
         post = self._post(post_id)
         brand = self.brand(post["brand"])
+        if (post.get("meta") or {}).get("challenge") and post["format"] == "image":
+            self.check(post_id)  # a challenge day's image is its tracker (factory challenge), not generated art
+            return post.get("assets") or {}
+        if post["format"] in ("short", "mid", "long"):  # vary the look against this channel's recent videos
+            recent = self.db.query("SELECT assets FROM posts WHERE brand = ? AND id != ? AND format IN ('short','mid','long') "
+                                   "AND status != 'rejected' ORDER BY id DESC LIMIT 8", [brand.slug, post_id])
+            post["_recent_looks"] = [(r["assets"] or {}).get("look") for r in recent if (r["assets"] or {}).get("look")]
         try:
             assets = render_post(self.settings, brand, post)
         except Exception as e:
@@ -179,6 +194,8 @@ class Factory:
             raise ValueError(f"Can't approve a post in status {post['status']}")
         if self.render_pending(post_id):
             raise PermissionError("Post is still waiting in the render queue; review it once it has rendered")
+        from .review import check_can_approve
+        check_can_approve(post, self.brands().get(post["brand"]))
         self.db.update("posts", post_id, {"status": "approved", "review_notes": notes})
         self.db.log("post.approved", "post", post_id, {"notes": notes}, actor=actor)
 
@@ -216,25 +233,50 @@ class Factory:
         if post["status"] != "approved":
             raise PermissionError("Only approved posts can be scheduled")
         assets = post.get("assets") or {}
-        if not (assets.get("slides") if post["format"] == "carousel" else assets.get("video")):
+        if not (assets.get("slides") if post["format"] in ("carousel", "image") else assets.get("video")):
             raise PermissionError("Post has no rendered media yet; render it before scheduling")
         brand = self.brand(post["brand"])
         targets = platforms or [a.platform for a in brand.accounts
                                 if a.enabled and post["format"] in a.formats]
         if not targets:
             raise ValueError(f"No enabled account in {brand.slug} accepts format '{post['format']}'")
+        if post["format"] in ("short", "mid", "long") and (brand.own_voice or (post.get("meta") or {}).get("own_voice")):
+            from .media.tts import human_voice_source
+            if human_voice_source(self.settings, brand, post_id) is None or \
+                    (voice_of_assets(assets) or "") != "human":
+                raise PermissionError("Waiting for your narration: `factory voice "
+                                      f"{post_id} <recording>` (see `factory recordings`)")
+        from .guardrails import check_no_repost
+        for platform in list(targets):
+            rp = check_no_repost(self.db, post, platform, output_dir=self.settings.output_dir)
+            if rp.level == "block":
+                if platforms:  # asked for explicitly: say no
+                    raise ValueError(f"Not scheduling on {platform}: {rp.message}")
+                targets.remove(platform)  # automatic: skip that platform, schedule the rest
+                self.db.log("post.skipped_repost", "post", post_id, {"platform": platform, "reason": rp.message})
+        if not targets:
+            raise ValueError("Every platform for this post would be a repost; nothing scheduled")
         from .publish.preflight import blocking, check_post
         stop = blocking(check_post(self, post, targets), self.settings.dry_run)
         if stop:
             raise PermissionError("Media check failed: " + "; ".join(map(str, stop)))
         # Work out every slot first so a cadence block can't leave a half-scheduled post behind.
         plan = []
-        for platform in targets:
+        from .scheduler import platform_cap_reached
+        for platform in list(targets):
             slot = at or next_slot(self.db, brand, platform, fmt=post["format"])
+            cap = platform_cap_reached(self.db, brand, platform, post["format"], slot)
+            if cap is not None:
+                if platforms:
+                    raise PermissionError(f"{platform} already has {cap} {post['format']} post(s) that week (platform_weekly_caps)")
+                self.db.log("post.skipped_cap", "post", post_id, {"platform": platform, "cap": cap})
+                continue
             cadence = check_cadence(self.db, brand, platform, slot)
             if cadence.level == "block":
                 raise PermissionError(cadence.message)
             plan.append((platform, slot))
+        if not plan:
+            raise ValueError("Every platform for this post is at its weekly cap; nothing scheduled")
         pub_ids = []
         for platform, slot in plan:
             acct = brand.account(platform)
@@ -244,6 +286,8 @@ class Factory:
             }))
         self.db.update("posts", post_id, {"status": "scheduled", "scheduled_at": min(s for _, s in plan).isoformat()})
         self.db.log("post.scheduled", "post", post_id, {"publications": pub_ids})
+        from .manual import prepare
+        prepare(self, pub_ids)  # post-by-hand platforms get their package now, so they can be batched
         return pub_ids
 
     def unschedule(self, post_id: int, actor: str = "human") -> int:
@@ -282,6 +326,9 @@ class Factory:
         assets = post.get("assets") or {}
         out = self.settings.output_dir
         tags = post.get("hashtags") or []
+        from .publish._text import PLATFORM_HASHTAG_MAX, pick_hashtags
+        if platform in PLATFORM_HASHTAG_MAX:  # choose which tags go, rather than letting the publisher cut the last ones
+            tags = pick_hashtags(tags, PLATFORM_HASHTAG_MAX[platform], brand.slug.replace("-", ""))
         hashtag_line = " ".join("#" + t.lstrip("#").replace(" ", "") for t in tags)
         disclosure = post.get("disclosure") or ""
         caption = "\n\n".join(x for x in [post.get("caption", ""), disclosure, hashtag_line] if x)
@@ -326,7 +373,8 @@ class Factory:
             for b, platforms in brands_due.items():
                 scoped = self.settings.for_brand(b)
                 try:
-                    if "tiktok" in platforms:
+                    from .manual import is_manual
+                    if "tiktok" in platforms and not is_manual("tiktok"):
                         refresh_tiktok_if_needed(scoped)
                     refresh_long_lived(scoped)
                 except Exception as e:  # a failed refresh surfaces as a publish error below
@@ -351,6 +399,19 @@ class Factory:
                            "AND status = 'published'", [pub["post_id"], pub["platform"], pub["id"]]):
                 self.db.update("publications", pub["id"], {"status": "cancelled",
                                                            "error": "already published on this platform"})
+                continue
+            from .manual import hand_off, is_manual
+            if is_manual(pub["platform"]):  # never uploaded by the factory: package it for you to post by hand
+                rel = hand_off(self, pub, post)
+                results.append({"publication": pub["id"], "status": "manual", "package": rel["dir"]})
+                continue
+            from .guardrails import check_no_repost
+            rp = check_no_repost(self.db, post, pub["platform"], exclude_pub_id=pub["id"],
+                                 output_dir=self.settings.output_dir)
+            if rp.level == "block":
+                self.db.update("publications", pub["id"], {"status": "cancelled", "error": rp.message[:1000]})
+                self.db.log("publication.cancelled_repost", "publication", pub["id"], {"error": rp.message})
+                results.append({"publication": pub["id"], "status": "cancelled", "error": rp.message})
                 continue
             from .publish.preflight import blocking, check
             stop = blocking(check(post, pub["platform"], self.settings.output_dir,
