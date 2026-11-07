@@ -165,11 +165,19 @@ def run(jobs: list[dict], work: Path) -> list[dict]:
     return json.loads(proc.stdout.strip().splitlines()[-1])
 
 
+# Etsy has banned AI-generated functional guides since Oct 22 2026 (research/scouting/ai-disclosure-rules-nov-2026.md
+# on PR #2; the catalog check is launch/catalog/etsy_rules.py on PR #6). These five products are guides written with
+# AI help, so they sell on Gumroad only. The listings stay as reference, in case Etsy's rule changes.
+NOT_FOR_ETSY = ("> **NOT FOR ETSY.** Etsy has banned AI-generated functional guides since Oct 22 2026, and this "
+                "product is a guide drafted with AI help. Sell it on Gumroad only. This listing is kept as reference "
+                "in case the rule changes.\n\n")
+
+
 def listing_md(it: dict, files: list[Path]) -> str:
     fee = round(0.20 + it["price"] * 0.065 + 0.25 + it["price"] * 0.03, 2)
     tags = "\n".join(f"{i}. {t}" for i, t in enumerate(it["tags"], 1))
     flist = "\n".join(f"- `{f.name}` ({f.stat().st_size / 1e6:.1f} MB)" for f in files)
-    return f"""# Etsy listing: {it['name']}
+    return NOT_FOR_ETSY + f"""# Etsy listing: {it['name']}
 
 Spanish listing. Copy each field into Etsy (Shop Manager > Listings > Add a listing). Upload the four
 mockups in order (01, the clean photo of the pages, is the thumbnail), then the digital files below. **A fluent Spanish speaker must

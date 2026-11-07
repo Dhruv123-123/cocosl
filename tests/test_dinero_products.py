@@ -113,6 +113,9 @@ def test_etsy_listings_fit_etsy_and_editions_stay_on_etsy(_forget_products_build
     import build as products
     import build_etsy
     from listings import LISTINGS
+    # Etsy bans AI-generated functional guides (Oct 22 2026): every listing and the README say "not for Etsy".
+    assert build_etsy.listing_md(LISTINGS[0], []).startswith(build_etsy.NOT_FOR_ETSY)
+    assert "NOT FOR ETSY" in (DS / "etsy" / "README.md").read_text()
     assert {i["slug"] for i in LISTINGS} == {p["slug"] for p in products.PRODUCTS} | set(products.EXISTING)
     for it in LISTINGS:
         assert len(it["title"]) <= 140 and len(it["tags"]) == 13 and all(len(t) <= 20 for t in it["tags"]), it["slug"]

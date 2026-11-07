@@ -1,5 +1,9 @@
 # Dinero Simple on Etsy
 
+> **NOT FOR ETSY (Nov 7 2026).** Etsy has banned AI-generated functional guides since Oct 22 2026, and all five
+> products here are guides drafted with AI help. Sell them on Gumroad only. These listings are kept as reference
+> in case the rule changes. Planners and logs (no instructions) can still go on Etsy; see `launch/catalog/etsy_rules.py` on PR #6.
+
 Etsy-ready, Spanish versions of the five Dinero Simple products. Each folder has the files to upload, four
 2700x2025 listing images (upload `mockup-01-clean.png` first: it's the thumbnail, the pages alone with no text
 on them, as Etsy advises) and `LISTING.md` (title under 15 words, 13 tags, price, a description whose first
