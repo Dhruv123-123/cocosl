@@ -603,11 +603,19 @@ def test_etsy_safe_printables_have_no_instructions_and_fit_etsy():
 LEAN = DS / "lean" / "lean_launch.py"
 
 
+def _built_lean_sources():
+    """The lean packet reads the built printable (dist/ is gitignored, and CI starts clean). Its HTML build needs no
+    browser; the Kit guide falls back to its source when products/dist/ isn't built."""
+    import subprocess
+    subprocess.run([sys.executable, str(DS / "imprimibles" / "build_imprimibles.py")], check=True, capture_output=True)
+
+
 def test_lean_launch_review_fits_the_budget_and_holds_the_whole_lean_set():
     """The lean packets cover exactly the lean set and stay inside about 10-15 native hours and 3 attorney hours."""
     pytest.importorskip("yaml")
     b = _load(DS / "review" / "build_packets.py", "build_packets")
     L = _load(LEAN, "lean_launch")
+    _built_lean_sources()
     r = b.build_lean()
     assert r["native"]["hours"][1] <= 15 and r["native"]["hours"][0] >= 8
     assert r["attorney"]["hours"][1] <= 3
@@ -665,3 +673,36 @@ def test_risky_immigration_lines_are_now_referrals():
     assert safe.DATOS in joined and safe.DERECHOS_ESTADO in joined
     for line in safe.STANDARD.values():
         assert "justice.gov/eoir" in line and "licencia" in line  # official free-help link, licensed lawyers only
+
+
+def test_reviewer_kit_test_is_from_the_lean_set_and_matches_its_key():
+    """The paid test is real lean-set copy (about 2 hours), every planted problem is in it, the committed answer key
+    matches, the job post's numbers match the lean packet, and the workflow's keys match the fast-review page."""
+    pytest.importorskip("yaml")
+    _built_lean_sources()
+    t = _load(DS / "reviewer" / "build_test.py", "build_test")
+    ps = t.pieces()
+    assert 1600 <= t.words(ps) <= 2400 and len(t.SEEDS) >= 10
+    text = "\n".join(p["text"] for p in ps)
+    for _, orig, planted, *_ in t.SEEDS:
+        assert planted in text, planted
+    assert (DS / "reviewer" / "ANSWER_KEY.md").read_text() == t.answer_key(ps)
+    assert "Correos de bienvenida · día 5" not in [p["title"] for p in ps]  # the ITIN email is the attorney's
+    b = _load(DS / "review" / "build_packets.py", "build_packets")
+    _built_lean_sources()
+    lean_words = b.build_lean()["native"]["words"]
+    rubric = (DS / "reviewer" / "RUBRIC.md").read_text()
+    quoted = int(re.search(r"= ([\d,]+) words ÷ their speed", rubric).group(1).replace(",", ""))
+    assert abs(quoted - lean_words) < 150 and f"{t.words(ps):,} words" in rubric  # the built Kit guide adds folios
+    post = (DS / "reviewer" / "JOB_POST.md").read_text()
+    assert t.FEE in post and "about 14,400 words" in post and abs(lean_words - 14400) < 250  # update the post if the lean set grows
+    fast = (ROOT / "src" / "contentfactory" / "web" / "fastreview.py").read_text().split('"""')[1]
+    flow = (DS / "reviewer" / "WORKFLOW.md").read_text()
+    for key in ("A approve", "R reject", "E edit", "N pass native", "L pass legal", "J / K"):
+        assert key in fast, key  # the dashboard still uses these keys
+    for key in ("**N**", "**L**", "**A**", "**R**", "**E**", "**J** / **K**", "**C**"):
+        assert key in flow
+    assert "factory review-gate pass" in flow and "--by" in flow
+    chan = (DS / "CHANNEL_RESERVATION.md").read_text()
+    brand = (ROOT / "brands" / "dinero-simple.yaml").read_text()
+    assert "@dinerosimple" in brand and "`@dinerosimple`" in chan and "Upload nothing" in chan

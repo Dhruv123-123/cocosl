@@ -72,7 +72,7 @@ def strip_md(s: str) -> str:
     s = strip_html(s) if "<" in s else s
     s = re.sub(r"!\[[^\]]*\]\([^)]*\)", "", s)
     s = re.sub(r"\[([^\]]+)\]\([^)]*\)", r"\1", s)
-    s = re.sub(r"[*_`#>]+", "", s)
+    s = re.sub(r"[*`#>]+|(?<![{\w])_+|_+(?![\w}])", "", s)  # keep {product_name}-style placeholders whole
     return "\n".join(line.strip() for line in s.splitlines() if line.strip())
 
 
@@ -199,7 +199,9 @@ def gather_lean() -> "Packets":
     add_sequence(P, LEAN_PART)
     for slug, dist in L.PRODUCTS.items():
         P.add_file(LEAN_PART, f"Sitio web · producto · {slug}", SITE / "products" / f"{slug}.md")
-        P.add_file(LEAN_PART, f"Producto (PDF) · {dist}", DS / "products" / "dist" / dist / f"{dist}.html", "html")
+        built = DS / "products" / "dist" / dist / f"{dist}.html"
+        # the built guide adds only page folios; fall back to its source when dist/ hasn't been built (CI)
+        P.add_file(LEAN_PART, f"Producto (PDF) · {dist}", built if built.exists() else DS / "products" / dist / "guide.html", "html")
     for slug in L.PRINTABLES:
         d = DS / "imprimibles" / "dist" / slug
         P.add_file(LEAN_PART, f"Imprimible · {slug} · anuncio", d / "LISTING.md")
