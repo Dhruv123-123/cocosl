@@ -146,9 +146,9 @@ def brandshop_rows() -> list[dict]:
         "scam-card-set": "Cards only (no guide), so it sits beside the Scam-Proofing Kit and the seniors guide rather than competing with them. Replaces the fridge cards, caller ID card, my kit and my bundle (see Merged).",
         "freelancer-tax-planner-2027": "Sold as the paper companion to the Quarterly Tax Tracker (the brand's spreadsheet). My sheet and bundle were merged away (see Merged).",
         "presupuesto-familiar": "Different from El Presupuesto de 20 Minutos ($12, a guide plus a spreadsheet): this is a printable household binder for the whole family.",
-        "money-reset-30-day": "A guided month of daily tasks, unlike the trackers (No-Spend Challenge) and the guide kits; leads into The 20-Minute Budget. Goes in the existing Money Made Simple Etsy shop.",
+        "money-reset-30-day": "A guided month of daily tasks, unlike the trackers (No-Spend Challenge) and the guide kits; leads into The 20-Minute Budget.",
         "schedule-c-setup-pack": ("Only for TaxHacker users (a self-hosted receipt app, MIT, not affiliated): categories, fields and a "
-                                  "sheet that reads its CSV. Points non-users to the Quarterly Tax Tracker. Etsy is optional."),
+                                  "sheet that reads its CSV. Points non-users to the Quarterly Tax Tracker."),
         "paquete-familia": "Different from El Paquete Dinero Simple ($29, the four guide kits): this bundles the three printables.",
     }
     for key, mod, plat in (("scam-decoded", SD, "Etsy + Gumroad"), ("1099-money", T, "Etsy + Gumroad"), ("dinero-simple", DS, "Etsy + Gumroad"),
@@ -236,6 +236,8 @@ def merged_rows() -> list[dict]:
 def all_rows() -> list[dict]:
     rows = etsy_rows() + gumroad_rows() + template_rows() + poster_rows() + book_rows() + brandshop_rows()
     rows += [row(*r) for r in OTHER_BRANCHES]
+    import etsy_rules
+    rows = etsy_rules.apply(rows)
     import promos
     rows.append(promos.jan_reset_row(rows))
     return rows
@@ -268,6 +270,8 @@ submitted anywhere.
                                          for k in ("product", "platform", "price", "files", "listing", "launch", "date_source", "notes")) + " |")
     import listings as L
     import promos
+    import etsy_rules
+    out.append("\n" + etsy_rules.markdown(rows))
     out.append("\n" + promos.markdown(rows, L.LISTINGS))
     m = merged_rows()
     out.append(f"\n## Merged or retired ({len(m)}), reversible\n\nBuilt, checked and kept in the repo, but not listed, so the "
@@ -282,6 +286,12 @@ def main() -> int:
     ap.add_argument("--out", default=str(LAUNCH / "PRODUCTS_CATALOG.md"))
     a = ap.parse_args()
     rows = all_rows()
+    import etsy_rules
+    bad = etsy_rules.problems(rows)
+    for b in bad:
+        print("FAIL", b)
+    if bad:
+        return 1
     out = Path(a.out)
     out.write_text(markdown(rows))
     with open(out.with_suffix(".csv"), "w", newline="") as fh:

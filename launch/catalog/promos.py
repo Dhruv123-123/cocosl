@@ -23,8 +23,7 @@ CODES = [
     ("BF25", "Etsy (Money Made Simple shop): Marketing > Sales and discounts > Promo code", "25%",
      [("Money Made Simple", "Mega Budget Bundle (all 40 printables)", "Etsy"),
       ("Money Made Simple", "Printable Budget Binder (all 10 printables)", "Etsy"),
-      ("Money Made Simple", "Savings Challenge Pack (12 printables)", "Etsy"),
-      ("Money Made Simple", "The Money Made Simple Toolkit", "Etsy")],
+      ("Money Made Simple", "Savings Challenge Pack (12 printables)", "Etsy")],
      "Email list, Etsy shop announcement and social bios. Limit it to these listings (check the promo-code screen "
      "offers a listing choice; if not, use it shop-wide only on bundles by saying so in the announcement) and set a "
      "total-use limit of 300 so a leak to coupon sites stays small."),
@@ -34,8 +33,8 @@ CODES = [
     ("BF5", "Gumroad (Money Made Simple): Checkout > Discounts", "$5",
      [("Money Made Simple", "Money Sheets Bundle", "Gumroad"), ("Money Made Simple", "Notion Money HQ", "Gumroad")],
      "Restrict to these two bundles."),
-    ("YEAREND10", "Gumroad and Etsy (1099 Money)", "$10",
-     [("1099 Money", "The Freelancer Money Bundle", "Gumroad"), ("1099 Money", "The Freelancer Money Bundle", "Etsy")],
+    ("YEAREND10", "Gumroad (1099 Money)", "$10",
+     [("1099 Money", "The Freelancer Money Bundle", "Gumroad")],
      "Restrict to the bundle. Pitch: set up 2027 before Jan 1. (Scouting suggested running it to Dec 6; kept to the "
      "same Nov 27-30 window as the other bundle codes.)"),
 ]
@@ -74,13 +73,11 @@ TIMELINE = [
 
 ANNOUNCEMENT = {  # (brand, platform): the shop announcement (Etsy) or a profile text section (Gumroad), Nov 26 to Dec 1
     ("Money Made Simple", "Etsy"): ("Black Friday to Cyber Monday (Nov 27-30): code BF25 takes 25% off our bundles: the Mega "
-                                    "Budget Bundle, the Budget Binder, the Savings Challenge Pack and the Toolkit. Ends Monday "
+                                    "Budget Bundle, the Budget Binder and the Savings Challenge Pack. Ends Monday "
                                     "at 11:59 pm Pacific. Single printables stay at their usual price."),
     ("Money Made Simple", "Gumroad"): ("Black Friday to Cyber Monday (Nov 27-30): code BF10 takes $10 off The Money Made Simple "
                                        "Toolkit, and BF5 takes $5 off the Money Sheets Bundle and Notion Money HQ. Ends Monday at "
                                        "11:59 pm Pacific."),
-    ("1099 Money", "Etsy"): ("Nov 27-30: code YEAREND10 takes $10 off The Freelancer Money Bundle. Set up 2027 before Jan 1. "
-                             "Ends Monday at 11:59 pm Pacific."),
     ("1099 Money", "Gumroad"): ("Nov 27-30: code YEAREND10 takes $10 off The Freelancer Money Bundle. Set up 2027 before Jan 1. "
                                 "Ends Monday at 11:59 pm Pacific."),
 }

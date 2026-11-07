@@ -186,6 +186,8 @@ def problems() -> list[str]:
     bad += es_problems(prods.get("Dinero Simple", []))
     bad += email_problems()
     bad += XS.problems(CAT.all_rows(), L.LISTINGS, CROSS_SELL)
+    import etsy_rules
+    bad += etsy_rules.problems(CAT.all_rows())
     return bad
 
 
@@ -352,7 +354,7 @@ def main() -> int:
     cat = CAT.all_rows()
     (out / "NEXT_STEP_ALL_PRODUCTS.md").write_text(XS.markdown(cat, L.LISTINGS, CROSS_SELL))
     with open(out / "next_step_all_products.csv", "w", newline="") as fh:
-        wr = csv.DictWriter(fh, ["brand", "product", "platform", "price", "next", "next_price", "why", "where", "code"])
+        wr = csv.DictWriter(fh, ["brand", "product", "platform", "price", "next", "etsy_next", "next_price", "why", "where", "code"])
         wr.writeheader()
         wr.writerows(XS.rows(cat, L.LISTINGS, CROSS_SELL))
     (out / "money-made-simple" / "JANUARY_RESET.md").write_text(promos.jan_reset_md(cat))

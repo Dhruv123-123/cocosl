@@ -27,7 +27,7 @@ GOOD_TO_KNOW_PRODUCT = """GOOD TO KNOW
 - The spreadsheet comes filled in with a made-up example so you can see how it works. Yellow cells are your inputs.
 - For personal use only. Please don't resell, share or redistribute the files.
 - Educational content, not financial, tax, legal or investment advice. US-focused where laws or accounts are mentioned.
-- How it's made: written and fact-checked by a human at Money Made Simple. AI tools helped with drafting and layout."""
+- How it's made: drafted with AI help and fact-checked by a person at Money Made Simple. AI tools also helped with layout."""
 
 MORE = """MORE FROM THE SHOP
 Search "{shop}" on Etsy for the matching budget planner, savings trackers and money guides, or get everything in one of the bundles."""
@@ -341,6 +341,14 @@ for it in LISTINGS:
     it.setdefault("category", GUIDE_CAT if it["kind"] == "product" else PRINT_CAT)
     good = _good_to_know_dated(it["year"], 2 * len(it["variants"])) if it.get("dated") else None
     it["description"] = _desc(opener(it) + " " + it["hook"], it["get"], it["how"], product=it.get("product", False), good=good)
+# Etsy's 22 Oct 2026 rules ban "AI-generated functional guides" (instructions buyers rely on must be the seller's own
+# work; scouting's research/scouting/ai-disclosure-rules-nov-2026.md, PR #2). Our guide-and-spreadsheet kits say AI
+# helped draft them, so they're sold on Gumroad only. Etsy keeps printables, planners, trackers and their bundles.
+# Undo for one kit only if Dhruv rewrites its guide as his own work: move it back into LISTINGS.
+ETSY_GUIDE_RULE = ("Etsy, 22 Oct 2026: no AI-generated functional guides (patterns, recipes or instructions buyers rely on "
+                   "must be the seller's own work). Sold on Gumroad only.")
+OFF_ETSY = [it for it in LISTINGS if it["kind"] == "product"]
+LISTINGS = [it for it in LISTINGS if it["kind"] != "product"]
 BY_SLUG = {it["slug"]: it for it in LISTINGS}
 
 STOP = set("and or for the a an to of with your in on by".split())
@@ -376,6 +384,8 @@ def validate() -> list[str]:
             errs.append(f"{s}: duplicate title")
         seen_titles.add(it["title"])
         errs += _title_problems(s, it["title"], it["tags"])
+        if it["kind"] == "product" or re.search(r"\bguides?\b", it["name"], re.I):
+            errs.append(f"{s}: guide kits are Gumroad only ({ETSY_GUIDE_RULE})")
         if len(it["title"].split()) > 15:
             errs.append(f"{s}: title is {len(it['title'].split())} words (Etsy suggests under 15)")
         if len(it["tags"]) != 13:

@@ -12,7 +12,7 @@ import printables_more  # noqa: E402
 
 def test_listings_follow_etsy_limits():
     assert listings.validate() == []
-    assert len(listings.LISTINGS) == 50
+    assert len(listings.LISTINGS) == 44 and len(listings.OFF_ETSY) == 6  # guide kits are Gumroad only
     for it in listings.LISTINGS:
         assert len(it["title"]) <= 140 and len(it["tags"]) == 13
         assert "DIGITAL DOWNLOAD" in it["description"] and "How it's made" in it["description"]
@@ -96,7 +96,7 @@ def test_2027_planner_dates_are_right():
 
 def test_seo_covers_every_listing():
     import seo
-    assert set(seo.S) == set(listings.BY_SLUG)
+    assert set(seo.S) == set(listings.BY_SLUG) | {it["slug"] for it in listings.OFF_ETSY}
     for it in listings.LISTINGS:
         assert len(it["title"].split()) <= 15 and it["title"] == seo.TITLE_FIX.get(it["slug"], seo.S[it["slug"]][0])
         assert it["attributes"]["Primary color"] and len(it["tags"]) == 13

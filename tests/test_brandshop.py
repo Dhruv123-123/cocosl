@@ -254,7 +254,7 @@ def test_bfcm_codes_and_january_push():
     cr = {(r["code"], r["product"], r["platform"]): r["after"] for r in promos.code_rows(rows)}
     assert cr[("BF25", "Mega Budget Bundle (all 40 printables)", "Etsy")] == "$14.25"
     assert cr[("BF10", "The Money Made Simple Toolkit", "Gumroad")] == "$29"
-    assert cr[("YEAREND10", "The Freelancer Money Bundle", "Etsy")] == "$39"
+    assert ("YEAREND10", "The Freelancer Money Bundle", "Etsy") not in cr  # guides are off Etsy
     # bundles only: every discounted product is a bundle or toolkit
     assert all(any(w in p for w in ("Bundle", "Binder", "Pack", "Toolkit", "HQ")) for _, p, _ in cr)
     md = promos.markdown(rows, L.LISTINGS).lower()
@@ -266,6 +266,7 @@ def test_bfcm_codes_and_january_push():
 
 def test_january_reset_bundle_and_full_cross_sell_map():
     """Jan 1-31 Gumroad bundle of existing sheets, honest 'separately' figure; every product has an in-brand next step."""
+    sys.path.insert(0, str(SHOP.parent / "storefront"))
     import build_catalog as C
     import listings as L
     import promos as P
@@ -282,3 +283,23 @@ def test_january_reset_bundle_and_full_cross_sell_map():
     poster = next(r for r in m if r["product"] == "Savings Jar Poster")
     assert poster["next"] == "Spare Change Jar Tracker" and "Etsy" in poster["where"]
     assert next(r for r in m if r["product"] == "The January Reset Bundle")["next"] == "The 20-Minute Budget"
+
+
+def test_etsy_ai_guide_rule_keeps_guides_off_etsy():
+    """Etsy's 22 Oct 2026 ban on AI-generated functional guides: every guide is Gumroad only (or on hold)."""
+    import build_catalog as C
+    import etsy_rules as R
+    import listings as L
+    rows = C.all_rows()
+    assert R.problems(rows) == []
+    etsy = {(r["brand"], r["product"]) for r in rows if "Etsy" in r["platform"] and r["platform"] != R.HOLD}
+    assert not (etsy & set(R.GUIDES))
+    assert not any(it["kind"] == "product" for it in L.LISTINGS) and L.validate() == []
+    gum = {(r["brand"], r["product"]) for r in rows if "Gumroad" in r["platform"]}
+    assert ("Money Made Simple", "The 20-Minute Budget") in gum and ("Money Made Simple", "The Money Reset: 30-Day Challenge Workbook") in gum
+    held = [r for r in rows if r["platform"] == R.HOLD]
+    assert [r["product"] for r in held] == ["Scam Decoded for Seniors (large print)"]
+    bad = R.problems(rows + [dict(rows[0], product="The Side Hustle Guide", platform="Etsy")])
+    assert len(bad) == 1 and "looks like a guide" in bad[0]
+    md = shop.listing_md(next(it for it in DS.LISTINGS if it["slug"] == "construir-credito"), DS.BRAND)
+    assert "Gumroad only. Don't list this on Etsy." in md

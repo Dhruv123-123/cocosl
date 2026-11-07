@@ -152,12 +152,21 @@ def validate(items: list[dict], lang: str = "en") -> list[str]:
     return bad
 
 
+# Guides and guide kits are Gumroad only: Etsy's 22 Oct 2026 rule bans AI-generated functional guides
+# (launch/catalog/etsy_rules.py). Their LISTING.md keeps the Etsy fields for reference under a banner.
+GUMROAD_ONLY = {"money-reset-30-day", "construir-credito", "paquete-familia", "schedule-c-setup-pack"}
+
+
 def listing_md(it: dict, brand: Brand) -> str:
     f = etsy_listings.fees(it["price"])
     tags = "\n".join(f"{i}. {t}" for i, t in enumerate(it["tags"], start=1))
     attrs = "\n".join(f"- **{k}:** {v}" for k, v in it.get("attributes", {}).items())
     files = "\n".join(f"- `{x}`" for x in it.get("files", []))
     banner = f"\n> **{brand.review}**\n" if brand.review else ""
+    if it["slug"] in GUMROAD_ONLY:
+        banner += ("\n> **Gumroad only. Don't list this on Etsy.** Etsy's 22 Oct 2026 rule bans AI-generated functional "
+                   "guides, and this one says AI helped draft it. The Etsy fields below are kept only in case Dhruv rewrites "
+                   "it as his own work.\n")
     return f"""# {brand.name}: {it['name']}
 {banner}
 Nothing here has been listed. Copy each field into Etsy (Shop Manager > Listings > Add a listing) and Gumroad. Upload

@@ -16,12 +16,17 @@ BOOK_WHERE = "Last page of the book (add on the next upload)"
 
 # Etsy-only next steps where the Gumroad one isn't on Etsy, or the product is Etsy-only. (product -> (next, why))
 ETSY_NEXT = {
-    "Printable Budget Binder (all 10 printables)": ("The 20-Minute Budget", "The pages track the month; the 20-Minute Budget is the weekly system behind them, with a spreadsheet."),
-    "Savings Challenge Pack (12 printables)": ("The Money Reset: 30-Day Challenge Workbook", "Twelve ways to save, then 30 days to reset the whole budget."),
+    "Printable Budget Binder (all 10 printables)": ("2027 Budget Planner", "The binder is undated; the 2027 planner runs the year date by date."),
+    "Savings Challenge Pack (12 printables)": ("Printable Budget Binder (all 10 printables)", "The budget pages that find the money for the challenges."),
     "Mega Budget Bundle (all 40 printables)": ("2027 Budget Planner", "The 40 pages are undated; the 2027 planner runs the year month by month."),
-    "2027 Budget Planner": ("The Money Reset: 30-Day Challenge Workbook", "A 30-day start for the year the planner covers."),
-    "Scam Decoded Card Set": ("Scam Decoded for Seniors (large print)", "The cards go by the phone; the large-print pack explains each scam."),
-    "Scam Decoded for Seniors (large print)": ("Scam Decoded Card Set", "The pack's call-back rule and safe word, as cards by the phone and in the wallet."),
+    "2027 Budget Planner": ("Printable Budget Binder (all 10 printables)", "Adds the 10 core trackers: bills, sinking funds, subscriptions and debt."),
+    "The Quarterly Tax Tracker": ("2027 Freelancer Tax-Year Planner (printable)", "A paper year-planner beside the spreadsheet: dates, months and the tax-time checklist."),
+    # Etsy side of products sold on both, where the Gumroad next step isn't on Etsy (guides are Gumroad only)
+    "2027 Budget Sheet": ("2027 Budget Planner", "The same year on paper, for the fridge or the binder."),
+    "2027 Money HQ for Notion": ("2027 Budget Planner", "The same year on paper, for the fridge or the binder."),
+    "Money Dashboard Pro": ("2027 Budget Planner", "The dashboard looks back; the planner plans the year ahead on paper."),
+    "El Registro de Envíos": ("El Presupuesto Familiar", "El envío es un gasto fijo; el presupuesto familiar le da su lugar."),
+    "Scam Decoded Card Set": (None, "No other Scam Decoded product is on Etsy now (the seniors pack is on hold), so Etsy buyers get no recommendation."),
 }
 # Posters point at the printable of the same challenge, so the wall chart has a pen-and-paper log.
 POSTER_NEXT = {
@@ -66,14 +71,16 @@ def rows(catalog: list[dict], listings: list[dict], cross_sell: dict) -> list[di
     out, seen = [], set()
     for r in catalog:
         key = (r["brand"], r["product"], _kind(r["platform"]))
-        if key in seen:
+        if key in seen or r["platform"].startswith("On hold"):
             continue
         seen.add(key)
         kind, name, code = key[2], r["product"], ""
         if kind == "gumroad" and name in cross_sell:
             nxt, why, where, code = cross_sell[name]
             if "Etsy" in r["platform"]:
-                where += " (Gumroad); " + ETSY_WHERE + " (Etsy)"
+                en, _ew = ETSY_NEXT.get(name, (nxt, ""))
+                where += " (Gumroad); " + (f"on Etsy recommend {en} instead: " if en != nxt else "") + \
+                    (ETSY_WHERE + " (Etsy)" if en else "no Etsy recommendation")
         elif kind == "book":
             nxt, why = BOOK_NEXT[name]
             where = BOOK_WHERE
@@ -96,7 +103,8 @@ def rows(catalog: list[dict], listings: list[dict], cross_sell: dict) -> list[di
             where = ETSY_WHERE
         else:
             nxt, why, where = "", "", ""
-        out.append(dict(brand=r["brand"], product=name, platform=r["platform"], price=r["price"], next=nxt,
+        etsy_next = ETSY_NEXT[name][0] if name in ETSY_NEXT else nxt
+        out.append(dict(brand=r["brand"], product=name, platform=r["platform"], price=r["price"], next=nxt, etsy_next=etsy_next,
                         next_price=price.get((r["brand"], nxt), "?"), why=why, where=where, code=code))
     return out
 
@@ -111,8 +119,8 @@ def problems(catalog: list[dict], listings: list[dict], cross_sell: dict) -> lis
             bad.append(f"{m['brand']}: no next step for '{m['product']}' ({m['platform']})")
         elif m["next"] == m["product"] or m["next_price"] == "?":
             bad.append(f"{m['brand']}: '{m['product']}' points at '{m['next']}', not another product of the brand")
-        elif k in ("etsy", "poster") and (m["brand"], m["next"]) not in on_etsy:
-            bad.append(f"{m['brand']}: Etsy buyers of '{m['product']}' are pointed at '{m['next']}', which isn't on Etsy")
+        elif "Etsy" in m["platform"] and m["etsy_next"] and (m["brand"], m["etsy_next"]) not in on_etsy:
+            bad.append(f"{m['brand']}: Etsy buyers of '{m['product']}' are pointed at '{m['etsy_next']}', which isn't on Etsy")
     return bad
 
 
