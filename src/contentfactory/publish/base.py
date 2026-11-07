@@ -36,6 +36,7 @@ class PublishRequest:
     video_path: Path | None = None
     image_paths: list[Path] = field(default_factory=list)
     thumbnail_path: Path | None = None
+    captions_path: Path | None = None  # SRT timed to the voice (YouTube caption track)
     public_urls: dict[str, str] = field(default_factory=dict)  # local path str -> https URL (Instagram needs these)
     ai_generated: bool = True      # sets platform AI-content labels where the API supports it
     realistic_synthetic: bool = False

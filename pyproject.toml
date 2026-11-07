@@ -23,7 +23,8 @@ dependencies = [
 [project.optional-dependencies]
 claude = ["anthropic>=0.70"]
 dev = ["pytest>=8", "anthropic>=0.70", "openpyxl>=3.1"]
-kokoro = ["kokoro>=0.9", "soundfile>=0.12"]   # local Kokoro-82M voice; or run the kokoro service in docker-compose
+kokoro = ["kokoro>=0.9", "soundfile>=0.12"]
+charts = ["manim>=0.18"]                     # animated data charts (FACTORY_CHARTS=manim)   # local Kokoro-82M voice; or run the kokoro service in docker-compose
 
 [project.scripts]
 factory = "contentfactory.cli:main"

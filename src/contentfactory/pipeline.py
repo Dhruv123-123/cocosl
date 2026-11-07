@@ -223,6 +223,10 @@ class Factory:
                                 if a.enabled and post["format"] in a.formats]
         if not targets:
             raise ValueError(f"No enabled account in {brand.slug} accepts format '{post['format']}'")
+        from .publish.preflight import blocking, check_post
+        stop = blocking(check_post(self, post, targets), self.settings.dry_run)
+        if stop:
+            raise PermissionError("Media check failed: " + "; ".join(map(str, stop)))
         # Work out every slot first so a cadence block can't leave a half-scheduled post behind.
         plan = []
         for platform in targets:
@@ -291,11 +295,16 @@ class Factory:
             for p in [*(assets.get("slides") or []), *(assets.get("images") or []), assets.get("video"), assets.get("thumbnail")]:
                 if p:
                     public[str(out / p)] = f"{base}/{p}"
-        description = "\n\n".join(x for x in [script.get("description", ""), disclosure] if x)
+        body = script.get("description", "")
+        if post["format"] == "long" and assets.get("chapters"):
+            from .media.chapters import with_chapters
+            body = with_chapters(body, assets["chapters"])
+        description = "\n\n".join(x for x in [body, disclosure] if x)
         return PublishRequest(
             platform=platform, brand=brand, settings=self.settings, format=post["format"],
             title=post.get("title", ""), caption=caption, description=description, tags=tags,
             video_path=video, image_paths=images, thumbnail_path=thumb, public_urls=public,
+            captions_path=out / assets["captions_srt"] if assets.get("captions_srt") else None,
             ai_generated=True, realistic_synthetic=brand.realistic_synthetic_media,
             has_paid_promotion=bool((post.get("meta") or {}).get("sponsored")),
         )
@@ -342,6 +351,16 @@ class Factory:
                            "AND status = 'published'", [pub["post_id"], pub["platform"], pub["id"]]):
                 self.db.update("publications", pub["id"], {"status": "cancelled",
                                                            "error": "already published on this platform"})
+                continue
+            from .publish.preflight import blocking, check
+            stop = blocking(check(post, pub["platform"], self.settings.output_dir,
+                                  self.settings.public_media_base_url), self.settings.dry_run)
+            if stop:  # media changed or vanished since scheduling: fail clearly instead of half-uploading
+                err = "Media check failed: " + "; ".join(map(str, stop))
+                self.db.update("publications", pub["id"], {"status": "failed", "error": err[:1000],
+                                                           "updated_at": now_iso()})
+                self.db.log("publication.failed", "publication", pub["id"], {"error": err[:1000], "retry": False})
+                results.append({"publication": pub["id"], "status": "failed", "error": err, "retry": False})
                 continue
             # Claim it atomically so a second process (dashboard "publish now") can't post it twice.
             cur = self.db.execute("UPDATE publications SET status = 'publishing', attempts = attempts + 1, "
