@@ -1,7 +1,7 @@
 # Go live: the one checklist
 
-Written 2026-11-07 for Dhruv and refreshed through the evening (last pass 08:05 UTC: PRs #1–#12 and `main` at
-`092de0e`). This merges every "only you can do this" step from `docs/CREDENTIALS.md`, `docs/QUICKSTART.md`,
+Written 2026-11-07 for Dhruv and refreshed through the evening (last pass 08:15 UTC: PRs #1–#12 and `main` at
+`9cb0ca4`). This merges every "only you can do this" step from `docs/CREDENTIALS.md`, `docs/QUICKSTART.md`,
 `docs/DEPLOY.md`, `launch/LAUNCH_DAY.md`, `launch/VERIFY_BEFORE_POSTING.md`, the open PRs, the commits on `main`
 and the project files in `content-factory/`, with the duplicates removed. Everything else is already built.
 
@@ -21,10 +21,10 @@ Nothing in this repo sends, posts or charges on its own. You press every button.
 ## Stage 0 · Merge the PRs (15 min, do first)
 
 Merge in this order (details and current blockers in [PR merge order](#pr-merge-order) at the bottom):
-**#1 → #3 → #2 → #4 → #5 → #6 → #8 → #9 → #11 → #10 → #12 → #7.**
+**#1 → #3 → #2 → #4 → #5 → #6 → #8 → #12 → #11 → #9 → #10 → #7.**
 
 - [ ] Merge the ones marked ✅ in that order on GitHub (≈ 2 min each). Right now that's **#1, #3, #2, #4, #5,
-      #6, #8, #12, #7**: checked together on top of `main`, all tests pass. Skip the rest until GitHub shows them
+      #6, #8, #12, #11, #7**: checked together on top of `main`, all tests pass. Skip the rest until GitHub shows them
       green; the threads that opened them are fixing them. 15 min
 
 ---
@@ -729,7 +729,7 @@ after month 1. To check automatically: `factory stats import`, then
 
 ## PR merge order
 
-Checked 08:05 UTC on 2026-11-07 against `main` at `092de0e`, merging every open PR in this order in a
+Checked 08:15 UTC on 2026-11-07 against `main` at `9cb0ca4`, merging every open PR in this order in a
 scratch copy and running the full test suite.
 
 | # | PR | Status now | What's in the way |
@@ -742,11 +742,11 @@ scratch copy and running the full test suite.
 | 6 | **#6** Products, Etsy, KDP, ebook | ✅ safe (fixed) | |
 | 7 | **#8** Web apps | ✅ safe | |
 | 8 | **#9** Scam Decoded | ⚠️ conflicts with `main` | `src/contentfactory/cli.py`, `cmd_import`: `main` now copies `original_element` into the script, #9 adds `platforms=`. Keep both |
-| 9 | **#11** Dinero Simple | ⚠️ merges, 5 tests fail | registers a `factory` subcommand #5 already has (argparse error in 4 tests), plus `test_dinero_products.py::test_etsy_listings_fit_etsy_and_editions_stay_on_etsy` |
+| 9 | **#11** Dinero Simple | ✅ safe (fixed, tested at `8a0e010`) | merge after #12 |
 | 10 | **#10** 1099 Money | ⚠️ conflicts with #5 and others | `cli.py`, `channels/config.json`, `pyproject.toml`, `tests/test_pack.py`, `test_business.py`, `test_worker.py`. Merge last, after it brings in `main` again |
 | 11 | **#12** Ad studio portfolio + listing-video page | ✅ safe | |
 | 12 | **#7** This checklist | ✅ safe | docs only |
 
-**Safe to merge now, in order: #1, #3, #2, #4, #5, #6, #8, #12, #7.** These nine were merged together on top
-of `main` and the full test suite passed. Then #9, #11 and #10 once GitHub shows them green.
+**Safe to merge now, in order: #1, #3, #2, #4, #5, #6, #8, #12, #11, #7.** These ten were merged together on
+top of `main` and the full test suite passed. Then #9 and #10 once GitHub shows them green.
 If a new PR lands, merge it after these unless its description says otherwise.
