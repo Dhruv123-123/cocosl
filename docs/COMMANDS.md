@@ -134,10 +134,3 @@ Nothing here posts or sends on its own: publishing is a dry run until FACTORY_DR
 | `factory init` | create .env, brands/ and the database |
 | `factory restore` | restore a `factory backup --archive` zip (lists first; --yes restores) |
 | `factory status` | providers, dry-run state, credentials |
-
-## More commands
-
-| Command | What it does |
-|---|---|
-| `factory handoff-pack` | export a content.json as a hand-off folder (slides, thumbnails, captions) |
-| `factory review-language` | older name for `review-gate pass <id> native_review` (records the fluent speaker) |
