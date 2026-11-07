@@ -42,5 +42,6 @@
   .thermo div{ flex:1; border-top:1px solid var(--line); font-size:6.5pt; color:#9aa59e; padding-left:4px; display:flex; align-items:center; }
   .cover-art{ flex:1; display:flex; align-items:center; justify-content:center; }
   .big-num{ font-size:46pt; font-weight:900; letter-spacing:-.03em; color:var(--green-d); line-height:1; }
+  .t44 td{ height:44px; }
   .t26 td{ height:26px; } .t28 td{ height:28px; } .t30 td{ height:30px; } .t34 td{ height:34px; }
   .thermo + table{ align-self:flex-start; }

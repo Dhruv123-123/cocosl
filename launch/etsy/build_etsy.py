@@ -27,6 +27,7 @@ sys.path.insert(0, str(ROOT / "launch" / "products"))
 
 import listings  # noqa: E402
 import printables  # noqa: E402
+import couples_pack  # noqa: E402
 import planner_2027  # noqa: E402
 import printables_more  # noqa: E402
 from products_build import build as _PB  # noqa: E402  (launch/products/build.py, under a unique module name)
@@ -34,7 +35,8 @@ node_env, wrap_guide = _PB.node_env, _PB.wrap_guide
 
 PRODUCTS_DIST = ROOT / "launch" / "products" / "dist"
 ALL_PRINTABLES = {**printables.PRINTABLES, **printables_more.MORE,
-                  "2027-budget-planner": lambda variant="Sunday-start": planner_2027.build(2027, planner_2027.VARIANTS[variant])}
+                  "2027-budget-planner": lambda variant="Sunday-start": planner_2027.build(2027, planner_2027.VARIANTS[variant]),
+                  "couples-money-date-pack": couples_pack.pages}
 SIZES = {"Letter": ("8.5in", "11in", "Letter"), "A4": ("210mm", "297mm", "A4")}
 
 RENDER_JS = r"""

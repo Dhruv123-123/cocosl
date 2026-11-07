@@ -27,6 +27,7 @@ import dinero_simple as DS  # noqa: E402
 import remesas_sheet  # noqa: E402
 import money_reset as MR  # noqa: E402
 import schedule_c_pack as SC  # noqa: E402
+import tax_organizer as TO  # noqa: E402
 
 SIZES = shop.SIZES
 
@@ -40,6 +41,7 @@ MOCK = {
     "freelancer-tax-planner-2027": ("2027 Freelancer Tax Planner", "Income, expenses, mileage and the four estimated-tax dates, in 25 printable pages."),
     "freelancer-tax-sheet-2027": ("2027 Freelancer Tax Tracker", "A Google Sheets and Excel tracker that adds itself up by month, quarter and category."),
     "freelancer-tax-bundle-2027": ("2027 Freelancer Tax Bundle", "The 25-page printable planner and the spreadsheet tracker together."),
+    "tax-season-organizer-2026": ("2026 Tax Season Organizer", "Forms, totals, payments and a filing tracker for the 2026 return, in 9 pages."),
     "presupuesto-familiar": ("Presupuesto Familiar", "Lo que entra, lo que sale y un número semanal para toda la casa, en 12 páginas."),
     "registro-de-envios": ("El Registro de Envíos", "Compara antes de enviar y guarda cada envío. Para imprimir y en Google Sheets."),
     "construir-credito": ("Construye tu Crédito", "Tus primeros 12 meses paso a paso, también con ITIN, en 8 páginas."),
@@ -195,6 +197,14 @@ def ten99_jobs(out: Path, work: Path) -> tuple[list[dict], dict[str, list[Path]]
         pdf = d / f"2027-Freelancer-Tax-Planner-{size}.pdf"
         jobs.append({"src": str(src), "pdf": str(pdf)})
         files.setdefault("freelancer-tax-planner-2027", []).append(pdf)
+    for size, (w, h, pn) in SIZES.items():
+        d = out / TO.SLUG
+        d.mkdir(parents=True, exist_ok=True)
+        src = work / f"organizer-{size}.html"
+        src.write_text(doc(B, [("page", p) for p in TO.pages()], "2026 Tax Season Organizer", w, h, pn))
+        pdf = d / f"2026-Tax-Season-Organizer-{size}.pdf"
+        jobs.append({"src": str(src), "pdf": str(pdf)})
+        files.setdefault(TO.SLUG, []).append(pdf)
     d = out / "freelancer-tax-sheet-2027"
     d.mkdir(parents=True, exist_ok=True)
     src = work / "sheet-start.html"

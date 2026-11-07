@@ -279,3 +279,16 @@ DIGITAL = [
               "Tap Home, then your starting month.", "Write in the dates and plan the month."]),
 ]
 
+# Seasonal: Valentine's / couples (live early February). Not in the undated bundles, which keep the 40 core printables.
+SEASONAL = [
+    dict(slug="couples-money-date-pack", pool="budget", price=6.00, name="Couples Money Date Pack", season="Valentine's Day",
+         title="Couples Money Date Printable, Valentine's Budget Planner for Two, Shared Goals and Savings Tracker",
+         tags=["couples budget", "money date", "couples planner", "valentines printable", "budget for two",
+               "shared goals", "couples finance"],
+         hook="A money date night for two: an agenda, side-by-side money stories, shared goals, who pays what, a joint budget and a $500 heart tracker to colour together.",
+         get=["9 pages: start here, money date agenda, our money stories (side by side), shared goals, who pays what, joint monthly budget",
+              "Save together: 50 hearts at $10 each, $500 in all",
+              "A date night log and a year of monthly check-ins"],
+         how=["Pick a night for your first money date.", "Print the agenda and the money stories page.",
+              "Choose up to three shared goals.", "Colour a heart each time you save $10 together."]),
+]

@@ -1,6 +1,6 @@
 # Products catalog: every product, every brand
 
-One sheet to list from. **121 listings** (Money Made Simple 94, Scam Decoded 8, 1099 Money 6, Dinero Simple 13). Nothing in this list has been uploaded, listed or
+One sheet to list from. **124 listings** (Money Made Simple 95, Scam Decoded 8, 1099 Money 8, Dinero Simple 13). Nothing in this list has been uploaded, listed or
 submitted anywhere.
 
 - **Files** and **Listing copy** paths are inside the project files folder `content-factory/` (the upload-ready copies).
@@ -13,7 +13,7 @@ submitted anywhere.
 - Regenerate after changing a price or name: `python launch/catalog/build_catalog.py`. Also as `PRODUCTS_CATALOG.csv`.
 
 
-## Money Made Simple (94)
+## Money Made Simple (95)
 
 | Product | Platform | Price | Files | Listing copy | Launch | Date | Notes |
 |---|---|---|---|---|---|---|---|
@@ -60,6 +60,7 @@ submitted anywhere.
 | Side Hustle Income Tracker | Etsy | $3 | `etsy/side-hustle-income-tracker/` | `etsy/side-hustle-income-tracker/LISTING.md` | Week of Nov 9; featured from Jan 25 | calendar | Tax-season item. From Jan 1 2027: $4 (scheduled). |
 | 2027 Budget Planner | Etsy | $12 | `etsy/2027-budget-planner/` | `etsy/2027-budget-planner/LISTING.md` | Week of Nov 9 (list first) | calendar | Dated: 4 PDFs (Sun/Mon start x Letter/A4). Drop the price after Jan 31. |
 | Digital Budget Planner (undated, hyperlinked) | Etsy | $12 | `etsy/digital-budget-planner/` | `etsy/digital-budget-planner/LISTING.md` | Week of Dec 7, for the January peak | proposed | Digital planner for tablet note apps: 2 PDFs (iPad portrait, landscape), 47 pages, about 1,000 links checked by the build. Open it in GoodNotes once and tap a few tabs before listing. |
+| Couples Money Date Pack | Etsy | $6 | `etsy/couples-money-date-pack/` | `etsy/couples-money-date-pack/LISTING.md` | Week of Jan 25 2027, live by Feb 1 for Valentine's Day (Feb 14) | proposed | Seasonal, so it isn't in the undated bundles. Swap it to the second featured slot Feb 1-14. |
 | Savings Challenge Pack (12 printables) | Etsy | $8 | `etsy/savings-challenge-pack/` | `etsy/savings-challenge-pack/LISTING.md` | Week of Nov 9; code BF25 Nov 27-30 | calendar | Black Friday: code only, no crossed-out price (see the BFCM section). From Jan 1 2027: $10 (scheduled). |
 | Debt Payoff Printable Bundle (5 printables) | Etsy | $8 | `etsy/debt-payoff-bundle/` | `etsy/debt-payoff-bundle/LISTING.md` | Week of Nov 16 | proposed | Goal bundle for the site's /shop/debt/ page. Full price; BF25 stays on the three launch bundles. |
 | First Paycheck Budget Bundle (6 printables) | Etsy | $9 | `etsy/first-paycheck-budget-bundle/` | `etsy/first-paycheck-budget-bundle/LISTING.md` | Week of Nov 16 | proposed | Goal bundle for the site's /shop/first-job/ page. Full price; BF25 stays on the three launch bundles. |
@@ -125,14 +126,16 @@ submitted anywhere.
 | Seniors pack group print license | Gumroad | $49 (+$19 per extra site) | `scam-decoded/products/seniors-pack/` | `scam-decoded/products/seniors-pack/GROUP_LICENSE_LISTING.md` | When the first talk is booked | proposed | PR #9. For libraries and senior centers. |
 | Spot It, Stop It team training pack | Gumroad | $99 | `scam-decoded/products/team-training/` | `scam-decoded/products/team-training/LISTING.md` | Before the B2B outreach starts (Tue Nov 10) | proposed | PR #9. Code TEAMLAUNCH. |
 
-## 1099 Money (6)
+## 1099 Money (8)
 
 | Product | Platform | Price | Files | Listing copy | Launch | Date | Notes |
 |---|---|---|---|---|---|---|---|
 | 2027 Freelancer Tax-Year Planner (printable) | Etsy + Gumroad | $12 | `brands/1099-money/freelancer-tax-planner-2027/` | `brands/1099-money/freelancer-tax-planner-2027/LISTING.md` | Week of Nov 16, with the brand launch (dated 2027: list early) | proposed | Sold as the paper companion to the Quarterly Tax Tracker (the brand's spreadsheet). My sheet and bundle were merged away (see Merged). Needs the brand's own Etsy shop (or a section in an existing one). |
+| 2026 Tax Season Organizer (printable) | Etsy + Gumroad | $8 | `brands/1099-money/tax-season-organizer-2026/` | `brands/1099-money/tax-season-organizer-2026/LISTING.md` | Week of Jan 4 2027 (forms arrive by Feb 1; returns due Apr 15) | proposed | For the 2026 return filed Jan-Apr 2027, so it doesn't overlap the 2027 Tax-Year Planner (which runs the year ahead). Trackers and labels only, so it's fine on Etsy. Goes with 1099 Money's January push; 1099 Money is launch wave 2. Needs the brand's own Etsy shop (or a section in an existing one). |
 | Schedule C Setup Pack for TaxHacker | Gumroad | $12 | `brands/1099-money-taxhacker/schedule-c-setup-pack/` | `brands/1099-money-taxhacker/schedule-c-setup-pack/LISTING.md` | After a live TaxHacker test; target week of Jan 4 (year-end packets and Q4 estimates) | proposed | Etsy's 22 Oct 2026 rule bans AI-generated functional guides (instructions buyers rely on must be the seller's own work), so this guide is sold on Gumroad only. BLOCKER before listing: install TaxHacker 0.8.5 with made-up receipts, add these categories and fields, run 30 sample receipts through it, export the CSV and paste it into the packet. Fix any prompt that sorts badly, and confirm the menu names in the guide. Until then it is untested in a live install. Only for TaxHacker users (a self-hosted receipt app, MIT, not affiliated): categories, fields and a sheet that reads its CSV. Points non-users to the Quarterly Tax Tracker. |
 | The Quarterly Tax Tracker | Gumroad | $15 | `1099-money/product-quarterly-tax-tracker/` | `1099-money/product-quarterly-tax-tracker/LISTING.md` | Mon Nov 16 (brand launch day 1) | proposed | PR #10. Code LAUNCH ($9 for 7 days). Scouting suggests $17 for the 2027 edition from Jan 1 (PR #10 decides). |
 | The Rate & Contract Kit | Gumroad | $29 | `1099-money/products/rate-contract-kit/` | `1099-money/products/rate-contract-kit/LISTING.md` | Week of Nov 16 | proposed | PR #10. Codes LAUNCH, TRACKER5, KIT29. |
+| The Freelancer Tax Kit | Gumroad | [PRICE] (PR #10 suggests $19-$24) | `1099-money/products/tax-kit/` | `1099-money/products/tax-kit/LISTING.md` | With the brand launch (wave 2) | proposed | PR #10. Tracker plus the tax calendar, checklist and jar tracker; Gumroad only (has guides). Code TAXKIT15 for tracker buyers. |
 | The Freelancer Money Bundle | Gumroad | $49 | `1099-money/products/bundle/` | `1099-money/products/bundle/LISTING.md` | Week of Nov 16 | proposed | PR #10. Codes LAUNCH, TRACKER15, KIT29. Scouting suggests $39, or $49 with a "worth $59 separately" line, from Jan 1 (PR #10 decides). |
 | The Quarterly Tax Tracker | Etsy | $15 | `etsy/1099-money/quarterly-tax-tracker/files/` | `etsy/1099-money/quarterly-tax-tracker/LISTING-ETSY.md` | Week of Nov 16 | proposed | PR #10. Etsy edition. |
 

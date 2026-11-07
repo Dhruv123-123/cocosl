@@ -10,7 +10,7 @@ relative to), so it covers the products from every branch, not just this one. Fo
 A listing whose folder is missing is marked MISSING rather than dropped, so a gap is visible.
 
 Order:
-- Sitting 1, Gumroad, one brand account at a time (Money Made Simple, 1099 Money, Scam Decoded): the storefront's
+- Sitting 1, Gumroad, one brand account at a time (Money Made Simple, Scam Decoded, then 1099 Money): the storefront's
   section order, except that a product's cross-sell target goes up first, so its receipt link can point at a live page.
 - Sitting 2, Etsy (Money Made Simple shop): the dated 2027 planner first, then the single printables, then the bundles
   (a bundle's "bought separately" line needs its parts live).
@@ -35,7 +35,20 @@ import listings as L  # noqa: E402
 DEFAULT_ROOT = Path("/mnt/project-files/content-factory")
 IMG = (".png", ".jpg", ".jpeg", ".gif", ".mp4")
 FILES = (".pdf", ".xlsx", ".zip", ".csv", ".json", ".epub", ".docx")
-GUMROAD_BRANDS = ["Money Made Simple", "1099 Money", "Scam Decoded"]
+GUMROAD_BRANDS = ["Money Made Simple", "Scam Decoded", "1099 Money"]  # wave order
+# Launch waves from scouting's two-brand plan (PR #2, research/scouting/two-brand-launch-plan.md): MMS and Scam Decoded
+# first, 1099 Money once the brand-3 gates pass (week 8 at the earliest), Dinero Simple after a paid Spanish review.
+WAVES = {"Money Made Simple": 1, "Scam Decoded": 1, "1099 Money": 2, "Dinero Simple": 3}
+WAVE_WHEN = {1: "now (MMS week 0, Scam Decoded week 2)", 2: "after the brand-3 gates pass (week 8, about Jan 10 2027)",
+             3: "after a paid Spanish review"}
+# Week each wave-1 group goes up, per the two-brand plan (dates assume the merges on Mon Nov 9 2026).
+WAVE1_STEPS = [("Money Made Simple", "Gumroad", "Week 0 (Nov 9): Money Made Simple on Gumroad"),
+               ("Scam Decoded", "Gumroad", "Week 2 (Nov 23): Scam Decoded on Gumroad"),
+               ("Money Made Simple", "Etsy", "Week 4 (Dec 7): the Money Made Simple Etsy shop")]
+
+
+def wave(r: dict) -> int:
+    return WAVES.get(r["brand"], 3)
 LATER_PRODUCTS = {"The January Reset Bundle": "Create Dec 30, publish Jan 1, unpublish Feb 1 (JANUARY_RESET.md)."}
 
 
@@ -171,7 +184,7 @@ def title_and_tags(path: Path) -> tuple[str, str]:
 CHECKLIST = """## Before sitting 1 (10 minutes)
 
 - [ ] Merge the PRs in the go-live safe order, then re-run `python launch/storefront/launch_kit.py` so this kit matches.
-- [ ] Have the brand email logins ready: one Gumroad account per brand (Money Made Simple, 1099 Money, Scam Decoded).
+- [ ] Have the brand email logins ready: one Gumroad account per brand (Money Made Simple, Scam Decoded, then 1099 Money for wave 2).
 - [ ] Open this file and the project files folder side by side.
 
 ## Sitting 1: Gumroad (about 3 hours: 39 listings at 4 to 5 minutes each)
@@ -217,7 +230,7 @@ def build(root: Path, rows: list[dict] | None = None) -> tuple[dict[str, str], l
     for fname, sitting, items, plat in (("SITTING_1_GUMROAD.md", "Sitting 1: Gumroad", g, "Gumroad"),
                                         ("SITTING_2_ETSY.md", "Sitting 2: Etsy (Money Made Simple shop)", e, "Etsy")):
         out = [f"# {sitting}\n", f"{len(items)} listings, in upload order. Checklist and the rest: `LAUNCH_KIT.md`.\n"]
-        index.append(f"\n## {sitting} ({len(items)} listings, `{fname}`)\n\n| # | Brand | Product | Price | Listing copy |\n|---|---|---|---|---|")
+        index.append(f"\n## {sitting} ({len(items)} listings, `{fname}`)\n\n| # | Wave | Brand | Product | Price | Listing copy |\n|---|---|---|---|---|---|")
         brand = None
         for r in items:
             if r["brand"] != brand:
@@ -228,10 +241,10 @@ def build(root: Path, rows: list[dict] | None = None) -> tuple[dict[str, str], l
             ok = (root / r["listing"]).exists()
             if not ok:
                 missing.append(r["product"])
-            index.append(f"| {n} | {r['brand']} | {r['product']} | {r['price']} | `{r['listing']}`{'' if ok else ' **MISSING**'} |")
+            index.append(f"| {n} | {wave(r)} | {r['brand']} | {r['product']} | {r['price']} | `{r['listing']}`{'' if ok else ' **MISSING**'} |")
             imgs, fl = folder_parts(root, r["files"].split(" ")[0])
             title, tags = title_and_tags(root / r["listing"])
-            csv_rows.append(dict(n=n, sitting=plat, brand=r["brand"], product=r["product"], price=r["price"],
+            csv_rows.append(dict(n=n, wave=wave(r), sitting=plat, brand=r["brand"], product=r["product"], price=r["price"],
                                  title=title, tags=tags, images="; ".join(imgs), files="; ".join(fl),
                                  listing="content-factory/" + r["listing"], done=""))
         files[fname] = "\n".join(out) + "\n"
@@ -240,15 +253,39 @@ def build(root: Path, rows: list[dict] | None = None) -> tuple[dict[str, str], l
             "its reason. The copy, images and files for each listing are in `SITTING_1_GUMROAD.md` and "
             "`SITTING_2_ETSY.md`; `launch_kit.csv` has one row per listing with a `done` column. Built from "
             "`PRODUCTS_CATALOG.md` and the upload-ready copies in the project files by `launch/storefront/launch_kit.py`. "
-            "Nothing has been uploaded or published.\n"]
+            "Nothing has been uploaded or published.\n",
+            "**Waves** (scouting's two-brand plan): " + "; ".join(f"wave {w}, {', '.join(b for b, x in WAVES.items() if x == w)}: {WAVE_WHEN[w]}"
+                                                    for w in (1, 2, 3)) + ". Wave 1 only, in upload order: `WAVE1_LISTINGS.md`.\n"]
     if missing:
         head.append(f"> **Missing from the project files:** {', '.join(missing)}. Copy them in and rebuild.\n")
     head.append(CHECKLIST)
     head += index
-    head.append(f"\n## Later ({len(later)})\n\n| Brand | Product | Platform | Price | Why not yet |\n|---|---|---|---|---|")
-    head += [f"| {r['brand']} | {r['product']} | {r['platform']} | {r['price']} | {r['why']} |" for r in later]
+    head.append(f"\n## Later ({len(later)})\n\n| Wave | Brand | Product | Platform | Price | Why not yet |\n|---|---|---|---|---|---|")
+    head += [f"| {wave(r)} | {r['brand']} | {r['product']} | {r['platform']} | {r['price']} | {r['why']} |" for r in later]
     files["LAUNCH_KIT.md"] = "\n".join(head) + "\n"
+    files["WAVE1_LISTINGS.md"] = wave1(csv_rows, later)
     return files, csv_rows
+
+
+def wave1(csv_rows: list[dict], later: list[dict]) -> str:
+    """Only the wave 1 listings (MMS and Scam Decoded), in the order to upload them."""
+    out = ["# Wave 1 listings: Money Made Simple and Scam Decoded\n",
+           "The listings to put up first, in order, from scouting's two-brand plan (PR #2, "
+           "`research/scouting/two-brand-launch-plan.md`). The copy, images and files for each are under the same number "
+           "(\"kit #\") in `SITTING_1_GUMROAD.md` or `SITTING_2_ETSY.md`. 1099 Money is wave 2 and Dinero Simple wave 3: "
+           "see `LAUNCH_KIT.md`. Dates assume the merges on Mon Nov 9 2026; if that slips, slide them all. "
+           "Nothing has been uploaded.\n"]
+    k = 0
+    for brand, plat, title in WAVE1_STEPS:
+        rows = [r for r in csv_rows if r["brand"] == brand and r["sitting"] == plat]
+        out.append(f"\n## {title} ({len(rows)})\n\n| # | Kit # | Product | Price |\n|---|---|---|---|")
+        for r in rows:
+            k += 1
+            out.append(f"| {k} | {r['n']} | {r['product']} | {r['price']} |")
+    held = [r for r in later if wave(r) == 1]
+    out.append(f"\n## Wave 1, but not yet ({len(held)})\n\n| Product | Platform | Price | Why not yet |\n|---|---|---|---|")
+    out += [f"| {r['product']} ({r['brand']}) | {r['platform']} | {r['price']} | {r['why']} |" for r in held]
+    return "\n".join(out) + "\n"
 
 
 def main() -> int:

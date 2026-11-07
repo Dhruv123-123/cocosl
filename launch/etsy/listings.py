@@ -322,6 +322,13 @@ def _more_listings() -> list[dict]:
         out.append(dict(slug=d["slug"], kind="printable", digital=True, name=d["name"], price=d["price"], file_stem=d["file_stem"],
                         title=d["title"], tags=tags(d["tags"], d["pool"]), hook=d["hook"], get=d["get"], how=d["how"],
                         variants=d["variants"], hero=[2, 11, 10], grid=[2, 4, 8, 10, 11, 12, 13, 45]))
+    import couples_pack
+    for d in M.SEASONAL:
+        n = len(couples_pack.pages())
+        out.append(dict(slug=d["slug"], kind="printable", seasonal=d["season"], name=d["name"], price=d["price"],
+                        file_stem=re.sub(r"[^A-Za-z0-9]+", "-", d["name"]).strip("-"), title=d["title"],
+                        tags=tags(d["tags"], d["pool"]), hook=d["hook"], get=d["get"] + ["US Letter and A4 PDFs"],
+                        how=d["how"], hero=[7, 2, 3], grid=list(range(1, n + 1))))
     prices = {x["slug"]: x["price"] for x in LISTINGS + out}
     names = {x["slug"]: x["name"] for x in LISTINGS + out}
     for d in M.BUNDLES:

@@ -321,3 +321,5 @@ for _it in LISTINGS:
     _it["category"] = CAT if _it["kind"] != "sheet" else "Paper & Party Supplies > Paper > Calendars & Planners (digital)"
     _it["description"] = __import__("shop").etsy_description(__import__("shop").opener(_it) + " " + _it["hook"], _GET[_it["kind"]], _HOW[_it["kind"]], GOOD, DISCLOSURE)
     _it["gumroad"] = _gumroad(_it["hook"], _GET[_it["kind"]], _it["price"], _FILES[_it["kind"]])
+
+import tax_organizer  # noqa: E402,F401  (adds the 2026 Tax Season Organizer to LISTINGS)

@@ -19,6 +19,7 @@ ETSY_NEXT = {
     "Printable Budget Binder (all 10 printables)": ("2027 Budget Planner", "The binder is undated; the 2027 planner runs the year date by date."),
     "Savings Challenge Pack (12 printables)": ("Printable Budget Binder (all 10 printables)", "The budget pages that find the money for the challenges."),
     "Digital Budget Planner (undated, hyperlinked)": ("Savings Challenge Pack (12 printables)", "The 12 challenge pages open in GoodNotes too: add them to the planner."),
+    "Couples Money Date Pack": ("Printable Budget Binder (all 10 printables)", "The full budget binder for the household you now plan together."),
     "Debt Payoff Printable Bundle (5 printables)": ("Printable Budget Binder (all 10 printables)", "The budget pages that find the extra payment each month."),
     "First Paycheck Budget Bundle (6 printables)": ("Savings Challenge Pack (12 printables)", "Once each paycheck has a job, make saving a game."),
     "Freelance and Side Income Budget Bundle (7 printables)": ("2027 Budget Planner", "A dated year for planning around the slow months."),

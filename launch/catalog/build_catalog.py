@@ -50,6 +50,9 @@ def etsy_rows() -> list[dict]:
         base = f"etsy/{s}/"
         if it.get("dated"):
             date, src, note = "Week of Nov 9 (list first)", "calendar", "Dated: 4 PDFs (Sun/Mon start x Letter/A4). Drop the price after Jan 31."
+        elif it.get("seasonal"):
+            date, src, note = ("Week of Jan 25 2027, live by Feb 1 for Valentine's Day (Feb 14)", "proposed",
+                               "Seasonal, so it isn't in the undated bundles. Swap it to the second featured slot Feb 1-14.")
         elif it.get("digital"):
             date, src, note = "Week of Dec 7, for the January peak", "proposed", ("Digital planner for tablet note apps: 2 PDFs (iPad "
                                                                               "portrait, landscape), 47 pages, about 1,000 links checked by the build. "
@@ -160,6 +163,9 @@ def brandshop_rows() -> list[dict]:
         "money-reset-30-day": "A guided month of daily tasks, unlike the trackers (No-Spend Challenge) and the guide kits; leads into The 20-Minute Budget.",
         "schedule-c-setup-pack": ("Only for TaxHacker users (a self-hosted receipt app, MIT, not affiliated): categories, fields and a "
                                   "sheet that reads its CSV. Points non-users to the Quarterly Tax Tracker."),
+        "tax-season-organizer-2026": ("For the 2026 return filed Jan-Apr 2027, so it doesn't overlap the 2027 Tax-Year Planner "
+                                      "(which runs the year ahead). Trackers and labels only, so it's fine on Etsy. Goes with "
+                                      "1099 Money's January push; 1099 Money is launch wave 2."),
         "paquete-familia": "Different from El Paquete Dinero Simple ($29, the four guide kits): this bundles the three printables.",
     }
     for key, mod, plat in (("scam-decoded", SD, "Etsy + Gumroad"), ("1099-money", T, "Etsy + Gumroad"), ("dinero-simple", DS, "Etsy + Gumroad"),
@@ -175,8 +181,9 @@ def brandshop_rows() -> list[dict]:
                 note = ("NATIVE REVIEW PENDING: sign brands/dinero-simple/REVIEW_CHECKLIST_ES.md first. " + note).strip()
             if key in ("scam-decoded", "1099-money") and "Etsy" in plat:
                 note = (note + " Needs the brand's own Etsy shop (or a section in an existing one).").strip()
+            dd = ("Week of Jan 4 2027 (forms arrive by Feb 1; returns due Apr 15)" if it["slug"] == "tax-season-organizer-2026" else d)
             out.append(row(mod.BRAND.name, it["name"], plat, money(it["price"]), f"brands/{key}/{it['slug']}/",
-                           f"brands/{key}/{it['slug']}/LISTING.md", d, src, note))
+                           f"brands/{key}/{it['slug']}/LISTING.md", dd, src, note))
     return out
 
 
@@ -208,6 +215,9 @@ OTHER_BRANCHES = [
      "1099-money/product-quarterly-tax-tracker/LISTING.md", "Mon Nov 16 (brand launch day 1)", "proposed", "PR #10. Code LAUNCH ($9 for 7 days). Scouting suggests $17 for the 2027 edition from Jan 1 (PR #10 decides)."),
     ("1099 Money", "The Rate & Contract Kit", "Gumroad", "$29", "1099-money/products/rate-contract-kit/",
      "1099-money/products/rate-contract-kit/LISTING.md", "Week of Nov 16", "proposed", "PR #10. Codes LAUNCH, TRACKER5, KIT29."),
+    ("1099 Money", "The Freelancer Tax Kit", "Gumroad", "[PRICE] (PR #10 suggests $19-$24)", "1099-money/products/tax-kit/",
+     "1099-money/products/tax-kit/LISTING.md", "With the brand launch (wave 2)", "proposed",
+     "PR #10. Tracker plus the tax calendar, checklist and jar tracker; Gumroad only (has guides). Code TAXKIT15 for tracker buyers."),
     ("1099 Money", "The Freelancer Money Bundle", "Gumroad", "$49", "1099-money/products/bundle/",
      "1099-money/products/bundle/LISTING.md", "Week of Nov 16", "proposed", "PR #10. Codes LAUNCH, TRACKER15, KIT29. Scouting suggests $39, or $49 with a \"worth $59 separately\" line, from Jan 1 (PR #10 decides)."),
     ("1099 Money", "The Quarterly Tax Tracker", "Etsy", "$15", "etsy/1099-money/quarterly-tax-tracker/files/",

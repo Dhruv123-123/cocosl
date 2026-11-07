@@ -74,7 +74,8 @@ BRANDS = {
                "hit the four estimated-tax dates, price your work and get paid. Dates follow the IRS weekend and holiday "
                "rule; check irs.gov and your state. Educational, not tax, legal or financial advice. Made with the help of "
                "AI tools and checked by a person."),
-        sections=[("Quarterly taxes", ["The Quarterly Tax Tracker", "2027 Freelancer Tax-Year Planner (printable)"]),
+        sections=[("Quarterly taxes", ["The Quarterly Tax Tracker", "2027 Freelancer Tax-Year Planner (printable)",
+                                       "2026 Tax Season Organizer (printable)", "The Freelancer Tax Kit"]),
                   ("Get paid", ["The Rate & Contract Kit"]),
                   ("For TaxHacker users", ["Schedule C Setup Pack for TaxHacker"]),
                   ("Everything", ["The Freelancer Money Bundle"])],
@@ -143,9 +144,11 @@ CROSS_SELL = {
     "Seniors pack group print license": ("Spot It, Stop It team training pack", "Staff training to go with the handouts.", "Email", "TEAMLAUNCH (first 14 days)"),
     # 1099 Money (1099-money/products/UPSELL_PATH.md)
     "The Quarterly Tax Tracker": ("The Freelancer Money Bundle", "Adds the rate, contract and invoice kit and the email scripts.", "Checkout upsell ($34 more)", "TRACKER15"),
+    "The Freelancer Tax Kit": ("The Freelancer Money Bundle", "Adds the rate, contract and invoice kit and the email scripts.", "Email", ""),
     "The Rate & Contract Kit": ("The Freelancer Money Bundle", "Adds the tax tracker and the email scripts.", "Checkout upsell ($20 more)", "KIT29"),
     "The Freelancer Money Bundle": ("2027 Freelancer Tax-Year Planner (printable)", "A paper year-planner beside the spreadsheet: dates, months and the tax-time checklist.", "Email", ""),
     "Schedule C Setup Pack for TaxHacker": ("The Quarterly Tax Tracker", "The packet totals the year; the tracker sets aside tax as each payment lands.", "Receipt note", ""),
+    "2026 Tax Season Organizer (printable)": ("2027 Freelancer Tax-Year Planner (printable)", "Last year's return is done; the planner keeps 2027 ready for next April.", "Receipt note", ""),
     "2027 Freelancer Tax-Year Planner (printable)": ("The Quarterly Tax Tracker", "The planner is for the desk; the tracker does the sums.", "Receipt note", ""),
     # Dinero Simple (dinero-simple product pages and LISTING files)
     "El Kit para Recortar Gastos": ("El Presupuesto de 20 Minutos", "Lo que recortas necesita un plan.", "Receipt note", "RECORTE5"),

@@ -335,3 +335,33 @@ def test_goal_bundles_and_launch_kit(tmp_path):
     bc = next(r for r in g if r["product"] == "The Bill Cut Kit")
     assert bc["images"] == "mockup-01-clean.png; mockup-02-hero.png; cover.png" and bc["title"] == "The Bill Cut Kit"
     assert "MISSING" in docs["LAUNCH_KIT.md"] and "BLOCKER before listing" in docs["LAUNCH_KIT.md"]
+
+
+def test_tax_organizer_dates_and_listing():
+    import shop
+    import tax_organizer as TO
+    import ten99 as T
+    from datetime import date
+    assert TO.LISTING in T.LISTINGS and shop.validate([TO.LISTING]) == []
+    d = dict((t, d) for d, t in TO.key_dates())
+    assert d["Q4 2026 estimated tax"] == date(2027, 1, 15)
+    assert date(2027, 2, 1) in [x for x, _ in TO.key_dates()]          # Jan 31 2027 is a Sunday
+    assert date(2027, 2, 16) in [x for x, _ in TO.key_dates()]         # Feb 15 2027 is Presidents' Day
+    assert date(2027, 4, 15) in [x for x, _ in TO.key_dates()]
+    assert len(TO.pages()) == 9 and "guide" not in TO.LISTING["name"].lower()
+    assert "AI tools" in TO.LISTING["description"] and "not tax" in TO.LISTING["description"]
+
+
+def test_launch_kit_waves():
+    sys.path[:0] = [str(SHOP.parent / "catalog"), str(SHOP.parent / "storefront")]
+    import build_catalog as C
+    import launch_kit as K
+    import tempfile
+    from pathlib import Path
+    docs, csv_rows = K.build(Path(tempfile.mkdtemp()), C.all_rows())
+    assert {r["brand"]: r["wave"] for r in csv_rows}["1099 Money"] == 2
+    w1 = docs["WAVE1_LISTINGS.md"]
+    assert "1099 Money" not in w1.split("## Wave 1, but not yet")[0].split("wave 2")[1]
+    assert w1.index("Week 0") < w1.index("Week 2") < w1.index("Week 4")
+    g = [r["brand"] for r in csv_rows if r["sitting"] == "Gumroad"]
+    assert g.index("Scam Decoded") < g.index("1099 Money")

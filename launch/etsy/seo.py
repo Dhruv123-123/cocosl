@@ -118,6 +118,10 @@ add("digital-budget-planner", "Digital Budget Planner, Undated Hyperlinked iPad 
      "undated planner", "budget planner", "finance planner", "monthly budget", "goodnotes template", "budget tracker",
      "money planner"], planner_type="Budget", dated="Undated", **{"Paper size": "iPad portrait + landscape (PDF)",
                                                                  "Software": "GoodNotes, Notability, any PDF note app"})
+add("couples-money-date-pack", "Couples Money Date Printable, Valentine's Budget Planner for Two, Shared Goals and Savings Tracker",
+    ["couples budget", "money date", "couples planner", "valentines printable", "budget for two", "shared goals",
+     "couples finance", "valentines gift", "savings tracker", "joint budget", "marriage planner", "relationship goals",
+     "budget printable"], planner_type="Budget", dated="Undated", **{"Holiday": "Valentine's Day"})
 add("mega-budget-bundle", "Mega Budget Planner Bundle, 40 Printable Finance Pages: Budget, Savings, Debt Trackers",
     ["budget bundle", "budget binder", "budget planner", "finance planner", "printable bundle", "savings challenge",
      "debt tracker", "bill tracker", "sinking funds", "cash stuffing", "expense tracker", "money planner",
