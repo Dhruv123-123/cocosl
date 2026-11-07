@@ -32,7 +32,7 @@ const checks = [
   ['/money-calculators/roth-vs-traditional/', '#result .big'],
   ['/money-calculators/es/', '.tiles'],
   ['/money-calculators/compound-interest/?embed=1', '.embed-credit'],
-  ['/money-calculators/embed/', '#e-preview', async (page) => { await page.waitForSelector('#e-preview iframe'); }],
+  ['/money-calculators/embed/', '#embed-form', async (page) => { await page.waitForSelector('#e-preview iframe'); }],
   ['/money-calculators/es/debt-payoff/', '#result .big'],
   ['/money-calculators/es/compound-interest/', '#result .big'],
   ['/money-calculators/es/credit-card-minimum/', '#result .big'],
