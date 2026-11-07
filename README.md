@@ -23,7 +23,7 @@ factory demo                      # renders sample posts offline, no keys needed
 factory serve                     # dashboard at http://127.0.0.1:8000
 ```
 
-Then read **`launch/LAUNCH_DAY.md`** (the plan for day one) and **`docs/CREDENTIALS.md`** (the steps
+New here? **`docs/QUICKSTART.md`** gets you from clone to first scheduled post in 15 minutes. Then read **`launch/LAUNCH_DAY.md`** (the plan for day one) and **`docs/CREDENTIALS.md`** (the steps
 only you can do: payouts, accounts, API keys).
 
 ## What's in the box
