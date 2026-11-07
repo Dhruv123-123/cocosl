@@ -38,7 +38,7 @@ def _articles():
     return out
 
 
-AFFILIATE = _articles()
+AFFILIATE = [a for a in _articles() if a[0] not in EXISTING]  # the site PR's own 13 have their own tests
 
 
 def test_twenty_affiliate_articles():
