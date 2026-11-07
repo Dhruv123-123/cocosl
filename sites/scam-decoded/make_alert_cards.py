@@ -15,9 +15,23 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
 
-import build as B
-
 HERE = Path(__file__).resolve().parent
+
+
+def site_build():
+    """The site's build.py under its own module name, so it never shadows another site's `build` module."""
+    import importlib.util
+    import sys
+    name = "scam_decoded_site_build"
+    if name not in sys.modules:
+        spec = importlib.util.spec_from_file_location(name, HERE / "build.py")
+        mod = importlib.util.module_from_spec(spec)
+        sys.modules[name] = mod
+        spec.loader.exec_module(mod)
+    return sys.modules[name]
+
+
+B = site_build()
 OUT = HERE.parent.parent / "launch" / "scam-decoded" / "alert-cards"
 W, H, M = 1080, 1350, 64
 NAVY, CREAM, TEAL, AMBER, MUTED, RED, PINK, INK = ("#0d1b2a", "#f4f1ea", "#2ec4b6", "#ff9f1c", "#9fb0c0", "#d7263d",

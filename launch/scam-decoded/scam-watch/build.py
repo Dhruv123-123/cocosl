@@ -16,6 +16,7 @@ import argparse
 import datetime as dt
 import json
 import re
+import importlib.util
 import sys
 from pathlib import Path
 
@@ -27,8 +28,13 @@ FALLBACK_STEP = "**Report it** at [ReportFraud.ftc.gov](https://reportfraud.ftc.
 
 
 def alerts() -> list[dict]:
-    sys.path.insert(0, str(SITE))
-    import build as B
+    # load the site's build.py under its own name, and leave sys.path alone, so it can't shadow another `build`
+    name = "scam_decoded_site_build"
+    if name not in sys.modules:
+        spec = importlib.util.spec_from_file_location(name, SITE / "build.py")
+        sys.modules[name] = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(sys.modules[name])
+    B = sys.modules[name]
     if not B.CFG:
         B.CFG = B.load_config()
     return B.alert_items()

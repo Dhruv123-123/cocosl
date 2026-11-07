@@ -457,9 +457,12 @@ def test_how_the_scam_actually_worked_series():
     root = CONTENT.parent
     import sys
     sys.path.insert(0, str(root / "how-it-worked"))
-    from series import OUTLINE
-    from parts_4_8 import PARTS_4_8
-    from series import PARTS as P13
+    try:  # how-it-worked/ has its own build.py: don't leave it where `import build` would find it
+        from series import OUTLINE
+        from parts_4_8 import PARTS_4_8
+        from series import PARTS as P13
+    finally:
+        sys.path.remove(str(root / "how-it-worked"))
     PARTS = P13 + PARTS_4_8
     assert [o["part"] for o in OUTLINE] == list(range(1, 9))
     assert all(o["source"].startswith("https://") and ("justice.gov" in o["source"] or "ftc.gov" in o["source"]) for o in OUTLINE)
@@ -676,7 +679,12 @@ def test_scam_watch_weekly_issues_from_alert_cards():
     spec = importlib.util.spec_from_file_location("scam_watch", CONTENT.parent / "scam-watch" / "build.py")
     sw = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(sw)
+    import sys
+    had_build = sys.modules.get("build")
     issues = sw.build()
+    # the site's build.py must not shadow another site's `build` module (MMS tests import it by that name)
+    assert sys.modules.get("build") is had_build
+    assert not any(p.rstrip("/").endswith("sites/scam-decoded") for p in sys.path)
     saved = json.loads((CONTENT.parent / "scam-watch" / "issues.json").read_text())["issues"]
     assert [i["id"] for i in saved] == [i["id"] for i in issues], "issues.json is stale: run scam-watch/build.py"
     assert len(issues) >= 11 and issues[0]["send_date"] == "2026-11-16"
