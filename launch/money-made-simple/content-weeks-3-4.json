@@ -1710,7 +1710,26 @@
      "heading": "Step 5: your weekly number",
      "narration": "Line four is the one you'll actually live with. Take home pay, minus Bills, minus Funds, minus Goals. For Sam that's $3,000 minus $1,650, minus $250, minus $300, which leaves $800 a month. To turn that into a weekly number, multiply by twelve and divide by fifty-two. That's about $184 a week. Groceries, eating out, coffee, fun, a birthday drink, a random lamp: all of it comes out of $184. There are no categories inside it to police. Sam decides the trade-offs at the checkout, which is where those decisions really happen anyway. When the week's money is gone, the week is done.",
      "on_screen_text": "Line 4, Weekly: ≈ $184",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a single wallet resting on a small seven-day calendar strip. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a single wallet resting on a small seven-day calendar strip. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Sam's $3,000 take-home, four lines",
+      "labels": [
+       "Bills",
+       "Funds",
+       "Goals",
+       "Weekly spending (monthly)"
+      ],
+      "values": [
+       1650,
+       250,
+       300,
+       800
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "/mo",
+      "note": "Fictional example; $800 × 12 ÷ 52 ≈ $184 a week"
+     }
     },
     {
      "heading": "Step 6: make it automatic",
@@ -1767,7 +1786,13 @@
     "$800 x 12 / 52 = $184.62; overspend $230 - $184 = $46; $184 - $46 = $138 (arithmetic)",
     "'Bills above about 60% of take-home' is the product guide's rule of thumb, not an official standard",
     "Sam is fictional; say so on screen"
-   ]
+   ],
+   "original_element": "worked-example-chart: Bar chart of the fictional Sam's four budget lines from the video: Bills $1,650, Funds $250, Goals $300, leaving $800 a month (≈ $184 a week) (chapter \"Step 5: your weekly number\")"
+  },
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "Bar chart of the fictional Sam's four budget lines from the video: Bills $1,650, Funds $250, Goals $300, leaving $800 a month (≈ $184 a week)",
+   "chapter": "Step 5: your weekly number"
   }
  },
  {
@@ -1794,7 +1819,22 @@
      "heading": "The numbers",
      "narration": "Let's make it concrete with an emergency fund of $6,000. At a rate of 0.01% APY, which some large banks still pay on basic savings, that earns about sixty cents a year. At an illustrative 3.5% APY, the same $6,000 earns roughly $210 in a year, if the rate stays there. Add $200 a month for a year at that rate and you'd put in $2,400 and earn about forty dollars of interest on top. None of this will make you rich, and it isn't meant to. The point is that money you're keeping safe anyway shouldn't lose ground for no reason.",
      "on_screen_text": "$6,000: 60¢ vs ≈ $210",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two jars, one with a single coin and one with a modest stack, on a balance scale. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two jars, one with a single coin and one with a modest stack, on a balance scale. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Interest on $6,000 for a year",
+      "labels": [
+       "Basic savings at 0.01% APY",
+       "High-yield at 3.5% APY (illustrative)"
+      ],
+      "values": [
+       0.6,
+       210
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Illustrative rate; savings rates are variable"
+     }
     },
     {
      "heading": "APY and compounding",
@@ -1875,7 +1915,13 @@
     "Treasury bill interest is exempt from state and local income tax",
     "Savings rates generally move with the Federal Reserve's policy rate (general relationship, not exact)",
     "Confirm the affiliate HYSA is FDIC-insured with no monthly fee before posting"
-   ]
+   ],
+   "original_element": "worked-example-chart: Bar chart of a year's interest on a $6,000 emergency fund: about $0.60 at 0.01% APY vs about $210 at an illustrative 3.5% APY (chapter \"The numbers\")"
+  },
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "Bar chart of a year's interest on a $6,000 emergency fund: about $0.60 at 0.01% APY vs about $210 at an illustrative 3.5% APY",
+   "chapter": "The numbers"
   }
  }
 ]

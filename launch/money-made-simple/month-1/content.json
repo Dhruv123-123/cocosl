@@ -3251,6 +3251,24 @@
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three gold stars pinned to a board. No text, no logos, no real people."
     },
     {
+     "heading": "Worked example: Alex's December",
+     "narration": "Here's what the ten moves look like for one fictional person, Alex, who earns fifty-two thousand dollars. Alex has three hundred dollars left in a health FSA with a December thirty-first deadline, so that becomes new glasses and a first aid kit. Alex contributes four percent to the 401(k), but the match goes up to six, so the rate goes to six percent. That's about a thousand forty dollars more a year going in, and about five hundred twenty more in match. The withholding estimator says Alex is on track for a twelve-hundred-dollar refund, so Alex lowers withholding slightly. Three subscriptions Alex forgot about cost thirty-eight dollars a month. Cancelling them frees four hundred fifty-six dollars a year.",
+     "on_screen_text": "Alex: +$1,040 in · +$520 match · $456 freed",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes next to a fictional character's checklist with ticks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Alex's sinking funds",
+     "narration": "Then Alex lists next year's known costs: car registration, a hundred eighty dollars in June; a friend's wedding, six hundred in August; holiday gifts, five hundred in December. Divide each by the months until it's due. Registration is about thirty a month for six months. The wedding is seventy-five a month for eight months. Gifts are about forty-two a month for twelve. Together that's about a hundred forty-seven dollars a month in automatic transfers, and none of those three costs will be a surprise next year. Alex's three goals follow the same shape: a number, a date and an automatic action. Alex's example is fictional, but the method works with any list.",
+     "on_screen_text": "≈ $30 + $75 + $42 ≈ $147 a month",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three labelled jars filling at different speeds. No text, no logos, no real people."
+    },
+    {
+     "heading": "If you only have one hour",
+     "narration": "Short on time? Do the three moves that can't wait. The FSA deadline, because unused money is generally lost. The 401(k) rate, because this year's contributions come from this year's paychecks. And the withholding estimator, because a change in December affects January's paycheck. Everything else on the list can happen in the first week of January without costing you anything.",
+     "on_screen_text": "1 hour: FSA · 401(k) · withholding",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a clock with three small ticks. No text, no logos, no real people."
+    },
+    {
      "heading": "Deadlines",
      "narration": "Two deadlines worth remembering. 401(k) contributions for this year come from this year's paychecks, so December is your last chance. IRA and HSA contributions for this tax year can generally be made until the tax filing deadline in April. So if you want to make a Roth IRA contribution for this year, you still have a few months.",
      "on_screen_text": "Deadlines: 401(k) Dec, IRA/HSA April",
@@ -3275,7 +3293,7 @@
     "budgettemplate",
     "moneymadesimple"
    ],
-   "description": "Ten year-end money moves with real deadlines: FSA, 401(k), tax withholding, credit, subscriptions, perks, net worth, sinking funds and goals.\n\nChapters\n0:00 Intro\n0:24 1. FSA\n0:49 2. 401(k) rate\n1:15 3. Withholding\n1:41 4. Credit check\n2:06 5. Subscriptions\n2:24 6. Perks\n2:40 7. Net worth\n3:00 8. Big known costs\n3:16 9. Sinking funds\n3:40 10. Three goals\n4:03 Deadlines\n4:26 Recap\n\nExamples are hypothetical and for education only. Not financial advice.",
+   "description": "Ten year-end money moves with real deadlines: FSA, 401(k), tax withholding, credit, subscriptions, perks, net worth, sinking funds and goals.\n\nChapters\n0:00 Intro\n0:25 1. FSA\n0:51 2. 401(k) rate\n1:17 3. Withholding\n1:45 4. Credit check\n2:10 5. Subscriptions\n2:29 6. Perks\n2:46 7. Net worth\n3:07 8. Big known costs\n3:24 9. Sinking funds\n3:48 10. Three goals\n4:12 Worked example: Alex's December\n5:01 Alex's sinking funds\n5:47 If you only have one hour\n6:13 Deadlines\n6:38 Recap\n\nExamples are hypothetical and for education only. Not financial advice.",
    "thumbnail_text": "10 moves before Jan 1",
    "sources": [
     "https://www.irs.gov/publications/p969",

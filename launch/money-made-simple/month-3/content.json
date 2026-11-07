@@ -3786,6 +3786,24 @@
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin dropping into a jar before a tax gate, a small coin returning. No text, no logos, no real people."
     },
     {
+     "heading": "A raise, worked out",
+     "narration": "Let's test the raise myth with numbers. Our example gets a raise from sixty thousand to seventy thousand. Taxable income goes from forty-three thousand nine hundred to fifty-three thousand nine hundred. The twelve percent bracket ends at about fifty thousand four hundred, so most of the raise is taxed at twelve percent, and only the last thirty-five hundred dollars at twenty-two. Federal income tax goes from five thousand twenty to about sixty-five hundred seventy. The ten-thousand-dollar raise adds about fifteen hundred fifty dollars of federal income tax, and they keep about eighty-four fifty of it, before payroll and state taxes. The effective rate moves from about eight point four percent to about nine point four. Nobody ends up with less money after a raise.",
+     "on_screen_text": "+$10,000 raise → +$1,550 tax · keep ≈ $8,450",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two bar stacks, one slightly taller. No text, no logos, no real people."
+    },
+    {
+     "heading": "Your own numbers in four lines",
+     "narration": "To do this for yourself, you need four lines on a piece of paper. Line one: your expected income for the year. Line two: minus the standard deduction, or your itemized deductions if they're bigger, and minus traditional 401(k) contributions. Line three: fill the brackets from the bottom, using this year's numbers from IRS dot gov. Line four: subtract any credits. Then divide line four by line one for your effective rate. It takes about ten minutes, and it makes every tax headline easier to understand.",
+     "on_screen_text": "Income − deductions → brackets → − credits",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a sheet of paper with four lines. No text, no logos, no real people."
+    },
+    {
+     "heading": "Bonuses feel different",
+     "narration": "One more thing people notice: a bonus check can look heavily taxed. That's usually withholding, not a higher tax rate. Employers often withhold a flat twenty-two percent on bonuses for federal tax. If your real bracket is twelve percent, the extra withheld generally comes back as part of your refund when you file. The tax on the bonus is the same as on any other wages.",
+     "on_screen_text": "Bonus withholding ≠ your tax rate",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bonus check with a small arrow back. No text, no logos, no real people."
+    },
+    {
      "heading": "Credits vs deductions",
      "narration": "Deductions, like that 401(k) contribution, reduce taxable income, so their value depends on your bracket. Credits reduce the tax itself, dollar for dollar. A five-hundred-dollar Saver's Credit cuts five hundred off the five thousand twenty. That's why credits like the Saver's Credit and the Earned Income Tax Credit are worth checking even when the deduction math feels small.",
      "on_screen_text": "Credits cut tax $ for $",
@@ -3822,7 +3840,7 @@
     "personalfinance20s",
     "moneymadesimple"
    ],
-   "description": "How marginal tax brackets work, with a worked $60,000 example, the raise myth, 401(k) effects, credits and withholding.\n\nChapters\n0:00 Intro\n0:33 Step 1\n0:43 Step 2\n1:03 Step 3\n1:25 Step 4\n1:45 The raise myth\n2:13 401(k) effect\n2:38 Credits vs deductions\n3:02 Withholding\n3:30 State and payroll taxes\n3:56 Recap\n\nExamples are hypothetical and for education only. Not financial or tax advice.",
+   "description": "How marginal tax brackets work, with a worked $60,000 example, the raise myth, 401(k) effects, credits and withholding.\n\nChapters\n0:00 Intro\n0:34 Step 1\n0:45 Step 2\n1:05 Step 3\n1:28 Step 4\n1:49 The raise myth\n2:18 401(k) effect\n2:44 A raise, worked out\n3:35 Your own numbers in four lines\n4:11 Bonuses feel different\n4:39 Credits vs deductions\n5:04 Withholding\n5:33 State and payroll taxes\n6:00 Recap\n\nExamples are hypothetical and for education only. Not financial or tax advice.",
    "thumbnail_text": "Brackets, real math",
    "sources": [
     "https://www.irs.gov/newsroom",
@@ -3896,6 +3914,30 @@
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a car icon shrinking as a jar grows. No text, no logos, no real people."
     },
     {
+     "heading": "Teacher, after six months",
+     "narration": "Let's check on the fixes with the numbers. Six months after the teacher starts the six-hundred-dollar summer transfer, the summer account holds thirty-six hundred. By June, after ten paychecks, it holds six thousand, which covers July and August without the card. The card balance, which used to grow by about six thousand each summer, stays flat. That's hundreds of dollars of card interest a year that never builds up. Once summer is covered, a hundred dollars a month of regular savings starts, and the score goes to eight. The fix was one transfer and one calendar note, and it repeats every year.",
+     "on_screen_text": "$600 × 10 = $6,000 summer fund",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with ten small coins and a sun. No text, no logos, no real people."
+    },
+    {
+     "heading": "Retail worker and renter, after six months",
+     "narration": "The retail worker's fix is even faster. With the rent due date moved to the fifth and overdraft coverage off, the hundred-and-five-dollar monthly fee bill disappears. After three months, three hundred fifteen dollars sits in savings as a one-week buffer. After six months, it's over six hundred. For the ninety-thousand-dollar renter, the cheaper car frees about seven hundred a month. Six months later, that's forty-two hundred dollars: enough for a starter emergency fund and a few sinking funds. Three different budgets, and in each one the biggest change came from the largest line or a broken system. Small treats weren't the problem in any of them.",
+     "on_screen_text": "Fees gone · $700/mo freed → $4,200",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two small jars filling side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "The scorecard, before and after",
+     "narration": "Here are all three scores side by side. The teacher went from three to eight. The retail worker went from three to seven. The ninety-thousand-dollar renter went from five to eight. Two of the three fixes cost nothing at all: a monthly transfer and a new rent due date. The third needed a car sale, but freed the most money. Before you cut anything small, check the calendar, the due dates and the two biggest lines in your budget.",
+     "on_screen_text": "3 → 8 · 3 → 7 · 5 → 8",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a scorecard with three rising scores. No text, no logos, no real people."
+    },
+    {
+     "heading": "Your weakest question",
+     "narration": "To use this on your own budget, score yourself on the five questions and find your lowest one. If it's savings, set a small automatic transfer, even twenty-five dollars, the day after payday. If it's housing, plan for the next lease renewal now. If it's debt, write down a payoff order. If it's irregular costs, start one sinking fund for the cost that surprises you most. If it's automation, set up one autopay this week. One question at a time.",
+     "on_screen_text": "Fix your lowest question first",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a scorecard with one row highlighted. No text, no logos, no real people."
+    },
+    {
      "heading": "Pattern",
      "narration": "Pattern across all three: none of them needed to give up small pleasures first. The teacher needed a calendar fix, the retail worker needed due dates moved, and the ninety-thousand earner needed to shrink the two biggest bills. Find your biggest structural problem before cutting coffee.",
      "on_screen_text": "Fix structure before coffee",
@@ -3926,7 +3968,7 @@
     },
     {
      "heading": "Your turn",
-     "narration": "Score your own budget out of ten. Seven or more is solid. If you're under five, pick the lowest-scoring question and fix only that this month. Want yours rated? DM us your numbers, no names. We anonymise everything and change details.",
+     "narration": "Score your own budget out of ten. Seven or more is solid. If you're under five, pick the lowest-scoring question and fix only that this month. Want yours rated? Then send the numbers through the form linked in our bio: numbers only, no names or screenshots. We change details before anything is posted, and every example we make up is labelled fictional.",
      "on_screen_text": "Score yours · DM your numbers",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding up a scorecard. No text, no logos, no real people."
     }
@@ -3942,7 +3984,7 @@
     "personalfinance20s",
     "moneymadesimple"
    ],
-   "description": "Rate My Budget long-form: three fictional budgets scored and fixed with real math.\n\nChapters\n0:00 Intro\n0:21 Budget 1\n0:47 Fix 1\n1:12 Budget 2\n1:40 Fix 2\n2:07 Budget 3\n2:30 Fix 3\n2:57 Pattern\n3:16 Your turn\n\nAll budgets are fictional examples, not real people.\n\nExamples are hypothetical and for education only. Not financial or tax advice.",
+   "description": "Rate My Budget long-form: three fictional budgets scored and fixed with real math.\n\nChapters\n0:00 Intro\n0:22 Budget 1\n0:49 Fix 1\n1:14 Budget 2\n1:43 Fix 2\n2:11 Budget 3\n2:36 Fix 3\n3:03 Teacher, after six months\n3:45 Retail worker and renter, after six months\n4:29 The scorecard, before and after\n5:02 Your weakest question\n5:36 Pattern\n5:56 Your turn\n\nAll budgets are fictional examples, not real people.\n\nExamples are hypothetical and for education only. Not financial or tax advice.",
    "thumbnail_text": "3 more budgets",
    "sources": [
     "https://www.consumerfinance.gov/ask-cfpb/what-is-overdraft-and-how-do-overdraft-fees-work-en-1047/",
@@ -4034,6 +4076,30 @@
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. five numbered jars in a row. No text, no logos, no real people."
     },
     {
+     "heading": "Worked example: $525 a month, in order",
+     "narration": "Here's the order with fictional numbers. A fifty-thousand-dollar salary, twelve percent bracket, a fifty percent match up to six percent, and an HSA-eligible health plan. Five hundred twenty-five dollars a month to put away. First, six percent to the 401(k): two hundred fifty a month, and the match adds a hundred twenty-five. Second, a hundred fifty a month to the HSA through payroll. Payroll HSA contributions generally skip income tax and Social Security and Medicare tax, so at twelve plus seven point six five percent, that's about three hundred fifty dollars a year less tax. Third, a hundred twenty-five a month to a Roth IRA. Every dollar has a home, in the order that gives the biggest tax break first.",
+     "on_screen_text": "$250 401(k) + $125 match · $150 HSA · $125 Roth",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three labelled boxes filling in order. No text, no logos, no real people."
+    },
+    {
+     "heading": "Only $100 a month?",
+     "narration": "Only have a hundred dollars a month? Then it all goes to step one. If six percent of your pay is more than a hundred dollars, contribute what you can and raise it one percent at a time, maybe with each raise. If your employer doesn't match, many people start with a Roth IRA, for the flexibility and the fund choice. The order stays the same whatever the amount. You fill the next box only when the one before it is full.",
+     "on_screen_text": "$100? Step 1 first",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a single box with a small coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Changing jobs",
+     "narration": "When you change jobs, don't cash out the 401(k). That usually means income tax plus a ten percent penalty if you're under fifty-nine and a half, and it loses years of growth. You can usually leave it in the old plan, move it to the new employer's plan, or roll it into an IRA. A direct rollover, where the money goes straight from one provider to the other, avoids withholding problems. Your HSA is yours to keep too, even if you leave the job or change health plans.",
+     "on_screen_text": "Job change: roll it over, don't cash out",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a box moving between two buildings. No text, no logos, no real people."
+    },
+    {
+     "heading": "Checking your own plan",
+     "narration": "To set this up yourself, log into your benefits portal and find three things: your match formula, whether your health plan is HSA-eligible, and your current contribution rate. Most people can find all three in about ten minutes. Write them down, then fill the boxes in order.",
+     "on_screen_text": "Match formula · HSA-eligible? · current rate",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with three small boxes. No text, no logos, no real people."
+    },
+    {
      "heading": "Fees and funds",
      "narration": "Whichever account, the investment inside matters. A target-date fund or a broad low-cost index fund works for most beginners. Check the expense ratio. And make sure money is actually invested; IRAs and HSAs often start in cash until you choose something.",
      "on_screen_text": "Invest it · low fees",
@@ -4064,7 +4130,7 @@
     "personalfinance20s",
     "moneymadesimple"
    ],
-   "description": "A real-math comparison of 401(k), IRA and HSA accounts and a common order to fund them.\n\nChapters\n0:00 Intro\n0:25 The 401(k)\n0:50 The IRA\n1:16 The HSA\n1:41 Real math\n2:05 Roth vs traditional\n2:30 The order\n2:57 Fees and funds\n3:14 Mistakes\n3:33 Recap\n\nExamples are hypothetical and for education only. Not financial or tax advice.",
+   "description": "A real-math comparison of 401(k), IRA and HSA accounts and a common order to fund them.\n\nChapters\n0:00 Intro\n0:26 The 401(k)\n0:52 The IRA\n1:19 The HSA\n1:44 Real math\n2:10 Roth vs traditional\n2:36 The order\n3:04 Worked example: $525 a month, in order\n3:53 Only $100 a month?\n4:27 Changing jobs\n5:04 Checking your own plan\n5:24 Fees and funds\n5:42 Mistakes\n6:02 Recap\n\nExamples are hypothetical and for education only. Not financial or tax advice.",
    "thumbnail_text": "Which account first",
    "sources": [
     "https://www.irs.gov/retirement-plans/plan-participant-employee/401k-resource-guide-plan-participants-401k-plan-overview",
@@ -4152,6 +4218,30 @@
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a price tag with a small bell. No text, no logos, no real people."
     },
     {
+     "heading": "Worked example: splitting by income",
+     "narration": "Here's the difference the split makes, with fictional numbers. Partner A takes home four thousand dollars a month, partner B twenty-five hundred. Shared bills are thirty-two hundred fifty. Split fifty-fifty, each pays sixteen twenty-five. A keeps twenty-three seventy-five, and B keeps eight seventy-five, about a third of their pay. Split by income, the shared bills are fifty percent of their combined sixty-five hundred, so each pays half their own pay: A pays two thousand and B pays twelve fifty. Now each keeps exactly half of what they earn. Neither split is wrong. But when incomes are far apart, splitting by income usually feels fairer to both people.",
+     "on_screen_text": "50/50: B keeps $875 · by income: both keep 50%",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two piggy banks, one larger, splitting a bill. No text, no logos, no real people."
+    },
+    {
+     "heading": "Different money habits",
+     "narration": "Most couples have one saver and one spender, or one planner and one avoider. That isn't a problem to fix; it's two habits to plan around. The personal accounts in yours, mine and ours are what make it work. Each person's fun money is theirs, with no explaining needed. The shared plan covers the bills and the goals you both agreed on. Arguments usually start when one person's habits quietly decide the shared money. Agree on the shared numbers together, then leave each other's personal spending alone.",
+     "on_screen_text": "Shared plan together · personal money is personal",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two different wallets beside one shared jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Shared goals",
+     "narration": "Finally, pick one shared goal with a number and a date. An emergency fund of five thousand dollars by next December, or a trip in August that costs eighteen hundred. Divide it by the months until the date, and fund it automatically from the joint account. Eighteen hundred over nine months is two hundred a month, about a hundred each, or split by income. Watching a shared goal grow at each money date is one of the easiest ways to turn money talks into something you both look forward to.",
+     "on_screen_text": "$1,800 ÷ 9 months = $200 a month",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a small plane label. No text, no logos, no real people."
+    },
+    {
+     "heading": "When one income changes",
+     "narration": "Incomes change: a new job, a layoff, parental leave or going back to school. When they do, revisit the split at your next money date. With a split by income, the math adjusts on its own, because each person still pays the same percentage of what they bring in. With fifty-fifty, you'll usually need a new conversation. Agree in advance that the split gets reviewed whenever either income changes.",
+     "on_screen_text": "Income changed? Review the split",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two piggy banks with a calendar. No text, no logos, no real people."
+    },
+    {
      "heading": "Money date",
      "narration": "The habit that holds it together: a monthly money date. Same day each month, fifteen to twenty minutes. Look at shared bills, progress on goals, anything coming up next month, and one thing you're proud of. Keep it short and pleasant, with a coffee or a dessert. Couples who talk about money regularly fight about it less.",
      "on_screen_text": "Monthly 15-minute money date",
@@ -4181,7 +4271,7 @@
     "personalfinance20s",
     "moneymadesimple"
    ],
-   "description": "A complete guide to combining finances as a couple: talking, splitting bills, accounts, debts and credit, big purchases, money dates and red flags.\n\nChapters\n0:00 Intro\n0:30 When to talk\n0:52 What to share\n1:12 Splitting: 3 ways\n1:38 Accounts\n2:01 Debts and credit\n2:27 Big purchases\n2:45 Money date\n3:08 Red flags\n3:29 Recap\n\nExamples are hypothetical and for education only. Not financial or tax advice.",
+   "description": "A complete guide to combining finances as a couple: talking, splitting bills, accounts, debts and credit, big purchases, money dates and red flags.\n\nChapters\n0:00 Intro\n0:31 When to talk\n0:54 What to share\n1:15 Splitting: 3 ways\n1:42 Accounts\n2:06 Debts and credit\n2:33 Big purchases\n2:51 Worked example: splitting by income\n3:36 Different money habits\n4:12 Shared goals\n4:49 When one income changes\n5:18 Money date\n5:43 Red flags\n6:05 Recap\n\nExamples are hypothetical and for education only. Not financial or tax advice.",
    "thumbnail_text": "Couples + money",
    "sources": [
     "https://www.consumerfinance.gov/consumer-tools/money-as-you-grow/",
