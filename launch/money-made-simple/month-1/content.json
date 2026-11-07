@@ -5,11 +5,11 @@
   "idea_angle": "Leave non-essential items over a set amount in the cart for 24 hours; most impulse urges fade, and real needs survive the wait.",
   "script": {
    "title": "The 24-hour cart rule",
-   "hook": "Every online store is designed so you buy in the next five minutes. Here's how to break that.",
+   "hook": "Stop buying in the 5 minutes a store gives you. Wait 24 hours instead.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Every online store is designed so you buy in the next five minutes. Here's how to break that.",
+     "narration": "Stop buying in the 5 minutes a store gives you. Wait 24 hours instead.",
      "on_screen_text": "Stores want you to buy in 5 minutes",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a shopping cart icon with a countdown timer and flashing arrows around it. No text, no logos, no real people."
     },
@@ -57,7 +57,8 @@
    "claims_to_verify": [
     "$50 threshold is a personal example, not a recommendation"
    ]
-  }
+  },
+  "hook_template": "stop-doing"
  },
  {
   "format": "short",
@@ -134,11 +135,11 @@
   "idea_angle": "For online purchases a credit card is safer: federal law caps unauthorized-charge liability at $50 and fraud doesn't drain your checking while it's disputed.",
   "script": {
    "title": "Debit or credit for online shopping?",
-   "hook": "If you shop online with a debit card, a stolen card number empties your rent money, not the bank's.",
+   "hook": "Debit or credit online? On a $500 fraud charge, one is the bank's money and one is your rent.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "If you shop online with a debit card, a stolen number takes your rent money, not the bank's.",
+     "narration": "Debit or credit online? On a $500 fraud charge, one is the bank's money and one is your rent.",
      "on_screen_text": "Debit fraud = your money missing",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a small hook reaching out of the screen toward a coin jar. No text, no logos, no real people."
     },
@@ -189,7 +190,8 @@
     "Debit (EFTA) liability depends on reporting time ($50 / $500 / more)",
     "Virtual card numbers availability varies by bank"
    ]
-  }
+  },
+  "hook_template": "x-vs-y-real-math"
  },
  {
   "format": "short",
@@ -263,11 +265,11 @@
   "idea_angle": "Buy now, pay later is fine for one planned purchase; it goes wrong with stacking plans, autopay from a thin checking account and late fees.",
   "script": {
    "title": "Pay-in-4 without the hangover",
-   "hook": "Pay in four sounds free. It is, until you have five of them at once.",
+   "hook": "Stop stacking pay-in-4 plans. Run 1 at a time instead.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Pay in four sounds free. It is, until you have five of them at once.",
+     "narration": "Stop stacking pay-in-4 plans. Run 1 at a time instead.",
      "on_screen_text": "5 pay-in-4s at once",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. five overlapping payment calendars stacked like cards, the small round green piggy bank mascot with big eyes peeking from behind. No text, no logos, no real people."
     },
@@ -322,7 +324,8 @@
     "Some BNPL providers report payments to credit bureaus (confirm current provider practices)",
     "BNPL late fees and payment sources vary by provider"
    ]
-  }
+  },
+  "hook_template": "stop-doing"
  },
  {
   "format": "short",
@@ -330,11 +333,11 @@
   "idea_angle": "Set one total for gifts, divide it by a written list of names, and the per-person number makes every buying decision for you.",
   "script": {
    "title": "Your holiday gift budget is one number",
-   "hook": "If you're going to overspend this December, it'll be on gifts, one 'small' purchase at a time.",
+   "hook": "How much should you spend on gifts this year? Answer 1 question and you'll know.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "If you're going to overspend this December, it'll be on gifts, one 'small' purchase at a time.",
+     "narration": "How much should you spend on gifts this year? Answer 1 question and you'll know.",
      "on_screen_text": "December overspending = gifts",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a tall wobbly stack of small wrapped presents, the small round green piggy bank mascot with big eyes looking up at it. No text, no logos, no real people."
     },
@@ -388,7 +391,8 @@
    "claims_to_verify": [
     "$300 / 12 people example is illustrative"
    ]
-  }
+  },
+  "hook_template": "the-one-question"
  },
  {
   "format": "short",
@@ -396,11 +400,11 @@
   "idea_angle": "Gross pay minus taxes, FICA and pre-tax deductions explains why your paycheck looks small, and the stub is where mistakes hide.",
   "script": {
    "title": "Read your pay stub in 60 seconds",
-   "hook": "Your salary says $50,000. Your paycheck says something much smaller. Here's where it went.",
+   "hook": "If you see \"FICA 7.65%\" on your pay stub, read this first. It's where your paycheck went.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Your offer said fifty thousand. Your paycheck says something much smaller. Here's where it went.",
+     "narration": "If you see \"FICA 7.65%\" on your pay stub, read this first. It's where your paycheck went.",
      "on_screen_text": "Where did my paycheck go?",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a long paper pay stub that trails onto the floor. No text, no logos, no real people."
     },
@@ -456,7 +460,8 @@
     "FICA employee rate 7.65% (6.2% Social Security up to the wage base + 1.45% Medicare)",
     "Pre-tax health premiums and traditional 401(k) reduce federal taxable income (state rules vary)"
    ]
-  }
+  },
+  "hook_template": "word-on-statement"
  },
  {
   "format": "short",
@@ -464,11 +469,11 @@
   "idea_angle": "A hard inquiry usually costs a few points, fades within a year and drops off after two, and rate-shopping windows count several loan pulls as one.",
   "script": {
    "title": "What a hard inquiry actually costs you",
-   "hook": "People skip comparing loan rates because they're scared of hard inquiries. That fear costs more than the inquiry.",
+   "hook": "\"Shopping for a loan wrecks my credit.\" That myth costs more than the under-5-point dip an inquiry does.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "People skip comparing loan rates because they're scared of hard inquiries. That fear costs more than the inquiry.",
+     "narration": "\"Shopping for a loan wrecks my credit.\" That myth costs more than the under-5-point dip an inquiry does.",
      "on_screen_text": "Scared of hard inquiries?",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes hiding behind a couch from a small cartoon magnifying glass. No text, no logos, no real people."
     },
@@ -525,7 +530,8 @@
     "Inquiries count 12 months in FICO, stay 2 years on report",
     "Rate-shopping window counts multiple auto/mortgage/student loan inquiries as one (window length varies by score version)"
    ]
-  }
+  },
+  "hook_template": "myth-check"
  },
  {
   "format": "short",
@@ -533,11 +539,11 @@
   "idea_angle": "For most people in their 20s a flat cash-back card beats points: points only win if you redeem at a high value and would have spent the money anyway.",
   "script": {
    "title": "Cash back vs points, honestly",
-   "hook": "Points cards look exciting. For most people, boring cash back wins.",
+   "hook": "The most boring card, flat 2% cash back, is also the one that pays most people more.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Points cards look exciting. For most people, boring cash back wins.",
+     "narration": "The most boring card, flat 2% cash back, is also the one that pays most people more.",
      "on_screen_text": "Points vs cash back",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a shiny treasure chest of stars next to a plain jar of coins, the small round green piggy bank mascot with big eyes between them. No text, no logos, no real people."
     },
@@ -592,7 +598,8 @@
     "2% flat cash-back cards exist with no annual fee (confirm current offers before naming any)",
     "Point values vary by program and redemption"
    ]
-  }
+  },
+  "hook_template": "boring-wins"
  },
  {
   "format": "short",
@@ -600,11 +607,11 @@
   "idea_angle": "Health FSA balances are generally use-it-or-lose-it at the plan year end unless your plan has a grace period or carryover, so check now and spend on eligible items.",
   "script": {
    "title": "Your FSA money may vanish Dec 31",
-   "hook": "If you have an FSA, there might be money in it that disappears at the end of the year.",
+   "hook": "Have an FSA? You may be leaving money on the table on December 31, and it's yours to claim.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "If you have an FSA through work, some of that money might disappear at the end of the year.",
+     "narration": "Have an FSA? You may be leaving money on the table on December 31, and it's yours to claim.",
      "on_screen_text": "Your FSA might expire",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin jar with a small clock on it about to strike midnight. No text, no logos, no real people."
     },
@@ -661,7 +668,8 @@
     "OTC medicines and menstrual products eligible since 2020 CARES Act",
     "Deadline depends on plan year, not always Dec 31"
    ]
-  }
+  },
+  "hook_template": "free-money-left"
  },
  {
   "format": "short",
@@ -669,11 +677,11 @@
   "idea_angle": "If your health plan is HSA-eligible, an HSA gives a tax break going in, tax-free growth and tax-free medical withdrawals, and the money is yours forever.",
   "script": {
    "title": "The HSA is a secret retirement account",
-   "hook": "There's an account with three tax breaks, and most people use it like a checking account.",
+   "hook": "\"An HSA is just for doctor bills.\" That's an expensive money myth. It has 3 tax breaks.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "There's an account with three tax breaks, and most people use it like a checking account.",
+     "narration": "\"An HSA is just for doctor bills.\" That's an expensive money myth. It has 3 tax breaks.",
      "on_screen_text": "Three tax breaks in one",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with three small gold stars on its lid, the small round green piggy bank mascot with big eyes admiring it. No text, no logos, no real people."
     },
@@ -730,7 +738,8 @@
     "2026 HSA limits: $4,400 self-only / $8,750 family (confirm with IRS)",
     "Non-medical withdrawals before 65 are taxed plus 20% penalty"
    ]
-  }
+  },
+  "hook_template": "myth-check"
  },
  {
   "format": "short",
@@ -738,11 +747,11 @@
   "idea_angle": "Calling your card issuer and asking for a lower APR is free, takes minutes, and often works for customers with on-time history.",
   "script": {
    "title": "The two-minute call that can lower your APR",
-   "hook": "You can lower your credit card interest rate with one phone call. Here's exactly what to say.",
+   "hook": "Do this tonight. It takes 2 minutes and can lower your credit card interest rate.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "You can sometimes lower your credit card interest rate with one phone call. Here's what to say.",
+     "narration": "Do this tonight. It takes 2 minutes and can lower your credit card interest rate.",
      "on_screen_text": "One call, lower rate",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a phone with a small downward arrow beside a percent sign. No text, no logos, no real people."
     },
@@ -797,7 +806,8 @@
     "$3,000 at 28% vs 22%: monthly interest ≈ $70 vs $55 (≈$15 difference, simple monthly approximation)",
     "Success isn't guaranteed; issuers decide case by case"
    ]
-  }
+  },
+  "hook_template": "tonight-in-minutes"
  },
  {
   "format": "short",
@@ -805,11 +815,11 @@
   "idea_angle": "The IRS Tax Withholding Estimator tells you in about 15 minutes whether you're on track for a big refund or a bill, and December is the time to fix it.",
   "script": {
    "title": "Do a W-4 check before January",
-   "hook": "A huge tax refund isn't a bonus. It's your money, interest-free, held by the government.",
+   "hook": "\"A big tax refund is a bonus.\" That's an expensive money myth. It's your money, held interest-free for up to 12 months.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "A huge tax refund isn't a bonus. It's your own money, held interest-free all year.",
+     "narration": "\"A big tax refund is a bonus.\" That's an expensive money myth. It's your money, held interest-free for up to 12 months.",
      "on_screen_text": "Big refund = your money, late",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes waving goodbye to a stack of coins in a small envelope flying away. No text, no logos, no real people."
     },
@@ -864,7 +874,8 @@
     "IRS Tax Withholding Estimator is free at irs.gov",
     "Time estimate (~15 min) is approximate"
    ]
-  }
+  },
+  "hook_template": "myth-check"
  },
  {
   "format": "short",
@@ -872,11 +883,11 @@
   "idea_angle": "Your own 401(k) contributions are always yours, but the employer match may vest over years; check your schedule before you change jobs.",
   "script": {
    "title": "Vesting: the money you lose when you quit",
-   "hook": "Before you quit, check one number in your 401(k). It could be worth thousands.",
+   "hook": "Your employer won't lead with this, but it's in the fine print: your 401(k) match can take up to 6 years to be yours.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Before you quit, check one number in your 401(k). It could be worth thousands.",
+     "narration": "Your employer won't lead with this, but it's in the fine print: your 401(k) match can take up to 6 years to be yours.",
      "on_screen_text": "Check this before you quit",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a box of desk items, pausing at a door. No text, no logos, no real people."
     },
@@ -931,7 +942,8 @@
     "Employee deferrals always 100% vested",
     "Employer match: cliff vesting max 3 years, graded max 6 years (IRS)"
    ]
-  }
+  },
+  "hook_template": "fine-print"
  },
  {
   "format": "short",
@@ -939,11 +951,11 @@
   "idea_angle": "A 0% balance transfer only helps if the transfer fee is smaller than the interest you'd pay and you can clear the balance before the promo ends.",
   "script": {
    "title": "Balance transfer math in 30 seconds",
-   "hook": "A zero percent balance transfer isn't free. But it can still save you hundreds. Here's the math.",
+   "hook": "A 3% transfer fee or 24% interest? We ran the real numbers on a $3,000 balance.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "A zero percent balance transfer isn't free. But it can still save you hundreds.",
+     "narration": "A 3% transfer fee or 24% interest? We ran the real numbers on a $3,000 balance.",
      "on_screen_text": "0% isn't free. Still worth it?",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two credit cards with an arrow carrying coins from one to the other. No text, no logos, no real people."
     },
@@ -999,7 +1011,8 @@
     "$3,000 × 24% ÷ 12 = $60/month interest (approximation)",
     "Promo lengths vary (often 12–21 months)"
    ]
-  }
+  },
+  "hook_template": "x-vs-y-real-math"
  },
  {
   "format": "short",
@@ -1007,11 +1020,11 @@
   "idea_angle": "Round-up investing apps move small amounts; a monthly fee can eat a big share of them, so check fee ÷ monthly round-ups before signing up.",
   "script": {
    "title": "Round-up apps: the honest math",
-   "hook": "Round-up apps feel like free money. Check what the fee takes first.",
+   "hook": "A $3 monthly fee sounds tiny. On round-up apps it can eat 10% of what you invest.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Round-up apps feel like free money. Check what the fee takes first.",
+     "narration": "A $3 monthly fee sounds tiny. On round-up apps it can eat 10% of what you invest.",
      "on_screen_text": "Round-ups: check the fee",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coffee cup with a small coin hopping off into a tiny jar. No text, no logos, no real people."
     },
@@ -1066,7 +1079,8 @@
     "Purchase counts and average round-up (60 × $0.50) are illustrative",
     "Monthly fees vary by app and tier; don't name a specific app without checking"
    ]
-  }
+  },
+  "hook_template": "percent-fee-eats"
  },
  {
   "format": "short",
@@ -1074,11 +1088,11 @@
   "idea_angle": "Investing a windfall all at once has historically beaten spreading it out about two-thirds of the time, but dollar-cost averaging lowers regret, and paycheck investing already does it.",
   "script": {
    "title": "Lump sum or a bit each month?",
-   "hook": "Got a chunk of money to invest? All at once, or a little each month? The data has an answer.",
+   "hook": "Lump sum or a bit each month? The data says one wins about 2 times out of 3.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Got a chunk of money to invest? All at once, or a little each month?",
+     "narration": "Lump sum or a bit each month? The data says one wins about 2 times out of 3.",
      "on_screen_text": "All at once or spread out?",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a big bag of coins next to a row of small monthly jars. No text, no logos, no real people."
     },
@@ -1134,7 +1148,8 @@
     "Lump sum outperformed DCA roughly two-thirds of the time historically (Vanguard research; confirm figure and period)",
     "Past performance does not guarantee future results"
    ]
-  }
+  },
+  "hook_template": "x-vs-y-real-math"
  },
  {
   "format": "short",
@@ -1142,11 +1157,11 @@
   "idea_angle": "Schedule savings to move the morning after payday so it happens before spending, instead of saving whatever is left.",
   "script": {
    "title": "Pay yourself first, literally on payday",
-   "hook": "Saving what's left at the end of the month doesn't work, because nothing is left.",
+   "hook": "Stop saving what's left at the end of the month. Save first, 1 day after payday.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Saving whatever's left at the end of the month doesn't work, because nothing is left.",
+     "narration": "Stop saving what's left at the end of the month. Save first, 1 day after payday.",
      "on_screen_text": "Nothing left to save?",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes shaking an empty coin jar upside down. No text, no logos, no real people."
     },
@@ -1200,7 +1215,8 @@
    "claims_to_verify": [
     "No numeric claims; $25 is an example amount"
    ]
-  }
+  },
+  "hook_template": "stop-doing"
  },
  {
   "format": "short",
@@ -1208,11 +1224,11 @@
   "idea_angle": "Increase your 401(k) contribution by 1% at every raise (or turn on auto-escalation) so savings grow without your take-home ever shrinking.",
   "script": {
    "title": "The 1% raise rule",
-   "hook": "You can double your retirement savings rate without ever feeling poorer. One percent at a time.",
+   "hook": "Add 1% to your 401(k) with every raise. On a $50,000 salary that's $500 a year you never feel.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "You can grow your retirement savings rate without ever feeling poorer. One percent at a time.",
+     "narration": "Add 1% to your 401(k) with every raise. On a $50,000 salary that's $500 a year you never feel.",
      "on_screen_text": "Save more, never feel it",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes climbing a gentle staircase made of coins. No text, no logos, no real people."
     },
@@ -1267,7 +1283,8 @@
     "$50,000 × 1% = $500/yr ÷ 26 paychecks ≈ $19",
     "Auto-escalation availability depends on plan"
    ]
-  }
+  },
+  "hook_template": "small-change-big-year"
  },
  {
   "format": "short",
@@ -1275,11 +1292,11 @@
   "idea_angle": "StudentAid.gov shows every federal loan, its servicer, balance and rate in one place; private loans aren't there, so check your credit report for those.",
   "script": {
    "title": "Find all your federal student loans in 5 minutes",
-   "hook": "Not sure how many student loans you have or who you pay? There's one official site with all of it.",
+   "hook": "Do this tonight. It takes 5 minutes and shows every federal student loan you have, free.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Not sure how many student loans you have, or who you even pay? There's one official place to look.",
+     "narration": "Do this tonight. It takes 5 minutes and shows every federal student loan you have, free.",
      "on_screen_text": "How many loans do you have?",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes surrounded by a messy pile of envelopes, looking puzzled. No text, no logos, no real people."
     },
@@ -1336,7 +1353,8 @@
     "StudentAid.gov lists federal loans and servicers; private loans not included",
     "Federal repayment plan options changed under 2025 legislation; don't describe specific plans without checking current rules"
    ]
-  }
+  },
+  "hook_template": "tonight-in-minutes"
  },
  {
   "format": "short",
@@ -1344,11 +1362,11 @@
   "idea_angle": "Double-digit drops inside a year are common even in years that end positive; knowing that in advance is what stops panic selling.",
   "script": {
    "title": "Your first market drop is normal",
-   "hook": "At some point your investments will drop ten percent. Here's why that's in the plan.",
+   "hook": "\"A 10% drop means sell.\" That's the most expensive investing myth I hear. Here's why.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "At some point your investments will drop ten percent or more. That's part of the plan.",
+     "narration": "\"A 10% drop means sell.\" That's the most expensive investing myth I hear. Here's why.",
      "on_screen_text": "A 10% drop is coming",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a line chart with a dip in the middle, the small round green piggy bank mascot with big eyes calmly standing beside it. No text, no logos, no real people."
     },
@@ -1404,7 +1422,8 @@
     "S&P 500 average intra-year decline ~14% since 1980, positive calendar returns in most years (J.P. Morgan Guide to the Markets; confirm current figures)",
     "Past performance does not guarantee future results"
    ]
-  }
+  },
+  "hook_template": "myth-check"
  },
  {
   "format": "short",
@@ -1412,11 +1431,11 @@
   "idea_angle": "Calculate net worth (what you own minus what you owe) once a quarter; the trend matters more than the number, and starting negative is normal.",
   "script": {
    "title": "Your one money number",
-   "hook": "There's one number that tells you if you're actually making progress. It's not your salary.",
+   "hook": "Nobody explains net worth like this, so here's your 1 money number in 30 seconds.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "There's one number that tells you if you're making progress with money. It's not your salary.",
+     "narration": "Nobody explains net worth like this, so here's your 1 money number in 30 seconds.",
      "on_screen_text": "The number that matters",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding up a single large card with a question mark. No text, no logos, no real people."
     },
@@ -1470,7 +1489,8 @@
    "claims_to_verify": [
     "No numeric claims"
    ]
-  }
+  },
+  "hook_template": "nobody-explains"
  },
  {
   "format": "carousel",

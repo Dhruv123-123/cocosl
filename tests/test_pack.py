@@ -10,13 +10,14 @@ ROOT = Path(__file__).resolve().parents[1]
 MONTHS = sorted((ROOT / "launch" / "money-made-simple").glob("month-*/content.json"))
 MONTH = MONTHS[0]
 EVERGREEN = ROOT / "launch" / "money-made-simple" / "evergreen" / "content.json"
+SERIES = ROOT / "launch" / "money-made-simple" / "youtube-series" / "content.json"
 
 
 def _items(path=MONTH):
     return json.loads(path.read_text())
 
 
-@pytest.mark.parametrize("path", MONTHS + [EVERGREEN], ids=lambda p: p.parent.name)
+@pytest.mark.parametrize("path", MONTHS + [EVERGREEN, SERIES], ids=lambda p: p.parent.name)
 def test_month_content_is_valid(factory, path):
     from contentfactory.schemas import Script
     items = _items(path)
@@ -117,3 +118,68 @@ def test_evergreen_library_is_undated_and_unique():
 def test_no_title_reused_across_months():
     titles = [i["script"]["title"].lower() for m in MONTHS for i in _items(m)]
     assert len(titles) == len(set(titles)), sorted(t for t in titles if titles.count(t) > 1)
+
+
+# Ids from the hook library (src/contentfactory/hooks_library.json, scouting PR). Kept here so this
+# test runs on branches that don't have the library file yet.
+HOOK_TEMPLATE_IDS = {
+    "fine-print", "cost-of-mistake", "if-i-started-today", "visualize-the-number", "x-vs-y-real-math",
+    "stop-doing", "myth-check", "tonight-in-minutes", "three-signs", "pov-your-age", "nobody-explains",
+    "word-on-statement", "free-money-left", "same-income-different-result", "the-one-question",
+    "paid-off-but", "app-honest-review", "calendar-surprise", "percent-fee-eats", "checklist-save",
+    "what-you-own", "scam-script-reveal", "scam-one-tell", "scam-real-or-fake", "scam-what-happens-next",
+    "scam-too-good", "scam-protect-parents", "small-change-big-year", "question-you-asked", "boring-wins",
+}
+
+
+def test_rewritten_hooks_use_library_templates():
+    import re
+    from contentfactory.guardrails import HYPE_PATTERNS, TESTIMONIAL_PATTERNS
+    lib = ROOT / "src" / "contentfactory" / "hooks_library.json"
+    ids = HOOK_TEMPLATE_IDS
+    if lib.exists():
+        data = json.loads(lib.read_text())
+        ids = {t["id"] for t in (data["templates"] if isinstance(data, dict) else data)}
+    rewritten = [it for p in MONTHS for it in _items(p) if it.get("hook_template")]
+    assert len(rewritten) >= 20
+    for it in rewritten:
+        sc = it["script"]
+        assert it["hook_template"] in ids
+        assert any(ch.isdigit() for ch in sc["hook"])           # number-first, like the newer months
+        assert sc["segments"][0]["narration"] == sc["hook"]     # the spoken open matches the hook
+        assert len(sc["hook"].split()) <= 24
+        for pat in HYPE_PATTERNS + TESTIMONIAL_PATTERNS:
+            assert not re.search(pat, sc["hook"], re.I), (sc["title"], pat)
+
+
+def test_youtube_series_is_long_form_and_tagged():
+    import re
+    from urllib.parse import parse_qs, urlparse
+    from contentfactory.guardrails import HYPE_PATTERNS, TESTIMONIAL_PATTERNS
+    items = _items(SERIES)
+    assert len(items) == 12 and all(i["format"] == "long" for i in items)
+    assert [i["series_part"] for i in items] == list(range(1, 13))
+    others = {i["script"]["title"].lower() for m in MONTHS + [EVERGREEN] for i in _items(m)}
+    for it in items:
+        sc = it["script"]
+        words = sum(len(s["narration"].split()) for s in sc["segments"])
+        assert 1200 <= words <= 1800, (sc["title"], words)      # 8-12 minutes at ~150 words a minute
+        assert sc["title"].lower() not in others
+        assert it["search_terms"] and sc["thumbnail_text"] and len(sc["thumbnail_text"].split()) <= 6
+        assert any(ch.isdigit() for ch in sc["hook"])
+        chapters = re.findall(r"^(\d+):(\d\d) (.+)$", sc["description"], re.M)
+        assert len(chapters) == len(sc["segments"]) and chapters[0][:2] == ("0", "00")  # YouTube needs 0:00
+        secs = [int(m) * 60 + int(s) for m, s, _ in chapters]
+        assert secs == sorted(secs) and all(b - a >= 10 for a, b in zip(secs, secs[1:]))
+        links = re.findall(r"https://moneymadesimple\.netlify\.app\S+", sc["description"])
+        assert len(links) >= 3
+        for url in links:
+            q = parse_qs(urlparse(url).query)
+            assert q["utm_source"] == ["youtube"] and q["utm_medium"] == ["social"]
+            assert q["utm_campaign"] == [it["content_id"]]
+        assert "AI tools" in sc["description"]
+        if "/compare/" in sc["description"]:
+            assert "commission" in sc["description"]
+        text = " ".join([sc["hook"], sc["caption"], sc["description"]] + [s["narration"] for s in sc["segments"]])
+        for pat in HYPE_PATTERNS + TESTIMONIAL_PATTERNS:
+            assert not re.search(pat, text, re.I), (sc["title"], pat)
