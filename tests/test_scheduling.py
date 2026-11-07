@@ -105,3 +105,16 @@ def test_platform_specific_post_times(factory):
     assert (tt.hour, tt.minute) == (21, 15)
     yt = next_slot(factory.db, brand, "youtube", after=after).astimezone(ZoneInfo(brand.cadence.timezone))
     assert f"{yt.hour:02d}:{yt.minute:02d}" in brand.cadence.post_times
+
+
+def test_choose_thumbnail_variant(factory):
+    pid = factory.db.insert("posts", {"brand": "money-made-simple", "format": "long", "status": "in_review",
+                                      "title": "t", "assets": {"thumbnail": "a.png",
+                                                               "thumbnail_variants": ["a.png", "b.png", "c.png"]}})
+    assert factory.choose_thumbnail(pid, 2) == "c.png"
+    assert factory.db.get("posts", pid)["assets"]["thumbnail"] == "c.png"
+    with pytest.raises(ValueError):
+        factory.choose_thumbnail(pid, 5)
+    factory.db.update("posts", pid, {"status": "scheduled"})
+    with pytest.raises(PermissionError):
+        factory.choose_thumbnail(pid, 0)

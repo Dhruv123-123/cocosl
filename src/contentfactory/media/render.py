@@ -12,7 +12,7 @@ from pathlib import Path
 
 from ..config import BrandProfile, Settings
 from ..schemas import Script, Segment
-from .captions import time_segment, write_srt
+from .captions import time_segment, time_segment_words, write_srt
 from .carousel import SlideKit, SlideText, render_carousel
 from .images import generate_images
 from .thumbnail import render_thumbnail
@@ -74,10 +74,14 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
 
     tts = synthesize_segments(settings, brand, lines, work / "voice")
     beats, cues, slots, t = [], [], [], 0.0
+    seg_words = tts.words or [None] * len(lines)
     for i, (line, head, img, dur) in enumerate(zip(lines, heads, images, tts.durations)):
         slot = max(MIN_BEAT, dur + (TAIL if i == len(lines) - 1 else GAP))
         beats.append(Beat(img, head, t, slot))
-        cues += time_segment(line, t + LEAD, max(0.4, dur - LEAD))
+        if seg_words[i]:
+            cues += time_segment_words(line, t, dur, seg_words[i])
+        else:
+            cues += time_segment(line, t + LEAD, max(0.4, dur - LEAD))
         slots.append(slot)
         t += slot
 
@@ -98,10 +102,24 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
     thumb = render_thumbnail(images[0], script.thumbnail_text or script.title, palette, brand.visual.font,
                              brand.visual.watermark, out / "thumbnail.png")
 
+    variants = []
+    if fmt == "long":  # A/B candidates for YouTube: different art and wording; pick one on the post page
+        texts = [script.thumbnail_text or script.title]
+        texts += [_short_words(t) for t in [*script.title_variants, script.title] if _short_words(t)]
+        texts = list(dict.fromkeys(texts))
+        arts = [images[min(i, len(images) - 1)] for i in (len(images) // 2, len(images) - 1)]
+        for k, (art, text) in enumerate(zip(arts, (texts[1:] + texts)[:2]), start=1):
+            variants.append(render_thumbnail(art, text, palette, brand.visual.font, brand.visual.watermark,
+                                             out / f"thumbnail-{k + 1}.png"))
     prov = _image_provenance(imgs)
+    for v in variants:
+        prov.append(provenance(str(v), "rendered", "pillow", "thumbnail variant"))
+        prov.append(provenance(str(v.with_suffix(".jpg")), "rendered", "pillow", "thumbnail variant (JPEG)"))
     prov.append(provenance(str(audio), "generated", tts.tool, " ".join(lines), provider=tts.provider,
                            note="Voice must be your own or licensed."))
-    prov.append(provenance(str(srt), "rendered", "contentfactory.captions", note="timing estimated from audio length"))
+    prov.append(provenance(str(srt), "rendered", "contentfactory.captions",
+                           note="word timing from the voice" if tts.timing != "estimated"
+                           else "timing estimated from audio length", timing=tts.timing))
     prov.append(provenance(str(thumb), "rendered", "pillow", script.thumbnail_text))
     prov.append(provenance(str(thumb.with_suffix(".jpg")), "rendered", "pillow", script.thumbnail_text,
                            note="JPEG copy for APIs that require JPEG"))
@@ -111,7 +129,8 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
         prov.append(provenance(str(music), "licensed", "user-music", "",
                                "user-supplied via FACTORY_MUSIC_DIR; keep the licence on file"))
     return {"video": video, "audio": audio, "captions_srt": srt, "images": [r.path for r in imgs], "slides": [],
-            "thumbnail": thumb, "duration": round(duration, 3), "provenance": prov}
+            "thumbnail": thumb, "thumbnail_variants": [thumb, *variants], "duration": round(duration, 3),
+            "provenance": prov}
 
 
 # ---------------------------------------------------------------- slides
@@ -132,7 +151,19 @@ def _render_slides(settings: Settings, brand: BrandProfile, script: Script, fmt:
             kicker = s.heading if s.heading and _norm(s.heading) != _norm(head) else ""
             texts.append(SlideText(head, s.narration, kicker))
     slides = render_carousel(kit, [r.path for r in imgs], texts, out / "slides")
+    variants = []
+    if fmt == "long":  # A/B candidates for YouTube: different art and wording; pick one on the post page
+        texts = [script.thumbnail_text or script.title]
+        texts += [_short_words(t) for t in [*script.title_variants, script.title] if _short_words(t)]
+        texts = list(dict.fromkeys(texts))
+        arts = [images[min(i, len(images) - 1)] for i in (len(images) // 2, len(images) - 1)]
+        for k, (art, text) in enumerate(zip(arts, (texts[1:] + texts)[:2]), start=1):
+            variants.append(render_thumbnail(art, text, palette, brand.visual.font, brand.visual.watermark,
+                                             out / f"thumbnail-{k + 1}.png"))
     prov = _image_provenance(imgs)
+    for v in variants:
+        prov.append(provenance(str(v), "rendered", "pillow", "thumbnail variant"))
+        prov.append(provenance(str(v.with_suffix(".jpg")), "rendered", "pillow", "thumbnail variant (JPEG)"))
     for p, t in zip(slides, texts):
         prov.append(provenance(str(p), "rendered", "pillow", t.headline))
         prov.append(provenance(str(p.with_suffix(".jpg")), "rendered", "pillow", t.headline,
@@ -202,5 +233,13 @@ def _relativize(assets: dict, build: Path, final: Path, root: Path) -> dict:
         out[key] = rel(assets.get(key))
     out["images"] = [rel(p) for p in assets.get("images", [])]
     out["slides"] = [rel(p) for p in assets.get("slides", [])]
+    if assets.get("thumbnail_variants"):
+        out["thumbnail_variants"] = [rel(p) for p in assets["thumbnail_variants"]]
     out["provenance"] = [{**e, "path": rel(e["path"])} for e in assets.get("provenance", [])]
     return out
+
+
+def _short_words(text: str, n: int = 5) -> str:
+    """Thumbnail wording from a title: the first few words, without trailing punctuation."""
+    words = (text or "").replace(":", " ").split()
+    return " ".join(words[:n]).rstrip(",.;:!?") if words else ""
