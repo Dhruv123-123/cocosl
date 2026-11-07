@@ -1400,7 +1400,7 @@ def build() -> list[str]:
   <h2 class="section-h">How we make this</h2>
   <div class="three">
     <div><h3>Specific, not hype</h3><p>Every article and email is one idea you can use this week, with the maths shown. No stock picks, no crypto pumps, no income claims.</p></div>
-    <div><h3>Checked by a human</h3><p>We use AI tools for visuals and drafts. A human picks every topic, checks every number against primary sources (IRS, CFPB, FDIC, Investor.gov) and approves every post.</p></div>
+    <div><h3>Checked by a person</h3><p>Drafted with AI help, fact-checked by a person. A person picks every topic, checks every number against primary sources (IRS, CFPB, FDIC, Investor.gov) and approves every post.</p></div>
     <div><h3>Honest about money</h3><p>Some links are affiliate links and they're always labelled. Products have a no-hoops refund. Testimonials only ever come from real buyers, quoted word for word.</p></div>
   </div>
 </section>"""))
@@ -1460,6 +1460,7 @@ def build() -> list[str]:
     urls += build_ask(_shop, pseo)
     urls += build_holiday(_shop)
     urls += build_new_year()
+    urls += build_money_basics()
     urls += build_tools()
 
     # ---- newsletter archive: content/newsletter/*.md, one page per issue that has gone out.
@@ -1577,7 +1578,7 @@ def build() -> list[str]:
     sm = "".join(f"<url><loc>{esc(absu(p))}</loc><lastmod>{d}</lastmod></url>" for p, d in urls)
     (OUT / "sitemap.xml").write_text(
         f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{sm}</urlset>\n')
-    (OUT / "robots.txt").write_text(f"User-agent: *\nDisallow: {u('/emails/')}\nDisallow: {u('/free/thanks/')}\nDisallow: {u('/holiday/thanks/')}\nDisallow: {u('/new-year/thanks/')}\n"
+    (OUT / "robots.txt").write_text(f"User-agent: *\nDisallow: {u('/emails/')}\nDisallow: {u('/free/thanks/')}\nDisallow: {u('/holiday/thanks/')}\nDisallow: {u('/new-year/thanks/')}\nDisallow: {u('/money-basics/thanks/')}\n"
                                     f"Sitemap: {absu('/sitemap.xml')}\n")
     items = "".join(f"""<item><title>{esc(p['title'])}</title><link>{absu(f"/blog/{p['slug']}/")}</link>
 <guid>{absu(f"/blog/{p['slug']}/")}</guid><pubDate>{datetime.strptime(p['date'], '%Y-%m-%d').replace(tzinfo=timezone.utc).strftime('%a, %d %b %Y 00:00:00 +0000')}</pubDate>
@@ -1722,6 +1723,66 @@ def build_new_year() -> list[tuple[str, str]]:
   <p><a href="{u('/new-year/')}">Back to the reset</a> · <a href="{u('/free/')}">Also free: the 7-Day Money Reset</a></p>
 </section>"""))
     return [("/new-year/", updated)]
+
+
+def build_money_basics() -> list[tuple[str, str]]:
+    """/money-basics/: landing page for the free "Money Basics in 7 days" email course (content/money-basics.md),
+    built from the best-of digest's format. Front matter `sender_form` holds the embed HTML from Sender; while it's
+    REPLACE_ME (or empty) the page uses the normal signup form with source=course_source. Thanks: /money-basics/thanks/."""
+    src = CONTENT / "money-basics.md"
+    if not src.exists():
+        return []
+    meta, md = parse_front_matter(src.read_text())
+    md = re.sub(r"<!--.*?-->", "", md, flags=re.S)
+    faq = extract_faq(md)
+    days = re.findall(r"^### (Day \d+): (.+)$", md, re.M)
+    body_html, _toc = markdown(md)
+    source = meta.get("course_source", "money-basics-7-days")
+    sender = str(meta.get("sender_form", "") or "").strip()
+    if sender and "REPLACE_ME" not in sender:
+        form = f'<div class="sender-form">{sender}</div>'
+    else:
+        form = ('<!-- Sender form placeholder: paste Sender\'s embed into content/money-basics.md > sender_form -->'
+                + email_form(source, button="Start the free course", thanks_path="/money-basics/thanks/"))
+    day_list = "".join(f"<li><strong>{esc(d)}:</strong> {esc(t)}</li>" for d, t in days)
+    optin = f"""<div class="magnet no-img" id="signup">
+  <div>
+    <p class="kicker">Free 7-day email course</p>
+    <h2 class="magnet-title">Start Money Basics in 7 days</h2>
+    <p>Seven emails, one a day from the day you sign up. One idea with the numbers shown, one task under 20 minutes.</p>
+    <ol class="course-days">{day_list}</ol>
+    {form}
+  </div>
+</div>"""
+    updated = str(meta.get("updated", date.today().isoformat()))
+    ld = [{"@context": "https://schema.org", "@type": "Course", "name": meta["title"],
+           "description": meta["description"], "provider": org_ld(), "isAccessibleForFree": True,
+           "hasCourseInstance": {"@type": "CourseInstance", "courseMode": "online", "courseWorkload": "PT2H20M"},
+           "offers": {"@type": "Offer", "price": 0, "priceCurrency": "USD", "category": "Free"}},
+          {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+              {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]}]
+    body = f"""<article class="wrap article money-basics">
+  <p class="crumbs"><a href="{u('/')}">Home</a> / <span>Money Basics in 7 days</span></p>
+  <h1>{esc(meta['title'])}</h1>
+  <p class="dek">{esc(meta['description'])}</p>
+  <p class="meta">Updated {fmt_date(updated)} · {byline()}</p>
+  {optin}
+  <div class="prose">
+{body_html}
+  </div>
+  <p class="disclaimer">{esc(CFG['disclaimer'])}</p>
+</article>"""
+    write("/money-basics/", layout(title=meta.get("seo_title", meta["title"]), description=meta["description"],
+                                   path="/money-basics/", body=body, og_type="article", jsonld=ld))
+    write("/money-basics/thanks/", layout(
+        title="You're in: Money Basics in 7 days", path="/money-basics/thanks/", noindex=True,
+        description="You're signed up.", body=f"""<section class="wrap landing thanks">
+  <h1>You're in.</h1>
+  <p class="dek">Day 1 is on its way. If you don't see it in a few minutes, check your promotions or spam folder, and confirm your email if we asked you to.</p>
+  <p>Before Day 1, find one recent payslip: the first task starts with it.</p>
+  <p><a href="{u('/money-basics/')}">Back to the course</a> · <a href="{u('/start/')}">Start here by goal</a></p>
+</section>"""))
+    return [("/money-basics/", updated)]
 
 
 def build_tools() -> list[tuple[str, str]]:

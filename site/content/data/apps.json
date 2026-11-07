@@ -29,6 +29,17 @@
    ]
   },
   {
+   "key": "paycheck-planner",
+   "group": "Paychecks and taxes",
+   "title": "Paycheck to budget planner",
+   "path": "/budget/paycheck-plan.html",
+   "blurb": "turn your take-home pay into a 50/30/20 or zero-based monthly budget.",
+   "articles": [
+    "how-to-budget-on-a-low-income",
+    "how-to-read-a-pay-stub"
+   ]
+  },
+  {
    "key": "roth-vs-traditional",
    "group": "Paychecks and taxes",
    "title": "Roth vs traditional calculator",
@@ -310,6 +321,17 @@
    ]
   },
   {
+   "key": "sinking-funds",
+   "group": "Budgeting",
+   "title": "Sinking funds planner",
+   "path": "/budget/sinking-funds.html",
+   "blurb": "what to set aside each month or paycheck for the costs you know are coming.",
+   "articles": [
+    "sinking-funds-explained",
+    "car-repair-sinking-fund"
+   ]
+  },
+  {
    "key": "couples",
    "group": "Budgeting",
    "title": "Couples budget",
@@ -369,6 +391,14 @@
    "title": "Freelance invoice tracker",
    "path": "/freelance-invoices/",
    "blurb": "what's due, what's late, the late fee under your terms, and a polite reminder email.",
+   "articles": []
+  },
+  {
+   "key": "freelance-rate",
+   "group": "Freelance and side income",
+   "title": "Freelance rate calculator",
+   "path": "/freelance-invoices/rate.html",
+   "blurb": "the hourly, day and weekly rate you need after tax, insurance, time off and costs.",
    "articles": []
   },
   {
@@ -432,18 +462,5 @@
    "articles": []
   }
  ],
- "upcoming": [
-  {
-   "key": "paycheck-planner",
-   "group": "Paychecks and taxes",
-   "title": "Paycheck planner",
-   "blurb": "plan where each paycheck goes before it arrives. Coming soon."
-  },
-  {
-   "key": "rate-calculator",
-   "group": "Debt and credit",
-   "title": "Interest rate calculator",
-   "blurb": "see what a lower rate saves on a card or loan. Coming soon."
-  }
- ]
+ "upcoming": []
 }

@@ -59,6 +59,7 @@ For freelancers, gig workers, and anyone whose pay changes from month to month.
 
 ## Everything else
 
+- New to all of this? A free email course, one step a day: [Money Basics in 7 days](/money-basics/).
 - Free calculators and planners: [Free tools](/tools/).
 - Every tool we mention, in one list: [Resources](/resources/).
 - Short answers to common questions: [Money questions](/ask/).

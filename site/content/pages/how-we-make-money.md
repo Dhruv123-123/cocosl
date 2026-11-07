@@ -40,7 +40,7 @@ We don't have sponsors today. If we take them later, every sponsored email, vide
 
 ## How AI is used
 
-We use AI tools for visuals, voice and first drafts. A human chooses every topic, checks the facts against primary sources and approves everything before it's published. More on this, and the legal small print, on the [Disclosures](/disclosures/) page.
+Everything here is **drafted with AI help, fact-checked by a person**. We also use AI tools for visuals and voice. A person chooses every topic, checks the facts against primary sources and approves everything before it's published. More on this, and the legal small print, on the [Disclosures](/disclosures/) page.
 
 ## Questions
 

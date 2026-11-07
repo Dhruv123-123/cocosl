@@ -12,7 +12,7 @@ A commission never decides what we say. We only link to products we would descri
 
 ## AI use
 
-We use AI tools for visuals, voice and first drafts. A human chooses each topic, fact-checks it against primary sources and approves it before publishing. We don't use AI-generated people to pretend to be customers, and we don't publish testimonials that aren't real.
+Our content is drafted with AI help, fact-checked by a person. We also use AI tools for visuals and voice. A person chooses each topic, fact-checks it against primary sources and approves it before publishing. We don't use AI-generated people to pretend to be customers, and we don't publish testimonials that aren't real.
 
 ## Not advice
 

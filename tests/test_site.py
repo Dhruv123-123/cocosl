@@ -974,7 +974,8 @@ def test_internal_links_every_article_has_related_reads_a_goal_shop_and_no_orpha
 def test_tools_hub_links_every_apps_site_tool_and_lists_upcoming_ones(tmp_path):
     import json
     data = json.loads((SITE / "content" / "data" / "apps.json").read_text())
-    for k in ("bill-calendar", "tax-refund", "debt-payoff-calc", "savings-challenge", "set-aside", "scam-checker", "install"):
+    for k in ("bill-calendar", "tax-refund", "debt-payoff-calc", "savings-challenge", "set-aside", "scam-checker", "install",
+              "paycheck-planner", "freelance-rate", "sinking-funds"):
         assert any(t["key"] == k for t in data["tools"]), k
     out = _build(tmp_path, "https://example.org", APPS_URL="https://tools.example.net")
     h = (out / "tools" / "index.html").read_text()
@@ -1009,3 +1010,22 @@ def test_june_articles_are_long_dated_and_linked(tmp_path):
     late = _build(tmp_path, "https://example.org", BLOG_SHOW_SCHEDULED="0", BUILD_DATE="2027-06-30")
     for s in NEW_JUN_ARTICLES:
         assert (late / "blog" / s / "index.html").exists(), s
+
+
+def test_money_basics_course_page_has_seven_days_a_signup_and_a_sender_slot(tmp_path):
+    out = _build(tmp_path, "https://example.org")
+    h = (out / "money-basics" / "index.html").read_text()
+    assert len(re.findall(r"<li><strong>Day \d:</strong>", h)) == 7
+    assert 'value="money-basics-7-days"' in h and "Sender form placeholder" in h
+    assert '"@type": "Course"' in h or '"@type":"Course"' in h
+    assert (out / "money-basics" / "thanks" / "index.html").exists()
+    assert "/money-basics/thanks/" in (out / "robots.txt").read_text()
+    assert 'href="/money-basics/"' in (out / "start" / "index.html").read_text()
+
+
+def test_ai_disclosure_wording_matches_the_caption_line(tmp_path):
+    out = _build(tmp_path, "https://example.org")
+    for page in ("about", "how-we-make-money", "disclosures"):
+        h = (out / page / "index.html").read_text()
+        assert "drafted with ai help, fact-checked by a person" in h.lower(), page
+        assert "A human chooses" not in h, page

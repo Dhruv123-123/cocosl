@@ -20,4 +20,6 @@ Here's the best of what we published recently, in one place. Each guide is one i
 
 Not sure where to start? [Start here](/start/) routes you by goal: paying off debt, building savings, a first job or freelance income.
 
+Know someone starting from zero? Our free email course [Money Basics in 7 days](/money-basics/) covers the essentials, one 20-minute step a day.
+
 Reply to this email if there's a money question you'd like us to cover.
