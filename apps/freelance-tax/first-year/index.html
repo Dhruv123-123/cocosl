@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>First Year Freelancing: free 7-lesson email course | 1099 Money</title>
+<meta name="description" content="A free email course for your first year as a US freelancer: three accounts, how your taxes work, records, pricing, getting paid, health insurance and retirement, and your first-year calendar.">
+<link rel="canonical" href="https://1099money.netlify.app/first-year/">
+<meta property="og:title" content="First Year Freelancing: a free 7-lesson email course">
+<meta property="og:description" content="Seven short lessons for your first year freelancing, from 1099 Money.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://1099money.netlify.app/first-year/">
+<meta property="og:image" content="https://1099money.netlify.app/img/tax-calendar-cover.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#14213d">
+<link rel="stylesheet" href="../style.css">
+<style>
+.lessons{counter-reset:l;list-style:none;padding:0}
+.lessons li{counter-increment:l;position:relative;padding:10px 0 10px 44px;border-bottom:1px solid #ddd6c6}
+.lessons li::before{content:counter(l);position:absolute;left:0;top:10px;width:30px;height:30px;border-radius:50%;background:#14213d;color:#f7f3ea;display:grid;place-items:center;font-weight:700}
+</style>
+</head>
+<body>
+<header class="top"><a class="logo" href="../"><span class="mark">1M</span> <span>1099 Money</span></a>
+<nav class="nav"><a href="../">Calculator</a><a href="../mileage/">Driver mileage</a><a href="../compare/">Compare tools</a><a href="../free/">Free calendar</a></nav></header>
+<main>
+<p class="kicker">Free email course · 7 short lessons over 2 weeks</p>
+<h1>First Year Freelancing</h1>
+<p class="lede">You just went freelance. Nobody withholds your tax, nobody sets up your health plan, and nobody tells you what to charge. This course covers the money side of your first year in seven short lessons, one every day or two, each with one thing to do that day.</p>
+<section class="card signup-box">
+  <form class="signup" name="first-year-course" method="POST" action="thanks/" data-thanks="thanks/" data-netlify="true" netlify-honeypot="website">
+    <input type="hidden" name="form-name" value="first-year-course"><input type="hidden" name="source" value="first-year-page">
+    <p class="hp"><label>Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label></p>
+    <label class="sr" for="fy-email">Email</label>
+    <input id="fy-email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+    <button class="btn">Start lesson 1</button>
+  </form>
+  <p class="tiny">Lesson 1 arrives right away. After the course you get a reminder a week before each quarterly tax date and one short email a week. Unsubscribe in one click.</p>
+</section>
+<h2>The seven lessons</h2>
+<ol class="lessons">
+  <li><strong>Three accounts.</strong> Business checking, tax savings and personal, and the set-aside habit that makes April boring.</li>
+  <li><strong>How your first-year taxes work.</strong> Self-employment tax, the four payments, and the first-year safe-harbor rule that often keeps you penalty-free.</li>
+  <li><strong>Records from day one.</strong> What to keep, a mileage log, and the startup costs most people forget to deduct.</li>
+  <li><strong>Pricing your work.</strong> Work back from the life you want to an hourly floor, with real 2026 numbers.</li>
+  <li><strong>Getting paid.</strong> Agreements, deposits, invoices, and the W-9 and 1099 forms clients will ask about.</li>
+  <li><strong>Health insurance and retirement.</strong> Marketplace plans, the self-employed health deduction, SEP IRA and Solo 401(k).</li>
+  <li><strong>Your first-year calendar.</strong> Every 2027 date, and the routine for each one.</li>
+</ol>
+<p>For US freelancers, contractors and side hustlers who file Schedule C. Prefer one PDF? Get the free <a href="../free/">2027 Freelancer Tax Calendar</a>.</p>
+</main>
+<footer>
+<p>Educational content, not tax, legal or financial advice. Federal dates for sole proprietors; confirm on irs.gov and add your state's dates.</p>
+<p>1099 Money · get paid, keep more, never fear April. <a href="../about/">About these pages</a> · <a href="../how-we-make-money/">How we make money</a></p>
+</footer>
+<script type="module">import { setupSignup } from '../signup.js'; import { setupSite } from '../site.js'; setupSignup(); setupSite();</script>
+</body>
+</html>

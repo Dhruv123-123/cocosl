@@ -1,0 +1,935 @@
+[
+ {
+  "format": "short",
+  "pillar": "quarterly estimated taxes",
+  "idea_angle": "First-time freelancers and the Jan 15 payment.",
+  "script": {
+   "title": "Never paid estimated tax? What to do before Jan 15",
+   "hook": "A common question this week: I've never made an estimated tax payment. What do I do before January fifteenth?",
+   "segments": [
+    {
+     "heading": "Common question",
+     "narration": "A common question this week: I've never made an estimated tax payment. What do I do before January fifteenth?",
+     "on_screen_text": "Common question: never paid?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a calendar with the 15 circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Zero rule",
+     "narration": "First, check last year. If you owed no tax at all for twenty twenty-five, and it was a full year as a US resident, there's generally no underpayment penalty for twenty twenty-six.",
+     "on_screen_text": "Owed $0 last year? Usually no penalty",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a form with a big zero. No text, no logos, no real people."
+    },
+    {
+     "heading": "Otherwise",
+     "narration": "Otherwise, the safe target is last year's total tax, split over four payments. You've missed three, so pay as much of that target as you can by Friday the fifteenth.",
+     "on_screen_text": "Target: last year's total tax",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. four boxes, three empty. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why now",
+     "narration": "The penalty works like interest, day by day, so paying now still shrinks it. The rest is due April fifteenth.",
+     "on_screen_text": "Paying now shrinks the penalty",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a shrinking coin stack. No text, no logos, no real people."
+    },
+    {
+     "heading": "Next",
+     "narration": "Next Sunday: paying online in five minutes.",
+     "on_screen_text": "Next: pay online in 5 minutes",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes waving. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "Never made an estimated payment? If you had no tax liability for 2025 (a full 12-month year as a US citizen or resident), you generally owe no underpayment penalty for 2026. Otherwise, the safe-harbor target is 100% of 2025's total tax (110% if 2025 AGI was over $150,000). Pay what you can by Fri Jan 15, 2027: the penalty is figured per day, so paying now still reduces it.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "freelancetaxes",
+    "selfemployed",
+    "1099",
+    "taxseason",
+    "1099money"
+   ],
+   "description": "Jan 15 for first-timers.",
+   "thumbnail_text": "Never paid?",
+   "sources": [
+    "https://www.irs.gov/publications/p505",
+    "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
+    "https://www.irs.gov/forms-pubs/about-form-2210"
+   ],
+   "claims_to_verify": [
+    "No penalty if prior year had no tax liability, full 12-month year, US citizen/resident (Form 2210 instructions, Pub 505)",
+    "Safe harbor 100% / 110% over $150K AGI",
+    "Q4 2026 estimated payment due Fri Jan 15, 2027"
+   ]
+  },
+  "format_style": "question-reply",
+  "series": "Jan 15 reminder 1/2",
+  "post_on": "2027-01-03"
+ },
+ {
+  "format": "short",
+  "pillar": "quarterly estimated taxes",
+  "idea_angle": "The rarely used option of filing by Feb 1 instead of paying Q4.",
+  "script": {
+   "title": "The little-known way to skip the Jan 15 payment",
+   "hook": "There's one way to skip Friday's estimated payment without a penalty. It's real, and it rarely fits.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "There's one way to skip Friday's estimated payment without a penalty. It's real, and it rarely fits.",
+     "on_screen_text": "Skip Jan 15, legally",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a calendar with two dates circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Rule",
+     "narration": "If you file your twenty twenty-six return and pay all the tax you owe by Monday, February first, you don't need the January payment.",
+     "on_screen_text": "File + pay in full by Mon Feb 1",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a form and a coin with a check mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Catch",
+     "narration": "Your ten ninety-nines are only due to you that same day, so you'd need your own complete records to file that early.",
+     "on_screen_text": "Your 1099s arrive the same day",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. an envelope and a clock. No text, no logos, no real people."
+    },
+    {
+     "heading": "Most people",
+     "narration": "For most freelancers, the simpler move is to pay by Friday the fifteenth and file by April fifteenth.",
+     "on_screen_text": "Most: pay Jan 15, file Apr 15",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two calendars. No text, no logos, no real people."
+    },
+    {
+     "heading": "Next",
+     "narration": "Next Sunday: why fewer of you will get a ten ninety-nine this year.",
+     "on_screen_text": "Next: fewer 1099s",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes waving. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "IRS rule (Form 1040-ES / Pub 505): you don't have to make the Q4 2026 estimated payment if you file your 2026 return and pay the full balance by Feb 1, 2027 (Jan 31 is a Sunday). It rarely fits, because clients' 2026 1099s are due to you that same day. For most freelancers: pay by Fri Jan 15, file by Thu Apr 15.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "freelancetaxes",
+    "selfemployed",
+    "1099",
+    "taxseason",
+    "1099money"
+   ],
+   "description": "File by Feb 1 instead of Q4.",
+   "thumbnail_text": "Skip Jan 15?",
+   "sources": [
+    "https://www.irs.gov/publications/p505",
+    "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes"
+   ],
+   "claims_to_verify": [
+    "No Q4 payment needed if the return is filed and all tax paid by Jan 31 (Feb 1, 2027 as Jan 31 is a Sunday), Pub 505 / 1040-ES",
+    "1099-NEC due to recipients Feb 1, 2027"
+   ]
+  },
+  "format_style": "explainer",
+  "series": "Jan 15 reminder 2/2",
+  "post_on": "2027-01-10"
+ },
+ {
+  "format": "short",
+  "pillar": "quarterly estimated taxes",
+  "idea_angle": "Fewer 1099s for 2026, same tax.",
+  "script": {
+   "title": "No 1099 this year? The income still counts",
+   "hook": "Fewer freelancers will get a ten ninety-nine this year. Two myths about that.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Fewer freelancers will get a ten ninety-nine this year. Two myths about that.",
+     "on_screen_text": "Fewer 1099s this year",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes looking into an empty mailbox. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 1",
+     "narration": "Myth: no form means it isn't taxable. Fact: all business income goes on Schedule C, with a form or without one.",
+     "on_screen_text": "No form ≠ no tax",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a form crossed out next to a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 2",
+     "narration": "Myth: clients still send one from six hundred dollars. Fact: for payments in twenty twenty-six, the ten ninety-nine NEC threshold is generally two thousand.",
+     "on_screen_text": "1099-NEC: $2,000 for 2026",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin stack with a 2,000 tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Do this",
+     "narration": "So use your own records, not the forms, to add up your income.",
+     "on_screen_text": "Your records, not the forms",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a notebook with totals. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "For payments made in 2026, a client generally has to send a 1099-NEC only once they've paid you $2,000 or more in the year (it was $600). Fewer forms, same tax: report all business income on Schedule C from your own records.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "freelancetaxes",
+    "selfemployed",
+    "1099",
+    "taxseason",
+    "1099money"
+   ],
+   "description": "The $2,000 1099-NEC threshold.",
+   "thumbnail_text": "No 1099?",
+   "sources": [
+    "https://www.irs.gov/forms-pubs/about-form-1099-nec",
+    "https://www.irs.gov/instructions/i1099mec",
+    "https://www.irs.gov/publications/p334"
+   ],
+   "claims_to_verify": [
+    "1099-NEC/MISC threshold $2,000 for tax years beginning after 2025 (IRS 1099-MISC/NEC instructions)",
+    "All income reportable with or without a form"
+   ]
+  },
+  "format_style": "myth-vs-fact",
+  "series": "1099 season 1/4",
+  "post_on": "2027-01-17"
+ },
+ {
+  "format": "short",
+  "pillar": "quarterly estimated taxes",
+  "idea_angle": "The 1099-K threshold, explained.",
+  "script": {
+   "title": "1099-K is back to $20,000 and 200 payments",
+   "hook": "If you get paid through a payment app or a marketplace, the ten ninety-nine K rules changed back.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "If you get paid through a payment app or a marketplace, the ten ninety-nine K rules changed back.",
+     "on_screen_text": "1099-K: the rule changed back",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a phone with coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Rule",
+     "narration": "For twenty twenty-six, a platform generally sends one only if you had over twenty thousand dollars and over two hundred payments.",
+     "on_screen_text": "Over $20,000 AND over 200 payments",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two gauges side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "So",
+     "narration": "Most part-time sellers and freelancers won't get one. The income is still taxable.",
+     "on_screen_text": "No 1099-K? Still income",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin with a check mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "If you do",
+     "narration": "If you do get one, it shows gross payments, before fees and refunds. Report the gross, then deduct the fees.",
+     "on_screen_text": "Gross in, fees deducted",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a receipt with a minus sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "Next Sunday: the forms that arrive by February first.",
+     "on_screen_text": "Next: Feb 1 forms",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes waving. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "1099-K reporting for 2026: payment platforms and marketplaces generally file one only when your payments are over $20,000 and over 200 transactions (the threshold was restored by the 2025 tax law). No form doesn't mean no tax. A 1099-K shows gross amounts: report the gross on Schedule C and deduct fees and refunds as expenses.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "freelancetaxes",
+    "selfemployed",
+    "1099",
+    "taxseason",
+    "1099money"
+   ],
+   "description": "The 1099-K threshold.",
+   "thumbnail_text": "$20K + 200",
+   "sources": [
+    "https://www.irs.gov/businesses/understanding-your-form-1099-k",
+    "https://www.irs.gov/instructions/i1099mec"
+   ],
+   "claims_to_verify": [
+    "1099-K threshold $20,000 and 200 transactions (OBBBA)",
+    "1099-K reports gross amounts"
+   ]
+  },
+  "format_style": "explainer",
+  "series": "1099 season 2/4",
+  "post_on": "2027-01-24"
+ },
+ {
+  "format": "short",
+  "pillar": "invoicing and getting paid",
+  "idea_angle": "When a client and a platform both report a payment.",
+  "script": {
+   "title": "Got the same payment on two 1099s? Count it once",
+   "hook": "Paid by card or a payment app, and your client sent a ten ninety-nine NEC for it too? Don't report it twice.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Paid by card or a payment app, and your client sent a ten ninety-nine NEC for it too? Don't report it twice.",
+     "on_screen_text": "Same payment, two forms?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding two forms side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why",
+     "narration": "Card and payment-app payments belong on the platform's ten ninety-nine K, not the client's NEC, but some clients send both.",
+     "on_screen_text": "Card payments → 1099-K",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a card and a form. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 1",
+     "narration": "Match each form to your own income log, payment by payment.",
+     "on_screen_text": "Match forms to your log",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a list with check marks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 2",
+     "narration": "Report your real income once on Schedule C. Keep a short note of which payments overlap.",
+     "on_screen_text": "Report once, note the overlap",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a notebook. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 3",
+     "narration": "Ask the client for a corrected form if you can. Forms are due to you by Monday, February first.",
+     "on_screen_text": "Due to you: Mon Feb 1",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "Payments made by card or through a payment platform are generally reported on the platform's Form 1099-K, not on the client's 1099-NEC (1099-NEC instructions). If both arrive for the same money, report your actual income once on Schedule C, keep a note of the overlap, and ask the client for a corrected 1099-NEC. 2026 forms are due by Mon Feb 1, 2027 (Jan 31 is a Sunday).\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "freelancetaxes",
+    "selfemployed",
+    "1099",
+    "taxseason",
+    "1099money"
+   ],
+   "description": "Duplicate 1099 reporting.",
+   "thumbnail_text": "Count it once",
+   "sources": [
+    "https://www.irs.gov/instructions/i1099mec",
+    "https://www.irs.gov/businesses/understanding-your-form-1099-k"
+   ],
+   "claims_to_verify": [
+    "1099-NEC instructions: card and TPSO payments reported on 1099-K, not 1099-NEC",
+    "Jan 31, 2027 is a Sunday, so forms are due Feb 1"
+   ]
+  },
+  "format_style": "how-to",
+  "series": "1099 season 3/4",
+  "post_on": "2027-01-31"
+ },
+ {
+  "format": "short",
+  "pillar": "quarterly estimated taxes",
+  "idea_angle": "Income that arrives without a form.",
+  "script": {
+   "title": "3 kinds of freelance income that never get a 1099",
+   "hook": "These three never come with a form, and all three are taxable.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "These three never come with a form, and all three are taxable.",
+     "on_screen_text": "No form, still taxable",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding three envelopes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Number 3",
+     "narration": "Number three: clients who paid you less than two thousand dollars in twenty twenty-six.",
+     "on_screen_text": "3: clients under $2,000",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small coin stack. No text, no logos, no real people."
+    },
+    {
+     "heading": "Number 2",
+     "narration": "Number two: clients outside the US. They don't file US information returns for you.",
+     "on_screen_text": "2: foreign clients",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a globe with a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Number 1",
+     "narration": "Number one: payment-app income under twenty thousand dollars or two hundred payments.",
+     "on_screen_text": "1: app income under the line",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a phone with coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "Your income log is the only complete list. Free tracker sheet in the link in bio.",
+     "on_screen_text": "Your log is the full list",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a notebook. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "Taxable income that often arrives with no 1099: clients who paid you under $2,000 in 2026, foreign clients, and payment-platform income below $20,000 and 200 payments. Report it all on Schedule C.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "freelancetaxes",
+    "selfemployed",
+    "1099",
+    "taxseason",
+    "1099money"
+   ],
+   "description": "Income with no form.",
+   "thumbnail_text": "No 1099",
+   "sources": [
+    "https://www.irs.gov/forms-pubs/about-form-1099-nec",
+    "https://www.irs.gov/businesses/understanding-your-form-1099-k",
+    "https://www.irs.gov/publications/p334"
+   ],
+   "claims_to_verify": [
+    "$2,000 1099-NEC threshold (2026)",
+    "Foreign payers generally don't issue Forms 1099",
+    "1099-K $20,000 / 200"
+   ]
+  },
+  "format_style": "countdown",
+  "series": "1099 season 4/4",
+  "post_on": "2027-02-07"
+ },
+ {
+  "format": "short",
+  "pillar": "deductions with sources",
+  "idea_angle": "A nine-week deduction challenge before April 15.",
+  "script": {
+   "title": "The Deduction Hunt: one category a week until April 15",
+   "hook": "Nine Sundays until tax day. Each one, we hunt down one deduction freelancers miss.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Nine Sundays until tax day. Each one, we hunt down one deduction freelancers miss.",
+     "on_screen_text": "9 weeks, 9 deductions",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a magnifying glass. No text, no logos, no real people."
+    },
+    {
+     "heading": "Setup",
+     "narration": "Today: download twelve months of statements for every account and card you used for the business.",
+     "on_screen_text": "Download 12 months of statements",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a stack of statements. No text, no logos, no real people."
+    },
+    {
+     "heading": "Rule",
+     "narration": "Each week, scan them for one category, add it up, and put it in your expense log.",
+     "on_screen_text": "One category a week",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a list with one line highlighted. No text, no logos, no real people."
+    },
+    {
+     "heading": "Worth",
+     "narration": "At sixty thousand dollars of profit, every thousand dollars you find cuts federal tax by about two hundred thirty.",
+     "on_screen_text": "$1,000 found ≈ $231 less tax",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin with a slice. No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "Next week: the car. Follow so you don't miss a week.",
+     "on_screen_text": "Next: your miles",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes waving. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "The Deduction Hunt: nine Sundays, one commonly missed deduction a week, until the Apr 15, 2027 deadline. Step 1: download 12 months of statements for every account and card you used for the business. Example (fictional): single, $60,000 of profit, no other income, 2026 federal figures, from the site's tax model. Each $1,000 of deductible expenses lowers federal tax by about $231.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "freelancetaxes",
+    "selfemployed",
+    "1099",
+    "taxseason",
+    "1099money"
+   ],
+   "description": "Deduction Hunt kickoff.",
+   "thumbnail_text": "Hunt week 1",
+   "sources": [
+    "https://www.irs.gov/publications/p334",
+    "https://www.irs.gov/businesses/small-businesses-self-employed/deducting-business-expenses"
+   ],
+   "claims_to_verify": [
+    "$1,000 deduction at $60K profit ≈ $231 less federal tax (site model)"
+   ]
+  },
+  "format_style": "challenge-day-1",
+  "series": "Deduction Hunt 1/9",
+  "post_on": "2027-02-14"
+ },
+ {
+  "format": "short",
+  "pillar": "deductions with sources",
+  "idea_angle": "2026 mileage, with the mid-year rate change.",
+  "script": {
+   "title": "Your 2026 miles get two rates: 72.5¢, then 76¢",
+   "hook": "The IRS raised the mileage rate halfway through twenty twenty-six. Your log's dates matter.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "The IRS raised the mileage rate halfway through twenty twenty-six. Your log's dates matter.",
+     "on_screen_text": "Two mileage rates in 2026",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes next to a car and a calendar split in two. No text, no logos, no real people."
+    },
+    {
+     "heading": "Rates",
+     "narration": "Seventy-two and a half cents a mile through June thirtieth. Seventy-six cents from July first.",
+     "on_screen_text": "72.5¢ to Jun 30 · 76¢ from Jul 1",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two coins of different sizes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Example",
+     "narration": "A thousand business miles in each half: seven twenty-five plus seven sixty, fourteen hundred eighty-five dollars.",
+     "on_screen_text": "$725 + $760 = $1,485",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two coin stacks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Worth",
+     "narration": "At sixty thousand of profit, that's about three hundred forty dollars less federal tax.",
+     "on_screen_text": "≈ $342 less tax",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin with a slice. No text, no logos, no real people."
+    },
+    {
+     "heading": "Hunt",
+     "narration": "This week: rebuild your log from your calendar and client emails. Commuting doesn't count.",
+     "on_screen_text": "Rebuild the log; no commuting",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar and a notebook. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "2026 has two IRS standard mileage rates: 72.5¢ a business mile through June 30 and 76¢ from July 1 (IRS Announcement 2026-11). 1,000 business miles in each half = $1,485. Example (fictional): single, $60,000 of profit, no other income, 2026 federal figures, from the site's tax model. That lowers federal tax by about $342. Rebuild a missing log from your calendar and emails: date, destination, purpose, miles.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "freelancetaxes",
+    "selfemployed",
+    "1099",
+    "taxseason",
+    "1099money"
+   ],
+   "description": "Two mileage rates for 2026.",
+   "thumbnail_text": "72.5¢ + 76¢",
+   "sources": [
+    "https://www.irs.gov/tax-professionals/standard-mileage-rates",
+    "https://www.irs.gov/irb/2026-29_IRB",
+    "https://www.irs.gov/publications/p463"
+   ],
+   "claims_to_verify": [
+    "2026 mileage: 72.5¢ Jan–Jun (Notice 2026-10), 76¢ Jul–Dec (Announcement 2026-11)",
+    "$1,485 deduction at $60K ≈ $342 (site model)"
+   ]
+  },
+  "format_style": "real-numbers",
+  "series": "Deduction Hunt 2/9",
+  "post_on": "2027-02-21"
+ },
+ {
+  "format": "short",
+  "pillar": "deductions with sources",
+  "idea_angle": "Finding software and subscriptions on statements.",
+  "script": {
+   "title": "Hunt week 3: the subscriptions hiding on your card",
+   "hook": "Software is the easiest deduction to miss, because it's small and automatic.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Software is the easiest deduction to miss, because it's small and automatic.",
+     "on_screen_text": "Small, automatic, missed",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a magnifying glass over a card statement. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 1",
+     "narration": "Search your statements for the word subscription, and for every charge that repeats.",
+     "on_screen_text": "Search: repeating charges",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a list with repeating lines highlighted. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 2",
+     "narration": "Keep the ones you use for the business: design tools, cloud storage, scheduling, accounting.",
+     "on_screen_text": "Keep the business ones",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. four small app icons as plain shapes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 3",
+     "narration": "Mixed use? Deduct only the business share, and note how you worked it out.",
+     "on_screen_text": "Mixed use: business share only",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a pie chart. No text, no logos, no real people."
+    },
+    {
+     "heading": "Worth",
+     "narration": "Forty dollars a month is four hundred eighty a year, about a hundred eleven less federal tax at sixty thousand of profit.",
+     "on_screen_text": "$480 a year ≈ $111 less tax",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin with a slice. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "Hunt week 3: software and subscriptions used for the business are deductible business expenses; for mixed-use services, deduct the business share. Example (fictional): single, $60,000 of profit, no other income, 2026 federal figures, from the site's tax model. $40 a month ($480 a year) lowers federal tax by about $111.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "freelancetaxes",
+    "selfemployed",
+    "1099",
+    "taxseason",
+    "1099money"
+   ],
+   "description": "Software deductions.",
+   "thumbnail_text": "Hunt: software",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/deducting-business-expenses",
+    "https://www.irs.gov/publications/p334"
+   ],
+   "claims_to_verify": [
+    "Ordinary and necessary business expenses deductible (Pub 334)",
+    "$480 at $60K ≈ $111 (site model)"
+   ]
+  },
+  "format_style": "how-to",
+  "series": "Deduction Hunt 3/9",
+  "post_on": "2027-02-28"
+ },
+ {
+  "format": "short",
+  "pillar": "deductions with sources",
+  "idea_angle": "The business share of a phone bill, worked out.",
+  "script": {
+   "title": "Hunt week 4: your phone bill's business share, worked out",
+   "hook": "Your phone is part business. Here's the math for that part.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Your phone is part business. Here's the math for that part.",
+     "on_screen_text": "Phone: the business part",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes at a whiteboard with a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "Share",
+     "narration": "Say the bill is fifty dollars a month and sixty percent of your use is business.",
+     "on_screen_text": "$50 × 60%",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a phone and a pie chart. No text, no logos, no real people."
+    },
+    {
+     "heading": "Year",
+     "narration": "Thirty dollars a month, times twelve, is three hundred sixty dollars.",
+     "on_screen_text": "$30 × 12 = $360",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. twelve small coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tax",
+     "narration": "At sixty thousand of profit, about eighty-three dollars less federal tax. Same method for home internet.",
+     "on_screen_text": "≈ $83 less tax",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin with a slice. No text, no logos, no real people."
+    },
+    {
+     "heading": "Proof",
+     "narration": "Write down how you estimated the share, like a typical week's calls. That's your record.",
+     "on_screen_text": "Note how you got 60%",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a notebook with a note. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "Hunt week 4: deduct the business-use share of your phone and internet. Example: a $50 monthly bill at 60% business use = $360 a year. Example (fictional): single, $60,000 of profit, no other income, 2026 federal figures, from the site's tax model. That's about $83 less federal tax. Keep a note of how you estimated the share.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "freelancetaxes",
+    "selfemployed",
+    "1099",
+    "taxseason",
+    "1099money"
+   ],
+   "description": "Phone business share.",
+   "thumbnail_text": "Phone: 60%",
+   "sources": [
+    "https://www.irs.gov/publications/p334",
+    "https://www.irs.gov/businesses/small-businesses-self-employed/recordkeeping"
+   ],
+   "claims_to_verify": [
+    "Business-use percentage of phone/internet deductible",
+    "$360 at $60K ≈ $83 (site model)"
+   ]
+  },
+  "format_style": "on-screen-calculation",
+  "series": "Deduction Hunt 4/9",
+  "post_on": "2027-03-07"
+ },
+ {
+  "format": "short",
+  "pillar": "deductions with sources",
+  "idea_angle": "Whether a kitchen table counts as a home office.",
+  "script": {
+   "title": "Hunt week 5: does your kitchen table count?",
+   "hook": "A common question in week five: I work from my kitchen table. Can I take the home office deduction?",
+   "segments": [
+    {
+     "heading": "Common question",
+     "narration": "A common question in week five: I work from my kitchen table. Can I take the home office deduction?",
+     "on_screen_text": "Common question: kitchen table?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes at a kitchen table with a laptop. No text, no logos, no real people."
+    },
+    {
+     "heading": "Answer",
+     "narration": "Usually not. The space has to be used regularly and only for the business. A table where the family eats doesn't pass.",
+     "on_screen_text": "Regular + only for business",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a desk with a check, a dining table with a cross. No text, no logos, no real people."
+    },
+    {
+     "heading": "Does",
+     "narration": "A spare room or a clearly set-apart corner you use only for work can. The simplified method is five dollars a square foot, up to three hundred.",
+     "on_screen_text": "$5 a sq ft, up to 300",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small room outline. No text, no logos, no real people."
+    },
+    {
+     "heading": "Worth",
+     "narration": "A hundred twenty square feet is six hundred dollars, about a hundred thirty-eight less federal tax at sixty thousand of profit.",
+     "on_screen_text": "120 sq ft = $600 ≈ $138",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin with a slice. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "Hunt week 5: the home office deduction needs space used regularly and exclusively for the business; a shared kitchen table usually doesn't qualify. Simplified method: $5 per square foot, up to 300 sq ft. 120 sq ft = $600. Example (fictional): single, $60,000 of profit, no other income, 2026 federal figures, from the site's tax model. That's about $138 less federal tax.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "freelancetaxes",
+    "selfemployed",
+    "1099",
+    "taxseason",
+    "1099money"
+   ],
+   "description": "Home office: exclusive use.",
+   "thumbnail_text": "Kitchen table?",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/home-office-deduction",
+    "https://www.irs.gov/publications/p334"
+   ],
+   "claims_to_verify": [
+    "Home office: regular and exclusive use; simplified $5/sq ft up to 300 sq ft",
+    "$600 at $60K ≈ $138 (site model)"
+   ]
+  },
+  "format_style": "question-reply",
+  "series": "Deduction Hunt 5/9",
+  "post_on": "2027-03-14"
+ },
+ {
+  "format": "short",
+  "pillar": "deductions with sources",
+  "idea_angle": "Payment processor and platform fees.",
+  "script": {
+   "title": "Hunt week 6: the fees your 1099-K doesn't subtract",
+   "hook": "If clients pay you by card or through a platform, part of every payment went to fees. That part is deductible.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "If clients pay you by card or through a platform, part of every payment went to fees. That part is deductible.",
+     "on_screen_text": "Fees are deductible",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a card and a small coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why missed",
+     "narration": "Your payout already had the fee taken out, so it never shows up as a bill you paid.",
+     "on_screen_text": "Taken out before payout",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin with a slice missing. No text, no logos, no real people."
+    },
+    {
+     "heading": "Where",
+     "narration": "Find the yearly fee total in your processor or marketplace dashboard, usually in a tax or reports section.",
+     "on_screen_text": "Dashboard → yearly fee total",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a dashboard with a total. No text, no logos, no real people."
+    },
+    {
+     "heading": "Worth",
+     "narration": "Thirty thousand dollars through a processor at three percent is nine hundred in fees, about two hundred seven less federal tax at sixty thousand of profit.",
+     "on_screen_text": "$900 in fees ≈ $207 less tax",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin with a slice. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "Hunt week 6: card processing and platform fees are deductible business expenses. If you report gross receipts (as a 1099-K shows them), deduct the fees as an expense. Example: $30,000 at 3% = $900 in fees. Example (fictional): single, $60,000 of profit, no other income, 2026 federal figures, from the site's tax model. That's about $207 less federal tax.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "freelancetaxes",
+    "selfemployed",
+    "1099",
+    "taxseason",
+    "1099money"
+   ],
+   "description": "Processor fees.",
+   "thumbnail_text": "Hunt: fees",
+   "sources": [
+    "https://www.irs.gov/businesses/understanding-your-form-1099-k",
+    "https://www.irs.gov/publications/p334"
+   ],
+   "claims_to_verify": [
+    "1099-K shows gross; fees deductible",
+    "$900 at $60K ≈ $207 (site model)"
+   ]
+  },
+  "format_style": "explainer",
+  "series": "Deduction Hunt 6/9",
+  "post_on": "2027-03-21"
+ },
+ {
+  "format": "short",
+  "pillar": "benefits without an employer",
+  "idea_angle": "The self-employed health insurance deduction.",
+  "script": {
+   "title": "Hunt week 7: health insurance you paid for yourself",
+   "hook": "Bought your own health insurance in twenty twenty-six? Two myths keep people from deducting it.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Bought your own health insurance in twenty twenty-six? Two myths keep people from deducting it.",
+     "on_screen_text": "Your own health insurance",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a heart-shaped shield. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 1",
+     "narration": "Myth: you have to itemize. Fact: self-employed health insurance is an adjustment to income, on Form seventy-two oh six, with the standard deduction too.",
+     "on_screen_text": "No itemizing needed",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a form with a heart. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 2",
+     "narration": "Myth: it lowers self-employment tax. Fact: it lowers income tax only.",
+     "on_screen_text": "Income tax only",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two coins, one crossed out. No text, no logos, no real people."
+    },
+    {
+     "heading": "Limits",
+     "narration": "It can't exceed your business profit, and months you could join an employer's plan, yours or a spouse's, don't count.",
+     "on_screen_text": "Up to profit; not if employer plan",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar with some months shaded. No text, no logos, no real people."
+    },
+    {
+     "heading": "Worth",
+     "narration": "Five thousand dollars of premiums is about four hundred eighty less federal tax at sixty thousand of profit.",
+     "on_screen_text": "$5,000 ≈ $480 less tax",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin with a slice. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "Hunt week 7: self-employed health insurance premiums are an adjustment to income (Form 7206), so you don't need to itemize. They lower income tax, not self-employment tax, can't exceed business profit, and don't count for months you were eligible for an employer-subsidized plan (yours or a spouse's). Example (fictional): single, $60,000 of profit, no other income, 2026 federal figures, from the site's tax model. $5,000 of premiums lowers federal tax by about $480.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "freelancetaxes",
+    "selfemployed",
+    "1099",
+    "taxseason",
+    "1099money"
+   ],
+   "description": "SE health insurance.",
+   "thumbnail_text": "Hunt: health",
+   "sources": [
+    "https://www.irs.gov/forms-pubs/about-form-7206"
+   ],
+   "claims_to_verify": [
+    "SE health insurance deduction: Form 7206, income tax only, limited to profit, not for months eligible for employer plan",
+    "$5,000 at $60K ≈ $480 (site model)"
+   ]
+  },
+  "format_style": "myth-vs-fact",
+  "series": "Deduction Hunt 7/9",
+  "post_on": "2027-03-28"
+ },
+ {
+  "format": "short",
+  "pillar": "benefits without an employer",
+  "idea_angle": "The IRA contribution that still counts for 2026.",
+  "script": {
+   "title": "Hunt week 8: an IRA for 2026, until April 15",
+   "hook": "One deduction you can still create for twenty twenty-six, right now.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "One deduction you can still create for twenty twenty-six, right now.",
+     "on_screen_text": "Still time for 2026",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes pointing at a calendar with the 15 circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Rule",
+     "narration": "A traditional IRA contribution made by April fifteenth can count for last year. Tell the provider it's for twenty twenty-six.",
+     "on_screen_text": "By Apr 15, marked for 2026",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a jar with a 2026 label. No text, no logos, no real people."
+    },
+    {
+     "heading": "Limit",
+     "narration": "The twenty twenty-six limit is seventy-five hundred dollars, or eighty-six hundred if you're fifty or older.",
+     "on_screen_text": "$7,500 · $8,600 at 50+",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two jars. No text, no logos, no real people."
+    },
+    {
+     "heading": "Worth",
+     "narration": "Seventy-five hundred is about seven hundred twenty less federal tax at sixty thousand of profit, if you're eligible to deduct it.",
+     "on_screen_text": "$7,500 ≈ $720 less tax",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin with a slice. No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "Eleven days left.",
+     "on_screen_text": "11 days left",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "Hunt week 8: traditional IRA contributions for 2026 can be made until Thu Apr 15, 2027; tell the provider which year. 2026 limit: $7,500 ($8,600 at 50+). Example (fictional): single, $60,000 of profit, no other income, 2026 federal figures, from the site's tax model. A deductible $7,500 contribution lowers federal tax by about $720. Deductibility can be limited if you or a spouse are covered by a workplace plan.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "freelancetaxes",
+    "selfemployed",
+    "1099",
+    "taxseason",
+    "1099money"
+   ],
+   "description": "IRA deadline.",
+   "thumbnail_text": "IRA by Apr 15",
+   "sources": [
+    "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-ira-contribution-limits",
+    "https://www.irs.gov/retirement-plans/ira-year-end-reminders"
+   ],
+   "claims_to_verify": [
+    "2026 IRA limit $7,500, catch-up to $8,600 at 50+",
+    "Contributions for 2026 until Apr 15, 2027",
+    "$7,500 at $60K ≈ $720 (site model)"
+   ]
+  },
+  "format_style": "deadline-alert",
+  "series": "Deduction Hunt 8/9",
+  "post_on": "2027-04-04"
+ },
+ {
+  "format": "short",
+  "pillar": "deductions with sources",
+  "idea_angle": "What the whole hunt adds up to.",
+  "script": {
+   "title": "Deduction Hunt results: about $2,080 less tax, worked out",
+   "hook": "Nine weeks of hunting. Here's what the finds from our example add up to.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Nine weeks of hunting. Here's what the finds from our example add up to.",
+     "on_screen_text": "The hunt, added up",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a trophy shaped like a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Business",
+     "narration": "Miles fourteen eighty-five, software four eighty, phone three sixty, home office six hundred, fees nine hundred: thirty-eight twenty-five on Schedule C.",
+     "on_screen_text": "$3,825 of business expenses",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. five small coin stacks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Personal",
+     "narration": "Plus five thousand of health premiums and a seventy-five hundred dollar IRA.",
+     "on_screen_text": "+ $5,000 health + $7,500 IRA",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a heart and a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Total",
+     "narration": "For a single freelancer at sixty thousand of profit, about two thousand eighty dollars less federal tax.",
+     "on_screen_text": "≈ $2,080 less federal tax",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a big coin with a slice. No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "Your numbers will differ. Free calculator in the link in bio. Tax day is Thursday.",
+     "on_screen_text": "Tax day: Thu Apr 15",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "Deduction Hunt results for one fictional freelancer: $3,825 of business expenses (miles $1,485, software $480, phone $360, home office $600, fees $900) plus $5,000 of self-employed health premiums and a $7,500 deductible IRA. Example (fictional): single, $60,000 of profit, no other income, 2026 federal figures, from the site's tax model. Together they lower 2026 federal tax by about $2,080. Returns are due Thu Apr 15, 2027.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFree quarterly tax calculator in the link in bio.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "freelancetaxes",
+    "selfemployed",
+    "1099",
+    "taxseason",
+    "1099money"
+   ],
+   "description": "Deduction Hunt results.",
+   "thumbnail_text": "≈ $2,080",
+   "sources": [
+    "https://www.irs.gov/publications/p334",
+    "https://www.irs.gov/forms-pubs/about-form-7206",
+    "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-ira-contribution-limits"
+   ],
+   "claims_to_verify": [
+    "Combined: profit $56,175 with $12,500 adjustments vs $60,000 ≈ $2,082 less federal tax (site model)",
+    "Returns due Apr 15, 2027"
+   ]
+  },
+  "format_style": "real-numbers",
+  "series": "Deduction Hunt 9/9",
+  "post_on": "2027-04-11"
+ }
+]

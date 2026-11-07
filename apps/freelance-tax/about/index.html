@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About 1099 Money: How These Pages Are Made | 1099 Money</title>
+<meta name="description" content="What 1099 Money is, how its tax pages and calculators are made and checked, and how the site makes money.">
+<link rel="canonical" href="https://1099money.netlify.app/about/">
+<meta property="og:title" content="About 1099 Money: How These Pages Are Made">
+<meta property="og:description" content="What 1099 Money is, how its tax pages and calculators are made and checked, and how the site makes money.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://1099money.netlify.app/about/">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#14213d">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"1099 Money","item":"https://1099money.netlify.app/"},{"@type":"ListItem","position":2,"name":"About","item":"https://1099money.netlify.app/about/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"AboutPage","name":"About 1099 Money","url":"https://1099money.netlify.app/about/","publisher":{"@type":"Organization","name":"1099 Money","url":"https://1099money.netlify.app/"}}</script>
+</head>
+<body>
+<header class="top"><a class="logo" href="../"><span class="mark">1M</span> <span>1099 Money</span></a>
+<nav class="nav"><a href="../">Calculator</a><a href="../mileage/">Driver mileage</a><a href="../compare/">Compare tools</a><a href="../free/">Free calendar</a></nav></header>
+<main>
+<h1>About 1099 Money</h1>
+<p class="lede">Free tools and plain-English guides on taxes and money for US freelancers, 1099 workers and gig drivers.</p>
+<section class="prose">
+
+<h2>How these pages are made</h2>
+<p>Pages are drafted with help from AI tools. The tax figures come from IRS, SSA and healthcare.gov publications, and each page names its sources or the form it relies on. A person decides what gets published and when, and each comparison page shows the date it went up. Figures are for the 2026 tax year and are re-checked each January.</p>
+<p>The calculators run entirely in your browser. Nothing you type is sent anywhere.</p>
+<h2>How the site makes money</h2>
+<p>Some links on the comparison pages are affiliate links, labeled on the page: we may earn a commission at no cost to you. We also sell our own spreadsheets and templates. Neither changes which tools we pick or the order they're in, and every comparison page says how its picks were made. The full list is on <a href="../how-we-make-money/">How we make money</a>.</p>
+<h2>What this isn't</h2>
+<p>This is educational content, not tax, legal or financial advice. For your own situation, check irs.gov or talk to a CPA or enrolled agent.</p>
+</section>
+</main>
+<footer>
+<p>Educational content, not tax, legal or financial advice. Features and prices change: check each provider's site before you sign up. Picks are ours; some links are affiliate links, and we may earn a commission at no cost to you. That never changes the order.</p>
+<p>1099 Money · get paid, keep more, never fear April. Written with help from AI tools. <a href="../about/">About these pages</a> · <a href="../how-we-make-money/">How we make money</a></p>
+</footer>
+<script type="module">
+import config from '../config.js';
+import { setupSite, live } from '../site.js';
+import { setupSignup } from '../signup.js';
+const p = config.product, box = document.getElementById('our-tool');
+if (box && live(p.url)) {
+  box.innerHTML = '<h2></h2><p></p><a class="btn"></a>';
+  box.querySelector('h2').textContent = p.name + ' · ' + p.price;
+  box.querySelector('p').textContent = p.pitch;
+  const a = box.querySelector('a'); a.href = p.url; a.textContent = 'Get the tracker'; a.rel = 'noopener';
+  box.hidden = false;
+}
+setupSignup();
+setupSite();
+</script>
+</body>
+</html>

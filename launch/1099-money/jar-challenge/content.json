@@ -1,0 +1,738 @@
+[
+ {
+  "format": "short",
+  "pillar": "quarterly estimated taxes",
+  "idea_angle": "A savings challenge freelancers can do with us until Jan 15.",
+  "script": {
+   "title": "The Tax Jar Challenge: 25% of every payment until Jan 15",
+   "hook": "Here's a challenge for every freelancer: from today until January fifteenth, every time a client pays you, a quarter of it goes in the tax jar. Same day. No exceptions.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Here's a challenge for every freelancer: from today until January fifteenth, every time a client pays you, a quarter of it goes in the tax jar. Same day. No exceptions.",
+     "on_screen_text": "Tax Jar Challenge: day 1",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a big glass jar with a coin going in. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why",
+     "narration": "January fifteenth is the last estimated tax payment for twenty twenty-six. Most people who dread it don't owe more than they planned. They just spent it.",
+     "on_screen_text": "Jan 15: last 2026 payment",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar page with the 15th circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Example",
+     "narration": "Example, fictional: Sam gets paid two thousand dollars. Five hundred goes in the jar that day. Fifteen hundred is Sam's to spend.",
+     "on_screen_text": "$2,000 → $500 in the jar",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin splitting into a jar and a wallet. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why 25%",
+     "narration": "Twenty-five percent covers federal tax for many freelancers around sixty thousand of profit, plus some state tax. We'll fine-tune yours in week two.",
+     "on_screen_text": "25%: a starting point",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a jar with a quarter shaded. No text, no logos, no real people."
+    },
+    {
+     "heading": "Join",
+     "narration": "Every Monday until January fifteenth, we'll post one small step. This video is day one, so start with your next payment.",
+     "on_screen_text": "One step every Monday",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes giving a thumbs up next to the jar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "The Tax Jar Challenge starts today: set aside 25% of every client payment until Jan 15, the last 2026 estimated tax payment. One small step every Monday.\n\nExample numbers are fictional, not a promise. Educational, not tax advice. 2026 federal figures; check your state.\n\nFree jar tracker and quarterly tax calculator in the link in bio.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "taxjarchallenge",
+    "freelancetaxes",
+    "quarterlytaxes",
+    "selfemployed",
+    "1099money"
+   ],
+   "description": "Tax Jar Challenge, day 1: 25% of every payment into a separate tax jar until Jan 15, 2027.",
+   "thumbnail_text": "Tax Jar: day 1",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
+    "https://www.irs.gov/payments"
+   ],
+   "claims_to_verify": [
+    "Jan 15, 2027 is the 4th 2026 estimated payment date",
+    "25% ≈ 20.1% federal at $60K profit (2026, single) + ~5% state"
+   ]
+  },
+  "format_style": "challenge-day-1",
+  "series": "Tax Jar Challenge 1/10",
+  "post_on": "2026-11-16"
+ },
+ {
+  "format": "carousel",
+  "pillar": "quarterly estimated taxes",
+  "idea_angle": "The whole jar challenge, saved in one place.",
+  "script": {
+   "title": "The Tax Jar Challenge: all 8 weeks on one page",
+   "hook": "",
+   "segments": [
+    {
+     "heading": "Cover",
+     "narration": "",
+     "on_screen_text": "The Tax Jar Challenge: Nov 16 – Jan 15",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a big glass jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Rule",
+     "narration": "",
+     "on_screen_text": "25% of every payment, the same day",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin going into a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Weeks 1-2",
+     "narration": "",
+     "on_screen_text": "Own account · find your own %",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two jars and a measuring cup. No text, no logos, no real people."
+    },
+    {
+     "heading": "Weeks 3-4",
+     "narration": "",
+     "on_screen_text": "Backfill since Sep 1 · % of profit",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar and a coin with a slice cut off. No text, no logos, no real people."
+    },
+    {
+     "heading": "Weeks 5-6",
+     "narration": "",
+     "on_screen_text": "Automate it · check vs Jan 15",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a gear and a jar held up to the light. No text, no logos, no real people."
+    },
+    {
+     "heading": "Weeks 7-8",
+     "narration": "",
+     "on_screen_text": "Set up the payment · leftover is for April",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a laptop and a jar with two layers. No text, no logos, no real people."
+    },
+    {
+     "heading": "Jan 15",
+     "narration": "",
+     "on_screen_text": "Pay from the jar. Keep going.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar page with the 15th circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Send",
+     "narration": "",
+     "on_screen_text": "Send this to a freelancer who dreads January",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a paper plane. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this. Follow for one freelancer money move a week.",
+   "caption": "The Tax Jar Challenge for freelancers, all on one page: set aside 25% of every payment until Jan 15, with one small step a week. Save this and check off each week.\n\nNumbers are examples, not a promise. Educational, not tax advice. 2026 federal figures; check your state.\n\nFree jar tracker and quarterly tax calculator in the link in bio.\n\nSave this. Follow for one freelancer money move a week.",
+   "hashtags": [
+    "taxjarchallenge",
+    "freelancetaxes",
+    "quarterlytaxes",
+    "selfemployed",
+    "1099money"
+   ],
+   "description": "The Tax Jar Challenge, all 8 weeks.",
+   "thumbnail_text": "Tax Jar: all weeks",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
+    "https://www.irs.gov/payments"
+   ],
+   "claims_to_verify": [
+    "Jan 15, 2027: 4th 2026 estimated payment"
+   ]
+  },
+  "format_style": "checklist",
+  "series": "Tax Jar Challenge (all weeks)",
+  "post_on": "2026-11-19"
+ },
+ {
+  "format": "short",
+  "pillar": "quarterly estimated taxes",
+  "idea_angle": "Week 1 of the jar: a separate account.",
+  "script": {
+   "title": "Your tax money needs its own account (Tax Jar, week 1)",
+   "hook": "If your tax money sits in the same account as your rent and groceries, it will get spent. Week one of the Tax Jar Challenge fixes that in about ten minutes.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "If your tax money sits in the same account as your rent and groceries, it will get spent. Week one of the Tax Jar Challenge fixes that in about ten minutes.",
+     "on_screen_text": "Tax Jar week 1",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes next to two jars, one labeled with a T shape. No text, no logos, no real people."
+    },
+    {
+     "heading": "Open it",
+     "narration": "Open a separate savings account just for taxes. Many online banks let you open one in minutes with no minimum. Check it's FDIC insured.",
+     "on_screen_text": "Open a separate savings account",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a phone with a new account screen. No text, no logos, no real people."
+    },
+    {
+     "heading": "Name it",
+     "narration": "Give it a nickname you can't ignore, like Taxes, do not touch. It sounds silly. It works, because you see the name every time you log in.",
+     "on_screen_text": "Nickname: Taxes, do not touch",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a jar with a label. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fill it",
+     "narration": "Then move twenty-five percent of any payment you've had since day one into it. That's the jar.",
+     "on_screen_text": "Move in 25% since day 1",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. coins moving into the jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "New here?",
+     "narration": "New to the challenge? Day one is pinned on our profile. Start with whatever payment comes next.",
+     "on_screen_text": "Day 1 is pinned",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes pointing to a pin. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "Tax Jar Challenge, week 1: open a separate savings account for tax money and give it a name you can't ignore.\n\nPart of the Tax Jar Challenge: day 1 is pinned on our profile. Educational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "taxjarchallenge",
+    "freelancetaxes",
+    "quarterlytaxes",
+    "selfemployed",
+    "1099money"
+   ],
+   "description": "Week 1: a separate tax savings account.",
+   "thumbnail_text": "Week 1: own account",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
+    "https://www.fdic.gov/resources/deposit-insurance/"
+   ],
+   "claims_to_verify": [
+    "Online banks often have no minimum (varies)",
+    "FDIC insurance applies to insured banks up to limits"
+   ]
+  },
+  "format_style": "how-to",
+  "series": "Tax Jar Challenge 2/10",
+  "post_on": "2026-11-23"
+ },
+ {
+  "format": "short",
+  "pillar": "quarterly estimated taxes",
+  "idea_angle": "Week 2 of the jar: your own percentage.",
+  "script": {
+   "title": "Is 25% right for you? Tax Jar week 2",
+   "hook": "Twenty-five percent is a starting point, not your number. Week two of the Tax Jar Challenge: find your own percentage in about two minutes.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Twenty-five percent is a starting point, not your number. Week two of the Tax Jar Challenge: find your own percentage in about two minutes.",
+     "on_screen_text": "Tax Jar week 2",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a measuring cup next to a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Federal",
+     "narration": "For a single filer with no other income, twenty twenty-six federal tax is about seventeen percent of profit at thirty thousand, twenty at sixty, twenty-one and a half at ninety, and twenty-four at a hundred and twenty.",
+     "on_screen_text": "17% · 20% · 21.5% · 24%",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. four bars rising slowly. No text, no logos, no real people."
+    },
+    {
+     "heading": "State",
+     "narration": "Add your state's income tax rate. No state tax? Your federal number is it.",
+     "on_screen_text": "Plus your state's rate",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a map outline with a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Day job",
+     "narration": "Got a day job too? Freelance income sits on top of your wages, so it's often closer to thirty percent.",
+     "on_screen_text": "Day job? Closer to 30%",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a briefcase next to a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Both",
+     "narration": "Day job and state tax? Add both: your top bracket, plus your state's rate.",
+     "on_screen_text": "Both? Add them up",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two small jars poured into one. No text, no logos, no real people."
+    },
+    {
+     "heading": "Do it",
+     "narration": "The free calculator in the link in bio does this with your own numbers. Change your jar percentage today. Day one is pinned.",
+     "on_screen_text": "Update your jar %",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calculator next to the jar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "Tax Jar Challenge, week 2: replace the 25% with your own number. Federal set-aside at 2026 rates: about 17% at $30K profit, 20% at $60K, 21.5% at $90K, 24% at $120K (single). Add state tax.\n\nPart of the Tax Jar Challenge: day 1 is pinned on our profile. Educational, not tax advice. 2026 federal figures; check your state.\n\nFree quarterly tax calculator in the link in bio.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "taxjarchallenge",
+    "freelancetaxes",
+    "quarterlytaxes",
+    "selfemployed",
+    "1099money"
+   ],
+   "description": "Week 2: your own set-aside percentage.",
+   "thumbnail_text": "Week 2: your %",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
+    "https://www.irs.gov/forms-pubs/about-schedule-c-form-1040",
+    "https://www.irs.gov/publications/p505"
+   ],
+   "claims_to_verify": [
+    "2026 single: total federal tax $5,181 at $30K (17.3%), $12,037 at $60K (20.1%), $19,316 at $90K (21.5%), $28,462 at $120K (23.7%)",
+    "$60K wages + $30K freelance ≈ 28.3%"
+   ]
+  },
+  "format_style": "real-numbers",
+  "series": "Tax Jar Challenge 3/10",
+  "post_on": "2026-11-30"
+ },
+ {
+  "format": "short",
+  "pillar": "quarterly estimated taxes",
+  "idea_angle": "Week 3 of the jar: backfill since September.",
+  "script": {
+   "title": "Backfill since September 1: Tax Jar week 3",
+   "hook": "The January fifteenth payment isn't just for what you earn from now on. Week three of the Tax Jar Challenge: backfill.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "The January fifteenth payment isn't just for what you earn from now on. Week three of the Tax Jar Challenge: backfill.",
+     "on_screen_text": "Tax Jar week 3: backfill",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes pouring coins from an old cup into the jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 1",
+     "narration": "Myth: the January payment covers December. Fact: it covers September first through December thirty-first. Four months.",
+     "on_screen_text": "Covers Sep 1 – Dec 31",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar with four months shaded. No text, no logos, no real people."
+    },
+    {
+     "heading": "Backfill",
+     "narration": "So add up what clients paid you since September first that you haven't set tax aside for, and move your percentage of it into the jar.",
+     "on_screen_text": "Add up payments since Sep 1",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a stack of invoices. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 2",
+     "narration": "Myth: if you can't backfill it all, don't bother. Fact: any amount paid by January fifteenth lowers a penalty. Move what you can.",
+     "on_screen_text": "Some beats none",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a jar half full. No text, no logos, no real people."
+    },
+    {
+     "heading": "Next",
+     "narration": "Day one of the challenge is pinned on our profile.",
+     "on_screen_text": "Day 1 is pinned",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes pointing to a pin. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "Tax Jar Challenge, week 3: the Jan 15 payment covers income from Sep 1 to Dec 31, so backfill the jar for payments since Sep 1. Move what you can.\n\nPart of the Tax Jar Challenge: day 1 is pinned on our profile. Educational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "taxjarchallenge",
+    "freelancetaxes",
+    "quarterlytaxes",
+    "selfemployed",
+    "1099money"
+   ],
+   "description": "Week 3: backfill since September 1.",
+   "thumbnail_text": "Week 3: backfill",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
+    "https://www.irs.gov/forms-pubs/about-form-2210"
+   ],
+   "claims_to_verify": [
+    "4th 2026 estimated payment period: Sep 1 – Dec 31, due Jan 15, 2027",
+    "Underpayment penalty is figured per period, so a partial payment reduces it"
+   ]
+  },
+  "format_style": "myth-vs-fact",
+  "series": "Tax Jar Challenge 4/10",
+  "post_on": "2026-12-07"
+ },
+ {
+  "format": "short",
+  "pillar": "quarterly estimated taxes",
+  "idea_angle": "Week 4 of the jar: 25% of what?",
+  "script": {
+   "title": "25% of the payment or the profit? Tax Jar week 4",
+   "hook": "A common question from the Tax Jar Challenge: twenty-five percent of what? The whole payment, or what's left after expenses?",
+   "segments": [
+    {
+     "heading": "Common question",
+     "narration": "A common question from the Tax Jar Challenge: twenty-five percent of what? The whole payment, or what's left after expenses?",
+     "on_screen_text": "Common question: 25% of what?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a question mark over a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Answer",
+     "narration": "Tax is on profit, so strictly it's a percentage of what's left after business expenses.",
+     "on_screen_text": "Tax is on profit",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin with a slice cut off. No text, no logos, no real people."
+    },
+    {
+     "heading": "Example",
+     "narration": "Example, fictional: Sam is paid two thousand and spends four hundred on that job. Profit: sixteen hundred. Twenty-five percent of that is four hundred, not five hundred.",
+     "on_screen_text": "$1,600 profit → $400",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two jars, one slightly fuller. No text, no logos, no real people."
+    },
+    {
+     "heading": "Payment apps",
+     "narration": "Paid through an app that takes a fee? The fee is an expense too, so the same rule applies.",
+     "on_screen_text": "App fees count as expenses",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a phone with a small coin leaving it. No text, no logos, no real people."
+    },
+    {
+     "heading": "Simple version",
+     "narration": "The simple version: take it from the whole payment. You'll have a little extra in April, and you never have to guess.",
+     "on_screen_text": "Simple: % of the whole payment",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a jar with a small bonus coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Next",
+     "narration": "The day-one post is pinned on our profile if you're just joining.",
+     "on_screen_text": "Day 1 is pinned",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes pointing to a pin. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "Tax Jar Challenge, week 4: the percentage is of profit, so you can take it from what's left after that job's expenses. Or keep it simple and take it from the whole payment.\n\nPart of the Tax Jar Challenge: day 1 is pinned on our profile. Educational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "taxjarchallenge",
+    "freelancetaxes",
+    "quarterlytaxes",
+    "selfemployed",
+    "1099money"
+   ],
+   "description": "Week 4: percentage of profit vs payment.",
+   "thumbnail_text": "Week 4: of what?",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
+    "https://www.irs.gov/forms-pubs/about-schedule-c-form-1040"
+   ],
+   "claims_to_verify": [
+    "Self-employment and income tax are on net profit (Schedule C)"
+   ]
+  },
+  "format_style": "question-reply",
+  "series": "Tax Jar Challenge 5/10",
+  "post_on": "2026-12-14"
+ },
+ {
+  "format": "short",
+  "pillar": "quarterly estimated taxes",
+  "idea_angle": "Week 5 of the jar: automate it.",
+  "script": {
+   "title": "3 ways to fill your tax jar on autopilot (week 5)",
+   "hook": "The jar only works if you never skip a payment. Week five of the Tax Jar Challenge: three ways to make it automatic.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "The jar only works if you never skip a payment. Week five of the Tax Jar Challenge: three ways to make it automatic.",
+     "on_screen_text": "Tax Jar week 5: automate",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes next to a jar with a gear. No text, no logos, no real people."
+    },
+    {
+     "heading": "Number 3",
+     "narration": "Number three: a reminder. Set a phone alert for every invoice due date that says: move the tax money.",
+     "on_screen_text": "3: a reminder per invoice",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a phone with a bell. No text, no logos, no real people."
+    },
+    {
+     "heading": "Number 2",
+     "narration": "Number two: a weekly transfer. Every Friday, move your percentage of the week's payments. Five minutes.",
+     "on_screen_text": "2: Friday transfer",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar with Fridays marked. No text, no logos, no real people."
+    },
+    {
+     "heading": "Number 1",
+     "narration": "Number one: a bank rule. Some banks let you send a percentage of every deposit to savings automatically. Check if yours does.",
+     "on_screen_text": "1: auto-split every deposit",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin splitting automatically. No text, no logos, no real people."
+    },
+    {
+     "heading": "Next",
+     "narration": "Pick one today. Just joining? Start with the pinned day-one post on our profile.",
+     "on_screen_text": "Pick one today",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes pointing to a pin. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "Tax Jar Challenge, week 5: three ways to fill the jar without thinking about it: an invoice reminder, a Friday transfer, or a bank rule that splits every deposit.\n\nPart of the Tax Jar Challenge: day 1 is pinned on our profile. Educational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "taxjarchallenge",
+    "freelancetaxes",
+    "quarterlytaxes",
+    "selfemployed",
+    "1099money"
+   ],
+   "description": "Week 5: automate the jar.",
+   "thumbnail_text": "Week 5: autopilot",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
+    "https://www.fdic.gov/resources/deposit-insurance/"
+   ],
+   "claims_to_verify": [
+    "Automatic deposit-splitting rules exist at some banks (varies)"
+   ]
+  },
+  "format_style": "countdown",
+  "series": "Tax Jar Challenge 6/10",
+  "post_on": "2026-12-21"
+ },
+ {
+  "format": "short",
+  "pillar": "quarterly estimated taxes",
+  "idea_angle": "Week 6 of the jar: check it against the Jan 15 number.",
+  "script": {
+   "title": "Is your tax jar enough for Jan 15? Week 6 check",
+   "hook": "Week six of the Tax Jar Challenge, and the payment is under three weeks away. Let's check the jar against what you actually need to send.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Week six of the Tax Jar Challenge, and the payment is under three weeks away. Let's check the jar against what you actually need to send.",
+     "on_screen_text": "Tax Jar week 6: check it",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a jar up to the light. No text, no logos, no real people."
+    },
+    {
+     "heading": "Safe harbor",
+     "narration": "To avoid a penalty, you generally need to have paid the smaller of ninety percent of this year's tax, or a hundred percent of last year's. A hundred and ten if last year's income was over a hundred and fifty thousand.",
+     "on_screen_text": "90% this year or 100% last year",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two bars, the smaller one circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Example",
+     "narration": "Example, fictional: Sam's tax last year was sixty-five hundred. Sam paid forty-eight seventy-five so far. Sixty-five hundred minus that is sixteen twenty-five due January fifteenth.",
+     "on_screen_text": "$6,500 − $4,875 = $1,625",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a simple sum on a whiteboard. No text, no logos, no real people."
+    },
+    {
+     "heading": "Last year",
+     "narration": "Not sure what last year's tax was? It's the total tax line on your twenty twenty-five Form ten forty, line twenty-four.",
+     "on_screen_text": "Last year's tax: 1040 line 24",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a form with one line highlighted. No text, no logos, no real people."
+    },
+    {
+     "heading": "Compare",
+     "narration": "Compare that with your jar. More in the jar? The rest stays for April.",
+     "on_screen_text": "Jar vs payment",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a jar next to a bill. No text, no logos, no real people."
+    },
+    {
+     "heading": "Next",
+     "narration": "The free calculator in the link in bio works out your January number. Day one is pinned.",
+     "on_screen_text": "Find your Jan 15 number",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes pointing to a pin. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "Tax Jar Challenge, week 6: check the jar against what you need to pay on Jan 15. Example (fictional): $6,500 last year, $4,875 paid so far → $1,625.\n\nPart of the Tax Jar Challenge: day 1 is pinned on our profile. Educational, not tax advice. 2026 federal figures; check your state.\n\nFree quarterly tax calculator in the link in bio.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "taxjarchallenge",
+    "freelancetaxes",
+    "quarterlytaxes",
+    "selfemployed",
+    "1099money"
+   ],
+   "description": "Week 6: jar vs the Jan 15 payment.",
+   "thumbnail_text": "Week 6: enough?",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
+    "https://www.irs.gov/forms-pubs/about-form-2210",
+    "https://www.irs.gov/publications/p505"
+   ],
+   "claims_to_verify": [
+    "Safe harbor: smaller of 90% current-year or 100% prior-year tax (110% if prior AGI > $150,000)",
+    "$6,500 − $4,875 = $1,625 (matches the free q4 page example)",
+    "Total tax is Form 1040 line 24 on the 2025 form"
+   ]
+  },
+  "format_style": "on-screen-calculation",
+  "series": "Tax Jar Challenge 7/10",
+  "post_on": "2026-12-28"
+ },
+ {
+  "format": "short",
+  "pillar": "quarterly estimated taxes",
+  "idea_angle": "Week 7 of the jar: set up the payment.",
+  "script": {
+   "title": "Set up your IRS payment now: Tax Jar week 7",
+   "hook": "January fifteenth should be a two-minute job. In week seven of the Tax Jar Challenge, we get the payment ready now.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "January fifteenth should be a two-minute job. In week seven of the Tax Jar Challenge, we get the payment ready now.",
+     "on_screen_text": "Tax Jar week 7: get ready",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a laptop and the jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Where",
+     "narration": "You can pay free at irs.gov with IRS Direct Pay from your bank account, or through your IRS online account, where you can see past payments too.",
+     "on_screen_text": "Direct Pay or your online account",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a laptop with a simple form. No text, no logos, no real people."
+    },
+    {
+     "heading": "The choice",
+     "narration": "Pick estimated tax, Form ten forty ES, and tax year twenty twenty-six. The wrong year is the most common mistake.",
+     "on_screen_text": "Choose 1040-ES, tax year 2026",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a dropdown with 2026 highlighted. No text, no logos, no real people."
+    },
+    {
+     "heading": "Jar first",
+     "narration": "Move the payment amount from the jar to the account you'll pay from, a day or two ahead, so the transfer has cleared.",
+     "on_screen_text": "Move the money a day early",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. coins moving between jars. No text, no logos, no real people."
+    },
+    {
+     "heading": "Next",
+     "narration": "Catching up? Day one sits pinned at the top of our profile.",
+     "on_screen_text": "Day 1 is pinned",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes pointing to a pin. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "Tax Jar Challenge, week 7: set up the Jan 15 payment now. IRS Direct Pay or your IRS online account, Form 1040-ES, tax year 2026.\n\nPart of the Tax Jar Challenge: day 1 is pinned on our profile. Educational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "taxjarchallenge",
+    "freelancetaxes",
+    "quarterlytaxes",
+    "selfemployed",
+    "1099money"
+   ],
+   "description": "Week 7: set up the IRS payment.",
+   "thumbnail_text": "Week 7: get ready",
+   "sources": [
+    "https://www.irs.gov/payments/direct-pay",
+    "https://www.irs.gov/payments/your-online-account",
+    "https://www.irs.gov/payments"
+   ],
+   "claims_to_verify": [
+    "Direct Pay is free; choose 1040-ES and tax year 2026"
+   ]
+  },
+  "format_style": "walkthrough",
+  "series": "Tax Jar Challenge 8/10",
+  "post_on": "2027-01-04"
+ },
+ {
+  "format": "short",
+  "pillar": "quarterly estimated taxes",
+  "idea_angle": "Week 8 of the jar: what the leftover is for.",
+  "script": {
+   "title": "Why your tax jar holds more than the payment (week 8)",
+   "hook": "Your tax jar holds more than your January payment? Nothing went wrong. Week eight of the Tax Jar Challenge: here's what that money is for.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Your tax jar holds more than your January payment? Nothing went wrong. Week eight of the Tax Jar Challenge: here's what that money is for.",
+     "on_screen_text": "Tax Jar week 8",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes next to a jar with extra coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why",
+     "narration": "The safe harbor payment can be less than your actual tax. The difference is due on April fifteenth, when you file.",
+     "on_screen_text": "The rest is due April 15",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar with April circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Example",
+     "narration": "Example, fictional: Sam's jar reached thirty-three seventy-five from thirteen thousand five hundred of payments. Sixteen twenty-five goes to the IRS on January fifteenth. Seventeen fifty stays in the jar for April.",
+     "on_screen_text": "$3,375 jar: $1,625 now, $1,750 later",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a jar split into two layers. No text, no logos, no real people."
+    },
+    {
+     "heading": "Refund?",
+     "narration": "And if the jar ends up bigger than your whole tax bill, the extra is yours after you file.",
+     "on_screen_text": "Extra after filing is yours",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a jar with a small gift ribbon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Keep it",
+     "narration": "So leave the rest in the jar. It's not a bonus until your return is done.",
+     "on_screen_text": "Not a bonus yet",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a jar with a lid. No text, no logos, no real people."
+    },
+    {
+     "heading": "Next",
+     "narration": "Payment day is Friday. New here? The challenge's first post is pinned on our profile.",
+     "on_screen_text": "Payment day: Friday",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes pointing to a pin. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "Tax Jar Challenge, week 8: what the jar holds beyond the Jan 15 payment is for April 15. Example (fictional): $3,375 jar, $1,625 paid Jan 15, $1,750 kept.\n\nPart of the Tax Jar Challenge: day 1 is pinned on our profile. Educational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "taxjarchallenge",
+    "freelancetaxes",
+    "quarterlytaxes",
+    "selfemployed",
+    "1099money"
+   ],
+   "description": "Week 8: leftover jar money is for April.",
+   "thumbnail_text": "Week 8: the rest",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
+    "https://www.irs.gov/publications/p505"
+   ],
+   "claims_to_verify": [
+    "25% × $13,500 = $3,375; $3,375 − $1,625 = $1,750",
+    "Balance of 2026 tax due Apr 15, 2027"
+   ]
+  },
+  "format_style": "explainer",
+  "series": "Tax Jar Challenge 9/10",
+  "post_on": "2027-01-11"
+ },
+ {
+  "format": "short",
+  "pillar": "quarterly estimated taxes",
+  "idea_angle": "Payment day, and the jar keeps going.",
+  "script": {
+   "title": "Payment day: pay from the tax jar, then start again",
+   "hook": "Today's the day. If you've done the Tax Jar Challenge since November, this payment comes out of the jar, not out of your rent.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Today's the day. If you've done the Tax Jar Challenge since November, this payment comes out of the jar, not out of your rent.",
+     "on_screen_text": "Tax Jar: payment day",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding the jar, smiling. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pay",
+     "narration": "January fifteenth is the last twenty twenty-six estimated payment. Pay it today at irs.gov, Form ten forty ES, tax year twenty twenty-six.",
+     "on_screen_text": "Pay today: 1040-ES, 2026",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a laptop with a check mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Save proof",
+     "narration": "Save the confirmation number in your tax folder. You'll enter this payment when you file.",
+     "on_screen_text": "Save the confirmation",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a folder with a receipt. No text, no logos, no real people."
+    },
+    {
+     "heading": "Keep going",
+     "narration": "Then keep the jar going. The first twenty twenty-seven payment is due April fifteenth, the same day as your return.",
+     "on_screen_text": "Next: April 15",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar flipping to April. No text, no logos, no real people."
+    },
+    {
+     "heading": "Thanks",
+     "narration": "Thanks for doing this with us. Same jar, same rule, next deadline.",
+     "on_screen_text": "Same jar, next deadline",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes waving. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "Tax Jar Challenge, payment day: pay the last 2026 estimated tax from the jar today, save the confirmation, and keep the jar going for April 15.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "taxjarchallenge",
+    "freelancetaxes",
+    "quarterlytaxes",
+    "selfemployed",
+    "1099money"
+   ],
+   "description": "Payment day: pay from the jar.",
+   "thumbnail_text": "Payment day",
+   "sources": [
+    "https://www.irs.gov/payments/direct-pay",
+    "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
+    "https://www.irs.gov/payments"
+   ],
+   "claims_to_verify": [
+    "Jan 15, 2027: 4th 2026 estimated payment",
+    "Apr 15, 2027: 2026 return due and 1st 2027 estimated payment"
+   ]
+  },
+  "format_style": "deadline-alert",
+  "series": "Tax Jar Challenge 10/10",
+  "post_on": "2027-01-15"
+ }
+]

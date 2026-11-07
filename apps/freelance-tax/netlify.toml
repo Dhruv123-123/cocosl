@@ -1,0 +1,10 @@
+# Deploy this folder on its own: Netlify > Add new site > Import > base directory apps/freelance-tax
+[build]
+  publish = "."
+  # Staggered release (tools/schedule.mjs): pages dated after the deploy day are left out of this deploy.
+  # Add a build hook and trigger it weekly so each new page appears on its date.
+  command = "node tools/build-pages.mjs --release"
+  # Skip a deploy when nothing in this folder changed (free plan credits). This also skips a build-hook deploy
+  # with no new commit: the weekly staggered release needs a commit that touches this folder that week, or
+  # dated pages wait until the next one.
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- ."

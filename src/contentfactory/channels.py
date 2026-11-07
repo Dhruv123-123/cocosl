@@ -279,6 +279,8 @@ def render_pin(factory, brand, pin: Pin, dest: Path) -> Path:
 
 
 def build_pins(brand, items, links: Links, cfg: dict) -> list[Pin]:
+    skip = set(cfg.get("exclude", []))  # titles that only make sense on their posting day ("due Monday")
+    items = [it for it in items if it["script"]["title"] not in skip]
     boards = cfg.get("boards", {})
     hand = cfg.get("product_pins", [])
     picks = pick_items(items, links, cfg.get("count", 60) - len(hand), cfg.get("per_article", 5),
