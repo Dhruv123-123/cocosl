@@ -27,8 +27,7 @@ official Business Discovery API (see `watchlist.py`).
    monetization story, high removal risk. In finance, trust is the product; absurdist AI and fake AI
    "advisors" work against affiliate and product sales.
 4. **Free local voice unblocks the 16 videos waiting on a voice.** Kokoro-FastAPI (Apache-2.0, actively
-   maintained) speaks the OpenAI TTS API, so our existing `openai` TTS provider can use it with one config
-   change (a base-URL setting). Kokoro voices are Apache-2.0 licensed, so they're safe to monetize.
+   maintained) is now wired in as the `kokoro` TTS provider on main. Kokoro voices are Apache-2.0 licensed, so they're safe to monetize.
 5. **Correction to our earlier stack note:** F5-TTS's code is MIT but its released model weights are
    non-commercial (CC-BY-NC). Don't use F5-TTS for monetized content. Use Kokoro, Chatterbox (MIT, adds an
    inaudible watermark) or Qwen3-TTS (Apache-2.0).
@@ -49,8 +48,8 @@ official Business Discovery API (see `watchlist.py`).
 
 ## Top 5 actions, in order
 
-1. Point the `openai` TTS provider at a local Kokoro-FastAPI server and voice the 16 waiting videos. (Small code change: `OPENAI_TTS_BASE_URL`.)
-2. Add `trial_params` to the Instagram publisher so new Reels go to non-followers first as Trial Reels and only graduate if they perform. Ideal for a new account testing hooks.
+1. Voice the 16 waiting videos with Kokoro (the `kokoro` TTS provider on main: `docker compose --profile kokoro up`, set `KOKORO_URL`).
+2. Turn on Trial Reels (`IG_TRIAL_REELS=SS_PERFORMANCE`, added in this PR) so new Reels go to non-followers first as Trial Reels and only graduate if they perform. Ideal for a new account testing hooks.
 3. Replace estimated caption timing with word-level timestamps from faster-whisper or stable-ts (both MIT).
 4. Shift the weekly mix towards carousels (5 per week instead of 3), keeping Reels for hooks and reach.
 5. Start the Business Discovery watchlist weekly so we measure which accounts in our niche are growing, rather than trusting listicle numbers.

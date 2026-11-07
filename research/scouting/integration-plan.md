@@ -3,20 +3,21 @@
 Each item names the file it touches, the repo it uses, and rough effort. None of these change the
 compliance guardrails in `docs/COMPLIANCE.md`; several strengthen them.
 
-## 1. Free local voice via Kokoro-FastAPI (unblocks the 16 videos waiting on a voice)
+## 1. Free local voice via Kokoro-FastAPI (unblocks the 16 videos waiting on a voice) — done
+
+**Shipped on main:** `kokoro` TTS provider (Kokoro-FastAPI at `KOKORO_URL`, or the local `kokoro`
+package), first in auto order, with `docker compose --profile kokoro up`. See `media/tts.py`.
 
 - **Repo:** remsky/Kokoro-FastAPI (Apache-2.0; Kokoro-82M weights Apache-2.0).
 - **Why:** The launch pack has 16 scripts in `videos-need-voice/`. ElevenLabs costs money and needs a
   key; espeak sounds robotic; Piper voices vary in quality and licence. Kokoro is free, runs on CPU,
   and sounds natural.
-- **Change:** `media/tts.py` `OpenAITTS.URL` is hard-coded to api.openai.com. Read it from
-  `OPENAI_TTS_BASE_URL` (default unchanged) and allow an empty key when the base URL is local.
-  Then `docker run -p 8880:8880 ghcr.io/remsky/kokoro-fastapi-cpu` and set
-  `OPENAI_TTS_BASE_URL=http://localhost:8880/v1`, `OPENAI_TTS_MODEL=kokoro`, `OPENAI_TTS_VOICE=af_heart`
-  (or any Kokoro voice). Add a `kokoro` service to `docker-compose.yml`.
 - **Effort:** about 1 hour including a test. **Licence risk:** none.
 
-## 2. Trial Reels in the Instagram publisher
+## 2. Trial Reels in the Instagram publisher — done
+
+**Shipped:** set `IG_TRIAL_REELS=SS_PERFORMANCE` (or `MANUAL`) and every Reel goes out as a Trial Reel;
+the publish result records `trial_reel: true`.
 
 - **API:** `trial_params={"graduation_strategy": "SS_PERFORMANCE"}` on a `REELS` container
   ([docs](https://developers.facebook.com/documentation/instagram-platform/instagram-graph-api/reference/ig-user/media)).
