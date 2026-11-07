@@ -58,7 +58,7 @@ h3{font-size:19px;font-weight:750;margin-top:1.4em}
 .signup-form{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 0}
 .signup-form input[type=email]{flex:1 1 220px;min-width:0;font:inherit;font-size:16px;padding:13px 14px;
   border-radius:12px;border:2px solid var(--line);background:#fff;color:#111}
-.signup-form input[type=email]:focus{outline:none;border-color:var(--green-d)}
+.signup-form input[type=email]:focus{border-color:var(--green-d)}
 .signup-form button{font:inherit;font-weight:750;font-size:16px;padding:13px 18px;border:0;border-radius:12px;
   background:var(--ink);color:var(--paper);cursor:pointer}
 .signup-form button:hover{background:var(--green-d)}
@@ -167,7 +167,7 @@ th{background:var(--tint)}
 .quiz .qn{display:block;font-size:13px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px}
 .quiz .opt{display:block;width:100%;text-align:left;font:inherit;font-size:17px;background:var(--card);border:2px solid var(--line);
   border-radius:14px;padding:14px 16px;margin:10px 0;cursor:pointer;color:var(--ink)}
-.quiz .opt:hover,.quiz .opt:focus-visible{border-color:var(--green-d);outline:none}
+.quiz .opt:hover,.quiz .opt:focus-visible{border-color:var(--green-d)}
 .progress{height:8px;background:var(--line);border-radius:99px;max-width:640px;overflow:hidden}
 .progress span{display:block;height:100%;width:0;background:var(--green);transition:width .2s}
 #r-name{font-size:clamp(28px,4vw,40px);margin-top:4px}
@@ -229,7 +229,9 @@ th{background:var(--tint)}
   .magnet{grid-template-columns:1fr;padding:20px}
   .magnet img{width:110px}
   .pillars{grid-template-columns:1fr}
-  .site-head nav a{padding:6px 8px;font-size:14px}
+  .site-head nav{gap:0}
+  .site-head nav a{padding:6px 7px;font-size:14px;min-height:44px;display:inline-flex;align-items:center}
+  .hero .cover{order:1;max-width:150px}
   .hero{padding:32px 0 40px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
@@ -248,3 +250,12 @@ th{background:var(--tint)}
 .shop-buy{display:flex;flex-wrap:wrap;gap:8px;margin:0}
 .shop-buy .btn{padding:8px 14px;font-size:15px}
 .shop-group{margin:24px 0 4px}
+/* accessibility */
+.visually-hidden{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid var(--green-d);outline-offset:2px}
+.site-head :focus-visible,.site-foot :focus-visible,.hero :focus-visible{outline-color:var(--gold)}
+.signup-form input[type=email]:focus-visible{outline:3px solid var(--green-d);outline-offset:1px}
+.table:focus-visible{outline-offset:0}
+.sources li{margin:6px 0}
+.sources a{display:inline-block;padding:4px 0}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}

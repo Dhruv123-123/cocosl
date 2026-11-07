@@ -254,6 +254,21 @@ small differences on a few dozen signups are noise.
 and start a new test by changing `id`. The PDF and welcome email still say "The 7-Day Money Reset"; if title B
 wins, rename them too.
 
+## Accessibility
+
+The site targets WCAG 2.2 AA. Two layers of checks:
+
+- **Every build** (`tools/check_site.py`, so Netlify, GitHub Pages and CI): `<html lang>`, alt text on every
+  image (`alt=""` for decoration), a label on every form field, no empty links, buttons or table headers, no
+  duplicate ids. `tests/test_site.py` also checks the colour tokens in `style.css` against AA contrast.
+- **Full audit** (`tests/test_a11y_browser.py`, run by `.github/workflows/a11y.yml` on PRs that touch `site/`):
+  axe-core on every page at 1280px and 390px, no sideways scrolling on phones, keyboard-only use (skip link,
+  a visible focus ring on every control, the quiz), and 44px tap targets for the nav, forms and buttons.
+  Run it locally with Playwright and `AXE_PATH` (see the test's docstring).
+
+When you add a table, an image or a form field in Markdown or `site.json`, the build will tell you if
+something's missing. Pinterest pin designs for the main pages are in `PINS.md`.
+
 ## Deploy check
 
 `python3 site/tools/check_site.py` runs after every build on Netlify and GitHub Pages, and in the tests.

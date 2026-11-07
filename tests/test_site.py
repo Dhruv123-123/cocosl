@@ -319,3 +319,47 @@ def test_email_capture_ab_test(tmp_path):
     subprocess.run([sys.executable, str(site2 / "build.py")], check=True, env=e, capture_output=True)
     h2 = (out2 / "index.html").read_text()
     assert "mms_ab=" not in h2 and "ab-hero-b" not in h2 and cfg["hero"]["a"]["headline"] in h2
+
+
+def _contrast(a: str, b: str) -> float:
+    def lum(h):
+        h = h.lstrip("#")
+        c = [int(h[i:i + 2], 16) / 255 for i in (0, 2, 4)]
+        c = [x / 12.92 if x <= 0.03928 else ((x + 0.055) / 1.055) ** 2.4 for x in c]
+        return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2]
+    hi, lo = sorted((lum(a), lum(b)), reverse=True)
+    return (hi + 0.05) / (lo + 0.05)
+
+
+def test_colour_tokens_meet_wcag_aa():
+    import re
+    css = (SITE / "static" / "style.css").read_text()
+    tok = dict(re.findall(r"--([\w-]+):(#[0-9a-fA-F]{6})", css.split("}", 1)[0]))
+    text_pairs = [  # (text, background) combinations the stylesheet uses for body-size text
+        ("ink", "paper"), ("ink", "card"), ("ink", "tint"), ("ink", "gold-t"), ("ink", "gold"),
+        ("muted", "paper"), ("muted", "card"), ("muted", "tint"),
+        ("green-d", "paper"), ("green-d", "card"), ("green-d", "tint"),
+        ("paper", "ink"), ("paper", "ink2"), ("gold", "ink"), ("gold", "ink2"), ("paper", "green-d")]
+    for fg, bg in text_pairs:
+        assert _contrast(tok[fg], tok[bg]) >= 4.5, f"{fg} on {bg}: {_contrast(tok[fg], tok[bg]):.2f}"
+    assert _contrast("#c9cdc4", tok["ink"]) >= 4.5  # footer text
+    # Focus rings and borders of controls are non-text UI: 3:1 against what's next to them.
+    assert _contrast(tok["green-d"], tok["paper"]) >= 3 and _contrast(tok["gold"], tok["ink"]) >= 3
+    assert ":focus-visible" in css and "outline:none" not in css
+
+
+def test_deploy_check_catches_accessibility_problems(tmp_path):
+    import shutil
+    out = _build(tmp_path, "https://example.org")
+    page = out / "about" / "index.html"
+    h = page.read_text()
+    h = h.replace('<html lang="en">', "<html>", 1)
+    h = h.replace("</main>", '<img src="/img/logo.png"><a href="/blog/"></a><button></button>'
+                  '<input type="email" name="x2"><span id="dup"></span><span id="dup"></span></main>', 1)
+    page.write_text(h)
+    r = subprocess.run([sys.executable, str(SITE / "tools" / "check_site.py"), "--dir", str(out)],
+                       capture_output=True, text=True)
+    assert r.returncode == 1
+    for msg in ("no lang attribute", "image(s) without alt", "form field", "<a> with no text",
+                "<button> with no text", "id 'dup' used 2 times"):
+        assert msg in r.stdout, msg

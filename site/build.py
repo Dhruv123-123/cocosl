@@ -200,8 +200,8 @@ def markdown(text: str, shortcodes=None) -> tuple[str, list[tuple[str, str]]]:
                 rows.append([c.strip() for c in lines[i].strip().strip("|").split("|")])
                 i += 1
             head, body = rows[0], [r for r in rows[1:] if not all(re.fullmatch(r":?-+:?", c) for c in r)]
-            t = ["<div class=\"table\"><table><thead><tr>"]
-            t += [f"<th>{inline(c)}</th>" for c in head]
+            t = ["<div class=\"table\" tabindex=\"0\"><table><thead><tr>"]
+            t += [f"<th>{inline(c)}</th>" if c else '<th><span class="visually-hidden">Item</span></th>' for c in head]
             t.append("</tr></thead><tbody>")
             for r in body:
                 t.append("<tr>" + "".join(f"<td>{inline(c)}</td>" for c in r) + "</tr>")
@@ -296,7 +296,7 @@ def email_form(source: str, button: str = "Send me the free reset", compact: boo
   <label class="hp" aria-hidden="true">Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
   <label class="sr" for="em-{esc(source)}">Email address</label>
   <input id="em-{esc(source)}" type="email" name="{esc(field)}" required autocomplete="email" inputmode="email" placeholder="you@example.com">
-  <button type="submit">{esc(button)}</button>
+  <button type="submit">{ab("magnet", button, CFG.get("ab_test", {}).get("magnet_button", {}).get("b", button)) if button == CFG.get("ab_test", {}).get("magnet_button", {}).get("a") else esc(button)}</button>
 </form>
 <p class="form-note">{note} <a href="{u('/privacy/')}">Privacy</a>.</p>"""
 
@@ -334,7 +334,7 @@ def ab_head() -> str:
 
 def magnet_box(source: str) -> str:
     lm = CFG["lead_magnet"]
-    return f"""<aside class="magnet" aria-label="Free download">
+    return f"""<div class="magnet">
   <img src="{u('/img/lead-magnet-cover-sm.jpg')}" alt="Cover of {esc(lm['title'])}" width="150" height="194" loading="lazy">
   <div>
     <p class="kicker">Free download</p>
@@ -342,16 +342,16 @@ def magnet_box(source: str) -> str:
     <p>{esc(lm['pitch'])}</p>
     {email_form(source)}
   </div>
-</aside>"""
+</div>"""
 
 
 def compare_box(slug: str, comps: dict) -> str:
     target = comps.get(CFG.get("article_compare", {}).get(slug, ""))
     if not target:
         return ""
-    return (f'<aside class="callout cmp-box"><p class="kicker">Compare your options</p>'
+    return (f'<div class="callout cmp-box"><p class="kicker">Compare your options</p>'
             f'<p><a href="{u(f"/compare/{target["slug"]}/")}"><strong>{esc(target["title"])}</strong></a></p>'
-            f'<p>{esc(target["description"])}</p></aside>')
+            f'<p>{esc(target["description"])}</p></div>')
 
 
 def reviews_box(compare_slug: str, posts: list[dict]) -> str:
@@ -984,7 +984,7 @@ def build() -> list[str]:
     CFG["_absolute_links"] = False
     (OUT / "emails" / "sequence.json").write_text(json.dumps(export, indent=2, ensure_ascii=False))
     write("/emails/", layout(title="Email sequence preview", path="/emails/", noindex=True, description="Preview",
-                             body=f'<section class="wrap"><h1>Welcome and nurture sequence</h1><p class="dek">Preview only (not linked, not indexed). Copy these into your email provider; see site/README.md.</p><div class="table"><table><thead><tr><th>#</th><th>Send</th><th>Subject</th><th>Job</th></tr></thead><tbody>{"".join(rows)}</tbody></table></div></section>'))
+                             body=f'<section class="wrap"><h1>Welcome and nurture sequence</h1><p class="dek">Preview only (not linked, not indexed). Copy these into your email provider; see site/README.md.</p><div class="table" tabindex="0"><table><thead><tr><th>#</th><th>Send</th><th>Subject</th><th>Job</th></tr></thead><tbody>{"".join(rows)}</tbody></table></div></section>'))
 
     # ---- data-driven pages: budget by salary + cost of living by city (pseo.py)
     import pseo
@@ -1217,7 +1217,7 @@ def email_html(e: dict, body: str) -> str:
     body = body.replace("<td>", '<td style="border:1px solid #d9d3c3;padding:6px 8px">')
     body = body.replace("<blockquote>", '<blockquote style="margin:0 0 16px;padding:8px 14px;border-left:4px solid #f2b134;background:#fdf3dd">')
     body = body.replace("<a ", '<a style="color:#1a7a45;font-weight:600" ')
-    return f"""<!doctype html><html><head><meta charset="utf-8"><title>{esc(e['subject'])}</title></head>
+    return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><title>{esc(e['subject'])}</title></head>
 <body style="margin:0;background:#f4f1e8">
 <span style="display:none;max-height:0;overflow:hidden">{esc(e.get('preheader', ''))}</span>
 <div style="max-width:560px;margin:0 auto;padding:24px 20px;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.6;color:#0b1d13;background:#ffffff">

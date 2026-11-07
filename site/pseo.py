@@ -117,7 +117,7 @@ def plan_split(salary: float) -> tuple[str, dict]:
 def table(head: list[str], rows: list[list[str]]) -> str:
     th = "".join(f"<th>{h}</th>" for h in head)
     tr = "".join("<tr>" + "".join(f"<td>{c}</td>" for c in r) + "</tr>" for r in rows)
-    return f'<div class="table"><table><thead><tr>{th}</tr></thead><tbody>{tr}</tbody></table></div>'
+    return f'<div class="table" tabindex="0"><table><thead><tr>{th}</tr></thead><tbody>{tr}</tbody></table></div>'
 
 
 def faq_html(faq: list[tuple[str, str]]) -> str:
@@ -302,7 +302,7 @@ def build_pseo(ctx: dict) -> list[tuple[str, str]]:
   <div class="prose">
 <h2 id="take-home">Your take-home pay on {money(s)}</h2>
 <p>For a single filer taking the standard deduction, before any 401(k) or health premiums:</p>
-{table(["", "Per year", "Per month"], [
+{table(["Item", "Per year", "Per month"], [
             ["Salary", money(s), money(gross_m)],
             ["Federal income tax", "−" + money(base["federal"]), "−" + money(base["federal"] / 12)],
             ["Social Security (6.2%)", "−" + money(base["ss"]), "−" + money(base["ss"] / 12)],
@@ -724,7 +724,7 @@ def build_debt(ctx: dict) -> list[tuple[str, str]]:
 <p>{verdict}</p>
 
 <h2 id="schedule">Balance left at the end of each year</h2>
-{table(["", "Avalanche", "Snowball"], sched)}
+{table(["Year", "Avalanche: left", "Snowball: left"], sched)}
 
 <h2 id="speed-up">Ways to speed it up</h2>
 <p>The fastest lever is the interest rate on the cards. Moving {money(card_total)} of card debt to a 0% balance transfer card would stop most of that interest for the intro period (watch the transfer fee and the rate after it ends): see <a href="{u('/compare/best-balance-transfer-cards/')}">balance transfer cards compared</a>. Or ask your card issuer for a lower APR: it's one phone call. Then find money for the extra payment in the <a href="{u('/budget/')}">budget for your salary</a>.</p>

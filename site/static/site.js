@@ -38,3 +38,15 @@ function abProps(p) {
     });
   });
 })();
+
+// Wide tables scroll sideways on phones; only those need to be keyboard-focusable.
+(function () {
+  function fix() {
+    document.querySelectorAll(".table[tabindex]").forEach(function (t) {
+      if (t.scrollWidth <= t.clientWidth) t.removeAttribute("tabindex");
+      else t.setAttribute("tabindex", "0");
+    });
+  }
+  fix();
+  window.addEventListener("resize", fix);
+})();

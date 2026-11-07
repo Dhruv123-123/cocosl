@@ -5,6 +5,8 @@
     python3 site/tools/check_site.py --dir /path/to/public --external    # also HEAD-checks outbound links
 
 Fails (exit 1) on:
+  * accessibility basics: no <html lang>, images without alt, form fields without a label, links, buttons
+    or table headers with no text, duplicate ids (the full axe-core audit is tests/test_a11y_browser.py)
   * an internal link, image, script or stylesheet that doesn't resolve (incl. #anchors on the same page)
   * an indexable page missing <title>, meta description, canonical, og:image or an <h1>
   * a page over the size budget (Lighthouse-style: HTML, and HTML + same-site CSS/JS/images it loads)
@@ -45,11 +47,35 @@ class Page(HTMLParser):
         self.h1 = 0
         self.imgs_without_alt = 0
         self.canonical = ""
+        # accessibility
+        self.lang = None
+        self.id_counts: dict[str, int] = {}
+        self.label_for: set[str] = set()
+        self.inputs: list[tuple[str, bool]] = []    # (id, has own accessible name or is wrapped in a label)
+        self._label_depth = 0
+        self._open: list[list] = []                 # [tag, text, has_name] for a / button / th
+        self.unnamed: list[str] = []
 
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
         if a.get("id"):
             self.ids.add(a["id"])
+            self.id_counts[a["id"]] = self.id_counts.get(a["id"], 0) + 1
+        if tag == "html":
+            self.lang = a.get("lang", "")
+        if tag == "label":
+            self._label_depth += 1
+            if a.get("for"):
+                self.label_for.add(a["for"])
+        if tag in ("input", "select", "textarea") and a.get("type") not in ("hidden", "submit", "button"):
+            named = bool(a.get("aria-label") or a.get("aria-labelledby") or a.get("title")) or self._label_depth > 0
+            if a.get("tabindex") == "-1" and a.get("autocomplete") == "off":  # honeypot, hidden from everyone
+                named = True
+            self.inputs.append((a.get("id", ""), named))
+        if tag in ("a", "button", "th") and not (tag == "a" and not a.get("href")):
+            self._open.append([tag, "", bool(a.get("aria-label") or a.get("aria-labelledby"))])
+        if tag == "img" and self._open and a.get("alt"):
+            self._open[-1][1] += a["alt"]
         if tag == "a" and a.get("href"):
             self.links.append(("a", a["href"]))
         elif tag in ("img", "script") and a.get("src"):
@@ -74,10 +100,18 @@ class Page(HTMLParser):
     def handle_endtag(self, tag):
         if tag == "title":
             self._in_title = False
+        if tag == "label" and self._label_depth:
+            self._label_depth -= 1
+        if self._open and self._open[-1][0] == tag:
+            t, text, named = self._open.pop()
+            if not named and not text.strip():
+                self.unnamed.append(t)
 
     def handle_data(self, data):
         if self._in_title:
             self.title += data
+        for o in self._open:
+            o[1] += data
 
 
 def check(public: Path, base_path: str = "", external: bool = False) -> tuple[list[str], list[str], list[str]]:
@@ -143,6 +177,20 @@ def check(public: Path, base_path: str = "", external: bool = False) -> tuple[li
         if weight > BUDGET["page_total"]:
             errors.append(f"{rel}: page weight {weight // 1024} KB (budget {BUDGET['page_total'] // 1024} KB)")
         report.append(f"{weight // 1024:>5} KB  {rel}")
+        # accessibility (every page, redirects included)
+        if not is_redirect:
+            if not pr.lang:
+                errors.append(f"{rel}: <html> has no lang attribute")
+            if pr.imgs_without_alt:
+                errors.append(f"{rel}: {pr.imgs_without_alt} image(s) without alt (use alt=\"\" for decoration)")
+            for i, named in pr.inputs:
+                if not named and i not in pr.label_for:
+                    errors.append(f"{rel}: form field {('#' + i) if i else ''} has no label")
+            for t in sorted(set(pr.unnamed)):
+                errors.append(f"{rel}: {pr.unnamed.count(t)} <{t}> with no text or aria-label")
+            for i, n in pr.id_counts.items():
+                if n > 1:
+                    errors.append(f"{rel}: id {i!r} used {n} times")
         if is_redirect or noindex or rel == "404.html" or rel.startswith("emails/"):
             continue
         for need, ok in [("<title>", pr.title.strip()), ("meta description", pr.meta.get("description")),
@@ -156,8 +204,6 @@ def check(public: Path, base_path: str = "", external: bool = False) -> tuple[li
         d = pr.meta.get("description", "")
         if len(d) > 170:
             warnings.append(f"{rel}: description is {len(d)} chars (Google shows ~155)")
-        if pr.imgs_without_alt:
-            warnings.append(f"{rel}: {pr.imgs_without_alt} image(s) without alt")
         titles.setdefault(pr.title.strip(), []).append(rel)
         descs.setdefault(d, []).append(rel)
     for t, where in titles.items():

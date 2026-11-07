@@ -437,6 +437,10 @@
     "magnet": {
       "a": "The 7-Day Money Reset",
       "b": "The 15-Minute Money Checklist"
+    },
+    "magnet_button": {
+      "a": "Send me the free reset",
+      "b": "Send me the free checklist"
     }
   }
 }
