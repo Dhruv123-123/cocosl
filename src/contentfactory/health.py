@@ -1,7 +1,7 @@
 """One place that answers "is the factory running properly?" for `factory status` and /api/status."""
 from __future__ import annotations
 
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 from .pipeline import Factory
 
@@ -34,6 +34,27 @@ def system_status(factory: Factory, now: datetime | None = None) -> dict:
         alerts.append(f"Worker step '{step}' failing: {err}")
     if needs_check:
         alerts.append(f"{len(needs_check)} publication(s) were interrupted mid-upload: check the platform.")
+    if not factory.settings.dry_run:
+        from .publish import credential_status
+        missing = {k: v for k, v in credential_status(factory.settings).items() if v}
+        for row in db.query("SELECT platform, COUNT(*) n FROM publications WHERE status = 'queued' GROUP BY platform"):
+            if row["platform"] in missing:
+                alerts.append(f"{row['n']} post(s) queued for {row['platform']} but it isn't connected "
+                              f"(missing {', '.join(missing[row['platform']])}).")
+    since = (now.replace(microsecond=0) - timedelta(hours=24)).isoformat()
+    token_fail = db.one("SELECT detail FROM audit_log WHERE action = 'tokens.refresh_failed' AND ts >= ? "
+                        "ORDER BY id DESC LIMIT 1", [since])
+    if token_fail:
+        alerts.append(f"Token refresh failed in the last 24 h: {str((token_fail['detail'] or {}).get('error', ''))[:160]}. "
+                      "Re-run `factory auth <platform>`.")
+    out_dir = factory.settings.output_dir
+    soon = (now + timedelta(hours=48)).isoformat()
+    for row in db.query("SELECT p.id, p.post_id, s.assets, s.format FROM publications p JOIN posts s ON s.id = p.post_id "
+                        "WHERE p.status = 'queued' AND p.scheduled_at <= ?", [soon]):
+        a = row["assets"] or {}
+        files = a.get("slides") if row["format"] == "carousel" else [a.get("video")]
+        if not files or any(not f or not (out_dir / f).exists() for f in files):
+            alerts.append(f"Post #{row['post_id']} goes out within 48 h but its media files are missing: re-render it.")
     rq = rq_status(factory)
     if rq.get("waiting_for_voice") and not any(voice_ready(factory, b) for b in factory.brands()):
         alerts.append(f"{rq['waiting_for_voice']} video(s) waiting for a voice: set KOKORO_URL (docs/CREDENTIALS.md).")
