@@ -257,6 +257,22 @@ separately. Every buy button sends a Plausible `Product Click` with `product` an
   URLs in `site.json`, and paste exact listing links into `shop.json` as `url` (Gumroad) or `etsy_url`;
   the import tool keeps links you've pasted.
 
+### Template cards in articles
+
+`content/data/placements.json > articles` maps every article slug to one or two shop item slugs, best first.
+The first item is drawn as a "Our template" card straight after the article's `## A worked example` section
+(or before `## Common questions` if there isn't one); the second shows under "More templates for this" at the
+end, in place of the old single product card. You can also place a card anywhere by hand with
+`{{template:<item-slug>}}`. Cards use the same buy buttons as the shop, so they share its placeholder store
+links and its `Product Click` event. A test checks every article has an entry and every slug is in `shop.json`.
+
+### Shop pages per goal (/shop/debt/, /shop/saving/, /shop/first-job/, /shop/freelance/)
+
+`placements.json > goals` lists each goal's title, intro and items. Each page starts with the free guides for
+that goal (the first published articles from `start.json`), then the templates, then links to the other goals.
+`/shop/` shows a "By goal" row, and each `/start/` goal links to its shop page. To add a goal, add it to both
+`start.json` and `placements.json` with the same `id`.
+
 ## Debt payoff calculator
 
 `/debt-payoff/` is one page: an in-page calculator (`static/debt-calc.js`, up to six debts, avalanche vs snowball,

@@ -799,3 +799,69 @@ def test_best_of_digest_pulls_latest_articles_at_build_time(tmp_path):
     assert "1. How to lower your grocery bill" in txt and "{{" not in txt
     assert 'name="robots" content="noindex' in (d / "index.html").read_text()
     assert "/emails/digest/" not in (out / "sitemap.xml").read_text()
+
+
+NEW_APR_ARTICLES = ["how-to-build-credit-from-scratch", "how-much-emergency-fund-do-i-need", "renters-insurance-explained",
+                    "how-to-negotiate-a-raise", "how-to-budget-for-a-trip", "what-is-a-good-credit-score",
+                    "college-student-budget", "no-spend-challenge"]
+
+
+def test_april_articles_are_long_dated_and_linked(tmp_path):
+    sys.path.insert(0, str(SITE))
+    import build
+    dates = []
+    for slug in NEW_APR_ARTICLES:
+        meta, body = build.parse_front_matter((SITE / "content" / "blog" / f"{slug}.md").read_text())
+        prose = re.sub(r"<!--.*?-->", "", body, flags=re.S)
+        assert len(prose.split()) >= 1500, (slug, len(prose.split()))
+        assert "## A worked example" in prose and "fictional" in prose, slug
+        assert str(meta["date"]).startswith("2027-04"), slug
+        assert len(meta["seo_title"]) <= 60 and len(meta["description"]) <= 155, slug
+        dates.append(str(meta["date"]))
+    assert len(set(dates)) == 8
+    early = _build(tmp_path / "early", "https://example.org", BLOG_SHOW_SCHEDULED="0", BUILD_DATE="2027-03-31")
+    assert not (early / "blog" / "no-spend-challenge" / "index.html").exists()
+    late = _build(tmp_path, "https://example.org", BLOG_SHOW_SCHEDULED="0", BUILD_DATE="2027-04-30")
+    for s in NEW_APR_ARTICLES:
+        assert (late / "blog" / s / "index.html").exists(), s
+
+
+def test_product_placements_match_the_catalog_and_sit_after_the_worked_example(tmp_path):
+    import json
+    pl = json.loads((SITE / "content" / "data" / "placements.json").read_text())
+    shop = {i["slug"] for i in json.loads((SITE / "content" / "shop.json").read_text())["items"]}
+    blog = {f.stem for f in (SITE / "content" / "blog").glob("*.md")}
+    assert blog <= set(pl["articles"]), blog - set(pl["articles"])  # every article has a related template
+    for slug, items in pl["articles"].items():
+        assert slug in blog, slug
+        assert 1 <= len(items) <= 2 and set(items) <= shop, (slug, items)
+    for g in pl["goals"]:
+        assert set(g["items"]) <= shop, g["id"]
+    out = _build(tmp_path, "https://example.org", BLOG_SHOW_SCHEDULED="1", BUILD_DATE="2027-04-30")
+    for slug in ("debt-avalanche-vs-snowball", "how-to-negotiate-a-raise", "no-spend-challenge"):
+        h = (out / "blog" / slug / "index.html").read_text()
+        assert "{{" not in h, slug
+        first = pl["articles"][slug][0]
+        card = h.find('class="template-card')
+        assert card > h.find('id="a-worked-example') > 0 and card < h.find('id="common-questions"'), slug
+        assert f'href="/shop/#item-{first}"' in h, slug
+        assert "example.gumroad.com/l/" in h or "etsy.com/shop/REPLACE_ME" in h, slug  # placeholder store links until real ones are set
+    # the FAQ schema never carries shortcodes
+    for m in re.findall(r'<script type="application/ld\+json">(.*?)</script>', (out / "blog" / "debt-avalanche-vs-snowball" / "index.html").read_text()):
+        assert "{{" not in m
+
+
+def test_shop_has_a_landing_page_per_goal(tmp_path):
+    import json
+    goals = [g["id"] for g in json.loads((SITE / "content" / "data" / "placements.json").read_text())["goals"]]
+    assert goals == ["debt", "saving", "first-job", "freelance"]
+    out = _build(tmp_path, "https://example.org", BLOG_SHOW_SCHEDULED="0", BUILD_DATE="2027-04-30")
+    sitemap = (out / "sitemap.xml").read_text()
+    shop = (out / "shop" / "index.html").read_text()
+    start = (out / "start" / "index.html").read_text()
+    for g in goals:
+        h = (out / "shop" / g / "index.html").read_text()
+        assert "{{" not in h and 'class="free-first"' in h, g
+        assert "example.gumroad.com/l/" in h or "REPLACE_ME" in h, g  # placeholder store links
+        assert f"https://example.org/shop/{g}/" in sitemap, g
+        assert f'href="/shop/{g}/"' in shop and f'href="/shop/{g}/"' in start, g

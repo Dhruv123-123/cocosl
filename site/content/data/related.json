@@ -159,6 +159,7 @@
   },
   "find-and-cancel-subscriptions": {
    "related": [
+    "no-spend-challenge",
     "how-to-stop-living-paycheck-to-paycheck",
     "how-to-make-a-budget-you-will-keep",
     "sinking-funds-explained",
@@ -188,6 +189,7 @@
   },
   "how-credit-scores-work": {
    "related": [
+    "what-is-a-good-credit-score",
     "how-to-dispute-a-credit-report-error",
     "how-to-freeze-your-credit",
     "debt-avalanche-vs-snowball",
@@ -198,6 +200,7 @@
   },
   "how-to-build-an-emergency-fund": {
    "related": [
+    "how-much-emergency-fund-do-i-need",
     "sinking-funds-explained",
     "how-to-make-a-budget-you-will-keep",
     "find-and-cancel-subscriptions",
@@ -301,6 +304,7 @@
   },
   "sinking-funds-explained": {
    "related": [
+    "how-to-budget-for-a-trip",
     "car-repair-sinking-fund",
     "how-to-build-an-emergency-fund",
     "how-to-make-a-budget-you-will-keep",
@@ -433,6 +437,7 @@
   },
   "how-to-dispute-a-credit-report-error": {
    "related": [
+    "how-to-build-credit-from-scratch",
     "how-credit-scores-work",
     "how-to-freeze-your-credit",
     "how-much-car-can-i-afford",
@@ -555,6 +560,74 @@
     "self-employment-tax-explained",
     "how-to-file-taxes-for-the-first-time",
     "best-tax-software-for-simple-returns"
+   ],
+   "tool": "budget"
+  },
+  "how-to-build-credit-from-scratch": {
+   "related": [
+    "what-is-a-good-credit-score",
+    "how-credit-scores-work",
+    "how-to-dispute-a-credit-report-error",
+    "how-credit-card-interest-works"
+   ],
+   "tool": "debt"
+  },
+  "how-much-emergency-fund-do-i-need": {
+   "related": [
+    "how-to-build-an-emergency-fund",
+    "sinking-funds-explained",
+    "how-to-open-a-high-yield-savings-account",
+    "no-spend-challenge"
+   ],
+   "tool": "budget"
+  },
+  "renters-insurance-explained": {
+   "related": [
+    "how-much-emergency-fund-do-i-need",
+    "sinking-funds-explained",
+    "how-to-make-a-budget-you-will-keep"
+   ],
+   "tool": "budget"
+  },
+  "how-to-negotiate-a-raise": {
+   "related": [
+    "401k-match-explained",
+    "how-to-fill-out-a-w-4",
+    "how-to-make-a-budget-you-will-keep"
+   ],
+   "tool": "budget"
+  },
+  "how-to-budget-for-a-trip": {
+   "related": [
+    "sinking-funds-explained",
+    "no-spend-challenge",
+    "how-credit-card-interest-works"
+   ],
+   "tool": "holiday"
+  },
+  "what-is-a-good-credit-score": {
+   "related": [
+    "how-credit-scores-work",
+    "how-to-build-credit-from-scratch",
+    "how-to-dispute-a-credit-report-error",
+    "debt-avalanche-vs-snowball"
+   ],
+   "tool": "debt"
+  },
+  "college-student-budget": {
+   "related": [
+    "how-to-build-credit-from-scratch",
+    "how-to-lower-your-grocery-bill",
+    "how-to-make-a-budget-you-will-keep"
+   ],
+   "tool": "budget"
+  },
+  "no-spend-challenge": {
+   "related": [
+    "find-and-cancel-subscriptions",
+    "how-much-emergency-fund-do-i-need",
+    "how-to-lower-your-grocery-bill",
+    "sinking-funds-explained"
    ],
    "tool": "budget"
   }

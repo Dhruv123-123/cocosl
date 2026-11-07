@@ -292,3 +292,13 @@ th{background:var(--tint)}
 .start-reading ul{margin:0 0 6px;padding-left:20px}
 .posts.grid.goals{grid-template-columns:repeat(2,1fr)}
 @media (max-width:640px){.posts.grid.goals{grid-template-columns:1fr}}
+.template-card{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--green-d);border-radius:var(--radius);padding:14px 16px;margin:24px 0}
+.template-card img{flex:none;width:96px;height:96px;border-radius:8px;object-fit:cover}
+.template-card p{margin:0 0 6px}
+.tc-label{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--green-d);font-weight:700}
+.tc-name{font-weight:700;font-size:18px}
+.tc-blurb{font-size:15px}
+.template-card .shop-buy{margin:8px 0 0}
+.free-first{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:4px 18px 10px;margin:16px 0 24px}
+.free-first h2{font-size:18px;margin:12px 0 6px}
+@media (max-width:640px){.template-card img{width:64px;height:64px}}
