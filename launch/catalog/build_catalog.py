@@ -107,7 +107,10 @@ def template_rows() -> list[dict]:
     for i in C.ITEMS:
         s = i["slug"]
         dated = s.endswith("2027")
-        plat = "Gumroad + Etsy" if dated else ("Gumroad (free, email capture)" if i["kind"] == "free" else "Gumroad")
+        # The dated templates' LISTING.md has no Etsy copy and their Start Here PDF says "reply to your receipt email",
+        # so they're Gumroad only for now (Etsy compliance check, Nov 7). The Etsy shop has the 2027 Budget Planner
+        # printable for the January push. To list one on Etsy, write its Etsy copy first and rerun etsy_audit.py.
+        plat = "Gumroad (Etsy optional)" if dated else ("Gumroad (free, email capture)" if i["kind"] == "free" else "Gumroad")
         date = "Week of Nov 9" if dated else ("Week of Nov 16; code BF5 Nov 27-30" if "bundle" in i["kind"] else "Week of Nov 16")
         note = "Notion: run notion_build.py once and paste the duplicate link into links.json." if "notion" in i["kind"] else \
             "Paste the Sheets copy link into links.json and rebuild."
