@@ -7,6 +7,7 @@ Outputs (dist/):
   Scam-Decoded-for-Seniors.pdf   12-page large-print booklet (includes the fridge checklist and wallet cards)
   Fridge-Checklist.pdf           1 page, print and stick on the fridge
   Wallet-Cards.pdf               4 cut-out cards per page, front + back (print double-sided, flip on long edge)
+  Group-Print-License.pdf        1-page license certificate for the $49 group listing (fill in the organization)
 """
 from __future__ import annotations
 
@@ -134,6 +135,20 @@ def booklet() -> list[str]:
     return [cover, p2, p3, p4, p5, p6, p7, p8, p9, p10, fridge_page(11)] + wallet_pages()
 
 
+def license_page() -> str:
+    terms = "".join(f"<li>{esc(t)}</li>" for t in C.GROUP_LICENSE["terms"])
+    return page(f"""<div class="kicker">Group print license · ${C.GROUP_LICENSE['price']}</div>
+      <h2>{esc(C.TITLE)}: group print license</h2>
+      <p class="lede">This certificate goes with your purchase. Keep it with your printed copies.</p>
+      <table><tr><td>Licensed organization</td><td class="blank"></td></tr><tr><td>Order number</td><td class="blank"></td></tr>
+      <tr><td>Date of purchase</td><td class="blank"></td></tr></table>
+      <h3>You may</h3><ul>{terms}</ul>
+      <h3>Please don't</h3><ul><li>Resell the files, or post them on a public website or shared drive</li>
+      <li>Remove the Scam Decoded name, or present the pack as your own</li>
+      <li>Give the files to another organization (they can buy their own license)</li></ul>
+      <p style="font-size:12pt;color:var(--muted)">Questions, or need a license for several branches? Email [contact email]. General education, not legal or financial advice.</p>""", None)
+
+
 def to_pdf(html_text: str, name: str) -> Path:
     src = DIST / f".{name}.html"
     src.write_text(html_text)
@@ -150,7 +165,8 @@ def main() -> None:
     DIST.mkdir()
     docs = {"Scam-Decoded-for-Seniors": doc(C.TITLE, booklet()),
             "Fridge-Checklist": doc("Fridge checklist", [fridge_page(None)]),
-            "Wallet-Cards": doc("Wallet cards", wallet_pages())}
+            "Wallet-Cards": doc("Wallet cards", wallet_pages()),
+            "Group-Print-License": doc("Group print license", [license_page()])}
     for name, text in docs.items():
         if "--no-pdf" in sys.argv:
             (DIST / f"{name}.html").write_text(text)

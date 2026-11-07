@@ -23,7 +23,7 @@ Before you book:
 
 - Fill in `[distance]`, `[mileage rate]`, contact details and the links on the last slide.
 - Many libraries can't allow sales on site. In that case, offer the group license or the plain $150 talk.
-- The $49 group print license doesn't exist yet. Add it as a second Etsy or Gumroad listing first (same PDFs, license note: "unlimited printed copies for one organization's attendees").
+- The $49 group print license is ready to list: see `../seniors-pack/GROUP_LICENSE_LISTING.md` (Gumroad recommended). Put its link in the pricing sheet and the pitch emails.
 - Get liability insurance if a venue requires it, and invoice from the business.
 
 Before each talk:

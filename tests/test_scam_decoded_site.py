@@ -134,3 +134,17 @@ def test_affiliate_comparison_page(tmp_path, monkeypatch):
     assert page.index("Affiliate disclosure") < page.index("Affiliate+Click")
     assert "$" not in re.sub(r"<script.*?</script>", "", page, flags=re.S)  # no unverified prices
     assert "/compare/" in (out / "sitemap.xml").read_text()
+
+
+def test_page_copy_lives_in_content_files(tmp_path, monkeypatch):
+    src = (ROOT / "build.py").read_text()
+    for phrase in ("What's inside", "Honest notes", "Who it's for", "Kit or guide?", "Our take", "free by law"):
+        assert phrase not in src, f"copy still hard-coded in build.py: {phrase}"
+    assert sorted(p.stem for p in (ROOT / "content" / "products").glob("*.md")) == ["kit", "parents", "teams"]
+    for name in ("index", "thanks", "checker", "compare"):
+        assert (ROOT / "content" / "pages" / f"{name}.md").exists()
+    _, out = build(tmp_path, monkeypatch)
+    assert (out / "free" / "index.html").exists() and '<ul class="inside">' in (out / "kit" / "index.html").read_text()
+    assert "<table class=\"compare\">" in (out / "compare" / "index.html").read_text()
+    assert "/free/</loc>" not in (out / "sitemap.xml").read_text()
+    assert 'noindex' in (out / "free" / "thanks" / "index.html").read_text()

@@ -50,7 +50,7 @@ Paper & Party Supplies › Paper › Stationery, or Books, Movies & Music › Bo
 > - This is a digital file. Nothing will be mailed.
 > - It's general education, not legal or financial advice. No guide can stop every scam; this one helps you slow down and check.
 > - All example calls and texts are made up.
-> - For personal and family use. Senior centers, libraries and churches: message me about a group license.
+> - For personal and family use. Senior centers, libraries and churches: see our Group Print License listing ($49) to print copies for everyone.
 >
 > Made by Scam Decoded, which decodes one scam a day in plain English. [Instagram / YouTube handle]
 

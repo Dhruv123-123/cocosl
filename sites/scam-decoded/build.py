@@ -106,13 +106,24 @@ def parse_front_matter(text: str) -> tuple[dict, str]:
     return meta, text
 
 
-def expand(text: str) -> str:
-    """{{checker}}, {{magnet}}, {{buy}}, {{contact}}, {{ai}}, {{disclaimer}} placeholders."""
-    lm = CFG["lead_magnet"]
-    subs = {"checker": checker_url(), "magnet": u(f"/downloads/{lm['file']}"),
-            "buy": CFG["product"]["buy_url"], "contact": CFG["contact_email"],
-            "ai": CFG["ai_disclosure"], "disclaimer": CFG["disclaimer"]}
-    return re.sub(r"\{\{(\w+)\}\}", lambda m: subs.get(m.group(1), m.group(0)), text)
+def values(extra: dict | None = None) -> dict:
+    """Plain-text {{name}} values available to every content file (escaped later like any text)."""
+    lm, kit = CFG["lead_magnet"], CFG["product"]
+    v = {"checker": checker_url(), "magnet": u(f"/downloads/{lm['file']}"),
+         "buy": kit["buy_url"], "contact": CFG["contact_email"],
+         "ai": CFG["ai_disclosure"], "disclaimer": CFG["disclaimer"],
+         "site_name": CFG["name"], "tagline": CFG["tagline"], "lm_title": lm["title"],
+         "lm_headline": lm["headline"], "lm_pitch": lm["pitch"], "thanks_note": CFG["email"]["thanks_note"],
+         "kit_name": kit["name"], "kit_price": price(kit), "kit_pages": str(kit["pages"]),
+         "kit_refund_days": str(kit["refund_days"]), "reviewed": CFG.get("compare_reviewed", "")}
+    v.update(extra or {})
+    return v
+
+
+def expand(text: str, extra: dict | None = None) -> str:
+    """{{checker}}, {{magnet}}, {{buy}}, {{contact}}, {{ai}}, {{disclaimer}} and the other values() placeholders."""
+    subs = values(extra)
+    return re.sub(r"\{\{(\w+)\}\}", lambda m: str(subs.get(m.group(1), m.group(0))), text)
 
 
 def inline(s: str) -> str:
@@ -130,25 +141,80 @@ def inline(s: str) -> str:
     return re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)", link, s)
 
 
-def markdown(text: str) -> str:
-    out, para, lst = [], [], None
+TOKEN = "\x00{}\x00"
+
+
+def markdown(text: str, ctx: dict | None = None) -> str:
+    """Markdown subset: #/##/### headings, lists, paragraphs, pipe tables, bold/italic/links, raw HTML lines
+    (starting with "<"), `::: class [args]` ... `:::` blocks and {{shortcode:arg|arg}} HTML shortcodes."""
+    ctx = ctx or {}
+    tokens: list[str] = []
+
+    def tokenize(m):
+        html_out = shortcode(m.group(1), (m.group(2) or "").split("|") if m.group(2) is not None else [], ctx)
+        if html_out is None:
+            return m.group(0)
+        tokens.append(html_out)
+        return TOKEN.format(len(tokens) - 1)
+    text = re.sub(r"\{\{(\w+)(?::([^}]*))?\}\}", lambda m: tokenize(m) if (m.group(2) is not None or m.group(1) in SHORTCODES) else m.group(0), text)
+    text = expand(text, ctx.get("values"))
+    out, para, lst, table, closers = [], [], None, [], []
+    list_class = ""
 
     def flush():
-        nonlocal para, lst
+        nonlocal para, lst, table, list_class
         if para:
             out.append("<p>" + inline(" ".join(para)) + "</p>")
             para = []
         if lst:
             tag = lst[0]
-            out.append(f"<{tag}>" + "".join(f"<li>{inline(i)}</li>" for i in lst[1]) + f"</{tag}>")
+            attr = f' class="{list_class}"' if list_class else ""
+            list_class = ""
+            out.append(f"<{tag}{attr}>" + "".join(f"<li>{inline(i)}</li>" for i in lst[1]) + f"</{tag}>")
             lst = None
+        if table:
+            rows = [[c.strip() for c in r.strip().strip("|").split("|")] for r in table
+                    if not re.fullmatch(r"\|?[\s:|-]+\|?", r.strip())]
+            head = "<tr>" + "".join(f"<th>{inline(c)}</th>" for c in rows[0]) + "</tr>"
+            body = "".join("<tr>" + "".join(f"<{'th' if k == 0 else 'td'}>{inline(c)}</{'th' if k == 0 else 'td'}>"
+                                            for k, c in enumerate(r)) + "</tr>" for r in rows[1:])
+            out.append(f'<div class="scroll"><table class="compare">{head}{body}</table></div>')
+            table = []
 
-    for line in expand(text).splitlines():
+    for line in text.splitlines():
         s = line.strip()
         if not s:
             flush()
             continue
-        if m := re.match(r"(#{2,3})\s+(.*)", s):
+        if m := re.fullmatch(r":::\s*([\w-]*)\s*(.*)", s):
+            flush()
+            cls, arg = m.group(1), m.group(2).strip()
+            if not cls:
+                out.append(closers.pop() if closers else "")
+            elif cls == "product":
+                src, _, alt = (x.strip() for x in arg.partition("|"))
+                out.append(f'<div class="product"><img src="{esc(u(src))}" alt="{esc(alt)}" width="170" height="220" loading="lazy"><div>')
+                closers.append("</div></div>")
+            elif cls == "inside":  # class on the list itself
+                list_class = "inside"
+                closers.append("")
+            elif cls == "card":
+                out.append("<div>")
+                closers.append("</div>")
+            else:
+                out.append(f'<div class="{esc(cls)}">')
+                closers.append("</div>")
+            continue
+        if re.fullmatch(TOKEN.format(r"\d+"), s) or s.startswith("<"):
+            flush()
+            out.append(s)
+            continue
+        if s.startswith("|"):
+            if para or lst:
+                flush()
+            table.append(s)
+            continue
+        if m := re.match(r"(#{1,3})\s+(.*)", s):
             flush()
             out.append(f"<h{len(m.group(1))}>{inline(m.group(2))}</h{len(m.group(1))}>")
         elif m := re.match(r"[-*]\s+(.*)", s):
@@ -166,11 +232,13 @@ def markdown(text: str) -> str:
                 lst = ["ol", []]
             lst[1].append(m.group(1))
         else:
-            if lst:
+            if lst or table:
                 flush()
             para.append(s)
     flush()
-    return "\n".join(out)
+    out.extend(reversed(closers))
+    html_out = "\n".join(out)
+    return re.sub(TOKEN.format(r"(\d+)"), lambda m: tokens[int(m.group(1))], html_out)
 
 
 def load_dir(name: str) -> list[dict]:
@@ -272,214 +340,6 @@ def price(p: dict) -> str:
     return f"${p['price']:g}"
 
 
-# --------------------------------------------------------------------- pages
-def home() -> str:
-    lm = CFG["lead_magnet"]
-    tonight = ["Freeze your credit at all three bureaus (free, 10 minutes)",
-               "Pick a family safe word for panic calls about money",
-               "Turn on alerts for every account and card"]
-    return f"""
-<section class="hero"><div class="wrap grid">
-  <div>
-    <p class="kicker">{esc(CFG['tagline'])}</p>
-    <h1>{esc(lm['headline'])}</h1>
-    <p class="lede">{esc(lm['pitch'])}</p>
-    {email_form('home-hero')}
-  </div>
-  <img class="cover" src="{u('/img/lead-magnet-cover.png')}" alt="Cover of {esc(lm['title'])}" width="306" height="396">
-</div></section>
-<section class="wrap">
-  {checker_box()}
-  <h2>What's inside the free checklist</h2>
-  <div class="cards">
-    <div><h3>Tonight: 10 minutes, $0</h3><ul>{''.join(f'<li>{esc(t)}</li>' for t in tonight)}</ul></div>
-    <div><h3>The three rules</h3><ul><li>Call back on a number you look up yourself</li><li>Never pay a stranger with gift cards, wires, crypto or apps</li><li>Never read a one-time code to anyone who contacted you</li></ul></div>
-    <div><h3>If it happens</h3><ul><li>The first-hour plan, in order</li><li>Where to report (FTC, IdentityTheft.gov)</li><li>How to spot the "recovery" scam that follows</li></ul></div>
-  </div>
-  <h2>Then, one short email a week</h2>
-  <p>The scam going around right now, the tell that gives it away, and exactly what to do. Calm, specific, no "you've been hacked" panic. Made for adults and their families, especially the person everyone calls about "a weird text".</p>
-  <div class="cta-band">{email_form('home-bottom', 'Get the free checklist')}</div>
-</section>"""
-
-
-def thanks() -> str:
-    lm, p = CFG["lead_magnet"], CFG["product"]
-    return f"""
-<section class="wrap narrow">
-  <p class="kicker">You're in</p>
-  <h1>Here's your checklist</h1>
-  <p>{esc(CFG['email']['thanks_note'])}</p>
-  <p><a class="button" href="{u('/downloads/' + lm['file'])}" download>Download {esc(lm['title'])} (PDF)</a></p>
-  <p>Start with section 1 tonight. It takes about 10 minutes and costs nothing.</p>
-  {checker_box()}
-  <div class="product">
-    <img src="{u('/img/kit-cover.png')}" alt="Cover of {esc(p['name'])}" width="170" height="220" loading="lazy">
-    <div><h2>Want the whole family plan on paper?</h2>
-    <p><strong>{esc(p['name'])}</strong> is our own {p['pages']}-page printable kit: a scripted family meeting, freeze trackers for every family member, the 12-scam decoder, and a fridge card and wallet cards for parents. {price(p)}, {p['refund_days']}-day refund.</p>
-    <p><a href="{u('/kit/')}">See what's inside →</a></p></div>
-  </div>
-</section>"""
-
-
-def kit() -> str:
-    p = CFG["product"]
-    buy = p["buy_url"]
-    if "example." in buy or is_placeholder(buy):
-        WARNINGS.append(f"product buy_url is still a placeholder: {buy}")
-    inside = [
-        ("The family meeting, scripted", "What to say, minute by minute, without making anyone feel foolish."),
-        ("Family plan sheet", "Safe word, the call-back rule, the payment rule, and your trusted person."),
-        ("Credit freeze tracker", "Every adult and child, all five agencies, with how-to steps."),
-        ("Account lockdown checklist", "Five locks, one a night: email, passwords, passkeys, phone number, alerts."),
-        ("The Scam Decoder", "12 common scams, the tell for each, and the move that beats it."),
-        ("Fridge card + 4 wallet cards", "Big type, made for parents and grandparents."),
-        ("\"It happened\" plan", "The first 60 minutes in order, plus an incident log banks and police will ask for."),
-    ]
-    items = "".join(f"<li><strong>{esc(a)}.</strong> {esc(b)}</li>" for a, b in inside)
-    ld = {"@context": "https://schema.org", "@type": "Product", "name": p["name"],
-          "image": absu("/img/kit-cover.png"), "description": "A printable family plan against scams.",
-          "brand": {"@type": "Brand", "name": CFG["name"]},
-          "offers": {"@type": "Offer", "price": str(p["price"]), "priceCurrency": "USD", "url": buy,
-                     "availability": "https://schema.org/InStock"}}
-    return f"""
-<script type="application/ld+json">{json.dumps(ld)}</script>
-<section class="hero"><div class="wrap grid">
-  <div>
-    <p class="kicker">Our own product · {price(p)}</p>
-    <h1>{esc(p['name'])}</h1>
-    <p class="lede">Scammers now clone voices, fake caller ID and know your parents' address from data breaches. This kit turns one 15-minute family conversation into a plan everyone follows when a scary call comes in.</p>
-    <p><a class="button {PRODUCT_CLICK}" href="{esc(buy)}">Get the kit for {price(p)}</a></p>
-    <p class="small">Printable PDF, {p['pages']} pages, US Letter. {p['refund_days']}-day refund, no hoops.</p>
-  </div>
-  <img class="cover" src="{u('/img/kit-cover.png')}" alt="Cover of {esc(p['name'])}" width="306" height="396">
-</div></section>
-<section class="wrap">
-  <h2>What's inside</h2>
-  <ul class="inside">{items}</ul>
-  <h2>Who it's for, and who it isn't</h2>
-  <p><strong>For</strong> families: adult children worried about parents, grandparents who answer every call, parents who want their kids' credit frozen, and the person everyone calls about "a weird text".</p>
-  <p><strong>Not for</strong> you if you live alone and don't help anyone else with money. The <a href="{u('/')}">free checklist</a> covers you.</p>
-  <h2>Honest notes</h2>
-  <ul><li>Most of the facts are free online, and we say so. The kit saves you turning them into a plan your family will follow.</li>
-  <li>No product can promise you'll never be scammed. This one helps your family slow down and check.</li>
-  <li>General education, not legal or financial advice.</li></ul>
-  <p><a class="button {PRODUCT_CLICK}" href="{esc(buy)}">Get the kit for {price(p)}</a></p>
-  {checker_box()}
-  <div class="product">
-    <img src="{u('/img/parents-cover.png')}" alt="Cover of Protect Your Parents" width="170" height="220" loading="lazy">
-    <div><h2>Helping a parent?</h2>
-    <p><strong>Protect Your Parents</strong> is our 20-page setup guide: every setting to change on their phone, bank and credit, plus 10 word-for-word phone scripts. Kit buyers get $10 off.</p>
-    <p><a href="{u('/parents/')}">See the guide →</a></p></div>
-  </div>
-</section>"""
-
-
-def ladder(slug: str) -> dict:
-    return next(x for x in CFG.get("ladder", []) if x["slug"] == slug)
-
-
-def buy_link(p: dict) -> str:
-    if "example." in p["buy_url"] or is_placeholder(p["buy_url"]):
-        WARNINGS.append(f"{p['slug']} buy_url is still a placeholder: {p['buy_url']}")
-    return p["buy_url"]
-
-
-def product_ld(p: dict, description: str) -> str:
-    ld = {"@context": "https://schema.org", "@type": "Product", "name": p["name"], "image": absu(p["cover"]),
-          "description": description, "brand": {"@type": "Brand", "name": CFG["name"]},
-          "offers": {"@type": "Offer", "price": str(p["price"]), "priceCurrency": "USD", "url": p["buy_url"],
-                     "availability": "https://schema.org/InStock"}}
-    return f'<script type="application/ld+json">{json.dumps(ld)}</script>'
-
-
-def parents_page() -> str:
-    p = ladder("parents")
-    buy = buy_link(p)
-    inside = [
-        ("A three-visit plan", "The conversation, the setup, then practice. Fits a holiday or a weekend."),
-        ("What to say, and what not to", "Openers that work, and answers to \"I'd never fall for that\"."),
-        ("40+ setup checks", "Phone, email, bank, credit and computer, in plain English: silence unknown callers, carrier PIN, bank alerts, a trusted contact, credit freezes, remote-access apps."),
-        ("10 phone scripts", "Word-for-word lines for the grandchild-in-trouble call, the \"bank fraud department\", Medicare, the IRS, tech support, utility shut-offs, prizes and online romance."),
-        ("Scripts for you", "Calling their bank together, the sibling who isn't worried, and a parent still talking to a scammer."),
-        ("Fill-in sheets", "Family Plan, Important Numbers (official numbers included), monthly check-in tracker, phone-side card."),
-        ("If it happens", "Warning signs, the first hour, and how to spot the \"recovery\" scam that follows."),
-    ]
-    items = "".join(f"<li><strong>{esc(a)}.</strong> {esc(b)}</li>" for a, b in inside)
-    code = (f'<p class="small">Bought the {esc(CFG["product"]["name"])}? Use code <strong>{esc(p["code"])}</strong> '
-            f'for ${p["code_off"]:g} off.</p>') if p.get("code") else ""
-    return f"""{product_ld(p, "A setup guide and phone scripts to protect older parents from scams.")}
-<section class="hero"><div class="wrap grid">
-  <div>
-    <p class="kicker">Our own product · {price(p)}</p>
-    <h1>{esc(p['name'])}</h1>
-    <p class="lede">Your parents answer the phone. Scammers know it. This {p['pages']}-page guide walks you through three short visits that make them much harder to scam, without making them feel foolish.</p>
-    <p><a class="button {PRODUCT_CLICK}" href="{esc(buy)}">Get the guide for {price(p)}</a></p>
-    {code}
-    <p class="small">Printable PDF, US Letter. {CFG['product']['refund_days']}-day refund.</p>
-  </div>
-  <img class="cover" src="{u(p['cover'])}" alt="Cover of {esc(p['name'])}" width="306" height="396">
-</div></section>
-<section class="wrap">
-  <h2>What's inside</h2>
-  <ul class="inside">{items}</ul>
-  <h2>Kit or guide?</h2>
-  <p>The <a href="{u('/kit/')}">{esc(CFG['product']['name'])}</a> ({price(CFG['product'])}) is a whole-family plan: kids' credit freezes, a family meeting, fridge and wallet cards. <strong>Protect Your Parents</strong> goes deep on one job: setting up and coaching a parent. Many families get both; guide buyers get the kit free.</p>
-  <h2>Honest notes</h2>
-  <ul><li>No guide can promise your parents will never be scammed. This one helps them slow down and check.</li>
-  <li>Phone menus change with updates; the guide tells you what to look for, not just where to tap.</li>
-  <li>General education, not legal or financial advice.</li></ul>
-  <p><a class="button {PRODUCT_CLICK}" href="{esc(buy)}">Get the guide for {price(p)}</a></p>
-</section>"""
-
-
-def teams_page() -> str:
-    p = ladder("teams")
-    buy = buy_link(p)
-    inside = [
-        ("25 editable slides with speaker notes", "The 3 tells, phishing, the fake boss, invoice and bank-change fraud, payroll diversion, fake IT calls and code theft, AI voice clones, QR codes, the verify rule and reporting."),
-        ("3 practice scenarios", "With model answers, for pairs or breakout rooms."),
-        ("A 12-question quiz", "With answer key and explanations."),
-        ("Certificates and an attendance log", "Editable PowerPoint and printable PDF."),
-        ("A verification policy template", "One page on bank changes, new payees, gift cards, employee data and codes."),
-        ("Follow-up emails and a poster", "\"Verify before you pay\", for the office or the finance desk."),
-    ]
-    items = "".join(f"<li><strong>{esc(a)}.</strong> {esc(b)}</li>" for a, b in inside)
-    return f"""{product_ld(p, "A ready-to-run 45-minute scam awareness training session for small teams.")}
-<section class="hero"><div class="wrap grid">
-  <div>
-    <p class="kicker">For small businesses · {price(p)}</p>
-    <h1>Spot It, Stop It: scam awareness training for your team</h1>
-    <p class="lede">Most scams that hit small businesses don't hack anything. They ask a person to pay an invoice, change bank details, buy gift cards or read out a code. Run a 45-minute session yourself, no security background needed.</p>
-    <p><a class="button {PRODUCT_CLICK}" href="{esc(buy)}">Get the training pack for {price(p)}</a></p>
-    <p class="small">One organization, any number of employees. Zip download: PPTX, PDF.</p>
-  </div>
-  <img class="cover" src="{u(p['cover'])}" alt="Title slide of the Spot It, Stop It training deck" width="400" height="225">
-</div></section>
-<section class="wrap">
-  <h2>What's inside</h2>
-  <ul class="inside">{items}</ul>
-  <h2>Who it's for</h2>
-  <p>Owners and office managers of teams of 3 to 100, HR and finance leads, and anyone who pays invoices or runs payroll. If you already pay for a security awareness platform, you probably don't need this.</p>
-  <h2>Honest notes</h2>
-  <ul><li>Training reduces risk; it can't remove it. The policy template and the verify rule do the heavy lifting.</li>
-  <li>It doesn't make you "compliant" with any specific law, standard or insurer. The attendance log helps you keep records.</li>
-  <li>General education, not legal, compliance or financial advice.</li></ul>
-  <p><a class="button {PRODUCT_CLICK}" href="{esc(buy)}">Get the training pack for {price(p)}</a></p>
-</section>"""
-
-
-def checker_page() -> str:
-    link = CFG["scam_checker"]["url"]
-    if is_placeholder(link):
-        WARNINGS.append("scam_checker.url is a placeholder: set it to the deployed PR #8 checker "
-                        "(site.json or SCAM_CHECKER_URL)")
-        body = """<p>Our free "Is this a scam?" checker is coming soon. Until then, use the three tells: rush, secrecy and a strange way to pay. See two, stop, and check on your own using a number or website you look up yourself.</p>"""
-    else:
-        body = f'<p><a class="button" href="{esc(link)}">Open the free scam checker</a></p>'
-    return f"""<section class="wrap narrow"><p class="kicker">Free tool</p><h1>Is this a scam?</h1>{body}
-<p>Get the free checklist so you know the patterns before the next message arrives:</p>{email_form('checker-page')}</section>"""
-
-
 def email_html(e: dict, body: str) -> str:
     body = re.sub(r"<h(\d)>", r'<h\1 style="font-size:20px;margin:24px 0 8px">', body)
     body = body.replace("<p>", '<p style="margin:0 0 16px">')
@@ -568,6 +428,29 @@ def newsletter() -> list[tuple]:
     return pages
 
 
+# ------------------------------------------------------------------ products
+def get_product(slug: str) -> dict:
+    """The $9 kit is CFG["product"]; the other rungs are CFG["ladder"]."""
+    if slug == CFG["product"]["slug"]:
+        return CFG["product"]
+    return next(x for x in CFG.get("ladder", []) if x["slug"] == slug)
+
+
+def buy_link(p: dict) -> str:
+    if "example." in p["buy_url"] or is_placeholder(p["buy_url"]):
+        name = "product" if p is CFG["product"] else p["slug"]
+        WARNINGS.append(f"{name} buy_url is still a placeholder: {p['buy_url']}")
+    return p["buy_url"]
+
+
+def product_ld(p: dict, image: str, description: str) -> str:
+    ld = {"@context": "https://schema.org", "@type": "Product", "name": p["name"], "image": absu(image),
+          "description": description, "brand": {"@type": "Brand", "name": CFG["name"]},
+          "offers": {"@type": "Offer", "price": str(p["price"]), "priceCurrency": "USD", "url": p["buy_url"],
+                     "availability": "https://schema.org/InStock"}}
+    return f'<script type="application/ld+json">{json.dumps(ld)}</script>'
+
+
 def aff(slug: str) -> dict:
     return next(a for a in CFG["affiliates"] if a["slug"] == slug)
 
@@ -576,74 +459,113 @@ def aff_button(slug: str, label: str) -> str:
     a = aff(slug)
     if is_placeholder(a["url"]):
         WARNINGS.append(f"affiliate {slug} url is still a placeholder: {a['url']}")
-    return (f'<a class="button {AFFILIATE_CLICK}" rel="sponsored nofollow" href="{esc(a["url"])}">{esc(label)}</a>')
+    return f'<a class="button {AFFILIATE_CLICK}" rel="sponsored nofollow" href="{esc(a["url"])}">{esc(label)}</a>'
 
 
-COMPARE_ROWS = {
-    "identity": [
-        ("What it is", "An all-in-one plan: identity and credit monitoring plus device and privacy tools.",
-         "Identity and credit monitoring from Gen Digital, the company behind Norton."),
-        ("Good fit if", "You want one app that also covers antivirus, a VPN and passwords for the family.",
-         "You mainly want identity monitoring and restoration help, and may already use Norton."),
-        ("Watch for", "Plans, features and insurance limits change; check what the family plan covers for kids.",
-         "Cheaper tiers may monitor only one credit bureau; first-year prices often rise at renewal."),
-        ("Free trial", "Check the site: trials and money-back terms change.",
-         "Check the site: trials and money-back terms change."),
-    ],
-    "passwords": [
-        ("What it is", "Open-source password manager with a free plan for unlimited passwords on all your devices.",
-         "Polished paid password manager with family plans and a free trial."),
-        ("Good fit if", "You want to start free today, or want the cheapest paid family plan.",
-         "You want the smoothest setup for a family that isn't techy."),
-        ("Watch for", "The free plan covers the basics; sharing with a whole family needs a paid plan.",
-         "No free-forever plan; set a reminder before the trial ends."),
-        ("Free option", "Yes, a free plan.", "No, a free trial."),
-    ],
-}
+def checker_cta() -> str:
+    link = CFG["scam_checker"]["url"]
+    if is_placeholder(link):
+        WARNINGS.append("scam_checker.url is a placeholder: set it to the deployed PR #8 checker "
+                        "(site.json or SCAM_CHECKER_URL)")
+        return ("<p>Our free \"Is this a scam?\" checker is coming soon. Until then, use the three tells: rush, secrecy "
+                "and a strange way to pay. See two, stop, and check on your own using a number or website you look up yourself.</p>")
+    return f'<p><a class="button" href="{esc(link)}">Open the free scam checker</a></p>'
 
 
-def compare_table(cat: str, a: str, b: str) -> str:
-    head = f"<tr><th></th><th>{esc(aff(a)['name'])}</th><th>{esc(aff(b)['name'])}</th></tr>"
-    rows = "".join(f"<tr><th>{esc(k)}</th><td>{esc(x)}</td><td>{esc(y)}</td></tr>" for k, x, y in COMPARE_ROWS[cat])
-    btns = (f"<tr><th></th><td>{aff_button(a, 'See ' + aff(a)['name'] + ' plans')}</td>"
-            f"<td>{aff_button(b, 'See ' + aff(b)['name'] + ' plans')}</td></tr>")
-    return f'<div class="scroll"><table class="compare">{head}{rows}{btns}</table></div>'
+# ---------------------------------------------------------------- shortcodes
+SHORTCODES = {"checker_box", "checker_cta", "download", "buy", "signup", "aff"}
 
 
-def compare_page() -> str:
-    reviewed = CFG.get("compare_reviewed", "")
-    return f"""<section class="wrap narrow">
-<p class="kicker">Plain-English comparison · reviewed {esc(reviewed)}</p>
-<h1>Identity theft protection and password managers: Aura vs LifeLock, Bitwarden vs 1Password</h1>
-<p class="disclosure"><strong>Affiliate disclosure:</strong> the "See plans" buttons on this page are affiliate links. If you sign up, we may earn a commission at no extra cost to you. Nobody paid to be on this page, and we put the free options first. <a href="{u('/disclosures/')}">How we make money</a>.</p>
-<h2>First, the free stuff (do this even if you buy nothing)</h2>
-<ol>
-<li><strong>Freeze your credit at all three bureaus</strong> (Equifax, Experian, TransUnion). It's free by law, and it blocks most new-account fraud. You can do it for your kids too.</li>
-<li><strong>Check your credit reports for free</strong> at <a href="https://www.annualcreditreport.com/">AnnualCreditReport.com</a>, the official site.</li>
-<li><strong>Get an IRS Identity Protection PIN</strong> at <a href="https://www.irs.gov/identity-theft-fraud-scams/get-an-identity-protection-pin">IRS.gov</a> so nobody can file taxes in your name.</li>
-<li><strong>Turn on two-step sign-in</strong> for your email and bank.</li>
-<li>If it happens, <a href="https://www.identitytheft.gov/">IdentityTheft.gov</a> (from the FTC) gives you a free recovery plan.</li>
-</ol>
-<p>A paid service can't freeze your credit better than you can, and it can't stop every scam. What it adds is <strong>convenience</strong>: alerts in one place, help with the paperwork if your identity is stolen, and insurance for some recovery costs.</p>
+def shortcode(name: str, args: list[str], ctx: dict) -> str | None:
+    """HTML-producing {{name:arg|arg}} shortcodes for content files."""
+    if name == "checker_box":
+        return checker_box()
+    if name == "checker_cta":
+        return checker_cta()
+    if name == "signup":
+        return email_form(*[a.strip() for a in args]) if args else None
+    if name == "aff":
+        return aff_button(args[0].strip(), args[1].strip())
+    if name == "download":
+        lm = CFG["lead_magnet"]
+        return f'<p><a class="button" href="{u("/downloads/" + lm["file"])}" download>Download {esc(lm["title"])} (PDF)</a></p>'
+    if name == "buy" and ctx.get("product"):
+        p = ctx["product"]
+        return f'<p><a class="button {PRODUCT_CLICK}" href="{esc(p["buy_url"])}">{esc(ctx["button"])}</a></p>'
+    return None
 
-<h2>Password managers: Bitwarden vs 1Password</h2>
-<p>Most hacked accounts start with a reused password. A password manager makes a different strong password for every site and remembers them all. For most families this is the single best security purchase, and you can start for free.</p>
-{compare_table("passwords", "bitwarden", "1password")}
-<p><strong>Our take:</strong> start with Bitwarden's free plan today. If the family finds it fiddly, try the 1Password trial. Either is far better than reusing passwords.</p>
 
-<h2>Identity theft protection: Aura vs LifeLock</h2>
-<p>These services watch for your details in places they shouldn't be (new credit, data breaches, the dark web), alert you, and help you recover if your identity is stolen. Both advertise identity theft insurance; check the limit and what it covers on the plan you're looking at.</p>
-{compare_table("identity", "aura", "lifelock")}
-<p><strong>Our take:</strong> freeze your credit first. If you then want someone watching and a team to call if it goes wrong, compare the family plans side by side, and check the renewal price, not just the first-year deal.</p>
+# --------------------------------------------------------------------- pages
+def product_values(p: dict) -> dict:
+    v = {"name": p["name"], "price": price(p)}
+    for k in ("pages", "refund_days", "code", "code_off"):
+        if k in p:
+            v[k] = f"{p[k]:g}" if isinstance(p[k], float) else str(p[k])
+    return v
 
-<h2>Honest notes</h2>
-<ul>
-<li>Prices, plans and insurance limits change often, so we don't list prices here. Check each company's site before you buy.</li>
-<li>No service can stop every scam. The habits in our <a href="{u('/free/')}">free checklist</a> do more than any app.</li>
-<li>We haven't been paid to rank anyone. If that ever changes, we'll say so on this page.</li>
-</ul>
-<p class="small">Last reviewed {esc(reviewed)}. Spotted something out of date? Email {esc(CFG['contact_email'])}.</p>
-</section>"""
+
+def render_page(meta: dict) -> tuple:
+    """A content file -> (path, title, description, body, noindex). Layouts: page, narrow, lead-magnet, sales."""
+    kind = meta.get("layout", "page")
+    ctx: dict = {"values": {}}
+    if meta.get("product"):
+        p = get_product(meta["product"])
+        buy_link(p)
+        ctx = {"product": p, "values": product_values(p)}
+    fm = {k: expand(str(v), ctx["values"]) for k, v in meta.items() if k != "body_md"}
+    ctx["button"] = fm.get("button", "")
+    body = markdown(meta["body_md"], ctx)
+    path = fm.get("path") or f"/{meta['slug']}/"
+    title, desc = fm.get("title", ""), fm.get("description") or fm.get("title", "")
+    if kind == "page":
+        title = f"{fm['title']} · {CFG['name']}"
+        html_out = f'<section class="wrap narrow"><h1>{esc(fm["title"])}</h1>{body}</section>'
+    elif kind == "narrow":
+        html_out = f'<section class="wrap narrow">{body}</section>'
+    elif kind == "lead-magnet":
+        lm = CFG["lead_magnet"]
+        html_out = f"""
+<section class="hero"><div class="wrap grid">
+  <div>
+    <p class="kicker">{esc(CFG['tagline'])}</p>
+    <h1>{esc(lm['headline'])}</h1>
+    <p class="lede">{esc(lm['pitch'])}</p>
+    {email_form(fm.get('signup', 'home-hero'))}
+  </div>
+  <img class="cover" src="{u('/img/lead-magnet-cover.png')}" alt="Cover of {esc(lm['title'])}" width="306" height="396">
+</div></section>
+<section class="wrap">{body}</section>"""
+    elif kind == "sales":
+        p = ctx["product"]
+        cover = fm.get("cover") or p.get("cover", "")
+        code = f'<p class="small">{inline(fm["code_note"])}</p>' if fm.get("code_note") and p.get("code") else ""
+        html_out = f"""{product_ld(p, cover, fm.get('ld_description', desc))}
+<section class="hero"><div class="wrap grid">
+  <div>
+    <p class="kicker">{esc(fm['kicker'])}</p>
+    <h1>{esc(fm['headline'])}</h1>
+    <p class="lede">{esc(fm['lede'])}</p>
+    {shortcode('buy', [], ctx)}
+    {code}
+    <p class="small">{esc(fm['small'])}</p>
+  </div>
+  <img class="cover" src="{u(cover)}" alt="{esc(fm.get('cover_alt', ''))}" width="{fm.get('cover_w', 306)}" height="{fm.get('cover_h', 396)}">
+</div></section>
+<section class="wrap">{body}</section>"""
+    else:
+        raise SystemExit(f"{meta['slug']}: unknown layout {kind!r}")
+    return path, title, desc, html_out, fm.get("noindex") == "true", fm
+
+
+def content_pages() -> list[tuple]:
+    items = [render_page(m) for m in load_dir("pages") + load_dir("products")]
+    items.sort(key=lambda x: int(x[5].get("order", 99)))
+    pages = []
+    for path, title, desc, body, noindex, fm in items:
+        pages.append((path, title, desc, body, noindex))
+        if fm.get("alias"):
+            pages.append((fm["alias"], fm.get("alias_title", title), desc, body, noindex))
+    return pages
 
 
 def build() -> list[str]:
@@ -652,32 +574,14 @@ def build() -> list[str]:
     WARNINGS.clear()
     shutil.rmtree(OUT, ignore_errors=True)
     shutil.copytree(STATIC, OUT)
-    lm = CFG["lead_magnet"]
-    pages = [
-        ("/", f"{CFG['name']}: {lm['title']} (free)", lm["pitch"], home(), False),
-        ("/free/", f"{lm['title']} (free PDF)", lm["pitch"], home(), False),
-        ("/free/thanks/", "Your checklist", "Download your checklist.", thanks(), True),
-        ("/kit/", f"{CFG['product']['name']} ({price(CFG['product'])})",
-         "A printable family plan against scams: meeting script, freeze trackers, scam decoder, fridge card.", kit(), False),
-        ("/parents/", f"{ladder('parents')['name']} ({price(ladder('parents'))})",
-         "A setup guide and 10 phone scripts to protect older parents from scams.", parents_page(), False),
-        ("/teams/", "Scam awareness training for small teams ($99)",
-         "A ready-to-run 45-minute scam awareness session: slides, quiz, certificates.", teams_page(), False),
-        ("/compare/", "Aura vs LifeLock, Bitwarden vs 1Password: plain-English comparison",
-         "Identity theft protection and password managers compared in plain English, with the free options first.",
-         compare_page(), False),
-        ("/checker/", "Is this a scam? Free checker", "Check a suspicious text or email.", checker_page(), False),
-    ]
-    for p in load_dir("pages"):
-        pages.append((f"/{p['slug']}/", f"{p['title']} · {CFG['name']}", p["title"],
-                      f'<section class="wrap narrow"><h1>{esc(p["title"])}</h1>{markdown(p["body_md"])}</section>', False))
+    pages = content_pages()
     pages += newsletter()
     for path, title, desc, body, noindex in pages:
         write(path, layout(title=title, description=desc, path=path, body=body, noindex=noindex))
     write("/404.html", layout(title="Not found", description="Page not found.", path="/404.html", noindex=True,
                               body=f'<section class="wrap narrow"><h1>Page not found</h1><p><a href="{u("/")}">Get the free checklist</a></p></section>'))
     emails()
-    indexed = [p for p, *_ , noindex in pages if not noindex and p != "/free/"]
+    indexed = [p for p, *_ , noindex in pages if not noindex and p != "/free/"]  # /free/ duplicates /
     sm = "".join(f"<url><loc>{absu(p)}</loc></url>" for p in indexed)
     (OUT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n'
                                      f'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{sm}</urlset>\n')

@@ -86,3 +86,16 @@ FRIDGE = [
 
 LISTING = dict(price=7, title=("Scam Decoded for Seniors, Large Print Scam Awareness Guide, Printable Fridge Checklist "
                                "and Wallet Card, Elderly Parent Gift, Phone Scam Prevention PDF"))
+
+GROUP_LICENSE = dict(
+    price=49,
+    terms=[
+        "Print unlimited copies of the booklet, fridge checklist and wallet cards for one organization's members, "
+        "patrons, residents or congregation",
+        "Hand them out free at talks, classes, health fairs and in your building, at one location (or one parish, "
+        "library branch or senior center)",
+        "Show the PDF on a screen during a class or meeting",
+        "Add your organization's name and phone number on the fill-in lines before printing",
+        "Use the license for as long as you like, including future free updates of this edition",
+    ],
+)
