@@ -36,7 +36,7 @@ Each one has a default, so nothing waits on these. Change a default only if you 
 Merge in this order (details and current blockers in [PR merge order](#pr-merge-order) at the bottom):
 **#1 → #3 → #2 → #4 → #5 → #6 → #8 → #12 → #11 → #9 → #10 → #7.**
 
-- [ ] Merge the ones marked ✅ in that order on GitHub (≈ 2 min each). Right now that's **all twelve: #1, #3, #2, #4, #5,
+- [x] **Done Nov 7:** all PRs merged. (Was: merge the ones marked ✅ in that order on GitHub, ≈ 2 min each.) Right now that's **all twelve: #1, #3, #2, #4, #5,
       #6, #8, #12, #11, #9, #10, #7**: checked together on top of `main`, all tests pass. Skip the rest until GitHub shows them
       green; the threads that opened them are fixing them. 15 min
 
@@ -787,7 +787,6 @@ scratch copy and running the full test suite.
 | 11 | **#12** Ad studio portfolio + listing-video page | ✅ safe | |
 | 12 | **#7** This checklist | ✅ safe | docs only |
 
-**Safe to merge now, in order: #1, #3, #2, #4, #5, #6, #8, #12, #11, #9, #10, #7.** All twelve were
-merged together on top of `main` (`ceb9613`) and the full test suite passed. `docs/COMMANDS.md` is
-regenerated on `main` once after the merges (the pipeline thread does it).
+**Done: all twelve PRs plus #14 were merged on Nov 7, 2026** in this order: #1, #3, #2, #4, #5, #6, #8, #12,
+#9, #11, #14, #10, #7. `docs/COMMANDS.md` is regenerated on `main` once afterwards.
 If a new PR lands, merge it after these unless its description says otherwise.
