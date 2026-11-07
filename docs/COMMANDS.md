@@ -134,9 +134,3 @@ Nothing here posts or sends on its own: publishing is a dry run until FACTORY_DR
 | `factory init` | create .env, brands/ and the database |
 | `factory restore` | restore a `factory backup --archive` zip (lists first; --yes restores) |
 | `factory status` | providers, dry-run state, credentials |
-
-## More commands
-
-| Command | What it does |
-|---|---|
-| `factory tutorial-render` | render a screen-recorded tutorial from a spec; add your voice later |
