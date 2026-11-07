@@ -1,6 +1,7 @@
 [
   {
     "format": "short",
+    "date": "2026-11-16",
     "pillar": "budgeting systems that actually stick",
     "idea_angle": "Split checking into a 'bills' account and a 'spending' account so fixed costs can never be accidentally spent.",
     "script": {
@@ -79,6 +80,7 @@
   },
   {
     "format": "short",
+    "date": "2026-11-18",
     "pillar": "budgeting systems that actually stick",
     "idea_angle": "Monthly category budgets break in week three; convert flexible spending into one weekly number instead.",
     "script": {
@@ -220,6 +222,7 @@
   },
   {
     "format": "short",
+    "date": "2026-11-19",
     "pillar": "first-time investing basics (index funds, retirement accounts)",
     "idea_angle": "Not contributing enough to get the full 401(k) match is turning down part of your pay; worked example on a $50k salary.",
     "script": {
@@ -440,6 +443,7 @@
   },
   {
     "format": "short",
+    "date": "2026-11-17",
     "pillar": "credit scores and debt payoff",
     "idea_angle": "A credit freeze is free at all three bureaus, doesn't hurt your score, and takes about 15 minutes; how to thaw it when you apply.",
     "script": {
@@ -1019,6 +1023,7 @@
   },
   {
     "format": "carousel",
+    "date": "2026-11-16",
     "pillar": "budgeting systems that actually stick",
     "idea_angle": "A fixed 20-minute monthly 'money date' agenda with timed steps, so budgeting becomes a calendar habit rather than willpower.",
     "script": {
@@ -1104,6 +1109,7 @@
   },
   {
     "format": "carousel",
+    "date": "2026-11-18",
     "pillar": "budgeting systems that actually stick",
     "idea_angle": "An 8-week plan to a $1,000 starter emergency fund at $125/week, with specific places the money comes from.",
     "script": {
@@ -1853,6 +1859,7 @@
   },
   {
     "format": "long",
+    "date": "2026-11-17",
     "pillar": "budgeting systems that actually stick",
     "idea_angle": "A day-by-day 30-day reset for a 20-something who feels behind: see the numbers, fix fixed costs, set a weekly number, triage debt, start the fund, protect credit.",
     "script": {

@@ -11,7 +11,7 @@ CONFIG = ROOT / "launch" / "money-made-simple" / "channels" / "config.json"
 
 def test_channels_export(factory, tmp_path):
     res = channels.export(factory, "money-made-simple", CONFIG, tmp_path, render=False)
-    assert res["pins"] == 60 and res["issues"] == 12 and res["threads"] >= 90
+    assert res["pins"] == 60 and res["issues"] == 20 and res["threads"] >= 90
     assert res["block"] == 0 and res["warn"] == 0
 
     pins = json.loads((tmp_path / "pinterest" / "pins.json").read_text())
@@ -37,13 +37,24 @@ def test_channels_export(factory, tmp_path):
         assert len(t["threads"]) <= len(t["x"])
 
     issues = json.loads((tmp_path / "newsletter" / "issues.json").read_text())
-    assert [i["date"] for i in issues][:2] == ["2026-11-22", "2026-11-29"]
+    assert [i["date"] for i in issues][:3] == ["2026-11-22", "2026-11-25", "2026-11-29"]
     for i in issues:
         assert "{{unsubscribe_url}}" in i["text"] and "{{business_address}}" in i["text"]
-        assert "utm_medium=email" in i["read_url"]
+        assert "utm_medium=email" in i["read_url"] or (i["kind"] == "midweek" and not i["read_url"])
         assert len(i["subject"]) <= 60
     html = next((tmp_path / "newsletter").glob("01-*.html")).read_text()
     assert "Issue 1" in html and "{{unsubscribe_url}}" in html
+    # Twice a week for the first 8 weeks: a short Wednesday issue after each Sunday one, with no product slot
+    from datetime import date
+    mid = [i for i in issues if i["kind"] == "midweek"]
+    assert len(mid) == 8 and len({i["subject"] for i in issues}) == len(issues)
+    for i in mid:
+        assert date.fromisoformat(i["date"]).weekday() == 2 and not i["product_url"]
+        assert i["signoff"] == "See you Sunday," and "See you Sunday," in i["text"]
+    sundays = [i for i in issues if i["kind"] == "sunday"]
+    assert all(date.fromisoformat(i["date"]).weekday() == 6 for i in sundays)
+    assert {i["move_title"] for i in mid}.isdisjoint({i["move_title"] for i in sundays})
+    assert "Midweek · week 1" in next((tmp_path / "newsletter").glob("01w-*.html")).read_text()
 
 
 def test_weak_match_falls_back_to_lead_magnet():

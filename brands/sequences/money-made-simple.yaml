@@ -71,6 +71,8 @@ links:
   checklist: freebie
   budget_page: product:20-minute-budget
   hysa: affiliate:hysa
+  bundle_page: product:money-toolkit-bundle      # bundle sales page (no launch code: the LAUNCH code is the budget's)
+  bill_cut_page: product:bill-cut-kit
 
 steps:
   - day_offset: 0
@@ -218,7 +220,7 @@ steps:
 
       Put a recurring 20-minute "money check-in" in your calendar. Same time every week. Check what's left of the weekly number, what's due soon, and one thing to adjust.
 
-      That's the reset. Tomorrow's email is the one where I tell you about something I made and sell. If you don't need it, skip it; the checklist covers the method on its own.
+      That's the reset. The next two emails are about things I made and sell. If you don't need them, skip them; the checklist covers the method on its own.
 
       {signoff}
 
@@ -249,6 +251,36 @@ steps:
       [See what's inside {product_name}]({link:budget_page})
 
       And if you don't need it, no problem at all. The weekly emails stay free.
+
+      {signoff}
+
+  - day_offset: 7
+    subject: "All five kits in one download ($39, not $62)"
+    preheader: "Budget, bills, credit, debt and investing. Or start with the $5 one."
+    cta_url_key: bundle_page
+    cta_label: See what's in the Toolkit
+    body_markdown: |
+      Hi,
+
+      Yesterday was the budget. Today is the whole set, because the reset touches more than a budget: bills on Day 2, a buffer on Day 4, debts on Day 5. If you want a tool for each of those, this is the cheaper way to get them.
+
+      **The Money Made Simple Toolkit** is our five kits in one download. Each one is a guide plus a spreadsheet that works in Excel, Google Sheets and Apple Numbers:
+
+      - **The Bill Cut Kit:** find every recurring charge, decide keep, cut or downgrade, and call scripts for the bills you keep
+      - **The 20-Minute Budget:** the reset as a weekly system, with one weekly spending number
+      - **The Credit Report Audit Kit:** read all three free reports, dispute errors with letter templates, freeze your credit
+      - **The Debt-Free Date Planner:** up to ten debts, avalanche or snowball, and the month you'd be debt-free
+      - **Start Investing With $100 a Month:** which account first, what fees cost, and how to automate it. No stock picks
+
+      There's also a 3-page Start Here map with a 30-day plan that uses all five.
+
+      Bought separately they're $62 ($5 + $12 + $9 + $17 + $19). Together they're **$39**, one payment, no subscription, with the same 14-day refund. Already bought one of them? Reply with your receipt and I'll send a code worth what you paid.
+
+      [See what's in the Toolkit]({link:bundle_page})
+
+      **If $39 is more than you want to spend right now,** start with the smallest one. [The Bill Cut Kit]({link:bill_cut_page}) is $5. Cancel one subscription you don't use with it and it has paid for itself.
+
+      Not for you? That's fine. One more short note on Day 9, then it's just the free weekly email.
 
       {signoff}
 
@@ -336,3 +368,5 @@ claims_to_verify:
     source: arithmetic
   - claim: "iPhone: Settings > [your name] > Subscriptions; Android: Google Play > profile > Payments & subscriptions > Subscriptions."
     source: https://support.apple.com/en-us/118428 and https://support.google.com/googleplay/answer/7018481
+  - claim: "The five kits cost $62 separately ($5 + $12 + $9 + $17 + $19); the Toolkit is $39."
+    source: brands/money-made-simple.yaml products (check against the live Gumroad prices)
