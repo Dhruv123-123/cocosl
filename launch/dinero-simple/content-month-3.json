@@ -1,0 +1,1991 @@
+[
+ {
+  "key": "m3-primer-itin",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Applying for a first ITIN: Form W-7 goes with the paper tax return; a valid passport alone proves identity and foreign status; a Certifying Acceptance Agent can check originals so you don't mail your passport.",
+  "script": {
+   "title": "Cómo pedir tu primer ITIN",
+   "hook": "Para pedir tu primer ITIN no necesitas pagarle a nadie por el formulario. Pero sí necesitas hacerlo bien.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Para pedir tu primer ITIN no necesitas pagarle a nadie por el formulario. Pero sí necesitas hacerlo bien.",
+     "on_screen_text": "Tu primer ITIN, paso a paso",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a blank form and a passport. No text, no logos, no real people."
+    },
+    {
+     "heading": "El formulario",
+     "narration": "El ITIN se pide con el formulario W-7, que es gratis en irs.gov, también en español.",
+     "on_screen_text": "Formulario W-7, gratis en irs.gov",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a simple form with a small check badge. No text, no logos, no real people."
+    },
+    {
+     "heading": "Con tu declaración",
+     "narration": "Normalmente el W-7 va pegado a tu declaración de impuestos en papel, y se manda por correo al IRS. Por eso no se puede hacer todo por internet.",
+     "on_screen_text": "Va junto con tu declaración, en papel",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope with a form attached to a tax return. No text, no logos, no real people."
+    },
+    {
+     "heading": "Documentos",
+     "narration": "Tu pasaporte vigente es el único documento que basta solo. Si no tienes, necesitas dos de la lista del IRS, y uno con foto.",
+     "on_screen_text": "Pasaporte vigente = un solo documento",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a passport next to two smaller ID cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "Sin mandar tu pasaporte",
+     "narration": "Si no quieres mandar tu pasaporte original por correo, un agente certificado o algunas oficinas del IRS revisan tus documentos y te los regresan ahí mismo.",
+     "on_screen_text": "Agente certificado: revisa tus originales",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a desk with a person handing back a passport. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "El ITIN tarda varias semanas en llegar, y más en temporada de impuestos. Empieza en febrero, no en abril.",
+     "on_screen_text": "Tarda semanas: empieza ya",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf marking February on a calendar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Cómo pedir tu primer ITIN: formulario W-7 (gratis en irs.gov), normalmente junto con tu declaración en papel. Tu pasaporte vigente basta solo; si no, dos documentos de la lista del IRS, uno con foto. Un agente certificado puede revisar tus originales para que no los mandes por correo. Empieza ya: tarda varias semanas. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "itin",
+    "impuestos",
+    "irs",
+    "w7",
+    "inmigrantes",
+    "dinerosimple"
+   ],
+   "description": "Cómo pedir tu primer ITIN con el formulario W-7, qué documentos sirven y cómo no mandar tu pasaporte por correo.",
+   "thumbnail_text": "Tu primer ITIN",
+   "sources": [
+    "https://www.irs.gov/es/individuals/how-do-i-apply-for-an-itin",
+    "https://www.irs.gov/es/forms-pubs/about-form-w-7",
+    "https://www.irs.gov/individuals/itin-acceptance-agent-program"
+   ],
+   "claims_to_verify": [
+    "W-7 generally must be attached to a federal return (exceptions exist) and mailed",
+    "A valid passport is the only stand-alone document; otherwise two documents from the IRS list, one with a photo",
+    "Certifying Acceptance Agents and some IRS Taxpayer Assistance Centers can verify originals",
+    "Processing takes about 7 weeks, longer in filing season (IRS says 9-11 weeks Jan-Apr); check current figure"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m3-itin-no-es-permiso",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "What an ITIN is and isn't: a tax processing number only. It isn't work authorization, it doesn't change immigration status and it doesn't give Social Security benefits.",
+  "script": {
+   "title": "Lo que tu ITIN es, y lo que no es",
+   "hook": "El ITIN sirve para una sola cosa. Y mucha gente cree que sirve para más.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "El ITIN sirve para una sola cosa. Y mucha gente cree que sirve para más.",
+     "on_screen_text": "El ITIN sirve para una sola cosa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding an ID-style card with a small question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué es",
+     "narration": "El ITIN es un número que da el IRS para que cumplas con tus impuestos si no puedes tener número de Seguro Social.",
+     "on_screen_text": "Un número para tus impuestos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a tax form with a nine-digit number box. No text, no logos, no real people."
+    },
+    {
+     "heading": "No es 1",
+     "narration": "No es un permiso para trabajar. No reemplaza a un número de Seguro Social para un empleador.",
+     "on_screen_text": "No es permiso de trabajo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a briefcase with a small X. No text, no logos, no real people."
+    },
+    {
+     "heading": "No es 2",
+     "narration": "Tampoco cambia tu estatus migratorio ni te da un estatus nuevo.",
+     "on_screen_text": "No cambia tu estatus migratorio",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small passport with an equal sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "No es 3",
+     "narration": "Y no te da beneficios del Seguro Social ni te hace elegible para el crédito por ingreso del trabajo.",
+     "on_screen_text": "No da beneficios del Seguro Social",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small piggy bank with a lock. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Pero sí sirve para declarar, recibir tu reembolso y, en muchos bancos, abrir una cuenta. Para tu caso migratorio, habla con un abogado con licencia.",
+     "on_screen_text": "Sirve para declarar, y eso importa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf filing a folder with a calm smile. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Tu ITIN es un número del IRS para cumplir con tus impuestos. No es permiso de trabajo, no cambia tu estatus migratorio y no te da beneficios del Seguro Social ni el crédito por ingreso del trabajo. Sí sirve para declarar, recibir tu reembolso y, en muchos bancos, abrir una cuenta. Si te preocupa tu caso migratorio, habla con un abogado de inmigración con licencia o con un representante acreditado por el Departamento de Justicia, no con un notario. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "itin",
+    "impuestos",
+    "irs",
+    "inmigrantes",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Qué es el ITIN, para qué sirve y para qué no.",
+   "thumbnail_text": "Qué es tu ITIN",
+   "sources": [
+    "https://www.irs.gov/es/individuals/individual-taxpayer-identification-number"
+   ],
+   "claims_to_verify": [
+    "IRS: ITIN is for federal tax reporting only; does not authorize work, provide Social Security benefits, or qualify for EITC; does not change immigration status",
+    "Many (not all) banks accept an ITIN to open an account"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m3-itin-dependientes",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "ITINs for spouses and dependents: each person on the return needs an SSN or ITIN; dependents need extra proof (school or medical records), and dependents living abroad have stricter rules.",
+  "script": {
+   "title": "ITIN para tu pareja y tus hijos",
+   "hook": "Si tu pareja o tus hijos van en tu declaración, cada uno necesita su número.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si tu pareja o tus hijos van en tu declaración, cada uno necesita su número.",
+     "on_screen_text": "Cada persona necesita su número",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with a small family of simple figures and a form. No text, no logos, no real people."
+    },
+    {
+     "heading": "La regla",
+     "narration": "Cada persona en tu declaración necesita un número de Seguro Social o un ITIN. Si alguien no puede tener Seguro Social, se pide su ITIN con un W-7 para esa persona.",
+     "on_screen_text": "Seguro Social o ITIN para cada uno",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three small ID cards in a row. No text, no logos, no real people."
+    },
+    {
+     "heading": "Dependientes",
+     "narration": "Para los dependientes, el IRS pide pruebas extra, como registros de la escuela o médicos que muestren que viven en Estados Unidos.",
+     "on_screen_text": "Hijos: pruebas de que viven contigo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a school report card and a small medical card. No text, no logos, no real people."
+    },
+    {
+     "heading": "En el extranjero",
+     "narration": "Si tus dependientes viven en otro país, en muchos casos no califican. Hay excepciones para algunos países, como México y Canadá. Revisa las instrucciones del W-7.",
+     "on_screen_text": "Si viven fuera, las reglas son más estrictas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small map with a house far away. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cuidado",
+     "narration": "Cuidado con preparadores que ofrecen poner dependientes que no son tuyos para subir el reembolso. Es fraude, y la responsabilidad es tuya.",
+     "on_screen_text": "Nadie puede 'agregarte' hijos que no son tuyos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a form with an extra name crossed out. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Junta desde ahora los papeles de cada persona. Así no se atrasa tu declaración.",
+     "on_screen_text": "Junta sus papeles desde ahora",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf putting documents into labeled folders. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Cada persona en tu declaración necesita número de Seguro Social o ITIN. Para los dependientes, el IRS pide pruebas extra (escuela o registros médicos). Si viven en otro país, las reglas son más estrictas, con excepciones como México y Canadá. Nunca dejes que un preparador ponga dependientes que no son tuyos. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "itin",
+    "impuestos",
+    "familia",
+    "dependientes",
+    "irs",
+    "dinerosimple"
+   ],
+   "description": "Cómo funciona el ITIN para tu pareja y tus dependientes.",
+   "thumbnail_text": "ITIN para tu familia",
+   "sources": [
+    "https://www.irs.gov/es/forms-pubs/about-form-w-7",
+    "https://www.irs.gov/instructions/iw7"
+   ],
+   "claims_to_verify": [
+    "Every person listed on a return needs an SSN or ITIN",
+    "Dependent ITIN applicants must prove US residency (school/medical records) unless from Mexico or Canada or dependents of military",
+    "Dependents abroad: generally only residents of Mexico/Canada can be claimed (plus some US nationals); confirm wording",
+    "OBBBA changed some credit rules for dependents; no credit claims made here"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m3-por-que-declarar",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Why filing with an ITIN matters: you may get back what was withheld, you stay in compliance, and you build a record; immigration questions go to a licensed attorney.",
+  "script": {
+   "title": "¿Por qué declarar si tienes ITIN?",
+   "hook": "Si te retuvieron impuestos y no declaras, ese dinero se puede quedar con el IRS.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si te retuvieron impuestos y no declaras, ese dinero se puede quedar con el IRS.",
+     "on_screen_text": "No declarar te puede costar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf looking at a paystub with a small coin falling away. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tu reembolso",
+     "narration": "Si de tu cheque te quitaron más impuestos de los que debías, la única forma de recuperarlo es declarar.",
+     "on_screen_text": "Si te retuvieron de más, te lo regresan",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope returning coins to a wallet. No text, no logos, no real people."
+    },
+    {
+     "heading": "La ley",
+     "narration": "Además, si ganaste más de cierta cantidad, tienes la obligación de declarar, con Seguro Social o con ITIN. Y si trabajas por tu cuenta, el límite es mucho más bajo.",
+     "on_screen_text": "Si ganas sobre cierto monto, tienes que declarar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a simple scale with a form on one side. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tu historial",
+     "narration": "Cada declaración es un registro de que cumples. Muchas personas lo usan después como prueba de ingresos para rentar o pedir un préstamo.",
+     "on_screen_text": "Un historial de cumplir",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a stack of neat folders labeled by year. No text, no logos, no real people."
+    },
+    {
+     "heading": "Inmigración",
+     "narration": "Si tienes dudas de cómo afecta tu caso migratorio, no le preguntes a un notario. Habla con un abogado de inmigración con licencia.",
+     "on_screen_text": "Tu caso migratorio: habla con un abogado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small shield next to a law book. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Declara a tiempo, aunque tu declaración sea sencilla.",
+     "on_screen_text": "Declara a tiempo, aunque sea sencillo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf dropping an envelope in a mailbox. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si te retuvieron impuestos, la única forma de recuperar lo que te quitaron de más es declarar. Si ganaste más de cierto monto, tienes que declarar, con Seguro Social o ITIN (si trabajas por tu cuenta, el monto es mucho más bajo). Cada declaración es un historial de que cumples. Si te preocupa tu caso migratorio, habla con un abogado de inmigración con licencia o con un representante acreditado por el Departamento de Justicia, no con un notario. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "itin",
+    "impuestos",
+    "declaraciondeimpuestos",
+    "irs",
+    "inmigrantes",
+    "dinerosimple"
+   ],
+   "description": "Por qué te conviene declarar tus impuestos si tienes ITIN.",
+   "thumbnail_text": "¿Por qué declarar?",
+   "sources": [
+    "https://www.irs.gov/es/individuals/individual-taxpayer-identification-number",
+    "https://www.irs.gov/es/filing/check-if-you-need-to-file-a-tax-return"
+   ],
+   "claims_to_verify": [
+    "Filing requirement depends on income, status and age; self-employment filing threshold is $400 net",
+    "Over-withheld tax is refunded only by filing; refunds generally must be claimed within 3 years",
+    "Using returns as proof of income for rentals/loans is common; no claim about immigration benefits"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m3-estado-civil",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Filing status changes your tax: single, head of household (unmarried, pays over half the home costs for a qualifying person), married filing jointly or separately.",
+  "script": {
+   "title": "Tu estado civil en la declaración cambia lo que pagas",
+   "hook": "Marcar la casilla equivocada en tu declaración te puede costar cientos de dólares.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Marcar la casilla equivocada en tu declaración te puede costar cientos de dólares.",
+     "on_screen_text": "Una casilla, cientos de dólares",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf pointing at a form with five small boxes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Soltero",
+     "narration": "Soltero es si no estabas casado el 31 de diciembre y no calificas para otra opción.",
+     "on_screen_text": "Soltero: no casado al 31 de diciembre",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a single figure with a calendar showing December 31. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cabeza de familia",
+     "narration": "Cabeza de familia es si no estás casado, pagas más de la mitad de los gastos de tu casa y vive contigo un hijo u otra persona que califica. Suele pagar menos que soltero.",
+     "on_screen_text": "Cabeza de familia: pagas más de la mitad de la casa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a house with a figure holding most of the coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Casados",
+     "narration": "Si estás casado, puedes declarar juntos o por separado. Juntos casi siempre sale mejor, pero no siempre.",
+     "on_screen_text": "Casados: juntos o por separado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two figures with one form and two forms side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cuidado",
+     "narration": "Ojo: no eliges el que te dé más reembolso. Eliges el que es verdad. Un preparador que te cambia el estado civil para subir el reembolso te mete en problemas a ti.",
+     "on_screen_text": "No es lo que más te conviene, es lo que es verdad",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a magnifying glass over a checkbox. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Si tienes dudas, el IRS tiene una herramienta gratis que te hace preguntas y te dice cuál te toca.",
+     "on_screen_text": "Si dudas, la herramienta del IRS",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf answering questions on a laptop. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Tu estado civil en la declaración cambia lo que pagas: soltero, cabeza de familia (no casado, pagas más de la mitad de la casa y vive contigo una persona que califica), casados juntos o por separado. Eliges el que es verdad, no el que da más reembolso. El IRS tiene una herramienta gratis para saber cuál te toca. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "impuestos",
+    "declaraciondeimpuestos",
+    "irs",
+    "familia",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Cómo elegir tu estado civil en la declaración de impuestos.",
+   "thumbnail_text": "La casilla que importa",
+   "sources": [
+    "https://www.irs.gov/es/help/ita/what-is-my-filing-status",
+    "https://www.irs.gov/publications/p501"
+   ],
+   "claims_to_verify": [
+    "Marital status determined on Dec 31",
+    "Head of household: unmarried, paid more than half the cost of keeping up a home, qualifying person lived with you more than half the year (with exceptions)",
+    "IRS 'What is my filing status?' interactive tool exists in Spanish (check)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m3-reembolso-a-tu-cuenta",
+  "format": "short",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Have the refund deposited into your own account; if you don't have one, open one (many accept ITIN) before you file. Never into the preparer's account.",
+  "script": {
+   "title": "Tu reembolso, a tu cuenta",
+   "hook": "Tu reembolso tiene que llegar a una cuenta a tu nombre. No a la del preparador, no a la de un amigo.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Tu reembolso tiene que llegar a una cuenta a tu nombre. No a la del preparador, no a la de un amigo.",
+     "on_screen_text": "Tu reembolso, a una cuenta a tu nombre",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding an envelope next to a small bank with a name tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Por qué",
+     "narration": "Si el dinero llega a la cuenta de otra persona y no te lo da, recuperarlo es muy difícil.",
+     "on_screen_text": "Si llega a otra cuenta, es difícil recuperarlo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an arrow being redirected to a different building. No text, no logos, no real people."
+    },
+    {
+     "heading": "Sin cuenta",
+     "narration": "Si no tienes cuenta de banco, ábrela antes de declarar. Muchos bancos y cooperativas aceptan ITIN.",
+     "on_screen_text": "¿No tienes cuenta? Ábrela antes de declarar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bank door opening. No text, no logos, no real people."
+    },
+    {
+     "heading": "Los números",
+     "narration": "Revisa dos veces el número de ruta y de cuenta. Un dígito mal y el reembolso se regresa o se atrasa semanas.",
+     "on_screen_text": "Revisa ruta y cuenta dos veces",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a magnifying glass over two number lines. No text, no logos, no real people."
+    },
+    {
+     "heading": "Depósito directo",
+     "narration": "Con depósito directo llega más rápido, y el gobierno federal está dejando los cheques en papel.",
+     "on_screen_text": "Depósito directo: lo más rápido",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a fast arrow into a bank. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Antes de firmar tu declaración, mira qué cuenta pusieron. Si no es la tuya, no firmes.",
+     "on_screen_text": "Antes de firmar, mira la cuenta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf reading a form carefully before signing. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Tu reembolso tiene que llegar a una cuenta a tu nombre, nunca a la del preparador. Si no tienes cuenta, ábrela antes de declarar (muchos bancos y cooperativas aceptan ITIN). Revisa dos veces el número de ruta y de cuenta. Antes de firmar, mira qué cuenta pusieron. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "reembolso",
+    "impuestos",
+    "itin",
+    "banco",
+    "estafas",
+    "dinerosimple"
+   ],
+   "description": "Por qué tu reembolso tiene que llegar a una cuenta a tu nombre, y qué revisar antes de firmar.",
+   "thumbnail_text": "Tu reembolso, a TU cuenta",
+   "sources": [
+    "https://www.irs.gov/es/refunds/get-your-refund-faster-tell-irs-to-direct-deposit-your-refund-to-one-two-or-three-accounts",
+    "https://www.irs.gov/es/tax-professionals/choosing-a-tax-professional"
+   ],
+   "claims_to_verify": [
+    "IRS warns against refunds deposited to a preparer's account",
+    "Federal paper-check phase-out (EO of March 2025, effective Sept 30, 2025) and IRS guidance on refunds; confirm current wording",
+    "Many banks/credit unions accept ITIN (see the ITIN banking article)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m3-divide-tu-reembolso",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Form 8888 lets you split a refund by direct deposit into up to three accounts, so part goes straight to savings before you see it.",
+  "script": {
+   "title": "Divide tu reembolso en hasta 3 cuentas",
+   "hook": "Tu reembolso puede llegar ya dividido: una parte a tu cuenta y otra directo al ahorro.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Tu reembolso puede llegar ya dividido: una parte a tu cuenta y otra directo al ahorro.",
+     "on_screen_text": "Tu reembolso, ya dividido",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf watching an envelope split into two arrows. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo",
+     "narration": "Con el formulario 8888 le dices al IRS que divida tu reembolso en hasta tres cuentas a tu nombre.",
+     "on_screen_text": "Formulario 8888: hasta 3 cuentas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a form with three small bank icons. No text, no logos, no real people."
+    },
+    {
+     "heading": "Por qué",
+     "narration": "Lo que llega directo al ahorro no pasa por tu cuenta de gastos, y es mucho más fácil no tocarlo.",
+     "on_screen_text": "Lo que no ves, no se gasta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a jar behind a small door. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo",
+     "narration": "Por ejemplo, de $1,800: mil al apartado del colchón y ochocientos a tu cuenta para la deuda y algo para ti.",
+     "on_screen_text": "$1,800: $1,000 ahorro + $800 cuenta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two jars with different coin piles. No text, no logos, no real people."
+    },
+    {
+     "heading": "En el programa",
+     "narration": "Casi todos los programas y preparadores lo ofrecen. Busca 'dividir reembolso' o pregúntale a quien te prepara.",
+     "on_screen_text": "Casi todos los programas lo ofrecen",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a laptop screen with two boxes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Decide hoy cuánto va al ahorro. Cuando llegue, ya está hecho.",
+     "on_screen_text": "Decide la parte del ahorro hoy",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf closing a jar lid with a smile. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Con el formulario 8888 puedes dividir tu reembolso por depósito directo en hasta tres cuentas a tu nombre: una parte directo al ahorro y otra a tu cuenta. Ejemplo: de $1,800, $1,000 al colchón y $800 a tu cuenta. Información general, no es asesoría fiscal.\n\nEl Presupuesto de 20 Minutos (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "reembolso",
+    "impuestos",
+    "ahorro",
+    "fondodeemergencia",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Cómo dividir tu reembolso en hasta tres cuentas con el formulario 8888.",
+   "thumbnail_text": "Reembolso dividido",
+   "sources": [
+    "https://www.irs.gov/es/refunds/get-your-refund-faster-tell-irs-to-direct-deposit-your-refund-to-one-two-or-three-accounts",
+    "https://www.irs.gov/forms-pubs/about-form-8888"
+   ],
+   "claims_to_verify": [
+    "Form 8888 allows splitting a direct-deposit refund into up to three accounts in the filer's name",
+    "Example arithmetic only"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m3-guarda-copias",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Keep a copy of every return and its documents for at least three years; you'll need them for loans, rentals, ITIN renewals and IRS letters.",
+  "script": {
+   "title": "Guarda copia de tu declaración",
+   "hook": "La declaración que mandas hoy te la van a pedir dentro de dos años. ¿La vas a tener?",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "La declaración que mandas hoy te la van a pedir dentro de dos años. ¿La vas a tener?",
+     "on_screen_text": "¿Tienes tu declaración del año pasado?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf searching through an empty drawer. No text, no logos, no real people."
+    },
+    {
+     "heading": "Quién la pide",
+     "narration": "Te la piden para un préstamo, para rentar, para renovar tu ITIN o si te llega una carta del IRS.",
+     "on_screen_text": "Préstamos, renta, cartas del IRS",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a house, a car and an envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué guardar",
+     "narration": "Guarda la declaración completa, firmada, con tus W-2, tus 1099 y los recibos de lo que dedujiste.",
+     "on_screen_text": "Declaración + W-2 + 1099 + recibos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a folder with several forms clipped together. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cuánto tiempo",
+     "narration": "Guárdala al menos tres años. Algunos papeles, más tiempo. Si no estás seguro, guárdalos todos.",
+     "on_screen_text": "Al menos 3 años",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three calendar pages stacked. No text, no logos, no real people."
+    },
+    {
+     "heading": "Dónde",
+     "narration": "Una carpeta en papel y una foto o PDF en tu celular o en la nube. Si pierdes una, tienes la otra.",
+     "on_screen_text": "Papel + una copia en tu celular",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a paper folder and a phone with a cloud icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Si te la hizo un preparador, pídele tu copia completa ese mismo día. Es tuya.",
+     "on_screen_text": "Pide la copia al preparador",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf receiving a folder at a desk. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Guarda copia de tu declaración completa y firmada, con tus W-2, 1099 y recibos, al menos tres años. Te la piden para préstamos, para rentar, para renovar tu ITIN o si te llega una carta del IRS. Ten una copia en papel y otra en tu celular. Si te la hizo un preparador, pide tu copia ese mismo día. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "impuestos",
+    "declaraciondeimpuestos",
+    "itin",
+    "organizacion",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Qué guardar de tu declaración de impuestos, cuánto tiempo y dónde.",
+   "thumbnail_text": "Guarda tu copia",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records"
+   ],
+   "claims_to_verify": [
+    "IRS: keep records generally 3 years (longer in some cases)",
+    "Preparers must give the taxpayer a copy of the return"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m3-pin-de-proteccion",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "The IRS Identity Protection PIN: a free six-digit number, new each year, that stops anyone else from filing with your SSN or ITIN.",
+  "script": {
+   "title": "El PIN que impide que alguien declare con tu número",
+   "hook": "Hay un número de seis dígitos que impide que alguien declare impuestos con tu número. Y es gratis.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Hay un número de seis dígitos que impide que alguien declare impuestos con tu número. Y es gratis.",
+     "on_screen_text": "Un PIN contra el robo de tu reembolso",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a small padlock with six dots. No text, no logos, no real people."
+    },
+    {
+     "heading": "El problema",
+     "narration": "En el robo de identidad fiscal, alguien declara con tu número antes que tú y se queda con tu reembolso.",
+     "on_screen_text": "Alguien declara con tu número primero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a shadowy hand taking an envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "La solución",
+     "narration": "El PIN de protección de identidad del IRS es un número que solo tú conoces. Sin él, nadie puede declarar con tu número.",
+     "on_screen_text": "PIN de protección de identidad del IRS",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a form with a locked box. No text, no logos, no real people."
+    },
+    {
+     "heading": "Quién",
+     "narration": "Lo puede pedir cualquier persona con número de Seguro Social o ITIN que pueda verificar su identidad.",
+     "on_screen_text": "Con Seguro Social o ITIN",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two ID cards with check marks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo",
+     "narration": "Se pide en irs.gov. Cada año te dan uno nuevo, y lo pones en tu declaración o se lo das a tu preparador.",
+     "on_screen_text": "En irs.gov, cada año uno nuevo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with a new padlock each year. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Y recuerda: el IRS nunca te pide ese PIN por teléfono, texto o correo electrónico.",
+     "on_screen_text": "Nadie te lo pide por teléfono",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf hanging up a phone with a red X. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "El PIN de protección de identidad del IRS es un número de seis dígitos, gratis y nuevo cada año, que impide que alguien declare con tu número. Lo puede pedir cualquier persona con Seguro Social o ITIN que pueda verificar su identidad, en irs.gov. Nunca lo compartas por teléfono, texto o correo. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "robodeidentidad",
+    "impuestos",
+    "irs",
+    "itin",
+    "estafas",
+    "dinerosimple"
+   ],
+   "description": "Qué es el PIN de protección de identidad del IRS y cómo pedirlo.",
+   "thumbnail_text": "PIN contra robo fiscal",
+   "sources": [
+    "https://www.irs.gov/es/identity-theft-fraud-scams/get-an-identity-protection-pin"
+   ],
+   "claims_to_verify": [
+    "IP PIN: six digits, new every year, available to anyone with SSN or ITIN who can verify identity",
+    "Online verification may not work for everyone (alternatives: Form 15227 or in-person)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m3-ya-declararon-con-tu-numero",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "If your e-filed return is rejected because someone already filed with your number: file Form 14039 with a paper return, and follow IRS identity-theft steps.",
+  "script": {
+   "title": "'Ya se presentó una declaración con tu número'",
+   "hook": "Si tu declaración sale rechazada porque ya hay una con tu número, haz esto.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si tu declaración sale rechazada porque ya hay una con tu número, haz esto.",
+     "on_screen_text": "Alguien ya declaró con tu número",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf looking surprised at a laptop with a red mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "No entres en pánico",
+     "narration": "Primero revisa que no haya un error en tu número o el de tus dependientes, o que alguien de tu familia no te haya puesto como dependiente.",
+     "on_screen_text": "Primero, revisa que no sea un error",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a magnifying glass over a number. No text, no logos, no real people."
+    },
+    {
+     "heading": "Si es robo",
+     "narration": "Si es robo de identidad, llena el formulario 14039 del IRS y mándalo con tu declaración en papel.",
+     "on_screen_text": "Formulario 14039 + declaración en papel",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two forms clipped together going into an envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "Sigue declarando",
+     "narration": "Aunque tengas el problema, declara y paga a tiempo. El IRS investiga y te escribe por carta.",
+     "on_screen_text": "Paga y declara a tiempo igual",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with April 15 circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Protégete",
+     "narration": "Después, pide tu PIN de protección de identidad para los próximos años.",
+     "on_screen_text": "Pide tu PIN de protección para el año que viene",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small padlock on a form. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Y si también usaron tus datos para otras cosas, robodeidentidad.gov te da un plan paso a paso, en español.",
+     "on_screen_text": "Más pasos en robodeidentidad.gov",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf following a short checklist. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si tu declaración sale rechazada porque ya hay una con tu número: revisa que no sea un error de números o de dependientes; si es robo de identidad, llena el formulario 14039 y mándalo con tu declaración en papel; declara y paga a tiempo igual; pide tu PIN de protección para los próximos años. Más pasos en robodeidentidad.gov. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "robodeidentidad",
+    "impuestos",
+    "irs",
+    "estafas",
+    "itin",
+    "dinerosimple"
+   ],
+   "description": "Qué hacer si alguien ya presentó una declaración con tu número.",
+   "thumbnail_text": "Alguien usó tu número",
+   "sources": [
+    "https://www.irs.gov/es/identity-theft-fraud-scams/identity-theft-guide-for-individuals",
+    "https://www.irs.gov/forms-pubs/about-form-14039",
+    "https://www.robodeidentidad.gov/"
+   ],
+   "claims_to_verify": [
+    "Rejected e-file due to duplicate SSN/ITIN: file Form 14039 with a paper return (IRS identity theft guide)",
+    "IRS contacts by letter; IP PIN afterwards",
+    "robodeidentidad.gov is the FTC's Spanish site"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m3-tu-estado-tambien",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Don't forget the state return: most states have an income tax, and some have their own credits that ITIN filers can claim (California's CalEITC, for example).",
+  "script": {
+   "title": "No olvides la declaración de tu estado",
+   "hook": "Declaraste con el IRS. ¿Y tu estado?",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Declaraste con el IRS. ¿Y tu estado?",
+     "on_screen_text": "¿Y la declaración de tu estado?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a federal form and looking at a map. No text, no logos, no real people."
+    },
+    {
+     "heading": "La regla",
+     "narration": "La mayoría de los estados tiene su propio impuesto sobre el ingreso, con su propia declaración.",
+     "on_screen_text": "La mayoría de los estados cobra impuesto",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a simple US map with most states shaded. No text, no logos, no real people."
+    },
+    {
+     "heading": "Sin impuesto",
+     "narration": "Algunos no tienen impuesto estatal sobre los sueldos, como Texas, Florida y Nevada. Si vives ahí, revisa si tienes que hacer algo más.",
+     "on_screen_text": "Algunos no, como Texas y Florida",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a few states highlighted in a lighter color. No text, no logos, no real people."
+    },
+    {
+     "heading": "Créditos",
+     "narration": "Y algunos estados tienen créditos propios para familias trabajadoras. Algunos aceptan ITIN, como el CalEITC de California.",
+     "on_screen_text": "Algunos estados tienen créditos propios",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small coin with a state outline. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo",
+     "narration": "Normalmente la haces con el mismo programa o preparador. Pregunta si tu precio la incluye.",
+     "on_screen_text": "El mismo programa o preparador",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a laptop with two forms. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Revisa la página de impuestos de tu estado. Muchas tienen información en español.",
+     "on_screen_text": "Revisa la página de impuestos de tu estado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf looking at a phone with a state outline. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Después de la declaración federal, revisa la de tu estado. La mayoría de los estados tiene impuesto sobre el ingreso; algunos no, como Texas, Florida y Nevada. Algunos estados tienen créditos propios para familias trabajadoras, y algunos aceptan ITIN, como el CalEITC de California. Pregunta si tu programa o preparador incluye la estatal. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "impuestos",
+    "impuestosestatales",
+    "itin",
+    "california",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Por qué también tienes que revisar la declaración de impuestos de tu estado.",
+   "thumbnail_text": "¿Y tu estado?",
+   "sources": [
+    "https://www.ftb.ca.gov/file/personal/credits/california-earned-income-tax-credit.html",
+    "https://www.irs.gov/es/filing"
+   ],
+   "claims_to_verify": [
+    "Texas, Florida and Nevada have no state income tax on wages (also AK, SD, TN, WY, NH on wages; WA has capital gains tax)",
+    "CalEITC available to ITIN filers since tax year 2020 (check current rules)",
+    "Some other states also allow ITIN filers to claim state credits; not named"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m3-carta-del-irs",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Got an IRS letter? Read the notice number and deadline, check it's real on irs.gov, respond by mail or online; never pay with gift cards or to a number from a text.",
+  "script": {
+   "title": "Te llegó una carta del IRS: qué hacer",
+   "hook": "Te llegó una carta del IRS. Respira: la mayoría se arregla con una respuesta a tiempo.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Te llegó una carta del IRS. Respira: la mayoría se arregla con una respuesta a tiempo.",
+     "on_screen_text": "Una carta del IRS no es el fin del mundo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding an envelope with a calm face. No text, no logos, no real people."
+    },
+    {
+     "heading": "Léela",
+     "narration": "Arriba a la derecha viene el número de aviso, por ejemplo CP2000, y la fecha límite para responder. Esas dos cosas son lo primero.",
+     "on_screen_text": "Busca el número de aviso y la fecha",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a letter with the top right corner highlighted. No text, no logos, no real people."
+    },
+    {
+     "heading": "Verifica",
+     "narration": "Busca ese número en irs.gov para ver qué significa y confirmar que es real. Llama solo al número del sitio del IRS, no al que te manden por texto.",
+     "on_screen_text": "Busca el aviso en irs.gov",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a magnifying glass over a laptop. No text, no logos, no real people."
+    },
+    {
+     "heading": "Responde",
+     "narration": "Si estás de acuerdo, sigue las instrucciones. Si no, responde por escrito con tus pruebas antes de la fecha. No responder es lo que más cuesta.",
+     "on_screen_text": "Responde antes de la fecha",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope going back with a checkmark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pagos",
+     "narration": "El IRS nunca te pide pagar con tarjetas de regalo, cripto o transferencias a una persona. Si alguien lo pide, es estafa.",
+     "on_screen_text": "El IRS no cobra con tarjetas de regalo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a gift card with a red X. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Si no la entiendes, el Servicio del Defensor del Contribuyente ayuda gratis, también en español.",
+     "on_screen_text": "Si no entiendes, pide ayuda gratis",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf talking with a friendly helper at a desk. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si te llega una carta del IRS: busca el número de aviso y la fecha límite, confirma en irs.gov que es real, y responde antes de la fecha (de acuerdo o con tus pruebas). El IRS nunca te pide pagar con tarjetas de regalo, cripto ni transferencias a una persona. Si no la entiendes, el Defensor del Contribuyente ayuda gratis. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "irs",
+    "impuestos",
+    "cartadelirs",
+    "estafas",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Qué hacer si te llega una carta del IRS.",
+   "thumbnail_text": "Carta del IRS",
+   "sources": [
+    "https://www.irs.gov/es/individuals/understanding-your-irs-notice-or-letter",
+    "https://www.taxpayeradvocate.irs.gov/es/"
+   ],
+   "claims_to_verify": [
+    "Notice number top right corner; CP2000 is an underreporting notice",
+    "IRS never demands gift cards, crypto or wire transfers",
+    "Taxpayer Advocate Service is free and offers Spanish help"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m3-debes-y-no-alcanza",
+  "format": "short",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "If you owe and can't pay: file on time anyway (the late-filing penalty is ten times the late-payment one), pay what you can, and ask for an IRS payment plan.",
+  "script": {
+   "title": "¿Debes impuestos y no te alcanza? Declara igual",
+   "hook": "Si debes impuestos y no te alcanza para pagar, lo peor que puedes hacer es no declarar.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si debes impuestos y no te alcanza para pagar, lo peor que puedes hacer es no declarar.",
+     "on_screen_text": "Debes y no te alcanza: declara igual",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding an empty wallet next to a form. No text, no logos, no real people."
+    },
+    {
+     "heading": "Por qué",
+     "narration": "La multa por no declarar a tiempo es de 5% de lo que debes por mes. La de no pagar es de medio por ciento. Diez veces menos.",
+     "on_screen_text": "No declarar cuesta 10 veces más",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two stacks of coins, one ten times taller. No text, no logos, no real people."
+    },
+    {
+     "heading": "Paga lo que puedas",
+     "narration": "Declara a tiempo y paga lo que puedas el 15 de abril. Todo lo que pagas antes baja los intereses.",
+     "on_screen_text": "Paga lo que puedas el 15 de abril",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a few coins going into an envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "Plan de pagos",
+     "narration": "Para el resto, pide un plan de pagos en irs.gov. Muchas personas lo arreglan en línea, sin llamar.",
+     "on_screen_text": "Plan de pagos con el IRS, en línea",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with small monthly payments. No text, no logos, no real people."
+    },
+    {
+     "heading": "Para el año que viene",
+     "narration": "Y para que no se repita: ajusta tu W-4 con tu trabajo o, si trabajas por tu cuenta, aparta una parte de cada pago.",
+     "on_screen_text": "Ajusta tu W-4 o aparta cada mes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small form and a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Declarar a tiempo, aunque no puedas pagar todo, es lo que te deja más opciones.",
+     "on_screen_text": "Declarar a tiempo te da opciones",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf walking through an open door. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si debes impuestos y no te alcanza: declara a tiempo igual. La multa por no declarar es de 5% por mes; la de no pagar, de 0.5% por mes. Paga lo que puedas el 15 de abril y pide un plan de pagos en irs.gov. Para que no se repita, ajusta tu W-4 o aparta una parte de cada pago. Información general, no es asesoría fiscal.\n\nEl Presupuesto de 20 Minutos (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "impuestos",
+    "irs",
+    "deudas",
+    "plandepagos",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Qué hacer si debes impuestos y no te alcanza para pagar.",
+   "thumbnail_text": "Debes: declara igual",
+   "sources": [
+    "https://www.irs.gov/es/payments/payment-plans-installment-agreements",
+    "https://www.irs.gov/payments/failure-to-file-penalty",
+    "https://www.irs.gov/payments/failure-to-pay-penalty"
+   ],
+   "claims_to_verify": [
+    "Failure-to-file penalty 5% of unpaid tax per month (max 25%); failure-to-pay 0.5% per month (max 25%)",
+    "Online payment plans available for individuals owing up to IRS limits (e.g. $50,000 long-term); not quoted"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m3-ajusta-tu-w4",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "After filing, fix your W-4: a huge refund means you over-withheld all year; owing means under-withholding. The IRS withholding estimator helps.",
+  "script": {
+   "title": "Después de declarar, ajusta tu W-4",
+   "hook": "Si te regresaron $3,000, le prestaste $250 al mes al gobierno, sin intereses.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si te regresaron $3,000, le prestaste $250 al mes al gobierno, sin intereses.",
+     "on_screen_text": "Un reembolso grande es tu dinero, tarde",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf looking at a calendar with coins leaving each month. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué es",
+     "narration": "El W-4 es el formulario que llenaste en tu trabajo. Decide cuánto impuesto te quitan de cada cheque.",
+     "on_screen_text": "El W-4 decide cuánto te retienen",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a simple form next to a paystub. No text, no logos, no real people."
+    },
+    {
+     "heading": "Si te regresaron mucho",
+     "narration": "Si cada año te regresan mucho, te están reteniendo de más. Puedes ajustarlo y tener ese dinero en cada cheque.",
+     "on_screen_text": "Reembolso grande: te retienen de más",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a paystub growing slightly bigger. No text, no logos, no real people."
+    },
+    {
+     "heading": "Si debiste",
+     "narration": "Si debiste, te retienen de menos. Ajustarlo evita la sorpresa del año que viene.",
+     "on_screen_text": "Si debiste: te retienen de menos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small IOU note. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo",
+     "narration": "El IRS tiene un estimador de retenciones gratis. Con tu último talón de pago, te dice qué poner en tu W-4.",
+     "on_screen_text": "Estimador de retenciones del IRS",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a laptop with a slider. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Y si te sube el cheque, pon esa diferencia en automático a tu ahorro antes de acostumbrarte a gastarla.",
+     "on_screen_text": "Lo que recuperas, ponlo en automático",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf setting a small automatic arrow into a jar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Después de declarar, revisa tu W-4. Un reembolso grande significa que te retuvieron de más todo el año; si debiste, te retuvieron de menos. El estimador de retenciones del IRS, con tu último talón, te dice qué poner. Si te sube el cheque, manda esa diferencia en automático a tu ahorro. Información general, no es asesoría fiscal.\n\nEl Presupuesto de 20 Minutos (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "w4",
+    "impuestos",
+    "reembolso",
+    "cheque",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Por qué ajustar tu W-4 después de declarar y cómo hacerlo.",
+   "thumbnail_text": "Ajusta tu W-4",
+   "sources": [
+    "https://www.irs.gov/es/individuals/tax-withholding-estimator",
+    "https://www.irs.gov/es/forms-pubs/about-form-w-4"
+   ],
+   "claims_to_verify": [
+    "$3,000 / 12 = $250 a month (arithmetic)",
+    "IRS Tax Withholding Estimator exists (Spanish version available; check)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m3c-primer-itin",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Seven steps to a first ITIN, from checking you need one to keeping the IRS letter.",
+  "script": {
+   "title": "Tu primer ITIN en 7 pasos",
+   "hook": "Guárdalo: tu primer ITIN en 7 pasos.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdalo para cuando prepares tu declaración.",
+     "on_screen_text": "Tu primer ITIN en 7 pasos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a passport and a form. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Es para quien tiene que declarar y no puede tener número de Seguro Social.",
+     "on_screen_text": "1. Confirma que lo necesitas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a question mark turning into a checkmark. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "En irs.gov, también en español. Nadie te puede cobrar por el formulario.",
+     "on_screen_text": "2. Descarga el W-7 gratis",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a simple form with a download arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Pasaporte vigente, o dos documentos de la lista del IRS, uno con foto.",
+     "on_screen_text": "3. Junta tus documentos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a passport and two cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "El W-7 normalmente va pegado a tu declaración en papel.",
+     "on_screen_text": "4. Prepara tu declaración",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two forms clipped together. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "O usa un agente certificado para no mandar tu pasaporte por correo.",
+     "on_screen_text": "5. Originales o copias certificadas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a desk with a person handing back a passport. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "La dirección viene en las instrucciones del formulario.",
+     "on_screen_text": "6. Manda todo a la dirección del W-7",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope going into a mailbox. No text, no logos, no real people."
+    },
+    {
+     "heading": "7",
+     "narration": "Tarda varias semanas. La carta con tu ITIN es un documento importante.",
+     "on_screen_text": "7. Espera la carta y guárdala",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a letter going into a folder. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Para dudas de inmigración, un abogado con licencia o un representante acreditado, nunca un notario.",
+     "on_screen_text": "Tu caso migratorio: con un abogado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a small shield. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Tu primer ITIN en 7 pasos: 1) confirma que lo necesitas, 2) descarga el W-7 gratis en irs.gov, 3) junta tus documentos (pasaporte vigente, o dos de la lista, uno con foto), 4) prepara tu declaración, 5) originales, copias certificadas o un agente certificado, 6) manda todo a la dirección del W-7, 7) guarda la carta con tu ITIN. Si te preocupa tu caso migratorio, habla con un abogado de inmigración con licencia o con un representante acreditado por el Departamento de Justicia, no con un notario. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "itin",
+    "impuestos",
+    "irs",
+    "w7",
+    "inmigrantes",
+    "dinerosimple"
+   ],
+   "description": "Los siete pasos para pedir tu primer ITIN.",
+   "thumbnail_text": "Tu primer ITIN",
+   "sources": [
+    "https://www.irs.gov/es/individuals/how-do-i-apply-for-an-itin",
+    "https://www.irs.gov/instructions/iw7"
+   ],
+   "claims_to_verify": [
+    "W-7 generally attached to a paper return; mailing address in W-7 instructions",
+    "Passport stand-alone; otherwise two documents, one with photo",
+    "Originals or certified copies from the issuing agency; CAAs can certify"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m3c-mitos-itin",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Six ITIN myths, answered carefully, including an honest note that IRS information-sharing rules changed in 2025 and to ask a licensed attorney.",
+  "script": {
+   "title": "6 mitos sobre el ITIN",
+   "hook": "Guárdalo y compártelo con quien tenga dudas sobre el ITIN.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Lo que se dice en el trabajo y en los grupos de WhatsApp, revisado.",
+     "on_screen_text": "6 mitos sobre el ITIN",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with a speech bubble full of question marks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mito 1",
+     "narration": "No. Es solo para impuestos. No autoriza a trabajar ni cambia tu estatus.",
+     "on_screen_text": "'El ITIN es un permiso de trabajo'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a briefcase with a small X. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mito 2",
+     "narration": "Muchos bancos y cooperativas sí abren cuentas con ITIN. No todos.",
+     "on_screen_text": "'Con ITIN no puedes tener banco'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bank with a checkmark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mito 3",
+     "narration": "Vence si no lo usas en una declaración tres años seguidos.",
+     "on_screen_text": "'El ITIN no vence'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with three crossed boxes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mito 4",
+     "narration": "El formulario es gratis. Si pagas, es por la ayuda, y solo con alguien de confianza.",
+     "on_screen_text": "'Hay que pagarle a alguien por el W-7'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a form with a free tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mito 5",
+     "narration": "Puedes empezar con una tarjeta asegurada que acepte ITIN y reporte a las agencias.",
+     "on_screen_text": "'Con ITIN no puedes tener crédito'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small card with a lock. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mito 6",
+     "narration": "Las reglas y los casos en la corte cambiaron desde 2025. Si te preocupa, consulta a un abogado antes de declarar.",
+     "on_screen_text": "'El IRS nunca comparte nada'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small scale and a law book. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Impuestos: VITA o un preparador con PTIN. Inmigración: un abogado con licencia.",
+     "on_screen_text": "Pregúntale a quien sabe",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf pointing to two simple signs. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "6 mitos sobre el ITIN: no es permiso de trabajo; muchos bancos sí aceptan ITIN; sí vence si no lo usas tres años seguidos; el W-7 es gratis; con ITIN puedes empezar tu crédito; y sobre si el IRS comparte información, las reglas y los casos en la corte cambiaron desde 2025, así que si te preocupa, consulta a un abogado de inmigración con licencia antes de declarar. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "itin",
+    "impuestos",
+    "inmigrantes",
+    "irs",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Seis mitos comunes sobre el ITIN, revisados.",
+   "thumbnail_text": "Mitos del ITIN",
+   "sources": [
+    "https://www.irs.gov/es/individuals/individual-taxpayer-identification-number",
+    "https://www.irs.gov/es/individuals/itin-expiration-faqs"
+   ],
+   "claims_to_verify": [
+    "HIGH RISK: IRS-ICE data-sharing MOU (April 2025) and related litigation; check the current status the week this posts and adjust or drop slide 7 with legal input",
+    "ITIN does not authorize work or change status",
+    "ITIN expiry after three consecutive unused years",
+    "Some secured cards accept ITIN (not named)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m3c-documentos-itin",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Which documents the IRS accepts for an ITIN and how to send them without losing your originals.",
+  "script": {
+   "title": "Qué documentos sirven para el ITIN",
+   "hook": "Guárdalo antes de mandar tu W-7.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdalo antes de mandar tu W-7.",
+     "on_screen_text": "Qué documentos sirven para el ITIN",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with a passport and a small stack of cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pasaporte",
+     "narration": "Es el único documento que prueba identidad y país a la vez.",
+     "on_screen_text": "Pasaporte vigente: basta solo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a passport with a checkmark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Sin pasaporte",
+     "narration": "De la lista del IRS. Uno tiene que tener foto, y uno tiene que mostrar tu país.",
+     "on_screen_text": "Sin pasaporte: dos documentos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two cards side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplos",
+     "narration": "Identificación nacional con foto, acta de nacimiento, matrícula consular, licencia de manejo. Revisa la lista completa.",
+     "on_screen_text": "Ejemplos de la lista",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. four small document icons. No text, no logos, no real people."
+    },
+    {
+     "heading": "Dependientes",
+     "narration": "Registros escolares o médicos, salvo algunas excepciones.",
+     "on_screen_text": "Dependientes: prueba de domicilio en EE. UU.",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a school report card. No text, no logos, no real people."
+    },
+    {
+     "heading": "Originales",
+     "narration": "Una fotocopia normal no sirve. La copia certificada la da quien emitió el documento.",
+     "on_screen_text": "Originales o copias certificadas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a document with a seal. No text, no logos, no real people."
+    },
+    {
+     "heading": "Sin mandarlos",
+     "narration": "Revisan tus originales y te los regresan ahí mismo.",
+     "on_screen_text": "Agente certificado u oficina del IRS",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a person handing back a passport at a desk. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "La lista y las reglas cambian. Revísalas antes de mandar.",
+     "on_screen_text": "Revisa la lista vigente en irs.gov",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf checking a list on a laptop. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Documentos para el ITIN: el pasaporte vigente basta solo. Sin pasaporte, dos documentos de la lista del IRS (uno con foto y uno que muestre tu país). Dependientes: prueba de domicilio en EE. UU. con registros escolares o médicos, salvo excepciones. Originales o copias certificadas, o un agente certificado para no mandarlos por correo. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "itin",
+    "w7",
+    "impuestos",
+    "documentos",
+    "irs",
+    "dinerosimple"
+   ],
+   "description": "Qué documentos acepta el IRS para el ITIN y cómo mandarlos.",
+   "thumbnail_text": "Documentos para el ITIN",
+   "sources": [
+    "https://www.irs.gov/instructions/iw7",
+    "https://www.irs.gov/es/individuals/how-do-i-apply-for-an-itin"
+   ],
+   "claims_to_verify": [
+    "13 acceptable documents; passport only stand-alone",
+    "Examples: national ID with photo, birth certificate (required for dependents under 18 without passport), foreign/US driver's license, matrícula consular (check it is on the current list)",
+    "Certified copies must come from the issuing agency"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m3c-estado-civil",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "The five filing statuses in plain Spanish and how to know yours.",
+  "script": {
+   "title": "Tu estado civil en la declaración, explicado",
+   "hook": "Guárdalo: las cinco opciones de estado civil en tu declaración.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Cuál te toca cambia lo que pagas.",
+     "on_screen_text": "Las 5 casillas de estado civil",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf pointing at five small boxes. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "No estabas casado el 31 de diciembre y no calificas para otra.",
+     "on_screen_text": "1. Soltero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a single figure. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Una sola declaración para los dos. Casi siempre la que menos paga.",
+     "on_screen_text": "2. Casados, declaración conjunta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two figures with one form. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Cada uno la suya. A veces conviene, pero pierdes algunos créditos.",
+     "on_screen_text": "3. Casados, por separado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two figures with two forms. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "No casado, pagas más de la mitad de la casa y vive contigo alguien que califica.",
+     "on_screen_text": "4. Cabeza de familia",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a house with one figure holding most coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Por dos años después de la muerte de tu pareja, si tienes un hijo dependiente.",
+     "on_screen_text": "5. Viudo con hijo dependiente",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a figure with a small child and a candle. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ojo",
+     "narration": "Cambiar el estado civil para subir el reembolso es fraude, y te toca a ti.",
+     "on_screen_text": "El que es verdad, no el que da más",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a magnifying glass over a checkbox. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "'¿Cuál es mi estado civil para efectos de la declaración?' en irs.gov.",
+     "on_screen_text": "Herramienta gratis del IRS",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf answering questions on a laptop. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Las 5 opciones de estado civil: soltero, casados conjunta, casados por separado, cabeza de familia (no casado, pagas más de la mitad de la casa y vive contigo alguien que califica) y viudo con hijo dependiente. Elige el que es verdad, no el que da más reembolso. El IRS tiene una herramienta gratis para saber cuál te toca. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "impuestos",
+    "declaraciondeimpuestos",
+    "irs",
+    "familia",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Las cinco opciones de estado civil en tu declaración de impuestos.",
+   "thumbnail_text": "Tu estado civil",
+   "sources": [
+    "https://www.irs.gov/es/help/ita/what-is-my-filing-status",
+    "https://www.irs.gov/publications/p501"
+   ],
+   "claims_to_verify": [
+    "Five filing statuses incl. qualifying surviving spouse (two years after year of death, with dependent child)",
+    "MFS loses some credits",
+    "HOH tests (simplified)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m3c-robo-de-identidad-fiscal",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Signs of tax identity theft and what to do, in order.",
+  "script": {
+   "title": "Robo de identidad fiscal: señales y qué hacer",
+   "hook": "Guárdalo: las señales de que alguien usó tu número para declarar.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Las señales y qué hacer, en orden.",
+     "on_screen_text": "¿Alguien declaró con tu número?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf looking at a laptop with a red mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Señal 1",
+     "narration": "Porque 'ya hay una con tu número'.",
+     "on_screen_text": "Tu declaración sale rechazada",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a laptop with a rejected stamp. No text, no logos, no real people."
+    },
+    {
+     "heading": "Señal 2",
+     "narration": "Sobre una declaración, un empleador o un ingreso que no reconoces.",
+     "on_screen_text": "Una carta del IRS que no esperabas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Señal 3",
+     "narration": "Alguien puede estar usando tu número para trabajar.",
+     "on_screen_text": "Un W-2 o 1099 de un trabajo que no tuviste",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a form with an unfamiliar logo. No text, no logos, no real people."
+    },
+    {
+     "heading": "Paso 1",
+     "narration": "Va con tu declaración en papel si te rechazaron la electrónica.",
+     "on_screen_text": "1. Formulario 14039",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two forms clipped together. No text, no logos, no real people."
+    },
+    {
+     "heading": "Paso 2",
+     "narration": "El IRS investiga y te escribe por carta.",
+     "on_screen_text": "2. Declara y paga a tiempo igual",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with April 15 circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Paso 3",
+     "narration": "Para que no vuelva a pasar los próximos años.",
+     "on_screen_text": "3. Pide tu PIN de protección",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small padlock with six dots. No text, no logos, no real people."
+    },
+    {
+     "heading": "Paso 4",
+     "narration": "Si también usaron tus datos para otras cosas.",
+     "on_screen_text": "4. Plan completo en robodeidentidad.gov",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a checklist on a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Ni te pide el PIN o pagos por texto o teléfono.",
+     "on_screen_text": "El IRS no te contacta por redes sociales",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf hanging up a phone. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Señales de robo de identidad fiscal: tu declaración sale rechazada porque ya hay una con tu número, una carta del IRS que no esperabas o un W-2 de un trabajo que no tuviste. Qué hacer: 1) formulario 14039 (con declaración en papel si te rechazaron), 2) declara y paga a tiempo igual, 3) pide tu PIN de protección, 4) plan completo en robodeidentidad.gov. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "robodeidentidad",
+    "impuestos",
+    "irs",
+    "estafas",
+    "itin",
+    "dinerosimple"
+   ],
+   "description": "Las señales del robo de identidad fiscal y qué hacer.",
+   "thumbnail_text": "Robo de identidad fiscal",
+   "sources": [
+    "https://www.irs.gov/es/identity-theft-fraud-scams/identity-theft-guide-for-individuals",
+    "https://www.robodeidentidad.gov/"
+   ],
+   "claims_to_verify": [
+    "Signs per IRS identity theft guide",
+    "Form 14039 with paper return when e-file rejected",
+    "IP PIN"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m3c-antes-de-firmar",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Eight things to check on your return before you sign it, whoever prepared it.",
+  "script": {
+   "title": "8 cosas que revisar antes de firmar tu declaración",
+   "hook": "Guárdalo para cuando te den tu declaración para firmar.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Aunque te la haya hecho otra persona, tú eres responsable.",
+     "on_screen_text": "8 cosas antes de firmar tu declaración",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a pen over a form. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Los de cada persona, igual que en sus tarjetas o cartas de ITIN.",
+     "on_screen_text": "1. Nombres y números",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a name line with a checkmark. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "El que es verdad.",
+     "on_screen_text": "2. Estado civil",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. five small boxes, one checked. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Solo los que viven contigo y califican.",
+     "on_screen_text": "3. Dependientes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two small figures with a checkmark. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Cada W-2 y cada 1099, también lo que ganaste por tu cuenta.",
+     "on_screen_text": "4. Todo tu ingreso",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. several forms in a stack. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "A tu nombre, con los números correctos.",
+     "on_screen_text": "5. La cuenta del reembolso",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bank with a name tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Pide que te los expliquen. Si no te convence, no firmes.",
+     "on_screen_text": "6. Créditos que no entiendes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a question mark next to a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "7",
+     "narration": "Si te cobró, tiene que firmar con su PTIN.",
+     "on_screen_text": "7. Firma y PTIN del preparador",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a signature line with a small badge. No text, no logos, no real people."
+    },
+    {
+     "heading": "8",
+     "narration": "Pídela ese mismo día.",
+     "on_screen_text": "8. Tu copia completa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a folder handed across a desk. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Por eso vale la pena leer cinco minutos.",
+     "on_screen_text": "Firmas tú, respondes tú",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf reading carefully with a cup of coffee. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Antes de firmar tu declaración revisa: 1) nombres y números, 2) estado civil, 3) dependientes, 4) todo tu ingreso, 5) la cuenta del reembolso a tu nombre, 6) créditos que no entiendes, 7) firma y PTIN del preparador, 8) tu copia completa. Firmas tú, respondes tú. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "impuestos",
+    "declaraciondeimpuestos",
+    "preparadordeimpuestos",
+    "irs",
+    "estafas",
+    "dinerosimple"
+   ],
+   "description": "Ocho cosas que revisar en tu declaración antes de firmarla.",
+   "thumbnail_text": "Antes de firmar",
+   "sources": [
+    "https://www.irs.gov/es/tax-professionals/choosing-a-tax-professional"
+   ],
+   "claims_to_verify": [
+    "Taxpayer is legally responsible for the return even if prepared by someone else",
+    "Paid preparers must sign with their PTIN and give a copy"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m3c-carta-del-irs",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "How to read an IRS letter in six steps, and where to get free help.",
+  "script": {
+   "title": "Cómo leer una carta del IRS",
+   "hook": "Guárdalo para el día que te llegue una carta del IRS.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdalo para el día que te llegue una.",
+     "on_screen_text": "Cómo leer una carta del IRS",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding an envelope calmly. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Arriba a la derecha: CP o LTR y un número.",
+     "on_screen_text": "1. El número de aviso",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a letter with the top right corner highlighted. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Para responder o pagar. Anótala en tu calendario.",
+     "on_screen_text": "2. La fecha límite",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with a circled date. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Muchas cartas son de un ingreso que faltó en tu declaración.",
+     "on_screen_text": "3. Qué cambió y por qué",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a form with one line highlighted. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Busca el número del aviso en irs.gov. Llama solo a números del sitio del IRS.",
+     "on_screen_text": "4. Confirma que es real",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a magnifying glass over a laptop. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Si estás de acuerdo, sigue las instrucciones. Si no, responde por escrito con pruebas.",
+     "on_screen_text": "5. De acuerdo o no",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two arrows, one with a check, one with a document. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "La carta, tu respuesta y la fecha en que la mandaste.",
+     "on_screen_text": "6. Guarda copia de todo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a folder with an envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ayuda",
+     "narration": "Y las clínicas para contribuyentes de bajos ingresos.",
+     "on_screen_text": "Ayuda gratis: Defensor del Contribuyente",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a friendly helper at a desk. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "El IRS no cobra así. Si te lo piden, es estafa.",
+     "on_screen_text": "Nunca pagos con tarjetas de regalo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a gift card with a red X. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Cómo leer una carta del IRS: 1) el número de aviso, arriba a la derecha, 2) la fecha límite, 3) qué cambió y por qué, 4) confirma en irs.gov que es real, 5) de acuerdo o no, responde antes de la fecha, 6) guarda copia de todo. Ayuda gratis: el Defensor del Contribuyente y las clínicas para contribuyentes de bajos ingresos. El IRS nunca cobra con tarjetas de regalo. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "irs",
+    "cartadelirs",
+    "impuestos",
+    "estafas",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Cómo leer y responder una carta del IRS.",
+   "thumbnail_text": "Carta del IRS",
+   "sources": [
+    "https://www.irs.gov/es/individuals/understanding-your-irs-notice-or-letter",
+    "https://www.taxpayeradvocate.irs.gov/es/",
+    "https://www.irs.gov/advocate/low-income-taxpayer-clinics"
+   ],
+   "claims_to_verify": [
+    "Notice number top right (CP/LTR)",
+    "Taxpayer Advocate Service and Low Income Taxpayer Clinics are free (LITCs may charge a small fee; check)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m3c-si-debes",
+  "format": "carousel",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "If you owe the IRS: the order of steps, with the penalty numbers.",
+  "script": {
+   "title": "Si debes al IRS: qué hacer, en orden",
+   "hook": "Guárdalo si este año te toca pagar.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdalo si este año te toca pagar.",
+     "on_screen_text": "Si debes al IRS: qué hacer, en orden",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf looking at a bill with a calm face. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "No declarar: 5% por mes. No pagar: 0.5% por mes.",
+     "on_screen_text": "1. Declara a tiempo, siempre",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two stacks of coins, one much taller. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Cada dólar antes baja intereses y multas.",
+     "on_screen_text": "2. Paga lo que puedas el 15 de abril",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. coins going into an envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Corto o mensual. Muchas personas lo arreglan en línea.",
+     "on_screen_text": "3. Plan de pagos en irs.gov",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with small monthly payments. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Direct Pay desde tu cuenta, sin costo.",
+     "on_screen_text": "4. Paga en irs.gov, no a terceros",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a laptop with a bank icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "El IRS tiene opciones para dificultades económicas.",
+     "on_screen_text": "5. Si no puedes nada, pregunta opciones",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a lifebuoy. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Ajusta tu W-4, o aparta una parte de cada pago si trabajas por tu cuenta.",
+     "on_screen_text": "6. Que no se repita",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small jar receiving coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cuidado",
+     "narration": "Muchas cobran caro por lo que tú puedes pedir gratis.",
+     "on_screen_text": "Cuidado con 'arreglamos tu deuda con el IRS'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a megaphone with a red X. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Lo que más cuesta es esconderse.",
+     "on_screen_text": "Declarar a tiempo te deja opciones",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf walking through an open door. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si debes al IRS: 1) declara a tiempo (no declarar: 5% por mes; no pagar: 0.5% por mes), 2) paga lo que puedas el 15 de abril, 3) pide un plan de pagos en irs.gov, 4) paga en irs.gov (Direct Pay, sin costo), 5) si no puedes nada, pregunta por opciones, 6) ajusta tu W-4. Cuidado con las empresas que cobran caro por 'arreglar' tu deuda. Información general, no es asesoría fiscal.\n\nEl Presupuesto de 20 Minutos (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "impuestos",
+    "irs",
+    "deudas",
+    "plandepagos",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Qué hacer, en orden, si debes impuestos al IRS.",
+   "thumbnail_text": "Si debes al IRS",
+   "sources": [
+    "https://www.irs.gov/es/payments/payment-plans-installment-agreements",
+    "https://www.irs.gov/es/payments/direct-pay",
+    "https://consumer.ftc.gov/articles/tax-debt-relief-scams"
+   ],
+   "claims_to_verify": [
+    "Penalty rates 5%/month and 0.5%/month (25% caps)",
+    "Direct Pay is free",
+    "IRS hardship options (currently not collectible, offers in compromise)",
+    "FTC warns about tax debt relief scams (check URL)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "l-itin-guia",
+  "format": "long",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Complete Spanish guide to the ITIN: what it is and isn't, who needs one, first application, documents, renewal, filing with it, credits, banking and credit, privacy questions (attorney), scams.",
+  "script": {
+   "title": "ITIN y tus impuestos: la guía completa en español",
+   "hook": "Millones de personas en Estados Unidos declaran impuestos con ITIN. Y muchas pagan de más por no saber cómo funciona.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Millones de personas en Estados Unidos declaran impuestos con ITIN. Y muchas pagan de más, o se quedan sin su reembolso, por no saber cómo funciona. En este video vemos qué es el ITIN y qué no es, quién lo necesita, cómo pedir el primero, qué documentos sirven, cuándo vence, cómo declarar con él, qué pasa con los créditos, cómo usarlo para tener banco y crédito, y las estafas que hay que evitar. Es información general: para tu caso fiscal, un preparador de confianza; para tu caso migratorio, un abogado con licencia.",
+     "on_screen_text": "ITIN y tus impuestos: la guía completa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding an ID-style card next to a tax form. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué es",
+     "narration": "El ITIN es el Número de Identificación Personal del Contribuyente. Lo da el IRS a personas que tienen que cumplir con sus impuestos y no pueden tener número de Seguro Social. Tiene nueve dígitos y empieza con nueve. Sirve para una cosa: tus impuestos federales. No es permiso de trabajo, no cambia tu estatus migratorio y no te da beneficios del Seguro Social.",
+     "on_screen_text": "Un número del IRS, solo para impuestos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a tax form with a nine-digit number box starting with 9. No text, no logos, no real people."
+    },
+    {
+     "heading": "Quién lo necesita",
+     "narration": "Lo necesitas si tienes que declarar impuestos o si vas en la declaración de alguien más, como pareja o dependiente, y no puedes tener número de Seguro Social. Si ganaste por encima de cierto monto tienes la obligación de declarar, y si trabajas por tu cuenta ese monto es mucho más bajo. Y aunque no estés obligado, si te retuvieron impuestos, declarar es la única forma de recuperar lo que te quitaron de más.",
+     "on_screen_text": "Si tienes que declarar y no tienes Seguro Social",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small family of figures next to a form. No text, no logos, no real people."
+    },
+    {
+     "heading": "El primero",
+     "narration": "Para pedir tu primer ITIN usas el formulario W-7, que es gratis en irs.gov y está en español. Normalmente va pegado a tu declaración de impuestos en papel y se manda por correo a la dirección de las instrucciones. Por eso, la primera vez, no puedes declarar por internet. Tarda varias semanas, más en temporada de impuestos, así que empieza temprano.",
+     "on_screen_text": "W-7 con tu declaración, en papel",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope with a form attached to a return. No text, no logos, no real people."
+    },
+    {
+     "heading": "Documentos",
+     "narration": "Los documentos: tu pasaporte vigente es el único que basta solo. Si no lo tienes, necesitas dos de la lista del IRS, uno con foto y uno que muestre tu país, como una identificación nacional y un acta de nacimiento. Tienen que ser originales o copias certificadas por quien los emitió; una fotocopia normal no sirve. Si no quieres mandar tu pasaporte por correo, un agente certificado o algunas oficinas del IRS revisan tus originales y te los regresan ahí mismo. Para dependientes, el IRS pide además pruebas de que viven en Estados Unidos, como registros escolares o médicos, con algunas excepciones.",
+     "on_screen_text": "Pasaporte, o dos documentos de la lista",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a passport, two ID cards and a document with a seal. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cuándo vence",
+     "narration": "El ITIN vence si no lo usaste en una declaración federal en tres años seguidos. Si declaras con uno vencido, el IRS procesa la declaración, pero tu reembolso se puede atrasar y algunos créditos no se aplican hasta que lo renueves. Se renueva con el mismo formulario W-7. Revisa el de cada persona de tu declaración, también el de tu pareja y tus hijos.",
+     "on_screen_text": "Vence si no lo usas 3 años seguidos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with three crossed-out years. No text, no logos, no real people."
+    },
+    {
+     "heading": "Declarar con ITIN",
+     "narration": "Declarar con ITIN es igual que declarar con Seguro Social: los mismos formularios, el mismo estado civil, el mismo 15 de abril. Puedes usar VITA, que es gratis para ingresos moderados, un programa que acepte ITIN o un preparador con número PTIN que firme tu declaración. Pide tu reembolso por depósito directo a una cuenta a tu nombre, nunca a la del preparador.",
+     "on_screen_text": "Mismas reglas, mismos formularios",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a form, a laptop and a volunteer at a desk. No text, no logos, no real people."
+    },
+    {
+     "heading": "Los créditos",
+     "narration": "Ahora, los créditos, que es donde más confusión hay. Algunos créditos piden que tú, tu pareja o tus hijos tengan número de Seguro Social, como el crédito por ingreso del trabajo, y las reglas del crédito por hijos cambiaron en 2025. Otros sí se pueden pedir con ITIN, y algunos estados, como California, tienen créditos propios que aceptan ITIN. Un preparador certificado te dice para cuáles calificas. Si alguien te promete un reembolso enorme con créditos que no entiendes, desconfía: la responsabilidad es tuya.",
+     "on_screen_text": "Algunos créditos piden Seguro Social",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a few coins, some with a lock and some with a checkmark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Banco y crédito",
+     "narration": "Fuera de los impuestos, el ITIN te abre puertas. Muchos bancos y cooperativas de crédito abren cuentas con ITIN, y con una cuenta tu reembolso llega más rápido y no pagas para cambiar cheques: con un cheque de $800 y una cuota de 3%, son $24 cada vez, casi $600 al año si te pagan cada quincena. También puedes empezar tu historial de crédito con una tarjeta asegurada que acepte ITIN y reporte a las tres agencias. Y cuidado con quien te vende un 'número de privacidad de crédito': usarlo puede ser un delito.",
+     "on_screen_text": "Con ITIN: cuenta de banco y crédito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bank door opening and a small card with a lock. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Cambiar cheques te cuesta al año",
+      "labels": [
+       "Un cheque",
+       "Un mes",
+       "Un año"
+      ],
+      "values": [
+       24,
+       48,
+       576
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Ejemplo: cheque de $800 cada quincena, cuota de 3%"
+     }
+    },
+    {
+     "heading": "Privacidad",
+     "narration": "Mucha gente pregunta qué pasa con sus datos cuando declara. Esa respuesta depende de tu caso, y no te la puede dar un video. Si te preocupa, antes de declarar pregúntale a un abogado de inmigración con licencia o a un representante acreditado por el Departamento de Justicia, nunca a un notario. Hay consultas gratis o de bajo costo: busca la lista de proveedores gratuitos en justice.gov/eoir.",
+     "on_screen_text": "¿Y la información? Pregúntale a un abogado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small scale next to a law book. No text, no logos, no real people."
+    },
+    {
+     "heading": "Estafas",
+     "narration": "Las estafas de la temporada: notarios que cobran por el W-7 o prometen papeles; preparadores que no firman, cobran un porcentaje de tu reembolso o lo mandan a su cuenta; y llamadas de un falso IRS que amenaza con la policía o con inmigración. El IRS normalmente te escribe por carta, y nunca te pide pagar con tarjetas de regalo. Pide tu PIN de protección de identidad para que nadie declare con tu número.",
+     "on_screen_text": "Cuidado: notarios, preparadores fantasma, llamadas falsas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a hook and a red X next to a sealed letter. No text, no logos, no real people."
+    },
+    {
+     "heading": "Resumen",
+     "narration": "Resumen. El ITIN es solo para impuestos. El primero se pide con el W-7 junto con tu declaración en papel. Tu pasaporte basta solo. Vence si no lo usas tres años seguidos. Declaras igual que con Seguro Social, con el reembolso a tu cuenta. Algunos créditos piden Seguro Social; pregunta a un preparador certificado. Y para tu caso migratorio, un abogado con licencia. Esto es información general, no asesoría fiscal ni legal.",
+     "on_screen_text": "Solo impuestos · W-7 · 3 años · tu cuenta · abogado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf filing a neat folder with a calm smile. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "ITIN y tus impuestos, la guía completa:\n1. Qué es y qué no es\n2. Quién lo necesita\n3. Tu primer ITIN: W-7 con tu declaración en papel\n4. Documentos: pasaporte, o dos de la lista\n5. Vence si no lo usas 3 años seguidos\n6. Declarar con ITIN y el reembolso a TU cuenta\n7. Los créditos que piden Seguro Social\n8. Banco y crédito con ITIN\n9. Tu información: pregúntale a un abogado\n10. Las estafas de la temporada\n\nSi te preocupa tu caso migratorio, habla con un abogado de inmigración con licencia o con un representante acreditado por el Departamento de Justicia, no con un notario. Información general, no es asesoría fiscal ni legal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "itin",
+    "impuestos",
+    "irs",
+    "w7",
+    "inmigrantes",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Todo sobre el ITIN y tus impuestos, en español: qué es, quién lo necesita, cómo pedir el primero con el W-7, qué documentos sirven, cuándo vence, cómo declarar con él, los créditos, banco y crédito con ITIN, preguntas sobre tu información y las estafas de la temporada.\n\nCapítulos (estimados; ajústalos después de grabar)\n0:00 ITIN: la guía completa\n0:50 Qué es\n1:35 Quién lo necesita\n2:25 Tu primer ITIN\n3:15 Documentos\n4:20 Cuándo vence\n5:05 Declarar con ITIN\n5:55 Los créditos\n6:50 Banco y crédito\n7:40 Tu información\n8:35 Estafas\n9:25 Resumen\n\nInformación general, no es asesoría fiscal ni legal. Para tu caso migratorio, consulta a un abogado de inmigración con licencia o a un representante acreditado por el Departamento de Justicia.\n\nFuentes: irs.gov (ITIN, W-7, vencimiento, PIN de protección), ftb.ca.gov (CalEITC).\n\nEnlaces:\nDónde hacer tus impuestos: gratis, con programa o con preparador: https://dinerosimple.netlify.app/blog/donde-hacer-tus-impuestos/?utm_source=youtube&utm_medium=social&utm_campaign=l-itin-guia\nCuenta de banco y tarjeta con ITIN: https://dinerosimple.netlify.app/blog/cuenta-y-tarjeta-con-itin/?utm_source=youtube&utm_medium=social&utm_campaign=l-itin-guia\nGuía gratis: Tu dinero en orden en 7 días: https://dinerosimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=l-itin-guia",
+   "thumbnail_text": "ITIN: la guía completa",
+   "sources": [
+    "https://www.irs.gov/es/individuals/individual-taxpayer-identification-number",
+    "https://www.irs.gov/instructions/iw7",
+    "https://www.irs.gov/es/individuals/itin-expiration-faqs",
+    "https://www.irs.gov/es/identity-theft-fraud-scams/get-an-identity-protection-pin",
+    "https://www.ftb.ca.gov/file/personal/credits/california-earned-income-tax-credit.html",
+    "https://www.justice.gov/eoir/recognition-and-accreditation-roster-reports"
+   ],
+   "claims_to_verify": [
+    "HIGH RISK: IRS-DHS/ICE data-sharing agreement (April 2025) and litigation status; get legal review of the 'Privacidad' segment the week it posts",
+    "HIGH RISK: OBBBA (2025) SSN requirements for the Child Tax Credit; segment only says rules changed, confirm",
+    "EITC requires SSNs; ITIN filers cannot claim it",
+    "CalEITC accepts ITIN filers",
+    "ITIN: 9 digits starting with 9; W-7 with paper return; passport stand-alone; expiry after 3 unused years",
+    "Self-employment filing threshold $400 net",
+    "Chart 'Cambiar cheques te cuesta al año': Un cheque 24, Un mes 48, Un año 576 (Ejemplo: cheque de $800 cada quincena, cuota de 3%)"
+   ],
+   "title_variants": [],
+   "hook_variants": [],
+   "original_element": "Graba la pantalla de la página del formulario W-7 en irs.gov en español, mostrando dónde se descarga"
+  },
+  "phase": 2
+ },
+ {
+  "key": "l-si-debes-o-carta",
+  "format": "long",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "What to do if you owe the IRS or get a letter: file on time, penalties, payment plans, reading notices, identity theft, IP PIN, adjusting the W-4, and avoiding tax-relief scams.",
+  "script": {
+   "title": "Si debes al IRS o te llega una carta: qué hacer, paso a paso",
+   "hook": "Deberle al IRS da miedo. Pero esconderse es lo que de verdad sale caro.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Deberle al IRS da miedo, y una carta del IRS en el buzón da todavía más. Pero casi siempre esto se arregla, y lo que de verdad sale caro es esconderse. En este video vemos qué hacer si debes y no te alcanza, cómo funcionan las multas, cómo pedir un plan de pagos, cómo leer una carta del IRS, qué hacer si alguien declaró con tu número, cómo evitar que se repita y de qué estafas cuidarte.",
+     "on_screen_text": "Si debes al IRS o te llega una carta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding an envelope next to a mailbox. No text, no logos, no real people."
+    },
+    {
+     "heading": "Declara a tiempo",
+     "narration": "Regla número uno: aunque no puedas pagar, declara a tiempo. La multa por no declarar es de 5% de lo que debes por cada mes de atraso, hasta 25%. La de no pagar es de medio por ciento al mes. O sea, no declarar cuesta unas diez veces más que no pagar. Si debes $1,000 y declaras cuatro meses tarde, la multa por no declarar ya va en unos $200.",
+     "on_screen_text": "Debes: declara a tiempo igual",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two stacks of coins, one ten times taller. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Multa por 4 meses de atraso",
+      "labels": [
+       "No declarar",
+       "Declarar y no pagar"
+      ],
+      "values": [
+       200,
+       20
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Ejemplo: debes $1,000; 5% al mes contra 0.5% al mes, sin intereses"
+     }
+    },
+    {
+     "heading": "Paga lo que puedas",
+     "narration": "Regla dos: paga lo que puedas el 15 de abril. Los intereses y la multa se calculan sobre lo que queda, así que cada dólar que pagas antes baja el total. Paga directo en irs.gov con Direct Pay desde tu cuenta, que no cuesta nada. Con tarjeta se puede, pero el procesador cobra una comisión, y si la tarjeta cobra intereses altos, tal vez te conviene más un plan con el IRS.",
+     "on_screen_text": "Paga lo que puedas el 15 de abril",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. coins going into an envelope marked with a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Plan de pagos",
+     "narration": "Regla tres: para lo que no puedas pagar, pide un plan de pagos. Hay planes cortos, de unos meses, y planes mensuales más largos. Muchas personas lo arreglan en línea en irs.gov en unos minutos, sin llamar. Mientras pagas, sigue corriendo un poco de interés, pero la multa por no pagar baja. Lo importante es cumplir el plan y declarar a tiempo los años que siguen.",
+     "on_screen_text": "Plan de pagos: en línea, en minutos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with small monthly payment marks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Si no puedes nada",
+     "narration": "Y si de verdad no puedes pagar nada, porque apenas te alcanza para la renta y la comida, el IRS tiene opciones para dificultades económicas, como pausar el cobro mientras tu situación mejora. El Servicio del Defensor del Contribuyente y las clínicas para contribuyentes de bajos ingresos te pueden ayudar gratis o a muy bajo costo.",
+     "on_screen_text": "Si no puedes pagar nada: hay opciones",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small lifebuoy next to a form. No text, no logos, no real people."
+    },
+    {
+     "heading": "La carta",
+     "narration": "Ahora, las cartas. Arriba a la derecha viene el número de aviso, como CP2000, y la fecha límite. Muchas cartas son porque un W-2 o un 1099 no estaba en tu declaración. Busca el número del aviso en irs.gov para saber qué significa y confirmar que es real. Si estás de acuerdo, sigue las instrucciones. Si no, responde por escrito con tus pruebas antes de la fecha, y guarda copia de todo. No responder es lo que más cuesta.",
+     "on_screen_text": "Lee el aviso: número, fecha, qué cambió",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a letter with the top right corner highlighted. No text, no logos, no real people."
+    },
+    {
+     "heading": "Robo de identidad",
+     "narration": "Si tu declaración sale rechazada porque ya hay una con tu número, o te llega una carta por un trabajo que no tuviste, puede ser robo de identidad. Revisa primero que no sea un error de números. Si es robo, llena el formulario 14039 y mándalo con tu declaración en papel, y sigue declarando y pagando a tiempo. Después pide tu PIN de protección de identidad, que funciona con Seguro Social o con ITIN.",
+     "on_screen_text": "¿Alguien declaró con tu número?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a padlock with six dots over a form. No text, no logos, no real people."
+    },
+    {
+     "heading": "Que no se repita",
+     "narration": "Para que no te vuelva a pasar: si trabajas para una empresa, usa el estimador de retenciones del IRS y ajusta tu W-4 para que te retengan un poco más. Si trabajas por tu cuenta, aparta una parte de cada pago en una cuenta separada y considera pagos estimados cada trimestre. Lo que apartas no es tu dinero: es el del IRS, esperando.",
+     "on_screen_text": "Ajusta tu W-4 o aparta cada pago",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a jar labeled with a small tax icon receiving coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Estafas",
+     "narration": "Y las estafas. El IRS no te llama para amenazarte con la policía o con inmigración, y nunca te pide pagar con tarjetas de regalo, criptomonedas o transferencias a una persona. Cuidado también con las empresas que anuncian que 'arreglan tu deuda con el IRS por centavos': muchas cobran miles por adelantado por trámites que tú puedes hacer gratis en irs.gov.",
+     "on_screen_text": "Cuidado con 'arreglamos tu deuda'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a megaphone with a red X and a phone with a hook. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo: Rosa",
+     "narration": "Un ejemplo inventado de principio a fin. Rosa prepara su declaración en marzo y ve que debe dos mil dólares. No los tiene. No se esconde: declara antes del 15 de abril, así evita la multa más grande, la de no declarar. Ese día paga quinientos, lo que puede. Para los otros mil quinientos pide un plan de pagos en línea: unos ciento veinticinco dólares al mes por doce meses, más intereses y una multa pequeña mientras paga. Pone el pago en automático desde su cuenta para no fallar ningún mes.",
+     "on_screen_text": "Ejemplo inventado: Rosa debe $2,000 en abril",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with April 15 circled and a payment plan screen. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo: la carta",
+     "narration": "En agosto le llega una carta CP2000: dice que no reportó un 1099 de un trabajo de fin de semana. Rosa busca el 1099 en sus papeles y ve que es cierto. Firma que está de acuerdo antes de la fecha límite y suma esa cantidad a su plan. Si no hubiera sido suyo, habría mandado su explicación con copias. Para el año siguiente, aparta una parte de cada pago de ese trabajo extra en una cuenta aparte, y ajusta su W-4 en su trabajo principal.",
+     "on_screen_text": "La carta: compara, responde a tiempo, guarda copia",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a CP2000-style letter, generic, with a deadline highlighted. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo: qué copiar",
+     "narration": "Lo que puedes copiar de Rosa: declarar a tiempo aunque no puedas pagar todo, pagar lo que puedas ese día, pedir el plan de pagos y ponerlo en automático, y contestar cualquier carta antes de la fecha límite.",
+     "on_screen_text": "Copia esto: declarar, pagar algo, plan, responder",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a four-step checklist. No text, no logos, no real people."
+    },
+    {
+     "heading": "Resumen",
+     "narration": "Resumen. Declara a tiempo aunque no puedas pagar. Paga lo que puedas el 15 de abril. Pide un plan de pagos en irs.gov. Si no puedes pagar nada, pregunta por las opciones para dificultades. Lee cada carta y responde antes de la fecha. Si alguien usó tu número, formulario 14039 y PIN de protección. Y ajusta tu W-4 para que no se repita. Esto es información general, no asesoría fiscal.",
+     "on_screen_text": "Declara, paga lo que puedas, plan, responde",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf walking through an open door into light. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si debes al IRS o te llega una carta:\n1. Declara a tiempo aunque no puedas pagar (no declarar cuesta 10 veces más)\n2. Paga lo que puedas el 15 de abril\n3. Pide un plan de pagos en irs.gov\n4. Si no puedes pagar nada, hay opciones\n5. Lee la carta: número de aviso, fecha, qué cambió\n6. Si alguien usó tu número: formulario 14039 y PIN de protección\n7. Ajusta tu W-4 para que no se repita\n8. Cuidado con 'arreglamos tu deuda con el IRS'\n\nInformación general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "irs",
+    "impuestos",
+    "deudas",
+    "cartadelirs",
+    "plandepagos",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Qué hacer si debes impuestos o te llega una carta del IRS: declarar a tiempo, las multas, el plan de pagos, cómo leer un aviso, el robo de identidad fiscal, cómo evitar que se repita y las estafas de 'alivio de deudas'.\n\nCapítulos (estimados; ajústalos después de grabar)\n0:00 Si debes al IRS o te llega una carta\n0:45 Declara a tiempo\n1:40 Paga lo que puedas\n2:35 Plan de pagos\n3:25 Si no puedes pagar nada\n4:10 La carta\n5:10 Robo de identidad\n6:05 Que no se repita\n6:55 Estafas\n7:45 Resumen\n\nInformación general, no es asesoría fiscal.\n\nFuentes: irs.gov (multas, planes de pago, Direct Pay, avisos, robo de identidad, PIN de protección, estimador de retenciones), taxpayeradvocate.irs.gov, consumer.ftc.gov.\n\nEnlaces (los productos de pago son nuestros):\nEl Presupuesto de 20 Minutos ($12): https://dinerosimple.netlify.app/products/el-presupuesto-de-20-minutos/?utm_source=youtube&utm_medium=social&utm_campaign=l-si-debes-o-carta\nDónde hacer tus impuestos: gratis, con programa o con preparador: https://dinerosimple.netlify.app/blog/donde-hacer-tus-impuestos/?utm_source=youtube&utm_medium=social&utm_campaign=l-si-debes-o-carta\nGuía gratis: Tu dinero en orden en 7 días: https://dinerosimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=l-si-debes-o-carta",
+   "thumbnail_text": "Si debes al IRS",
+   "sources": [
+    "https://www.irs.gov/payments/failure-to-file-penalty",
+    "https://www.irs.gov/payments/failure-to-pay-penalty",
+    "https://www.irs.gov/es/payments/payment-plans-installment-agreements",
+    "https://www.irs.gov/es/payments/direct-pay",
+    "https://www.irs.gov/es/individuals/understanding-your-irs-notice-or-letter",
+    "https://www.irs.gov/es/identity-theft-fraud-scams/identity-theft-guide-for-individuals",
+    "https://www.taxpayeradvocate.irs.gov/es/",
+    "https://www.irs.gov/es/individuals/tax-withholding-estimator"
+   ],
+   "claims_to_verify": [
+    "Failure-to-file 5%/month up to 25%; failure-to-pay 0.5%/month up to 25% (reduced to 0.25% during an installment agreement)",
+    "$1,000 owed, 4 months late: about $200 failure-to-file (arithmetic, ignores the FTP offset)",
+    "Card payments go through processors that charge a fee",
+    "Hardship: currently not collectible status",
+    "Form 14039 with paper return; IP PIN for SSN or ITIN holders",
+    "Quarterly estimated payments for self-employed",
+    "Chart 'Multa por 4 meses de atraso': No declarar 200, Declarar y no pagar 20 (Ejemplo: debes $1,000; 5% al mes contra 0.5% al mes, sin intereses)"
+   ],
+   "title_variants": [],
+   "hook_variants": [],
+   "original_element": "Graba la pantalla de la página de planes de pago de irs.gov en español (sin iniciar sesión)"
+  },
+  "phase": 2
+ }
+]

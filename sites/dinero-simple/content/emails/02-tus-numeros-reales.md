@@ -1,0 +1,33 @@
+---
+order: 2
+day: 1
+subject: El número que casi todos calculan mal
+preheader: No es tu salario. Así encuentras el real en 5 minutos.
+goal: Empujar el Día 1 y el Día 2; crear el hábito de abrir el PDF
+---
+Hola,
+
+Pregunta rápida: ¿ya hiciste el Día 1?
+
+Si no, aquí va la versión de un minuto, porque es el número del que depende todo lo demás.
+
+Casi todos planean su dinero con su **salario**. Pero tu salario no lo puedes gastar. Lo que puedes gastar es lo que cae en tu cuenta después de impuestos, aportes al retiro, seguro médico y todo lo demás que tu talón de pago te quita sin hacer ruido.
+
+Para encontrar tu sueldo neto real del mes:
+
+- Si te pagan cada dos semanas: un cheque × 26 ÷ 12
+- Si te pagan cada semana: un cheque × 52 ÷ 12
+- Si te pagan por quincena (el 15 y el 30): un cheque × 2
+- Si tus ingresos cambian: usa tu mes normal más bajo de los últimos seis
+
+Fíjate que cada dos semanas es ×26÷12, no ×2. Así recibes 26 cheques al año, no 24. Dos meses al año te llega un tercer cheque, y si planeas con "dos al mes", esos cheques extra desaparecen sin que te des cuenta.
+
+**Hoy toca el Día 2: la cacería de suscripciones.** Busca en los estados de cuenta de tu banco y tu tarjeta las palabras "monthly", "renewal", "subscription", "Apple", "Google" y "PayPal" (casi siempre salen en inglés). Luego hazle una sola pregunta a cada cargo:
+
+> Si esto no estuviera activo, ¿me suscribiría hoy a este precio?
+
+Si la respuesta es no, cancélalo en ese momento. Paso a paso aquí: [Cómo encontrar y cancelar suscripciones olvidadas](/blog/cancelar-suscripciones/).
+
+Mañana: tres alertas gratis del banco que hacen mucho menos probables los sobregiros y los cargos por pago tarde.
+
+El equipo de Dinero Simple

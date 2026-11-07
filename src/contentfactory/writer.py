@@ -6,6 +6,7 @@ draft plus a list of claims the human must check, not a finished product.
 """
 from __future__ import annotations
 
+from . import i18n
 from .config import BrandProfile
 from .hooks import prompt_block as hook_patterns
 from .llm import LLM
@@ -42,7 +43,12 @@ Never say: {', '.join(brand.voice.banned_phrases) or 'n/a'}
 Visual style for illustrations: {brand.visual.image_style}{'; recurring mascot: ' + brand.visual.mascot if brand.visual.mascot else ''}
 Default CTA: {brand.cta}
 Affiliate offers:
-{aff}"""
+{aff}{_language_line(brand)}"""
+
+
+def _language_line(brand: BrandProfile) -> str:
+    rule = i18n.writing_instruction(brand)
+    return f"\nLanguage: {rule}" if rule else ""
 
 
 SYSTEM = (

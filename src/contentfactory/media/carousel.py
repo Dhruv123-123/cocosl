@@ -12,6 +12,7 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageOps
 
+from .. import i18n
 from . import fonts
 from .util import RGB, SLIDE_SIZE, Palette, mix, save_png_and_jpeg
 
@@ -32,6 +33,7 @@ class SlideKit:
     watermark: str
     brand_name: str
     cta: str
+    language: str = "en"
 
     def font(self, weight: str) -> str:
         return fonts.font_path(self.family, weight)
@@ -122,7 +124,7 @@ def hook_slide(kit: SlideKit, art: Image.Image, text: SlideText, counter: str, s
              anchor="right", alpha=190)
     if swipe:
         font = fonts.load(kit.font("bold"), 30)
-        label = "Swipe"
+        label = i18n.t(kit.language, "swipe")
         tw = int(font.getlength(label))
         x1, yy = w - M, h - 64
         d.text((x1 - 54 - tw, yy), label, font=font, fill=(*accent, 255), anchor="ls")
@@ -168,10 +170,10 @@ def cta_slide(kit: SlideKit, art: Image.Image, text: SlideText, counter: str) ->
     d = ImageDraw.Draw(img)
     y = M + 40
     bookmark_icon(d, M, y, 54, accent)
-    d.text((M + 62, y + 27), "SAVE THIS", font=fonts.load(kit.font("extrabold"), 34), fill=(*accent, 255),
+    d.text((M + 62, y + 27), i18n.t(kit.language, "save_this"), font=fonts.load(kit.font("extrabold"), 34), fill=(*accent, 255),
            anchor="lm")
     y += 110
-    cta_block = fonts.fit(kit.cta or "Follow for more.", kit.font("bold"), w - 2 * M - 80, 160, 38, 28,
+    cta_block = fonts.fit(kit.cta or i18n.t(kit.language, "follow_for_more"), kit.font("bold"), w - 2 * M - 80, 160, 38, 28,
                           leading=1.25, max_lines=3)
     cta_h = cta_block.height + 64
     cta_top = h - 130 - cta_h

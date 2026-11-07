@@ -132,6 +132,7 @@ class YouTubePublisher(HttpPublisher):
                    "categoryId": self.settings.env("YT_CATEGORY_ID", "22")}
         if req.brand.language:
             snippet["defaultLanguage"] = req.brand.language
+            snippet["defaultAudioLanguage"] = req.brand.language
         return {"snippet": snippet, "status": status}
 
     def check_video(self, req: PublishRequest) -> dict | None:

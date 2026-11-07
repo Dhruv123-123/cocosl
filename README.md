@@ -42,6 +42,9 @@ only you can do: payouts, accounts, API keys).
 | Funnel | Link-in-bio page, double opt-in email capture, weekly digest, Stripe/Gumroad sale webhooks | `funnel/` |
 | Business | UGC clients CRM, packages & quotes, ad scripts (no fake testimonials), pitch drafts, invoices (PDF), digital products (PDF), affiliate link tracking, P&L, goal tracking | `business/` |
 | Ops | CLI, Docker Compose (app, worker, renderer, media host, optional Kokoro voice), multi-brand worker on per-brand clocks, render queue, `factory status` / `/api/status` health, n8n workflow, CI | `cli.py`, `worker.py`, `renderq.py`, `health.py`, `integrations/` |
+| Languages | Per-brand `language`/`region` (Spanish built in): writer and idea prompts, on-slide labels, bios, banner, highlights, TTS voice, trend locale, Spanish guardrail patterns, and a native-speaker sign-off (`factory review-gate pass <id> native_review`) | `i18n.py` |
+| Hand-off packs | `factory handoff-pack content.json --brand X --out DIR`: slides, thumbnails and caption.txt files with facts to check | `launchpack.py` |
+| Spanish brand | Dinero Simple: content plans in `launch/dinero-simple/` (pending native-speaker review) and its own static site with free calculators and a glossary (`sites/dinero-simple/build.py`) | `launch/dinero-simple/`, `sites/dinero-simple/` |
 
 Ready-made launch material lives in `launch/`: two weeks of scripts for the example finance brand,
 a sellable product (guide PDF + spreadsheet), the ad studio's website, rate card, pitch templates,

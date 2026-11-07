@@ -1,0 +1,101 @@
+# Dinero Simple: the Spanish-language sister brand of Money Made Simple, for US Hispanic audiences.
+# All audience-facing copy is Spanish (language: es). Operator notes, visual prompts and fact-check lists stay
+# in English. Every post carries a language_review warning until a fluent speaker signs it off:
+#   factory review-language <post id> --by "Name"
+name: Dinero Simple
+language: es
+region: US
+niche: finanzas personales prácticas para latinos en Estados Unidos de veintitantos y treinta y tantos
+audience: jóvenes latinos en EE. UU. que trabajan, estudian o mandan dinero a su familia y sienten que van atrasados con su dinero
+promise: un paso con tu dinero que puedes dar esta semana, explicado en menos de un minuto
+pillars:
+  - presupuesto que sí funciona
+  - invertir por primera vez (fondos índice, cuentas de retiro)
+  - puntaje de crédito y salir de deudas
+  - apps y herramientas de dinero, comparadas sin rodeos
+highlights: [Presupuesto, Invertir, Crédito, Apps, Empieza aquí]
+formats: [short, carousel, long, mid, image]
+seed_topics:
+  - cuenta de ahorro de alto rendimiento
+  - roth ira en español
+  - puntaje de crédito
+  - cómo hacer un presupuesto
+  - fondos indexados
+  - cómo salir de deudas
+  - 401k explicado
+  - congelar crédito
+avoid_topics:
+  - cripto
+  - acciones individuales
+  - hacerte rico rápido
+  - tandas con desconocidos
+subreddits: [personalfinance, povertyfinance]   # English-language signals; the writer still writes in Spanish
+hashtags: [finanzaspersonales, educacionfinanciera, ahorro, presupuesto, invertir, dinerosimple]
+cta: Síguenos para un paso de dinero cada semana.
+link_in_bio: https://dinerosimple.netlify.app/links/   # per-platform UTM versions in launch/dinero-simple/LINKS.md
+voice:
+  tone: tranquilo, concreto, con un toque de humor seco, cero exageración
+  persona: un amigo que trabaja en finanzas y odia la jerga
+  tts_voice: ""          # your own cloned voice or a licensed Spanish stock voice id (ElevenLabs multilingual works)
+  piper_model: ""        # or a Spanish Piper voice, e.g. es_MX-*.onnx (or set PIPER_MODEL_ES)
+  words_per_minute: 165
+  banned_phrases: ["libertad financiera de la noche a la mañana", "este truco", "rendimientos garantizados", "dinero fácil"]
+visual:
+  palette: ["#14213d", "#fbf5e9", "#ff7a59", "#2ab7a9"]
+  font: Inter
+  image_style: warm flat vector illustration, coral, teal and cream, simple shapes, no text, no logos
+  mascot: a small round coral piggy bank character with big eyes and a tiny teal scarf (original design)
+  watermark: "@dinerosimple"
+cadence:
+  shorts_per_week: 5
+  long_per_week: 1
+  carousels_per_week: 3
+  max_posts_per_day_per_platform: 2
+  post_times: ["12:30", "20:00"]
+  timezone: America/New_York
+accounts:
+  - {platform: instagram, handle: "@dinerosimple", formats: [short, carousel, image]}
+  - {platform: youtube, handle: "@dinerosimple", formats: [short, long]}
+  - {platform: tiktok, handle: "@dinerosimple", formats: [short, mid]}   # mid = TikTok-only 65-90 s cut
+  # Reels go natively to the Facebook Page too (same `factory auth meta` login as Instagram)
+  - {platform: facebook, handle: "Dinero Simple", formats: [short]}
+# No affiliate yet: add one only after approval, with Spanish-language support, in this shape:
+#   - name: <program name>
+#     url: <tracked link>
+#     slug: ahorro
+#     keywords: [cuenta de ahorro, alto rendimiento, fondo de emergencia, hysa]
+#     commission: "<what it pays>"
+affiliates: []
+products:
+  - {name: "El Kit para Recortar Gastos", url: "https://example.gumroad.com/l/recortar-gastos", price: 5}
+  - {name: "El Presupuesto de 20 Minutos (plantilla Notion + Sheets)", url: "https://example.gumroad.com/l/presupuesto", price: 12}
+  - {name: "Tu Fecha Sin Deudas", url: "https://example.gumroad.com/l/fecha-sin-deudas", price: 17}
+  - {name: "Empieza a Invertir con $100 al Mes", url: "https://example.gumroad.com/l/invertir-con-100", price: 19}
+  - {name: "El Paquete Dinero Simple (los 4 kits)", url: "https://example.gumroad.com/l/paquete-dinero-simple", price: 29}
+# REVISIÓN NATIVA PENDIENTE: wording follows main's accurate-disclosure fix (scripts are drafted with AI help).
+ai_disclosure: "Imágenes y voz hechas con herramientas de IA. Guion redactado con ayuda de IA y verificado por una persona. No es asesoría financiera."
+scripts_by: ai_assisted   # or person, only if a person writes the scripts (then ai_disclosure may say so)
+review_stages: [native_review]   # every Dinero Simple post needs a fluent-speaker read before it can be approved (`factory review-gate`); ITIN/immigration items add legal_review in their pack
+realistic_synthetic_media: false
+require_human_review: true
+# Hand-written bios (a fluent speaker should still check them). Limits: IG/Threads 150, TikTok 80, X 160, YouTube ~1000.
+bios:
+  instagram: |-
+    Finanzas personales para latinos en EE. UU. 💸
+    Un paso con tu dinero cada semana, sin rollos.
+    Con ayuda de IA · plantilla gratis abajo 👇
+  tiktok: "Un paso con tu dinero cada semana, sin rollos. Con ayuda de IA."
+  x: "Finanzas personales para latinos en EE. UU.: presupuesto, crédito e inversión explicados en menos de un minuto. Un paso por semana. Con ayuda de IA."
+  threads: |-
+    Presupuesto, crédito e inversión para latinos en EE. UU., explicados en menos de un minuto.
+    Con ayuda de IA.
+  youtube_about: |-
+    Dinero Simple: un paso con tu dinero que puedes dar esta semana, explicado en menos de un minuto.
+
+    Para latinos jóvenes en Estados Unidos que trabajan, estudian o ayudan a su familia y sienten que van atrasados con su dinero. Hablamos de presupuesto que sí funciona, tu primera inversión (fondos índice, Roth IRA, 401(k)), puntaje de crédito y cómo salir de deudas, y apps de dinero comparadas sin rodeos.
+
+    Sin promesas de hacerte rico. Solo pasos concretos, con números reales. Síguenos para un paso de dinero cada semana.
+
+    Cómo lo hacemos: imágenes y voz hechas con herramientas de IA; una persona escribe y verifica cada guion y aprueba cada video. No es asesoría financiera. Sin reseñas falsas ni testimonios hechos con IA.
+
+    Algunos enlaces son de afiliado: podríamos recibir una comisión sin costo extra para ti. Para negocios, usa el enlace del canal.

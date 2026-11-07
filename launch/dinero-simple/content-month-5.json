@@ -1,0 +1,1815 @@
+[
+ {
+  "key": "m5-w2-o-1099",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "W-2 vs 1099: with a W-2 the employer withholds tax and pays half of Social Security and Medicare; with a 1099 nobody withholds and you pay both halves (15.3% self-employment tax).",
+  "script": {
+   "title": "¿W-2 o 1099? Cambia cuánto pagas",
+   "hook": "Mismo trabajo, mismo pago, y uno de los dos paga casi el doble de Seguro Social.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Mismo trabajo, mismo pago, y uno de los dos paga casi el doble de Seguro Social y Medicare.",
+     "on_screen_text": "Mismo pago, distinto impuesto",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf looking at two envelopes marked W-2 and 1099. No text, no logos, no real people."
+    },
+    {
+     "heading": "W-2",
+     "narration": "Con W-2 eres empleado: tu patrón te retiene impuestos de cada cheque y paga la mitad del Seguro Social y Medicare.",
+     "on_screen_text": "W-2: tu patrón retiene y paga la mitad",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a paycheck with a small slice taken out. No text, no logos, no real people."
+    },
+    {
+     "heading": "1099",
+     "narration": "Con 1099 trabajas por tu cuenta: nadie te retiene nada y tú pagas las dos mitades, 15.3 por ciento.",
+     "on_screen_text": "1099: nadie te retiene nada",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope with the full amount and a warning sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué hacer",
+     "narration": "Si te pagan con 1099, aparta una parte de cada pago en una cuenta aparte para los impuestos.",
+     "on_screen_text": "Aparta una parte de cada pago",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a jar labeled for taxes filling up. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pregunta",
+     "narration": "Si no sabes cuál eres, pregúntale a quien te paga qué formulario te va a mandar.",
+     "on_screen_text": "¿No sabes cuál eres? Pregunta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf asking a question. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Saberlo en enero te evita la sorpresa de abril.",
+     "on_screen_text": "Saberlo antes evita la sorpresa de abril",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with April circled. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "¿W-2 o 1099?\nCon W-2 eres empleado: tu patrón te retiene impuestos y paga la mitad del Seguro Social y Medicare.\nCon 1099 trabajas por tu cuenta: nadie te retiene y pagas las dos mitades (15.3% sobre tu ganancia neta), además del impuesto sobre la renta.\nSi te pagan con 1099, aparta una parte de cada pago. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "impuestos",
+    "w2",
+    "1099",
+    "trabajoindependiente",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "La diferencia entre W-2 y 1099 en tus impuestos.",
+   "thumbnail_text": "¿W-2 o 1099?",
+   "sources": [
+    "https://www.irs.gov/es/businesses/small-businesses-self-employed/self-employment-tax-social-security-and-medicare-taxes"
+   ],
+   "claims_to_verify": [
+    "Self-employment tax is 15.3% (12.4% Social Security + 2.9% Medicare) on 92.35% of net SE earnings",
+    "Employers pay half of FICA (7.65%) for W-2 employees"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m5-pago-en-efectivo",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Cash income is taxable and must be reported; reporting it also builds a record of income that helps with renting, loans and proving work history.",
+  "script": {
+   "title": "Te pagan en efectivo: igual se declara",
+   "hook": "Si te pagan en efectivo, ese dinero también se declara. Y declararlo te puede ayudar.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si te pagan en efectivo, ese dinero también se declara.",
+     "on_screen_text": "¿Pago en efectivo? También se declara",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a few bills. No text, no logos, no real people."
+    },
+    {
+     "heading": "La regla",
+     "narration": "Para el IRS, efectivo, cheque o app es lo mismo: es ingreso.",
+     "on_screen_text": "La ley no distingue cómo te pagan",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. cash, a check and a phone side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "Por qué",
+     "narration": "Y declararlo deja prueba de lo que ganas. Para rentar, pedir un préstamo o mostrar tu historial de trabajo, esa prueba vale.",
+     "on_screen_text": "Declarar deja prueba de lo que ganas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a folder with papers and a checkmark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo",
+     "narration": "Anota cada pago el mismo día: fecha, quién te pagó y cuánto.",
+     "on_screen_text": "Anota cada pago el mismo día",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small notebook with dated lines. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Un cuaderno hoy es menos estrés en abril.",
+     "on_screen_text": "Un cuaderno hoy, menos estrés en abril",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf closing a notebook calmly. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si te pagan en efectivo, ese dinero también se declara: para el IRS es ingreso igual que un cheque o una app. Declararlo deja prueba de lo que ganas, y esa prueba sirve para rentar o pedir un préstamo. Anota cada pago el mismo día: fecha, quién te pagó y cuánto. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "impuestos",
+    "efectivo",
+    "trabajo",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Los pagos en efectivo también se declaran.",
+   "thumbnail_text": "Pago en efectivo",
+   "sources": [
+    "https://www.irs.gov/es/businesses/small-businesses-self-employed/self-employed-individuals-tax-center"
+   ],
+   "claims_to_verify": [
+    "All income, including cash, is reportable",
+    "Tax returns are commonly accepted as proof of income by landlords and lenders (varies)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m5-gastos-de-trabajo",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Self-employed workers subtract business expenses (tools, the work share of the phone, business miles at the IRS rate) from income, so receipts and a mileage log lower the tax.",
+  "script": {
+   "title": "Si trabajas por tu cuenta, tus gastos bajan tus impuestos",
+   "hook": "Si trabajas con 1099, cada recibo que tiras es dinero que le regalas al IRS.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si trabajas con 1099, cada recibo que tiras es dinero que le regalas al IRS.",
+     "on_screen_text": "Cada recibo tirado, dinero regalado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf looking at a receipt in a trash can. No text, no logos, no real people."
+    },
+    {
+     "heading": "La idea",
+     "narration": "Pagas impuestos sobre tu ganancia: lo que cobraste menos los gastos del trabajo.",
+     "on_screen_text": "Pagas sobre tu ganancia, no sobre todo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a scale with income on one side and expenses on the other. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplos",
+     "narration": "Herramientas, materiales, uniforme, la parte del celular que usas para trabajar.",
+     "on_screen_text": "Herramientas, uniforme, parte del celular",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a toolbox, a phone and a uniform. No text, no logos, no real people."
+    },
+    {
+     "heading": "Millas",
+     "narration": "Y las millas que manejas por trabajo, con la tarifa por milla del IRS. Anótalas en una libreta o una app.",
+     "on_screen_text": "Las millas de trabajo también cuentan",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a car with a small notebook on the seat. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Tómale foto a cada recibo hoy. En abril vale dinero.",
+     "on_screen_text": "Una foto a cada recibo, hoy",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone taking a photo of a receipt. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si trabajas por tu cuenta (1099), pagas impuestos sobre tu ganancia: lo que cobraste menos los gastos del trabajo. Herramientas, materiales, uniforme, la parte del celular que usas para trabajar y las millas de trabajo (con la tarifa por milla del IRS) pueden contar. Guarda foto de cada recibo y anota tus millas. Las reglas tienen detalles: pregunta a un preparador certificado. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "impuestos",
+    "1099",
+    "trabajoindependiente",
+    "recibos",
+    "dinerosimple"
+   ],
+   "description": "Los gastos del trabajo bajan tus impuestos si trabajas por tu cuenta.",
+   "thumbnail_text": "Guarda tus recibos",
+   "sources": [
+    "https://www.irs.gov/es/businesses/small-businesses-self-employed/self-employed-individuals-tax-center"
+   ],
+   "claims_to_verify": [
+    "Ordinary and necessary business expenses are deductible on Schedule C",
+    "IRS publishes a standard business mileage rate each year; commuting miles don't count"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m5-ultima-semana",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Last week before April 15, 2027: file free (VITA, IRS Free File), or file the free extension, and pay what you can even if you extend.",
+  "script": {
+   "title": "¿Todavía no declaras? Lo que puedes hacer esta semana",
+   "hook": "Si todavía no declaras, esta semana tienes tres salidas, y ninguna cuesta.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si todavía no declaras, esta semana tienes tres salidas, y ninguna cuesta.",
+     "on_screen_text": "Faltan días: tres salidas gratis",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf looking at a calendar with April 15 circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Uno",
+     "narration": "Uno: VITA, voluntarios certificados que preparan tu declaración gratis si tus ingresos son moderados. Llama antes, se llenan.",
+     "on_screen_text": "Uno: VITA, ayuda gratis en persona",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small office with a welcome sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "Dos",
+     "narration": "Dos: Free File del IRS, programas gratis desde irs.gov para ingresos debajo de un límite.",
+     "on_screen_text": "Dos: Free File del IRS",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a laptop with a checkmark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tres",
+     "narration": "Tres: pide la prórroga antes del 15. Te da hasta octubre para declarar, pero lo que debes se paga ya.",
+     "on_screen_text": "Tres: la prórroga, también gratis",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar page turning to October. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Lo único que sale caro es no hacer nada.",
+     "on_screen_text": "Lo peor es no hacer nada",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf pressing a button. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si todavía no declaras, esta semana tienes 3 salidas gratis:\n1. VITA: voluntarios certificados, gratis para ingresos moderados. Llama antes.\n2. Free File del IRS: programas gratis desde irs.gov, para ingresos debajo de un límite.\n3. La prórroga (formulario 4868) antes del 15 de abril: te da hasta octubre para declarar, pero lo que debes se paga ya.\nInformación general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "impuestos",
+    "15deabril",
+    "vita",
+    "declaracion",
+    "dinerosimple"
+   ],
+   "description": "Tres opciones gratis si todavía no declaras tus impuestos.",
+   "thumbnail_text": "Antes del 15 de abril",
+   "sources": [
+    "https://www.irs.gov/es/individuals/free-tax-return-preparation-for-qualifying-taxpayers",
+    "https://www.irs.gov/es/filing/irs-free-file-do-your-taxes-for-free"
+   ],
+   "claims_to_verify": [
+    "April 15, 2027 deadline (check for disaster or weekend shifts)",
+    "VITA income limit for the 2027 season",
+    "IRS Free File AGI limit for 2026 returns",
+    "Form 4868 extends filing to Oct 15, 2027, not payment"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m5-itin-15-abril",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "ITIN filers have the same April 15 deadline; a first-time applicant can still file on time by attaching the W-7 to the paper return.",
+  "script": {
+   "title": "Con ITIN, el 15 de abril también es para ti",
+   "hook": "Si declaras con ITIN, o todavía estás pidiendo uno, el 15 de abril también cuenta para ti.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si declaras con ITIN, o todavía estás pidiendo uno, el 15 de abril también cuenta para ti.",
+     "on_screen_text": "Con ITIN, la misma fecha",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf pointing at a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Primero",
+     "narration": "Si es tu primer ITIN, el formulario W-7 va pegado a tu declaración en papel. Así declaras a tiempo aunque el número llegue después.",
+     "on_screen_text": "¿Tu primer ITIN? Va con tu declaración",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope with two papers clipped together. No text, no logos, no real people."
+    },
+    {
+     "heading": "Vencido",
+     "narration": "Si ya tienes uno, revisa que no esté vencido. Si no lo usaste en tres años seguidos, se renueva con el mismo W-7.",
+     "on_screen_text": "Revisa que no esté vencido",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an ID card with a small calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ayuda",
+     "narration": "Para ayuda, busca VITA o un agente certificado por el IRS. Nunca un notario.",
+     "on_screen_text": "Ayuda gratis: VITA o un agente certificado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small office with a checkmark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Y si tienes dudas de tu caso migratorio, eso lo ve un abogado de inmigración con licencia.",
+     "on_screen_text": "Tu caso migratorio, con un abogado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf next to a scale icon. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si declaras con ITIN, la fecha también es el 15 de abril. Si es tu primer ITIN, el W-7 va pegado a tu declaración en papel, así declaras a tiempo aunque el número llegue después. Si ya tienes uno, revisa que no esté vencido (vence si no lo usaste en 3 años seguidos). Ayuda gratis: VITA o un agente certificado por el IRS. Si te preocupa tu caso migratorio, habla con un abogado de inmigración con licencia o con un representante acreditado por el Departamento de Justicia, no con un notario. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "itin",
+    "impuestos",
+    "15deabril",
+    "inmigrantes",
+    "dinerosimple"
+   ],
+   "description": "El 15 de abril también aplica si declaras con ITIN.",
+   "thumbnail_text": "ITIN y el 15 de abril",
+   "sources": [
+    "https://www.irs.gov/es/individuals/individual-taxpayer-identification-number"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions the ITIN)",
+    "First-time W-7 is attached to a paper federal return",
+    "ITIN expires if not used on a federal return for 3 consecutive years",
+    "IRS Certifying Acceptance Agents can verify documents"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2,
+  "review": "legal_review"
+ },
+ {
+  "key": "m5-itin-y-miedo",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Many ITIN filers are scared to file after the 2025 IRS-ICE data agreement. Don't decide alone or from a video: not filing has its own costs; talk to a licensed immigration attorney first.",
+  "script": {
+   "title": "¿Miedo de declarar con ITIN? No lo decidas solo",
+   "hook": "Mucha gente con ITIN tiene miedo de declarar este año. Antes de decidir, escucha esto.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Mucha gente con ITIN tiene miedo de declarar este año. Antes de decidir, escucha esto.",
+     "on_screen_text": "¿Miedo de declarar? No decidas solo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf sitting at a table with a worried look. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tu caso",
+     "narration": "Lo que te conviene depende de tu caso, y eso no lo sabe un video ni un vecino.",
+     "on_screen_text": "Depende de tu caso, no de un video",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a document with a question mark and a small gavel. No text, no logos, no real people."
+    },
+    {
+     "heading": "El otro lado",
+     "narration": "Pero no declarar también tiene costos: multas, intereses, y puede afectarte más adelante.",
+     "on_screen_text": "No declarar también tiene costos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a scale with weights on both sides. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué hacer",
+     "narration": "Por eso, no lo decidas por un video ni por un vecino. Habla con un abogado de inmigración con licencia o un representante acreditado.",
+     "on_screen_text": "Habla con un abogado con licencia",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small office door with a scale icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Dónde",
+     "narration": "Hay consultas gratis o de bajo costo. Busca la lista de proveedores gratuitos en justice.gov/eoir.",
+     "on_screen_text": "Lista gratis: justice.gov/eoir",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a community center with an open door. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Y nunca un notario: en Estados Unidos no es abogado.",
+     "on_screen_text": "Nunca un notario",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf shaking head at a stamp. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si tienes ITIN y miedo de declarar este año, no lo decidas solo. Si te preocupa qué pasa con tus datos al declarar o al abrir una cuenta, esa decisión depende de tu caso: pregúntale primero a un abogado de inmigración con licencia o a un representante acreditado. Hay consultas gratis en justice.gov/eoir (lista de proveedores gratuitos). No declarar también tiene costos (multas, intereses y efectos más adelante). Esto es información general, no asesoría legal ni fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "itin",
+    "impuestos",
+    "inmigrantes",
+    "abogado",
+    "dinerosimple"
+   ],
+   "description": "Si tienes miedo de declarar con ITIN, habla primero con un abogado de inmigración con licencia.",
+   "thumbnail_text": "¿Miedo de declarar?",
+   "sources": [
+    "https://www.irs.gov/es/individuals/individual-taxpayer-identification-number"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions the ITIN)",
+    "ATTORNEY REVIEW: the piece no longer explains the IRS data-sharing agreement; it only sends the viewer to a licensed attorney or accredited representative (standard line DATOS in src/safe_lines.py). Check the justice.gov/eoir link",
+    "Failure-to-file penalty and interest apply when a return is required and not filed"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2,
+  "review": "legal_review"
+ },
+ {
+  "key": "m5-propinas",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Tips are still income, but the 2025 law adds a federal deduction for qualified tips (up to $25,000, 2025-2028) for workers with a valid SSN; ITIN filers can't take it and Social Security tax still applies.",
+  "script": {
+   "title": "Propinas: lo nuevo en tus impuestos",
+   "hook": "Si vives de propinas, la ley cambió, pero no para todos.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si vives de propinas, la ley cambió, pero no para todos.",
+     "on_screen_text": "Propinas: la ley cambió, no para todos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a tip jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Lo nuevo",
+     "narration": "Desde 2025 hay una deducción federal para propinas calificadas, de hasta 25 mil dólares al año.",
+     "on_screen_text": "Una deducción federal de hasta $25,000",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a jar with an arrow pointing down on a tax form. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pero",
+     "narration": "Pero pide número de Seguro Social válido para trabajar. Con ITIN no aplica.",
+     "on_screen_text": "Pide número de Seguro Social válido",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an ID card with a small X. No text, no logos, no real people."
+    },
+    {
+     "heading": "Y además",
+     "narration": "Y las propinas siguen pagando Seguro Social y Medicare, y tu estado puede cobrar impuestos.",
+     "on_screen_text": "Todavía pagas Seguro Social y Medicare",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a paycheck with two small slices taken out. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Reporta todas tus propinas a tu patrón. Sin registro, no hay deducción.",
+     "on_screen_text": "Reporta todas tus propinas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a notebook with dated lines. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Propinas: desde 2025 hay una deducción federal para propinas calificadas, de hasta $25,000 al año (de 2025 a 2028), con límites de ingreso. Pero pide número de Seguro Social válido para trabajar (con ITIN no aplica), las propinas siguen pagando Seguro Social y Medicare, y tu estado puede cobrar impuestos. Reporta todas tus propinas a tu patrón. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "propinas",
+    "impuestos",
+    "meseros",
+    "trabajadores",
+    "dinerosimple"
+   ],
+   "description": "La deducción por propinas: quién califica y quién no.",
+   "thumbnail_text": "Propinas y la ley nueva",
+   "sources": [
+    "https://www.irs.gov/es/newsroom/one-big-beautiful-bill-provisions"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions the ITIN)",
+    "HIGH RISK: qualified tips deduction up to $25,000 per return, tax years 2025-2028, phase-out above $150,000 MAGI ($300,000 joint)",
+    "Requires an SSN valid for employment; not available to ITIN filers or married filing separately",
+    "Tips remain subject to FICA; state treatment varies"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2,
+  "review": "legal_review"
+ },
+ {
+  "key": "m5-horas-extra",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Overtime: the 2025 law lets workers with a valid SSN deduct the extra 'half' of time-and-a-half pay, up to $12,500 ($25,000 joint) a year, 2025-2028.",
+  "script": {
+   "title": "Tus horas extra pueden bajar tus impuestos",
+   "hook": "Si haces horas extra, una parte de ese dinero ahora puede bajar tus impuestos.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si haces horas extra, una parte de ese dinero ahora puede bajar tus impuestos.",
+     "on_screen_text": "Horas extra: una parte ahora se deduce",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf next to a clock showing late hours. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué parte",
+     "narration": "No es todo el pago extra: es la 'media' del tiempo y medio. Si ganas 20 la hora y te pagan 30, la parte es 10.",
+     "on_screen_text": "Solo la 'media' del tiempo y medio",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a coin split into a big and a small piece. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tope",
+     "narration": "Hasta 12 mil 500 dólares al año, o 25 mil si declaran juntos, de 2025 a 2028.",
+     "on_screen_text": "Hasta $12,500 al año, o $25,000 en pareja",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a jar with a line marking the top. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pero",
+     "narration": "Igual que con las propinas, pide número de Seguro Social válido para trabajar.",
+     "on_screen_text": "Pide Seguro Social válido, igual que las propinas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an ID card with a small X. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Revisa tu W-2 o pregúntale a tu patrón cuánto fue de horas extra.",
+     "on_screen_text": "Revisa tu W-2: tu patrón lo debe mostrar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a W-2 with a highlighted box. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Horas extra: desde 2025 puedes deducir la parte extra del tiempo y medio (si ganas $20 la hora y te pagan $30, la parte es $10), hasta $12,500 al año o $25,000 si declaran juntos, de 2025 a 2028, con límites de ingreso. Pide número de Seguro Social válido para trabajar. Pregúntale a tu patrón cuánto fue de horas extra. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "horasextra",
+    "impuestos",
+    "trabajadores",
+    "w2",
+    "dinerosimple"
+   ],
+   "description": "La deducción por horas extra, explicada.",
+   "thumbnail_text": "Horas extra",
+   "sources": [
+    "https://www.irs.gov/es/newsroom/one-big-beautiful-bill-provisions"
+   ],
+   "claims_to_verify": [
+    "HIGH RISK: qualified overtime deduction covers only the FLSA premium portion, up to $12,500 ($25,000 joint), 2025-2028, phase-out above $150,000 MAGI",
+    "Requires an SSN valid for employment",
+    "How employers report qualified overtime on the 2026 W-2 (check the IRS guidance)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m5-dos-trabajos",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "With two jobs, each employer withholds as if it were your only job, so you can owe in April; fix it with Step 2 of the W-4.",
+  "script": {
+   "title": "¿Tienes dos trabajos? Puede que debas en abril",
+   "hook": "Si tienes dos trabajos, cada patrón te retiene como si fuera el único. Por eso debes en abril.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si tienes dos trabajos, cada patrón te retiene como si fuera el único. Por eso muchos deben en abril.",
+     "on_screen_text": "Dos trabajos, y sorpresa en abril",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf juggling two lunch boxes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Por qué",
+     "narration": "Juntos ganas más, y parte de ese dinero paga una tasa más alta que nadie te retuvo.",
+     "on_screen_text": "Juntos, ganas más y pagas una tasa más alta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two small stacks becoming one tall stack. No text, no logos, no real people."
+    },
+    {
+     "heading": "Arreglo",
+     "narration": "El arreglo está en el paso 2 del formulario W-4: marcas la casilla o usas el calculador del IRS.",
+     "on_screen_text": "El paso 2 del W-4",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a form with step 2 highlighted. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cuándo",
+     "narration": "Hazlo ahora. Entre más temprano, menos te retienen de golpe al final del año.",
+     "on_screen_text": "Hazlo ahora, no en diciembre",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar on an early month. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Un formulario hoy, cero sorpresas el próximo abril.",
+     "on_screen_text": "Un formulario, cero sorpresas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf relaxed with a calendar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Con dos trabajos, cada patrón te retiene como si fuera el único, y por eso muchos deben en abril. El arreglo: el paso 2 del W-4 (la casilla o el calculador de retenciones del IRS) en uno de tus trabajos. Hazlo temprano en el año. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "w4",
+    "impuestos",
+    "dostrabajos",
+    "retenciones",
+    "dinerosimple"
+   ],
+   "description": "Por qué con dos trabajos puedes deber impuestos, y cómo arreglarlo.",
+   "thumbnail_text": "Dos trabajos",
+   "sources": [
+    "https://www.irs.gov/es/individuals/tax-withholding-estimator"
+   ],
+   "claims_to_verify": [
+    "W-4 Step 2 covers multiple jobs (checkbox, worksheet or IRS estimator)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m5-reembolso-y-remesa",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Decide how much of the refund goes home before it arrives, and send it in one transfer from a bank account instead of several small cash sends.",
+  "script": {
+   "title": "Tu reembolso y lo que mandas a casa: decídelo antes",
+   "hook": "Cuando llega el reembolso, todos en la familia tienen una idea. Decide la tuya antes.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Cuando llega el reembolso, todos en la familia tienen una idea. Decide la tuya antes.",
+     "on_screen_text": "El reembolso llega, y todos tienen idea",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding an envelope while speech bubbles float around. No text, no logos, no real people."
+    },
+    {
+     "heading": "Número",
+     "narration": "Ponle un número a lo que vas a mandar a casa, antes de que llegue el dinero.",
+     "on_screen_text": "Ponle un número a lo que mandas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a sticky note with a number. No text, no logos, no real people."
+    },
+    {
+     "heading": "Primero",
+     "narration": "Si no tienes colchón, aparta algo primero. Si allá hay una emergencia, también la vas a poder ayudar después.",
+     "on_screen_text": "Primero tu colchón, después el envío",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small cushion next to an envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo",
+     "narration": "Y mándalo en un solo envío desde tu cuenta, no en varios chiquitos en efectivo: pagas menos comisión.",
+     "on_screen_text": "Un solo envío, desde tu cuenta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. one big arrow instead of several small ones. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Lo decides tú con calma, no la prisa del día que llega.",
+     "on_screen_text": "Lo decides tú, no la prisa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf calmly checking a list. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Antes de que llegue tu reembolso, decide cuánto vas a mandar a casa. Si no tienes colchón, aparta algo primero. Y mándalo en un solo envío desde tu cuenta de banco, no en varios chiquitos en efectivo: pagas menos comisión (y desde 2026 los envíos pagados en efectivo tienen un impuesto de 1%).\n\nEl Presupuesto de 20 Minutos (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "remesas",
+    "reembolso",
+    "familia",
+    "envios",
+    "dinerosimple"
+   ],
+   "description": "Cómo decidir cuánto del reembolso mandar a tu familia.",
+   "thumbnail_text": "Reembolso y remesa",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "1% federal excise tax on remittances funded with cash, money order or cashier's check, from Jan 1, 2026 (not bank account or card funding)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m5-envio-con-tarjeta",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Paying for a remittance with a credit card can be treated as a cash advance: an extra fee, a higher rate and interest from day one. Fund it from a bank account or debit card.",
+  "script": {
+   "title": "Mandar dinero con tarjeta de crédito puede costar el doble",
+   "hook": "Pagar tu envío con tarjeta de crédito parece fácil. Puede salirte el doble.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Pagar tu envío con tarjeta de crédito parece fácil. Puede salirte el doble.",
+     "on_screen_text": "Tu envío con tarjeta puede costar el doble",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a credit card next to an envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "Por qué",
+     "narration": "Muchas tarjetas lo cobran como adelanto en efectivo: una comisión extra, una tasa más alta e intereses desde el primer día.",
+     "on_screen_text": "Tu banco lo puede cobrar como adelanto en efectivo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a card with a small price tag and a clock. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo",
+     "narration": "En un envío de 500 dólares, una comisión de cinco por ciento ya son 25, antes de intereses.",
+     "on_screen_text": "En $500, la comisión puede ser $25",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a coin stack with a slice taken. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mejor",
+     "narration": "Mejor paga desde tu cuenta de banco o con tu tarjeta de débito.",
+     "on_screen_text": "Mejor desde tu cuenta o tu débito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bank with an arrow to an envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Si ya lo hiciste, revisa tu estado de cuenta: busca 'cash advance'.",
+     "on_screen_text": "Revisa tu estado de cuenta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a statement with a highlighted line. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Pagar un envío de dinero con tarjeta de crédito puede contar como adelanto en efectivo (cash advance): comisión extra (muchas veces 3% a 5%), una tasa más alta e intereses desde el primer día. En $500, una comisión de 5% ya son $25. Mejor paga desde tu cuenta de banco o con débito. Revisa tu estado de cuenta.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "remesas",
+    "tarjetadecredito",
+    "envios",
+    "comisiones",
+    "dinerosimple"
+   ],
+   "description": "Por qué no conviene mandar dinero con tarjeta de crédito.",
+   "thumbnail_text": "Envío con tarjeta",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "Some card issuers treat remittance purchases as cash advances (fee, higher APR, no grace period); varies by issuer and provider",
+    "Cash advance fees of 3%-5% are common; $25 on $500 is example arithmetic"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m5-como-recibe",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "How the family receives the money (cash pickup, bank deposit, mobile wallet) changes the fee and exchange rate; compare the amount received for each method.",
+  "script": {
+   "title": "¿Efectivo o depósito? Cómo recibe tu familia cambia el costo",
+   "hook": "El mismo envío puede costar distinto según cómo lo recibe tu familia.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "El mismo envío puede costar distinto según cómo lo recibe tu familia.",
+     "on_screen_text": "Mismo envío, distinto costo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf looking at three small doors. No text, no logos, no real people."
+    },
+    {
+     "heading": "Opciones",
+     "narration": "Las opciones de siempre: recoger en efectivo, depósito a una cuenta o una billetera en el celular.",
+     "on_screen_text": "Efectivo, depósito o billetera en el celular",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. cash, a bank and a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "Diferencia",
+     "narration": "Cada una puede tener otra comisión y otro tipo de cambio. A veces el depósito sale mejor; a veces no.",
+     "on_screen_text": "Cada una puede tener otra comisión y otro tipo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three price tags of different sizes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo",
+     "narration": "Cotiza las tres en la misma app y mira el número que importa: cuánto llega allá.",
+     "on_screen_text": "Cotiza las tres y mira cuánto llega",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with three lines and one highlighted. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Y pregúntale a tu familia: ir a recoger también le cuesta tiempo y pasaje.",
+     "on_screen_text": "Pregúntale a tu familia qué le conviene",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf on a phone call. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "El mismo envío puede costar distinto según cómo lo recibe tu familia: efectivo, depósito a cuenta o billetera en el celular. Cada uno puede tener otra comisión y otro tipo de cambio. Cotiza los tres y compara cuánto llega allá. Y recuerda que ir a recoger también le cuesta tiempo y pasaje a tu familia.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "remesas",
+    "envios",
+    "familia",
+    "mandardinero",
+    "dinerosimple"
+   ],
+   "description": "El método de entrega cambia el costo de tu envío.",
+   "thumbnail_text": "¿Cómo lo recibe?",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "Fees and exchange rates commonly differ by delivery method (varies by provider and corridor)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m5-numero-de-envio",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "The transfer tracking number works like cash: only the recipient needs it, and anyone asking for it (a 'prize', a buyer, a fake agent) is a scam.",
+  "script": {
+   "title": "El número de tu envío es como dinero en efectivo",
+   "hook": "El número de tu envío es como un billete. Si alguien te lo pide, cuidado.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "El número de tu envío es como un billete. Si alguien te lo pide, cuidado.",
+     "on_screen_text": "Ese número es como un billete",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a receipt close. No text, no logos, no real people."
+    },
+    {
+     "heading": "Por qué",
+     "narration": "En algunos servicios, con ese número y un nombre ya pueden cobrar el dinero.",
+     "on_screen_text": "Con el número y un nombre, lo pueden cobrar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a receipt with a number circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Quién",
+     "narration": "Solo lo necesita quien lo va a recibir. Nadie más: ni un 'agente', ni un comprador, ni un premio.",
+     "on_screen_text": "Solo lo necesita quien lo recibe",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. one person with a checkmark, others with X marks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Estafa",
+     "narration": "Si alguien te lo pide 'para verificar' o 'liberar un premio', es estafa.",
+     "on_screen_text": "Si te lo piden 'para verificar', es estafa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a warning sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Mándaselo directo a tu familiar, por un mensaje privado.",
+     "on_screen_text": "Mándalo directo a tu familiar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf sending a private message. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "El número de tu envío es como dinero en efectivo: en algunos servicios, con ese número y un nombre ya se puede cobrar. Solo lo necesita quien lo va a recibir. Si alguien te lo pide 'para verificar' o para 'liberar un premio', es estafa. Si ya lo compartiste, llama a la empresa de inmediato para cancelar.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "estafas",
+    "remesas",
+    "envios",
+    "seguridad",
+    "dinerosimple"
+   ],
+   "description": "Por qué nunca debes compartir el número de tu envío.",
+   "thumbnail_text": "No compartas el número",
+   "sources": [
+    "https://consumidor.ftc.gov/"
+   ],
+   "claims_to_verify": [
+    "Cash-pickup transfers can be collected with the tracking number plus ID matching the recipient name (varies)",
+    "Prize and 'verification' scams ask for transfer numbers (FTC)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m5-numero-fijo",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Give remittances a fixed line in the monthly budget, plus a small 'family emergency' fund, so helping home doesn't push you into debt.",
+  "script": {
+   "title": "Ponle un número fijo a lo que mandas cada mes",
+   "hook": "Ayudar a tu familia está bien. Ayudarla con tarjeta de crédito, no tanto.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Ayudar a tu familia está bien. Ayudarla con tarjeta de crédito, no tanto.",
+     "on_screen_text": "Ayudar, sí. Con tarjeta, no tanto",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a heart and a card. No text, no logos, no real people."
+    },
+    {
+     "heading": "Número",
+     "narration": "Ponle una línea fija a lo que mandas cada mes en tu presupuesto, como la renta.",
+     "on_screen_text": "Una línea fija en tu presupuesto",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a budget sheet with one line highlighted. No text, no logos, no real people."
+    },
+    {
+     "heading": "Emergencias",
+     "narration": "Y un apartado chico solo para emergencias de allá. Así un 'mándame ya' no va a la tarjeta.",
+     "on_screen_text": "Y un apartado chico para emergencias de allá",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small jar with a house icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Plática",
+     "narration": "Platícalo con tu familia: saber cuánto llega cada mes también les ayuda a ellos a planear.",
+     "on_screen_text": "Platícalo con tu familia",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two people talking by phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Un número claro cuida a los dos lados de la frontera.",
+     "on_screen_text": "Un número claro cuida a los dos lados",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf smiling with a calendar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Ponle un número fijo a lo que mandas a tu familia cada mes, como si fuera la renta, y un apartado chico solo para emergencias de allá. Así un 'mándame ya' no termina en la tarjeta. Platícalo con tu familia: saber cuánto llega también les ayuda a planear.\n\nEl Presupuesto de 20 Minutos (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "remesas",
+    "presupuesto",
+    "familia",
+    "ahorro",
+    "dinerosimple"
+   ],
+   "description": "Cómo meter lo que mandas a tu familia en tu presupuesto.",
+   "thumbnail_text": "Un número fijo",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "No numeric claims"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m5c-w2-o-1099",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Side-by-side W-2 vs 1099: who withholds, who pays Social Security and Medicare, which forms, expenses, quarterly payments.",
+  "script": {
+   "title": "W-2 o 1099: la comparación",
+   "hook": "Guárdalo: lo que cambia en tus impuestos si eres empleado o trabajas por tu cuenta.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdalo antes de aceptar un trabajo.",
+     "on_screen_text": "W-2 o 1099: lo que cambia",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding two envelopes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Retención",
+     "narration": "W-2: tu patrón, de cada cheque. 1099: nadie. Te toca a ti.",
+     "on_screen_text": "¿Quién te retiene impuestos?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a paycheck with a slice and an envelope without one. No text, no logos, no real people."
+    },
+    {
+     "heading": "Seguro Social",
+     "narration": "W-2: pagas 7.65% y tu patrón otro tanto. 1099: pagas las dos mitades, 15.3%.",
+     "on_screen_text": "Seguro Social y Medicare",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two halves of a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Gastos",
+     "narration": "W-2: casi nunca. 1099: sí, bajan tu ganancia y tus impuestos.",
+     "on_screen_text": "¿Tus gastos de trabajo cuentan?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a toolbox with a checkmark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pagos",
+     "narration": "W-2: ya va en tu cheque. 1099: pagos estimados cada trimestre.",
+     "on_screen_text": "¿Pagas durante el año?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with four marks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Formularios",
+     "narration": "W-2: lo manda tu patrón. 1099: lo manda quien te paga, y tú llenas el Anexo C.",
+     "on_screen_text": "¿Qué formularios?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two forms side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Así abril no te agarra sin nada. Información general, no asesoría fiscal.",
+     "on_screen_text": "Con 1099, aparta una parte de cada pago",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a jar filling with coins. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "W-2 o 1099, lo que cambia:\nRetención: W-2 tu patrón; 1099 nadie.\nSeguro Social y Medicare: W-2 pagas 7.65% y tu patrón igual; 1099 pagas 15.3%.\nGastos de trabajo: con 1099 bajan tu ganancia.\nPagos durante el año: con 1099, estimados cada trimestre.\nFormularios: con 1099 llenas el Anexo C.\nInformación general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "impuestos",
+    "w2",
+    "1099",
+    "trabajoindependiente",
+    "dinerosimple"
+   ],
+   "description": "W-2 contra 1099, lado a lado.",
+   "thumbnail_text": "W-2 o 1099",
+   "sources": [
+    "https://www.irs.gov/es/businesses/small-businesses-self-employed/self-employment-tax-social-security-and-medicare-taxes"
+   ],
+   "claims_to_verify": [
+    "Employee FICA 7.65%, SE tax 15.3%",
+    "Schedule C for sole proprietors; quarterly estimated payments when expecting to owe $1,000+"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m5c-trabajo-por-tu-cuenta",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Six tax habits for self-employed workers: the $400 rule, a separate account, receipts, a mileage log, setting aside a share of each payment, quarterly payments.",
+  "script": {
+   "title": "Si trabajas por tu cuenta: 6 hábitos para tus impuestos",
+   "hook": "Si te pagan con 1099, estos 6 hábitos te ahorran dinero y sustos.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Para que abril no te agarre sin nada.",
+     "on_screen_text": "Trabajas por tu cuenta: 6 hábitos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with a toolbox and a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Si ganaste $400 o más neto por tu cuenta, tienes que declarar.",
+     "on_screen_text": "1. Desde $400 de ganancia, declaras",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small coin stack with a flag. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Así separas lo del negocio de lo de la casa.",
+     "on_screen_text": "2. Una cuenta solo para el trabajo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two piggy banks side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Herramientas, materiales, uniforme, parte del celular.",
+     "on_screen_text": "3. Foto a cada recibo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone photographing a receipt. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Fecha, de dónde a dónde y para qué. Ir de tu casa al trabajo no cuenta.",
+     "on_screen_text": "4. Anota tus millas de trabajo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a car with a notebook. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Muchos apartan entre 20% y 30%. Un preparador te dice tu número.",
+     "on_screen_text": "5. Aparta una parte de cada pago",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a jar labeled for taxes. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Abril, junio, septiembre y enero. Así evitas multas.",
+     "on_screen_text": "6. Paga cada trimestre",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with four circled months. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Información general, no asesoría fiscal.",
+     "on_screen_text": "Guárdalo y empieza con uno",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf checking the first box on a list. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si trabajas por tu cuenta (1099), 6 hábitos:\n1. Desde $400 de ganancia neta, declaras.\n2. Una cuenta solo para el trabajo.\n3. Foto a cada recibo.\n4. Anota tus millas de trabajo (ir de casa al trabajo no cuenta).\n5. Aparta una parte de cada pago (muchos apartan 20%-30%; un preparador te dice tu número).\n6. Paga estimados cada trimestre.\nInformación general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "1099",
+    "impuestos",
+    "trabajoindependiente",
+    "negocio",
+    "dinerosimple"
+   ],
+   "description": "Seis hábitos de impuestos si trabajas por tu cuenta.",
+   "thumbnail_text": "6 hábitos 1099",
+   "sources": [
+    "https://www.irs.gov/es/businesses/small-businesses-self-employed/self-employed-individuals-tax-center"
+   ],
+   "claims_to_verify": [
+    "$400 net SE earnings filing threshold",
+    "Commuting miles are not deductible",
+    "Estimated tax due dates for 2027: Apr 15, Jun 15, Sep 15, Jan 15, 2028 (check)",
+    "20%-30% set-aside is a rule of thumb, not a rule"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m5c-propinas-y-extras",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "The 2025 tips and overtime deductions in plain Spanish: what counts, caps, years, the SSN requirement, and what still gets taxed.",
+  "script": {
+   "title": "Propinas y horas extra: lo nuevo, explicado",
+   "hook": "Guárdalo: lo que sí y lo que no cambió para propinas y horas extra.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Lo que sí cambió, y lo que no.",
+     "on_screen_text": "Propinas y horas extra: lo nuevo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with a tip jar and a clock. No text, no logos, no real people."
+    },
+    {
+     "heading": "Propinas",
+     "narration": "Para propinas calificadas, de 2025 a 2028, con límites de ingreso.",
+     "on_screen_text": "Propinas: deducción de hasta $25,000",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a tip jar with an arrow down. No text, no logos, no real people."
+    },
+    {
+     "heading": "Horas extra",
+     "narration": "Solo la parte extra del tiempo y medio. $25,000 si declaran juntos.",
+     "on_screen_text": "Horas extra: hasta $12,500",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a clock with a small coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Requisito",
+     "narration": "Con ITIN no aplican. Si declaran casados, por separado tampoco.",
+     "on_screen_text": "Las dos piden Seguro Social válido",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an ID card with a small X. No text, no logos, no real people."
+    },
+    {
+     "heading": "Lo que no cambió",
+     "narration": "Y tu estado puede cobrar impuestos sobre ese dinero.",
+     "on_screen_text": "Sigues pagando Seguro Social y Medicare",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a paycheck with two small slices. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué hacer",
+     "narration": "Sin registro de propinas u horas extra, no hay deducción.",
+     "on_screen_text": "Reporta tus propinas y revisa tu W-2",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a notebook and a W-2. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Las reglas tienen detalles. Información general, no asesoría fiscal.",
+     "on_screen_text": "Pregúntale a un preparador certificado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf next to a certified badge. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Propinas y horas extra, lo nuevo (de 2025 a 2028, con límites de ingreso):\nPropinas calificadas: deducción de hasta $25,000.\nHoras extra: solo la parte extra del tiempo y medio, hasta $12,500 ($25,000 en pareja).\nLas dos piden número de Seguro Social válido para trabajar; con ITIN no aplican.\nSigues pagando Seguro Social y Medicare, y tu estado puede cobrar.\nReporta tus propinas y revisa tu W-2. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "propinas",
+    "horasextra",
+    "impuestos",
+    "trabajadores",
+    "dinerosimple"
+   ],
+   "description": "Las deducciones de propinas y horas extra, explicadas.",
+   "thumbnail_text": "Propinas y horas extra",
+   "sources": [
+    "https://www.irs.gov/es/newsroom/one-big-beautiful-bill-provisions"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions the ITIN)",
+    "HIGH RISK: tips deduction up to $25,000, overtime up to $12,500/$25,000 joint, 2025-2028, phase-out above $150,000/$300,000 MAGI",
+    "Both require an SSN valid for employment; married filing separately excluded",
+    "FICA still applies; state conformity varies"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2,
+  "review": "legal_review"
+ },
+ {
+  "key": "m5c-semana-del-15",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "The week of April 15, 2027, day by day: Monday gather papers, Tuesday choose free help, Wednesday review and sign, Thursday file or extend and pay what you can.",
+  "script": {
+   "title": "La semana del 15 de abril, día por día",
+   "hook": "Si todavía no declaras, este es tu plan de lunes a jueves.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Si todavía no declaras, sigue esto.",
+     "on_screen_text": "La semana del 15 de abril",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with a calendar and a pencil. No text, no logos, no real people."
+    },
+    {
+     "heading": "Lunes",
+     "narration": "W-2, 1099, tu ITIN o Seguro Social, la declaración del año pasado.",
+     "on_screen_text": "Lunes: junta tus papeles",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a folder with papers. No text, no logos, no real people."
+    },
+    {
+     "heading": "Martes",
+     "narration": "VITA, Free File del IRS o un preparador que firme con su PTIN.",
+     "on_screen_text": "Martes: escoge quién te ayuda",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three small doors. No text, no logos, no real people."
+    },
+    {
+     "heading": "Miércoles",
+     "narration": "Tu nombre, tus números y que el reembolso vaya a tu cuenta.",
+     "on_screen_text": "Miércoles: revisa antes de firmar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a magnifying glass over a form. No text, no logos, no real people."
+    },
+    {
+     "heading": "Jueves 15",
+     "narration": "La prórroga es gratis y da hasta octubre para declarar.",
+     "on_screen_text": "Jueves 15: declara, o pide prórroga",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with 15 circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Y paga",
+     "narration": "La prórroga no es para pagar. Cada dólar que pagas ya baja la multa.",
+     "on_screen_text": "Y paga lo que puedas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. coins going into a slot. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Información general, no asesoría fiscal.",
+     "on_screen_text": "Guarda copia de todo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf putting a folder in a drawer. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "La semana del 15 de abril de 2027:\nLunes: junta tus papeles.\nMartes: escoge VITA, Free File del IRS o un preparador que firme con su PTIN.\nMiércoles: revisa antes de firmar (que el reembolso vaya a tu cuenta).\nJueves 15: declara o pide la prórroga gratis (formulario 4868).\nY paga lo que puedas: la prórroga no es para pagar.\nGuarda copia de todo. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "impuestos",
+    "15deabril",
+    "declaracion",
+    "prorroga",
+    "dinerosimple"
+   ],
+   "description": "Tu plan día por día para la semana del 15 de abril.",
+   "thumbnail_text": "La semana del 15",
+   "sources": [
+    "https://www.irs.gov/es/filing/get-an-extension-to-file-your-tax-return"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions the ITIN)",
+    "April 15, 2027 is a Thursday; check for disaster or holiday shifts",
+    "Form 4868 extends filing to Oct 15, 2027, not payment",
+    "Paid preparers must sign with a PTIN"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2,
+  "review": "legal_review"
+ },
+ {
+  "key": "m5c-itin-temporada",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Final checklist for ITIN filers before April 15: valid ITIN, first W-7 with the paper return, family members' ITINs, refund to your own account, legitimate help, and legal questions to a licensed attorney.",
+  "script": {
+   "title": "Declarar con ITIN: tu lista final",
+   "hook": "Si declaras con ITIN, revisa esto antes del 15 de abril.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Revísala antes del 15 de abril.",
+     "on_screen_text": "Declarar con ITIN: lista final",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with an ID card and a checklist. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Si no lo usaste en 3 años seguidos, venció. Se renueva con el W-7.",
+     "on_screen_text": "1. ¿Tu ITIN está vigente?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an ID card with a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "El W-7 va con tu declaración en papel. Así declaras a tiempo.",
+     "on_screen_text": "2. ¿Es tu primer ITIN?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two papers clipped together. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Revisa el de tu pareja y tus hijos, si van en la declaración.",
+     "on_screen_text": "3. ¿Tu familia también tiene ITIN?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a family of small icons with checkmarks. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "A una cuenta a tu nombre, nunca a la del preparador.",
+     "on_screen_text": "4. El reembolso, a tu cuenta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an arrow to a bank with your name. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "VITA o un agente certificado por el IRS. Nunca un notario.",
+     "on_screen_text": "5. Ayuda de verdad",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a certified badge. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Con un abogado de inmigración con licencia o un representante acreditado.",
+     "on_screen_text": "6. Dudas de tu caso migratorio",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a scale icon on a door. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Información general, no asesoría legal ni fiscal.",
+     "on_screen_text": "Guárdalo y compártelo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf sharing a phone. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si declaras con ITIN, tu lista antes del 15 de abril:\n1. ¿Tu ITIN está vigente? (vence si no lo usaste en 3 años seguidos)\n2. ¿Primer ITIN? El W-7 va con tu declaración en papel.\n3. Revisa el ITIN de tu pareja y tus hijos.\n4. El reembolso a una cuenta a tu nombre.\n5. Ayuda: VITA o un agente certificado por el IRS, nunca un notario.\n6. Si te preocupa tu caso migratorio, habla con un abogado de inmigración con licencia o con un representante acreditado por el Departamento de Justicia, no con un notario.\nInformación general, no asesoría legal ni fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "itin",
+    "impuestos",
+    "15deabril",
+    "inmigrantes",
+    "dinerosimple"
+   ],
+   "description": "La lista final antes de declarar con ITIN.",
+   "thumbnail_text": "ITIN: lista final",
+   "sources": [
+    "https://www.irs.gov/es/individuals/individual-taxpayer-identification-number"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions the ITIN)",
+    "ITIN expiry after 3 unused years; renewal with W-7",
+    "First-time W-7 attached to paper return",
+    "Certifying Acceptance Agents exist; notarios are not attorneys"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2,
+  "review": "legal_review"
+ },
+ {
+  "key": "m5c-envio-barato",
+  "format": "carousel",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Seven steps to send money home for less: compare the amount received, quote 2-3 services at the same time, pay from a bank account (not cash or credit card), pick the cheapest delivery method, send less often, keep the receipt.",
+  "script": {
+   "title": "Cómo mandar dinero a casa más barato: 7 pasos",
+   "hook": "Guárdalo para tu próximo envío.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdalo para tu próximo envío.",
+     "on_screen_text": "Mandar dinero más barato: 7 pasos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding an envelope with a heart. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Es el único número que importa.",
+     "on_screen_text": "1. Compara cuánto llega, no la comisión",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with one number highlighted. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "El tipo de cambio cambia durante el día.",
+     "on_screen_text": "2. Cotiza 2 o 3 servicios a la misma hora",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three phones side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Pagar en efectivo tiene un impuesto de 1% desde 2026.",
+     "on_screen_text": "3. Paga desde tu cuenta de banco",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bank with an arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Puede contar como adelanto en efectivo.",
+     "on_screen_text": "4. No pagues con tarjeta de crédito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a card with an X. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Efectivo, depósito o billetera: cada uno cuesta distinto.",
+     "on_screen_text": "5. Compara cómo lo recibe tu familia",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. cash, a bank and a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Una comisión al mes en vez de cuatro.",
+     "on_screen_text": "6. Manda menos veces, un poco más",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. one big arrow instead of four small. No text, no logos, no real people."
+    },
+    {
+     "heading": "7",
+     "narration": "Tienes 180 días para reportar un error.",
+     "on_screen_text": "7. Guarda el recibo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a receipt in a folder. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Cómo mandar dinero a casa más barato:\n1. Compara cuánto llega allá, no la comisión.\n2. Cotiza 2 o 3 servicios a la misma hora.\n3. Paga desde tu cuenta de banco (desde 2026, los envíos pagados en efectivo tienen un impuesto de 1%).\n4. No pagues con tarjeta de crédito (puede ser adelanto en efectivo).\n5. Compara cómo lo recibe tu familia.\n6. Manda menos veces.\n7. Guarda el recibo: 180 días para reportar errores.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "remesas",
+    "mandardinero",
+    "envios",
+    "familia",
+    "dinerosimple"
+   ],
+   "description": "Siete pasos para que tu familia reciba más.",
+   "thumbnail_text": "Envíos más baratos",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "1% excise tax on cash-funded remittances from Jan 1, 2026",
+    "180 days to report remittance errors (CFPB Remittance Rule)",
+    "Credit-card funding may be a cash advance (varies by issuer)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m5c-numero-de-envio",
+  "format": "carousel",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Six rules to keep remittances from being stolen: never share the tracking number, verify 'urgent' requests by calling back, never send to strangers, use the official app, cancel within 30 minutes, report.",
+  "script": {
+   "title": "Que no te roben tu envío: 6 reglas",
+   "hook": "Guárdalo y mándaselo a quien manda dinero a casa.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "6 reglas. Guárdalo.",
+     "on_screen_text": "Que no te roben tu envío",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding an envelope close. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Solo con quien lo recibe.",
+     "on_screen_text": "1. El número del envío no se comparte",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a receipt with a lock. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Al número que ya tienes, no al que te escribe.",
+     "on_screen_text": "2. ¿Un familiar urgido? Llámale tú",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a callback arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Ni por un premio, ni por una compra, ni por amor.",
+     "on_screen_text": "3. Nunca a quien no conoces en persona",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a person outline with an X. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Cuidado con enlaces y perfiles falsos.",
+     "on_screen_text": "4. Solo la app o tienda oficial",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a check badge. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "En general puedes cancelar si no lo han cobrado.",
+     "on_screen_text": "5. ¿Te arrepentiste? Tienes 30 minutos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a stopwatch. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "A la empresa y a la FTC. Hay ayuda en español.",
+     "on_screen_text": "6. ¿Te estafaron? Repórtalo hoy",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a megaphone. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "A ellos también les escriben.",
+     "on_screen_text": "Compártelo con tus papás",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf sharing a phone with an older person. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Que no te roben tu envío, 6 reglas:\n1. El número del envío solo lo tiene quien lo recibe.\n2. ¿Un familiar urgido? Llámale tú al número que ya tienes.\n3. Nunca le mandes a quien no conoces en persona.\n4. Solo la app o la tienda oficial.\n5. En general tienes 30 minutos para cancelar si no lo han cobrado.\n6. ¿Te estafaron? Repórtalo hoy a la empresa y a la FTC (en español).\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "estafas",
+    "remesas",
+    "envios",
+    "seguridad",
+    "dinerosimple"
+   ],
+   "description": "Seis reglas para que nadie se quede con tu envío.",
+   "thumbnail_text": "Envíos seguros",
+   "sources": [
+    "https://consumidor.ftc.gov/",
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "30-minute cancellation window under the Remittance Rule (if not picked up or deposited)",
+    "FTC accepts reports in Spanish (ReporteFraude.ftc.gov)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m5c-remesa-en-presupuesto",
+  "format": "carousel",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "How to put remittances in the budget: monthly amount, fees, a family-emergency fund, and a yearly total, with a worked example.",
+  "script": {
+   "title": "Lo que mandas a casa, dentro de tu presupuesto",
+   "hook": "Ayudar a tu familia sin quedarte sin nada: así se calcula.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Ayudar sin quedarte sin nada.",
+     "on_screen_text": "Lo que mandas a casa, en tu presupuesto",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with a budget sheet and an envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "Paso 1",
+     "narration": "Ejemplo: $300 al mes, el día después de tu pago.",
+     "on_screen_text": "1. Un número fijo al mes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with one day marked. No text, no logos, no real people."
+    },
+    {
+     "heading": "Paso 2",
+     "narration": "Ejemplo: $4 por envío son $48 al año.",
+     "on_screen_text": "2. Suma la comisión",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small coin stack. No text, no logos, no real people."
+    },
+    {
+     "heading": "Paso 3",
+     "narration": "Ejemplo: $25 por quincena. En un año, $600.",
+     "on_screen_text": "3. Un apartado para emergencias de allá",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a jar with a house icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Paso 4",
+     "narration": "$3,600 de envíos, más comisiones, más el apartado.",
+     "on_screen_text": "4. Mira el total del año",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a big total on a sheet. No text, no logos, no real people."
+    },
+    {
+     "heading": "Paso 5",
+     "narration": "Saber cuánto llega les ayuda a planear allá.",
+     "on_screen_text": "5. Platícalo con tu familia",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two people on a phone call. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Guárdalo.",
+     "on_screen_text": "Tu presupuesto primero, para poder ayudar siempre",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf smiling with a plan. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Lo que mandas a casa, dentro de tu presupuesto (ejemplo):\n1. Un número fijo: $300 al mes.\n2. La comisión: $4 por envío, $48 al año.\n3. Un apartado para emergencias de allá: $25 por quincena, $600 al año.\n4. El total del año: $3,600 de envíos, más comisiones, más el apartado.\n5. Platícalo con tu familia.\n\nEl Presupuesto de 20 Minutos (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "remesas",
+    "presupuesto",
+    "familia",
+    "ahorro",
+    "dinerosimple"
+   ],
+   "description": "Cómo meter las remesas en tu presupuesto, con un ejemplo.",
+   "thumbnail_text": "Remesa en tu presupuesto",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "Example arithmetic only: $300 x 12 = $3,600; $4 x 12 = $48; $25 x 24 = $600"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "l-impuestos-trabajador",
+  "format": "long",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Complete Spanish guide to taxes for workers in the US before April 15: W-2 vs 1099, self-employment tax with a worked example, expenses, cash pay, the new tips and overtime deductions (SSN required), two jobs, ITIN filers, and what to do if you can't finish in time.",
+  "script": {
+   "title": "Impuestos para trabajadores en EE. UU.: W-2, 1099, efectivo y propinas (guía completa)",
+   "hook": "Mismo trabajo, mismo pago, y uno paga casi el doble de Seguro Social. Así funcionan tus impuestos si trabajas aquí.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Si trabajas en Estados Unidos, con papeles de empleado, por tu cuenta, en efectivo o con propinas, este video es para ti. Vemos la diferencia entre W-2 y 1099 con números, qué gastos bajan tus impuestos, qué pasa con el efectivo, lo nuevo de propinas y horas extra, qué hacer con dos trabajos, lo que cambia si declaras con ITIN y qué hacer si no llegas al 15 de abril. Es información general, no asesoría fiscal.",
+     "on_screen_text": "Tus impuestos de trabajador, completos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf at a kitchen table with a folder. No text, no logos, no real people."
+    },
+    {
+     "heading": "W-2",
+     "narration": "Si eres empleado, recibes un W-2. Tu patrón te retiene impuestos de cada cheque, según lo que pusiste en tu W-4, y paga la mitad del Seguro Social y Medicare. Tu parte es siete punto sesenta y cinco por ciento. En abril solo comparas lo que te retuvieron con lo que de verdad debías: si te retuvieron de más, te regresan; si te retuvieron de menos, pagas la diferencia.",
+     "on_screen_text": "W-2: tu patrón retiene por ti",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a paycheck with a slice taken out. No text, no logos, no real people."
+    },
+    {
+     "heading": "1099",
+     "narration": "Si trabajas por tu cuenta, como contratista, en construcción, limpieza, con una app de entregas o cualquier trabajo donde te pagan sin retener nada, recibes un 1099, o a veces nada. Nadie te retiene impuestos, y tú pagas las dos mitades del Seguro Social y Medicare: quince punto tres por ciento, además del impuesto sobre la renta. Si ganaste $400 o más neto en el año, tienes que declarar.",
+     "on_screen_text": "1099: nadie te retiene nada",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope with the full amount and a warning sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "Las dos mitades",
+     "narration": "Veamos un ejemplo con números redondos. Con $20,000 de pago en el año, un empleado con W-2 paga unos $1,530 de Seguro Social y Medicare, y su patrón paga otro tanto. Con $20,000 de ganancia neta con 1099, el impuesto de trabajo por cuenta propia es de unos $2,826, porque pagas las dos mitades sobre casi toda tu ganancia. Por eso, si te pagan con 1099, conviene apartar una parte de cada pago y cobrar un poco más por tu trabajo.",
+     "on_screen_text": "Mismo pago, casi el doble de Seguro Social",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two coin stacks of different heights. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Seguro Social y Medicare con $20,000",
+      "labels": [
+       "Con W-2 (tu parte)",
+       "Con 1099 (las dos)"
+      ],
+      "values": [
+       1530,
+       2826
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Ejemplo: 7.65% contra 15.3% sobre 92.35% de la ganancia neta"
+     }
+    },
+    {
+     "heading": "Gastos",
+     "narration": "La buena noticia del 1099: pagas sobre tu ganancia, no sobre todo lo que cobraste. Los gastos del trabajo se restan: herramientas, materiales, uniforme, la parte del celular que usas para trabajar, y las millas que manejas por trabajo con la tarifa por milla del IRS. Ir de tu casa al trabajo normalmente no cuenta. Toma foto de cada recibo y anota tus millas el mismo día.",
+     "on_screen_text": "Tus gastos bajan tu ganancia",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a toolbox, a phone and a car. No text, no logos, no real people."
+    },
+    {
+     "heading": "Efectivo",
+     "narration": "Si te pagan en efectivo, ese dinero también es ingreso. Declararlo, además, deja prueba de lo que ganas, y esa prueba sirve para rentar, pedir un préstamo o mostrar tu historial de trabajo. Anota cada pago: fecha, quién te pagó y cuánto. Un cuaderno o una nota en el celular basta.",
+     "on_screen_text": "El efectivo también se declara",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. cash next to a small notebook. No text, no logos, no real people."
+    },
+    {
+     "heading": "Propinas y horas extra",
+     "narration": "Desde 2025 hay dos deducciones nuevas, de 2025 a 2028, con límites de ingreso. Una para propinas calificadas, de hasta 25 mil dólares al año. Otra para la parte extra del tiempo y medio de tus horas extra, de hasta 12 mil 500, o 25 mil si declaran juntos. Las dos piden número de Seguro Social válido para trabajar, así que con ITIN no aplican. Y ojo: ese dinero sigue pagando Seguro Social y Medicare, y tu estado puede cobrar impuestos.",
+     "on_screen_text": "Lo nuevo: propinas y horas extra",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a tip jar and a clock. No text, no logos, no real people."
+    },
+    {
+     "heading": "Dos trabajos",
+     "narration": "Si tienes dos trabajos, cada patrón te retiene como si fuera el único, y en abril puedes deber. El arreglo está en el paso 2 del formulario W-4: la casilla, la hoja de cálculo o el calculador de retenciones del IRS. Hazlo temprano en el año, en uno de tus trabajos.",
+     "on_screen_text": "Dos trabajos: arréglalo en el W-4",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two lunch boxes and a form. No text, no logos, no real people."
+    },
+    {
+     "heading": "Con ITIN",
+     "narration": "Si declaras con ITIN, todo lo anterior aplica igual: W-2, 1099, efectivo y gastos. Las diferencias están en algunos créditos y deducciones que piden Seguro Social, como las de propinas y horas extra. Si es tu primer ITIN, el W-7 va pegado a tu declaración en papel. Busca VITA o un agente certificado por el IRS, nunca un notario. Si te preocupa tu caso migratorio, habla con un abogado de inmigración con licencia o con un representante acreditado por el Departamento de Justicia, no con un notario.",
+     "on_screen_text": "Con ITIN, las mismas reglas de trabajo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an ID card next to a folder. No text, no logos, no real people."
+    },
+    {
+     "heading": "Si no llegas",
+     "narration": "Si no vas a terminar a tiempo, pide la prórroga antes del 15 de abril: es gratis y te da hasta octubre para declarar. Pero no te da tiempo para pagar: lo que debes se paga el 15, y si no puedes pagar todo, paga lo que puedas y pide un plan de pagos. Y si trabajas por tu cuenta, el 15 de abril también vence tu primer pago estimado del año.",
+     "on_screen_text": "Si no llegas al 15: prórroga y pago",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with April 15 and October circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo: Mario",
+     "narration": "Un ejemplo inventado. Mario es pintor por su cuenta y cobra treinta mil dólares en el año. Guardó sus recibos: pintura, brochas, gasolina y su teléfono de trabajo suman seis mil. Su ganancia es de veinticuatro mil. Sobre eso paga el impuesto de trabajo por cuenta propia: quince punto tres por ciento sobre el noventa y dos punto treinta y cinco por ciento de su ganancia, unos tres mil trescientos noventa dólares, más el impuesto sobre el ingreso que le toque. Por eso aparta un cuarto de cada pago en una cuenta aparte y paga cada trimestre.",
+     "on_screen_text": "Ejemplo inventado: Mario, pintor, $30,000 con 1099",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a receipts folder and a savings pocket named 'Impuestos'. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo: qué copiar",
+     "narration": "Lo que puedes copiar de Mario: guardar cada recibo del trabajo en una carpeta del celular, apartar un cuarto de cada pago en una cuenta aparte, y pagar los impuestos estimados cada trimestre para no llegar a abril con una deuda grande.",
+     "on_screen_text": "Copia esto: recibos, un cuarto aparte, pagos trimestrales",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone folder and a savings pocket. No text, no logos, no real people."
+    },
+    {
+     "heading": "Resumen",
+     "narration": "Resumen. Con W-2, tu patrón retiene por ti. Con 1099, aparta una parte de cada pago y guarda tus recibos. El efectivo también se declara. Las deducciones de propinas y horas extra piden Seguro Social. Con dos trabajos, revisa tu W-4. Y si no llegas al 15, pide la prórroga y paga lo que puedas. Información general, no es asesoría fiscal.",
+     "on_screen_text": "W-2, 1099, recibos y a tiempo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf closing a folder with a checkmark. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Impuestos para trabajadores en EE. UU.: W-2 o 1099 (con un ejemplo en números), gastos que bajan tus impuestos, pagos en efectivo, lo nuevo de propinas y horas extra, dos trabajos, declarar con ITIN y qué hacer si no llegas al 15 de abril. Información general, no es asesoría fiscal.",
+   "hashtags": [
+    "impuestos",
+    "w2",
+    "1099",
+    "propinas",
+    "itin",
+    "dinerosimple"
+   ],
+   "description": "La guía completa en español de impuestos para trabajadores: W-2, 1099, efectivo, propinas, horas extra, dos trabajos e ITIN, antes del 15 de abril de 2027. Información general, no asesoría fiscal.\n\nCapítulos (estimados)\n0:00 Intro\n0:40 W-2\n1:30 1099\n2:20 Las dos mitades: un ejemplo\n3:20 Gastos\n4:10 Efectivo\n4:50 Propinas y horas extra\n5:50 Dos trabajos\n6:30 Con ITIN\n7:20 Si no llegas al 15\n8:10 Resumen\n\nEnlaces (los productos de pago son nuestros):\nDónde hacer tus impuestos: gratis, con programa o con preparador: https://dinerosimple.netlify.app/blog/donde-hacer-tus-impuestos/?utm_source=youtube&utm_medium=social&utm_campaign=l-impuestos-trabajador\nEl Presupuesto de 20 Minutos ($12): https://dinerosimple.netlify.app/products/el-presupuesto-de-20-minutos/?utm_source=youtube&utm_medium=social&utm_campaign=l-impuestos-trabajador\nGuía gratis: Tu dinero en orden en 7 días: https://dinerosimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=l-impuestos-trabajador",
+   "thumbnail_text": "Tus impuestos de trabajador",
+   "sources": [
+    "https://www.irs.gov/es/businesses/small-businesses-self-employed/self-employment-tax-social-security-and-medicare-taxes",
+    "https://www.irs.gov/es/newsroom/one-big-beautiful-bill-provisions",
+    "https://www.irs.gov/es/individuals/individual-taxpayer-identification-number"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions the ITIN)",
+    "Example: $20,000 x 7.65% = $1,530; $20,000 x 92.35% x 15.3% = $2,826 (SE tax, before the deduction for half of it)",
+    "HIGH RISK: tips ($25,000) and overtime ($12,500/$25,000) deductions, 2025-2028, SSN valid for employment required",
+    "$400 net SE filing threshold",
+    "Form 4868 to Oct 15, 2027; first 2027 estimated payment due Apr 15, 2027",
+    "ATTORNEY REVIEW: the 'Con ITIN' segment",
+    "Chart 'Seguro Social y Medicare con $20,000': Con W-2 (tu parte) 1530, Con 1099 (las dos) 2826 (Ejemplo: 7.65% contra 15.3% sobre 92.35% de la ganancia neta)"
+   ],
+   "title_variants": [],
+   "hook_variants": [],
+   "original_element": "Graba la pantalla del calculador de retenciones del IRS (irs.gov) en español, sin poner datos reales, mostrando dónde está el paso de dos trabajos"
+  },
+  "phase": 2,
+  "review": "legal_review"
+ },
+ {
+  "key": "l-envios-del-ano",
+  "format": "long",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Complete Spanish guide to sending money home all year for less: how much (a fixed budget line), how often (fees per send), how to pay (bank account vs cash vs credit card), how the family receives it, the 1% cash tax, your rights, scams, and the tax refund.",
+  "script": {
+   "title": "Mandar dinero a casa todo el año: cuánto, cómo y cada cuándo (guía completa)",
+   "hook": "Lo que pierdes en comisiones no está en un envío. Está en los cincuenta del año.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Si mandas dinero a tu familia, lo que pierdes en comisiones no se ve en un envío: se ve en el año. En este video armamos tu plan de envíos: cuánto mandar sin quedarte sin nada, cada cuándo, cómo pagar, cómo recibe tu familia, el impuesto nuevo al efectivo, tus derechos, las estafas, y qué hacer con el reembolso. No te vamos a decir qué empresa usar: te damos el método para comparar tú.",
+     "on_screen_text": "Tus envíos de todo el año",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with an envelope and a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "El número que importa",
+     "narration": "Antes de todo, el número que importa. No es la comisión ni el tipo de cambio por separado: es cuánto recibe tu familia allá por los mismos dólares. Por ley, la empresa te lo tiene que mostrar antes de que pagues. Ese es el número que comparas, siempre.",
+     "on_screen_text": "El único número: cuánto llega allá",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with one number highlighted. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cuánto",
+     "narration": "Cuánto mandar. Ponle una línea fija en tu presupuesto, como la renta, y que salga el día después de tu pago. Si no tienes colchón, aparta algo para ti primero: si allá hay una emergencia, vas a poder ayudar sin usar la tarjeta. Y platícalo con tu familia: saber cuánto llega cada mes les ayuda a planear.",
+     "on_screen_text": "Una línea fija en tu presupuesto",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a budget sheet with one line highlighted. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cada cuándo",
+     "narration": "Cada cuándo. Muchos servicios cobran una comisión fija por envío. Si pagas $4 por envío y mandas cada semana, son $208 al año. Si juntas lo mismo y mandas una vez al mes, son $48. La misma ayuda, $160 menos en comisiones. Claro, si tu familia necesita el dinero cada semana, eso manda; pero si se puede juntar, conviene.",
+     "on_screen_text": "Menos envíos, menos comisiones",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. four small arrows becoming one big arrow. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Comisiones de un año",
+      "labels": [
+       "Cada semana",
+       "Cada mes"
+      ],
+      "values": [
+       208,
+       48
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Ejemplo: comisión fija de $4 por envío"
+     }
+    },
+    {
+     "heading": "Cómo pagas",
+     "narration": "Cómo pagas también cambia el costo. Desde tu cuenta de banco o con débito suele ser lo más barato. Con tarjeta de crédito, muchos bancos lo cobran como adelanto en efectivo: comisión extra, una tasa más alta e intereses desde el primer día. Y pagar en efectivo en una tienda muchas veces cuesta más, y desde 2026 tiene un impuesto federal de uno por ciento.",
+     "on_screen_text": "Paga desde tu cuenta de banco",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bank, a card with an X and cash with a small tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo recibe",
+     "narration": "Cómo recibe tu familia: recoger en efectivo, depósito a una cuenta o una billetera en el celular. Cada opción puede tener otra comisión y otro tipo de cambio. Cotiza las tres en la misma app y mira cuánto llega. Y piensa en tu familia: ir a recoger también le cuesta tiempo y pasaje.",
+     "on_screen_text": "Efectivo, depósito o billetera",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. cash, a bank and a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tus derechos",
+     "narration": "Tus derechos. Antes de pagar, te tienen que mostrar la comisión, el tipo de cambio y cuánto llega. En general tienes 30 minutos para cancelar con reembolso completo, si todavía no lo cobraron. Y tienes 180 días para reportar un error. Guarda cada recibo. Si la empresa no responde, puedes presentar una queja ante la CFPB, también en español.",
+     "on_screen_text": "Tus derechos al mandar dinero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a receipt with a shield. No text, no logos, no real people."
+    },
+    {
+     "heading": "Estafas",
+     "narration": "Las estafas. El número de tu envío es como un billete: solo lo necesita quien lo recibe. Si un familiar te escribe urgido desde un número nuevo, llámale tú al número que ya tienes. Nunca le mandes a alguien que no conoces en persona, sea un premio, una compra o un amor por internet. Y si te estafaron, repórtalo hoy a la empresa y a la FTC.",
+     "on_screen_text": "El número del envío no se comparte",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a receipt with a lock. No text, no logos, no real people."
+    },
+    {
+     "heading": "El reembolso",
+     "narration": "Y abril trae el reembolso. Si parte va a tu familia, decide cuánto antes de que llegue, y mándalo en un solo envío desde tu cuenta. Así pagas una sola comisión, no varias, y el resto se queda trabajando para ti: tu colchón, tu deuda más cara o tu meta.",
+     "on_screen_text": "Tu reembolso: decide antes de que llegue",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope splitting into a few jars. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo: Ana",
+     "narration": "Un ejemplo inventado para ver el año completo. Ana manda doscientos dólares cada semana a su mamá. Paga cuatro dólares de comisión, en efectivo, y el tipo de cambio que le dan está dos por ciento por debajo del mercado. En el año manda diez mil cuatrocientos dólares. Las comisiones: cincuenta y dos por cuatro, doscientos ocho dólares. El tipo de cambio: dos por ciento de diez mil cuatrocientos, otros doscientos ocho. Y como paga en efectivo, el impuesto de uno por ciento: ciento cuatro. En total, quinientos veinte dólares al año se quedan en el camino.",
+     "on_screen_text": "Ejemplo inventado: Ana manda $200 cada semana",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a year calendar with 52 small envelopes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo: los cambios",
+     "narration": "Ana hace tres cambios. Uno: junta y manda cuatrocientos cada dos semanas, el mismo total. Son veintiséis envíos, así que las comisiones bajan a ciento cuatro dólares. Dos: paga desde su cuenta de banco y ya no en efectivo, así que no paga el impuesto de uno por ciento. Tres: compara cuánto llega en dos o tres opciones antes de cada envío y encuentra una con un margen de uno por ciento, ciento cuatro dólares en el año. Ahora su total es de doscientos ocho dólares, no quinientos veinte. Su mamá recibe más de trescientos dólares extra al año, sin que Ana mande un dólar más.",
+     "on_screen_text": "Cada dos semanas, desde su cuenta, comparando cuánto llega",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two stacks: $520 versus $208. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo: el resto del año",
+     "narration": "En abril, Ana recibe su reembolso y decide desde antes que trescientos van para su mamá. Los manda en un solo envío, desde su cuenta. Guarda cada recibo en una carpeta del celular. Y cuando una vez le escribe 'su sobrina' desde un número nuevo pidiéndole dinero urgente, Ana llama al número de siempre antes de mandar nada. Era estafa.",
+     "on_screen_text": "En abril, un solo envío del reembolso",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone folder of receipts, a call to a saved contact. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo: qué copiar",
+     "narration": "Haz tu propia cuenta como Ana: cuánto mandas en el año, cuánto pagas de comisión por envío y cuánto pierdes en el tipo de cambio. La calculadora gratis del enlace de la bio te ayuda. Luego cambia una sola cosa este mes: la frecuencia, la forma de pago o el servicio. El mes que viene, otra. Lo que ahorres llega a tu familia.",
+     "on_screen_text": "Copia esto: suma tu año y cambia una cosa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the calculator on a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "Resumen",
+     "narration": "Resumen. Compara siempre cuánto llega allá. Ponle una línea fija a tus envíos. Si se puede, junta y manda menos veces. Paga desde tu cuenta, no con tarjeta de crédito ni en efectivo. Compara cómo recibe tu familia. Guarda tus recibos. Y el número del envío no se comparte.",
+     "on_screen_text": "Compara cuánto llega, manda menos veces",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf sending one envelope with a smile. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Mandar dinero a casa todo el año: cuánto (una línea fija en tu presupuesto), cada cuándo ($4 por envío cada semana son $208 al año; una vez al mes, $48), cómo pagar (desde tu cuenta, no con tarjeta de crédito ni en efectivo), cómo recibe tu familia, tus derechos y las estafas.",
+   "hashtags": [
+    "remesas",
+    "mandardinero",
+    "envios",
+    "familia",
+    "presupuesto",
+    "dinerosimple"
+   ],
+   "description": "La guía completa en español para mandar dinero a tu familia todo el año pagando menos: cuánto, cada cuándo, cómo pagar, cómo recibe tu familia, el impuesto de 1% al efectivo, tus derechos y las estafas.\n\nCapítulos (estimados)\n0:00 Intro\n0:40 El número que importa\n1:20 Cuánto\n2:10 Cada cuándo\n3:00 Cómo pagas\n3:50 Cómo recibe\n4:40 Tus derechos\n5:30 Estafas\n6:20 El reembolso\n7:00 Resumen\n\nEnlaces (los productos de pago son nuestros):\nRemitly, Wise o Xoom: cuál conviene para mandar dinero: https://dinerosimple.netlify.app/blog/remitly-wise-o-xoom/?utm_source=youtube&utm_medium=social&utm_campaign=l-envios-del-ano\nEl Presupuesto de 20 Minutos ($12): https://dinerosimple.netlify.app/products/el-presupuesto-de-20-minutos/?utm_source=youtube&utm_medium=social&utm_campaign=l-envios-del-ano\nGuía gratis: Tu dinero en orden en 7 días: https://dinerosimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=l-envios-del-ano",
+   "thumbnail_text": "Envíos de todo el año",
+   "sources": [
+    "https://www.consumerfinance.gov/es/",
+    "https://consumidor.ftc.gov/"
+   ],
+   "claims_to_verify": [
+    "Example arithmetic: $4 x 52 = $208; $4 x 12 = $48",
+    "1% excise tax on cash-funded remittances from Jan 1, 2026",
+    "Remittance Rule: pre-payment disclosure, 30-minute cancellation, 180 days to report errors",
+    "Credit-card funding may be a cash advance (varies by issuer)",
+    "Chart 'Comisiones de un año': Cada semana 208, Cada mes 48 (Ejemplo: comisión fija de $4 por envío)"
+   ],
+   "title_variants": [],
+   "hook_variants": [],
+   "original_element": "Graba la pantalla cotizando el mismo envío de $300 con dos métodos de entrega (depósito y efectivo) en una app, sin iniciar sesión"
+  },
+  "phase": 2
+ }
+]

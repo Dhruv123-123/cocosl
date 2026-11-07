@@ -1,0 +1,515 @@
+[
+ {
+  "key": "a-llamada-inmigracion",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Fake immigration-agent call: the caller says there's a problem with your case or a deportation order and you must pay a 'fine' today by gift card, wire or app. No US immigration agency collects payment by phone or gift card.",
+  "script": {
+   "title": "La llamada de 'Inmigración' que pide un pago",
+   "hook": "Tres cosas delatan la llamada falsa de 'Inmigración'. La tercera es la forma de pago.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Tres cosas delatan la llamada falsa de 'Inmigración'. La tercera es la forma de pago.",
+     "on_screen_text": "3 señales de la llamada falsa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. made-up screenshot with an 'EJEMPLO' watermark and numbered red callouts: a phone call screen showing 'Inmigración EE.UU.'. No text, no logos, no real people."
+    },
+    {
+     "heading": "Señal 1",
+     "narration": "Uno: te asustan. Dicen que hay un problema con tu caso o una orden contra ti.",
+     "on_screen_text": "1. Te asustan: 'hay una orden contra usted'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. made-up screenshot with an 'EJEMPLO' watermark and numbered red callouts: callout 1 on the caller's script. No text, no logos, no real people."
+    },
+    {
+     "heading": "Señal 2",
+     "narration": "Dos: prisa. Tienes que pagar hoy o 'vienen por ti'.",
+     "on_screen_text": "2. Prisa: 'tiene que pagar hoy'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. made-up screenshot with an 'EJEMPLO' watermark and numbered red callouts: callout 2 on a clock. No text, no logos, no real people."
+    },
+    {
+     "heading": "Señal 3",
+     "narration": "Tres: te piden pagar con tarjetas de regalo, giros, cripto o una app. Ninguna agencia de inmigración cobra así.",
+     "on_screen_text": "3. Te piden tarjetas de regalo, giros o apps",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. made-up screenshot with an 'EJEMPLO' watermark and numbered red callouts: callout 3 on gift cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué hacer",
+     "narration": "Qué hacer: cuelga. No des tu número de caso, ni datos, ni dinero.",
+     "on_screen_text": "Cuelga. No des datos ni dinero.",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a hand ending a call. No text, no logos, no real people."
+    },
+    {
+     "heading": "Verifica",
+     "narration": "Si te preocupa tu caso, pregúntale a tu abogado o representante acreditado. Nunca al número que te llamó.",
+     "on_screen_text": "Consulta tu caso solo con tu abogado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a lawyer's office, generic. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Llamada falsa de 'Inmigración': 3 señales.\n1. Te asustan: 'hay una orden contra usted'.\n2. Prisa: 'pague hoy'.\n3. Piden tarjetas de regalo, giros, cripto o una app.\nNinguna agencia de inmigración cobra por teléfono ni con tarjetas de regalo. Cuelga y consulta tu caso con tu abogado.\n\nRepórtalo gratis en ReporteFraude.ftc.gov (en español).\nPara cualquier trámite de inmigración: un abogado con licencia o un representante acreditado por el DOJ (lista en justice.gov/eoir). Nunca un notario.\nLos mensajes, nombres y números del ejemplo son inventados. Información general, no es asesoría legal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "alertadeestafa",
+    "estafas",
+    "inmigrantes",
+    "dinerosimple",
+    "fraude"
+   ],
+   "description": "Alerta: la llamada falsa de Inmigración que pide un pago.",
+   "thumbnail_text": "Llamada falsa de Inmigración",
+   "sources": [
+    "https://www.uscis.gov/es/evite-estafas",
+    "https://consumidor.ftc.gov/"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (immigration scam)",
+    "USCIS and other immigration agencies don't ask for payment by phone, gift card, wire or payment app (USCIS Avoid Scams)",
+    "Scammers spoof caller ID to show government names (FTC)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2,
+  "review": "legal_review"
+ },
+ {
+  "key": "a-formulario-gratis",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Paid-form scam: websites and 'gestores' sell USCIS forms or charge to 'download' them. USCIS forms are free at uscis.gov; filing fees are paid to USCIS as its instructions say, never to a stranger's personal account.",
+  "script": {
+   "title": "Te venden un formulario que es gratis",
+   "hook": "Este formulario de inmigración cuesta cero dólares. Hay quien lo vende en cien.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Este formulario de inmigración cuesta cero dólares. Hay quien lo vende en cien.",
+     "on_screen_text": "El formulario cuesta $0",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. made-up screenshot with an 'EJEMPLO' watermark and numbered red callouts: a fake website selling a form for $99. No text, no logos, no real people."
+    },
+    {
+     "heading": "Señal 1",
+     "narration": "Uno: la página no termina en punto gov, aunque tenga una bandera y un águila.",
+     "on_screen_text": "1. Una página que no termina en .gov",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. made-up screenshot with an 'EJEMPLO' watermark and numbered red callouts: callout 1 on the web address. No text, no logos, no real people."
+    },
+    {
+     "heading": "Señal 2",
+     "narration": "Dos: te cobran por descargar el formulario. En la página oficial es gratis.",
+     "on_screen_text": "2. Te cobran por 'descargarlo'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. made-up screenshot with an 'EJEMPLO' watermark and numbered red callouts: callout 2 on a 'pay to download' button. No text, no logos, no real people."
+    },
+    {
+     "heading": "Señal 3",
+     "narration": "Tres: te piden pagar a una cuenta personal o por una app. Las cuotas oficiales se pagan como dicen las instrucciones de USCIS.",
+     "on_screen_text": "3. El pago va a una cuenta personal",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. made-up screenshot with an 'EJEMPLO' watermark and numbered red callouts: callout 3 on a payment-app handle. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué hacer",
+     "narration": "Los formularios son gratis en uscis punto gov. Si no sabes cuál necesitas, pregúntale a un abogado o representante acreditado.",
+     "on_screen_text": "Formularios gratis solo en uscis.gov/es",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a laptop showing a generic .gov address. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Mándaselo a quien esté haciendo un trámite.",
+     "on_screen_text": "Mándaselo a quien está haciendo un trámite",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two phones sharing a video. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Los formularios de USCIS son gratis en uscis.gov/es.\nSeñales de la estafa:\n1. La página no termina en .gov.\n2. Te cobran por 'descargar' el formulario.\n3. El pago va a una cuenta personal o una app.\nLas cuotas oficiales se pagan como dicen las instrucciones de USCIS.\n\nRepórtalo gratis en ReporteFraude.ftc.gov (en español).\nPara cualquier trámite de inmigración: un abogado con licencia o un representante acreditado por el DOJ (lista en justice.gov/eoir). Nunca un notario.\nLos mensajes, nombres y números del ejemplo son inventados. Información general, no es asesoría legal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "alertadeestafa",
+    "estafas",
+    "inmigrantes",
+    "dinerosimple",
+    "fraude"
+   ],
+   "description": "Alerta: páginas que venden formularios de inmigración que son gratis.",
+   "thumbnail_text": "El formulario es gratis",
+   "sources": [
+    "https://www.uscis.gov/es/evite-estafas",
+    "https://www.uscis.gov/es/formularios"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (immigration scam)",
+    "USCIS forms are free to download from uscis.gov (USCIS)",
+    "USCIS filing fees are paid as each form's instructions say (online, or by check/card to the U.S. Department of Homeland Security); check current fee payment rules"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2,
+  "review": "legal_review"
+ },
+ {
+  "key": "a-trabajo-con-visa",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Job-with-visa scam: a recruiter on Facebook or WhatsApp promises a US job with an H-2A or H-2B work visa for a 'recruitment fee'. Under US rules, employers and their recruiters can't charge H-2A/H-2B workers recruitment fees.",
+  "script": {
+   "title": "Trabajo con visa: si te cobran, es estafa",
+   "hook": "Una oferta de trabajo con visa que te pide dinero tiene un problema: la ley no deja cobrarte.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Una oferta de trabajo con visa que te pide dinero tiene un problema: la ley no deja cobrarte.",
+     "on_screen_text": "La ley no deja cobrarte",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. made-up screenshot with an 'EJEMPLO' watermark and numbered red callouts: a WhatsApp offer: 'Trabajo en EE.UU. con visa, cupo limitado'. No text, no logos, no real people."
+    },
+    {
+     "heading": "Señal 1",
+     "narration": "Uno: cupo limitado, aparta tu lugar hoy.",
+     "on_screen_text": "1. 'Cupo limitado, paga hoy'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. made-up screenshot with an 'EJEMPLO' watermark and numbered red callouts: callout 1 on 'cupo limitado'. No text, no logos, no real people."
+    },
+    {
+     "heading": "Señal 2",
+     "narration": "Dos: te piden una cuota de reclutamiento. En las visas H-2A y H-2B, el patrón y sus reclutadores no pueden cobrártela.",
+     "on_screen_text": "2. Una 'cuota de reclutamiento'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. made-up screenshot with an 'EJEMPLO' watermark and numbered red callouts: callout 2 on a fee amount. No text, no logos, no real people."
+    },
+    {
+     "heading": "Señal 3",
+     "narration": "Tres: todo es por WhatsApp y no hay una empresa que puedas verificar.",
+     "on_screen_text": "3. Solo por WhatsApp, sin empresa que verificar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. made-up screenshot with an 'EJEMPLO' watermark and numbered red callouts: callout 3 on a profile with no company. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué hacer",
+     "narration": "No pagues. Las ofertas reales de estas visas se publican en seasonaljobs punto dol punto gov.",
+     "on_screen_text": "No pagues. Busca la oferta en seasonaljobs.dol.gov",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a laptop with a generic job board. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Mándaselo a tu familia allá. A ellos es a quienes les llega.",
+     "on_screen_text": "Mándaselo a tu familia allá",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone sending a video abroad. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Trabajo en EE. UU. con visa H-2A o H-2B: si te cobran una 'cuota de reclutamiento', es estafa o es ilegal.\nSeñales:\n1. 'Cupo limitado, paga hoy'.\n2. Te piden una cuota de reclutamiento.\n3. Todo por WhatsApp, sin empresa que verificar.\nLas ofertas reales se publican en seasonaljobs.dol.gov.\n\nRepórtalo gratis en ReporteFraude.ftc.gov (en español).\nPara cualquier trámite de inmigración: un abogado con licencia o un representante acreditado por el DOJ (lista en justice.gov/eoir). Nunca un notario.\nLos mensajes, nombres y números del ejemplo son inventados. Información general, no es asesoría legal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "alertadeestafa",
+    "estafas",
+    "inmigrantes",
+    "dinerosimple",
+    "fraude"
+   ],
+   "description": "Alerta: ofertas de trabajo con visa que te cobran.",
+   "thumbnail_text": "¿Trabajo con visa? Ojo",
+   "sources": [
+    "https://www.dol.gov/agencies/whd/immigration",
+    "https://seasonaljobs.dol.gov/"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (immigration scam)",
+    "H-2A (20 CFR 655.135(j)) and H-2B (20 CFR 655.20(o)) prohibit employers and their agents/recruiters from charging workers recruitment fees",
+    "H-2A and H-2B job orders are posted at seasonaljobs.dol.gov (DOL)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2,
+  "review": "legal_review"
+ },
+ {
+  "key": "a-abogado-falso",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Fake lawyer online: a Facebook or WhatsApp 'abogado' or 'consultor' promises a fast work permit or papers. How to check: a lawyer is listed with their state bar; an accredited representative works at a DOJ-recognized organization (EOIR roster).",
+  "script": {
+   "title": "El 'abogado' de Facebook que promete papeles rápido",
+   "hook": "En dos minutos puedes saber si ese 'abogado' de Facebook es de verdad.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "En dos minutos puedes saber si ese 'abogado' de Facebook es de verdad.",
+     "on_screen_text": "2 minutos para verificar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. made-up screenshot with an 'EJEMPLO' watermark and numbered red callouts: a social media ad: 'Permiso de trabajo en 30 días, garantizado'. No text, no logos, no real people."
+    },
+    {
+     "heading": "Señal 1",
+     "narration": "Uno: promete resultados garantizados y rápidos. Nadie puede garantizar lo que decide el gobierno.",
+     "on_screen_text": "1. 'Garantizado' y 'rápido'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. made-up screenshot with an 'EJEMPLO' watermark and numbered red callouts: callout 1 on 'garantizado'. No text, no logos, no real people."
+    },
+    {
+     "heading": "Señal 2",
+     "narration": "Dos: cobra en efectivo, sin contrato por escrito y sin recibo.",
+     "on_screen_text": "2. Cobra en efectivo y sin contrato",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. made-up screenshot with an 'EJEMPLO' watermark and numbered red callouts: callout 2 on 'solo efectivo'. No text, no logos, no real people."
+    },
+    {
+     "heading": "Verifica 1",
+     "narration": "Para verificar: un abogado aparece en la lista del colegio de abogados de su estado.",
+     "on_screen_text": "Abogado: búscalo en el colegio de abogados",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a laptop with a generic bar directory. No text, no logos, no real people."
+    },
+    {
+     "heading": "Verifica 2",
+     "narration": "Y un representante acreditado aparece en la lista del Departamento de Justicia, en justice punto gov barra eoir.",
+     "on_screen_text": "Representante: lista del DOJ (EOIR)",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a laptop with a generic government list. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Si no aparece en ninguna, no le des dinero ni documentos.",
+     "on_screen_text": "Si no aparece, no le pagues",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a hand holding documents back. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "¿Ese 'abogado' de redes es de verdad? Verifícalo:\n• Abogado: en la lista del colegio de abogados (state bar) de su estado.\n• Representante acreditado: en la lista del DOJ, justice.gov/eoir.\nSeñales de estafa: 'garantizado', 'rápido', solo efectivo, sin contrato ni recibo.\nSi no aparece, no le des dinero ni documentos originales.\n\nRepórtalo gratis en ReporteFraude.ftc.gov (en español).\nPara cualquier trámite de inmigración: un abogado con licencia o un representante acreditado por el DOJ (lista en justice.gov/eoir). Nunca un notario.\nLos mensajes, nombres y números del ejemplo son inventados. Información general, no es asesoría legal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "alertadeestafa",
+    "estafas",
+    "inmigrantes",
+    "dinerosimple",
+    "fraude"
+   ],
+   "description": "Alerta: cómo verificar a un abogado o representante de inmigración.",
+   "thumbnail_text": "¿Abogado de verdad?",
+   "sources": [
+    "https://www.justice.gov/eoir/recognition-and-accreditation-roster-reports",
+    "https://www.uscis.gov/es/evite-estafas"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (immigration scam)",
+    "Accredited representatives and recognized organizations are listed in EOIR's roster (justice.gov/eoir)",
+    "Attorneys can be checked with the state bar where they're licensed; EOIR also lists disciplined practitioners"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2,
+  "review": "legal_review"
+ },
+ {
+  "key": "a-pagina-falsa",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Look-alike government websites that charge to 'register' you for a program, a lottery or a status renewal. Official US government sites end in .gov; check the address before paying anything.",
+  "script": {
+   "title": "La página que se parece al gobierno, pero no es",
+   "hook": "Un detalle de cuatro letras te dice si una página es del gobierno: punto gov.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Un detalle de cuatro letras te dice si una página es del gobierno: punto gov.",
+     "on_screen_text": "4 letras: .gov",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. made-up screenshot with an 'EJEMPLO' watermark and numbered red callouts: a look-alike site with a flag and a fake address. No text, no logos, no real people."
+    },
+    {
+     "heading": "Señal 1",
+     "narration": "Uno: la dirección termina en punto com, punto org o algo parecido.",
+     "on_screen_text": "1. La dirección termina en .com, .org o .us",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. made-up screenshot with an 'EJEMPLO' watermark and numbered red callouts: callout 1 on the address bar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Señal 2",
+     "narration": "Dos: te cobran por registrarte en un programa o renovar un trámite.",
+     "on_screen_text": "2. Te cobran por 'registrarte' o 'renovar'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. made-up screenshot with an 'EJEMPLO' watermark and numbered red callouts: callout 2 on a payment form. No text, no logos, no real people."
+    },
+    {
+     "heading": "Señal 3",
+     "narration": "Tres: llegaste por un anuncio o un mensaje, no escribiendo tú la dirección.",
+     "on_screen_text": "3. Llegaste por un anuncio o un mensaje",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. made-up screenshot with an 'EJEMPLO' watermark and numbered red callouts: callout 3 on a 'Patrocinado' label. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué hacer",
+     "narration": "Escribe tú la dirección oficial. Para inmigración: uscis punto gov barra es.",
+     "on_screen_text": "Escribe tú la dirección: uscis.gov/es",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a hand typing an address. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Guarda este video para la próxima vez que veas un anuncio así.",
+     "on_screen_text": "Guarda este video",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bookmark icon. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "¿Es del gobierno de verdad? Las páginas oficiales de EE. UU. terminan en .gov.\nSeñales de una página falsa:\n1. Termina en .com, .org u otra.\n2. Te cobra por 'registrarte' o 'renovar'.\n3. Llegaste por un anuncio o un mensaje.\nEscribe tú la dirección: uscis.gov/es.\n\nRepórtalo gratis en ReporteFraude.ftc.gov (en español).\nPara cualquier trámite de inmigración: un abogado con licencia o un representante acreditado por el DOJ (lista en justice.gov/eoir). Nunca un notario.\nLos mensajes, nombres y números del ejemplo son inventados. Información general, no es asesoría legal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "alertadeestafa",
+    "estafas",
+    "inmigrantes",
+    "dinerosimple",
+    "fraude"
+   ],
+   "description": "Alerta: páginas que imitan al gobierno y cobran por trámites.",
+   "thumbnail_text": "¿Termina en .gov?",
+   "sources": [
+    "https://www.uscis.gov/es/evite-estafas",
+    "https://consumidor.ftc.gov/"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (immigration scam)",
+    "Official US federal government websites use .gov domains (GSA/CISA)",
+    "Check whether the trámite named in any example is currently open; don't name a program whose status is in flux"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2,
+  "review": "legal_review"
+ },
+ {
+  "key": "a-prestamo-sin-ss",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Advance-fee loan scam aimed at people without an SSN: 'guaranteed loan or card, no SSN, no credit check', pay a fee first. Legitimate lenders don't guarantee approval or ask for a fee before the loan. Ties to the Crédito sin Seguro Social series.",
+  "script": {
+   "title": "'Préstamo garantizado sin Seguro Social': la trampa",
+   "hook": "Si un préstamo te pide pagar antes de dártelo, ya sabes cómo termina.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si un préstamo te pide pagar antes de dártelo, ya sabes cómo termina.",
+     "on_screen_text": "Pagar antes del préstamo = estafa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. made-up screenshot with an 'EJEMPLO' watermark and numbered red callouts: a text: 'Préstamo garantizado sin Seguro Social, solo pague el seguro'. No text, no logos, no real people."
+    },
+    {
+     "heading": "Señal 1",
+     "narration": "Uno: garantizado, sin revisar tu crédito. Un prestamista real siempre revisa algo.",
+     "on_screen_text": "1. 'Garantizado, sin revisar crédito'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. made-up screenshot with an 'EJEMPLO' watermark and numbered red callouts: callout 1 on 'garantizado'. No text, no logos, no real people."
+    },
+    {
+     "heading": "Señal 2",
+     "narration": "Dos: te piden pagar primero un seguro, una cuota o un 'depósito'.",
+     "on_screen_text": "2. 'Paga primero el seguro o la cuota'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. made-up screenshot with an 'EJEMPLO' watermark and numbered red callouts: callout 2 on the fee. No text, no logos, no real people."
+    },
+    {
+     "heading": "Señal 3",
+     "narration": "Tres: el pago es con tarjeta de regalo o por una app. Y después piden otro.",
+     "on_screen_text": "3. Pago con tarjeta de regalo o app",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. made-up screenshot with an 'EJEMPLO' watermark and numbered red callouts: callout 3 on gift cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué hacer",
+     "narration": "Si necesitas crédito sin Seguro Social, empieza por una cooperativa de crédito o un prestamista comunitario.",
+     "on_screen_text": "Cooperativas y prestamistas comunitarios",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a credit union front, no logo. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Y mira la serie Crédito sin Seguro Social en el perfil.",
+     "on_screen_text": "Serie 'Crédito sin Seguro Social'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a playlist on a phone. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "'Préstamo garantizado sin Seguro Social, solo pague primero': es estafa.\nSeñales:\n1. 'Garantizado', sin revisar crédito.\n2. Te piden pagar antes un seguro, una cuota o un depósito.\n3. Pago con tarjeta de regalo o app.\nLos prestamistas legítimos no cobran por adelantado para 'garantizar' un préstamo.\n\nRepórtalo gratis en ReporteFraude.ftc.gov (en español).\nInformación general, no es asesoría financiera. Los mensajes del ejemplo son inventados.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "alertadeestafa",
+    "estafas",
+    "inmigrantes",
+    "dinerosimple",
+    "fraude"
+   ],
+   "description": "Alerta: préstamos 'garantizados' sin Seguro Social que cobran antes.",
+   "thumbnail_text": "Préstamo garantizado = trampa",
+   "sources": [
+    "https://consumidor.ftc.gov/",
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "Advance-fee loans: legitimate lenders don't guarantee a loan or ask for a fee up front to get it (FTC)",
+    "Some credit unions and community lenders (CDFIs) lend to ITIN holders"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "ac-senales-inmigracion",
+  "format": "carousel",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Save-and-send carousel: 7 signs a trámite offer is a scam (guaranteed result, cash only, no contract, keeps your originals, a site not ending in .gov, a 'fine' by phone, asks you to lie on a form) and the two places to check help (state bar, EOIR roster).",
+  "script": {
+   "title": "7 señales de una estafa de inmigración",
+   "hook": "Guárdala y mándasela a quien esté haciendo un trámite.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdala y mándasela a quien esté haciendo un trámite.",
+     "on_screen_text": "7 señales de estafa de inmigración",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a checklist with seven red flags. No text, no logos, no real people."
+    },
+    {
+     "heading": "1-2",
+     "narration": "Uno: te garantizan el resultado. Dos: solo aceptan efectivo.",
+     "on_screen_text": "1. 'Garantizado' · 2. Solo efectivo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two red flags. No text, no logos, no real people."
+    },
+    {
+     "heading": "3-4",
+     "narration": "Tres: no hay contrato ni recibo. Cuatro: se quedan con tus documentos originales.",
+     "on_screen_text": "3. Sin contrato ni recibo · 4. Se quedan tus originales",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two red flags. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Cinco: la página no termina en punto gov.",
+     "on_screen_text": "5. La página no termina en .gov",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an address bar with a red circle. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Seis: te llaman para cobrarte una multa.",
+     "on_screen_text": "6. Una 'multa' por teléfono",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a red flag. No text, no logos, no real people."
+    },
+    {
+     "heading": "7",
+     "narration": "Siete: te piden mentir o firmar en blanco. Eso te puede perjudicar a ti.",
+     "on_screen_text": "7. Te piden mentir en un formulario",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a blank form with a red flag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Verifica",
+     "narration": "Verifica a un abogado en el colegio de abogados de su estado, y a un representante en la lista del DOJ.",
+     "on_screen_text": "Colegio de abogados · lista del DOJ (EOIR)",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two generic directories. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Y recuerda: en Estados Unidos, un notario no es abogado.",
+     "on_screen_text": "Nunca un notario",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a 'no' sign over a notario storefront. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "7 señales de una estafa de inmigración:\n1. Te garantizan el resultado.\n2. Solo efectivo.\n3. Sin contrato ni recibo.\n4. Se quedan con tus documentos originales.\n5. La página no termina en .gov.\n6. Una 'multa' que te cobran por teléfono.\n7. Te piden mentir o firmar en blanco.\nVerifica: colegio de abogados de tu estado (abogados) y justice.gov/eoir (representantes acreditados).\n\nRepórtalo gratis en ReporteFraude.ftc.gov (en español).\nPara cualquier trámite de inmigración: un abogado con licencia o un representante acreditado por el DOJ (lista en justice.gov/eoir). Nunca un notario.\nLos mensajes, nombres y números del ejemplo son inventados. Información general, no es asesoría legal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "alertadeestafa",
+    "estafas",
+    "inmigrantes",
+    "dinerosimple",
+    "fraude"
+   ],
+   "description": "7 señales de una estafa de inmigración, para guardar y mandar.",
+   "thumbnail_text": "7 señales de estafa",
+   "sources": [
+    "https://www.uscis.gov/es/evite-estafas",
+    "https://www.justice.gov/eoir/recognition-and-accreditation-roster-reports"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (immigration scam)",
+    "Signs match USCIS's Avoid Scams guidance (guarantees, keeping originals, false statements, payment demands)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2,
+  "review": "legal_review"
+ }
+]

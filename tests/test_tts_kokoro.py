@@ -17,7 +17,7 @@ def _wav_bytes(seconds=0.5, rate=24000):
 
 @pytest.fixture
 def brand(factory):
-    return next(iter(factory.brands().values()))
+    return factory.brands()["money-made-simple"]  # an English brand (dinero-simple is Spanish)
 
 
 def test_kokoro_unavailable_without_config(factory, brand, monkeypatch):
