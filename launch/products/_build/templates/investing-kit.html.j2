@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Open Your First Investing Account</title>
+<style>
+{{ base_css }}
+.cover h1{ font-size:50pt; }
+.cover .art{ position:absolute; right:0.9in; bottom:1.45in; width:3.7in; height:2.7in; }
+.small{ font-size:8.5pt; color:var(--muted); }
+table.acct{ font-size:8.7pt; }
+table.acct th{ vertical-align:bottom; }
+table.acct td{ vertical-align:top; padding:5px 7px; }
+table.acct td:first-child{ font-weight:700; width:1.15in; }
+table.tight td, table.tight th{ padding:3px 7px; font-size:9pt; }
+.timer{ grid-template-columns:repeat(2,1fr); }
+.timer > div{ border-bottom:1.5px solid var(--ink); }
+.timer > div:nth-child(2n){ border-right:none; }
+.timer > div:nth-last-child(-n+2){ border-bottom:none; }
+.timer > div > div{ border:none; padding:0; background:none; }
+.toc li{ padding:4px 0; font-size:10.5pt; }
+.timer ul{ margin:6px 0 0; padding-left:16px; font-size:9pt; }
+.timer li{ margin-bottom:2px; }
+.pg{ font-weight:700; color:var(--green-d); font-size:8.5pt; }
+.ws td{ height:30px; border:1px solid #c9c2b0; }
+.ws th{ border:1px solid #c9c2b0; }
+.ws td:first-child{ font-weight:600; font-size:8.8pt; width:2.3in; background:#f7f4ec; }
+dl.gl{ display:grid; grid-template-columns:1.5in 1fr; gap:3px 14px; margin:6px 0; font-size:8.8pt; line-height:1.4; }
+dl.gl dt{ font-weight:700; }
+dl.gl dd{ margin:0; }
+.chart{ border:1.5px solid var(--ink); border-radius:12px; padding:12px 14px 8px; background:#fff; margin:10px 0; }
+.legend{ display:flex; gap:18px; font-size:8.5pt; margin-top:4px; }
+.legend i{ display:inline-block; width:10px; height:10px; border-radius:2px; margin-right:5px; vertical-align:-1px; }
+.verify{ display:inline-block; background:var(--gold-t); border:1px solid var(--gold); border-radius:6px; padding:0 6px; font-size:8pt; font-weight:700; color:#7a5300; }
+.q{ font-style:italic; color:var(--muted); }
+</style>
+</head>
+<body>
+
+<!-- ============ 1. COVER ============ -->
+<section class="page cover">
+  <div class="tag">Money Made Simple &middot; Starter Kit</div>
+  <h1>Open your first<br><em>investing account</em><br>in a weekend</h1>
+  <p class="sub">The account types explained in plain English, how to compare providers without the sales pitch, index fund basics, and a checklist that gets you from zero to invested by Sunday night.</p>
+  <div class="chips"><span>401(k) &middot; IRA &middot; Brokerage</span><span>Roth vs Traditional</span><span>Provider worksheet</span><span>Weekend checklist</span></div>
+  <svg class="art" viewBox="0 0 370 270" aria-hidden="true">
+    <polygon points="{{ chart.total }}" transform="scale(0.6,1)" fill="#2fbf71" opacity=".9"/>
+    <polygon points="{{ chart.contrib }}" transform="scale(0.6,1)" fill="#f2b134"/>
+    <line x1="0" y1="261" x2="370" y2="261" stroke="#3c5446" stroke-width="2"/>
+  </svg>
+  <div class="bottom"><span>Edition 1.0 &middot; for US readers</span><span>Educational content. Not financial, tax or investment advice.</span></div>
+</section>
+
+<!-- ============ 2. START HERE ============ -->
+<section class="page">
+  <div class="kicker">Start here</div>
+  <h2>What you'll have by Sunday night</h2>
+  <p class="lede">An investing account that's open, funded, actually invested (not sitting in cash), and set to add money automatically every payday. Plus enough understanding to know why you chose what you chose.</p>
+  <ul class="toc">
+    <li><span>1. The weekend plan</span><span>3</span></li>
+    <li><span>2. Before you invest: a sensible order</span><span>4</span></li>
+    <li><span>3. The account types at a glance</span><span>5</span></li>
+    <li><span>4. Workplace plans: 401(k) and 403(b)</span><span>6</span></li>
+    <li><span>5. IRAs: Roth or Traditional?</span><span>7</span></li>
+    <li><span>6. Taxable brokerage accounts + this year's limits</span><span>8</span></li>
+    <li><span>7. How to compare providers</span><span>9</span></li>
+    <li><span>8. Provider comparison worksheet</span><span>10</span></li>
+    <li><span>9. Index fund basics</span><span>11</span></li>
+    <li><span>10. Why fees matter, with numbers</span><span>12</span></li>
+    <li><span>11. Compounding, worked examples</span><span>13</span></li>
+    <li><span>12. Opening the account, step by step</span><span>14</span></li>
+    <li><span>13. The weekend checklist (printable)</span><span>15</span></li>
+    <li><span>14. Glossary</span><span>16</span></li>
+    <li><span>15. Where to verify, and the fine print</span><span>17</span></li>
+  </ul>
+  <div class="box warn">
+    <div class="kicker" style="color:#9a6a00">Please read: education, not advice</div>
+    <p>This guide explains how common US investment accounts and index funds work so you can make your own decisions. It is not financial, tax, legal or investment advice, it doesn't know your situation, and it doesn't recommend any company, fund or product. Tax rules and limits change every year: anything marked <span class="verify">verify</span> should be checked at irs.gov before you rely on it. All investing involves risk, including losing money. The examples use made-up people and assumed returns for illustration only; they are not predictions. If your situation is complicated (self-employment, high income, inheritance, stock options), a fee-only financial planner or tax professional is worth the cost.</p>
+  </div>
+  <p class="small">No company in this guide paid to be included, and none is named. That's deliberate: the right provider for you depends on things only you can check, and page 9 shows you how.</p>
+  <div class="folio"><span>Open Your First Investing Account</span><span>2</span></div>
+</section>
+
+<!-- ============ 3. WEEKEND PLAN ============ -->
+<section class="page">
+  <div class="kicker">Chapter 1</div>
+  <h2>The weekend plan</h2>
+  <p class="lede">About four hours in total, split into four sessions. Reading first, decisions second, clicking buttons last.</p>
+  <div class="timer">
+    <div><div class="t">Sat AM</div><div class="h">Understand (60 min)</div>
+      <ul><li>Read chapters 2 to 6 <span class="pg">p.4&ndash;8</span></li><li>Check your workplace plan: is there one, and a match?</li><li>Decide which account comes first</li></ul></div>
+    <div><div class="t">Sat PM</div><div class="h">Compare (60 min)</div>
+      <ul><li>Read chapter 7 <span class="pg">p.9</span></li><li>Fill in the worksheet for 2 or 3 providers <span class="pg">p.10</span></li><li>Pick one. Good enough beats perfect.</li></ul></div>
+    <div><div class="t">Sun AM</div><div class="h">Choose what to buy (45 min)</div>
+      <ul><li>Read chapters 9 to 11 <span class="pg">p.11&ndash;13</span></li><li>Shortlist one or two broad, low-cost index funds offered by your provider</li><li>Choose your monthly amount</li></ul></div>
+    <div><div class="t">Sun PM</div><div class="h">Open, fund, automate (60 min)</div>
+      <ul><li>Open the account <span class="pg">p.14</span></li><li>Link your bank, transfer money, <strong>buy</strong> the fund</li><li>Set up the automatic monthly investment</li><li>Tick off the checklist <span class="pg">p.15</span></li></ul></div>
+  </div>
+  <h3>What to have ready</h3>
+  <div class="grid2">
+    <ul class="check">
+      <li>Your Social Security number (or ITIN)</li>
+      <li>A government photo ID (driver's license or passport)</li>
+      <li>Your bank's routing and account numbers</li>
+    </ul>
+    <ul class="check">
+      <li>Your employer's name and address</li>
+      <li>Name, date of birth and contact details for a beneficiary</li>
+      <li>Your workplace benefits login, if you have a plan at work</li>
+    </ul>
+  </div>
+  <div class="box tip"><strong>If you get stuck:</strong> it's completely fine to spread this over two weekends. The only real mistake is never starting, or opening the account and leaving the money in cash for a year (page 14 shows how to avoid that).</div>
+  <div class="folio"><span>Open Your First Investing Account</span><span>3</span></div>
+</section>
+
+<!-- ============ 4. BEFORE YOU INVEST ============ -->
+<section class="page">
+  <div class="kicker">Chapter 2</div>
+  <h2>Before you invest: a sensible order</h2>
+  <p class="lede">Investing is for money you won't need for at least five years. Before that, it helps to have the ground under you solid. Many people work through something like this:</p>
+  <div class="step"><div class="n">1</div><div class="b"><h4 style="margin-top:4px">A starter cash buffer</h4><p>Some emergency savings in an insured bank or credit union account, so a surprise bill doesn't force you to sell investments at a bad moment or go into card debt. A common starting target is one month of essential bills, growing toward three to six months over time.</p></div></div>
+  <div class="step"><div class="n">2</div><div class="b"><h4 style="margin-top:4px">Capture any employer match</h4><p>If your workplace plan matches contributions, that match is part of your pay. Contributing enough to get all of it is one of the few no-brainers in personal finance, even while you work on other goals. Page 6 shows how matches work.</p></div></div>
+  <div class="step"><div class="n">3</div><div class="b"><h4 style="margin-top:4px">High-interest debt</h4><p>Paying off a credit card charging around 20% to 30% is a guaranteed saving of that rate. No investment reliably beats that, so many people clear high-rate debt before investing beyond the match. Low-rate debt (say under 5%) is more of a judgment call.</p></div></div>
+  <div class="step"><div class="n">4</div><div class="b"><h4 style="margin-top:4px">Then: invest regularly</h4><p>An IRA, more in your workplace plan, or a taxable account, depending on the next few chapters. The habit (a fixed amount, every payday, automatically) matters more than the starting amount.</p></div></div>
+  <h3>Quick self-check</h3>
+  <table class="tight">
+    <tr><th>Question</th><th style="width:1.2in">Yes / No</th></tr>
+    <tr><td>Do I have some emergency cash that isn't invested?</td><td></td></tr>
+    <tr><td>Am I getting my full employer match (or is there none)?</td><td></td></tr>
+    <tr><td>Are my credit cards paid in full each month (or on a payoff plan)?</td><td></td></tr>
+    <tr><td>Is this money I won't need for at least five years?</td><td></td></tr>
+  </table>
+  <p class="small">Four yeses: you're in a good spot to start this weekend. A no doesn't mean you can't invest; it just tells you what else deserves attention. This order is a common rule of thumb, not a rule. Your situation may call for a different one.</p>
+  <div class="folio"><span>Open Your First Investing Account</span><span>4</span></div>
+</section>
+
+<!-- ============ 5. ACCOUNT TYPES ============ -->
+<section class="page">
+  <div class="kicker">Chapter 3</div>
+  <h2>The account types at a glance</h2>
+  <p class="lede">An account is the container; the investments (like index funds) go inside it. The container decides how the money is taxed and when you can take it out.</p>
+  <table class="acct">
+    <tr><th></th><th>401(k) / 403(b)</th><th>Traditional IRA</th><th>Roth IRA</th><th>Taxable brokerage</th></tr>
+    <tr><td>Who opens it</td><td>Your employer offers it; you enroll</td><td>You, at a provider you choose</td><td>You, at a provider you choose</td><td>You, at a provider you choose</td></tr>
+    <tr><td>Who can contribute</td><td>Eligible employees, via payroll</td><td>Anyone with earned income (or a spouse who has it)</td><td>Earned income, below an income limit <span class="verify">verify</span></td><td>Anyone. No income test, no cap</td></tr>
+    <tr><td>Tax when money goes in</td><td>Traditional: pre-tax, lowers taxable pay now. Many plans also offer a Roth option (after-tax).</td><td>May be tax-deductible, depending on income and workplace plan coverage <span class="verify">verify</span></td><td>No deduction: after-tax money</td><td>No deduction: after-tax money</td></tr>
+    <tr><td>Tax while it grows</td><td>None</td><td>None</td><td>None</td><td>Dividends and realized gains taxed each year</td></tr>
+    <tr><td>Tax when you take it out</td><td>Traditional: taxed as income. Roth: qualified withdrawals tax-free</td><td>Taxed as ordinary income</td><td>Qualified withdrawals tax-free; your contributions can come out any time</td><td>Only on gains; long-term gains usually taxed at lower rates</td></tr>
+    <tr><td>Early withdrawal</td><td>Before 59&frac12;, generally income tax + 10% additional tax, with exceptions</td><td>Same general rule, with exceptions</td><td>Contributions: anytime. Earnings: rules apply</td><td>Anytime (tax on any gain)</td></tr>
+    <tr><td>Employer match</td><td><strong>Often, yes</strong></td><td>No</td><td>No</td><td>No</td></tr>
+    <tr><td>Investment menu</td><td>Limited to the plan's list</td><td>Wide: whatever the provider offers</td><td>Wide: whatever the provider offers</td><td>Wide: whatever the provider offers</td></tr>
+  </table>
+  <div class="box tip"><strong>The one-line version.</strong> Workplace plan: match + payroll automation. IRA: tax benefits + your choice of provider and funds. Taxable: flexibility, no limits, no tax perks. Many people end up with more than one; you don't need them all this weekend.</div>
+  <p class="small">Simplified for clarity. Rules on deductions, income limits, early-withdrawal exceptions and required withdrawals have details this table can't show. Check irs.gov (search "IRA FAQs" and "401(k) plans") for the current rules.</p>
+  <div class="folio"><span>Open Your First Investing Account</span><span>5</span></div>
+</section>
+
+<!-- ============ 6. WORKPLACE PLANS ============ -->
+<section class="page">
+  <div class="kicker">Chapter 4</div>
+  <h2>Workplace plans: 401(k) and 403(b)</h2>
+  <p class="lede">A 401(k) (companies) or 403(b) (schools, hospitals, non-profits) lets you invest straight from your paycheck. If you have one, it's usually the first place to look.</p>
+  <h3>How the match works</h3>
+  <p>Many employers add money when you contribute, up to a limit. Two common formulas, for someone earning {{ salary|money }} a year (illustrative):</p>
+  <table>
+    <tr><th>Match formula</th><th class="r">You put in (per year)</th><th class="r">Employer adds</th><th class="r">Total invested</th></tr>
+    {% for x in match %}<tr><td>{{ x.label }}</td><td class="r">{{ x.you|money }}</td><td class="r"><strong>{{ x.emp|money }}</strong></td><td class="r">{{ (x.you + x.emp)|money }}</td></tr>{% endfor %}
+  </table>
+  <p>Contribute less than the match limit and that extra pay simply isn't paid. Your plan's exact formula is in the plan documents or benefits portal; look for "employer match" or "matching contribution".</p>
+  <div class="grid2">
+    <div>
+      <h4>Vesting</h4>
+      <p>Your own contributions are always yours. The employer's match may "vest" over a few years: leave before then and you could forfeit some of it. The plan's summary plan description tells you the schedule.</p>
+      <h4>Traditional or Roth 401(k)?</h4>
+      <p>If your plan offers both, the same question as for IRAs applies: pay tax now (Roth) or later (Traditional). See page 7. Employer match money has traditionally gone in pre-tax; check how your plan handles it.</p>
+    </div>
+    <div>
+      <h4>What to pick inside the plan</h4>
+      <p>Plans offer a menu. Look for low-cost broad index funds or a target-date fund near the year you expect to retire. Check each fund's <strong>expense ratio</strong> (page 12). If you do nothing, money may go into a default fund; check what it is.</p>
+      <h4>Changing jobs</h4>
+      <p>Your vested balance stays yours. You can usually leave it, move it to a new employer's plan, or roll it into an IRA. Avoid cashing out: taxes and penalties can take a big bite.</p>
+    </div>
+  </div>
+  <div class="box dark"><div class="kicker">This weekend</div><p style="margin:0">Log in to your benefits portal. Note: is there a plan, is there a match, what's the formula, what are you contributing now? If you're below the match, raising your contribution percentage takes five minutes and may be the most valuable thing you do all weekend.</p></div>
+  <div class="folio"><span>Open Your First Investing Account</span><span>6</span></div>
+</section>
+
+<!-- ============ 7. IRAs ============ -->
+<section class="page">
+  <div class="kicker">Chapter 5</div>
+  <h2>IRAs: Roth or Traditional?</h2>
+  <p class="lede">An IRA (individual retirement account) is one you open yourself, at the provider of your choice. Both types grow without yearly tax. The difference is <em>when</em> you pay tax.</p>
+  <div class="grid2">
+    <div class="card"><div class="lbl">Traditional IRA</div><p style="margin:4px 0 0">Contributions may be deductible now (lowering this year's tax). Withdrawals in retirement are taxed as income. <strong>Tax later.</strong></p></div>
+    <div class="card"><div class="lbl">Roth IRA</div><p style="margin:4px 0 0">No deduction now. Qualified withdrawals in retirement are tax-free, including all the growth. <strong>Tax now.</strong></p></div>
+  </div>
+  <h3>The one question: is your tax rate higher now, or later?</h3>
+  <p>Take {{ pre|money }} of pre-tax income and assume it grows {{ "%.1f"|format(growth30) }}&times; over 30 years (a hypothetical {{ "%.0f"|format(rate) }}% a year). Today's tax rate is 22%. What you'd have after tax:</p>
+  <table>
+    <tr><th>Your tax rate in retirement</th><th class="r">Traditional: invest {{ pre|money }}, pay tax at the end</th><th class="r">Roth: pay 22% now, invest {{ (pre*0.78)|money }}</th><th>Better here</th></tr>
+    {% for x in rt %}<tr><td>{{ "%.0f"|format(x.later) }}% ({{ ["lower than now","same as now","higher than now"][loop.index0] }})</td><td class="r">{{ x.trad|money }}</td><td class="r">{{ x.roth|money }}</td><td>{% if x.trad > x.roth + 1 %}Traditional{% elif x.roth > x.trad + 1 %}Roth{% else %}Tie{% endif %}</td></tr>{% endfor %}
+  </table>
+  <p>When the rates are equal, the result is identical. So the choice is really a guess about your future tax rate. Early in a career, when income (and tax rate) is often lower than it will be later, many people lean Roth. In high-earning years, the Traditional deduction is worth more. Plenty of people split the difference and use both over time.</p>
+  <div class="grid2">
+    <div>
+      <h4>Other Roth features</h4>
+      <ul>
+        <li>Your <strong>contributions</strong> (not earnings) can be withdrawn any time without tax or penalty.</li>
+        <li>Earnings are tax-free once you're 59&frac12; and the account has been open five years (with some exceptions).</li>
+        <li>No required withdrawals during the original owner's lifetime.</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Rules to check <span class="verify">verify</span></h4>
+      <ul>
+        <li>Roth IRA has an income limit; above it you can't contribute directly.</li>
+        <li>Traditional IRA deductions phase out at certain incomes if you (or a spouse) have a workplace plan.</li>
+        <li>You need earned income at least equal to what you contribute (spousal IRAs are the exception).</li>
+      </ul>
+    </div>
+  </div>
+  <p class="small">Illustration only: one lump sum, a fixed made-up return and flat tax rates. Real outcomes depend on your income, deductions, state taxes and future tax law. Not tax advice.</p>
+  <div class="folio"><span>Open Your First Investing Account</span><span>7</span></div>
+</section>
+
+<!-- ============ 8. TAXABLE + LIMITS ============ -->
+<section class="page">
+  <div class="kicker">Chapter 6</div>
+  <h2>Taxable brokerage accounts</h2>
+  <p class="lede">A regular (taxable, "individual") brokerage account has no tax perks and no rules about who, how much, or when. That flexibility is the point.</p>
+  <div class="grid2">
+    <div>
+      <h4>When it can make sense</h4>
+      <ul>
+        <li>You've used the tax-advantaged room you want to use this year.</li>
+        <li>The goal is 5+ years away but isn't retirement (a home deposit in 7 years, say).</li>
+        <li>You want money you can reach at any age without retirement-account rules.</li>
+      </ul>
+    </div>
+    <div>
+      <h4>How it's taxed (simplified)</h4>
+      <ul>
+        <li><strong>Dividends</strong> are taxed in the year you receive them, even if reinvested.</li>
+        <li>When you sell for a profit, the gain is taxed. Held over one year: <strong>long-term</strong>, usually lower rates. One year or less: <strong>short-term</strong>, taxed like income.</li>
+        <li>Your provider sends a tax form (1099) each year.</li>
+      </ul>
+    </div>
+  </div>
+  <p>Broad index funds tend to be relatively tax-efficient because they trade less, which is one reason they're popular in taxable accounts.</p>
+
+  <h3>2026 contribution limits <span class="verify">verify at irs.gov</span></h3>
+  <p>The IRS updates these every year, usually in the fall. These are the 2026 figures as announced; check irs.gov (search "401(k) and IRA contribution limits 2026") before you rely on them.</p>
+  <table>
+    <tr><th>Account</th><th class="r">2026 limit</th><th>Notes</th></tr>
+    <tr><td>401(k), 403(b), most 457 plans, TSP: your contributions</td><td class="r"><strong>$24,500</strong></td><td>Employer match doesn't count toward this; a higher combined limit applies</td></tr>
+    <tr><td>Catch-up, age 50+ (workplace plans)</td><td class="r">+$8,000</td><td>Higher catch-up for ages 60&ndash;63 ($11,250); some high earners must make catch-ups as Roth</td></tr>
+    <tr><td>IRA (Traditional + Roth combined)</td><td class="r"><strong>$7,500</strong></td><td>Total across all your IRAs, not per account; can't exceed your earned income</td></tr>
+    <tr><td>IRA catch-up, age 50+</td><td class="r">+$1,100</td><td></td></tr>
+    <tr><td>Roth IRA income phase-out</td><td class="r" style="white-space:nowrap">$153k&ndash;$168k<br>$242k&ndash;$252k</td><td>Modified AGI: single / head of household (first line), married filing jointly (second line)</td></tr>
+  </table>
+  <p class="small">IRA contributions for a tax year can usually be made until that year's tax-filing deadline (typically mid-April of the following year). Figures are for the 2026 tax year and may have been revised since this edition. Always confirm at irs.gov.</p>
+  <div class="folio"><span>Open Your First Investing Account</span><span>8</span></div>
+</section>
+
+<!-- ============ 9. COMPARE PROVIDERS ============ -->
+<section class="page">
+  <div class="kicker">Chapter 7</div>
+  <h2>How to compare providers</h2>
+  <p class="lede">Any large, regulated brokerage can hold an IRA or a taxable account. You're not looking for "the best"; you're checking that nothing about the one you pick will quietly cost you. Ask each provider the same questions.</p>
+  <table class="tight">
+    <tr><th style="width:1.45in">What to check</th><th>Why it matters</th><th style="width:2.15in">What good looks like</th></tr>
+    <tr><td><strong>Account fees</strong></td><td>Annual, maintenance, inactivity or "low balance" fees eat small accounts alive.</td><td>None, at any balance</td></tr>
+    <tr><td><strong>Trading costs</strong></td><td>Commissions on buying ETFs or mutual funds add up with monthly investing.</td><td>No commission on the funds you'll buy</td></tr>
+    <tr><td><strong>Fund costs</strong></td><td>The expense ratio is charged every year, forever. It matters more than any one-off fee (page 12).</td><td>Broad index funds with very low expense ratios available</td></tr>
+    <tr><td><strong>Minimums</strong></td><td>Minimums to open the account, or to buy a particular fund, can block a small start.</td><td>$0 to open; fund minimums you can meet</td></tr>
+    <tr><td><strong>Fund choice</strong></td><td>You need at least one broad, diversified, low-cost option.</td><td>Total-market, S&amp;P 500, international, bond and target-date index funds or ETFs</td></tr>
+    <tr><td><strong>Automatic investing</strong></td><td>Automation is what makes the habit stick.</td><td>Recurring transfers <em>and</em> automatic purchases of your fund</td></tr>
+    <tr><td><strong>Fractional shares</strong></td><td>Lets every dollar get invested, even when a share costs more than you're adding.</td><td>Available for the funds you want</td></tr>
+    <tr><td><strong>Protection</strong></td><td>SIPC covers customers if a member brokerage firm fails (not investment losses).</td><td>SIPC member; check at sipc.org</td></tr>
+    <tr><td><strong>Leaving fees</strong></td><td>Some firms charge to transfer an account out.</td><td>Low or none; know the number</td></tr>
+    <tr><td><strong>Security &amp; service</strong></td><td>You'll log in for decades.</td><td>Two-factor login; reachable humans; an app you'll actually use</td></tr>
+    <tr><td><strong>Background</strong></td><td>Disciplinary history is public.</td><td>Clean record on FINRA BrokerCheck</td></tr>
+  </table>
+  <div class="box warn"><strong>Red flags:</strong> pressure to decide today; "guaranteed" returns; anyone recommending products they earn a commission on without telling you; a push toward complex products (options, leverage, crypto, high-fee annuities) for your first account; sign-up bonuses that require trading frequently.</div>
+  <p class="small">Robo-advisors (automated portfolio services) and target-date funds both offer hands-off investing. Robo-advisors often add an advisory fee on top of fund costs; compare the all-in yearly cost.</p>
+  <div class="folio"><span>Open Your First Investing Account</span><span>9</span></div>
+</section>
+
+<!-- ============ 10. WORKSHEET ============ -->
+<section class="page">
+  <div class="kicker">Printable</div>
+  <h2>Provider comparison worksheet</h2>
+  <p class="lede">Fill in one column per provider from their pricing and FAQ pages. If you can't find an answer in ten minutes, that's an answer too.</p>
+  <table class="ws">
+    <tr><th></th><th>Provider A</th><th>Provider B</th><th>Provider C</th></tr>
+    {% for row in ["Name","Account fee (yearly / inactivity)","Minimum to open","Commission on ETFs / mutual funds","Lowest expense ratio: total-market or S&P 500 index fund","Target-date index funds? Expense ratio?","Fund minimum to buy","Fractional shares?","Automatic recurring investing?","Fee to transfer out","SIPC member? (sipc.org)","BrokerCheck: anything notable?","Two-factor login?","App / site: easy to use?","Account types offered (Roth, Traditional, taxable)","Gut feeling (1-5)"] %}
+    <tr><td>{{ row }}</td><td></td><td></td><td></td></tr>
+    {% endfor %}
+  </table>
+  <div class="box tip"><strong>Decision rule:</strong> cross out any provider with account fees or commissions on the funds you'd buy. From the rest, pick the one with the lowest-cost broad index fund and automatic investing. If two tie, pick the app you like more. You'll use it for years.</div>
+  <div class="folio"><span>Open Your First Investing Account</span><span>10</span></div>
+</section>
+
+<!-- ============ 11. INDEX FUNDS ============ -->
+<section class="page">
+  <div class="kicker">Chapter 9</div>
+  <h2>Index fund basics</h2>
+  <p class="lede">An index fund buys every investment in a list (an "index") in proportion, instead of paying someone to pick winners. One purchase gets you a slice of hundreds or thousands of companies.</p>
+  <div class="grid2">
+    <div>
+      <h4>Why beginners like them</h4>
+      <ul>
+        <li><strong>Diversified:</strong> one company's bad year barely registers.</li>
+        <li><strong>Low cost:</strong> no stock-picking team to pay, so expense ratios are often a fraction of actively managed funds.</li>
+        <li><strong>Simple:</strong> you don't need opinions about individual companies.</li>
+        <li><strong>Transparent:</strong> you know what you own.</li>
+      </ul>
+    </div>
+    <div>
+      <h4>What they don't do</h4>
+      <ul>
+        <li>They don't avoid market drops. When the market falls, a stock index fund falls with it, sometimes a lot, sometimes for years.</li>
+        <li>They don't guarantee any return.</li>
+        <li>A single-country stock fund is still concentrated in one market.</li>
+      </ul>
+    </div>
+  </div>
+  <h3>Common types</h3>
+  <table class="tight">
+    <tr><th style="width:1.7in">Type</th><th>What it holds</th><th style="width:1.9in">Typical role</th></tr>
+    <tr><td><strong>Total US stock market</strong></td><td>Practically every publicly traded US company, large to small</td><td>Core holding</td></tr>
+    <tr><td><strong>S&amp;P 500</strong></td><td>About 500 large US companies</td><td>Core holding (large companies only)</td></tr>
+    <tr><td><strong>Total international</strong></td><td>Companies outside the US, developed and emerging markets</td><td>Adds global diversification</td></tr>
+    <tr><td><strong>Total bond market</strong></td><td>Many government and corporate bonds</td><td>Steadier; smaller drops and lower expected growth</td></tr>
+    <tr><td><strong>Target-date fund</strong></td><td>A mix of the above that shifts from stocks toward bonds as the target year approaches</td><td>All-in-one, hands-off</td></tr>
+  </table>
+  <div class="grid2">
+    <div>
+      <h4>ETF or mutual fund?</h4>
+      <p>Both can track the same index. <strong>ETFs</strong> trade during the day like a stock, usually with no fund minimum. <strong>Index mutual funds</strong> trade once a day at the closing price, sometimes with a minimum first purchase, and are easy to automate in fixed dollar amounts. For a long-term investor, either works. Compare expense ratios.</p>
+    </div>
+    <div>
+      <h4>How many funds do I need?</h4>
+      <p>Fewer than you'd think. Some people hold one target-date fund. Others hold a US fund and an international fund, adding a bond fund as they get closer to needing the money. More funds isn't more diversified if they all hold the same companies.</p>
+    </div>
+  </div>
+  <p class="small">Fund categories are described generally. Before buying any fund, read its summary prospectus or fact sheet: what it holds, its expense ratio and its risks.</p>
+  <div class="folio"><span>Open Your First Investing Account</span><span>11</span></div>
+</section>
+
+<!-- ============ 12. FEES ============ -->
+<section class="page">
+  <div class="kicker">Chapter 10</div>
+  <h2>Why fees matter, with numbers</h2>
+  <p class="lede">The <strong>expense ratio</strong> is the yearly cost of a fund, as a percentage of what you have in it. It's taken out quietly, so you never see a bill. That's exactly why it's worth checking.</p>
+  <div class="formula">yearly cost &asymp; amount invested &times; expense ratio<br>e.g. $10,000 &times; 0.50% = $50 a year &nbsp;&middot;&nbsp; $10,000 &times; 0.05% = $5 a year</div>
+  <p>$45 a year sounds like nothing. But the fee is charged on your whole balance, every year, and the money it takes can't compound for you. Here's {{ 300|money }} a month for 30 years, assuming a hypothetical {{ "%.0f"|format(rate) }}% a year before fees:</p>
+  <table>
+    <tr><th>Expense ratio</th><th class="r">Yearly cost per $10,000</th><th class="r">Balance after 30 years</th><th class="r">Less than the 0.05% fund</th></tr>
+    {% for f in fees %}<tr{% if loop.first %} class="sub"{% endif %}><td>{{ "%.2f"|format(f.fee) }}%</td><td class="r">{{ f.yearly_on_10k|money }}</td><td class="r"><strong>{{ f.fv|money }}</strong></td><td class="r">{% if loop.first %}&ndash;{% else %}{{ f.lost|money }}{% endif %}</td></tr>{% endfor %}
+  </table>
+  <p>Same contributions ({{ (300*360)|money }} in total), same market. The only difference is the fee: about {{ fees[2].lost|money }} less with a 1% fee than with a 0.05% one.</p>
+  <div class="grid2">
+    <div>
+      <h4>Where to find it</h4>
+      <p>On the fund's page at your provider, its fact sheet, or its prospectus. Look for "expense ratio" or "net expense ratio".</p>
+    </div>
+    <div>
+      <h4>Other costs to look out for</h4>
+      <p>Sales charges ("loads"), account fees, advisory fees (common with managed accounts and some robo-advisors) and trading commissions. Add them up to compare the all-in yearly cost.</p>
+    </div>
+  </div>
+  <p class="small">Calculation: monthly contributions at the end of each month, monthly compounding, fee approximated by subtracting it from the assumed annual return. The {{ "%.0f"|format(rate) }}% return is a made-up round number for illustration, not a prediction. Real returns vary year to year and can be negative.</p>
+  <div class="folio"><span>Open Your First Investing Account</span><span>12</span></div>
+</section>
+
+<!-- ============ 13. COMPOUNDING ============ -->
+<section class="page">
+  <div class="kicker">Chapter 11</div>
+  <h2>Compounding, worked examples</h2>
+  <p class="lede">Compounding means your returns start earning returns. It's slow at first and then surprisingly fast, which is why time in the market matters more than the starting amount.</p>
+  <div class="chart">
+    <div style="font-weight:700;font-size:10pt">{{ 250|money }} a month for 40 years at a hypothetical {{ "%.0f"|format(rate) }}% a year</div>
+    <svg viewBox="-56 -10 676 300" style="width:100%;height:auto;display:block" aria-label="Growth chart">
+      {% for y, v in chart.grid %}<line x1="0" x2="600" y1="{{ y }}" y2="{{ y }}" stroke="#e5e0d2" stroke-width="1"/><text x="-8" y="{{ y + 4 }}" text-anchor="end" font-size="11" fill="#4b5a51" font-family="Inter">{{ (v/1000)|int }}k</text>{% endfor %}
+      <polygon points="{{ chart.total }}" fill="#2fbf71"/>
+      <polygon points="{{ chart.contrib }}" fill="#f2b134"/>
+      <line x1="0" y1="260" x2="600" y2="260" stroke="#0b1d13" stroke-width="1.5"/>
+      {% for yr in [0,10,20,30,40] %}<text x="{{ yr*15 }}" y="278" text-anchor="middle" font-size="11" fill="#4b5a51" font-family="Inter">{{ yr }} yrs</text>{% endfor %}
+      <text x="596" y="22" text-anchor="end" font-size="12" font-weight="700" fill="#0b1d13" font-family="Inter">{{ chart.end|money }}</text>
+    </svg>
+    <div class="legend"><span><i style="background:#f2b134"></i>What you put in ({{ chart.end_in|money }})</span><span><i style="background:#2fbf71"></i>Growth ({{ (chart.end - chart.end_in)|money }})</span><span>At 20 years: {{ chart.mid[1]|money }} from {{ chart.mid[2]|money }} put in</span></div>
+  </div>
+  <h3>Monthly amounts over time (hypothetical {{ "%.0f"|format(rate) }}% a year)</h3>
+  <table class="tight">
+    <tr><th>Per month</th>{% for y in years %}<th class="r">{{ y }} years</th>{% endfor %}</tr>
+    {% for g in grid %}<tr><td><strong>{{ g.pmt|money }}</strong></td>{% for c in g.cells %}<td class="r">{{ c.fv|money }}<br><span class="small">put in {{ c["in"]|money }}</span></td>{% endfor %}</tr>{% endfor %}
+  </table>
+  <div class="grid2">
+    <div>
+      <h4>The return assumption changes a lot</h4>
+      <table class="tight">
+        <tr><th>$200/mo, 30 yrs</th><th class="r">Ends at</th></tr>
+        {% for r in rate_rows %}<tr><td>{{ "%.0f"|format(r.rate*100) }}% a year</td><td class="r">{{ r.fv|money }}</td></tr>{% endfor %}
+        <tr><td>Total put in</td><td class="r">{{ rate_rows[0]["in"]|money }}</td></tr>
+      </table>
+    </div>
+    <div>
+      <h4>Starting early (made-up people)</h4>
+      <p style="font-size:9.2pt">Alex invests $200/month from 25 to 35, then stops: {{ early.a_in|money }} in. Sam invests $200/month from 35 to 65: {{ early.b_in|money }} in. At 65, at {{ "%.0f"|format(rate) }}%: Alex has about <strong>{{ early.a65|money }}</strong>, Sam about <strong>{{ early.b65|money }}</strong>. Alex put in a third as much and ends up close.</p>
+    </div>
+  </div>
+  <p class="small">All figures computed with monthly contributions at the end of each month and monthly compounding, before taxes, fees and inflation. Returns are assumptions, not predictions; real returns vary every year and can be negative for long stretches. Try your own numbers at investor.gov (compound interest calculator).</p>
+  <div class="folio"><span>Open Your First Investing Account</span><span>13</span></div>
+</section>
+
+<!-- ============ 14. STEP BY STEP ============ -->
+<section class="page">
+  <div class="kicker">Chapter 12</div>
+  <h2>Opening the account, step by step</h2>
+  <p class="lede">The exact screens vary by provider, but every one follows roughly this path. Allow about 30 minutes, plus a few business days for money to arrive.</p>
+  <div class="step"><div class="n">1</div><div class="b"><h4 style="margin-top:4px">Choose the account type</h4><p>"Roth IRA", "Traditional IRA" or "Individual brokerage". Opening an account doesn't commit you to investing any amount yet.</p></div></div>
+  <div class="step"><div class="n">2</div><div class="b"><h4 style="margin-top:4px">Enter your details</h4><p>Name, address, date of birth, SSN, employment and some financial questions. These are legally required (to verify identity and assess suitability). Answer honestly.</p></div></div>
+  <div class="step"><div class="n">3</div><div class="b"><h4 style="margin-top:4px">Name a beneficiary</h4><p>Who inherits the account. It's quick and easy to skip, and skipping it can create a mess for your family. Add a primary and, if you can, a contingent beneficiary.</p></div></div>
+  <div class="step"><div class="n">4</div><div class="b"><h4 style="margin-top:4px">Turn on security</h4><p>Two-factor authentication and a unique password. Never share login codes with anyone who contacts you.</p></div></div>
+  <div class="step"><div class="n">5</div><div class="b"><h4 style="margin-top:4px">Link your bank and transfer money</h4><p>With routing and account numbers or a bank login. For an IRA, choose which <strong>tax year</strong> the contribution is for if asked.</p></div></div>
+  <div class="step"><div class="n">6</div><div class="b"><h4 style="margin-top:4px">Buy your investment. Don't skip this.</h4><p>Money you transfer usually lands in a cash "settlement" or "core" position. <strong>It isn't invested until you buy something.</strong> Search for your chosen fund, enter a dollar amount and confirm. A surprising number of people find their IRA sat in cash for years.</p></div></div>
+  <div class="step"><div class="n">7</div><div class="b"><h4 style="margin-top:4px">Automate it</h4><p>Set a recurring transfer from your bank on payday <em>and</em> an automatic investment into your fund. Check both are switched on; some providers treat them separately.</p></div></div>
+  <div class="step"><div class="n">8</div><div class="b"><h4 style="margin-top:4px">Then leave it alone</h4><p>Check in a few times a year, raise the amount when your pay goes up, and resist selling when the market drops. Drops are normal and expected.</p></div></div>
+  <div class="folio"><span>Open Your First Investing Account</span><span>14</span></div>
+</section>
+
+<!-- ============ 15. CHECKLIST ============ -->
+<section class="page">
+  <div class="kicker">Printable</div>
+  <h2>The weekend checklist</h2>
+  <p class="lede">Tick as you go. Nothing on here needs to be perfect, only done.</p>
+  <div class="grid2">
+    <div>
+      <h3 style="margin-top:4px">Saturday</h3>
+      <ul class="check">
+        <li>Read chapters 2 to 6</li>
+        <li>Emergency cash exists (or a plan to build it)</li>
+        <li>Checked workplace plan and its match</li>
+        <li>Contributing enough to get the full match</li>
+        <li>Decided first account: Roth IRA / Traditional IRA / 401(k) / taxable</li>
+        <li>Checked this year's limits at irs.gov</li>
+        <li>Compared 2&ndash;3 providers on the worksheet</li>
+        <li>Picked a provider: ______________________</li>
+      </ul>
+      <h3>Sunday</h3>
+      <ul class="check">
+        <li>Read chapters 9 to 11</li>
+        <li>Chose a fund: ______________________</li>
+        <li>Its expense ratio: ______ %</li>
+        <li>Read its fact sheet or summary prospectus</li>
+        <li>Monthly amount: $ __________</li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="margin-top:4px">Open, fund, automate</h3>
+      <ul class="check">
+        <li>Account opened</li>
+        <li>Beneficiary added</li>
+        <li>Two-factor login on</li>
+        <li>Bank linked</li>
+        <li>First transfer sent: $ __________</li>
+        <li>Fund <strong>bought</strong> once the money arrived (not left in cash)</li>
+        <li>Recurring transfer set for payday</li>
+        <li>Automatic investment into the fund set</li>
+        <li>Login details stored safely</li>
+      </ul>
+      <h3>Diary dates</h3>
+      <ul class="check">
+        <li>In 1 week: confirm the fund was actually bought</li>
+        <li>In 1 month: confirm the automatic investment ran</li>
+        <li>Every January: check new limits, raise the amount</li>
+        <li>At every raise: raise contributions too</li>
+      </ul>
+    </div>
+  </div>
+  <div class="box dark" style="margin-top:14px"><div class="kicker">Done?</div><p style="margin:0">Then you're an investor. The hard part (starting) is behind you. The next part is mostly patience.</p></div>
+  <div class="folio"><span>Open Your First Investing Account</span><span>15</span></div>
+</section>
+
+<!-- ============ 16. GLOSSARY ============ -->
+<section class="page">
+  <div class="kicker">Chapter 14</div>
+  <h2>Glossary</h2>
+  <dl class="gl">
+    <dt>401(k) / 403(b)</dt><dd>Employer-sponsored retirement plans funded from your paycheck. 403(b)s are for schools, hospitals and non-profits.</dd>
+    <dt>Asset allocation</dt><dd>How your money is split between stocks, bonds and cash. The biggest driver of both growth and how bumpy the ride is.</dd>
+    <dt>Beneficiary</dt><dd>The person (or people) who inherit an account. Named on the account, separate from a will.</dd>
+    <dt>Bond</dt><dd>A loan to a government or company that pays interest. Usually steadier than stocks, with lower expected returns.</dd>
+    <dt>Brokerage account</dt><dd>An account for buying and holding investments. "Taxable" or "individual" means no special tax treatment.</dd>
+    <dt>Capital gain</dt><dd>Profit when you sell for more than you paid. Long-term (held over a year) is usually taxed at lower rates than short-term.</dd>
+    <dt>Compounding</dt><dd>Earning returns on previous returns, so growth builds on itself over time.</dd>
+    <dt>Diversification</dt><dd>Spreading money across many investments so no single one can sink you.</dd>
+    <dt>Dividend</dt><dd>A share of company profits paid to shareholders. Funds pass them on; you can reinvest them automatically.</dd>
+    <dt>Dollar-cost averaging</dt><dd>Investing a fixed amount on a schedule, regardless of price. It's what automatic monthly investing does.</dd>
+    <dt>Earned income</dt><dd>Pay from work (wages, self-employment). Needed to contribute to an IRA.</dd>
+    <dt>ETF</dt><dd>Exchange-traded fund: a fund that trades during the day like a stock.</dd>
+    <dt>Expense ratio</dt><dd>A fund's yearly cost, as a percentage of your balance in it.</dd>
+    <dt>Fiduciary</dt><dd>Someone legally required to act in your best interest. Ask any adviser whether they are one, at all times, in writing.</dd>
+    <dt>Fractional shares</dt><dd>Buying part of a share, so every dollar can be invested.</dd>
+    <dt>Index</dt><dd>A list of investments that represents a market (for example, the S&amp;P 500).</dd>
+    <dt>Index fund</dt><dd>A fund that holds everything in an index, rather than picking investments.</dd>
+    <dt>IRA</dt><dd>Individual retirement account, opened by you. Traditional (tax later) or Roth (tax now).</dd>
+    <dt>Match</dt><dd>Money your employer adds to your workplace plan when you contribute.</dd>
+    <dt>Mutual fund</dt><dd>A pooled fund priced once a day. Can be index or actively managed.</dd>
+    <dt>Rebalancing</dt><dd>Selling a bit of what's grown and buying what's lagged to get back to your chosen mix.</dd>
+    <dt>RMD</dt><dd>Required minimum distribution: yearly withdrawals the IRS requires from most pre-tax retirement accounts from a certain age. Roth IRAs have none for the original owner.</dd>
+    <dt>Roth 401(k)</dt><dd>A Roth option inside a workplace plan: after-tax contributions, tax-free qualified withdrawals.</dd>
+    <dt>Rollover</dt><dd>Moving a retirement account to another provider or plan without triggering tax, when done correctly.</dd>
+    <dt>Settlement fund</dt><dd>The cash holding where deposits land before you buy. Not the same as being invested.</dd>
+    <dt>SIPC</dt><dd>Securities Investor Protection Corporation. Protects customers of a member firm that fails, within limits. Doesn't protect against market losses.</dd>
+    <dt>Target-date fund</dt><dd>An all-in-one fund that gets more conservative as its target year approaches.</dd>
+    <dt>Vesting</dt><dd>When employer contributions become fully yours. Your own contributions are always 100% vested.</dd>
+  </dl>
+  <div class="folio"><span>Open Your First Investing Account</span><span>16</span></div>
+</section>
+
+<!-- ============ 17. SOURCES + FINE PRINT ============ -->
+<section class="page">
+  <div class="kicker">Chapter 15</div>
+  <h2>Where to verify, and the fine print</h2>
+  <p class="lede">Rules and limits change. These official and non-commercial sources are where to check anything in this guide before you act on it.</p>
+  <table class="tight">
+    <tr><th style="width:1.8in">Source</th><th>Use it for</th></tr>
+    <tr><td><strong>irs.gov</strong></td><td>Current contribution limits, Roth IRA income limits, IRA deduction rules, early-withdrawal exceptions, required distributions. Search "IRA FAQs", "Retirement topics" and "401(k) and IRA contribution limits".</td></tr>
+    <tr><td><strong>investor.gov</strong> (SEC)</td><td>Plain-English guides to funds, fees and fraud, plus a free compound interest calculator.</td></tr>
+    <tr><td><strong>brokercheck.finra.org</strong></td><td>Look up a brokerage firm or financial professional's registration and disciplinary history.</td></tr>
+    <tr><td><strong>sipc.org</strong></td><td>Check whether a brokerage is a SIPC member and what SIPC protection does and doesn't cover.</td></tr>
+    <tr><td><strong>dol.gov</strong> (EBSA)</td><td>Your rights in employer retirement plans, including fee disclosures and vesting.</td></tr>
+    <tr><td><strong>Your plan documents</strong></td><td>Your employer's match formula, vesting schedule, fund menu and fees: the summary plan description and annual fee disclosure.</td></tr>
+  </table>
+  <h3>How the examples were calculated</h3>
+  <p>Every number in this guide's examples was computed, not estimated: monthly contributions added at the end of each month, monthly compounding at the stated annual rate divided by 12, no taxes, no inflation. Fee examples subtract the expense ratio from the assumed annual return. The people (Alex, Sam) and the {{ salary|money }} salary are made up. Assumed returns of 4%, 6% and 8% a year are round numbers chosen to show sensitivity; they aren't forecasts and they aren't based on any particular fund.</p>
+  <div class="box warn">
+    <div class="kicker" style="color:#9a6a00">Disclaimer</div>
+    <p>This guide is general education about how investment accounts and index funds work in the United States. It is not financial, investment, tax or legal advice, and it is not a recommendation to buy or sell any security or to use any particular company. Investing involves risk, including the possible loss of principal. Past performance does not guarantee future results. Tax treatment depends on your circumstances and on laws that change. Contribution limits and income thresholds shown are for the 2026 tax year as published at the time of writing and must be verified at irs.gov. Consider talking to a qualified, fee-only professional about your specific situation. The author is not a registered investment adviser or tax professional.</p>
+  </div>
+  <p class="small">Personal use only; please don't resell or share this file. &copy; Money Made Simple. Edition 1.0.</p>
+  <div class="folio"><span>Open Your First Investing Account</span><span>17</span></div>
+</section>
+
+</body>
+</html>

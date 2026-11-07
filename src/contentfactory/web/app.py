@@ -94,6 +94,15 @@ def _include_funnel(app: FastAPI) -> None:
     app.state.funnel_enabled = True
 
 
+def _include_community(app: FastAPI) -> None:
+    """Mount the comment inbox (drafts replies; a human sends each one)."""
+    try:
+        from ..community.routes import router
+    except ImportError:
+        return
+    app.include_router(router)
+
+
 def create_app(factory: Factory | None = None) -> FastAPI:
     """Build the dashboard around a Factory (default: Factory.create() from env)."""
     factory = factory or Factory.create()
@@ -120,6 +129,7 @@ def create_app(factory: Factory | None = None) -> FastAPI:
     app.include_router(pages.router)
     _include_business(app)
     _include_funnel(app)
+    _include_community(app)
 
     app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
     factory.settings.output_dir.mkdir(parents=True, exist_ok=True)

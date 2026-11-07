@@ -23,7 +23,7 @@ factory demo                      # renders sample posts offline, no keys needed
 factory serve                     # dashboard at http://127.0.0.1:8000
 ```
 
-Then read **`launch/LAUNCH_DAY.md`** (the plan for day one) and **`docs/CREDENTIALS.md`** (the steps
+New here? **`docs/QUICKSTART.md`** gets you from clone to first scheduled post in 15 minutes. Then read **`launch/LAUNCH_DAY.md`** (the plan for day one) and **`docs/CREDENTIALS.md`** (the steps
 only you can do: payouts, accounts, API keys).
 
 ## What's in the box
@@ -64,6 +64,10 @@ factory order create --client 3 --package starter && factory order invoice --id 
 factory revenue report
 factory auth youtube | tiktok | meta        # connect accounts
 ```
+
+With `--days 0`, `pack export` renders the whole file as an undated library, grouped by format (used for `launch/money-made-simple/evergreen/`).
+
+`factory channels export --brand <slug> --config <channels/config.json> --out channels/` repurposes the packs into Pinterest pins (images + bulk-upload CSV), weekly newsletter issues and X/Threads text threads (see `launch/money-made-simple/channels/config.json`).
 
 `factory --help` lists everything. Run it in production with `docker compose up -d`.
 

@@ -39,6 +39,10 @@ class Script(BaseModel):
     thumbnail_text: str = Field(description="2-5 word thumbnail text")
     sources: list[str] = Field(description="URLs or references a human should check")
     claims_to_verify: list[str] = Field(description="Factual claims a human must verify before publishing")
+    title_variants: list[str] = Field(default_factory=list,
+                                      description="2-3 alternative titles for A/B tests (YouTube Test & Compare)")
+    hook_variants: list[str] = Field(default_factory=list,
+                                     description="2-3 alternative opening lines to test in later reposts or cutdowns")
 
 
 class ReviewVerdict(BaseModel):

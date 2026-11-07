@@ -67,7 +67,8 @@ SYSTEM = (
     "specific, true observation about the prospect based only on the fields given (never invent facts "
     "about them); a concrete offer; one low-friction question as CTA; no fake urgency, no deceptive "
     "subject lines, no 'Re:' or 'Fwd:' tricks, no claims about results we can't prove. Do not add a "
-    "signature or footer; it is appended automatically. follow_up is a 2-3 sentence polite nudge."
+    "signature or footer; it is appended automatically. follow_up is a 2-3 sentence polite nudge sent ~3 "
+    "days later; don't call it the last email (one short final note follows ~4 days after it)."
 )
 
 
@@ -107,7 +108,7 @@ def _offline_pitch(client: dict, sender: SenderProfile) -> PitchEmail:
         subject=f"Short video ads for {name}",
         body=body,
         follow_up=f"Hi {first}, just checking whether a free sample ad for {name} would be useful. "
-                  f"If not, no worries and I won't follow up again.",
+                  f"Happy to make one for whichever product you'd like to test first.",
     )
 
 
@@ -162,6 +163,7 @@ def mark_opt_out(db: DB, client_id: int) -> None:
     meta = client["meta"]
     meta["opted_out"] = now_iso()
     meta.pop("next_follow_up", None)
+    _cancel_cadence(meta, "opted out")
     db.update("clients", client_id, {"meta": meta, "status": "lost" if client["status"] != "won" else "won"})
     db.log("client.opted_out", "client", client_id)
 
@@ -244,3 +246,175 @@ def import_leads_csv(db: DB, source: str | Path | bytes, lead_source: str = "csv
         added.append(add_client(db, f["name"], email=f["email"], website=f["website"], niche=f["niche"],
                                 contact_name=f["contact_name"], notes=f["notes"], source=lead_source))
     return {"added": len(added), "ids": added, "duplicates": duplicates, "errors": errors}
+
+
+# --------------------------------------------------------------------------- follow-up cadence
+FOLLOW_UP_OFFSETS = (3, 7)          # days after the first email
+CADENCE_STATUSES = {"lead", "contacted"}  # any other status (replied, negotiating, won, lost...) stops it
+
+
+def _final_nudge(client: dict, sender: SenderProfile) -> str:
+    first = (client.get("contact_name") or "").split(" ")[0] or "there"
+    return (f"Hi {first},\n\nLast note from me on this. If short AI-presented video ads for "
+            f"{client.get('name') or 'your products'} become useful later, just reply and I'll make you one free "
+            f"sample ad to judge.\n\nThanks,\n{sender.name or '[Your name]'}")
+
+
+def _with_footer(text: str, sender: SenderProfile) -> str:
+    text = text.rstrip()
+    return text if OPT_OUT_LINE in text else f"{text}\n\n{compliance_footer(sender)}"
+
+
+def cadence_active(client: dict) -> bool:
+    meta = client.get("meta") if isinstance(client.get("meta"), dict) else {}
+    cad = meta.get("cadence") or {}
+    return bool(cad) and not cad.get("stopped") and not meta.get("opted_out") \
+        and client.get("status") in CADENCE_STATUSES
+
+
+def mark_pitch_sent(db: DB, client_id: int, sent_on: str | None = None,
+                    sender: SenderProfile | dict | None = None) -> dict:
+    """Record that YOU sent the first email (nothing is sent from here) and schedule
+    follow-up drafts at +3 and +7 days. Moves a lead to 'contacted'. Returns the cadence."""
+    from ._util import add_days, today
+    from .ugc import set_client_status
+    s = _sender(sender)
+    client = get_client(db, client_id)
+    meta = client["meta"]
+    if meta.get("opted_out"):
+        raise ValueError(f"Client #{client_id} opted out; don't email them")
+    draft = latest_draft(client)
+    if not draft:
+        raise ValueError(f"Client #{client_id} has no pitch draft yet; draft one first")
+    day0 = sent_on or today().isoformat()
+    draft["sent_at"] = day0
+    bodies = [_with_footer(draft.get("follow_up") or "", s) if draft.get("follow_up") else None,
+              _with_footer(_final_nudge(client, s), s)]
+    steps = [{"n": i + 1, "due": add_days(day0, off), "subject": draft["subject"],
+              "body": bodies[i] or _with_footer(_final_nudge(client, s), s), "status": "pending"}
+             for i, off in enumerate(FOLLOW_UP_OFFSETS)]
+    meta["cadence"] = {"sent_at": day0, "subject": draft["subject"], "steps": steps}
+    meta["next_follow_up"] = steps[0]["due"]
+    db.update("clients", client_id, {"meta": meta})
+    if client["status"] == "lead":
+        set_client_status(db, client_id, "contacted", note="First pitch sent", follow_up=steps[0]["due"])
+    db.log("pitch.sent", "client", client_id, {"on": day0, "follow_ups": [x["due"] for x in steps]})
+    return meta["cadence"]
+
+
+def _cancel_cadence(meta: dict, reason: str) -> bool:
+    """Stop a cadence in a client's meta dict (caller saves). True if it was running."""
+    cad = meta.get("cadence")
+    if not cad or cad.get("stopped"):
+        return False
+    cad["stopped"] = reason
+    for st in cad.get("steps", []):
+        if st["status"] == "pending":
+            st["status"] = "cancelled"
+    return True
+
+
+def stop_cadence(db: DB, client_id: int, reason: str) -> None:
+    client = get_client(db, client_id)
+    if _cancel_cadence(client["meta"], reason):
+        db.update("clients", client_id, {"meta": client["meta"]})
+        db.log("pitch.cadence_stopped", "client", client_id, {"reason": reason})
+
+
+def mark_follow_up_sent(db: DB, client_id: int, step: int | None = None, sent_on: str | None = None) -> dict:
+    """Record that you sent the next (or a given) follow-up. Returns that step."""
+    from ._util import today
+    client = get_client(db, client_id)
+    meta = client["meta"]
+    cad = meta.get("cadence")
+    if not cad or not cadence_active(client):
+        raise ValueError(f"Client #{client_id} has no active follow-up cadence")
+    pending = [s for s in cad["steps"] if s["status"] == "pending" and (step is None or s["n"] == step)]
+    if not pending:
+        raise ValueError(f"No pending follow-up{f' #{step}' if step else ''} for client #{client_id}")
+    current = pending[0]
+    current.update(status="sent", sent_at=sent_on or today().isoformat())
+    nxt = [s for s in cad["steps"] if s["status"] == "pending"]
+    if nxt:
+        meta["next_follow_up"] = nxt[0]["due"]
+    else:
+        cad["stopped"] = "completed"
+        meta.pop("next_follow_up", None)
+    db.update("clients", client_id, {"meta": meta})
+    db.log("pitch.follow_up_sent", "client", client_id, {"step": current["n"]})
+    return current
+
+
+def mark_sent(db: DB, client_id: int, sent_on: str | None = None) -> dict:
+    """One button for 'I sent the next email': the first pitch if it hasn't gone
+    out yet, otherwise the next pending follow-up."""
+    client = get_client(db, client_id)
+    cad = client["meta"].get("cadence")
+    if not cad:
+        return {"kind": "pitch", "cadence": mark_pitch_sent(db, client_id, sent_on)}
+    return {"kind": "follow_up", "step": mark_follow_up_sent(db, client_id, sent_on=sent_on)}
+
+
+def outreach_today(db: DB, on: str | None = None) -> dict:
+    """What to send today (drafts only; you send them yourself):
+
+    - follow_ups: cadence steps due on or before today, for clients still in
+      lead/contacted and not opted out (one step per client: the earliest).
+    - first_touch: leads with an email and an unsent pitch draft.
+    - to_draft: leads with an email and no draft yet.
+    """
+    from ._util import today
+    day = on or today().isoformat()
+    follow_ups, first_touch, to_draft = [], [], []
+    for client in db.query("SELECT * FROM clients ORDER BY id"):
+        meta = client.get("meta") if isinstance(client.get("meta"), dict) else {}
+        client["meta"] = meta
+        if meta.get("opted_out") or not client.get("email"):
+            continue
+        cad = meta.get("cadence")
+        if cad:
+            if cadence_active(client):
+                due = [s for s in cad["steps"] if s["status"] == "pending" and s["due"] <= day]
+                if due:
+                    st = due[0]
+                    follow_ups.append({"client": client, "step": st["n"], "due": st["due"], "subject": st["subject"],
+                                       "body": st["body"], "days_late": _days_between(st["due"], day)})
+            continue
+        if client["status"] != "lead":
+            continue
+        draft = latest_draft(client)
+        if draft and not draft.get("sent_at"):
+            first_touch.append({"client": client, "subject": draft["subject"], "body": draft["body"]})
+        elif not draft:
+            to_draft.append({"client": client})
+    return {"date": day, "follow_ups": follow_ups, "first_touch": first_touch, "to_draft": to_draft,
+            "count": len(follow_ups) + len(first_touch)}
+
+
+def _days_between(a: str, b: str) -> int:
+    from datetime import date
+    return (date.fromisoformat(b) - date.fromisoformat(a)).days
+
+
+def export_today(db: DB, out_dir: Path | str, sender: SenderProfile | dict | None = None,
+                 on: str | None = None) -> dict:
+    """Write today's emails (first pitches + due follow-ups) as .eml drafts and a CSV."""
+    s = _sender(sender)
+    plan = outreach_today(db, on)
+    out = Path(out_dir)
+    out.mkdir(parents=True, exist_ok=True)
+    rows, files = [], []
+    items = [("pitch", x) for x in plan["first_touch"]] + [(f"followup{x['step']}", x) for x in plan["follow_ups"]]
+    for kind, item in items:
+        c = item["client"]
+        path = out / f"{c['id']:04d}-{slugify(c['name'], 40)}-{kind}.eml"
+        path.write_bytes(_eml(s, c, item["subject"], item["body"]))
+        files.append(str(path))
+        rows.append({"client_id": c["id"], "name": c["name"], "email": c["email"], "kind": kind,
+                     "subject": item["subject"], "body": item["body"]})
+    csv_path = out / "today.csv"
+    with csv_path.open("w", newline="", encoding="utf-8") as fh:
+        writer = csv.DictWriter(fh, fieldnames=["client_id", "name", "email", "kind", "subject", "body"])
+        writer.writeheader()
+        writer.writerows(rows)
+    return {"eml": files, "csv": str(csv_path), "count": len(rows)}

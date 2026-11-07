@@ -259,3 +259,17 @@ def settings_page(request: Request, factory: Factory = Depends(get_factory)) -> 
     return render(request, "settings.html", s=s, brands=brands, brand_files=brand_files,
                   brand_errors=brand_errors, env=env, creds=queries.credentials(factory),
                   llm_provider=factory.llm.provider, llm_model=factory.llm.model)
+
+
+@router.get("/report")
+def report_page(request: Request, factory: Factory = Depends(get_factory)) -> HTMLResponse:
+    from ..reports import weekly_report
+    return render(request, "report.html", r=weekly_report(factory))
+
+
+@router.post("/report/save")
+def report_save(factory: Factory = Depends(get_factory)):
+    from fastapi.responses import RedirectResponse
+    from ..reports import save_report
+    path = save_report(factory)
+    return RedirectResponse(f"/report?msg=Saved+{path}", status_code=303)

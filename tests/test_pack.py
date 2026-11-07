@@ -2,19 +2,24 @@ import json
 from datetime import date
 from pathlib import Path
 
-from contentfactory.pack import caption_txt, plan, revenue_tags
+import pytest
+
+from contentfactory.pack import caption_txt, est_seconds, plan, revenue_tags, tiktok_segments
 
 ROOT = Path(__file__).resolve().parents[1]
-MONTH = ROOT / "launch" / "money-made-simple" / "month-1" / "content.json"
+MONTHS = sorted((ROOT / "launch" / "money-made-simple").glob("month-*/content.json"))
+MONTH = MONTHS[0]
+EVERGREEN = ROOT / "launch" / "money-made-simple" / "evergreen" / "content.json"
 
 
-def _items():
-    return json.loads(MONTH.read_text())
+def _items(path=MONTH):
+    return json.loads(path.read_text())
 
 
-def test_month_content_is_valid(factory):
+@pytest.mark.parametrize("path", MONTHS + [EVERGREEN], ids=lambda p: p.parent.name)
+def test_month_content_is_valid(factory, path):
     from contentfactory.schemas import Script
-    items = _items()
+    items = _items(path)
     titles = [i["script"]["title"] for i in items]
     assert len(titles) == len(set(titles))
     brand = factory.brand("money-made-simple")
@@ -69,3 +74,40 @@ def test_export_writes_pack(factory, tmp_path):
     vid = next((out / "videos-need-voice").iterdir())
     assert (vid / "thumbnail.jpg").exists() or (vid / "thumbnail.png").exists()
     assert "NARRATION SCRIPT" in (vid / "caption.txt").read_text()
+
+
+@pytest.mark.parametrize("month,start", [("month-2", date(2026, 12, 21)), ("month-3", date(2027, 1, 21))])
+def test_tiktok_cuts_and_series(factory, month, start):
+    items = _items(ROOT / "launch" / "money-made-simple" / month / "content.json")
+    shorts = [i for i in items if i["format"] == "short"]
+    assert shorts and all(i.get("tiktok_extra") for i in shorts)
+    for it in shorts:
+        base = [s["narration"] for s in it["script"]["segments"]]
+        cut = [s["narration"] for s in tiktok_segments(it)]
+        assert est_seconds(base) <= 50          # Reels/Shorts cut stays short
+        assert 55 <= est_seconds(cut) <= 90     # TikTok cut lands in the 60-90s band once pauses are added
+        assert cut[-1] == base[-1]
+        assert any(ch.isdigit() for ch in it["script"]["hook"])  # number-first hooks
+    rmb = [i for i in items if i.get("series") == "Rate My Budget"]
+    assert len(rmb) >= 4
+    assert all("Fictional example" in i["script"]["caption"] for i in rmb)
+    brand = factory.brand("money-made-simple")
+    slots, leftover = plan(brand, items, start, 31,
+                           {"carousel": "mon,tue,wed,thu,fri"})
+    assert len(leftover) <= 1  # a spare is fine when the window ends on a weekend
+    txt = caption_txt(brand, rmb[0], None)
+    assert "TikTok cut" in txt and "Reels / Shorts cut" in txt
+
+
+def test_evergreen_library_is_undated_and_unique():
+    import re
+    items = _items(EVERGREEN)
+    assert len(items) == 50
+    assert sum(i["format"] == "short" for i in items) == 25
+    for it in items:
+        blob = json.dumps(it["script"])
+        assert not re.search(r"\b20[2-3]\d\b", blob), it["script"]["title"]  # no years: works any month
+        if it["format"] == "short":
+            assert est_seconds(s["narration"] for s in it["script"]["segments"]) <= 20
+    seen = {i["script"]["title"].lower() for m in MONTHS for i in _items(m)}
+    assert not seen & {i["script"]["title"].lower() for i in items}

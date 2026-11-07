@@ -3,6 +3,12 @@
 * every PUBLISH_EVERY minutes: publish due posts
 * once a day at DAILY_AT (local time of the first brand): `daily` for each brand
 * every METRICS_EVERY hours: collect metrics
+* every SEQUENCES_EVERY minutes (default 60): welcome-sequence emails
+  (funnel.sequences.run_sequences; real sends only with FACTORY_DRY_RUN=0,
+  SMTP_* and BUSINESS_ADDRESS, otherwise .eml dry runs)
+* every COMMENTS_EVERY minutes (default 60, 0 = off): collect comments and
+  draft replies into the inbox. Replies are only ever sent by a human click.
+* Mondays after DAILY_AT: save the weekly report to output/reports/
 
 `daily` only fills the review queue. Approving stays with you.
 """
@@ -27,8 +33,10 @@ def run_forever() -> None:
     daily_at = os.environ.get("DAILY_AT", "07:00")
     brands = factory.brands()
     tz = ZoneInfo(next(iter(brands.values())).cadence.timezone) if brands else timezone.utc
-    last_publish = last_metrics = datetime.min.replace(tzinfo=timezone.utc)
-    last_daily_date = None
+    sequences_every = timedelta(minutes=int(os.environ.get("SEQUENCES_EVERY", "60")))
+    comments_every = timedelta(minutes=int(os.environ.get("COMMENTS_EVERY", "60")))
+    last_publish = last_metrics = last_sequences = last_comments = datetime.min.replace(tzinfo=timezone.utc)
+    last_daily_date = last_report_date = None
     log.info("worker started; dry_run=%s brands=%s", factory.settings.dry_run, list(brands))
     while True:
         now = datetime.now(timezone.utc)
@@ -49,6 +57,35 @@ def run_forever() -> None:
                 last_metrics = now
         except Exception:  # keep the worker alive; errors land in the log
             log.exception("worker tick failed")
+        if now - last_sequences >= sequences_every:  # own try: a failing step above can't starve it
+            last_sequences = now
+            try:
+                from .funnel.sequences import run_sequences
+                res = run_sequences(factory, now, confirm=True)
+                if res["sent"] or res["dry_run"] or res["failed"]:
+                    log.info("sequences: mode=%s sent=%s dry_run=%s failed=%s skipped=%s blocked=%s", res["mode"],
+                             res["sent"], res["dry_run"], res["failed"], res["skipped"], res["blocked"])
+            except Exception:
+                log.exception("sequence run failed")
+        if comments_every and now - last_comments >= comments_every:
+            last_comments = now
+            try:
+                from .community import collect_comments, draft_replies
+                res = collect_comments(factory)
+                if res.get("new"):
+                    log.info("comments: %s; drafted %s", {k: v for k, v in res.items() if k != "errors"},
+                             len(draft_replies(factory)))
+            except Exception:
+                log.exception("comment collection failed")
+        try:
+            local = now.astimezone(tz)
+            hh, mm = map(int, daily_at.split(":"))
+            if local.weekday() == 0 and local.date() != last_report_date and (local.hour, local.minute) >= (hh, mm):
+                from .reports import save_report
+                log.info("weekly report: %s", save_report(factory))
+                last_report_date = local.date()
+        except Exception:
+            log.exception("weekly report failed")
         time.sleep(30)
 
 

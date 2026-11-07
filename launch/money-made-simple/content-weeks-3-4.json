@@ -1,0 +1,1881 @@
+[
+ {
+  "format": "short",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "Worked numbers: $5,000 parked at 0.01% APY earns about 50 cents a year; at an illustrative 3.5% APY it earns about $175. Same money, same safety if both are insured.",
+  "script": {
+   "title": "Your savings account pays you 50 cents",
+   "hook": "Five thousand dollars in a big-bank savings account can earn you about fifty cents a year.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Five thousand dollars in a big-bank savings account can earn you about fifty cents a year.",
+     "on_screen_text": "$5,000 earning 50¢ a year",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes staring at a single tiny coin on a huge empty plate. No text, no logos, no real people."
+    },
+    {
+     "heading": "The math",
+     "narration": "At 0.01% APY, five thousand dollars earns roughly fifty cents over twelve months. Many large banks still pay rates around there on basic savings.",
+     "on_screen_text": "0.01% APY = about $0.50/year",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a large columned bank building with a very small coin dripping out of a tap. No text, no logos, no real people."
+    },
+    {
+     "heading": "The comparison",
+     "narration": "Put the same five thousand in a high-yield savings account paying, say, 3.5% APY, and it earns roughly $175 in a year, if the rate holds.",
+     "on_screen_text": "3.5% APY = about $175/year",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two jars side by side, one with a single coin, one with a neat stack of coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Same safety",
+     "narration": "If both accounts are at FDIC-insured banks, your deposits have the same insurance coverage. The difference is mostly the rate.",
+     "on_screen_text": "Insured either way. Rate differs.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two identical umbrellas over two savings jars. No text, no logos, no real people."
+    },
+    {
+     "heading": "The catch",
+     "narration": "High-yield rates are variable. They move with interest rates in general, so check the current APY and any fees before you switch.",
+     "on_screen_text": "Rates move. Check before switching.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a dial with an arrow that can swing up or down next to a savings jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Takeaway",
+     "narration": "Your emergency fund should be boring and insured. It doesn't have to be underpaid.",
+     "on_screen_text": "Boring, insured, not underpaid",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes carrying a jar from a sleepy building to a brighter one across a small bridge. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "$5,000 at 0.01% APY ≈ $0.50 a year. The same $5,000 at an illustrative 3.5% APY ≈ $175 a year (rates are variable and change over time).\n\nIf both banks are FDIC-insured, the insurance is the same. Before switching, check the current APY, monthly fees, minimums and how fast transfers out take.\n\nThe high-yield savings account in our link in bio is an affiliate link: we may earn a commission if you open and fund an account, at no extra cost to you. Compare rates and terms yourself first.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "highyieldsavings",
+    "hysa",
+    "savingsaccount",
+    "emergencyfund",
+    "apy",
+    "bankingtips",
+    "moneymadesimple"
+   ],
+   "description": "Worked numbers on how much $5,000 earns at a 0.01% APY versus an illustrative 3.5% APY, and what to check before moving your savings.",
+   "thumbnail_text": "$5,000 earning 50¢",
+   "sources": [
+    "https://www.fdic.gov/resources/bankers/national-rates/index.html",
+    "https://www.fdic.gov/resources/deposit-insurance",
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-an-apy-and-an-apr-en-1913/"
+   ],
+   "claims_to_verify": [
+    "Many large banks pay around 0.01% APY on standard savings (check current posted rates at 2-3 big banks)",
+    "3.5% APY is illustrative only; check current HYSA rates on posting day and adjust the example if they have moved a lot",
+    "$5,000 x 0.01% = $0.50; $5,000 x 3.5% = $175 (simple one-year estimate, ignoring compounding within the year)",
+    "Confirm the affiliate HYSA is held at an FDIC-insured bank and has no monthly fee before posting"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "APR vs APY: same 12% number, different meaning. APR is the yearly rate before compounding; APY includes compounding. 12% APR compounded monthly is about 12.68% APY. Banks advertise whichever looks better.",
+  "script": {
+   "title": "APR vs APY: the sneaky difference",
+   "hook": "Banks quote APY when they pay you and APR when you pay them. That's not an accident.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Banks quote APY when they pay you and APR when you pay them. That's not an accident.",
+     "on_screen_text": "APY when they pay. APR when you pay.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes looking suspiciously at two price tags with different shapes. No text, no logos, no real people."
+    },
+    {
+     "heading": "APR",
+     "narration": "APR is the yearly interest rate before compounding. Credit cards and loans usually show APR.",
+     "on_screen_text": "APR = rate before compounding",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a plain flat ruler next to a credit card shape. No text, no logos, no real people."
+    },
+    {
+     "heading": "APY",
+     "narration": "APY includes compounding, meaning interest earning interest. Savings accounts show APY because it's the bigger-looking number.",
+     "on_screen_text": "APY = rate with compounding",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small snowball rolling and growing down a gentle hill. No text, no logos, no real people."
+    },
+    {
+     "heading": "Worked example",
+     "narration": "A card at 12% APR that compounds monthly actually costs about 12.68% a year if the balance just sits there.",
+     "on_screen_text": "12% APR ≈ 12.68% effective",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a staircase of twelve small steps rising slightly higher than a straight line. No text, no logos, no real people."
+    },
+    {
+     "heading": "How to compare",
+     "narration": "Compare savings accounts APY to APY, and loans APR to APR. Mixing them is how offers look better than they are.",
+     "on_screen_text": "Compare like with like",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two matching puzzle pieces clicking together, two mismatched pieces set aside. No text, no logos, no real people."
+    },
+    {
+     "heading": "Takeaway",
+     "narration": "Same number, two meanings. Always check which letters come after it.",
+     "on_screen_text": "Check the letters after the %",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a magnifying glass over a percent sign. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "APR = yearly rate before compounding (used for cards and loans).\nAPY = yearly rate including compounding (used for savings).\n\n12% APR compounded monthly ≈ 12.68% effective per year. Compare APY with APY and APR with APR, never one against the other.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "apr",
+    "apy",
+    "creditcards",
+    "savingsaccount",
+    "financialliteracy",
+    "moneyterms",
+    "moneymadesimple"
+   ],
+   "description": "The difference between APR and APY, with a worked example of 12% APR compounded monthly.",
+   "thumbnail_text": "APR ≠ APY",
+   "sources": [
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-an-apy-and-an-apr-en-1913/",
+    "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator"
+   ],
+   "claims_to_verify": [
+    "(1 + 0.12/12)^12 - 1 = 12.68% (arithmetic check)",
+    "Credit card interest is typically disclosed as APR and many cards compound daily; the monthly example is a simplification"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "'Save what's left' fails because nothing is left. Schedule the savings transfer for the morning after payday so it leaves before spending starts; start at 1-5% and raise it each month.",
+  "script": {
+   "title": "Why there's never anything left to save",
+   "hook": "If you save whatever's left at the end of the month, you'll save zero. Here's why.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "If you save whatever's left at the end of the month, you'll save zero. Here's why.",
+     "on_screen_text": "Saving what's left = saving $0",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding an empty wallet upside down at the end of a calendar month. No text, no logos, no real people."
+    },
+    {
+     "heading": "The problem",
+     "narration": "Spending expands to fill whatever sits in checking. By day thirty, 'left over' is usually nothing.",
+     "on_screen_text": "Spending fills the space",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a balloon expanding to fill a box. No text, no logos, no real people."
+    },
+    {
+     "heading": "The fix",
+     "narration": "Flip the order. Set an automatic transfer to savings for the morning after payday, before you buy anything.",
+     "on_screen_text": "Save first. Spend second.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with payday circled and an arrow sending a coin to a jar the next morning. No text, no logos, no real people."
+    },
+    {
+     "heading": "Start small",
+     "narration": "Pick an amount you won't notice, like two percent of your take-home pay. On a $3,000 month that's $60.",
+     "on_screen_text": "Start at 2%: $60 on $3,000",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a tiny coin dropping into a large jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Turn it up",
+     "narration": "Every month, raise it a little. Small bumps feel painless and add up quickly.",
+     "on_screen_text": "Raise it a little each month",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a volume dial being turned up one notch by the small round green piggy bank mascot with big eyes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Takeaway",
+     "narration": "Savings isn't a leftover. It's the first bill you pay, and it's paid to you.",
+     "on_screen_text": "Pay yourself like a bill",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes handing a coin to its own reflection in a mirror. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "\"Save what's left\" usually means saving $0. Flip it: an automatic transfer to savings the morning after payday, before spending starts. Start small (2% of a $3,000 month is $60) and raise it a little every month.\n\nThe 20-Minute Budget calls this the Goals line, and it's paid first. The 20-Minute Budget (guide + Excel/Google Sheets template) is in the link in bio. It's our own product.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "payyourselffirst",
+    "savingmoney",
+    "automatesavings",
+    "budgetingtips",
+    "paydayroutine",
+    "moneyhabits",
+    "moneymadesimple"
+   ],
+   "description": "Why saving what's left fails, and how to schedule an automatic payday transfer that you increase each month.",
+   "thumbnail_text": "Save first, not last",
+   "sources": [
+    "https://www.consumerfinance.gov/about-us/blog/how-to-save-automatically/",
+    "https://www.investor.gov/introduction-investing/investing-basics/save-and-invest"
+   ],
+   "claims_to_verify": [
+    "2% of $3,000 = $60 (illustrative)",
+    "Product line: the 20-Minute Budget pays Goals first (matches the guide's wording)"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "50/30/20 is a starting point, not a law: worked on a $3,200 take-home month ($1,600 needs, $960 wants, $640 savings/debt), plus what to do when needs alone eat 65%.",
+  "script": {
+   "title": "The 50/30/20 budget on $3,200",
+   "hook": "Here's the 50/30/20 budget on a real-ish paycheck, and what to do when it doesn't fit.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Here's the 50/30/20 budget on a real-ish paycheck, and what to do when it doesn't fit.",
+     "on_screen_text": "50/30/20 on a real paycheck",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes slicing a round pie into three uneven pieces. No text, no logos, no real people."
+    },
+    {
+     "heading": "The split",
+     "narration": "On $3,200 of monthly take-home pay, that's $1,600 for needs and $960 for wants, plus $640 for savings and extra debt payments.",
+     "on_screen_text": "$1,600 / $960 / $640",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pie chart in three soft colors with simple icons: house, coffee cup, jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Needs",
+     "narration": "Needs are things you'd still pay in a bad month: rent, utilities, groceries, insurance, minimum payments.",
+     "on_screen_text": "Needs = bad-month costs",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a house, a lightbulb and a grocery bag on a shelf. No text, no logos, no real people."
+    },
+    {
+     "heading": "When it breaks",
+     "narration": "If rent alone is $1,500, needs might hit sixty-five percent. That's common in expensive cities, not a personal failure.",
+     "on_screen_text": "Needs at 65%? Common.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pie with one oversized slice squeezing the others. No text, no logos, no real people."
+    },
+    {
+     "heading": "Adjust",
+     "narration": "Shrink wants first, keep at least something going to savings, and treat lowering a big bill as the real project.",
+     "on_screen_text": "Shrink wants. Keep saving something.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes nudging a slice smaller with a spatula. No text, no logos, no real people."
+    },
+    {
+     "heading": "Takeaway",
+     "narration": "Use 50/30/20 as a compass, not a test you can fail.",
+     "on_screen_text": "A compass, not a test",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a simple compass pointing toward a savings jar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "50/30/20 on a $3,200 take-home month: $1,600 needs, $960 wants, $640 savings and extra debt payments.\n\nIf needs are 60–65% because of rent, that's common. Trim wants first, keep some savings going, and work on the biggest bill.\n\nPrefer one weekly spending number instead of three buckets? The 20-Minute Budget (guide + Excel/Google Sheets template) is in the link in bio. It's our own product.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "503020rule",
+    "budgeting",
+    "budgetforbeginners",
+    "moneytips",
+    "personalfinance20s",
+    "budgetplanning",
+    "moneymadesimple"
+   ],
+   "description": "The 50/30/20 budgeting guideline worked on a $3,200 take-home month, and how to adjust it when needs take more than half.",
+   "thumbnail_text": "50/30/20, for real",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budget/",
+    "https://www.investor.gov/introduction-investing/investing-basics/save-and-invest"
+   ],
+   "claims_to_verify": [
+    "50/30/20 is a commonly cited guideline (popularized by Elizabeth Warren and Amelia Warren Tyagi's 'All Your Worth', 2005), not an official standard",
+    "$3,200 x 50/30/20 = $1,600 / $960 / $640 (arithmetic)"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "credit scores and debt payoff",
+  "idea_angle": "Missed a due date by a few days? Card issuers generally don't report a payment late to the credit bureaus until it's 30 days past due. You'll likely pay a late fee, but paying fast can keep it off your report, and you can ask for the fee back.",
+  "script": {
+   "title": "Missed a payment? The 30-day window",
+   "hook": "Just realized you missed a credit card payment? Don't panic, you may have more time than you think.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Just realized you missed a credit card payment? Don't panic, you may have more time than you think.",
+     "on_screen_text": "Missed a payment? Read this.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes with wide eyes looking at a calendar with one day circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "The rule",
+     "narration": "Lenders generally don't report a payment as late to the credit bureaus until it's at least thirty days past due.",
+     "on_screen_text": "Usually reported at 30 days late",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a thirty-day bracket and a small flag at the end. No text, no logos, no real people."
+    },
+    {
+     "heading": "Still costs",
+     "narration": "You can still get a late fee and lose a promo rate, so this isn't a free pass. It's a window to fix it.",
+     "on_screen_text": "Late fee: yes. Credit damage: avoidable.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small fee ticket next to a shielded credit meter. No text, no logos, no real people."
+    },
+    {
+     "heading": "Do this",
+     "narration": "Pay at least the minimum today, then politely ask the issuer to waive the fee. First-time requests are often approved.",
+     "on_screen_text": "Pay now. Ask for the fee back.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes on the phone with a coin flying back toward it. No text, no logos, no real people."
+    },
+    {
+     "heading": "Prevent it",
+     "narration": "Set autopay for at least the minimum, so a busy week never becomes a credit mark.",
+     "on_screen_text": "Autopay the minimum",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an automatic gear turning beside a credit card shape. No text, no logos, no real people."
+    },
+    {
+     "heading": "Takeaway",
+     "narration": "A few days late is a fee, thirty days late is a credit problem. Act inside the window.",
+     "on_screen_text": "Fix it inside 30 days",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes closing a window just before rain clouds arrive. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Card issuers generally don't report a payment late to the credit bureaus until it's at least 30 days past due. You may still owe a late fee and lose a promo rate.\n\nIf you just missed one: pay at least the minimum now, ask the issuer to waive the fee, then set autopay for the minimum so it can't happen again.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "creditscore",
+    "latepayment",
+    "creditcardtips",
+    "autopay",
+    "credithealth",
+    "moneymistakes",
+    "moneymadesimple"
+   ],
+   "description": "What happens when you miss a credit card due date by a few days, the 30-day reporting window, and how to ask for the late fee back.",
+   "thumbnail_text": "Missed a payment?",
+   "sources": [
+    "https://www.consumerfinance.gov/ask-cfpb/how-long-does-negative-information-remain-on-my-credit-report-en-323/",
+    "https://www.myfico.com/credit-education/credit-scores/payment-history",
+    "https://www.experian.com/blogs/ask-experian/how-long-does-a-late-payment-stay-on-credit-report/"
+   ],
+   "claims_to_verify": [
+    "Creditors generally do not report a payment as late to the bureaus until it is 30 days past due (verify wording; some lenders differ)",
+    "Late payments that are reported can stay on a credit report for up to 7 years",
+    "'First-time fee waiver requests are often approved' is anecdotal industry practice, not a guarantee; keep the softened wording"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "credit scores and debt payoff",
+  "idea_angle": "The grace-period trap: carry even part of a balance past the due date and most cards start charging interest on new purchases from the day you make them, until you pay in full again.",
+  "script": {
+   "title": "Why your card charged interest on today's coffee",
+   "hook": "Paid most of your card bill and still got charged interest on stuff you just bought? This is why.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Paid most of your card bill and still got charged interest on stuff you just bought? This is why.",
+     "on_screen_text": "Interest on today's coffee?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a coffee cup with a tiny percent sign floating out of it. No text, no logos, no real people."
+    },
+    {
+     "heading": "Grace period",
+     "narration": "Most cards give you a grace period. Pay the full statement balance by the due date, and new purchases don't get charged interest.",
+     "on_screen_text": "Pay in full = no interest",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calm meadow with a gate labeled only by a green check shape. No text, no logos, no real people."
+    },
+    {
+     "heading": "The trap",
+     "narration": "Leave even a small part unpaid, and on many cards the grace period disappears. New purchases can start building interest from the day you swipe.",
+     "on_screen_text": "Carry a balance = grace period gone",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the same gate closing, with small coins being nibbled by a tiny percent-shaped creature. No text, no logos, no real people."
+    },
+    {
+     "heading": "Getting it back",
+     "narration": "Usually you need to pay the full balance, sometimes for one or two cycles in a row, before the grace period comes back.",
+     "on_screen_text": "Pay in full to reset it",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a reset button being pressed by the small round green piggy bank mascot with big eyes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Check yours",
+     "narration": "Your card's agreement explains exactly how its grace period works. Search it for the words 'grace period'.",
+     "on_screen_text": "Search your terms for 'grace period'",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnifying glass over a folded document. No text, no logos, no real people."
+    },
+    {
+     "heading": "Takeaway",
+     "narration": "Paying 'most' of the bill costs more than it looks. Full statement balance is the magic number.",
+     "on_screen_text": "Pay the statement balance",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes placing a full stack of coins into a slot. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Pay your full statement balance by the due date and most cards don't charge interest on purchases (the grace period).\n\nCarry part of it over and many cards drop the grace period: new purchases can build interest from the day you buy them, until you pay in full again (sometimes for two cycles). Your card agreement has the details.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "creditcards",
+    "graceperiod",
+    "creditcardinterest",
+    "debtfree",
+    "moneymistakes",
+    "financialliteracy",
+    "moneymadesimple"
+   ],
+   "description": "How a credit card grace period works, why carrying a partial balance can cost interest on new purchases, and how to restore it.",
+   "thumbnail_text": "The grace-period trap",
+   "sources": [
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-a-grace-period-for-a-credit-card-en-47/",
+    "https://www.consumerfinance.gov/rules-policy/regulations/1026/54/"
+   ],
+   "claims_to_verify": [
+    "Card issuers are not required to offer a grace period, but most do (CFPB)",
+    "On many cards, carrying a balance removes the grace period on new purchases until the balance is paid in full; terms vary by issuer",
+    "Some issuers require paying in full for two consecutive cycles to restore the grace period (varies)"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "credit scores and debt payoff",
+  "idea_angle": "Balance transfer math: $4,000 at 24% APR, paying $275/month takes about 18 months and ~$775 interest. A 0% for 15 months card with a 3% fee ($120) clears it in 15 months at the same payment, saving ~$650, only if you pay it off before the promo ends.",
+  "script": {
+   "title": "Is a balance transfer worth the 3% fee?",
+   "hook": "A balance transfer card charges you a fee upfront. Here's when that fee is the cheapest thing you'll buy all year.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "A balance transfer card charges you a fee upfront. Here's when that fee is the cheapest thing you'll buy all year.",
+     "on_screen_text": "Is the 3% fee worth it?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes weighing a small fee coin against a big pile of interest coins on a scale. No text, no logos, no real people."
+    },
+    {
+     "heading": "Stay put",
+     "narration": "Say you owe $4,000 at 24% APR and pay $275 a month. It takes about eighteen months and roughly $775 in interest.",
+     "on_screen_text": "$4,000 at 24%: ~$775 interest",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a long winding path with coins dropping off at each step. No text, no logos, no real people."
+    },
+    {
+     "heading": "Transfer",
+     "narration": "Move it to a card with 0% for fifteen months and a 3% fee, which is $120. Pay the same $275 a month and it's gone in fifteen months.",
+     "on_screen_text": "3% fee = $120, then 0%",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short straight path with one small toll booth. No text, no logos, no real people."
+    },
+    {
+     "heading": "Savings",
+     "narration": "That's roughly $650 kept, if, and only if, you clear it before the promo ends and don't add new spending.",
+     "on_screen_text": "≈ $650 saved, if paid in time",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar filling with the coins saved. No text, no logos, no real people."
+    },
+    {
+     "heading": "The trap",
+     "narration": "If the promo ends with a balance left, the remaining amount goes to the card's regular rate, which can be high.",
+     "on_screen_text": "Promo ends? Regular APR starts.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an hourglass running low beside a credit card shape. No text, no logos, no real people."
+    },
+    {
+     "heading": "Takeaway",
+     "narration": "Divide the balance plus fee by the promo months. If you can pay that each month, the fee is worth it.",
+     "on_screen_text": "(Balance + fee) ÷ promo months",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes writing a simple division on a chalkboard with shapes only. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "$4,000 at 24% APR, $275/month: about 18 months and ~$775 interest.\nSame $4,000 moved to 0% for 15 months with a 3% fee: $120 fee, $275/month, paid off in 15 months. Roughly $650 saved.\n\nThe rule: (balance + fee) ÷ promo months = the payment you need. If you can't make it, or you'll keep spending on the card, the math changes. Approval depends on your credit.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "balancetransfer",
+    "creditcarddebt",
+    "debtpayoff",
+    "zeropercentapr",
+    "debtfreejourney",
+    "moneymath",
+    "moneymadesimple"
+   ],
+   "description": "Worked numbers on a $4,000 balance at 24% APR versus a 0% balance transfer with a 3% fee, and the payment rule that decides it.",
+   "thumbnail_text": "Worth the 3% fee?",
+   "sources": [
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-a-balance-transfer-fee-en-39/",
+    "https://www.consumerfinance.gov/about-us/blog/what-you-need-know-about-balance-transfer-offers/"
+   ],
+   "claims_to_verify": [
+    "Payoff estimate: $4,000 at 24% APR (monthly compounding) with $275/month ≈ 18 months, ≈ $775 interest (recalculate with a calculator before posting)",
+    "Balance transfer fees are commonly 3%-5% of the amount transferred; promo lengths vary",
+    "Savings of ≈ $650 = $775 interest avoided - $120 fee (assumes balance paid off within the promo and no new purchases)"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "credit scores and debt payoff",
+  "idea_angle": "Federal student loans: signing up for automatic payments with your servicer usually cuts the interest rate by 0.25 percentage points. On $30,000 at 6% that's up to about $75 in the first year for a five-minute form.",
+  "script": {
+   "title": "The free student loan rate cut",
+   "hook": "There's a five-minute form that lowers your federal student loan interest rate. Most people never fill it out.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "There's a five-minute form that lowers your federal student loan interest rate. Most people never fill it out.",
+     "on_screen_text": "A 5-minute student loan rate cut",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a small form with a pencil next to a graduation cap. No text, no logos, no real people."
+    },
+    {
+     "heading": "What it is",
+     "narration": "Federal student loan servicers usually take a quarter of a percentage point off your rate when you sign up for automatic debit.",
+     "on_screen_text": "Autopay = 0.25% off",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a percent sign shrinking slightly as a gear turns. No text, no logos, no real people."
+    },
+    {
+     "heading": "Worked example",
+     "narration": "On $30,000 at 6%, a quarter point is up to about $75 in the first year, and it keeps going for as long as autopay stays on.",
+     "on_screen_text": "$30,000 at 6% → ~$75/year",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small stack of coins being set aside each year on a timeline. No text, no logos, no real people."
+    },
+    {
+     "heading": "How",
+     "narration": "Log in to your servicer's site, find automatic payments or auto-debit, and link your checking account.",
+     "on_screen_text": "Servicer site → auto-debit",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a simple laptop screen with a toggle switched on. No text, no logos, no real people."
+    },
+    {
+     "heading": "Watch out",
+     "narration": "Make sure the payment date lands after payday, and keep a small buffer in checking so it never bounces.",
+     "on_screen_text": "Set it after payday",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar where payday comes just before the loan date. No text, no logos, no real people."
+    },
+    {
+     "heading": "Takeaway",
+     "narration": "It's not life-changing money, but it's free, permanent while it's on, and takes five minutes.",
+     "on_screen_text": "Free. Five minutes.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes giving a thumbs up beside a slightly smaller loan stack. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Federal student loan servicers usually reduce your interest rate by 0.25 percentage points when you enroll in automatic debit. On $30,000 at 6%, that's up to about $75 in the first year.\n\nFind \"automatic payments\" or \"auto-debit\" on your servicer's site, set the date after payday, and keep a small buffer in checking. Private lenders may offer something similar; check yours.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "studentloans",
+    "studentloandebt",
+    "autopay",
+    "federalstudentaid",
+    "debtpayoff",
+    "gradlife",
+    "moneymadesimple"
+   ],
+   "description": "How the federal student loan auto-debit interest rate reduction works, with a worked example.",
+   "thumbnail_text": "Free rate cut",
+   "sources": [
+    "https://studentaid.gov/manage-loans/repayment/plans",
+    "https://studentaid.gov/help-center/answers/article/auto-debit-interest-rate-reduction"
+   ],
+   "claims_to_verify": [
+    "Federal student loan auto-debit reduces the interest rate by 0.25 percentage points (studentaid.gov; check servicer terms are current)",
+    "$30,000 x 0.25% = $75 per year on the full balance; actual savings are slightly lower as the balance falls",
+    "Not all private lenders offer an autopay discount; amounts vary"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "A $55,000 salary is not $4,583 a month to spend: after federal tax, Social Security and Medicare (7.65%), state tax and benefits, take-home is often closer to $3,600-$3,900. Budget from the deposit, not the offer letter.",
+  "script": {
+   "title": "Why $55k isn't $4,583 a month",
+   "hook": "Fifty-five thousand dollars divided by twelve is $4,583. That is not what lands in your account.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Fifty-five thousand dollars divided by twelve is $4,583. That is not what lands in your account.",
+     "on_screen_text": "$55k ÷ 12 ≠ your paycheck",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes looking at a big number that shrinks as it travels through a pipe. No text, no logos, no real people."
+    },
+    {
+     "heading": "FICA",
+     "narration": "First, Social Security and Medicare take 7.65% of your pay. That's about $4,200 a year on a $55,000 salary.",
+     "on_screen_text": "7.65% FICA ≈ $4,200/year",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pipe with a first small valve taking out coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Income tax",
+     "narration": "Then federal income tax, and in most states, state income tax. The amount depends on your state and deductions.",
+     "on_screen_text": "Then federal + state tax",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a second and third valve on the pipe. No text, no logos, no real people."
+    },
+    {
+     "heading": "Benefits",
+     "narration": "Health insurance premiums and 401(k) contributions come out too, which is good, but they shrink the deposit.",
+     "on_screen_text": "Benefits come out too",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a fourth valve marked only with a heart and a small jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "The real number",
+     "narration": "Put together, take-home on $55,000 is often somewhere around $3,600 to $3,900 a month for a single filer. Yours will differ.",
+     "on_screen_text": "Often ≈ $3,600–$3,900/month",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a modest stream of coins landing in a checking jar at the end of the pipe. No text, no logos, no real people."
+    },
+    {
+     "heading": "Takeaway",
+     "narration": "Budget from your actual deposit. Your salary is the headline; your paycheck is the story.",
+     "on_screen_text": "Budget the deposit, not the salary",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes circling the deposit amount on a simple pay stub with no text. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "$55,000 ÷ 12 = $4,583, but that's before Social Security and Medicare (7.65%, ≈ $4,200/yr), federal and state income tax, health premiums and 401(k).\n\nFor a single filer, take-home is often somewhere around $3,600–$3,900/month, depending on your state and benefits. Use your actual pay stub, then build the budget from that number.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "takehomepay",
+    "salary",
+    "paycheck",
+    "budgetingtips",
+    "firstjob",
+    "personalfinance20s",
+    "moneymadesimple"
+   ],
+   "description": "Why a $55,000 salary turns into a smaller monthly paycheck: FICA, federal and state tax, and benefits, with a rough take-home range.",
+   "thumbnail_text": "$55k isn't $4,583",
+   "sources": [
+    "https://www.ssa.gov/oact/cola/cbb.html",
+    "https://www.irs.gov/taxtopics/tc751",
+    "https://www.irs.gov/newsroom/irs-releases-tax-inflation-adjustments-for-tax-year-2026"
+   ],
+   "claims_to_verify": [
+    "Employee FICA rate is 7.65% (6.2% Social Security + 1.45% Medicare); 7.65% x $55,000 = $4,207.50",
+    "Take-home range of ≈ $3,600-$3,900/month is a rough estimate for a single filer using the 2026 standard deduction; it varies a lot by state, pre-tax benefits and withholding. Re-check with a paycheck calculator before posting"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "The 50/50 raise rule: when your pay goes up, send half of the increase to savings or debt automatically before you see it, and enjoy the other half guilt-free. Worked on a $3,000 raise.",
+  "script": {
+   "title": "The 50/50 rule for every raise",
+   "hook": "Got a raise? Here's how to enjoy it and still be richer a year from now.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Got a raise? Here's how to enjoy it and still be richer a year from now.",
+     "on_screen_text": "Got a raise? Do this first.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a small trophy shaped like a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "The creep",
+     "narration": "Most raises disappear into a nicer phone plan, more takeout, and slightly better everything. That's lifestyle creep.",
+     "on_screen_text": "Raises vanish quietly",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small creature slowly eating a growing pile of coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "The rule",
+     "narration": "Split the increase in two: half goes to savings, investing or debt. The other half is yours to spend however you want.",
+     "on_screen_text": "Half saved. Half enjoyed.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin cut neatly in two, one half to a jar, one half to a gift box. No text, no logos, no real people."
+    },
+    {
+     "heading": "Worked example",
+     "narration": "A $3,000 raise might be around $190 a month after tax. Automate about $95 to savings and enjoy the other $95.",
+     "on_screen_text": "$3,000 raise ≈ $95 + $95/month",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two equal small stacks of coins next to a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Do it fast",
+     "narration": "Change the automatic transfer, or your 401(k) percentage, before the first bigger paycheck arrives. You won't miss money you never saw.",
+     "on_screen_text": "Set it before the first new check",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes adjusting a dial right before a paycheck envelope arrives. No text, no logos, no real people."
+    },
+    {
+     "heading": "Takeaway",
+     "narration": "You don't have to choose between enjoying a raise and building wealth. Split it.",
+     "on_screen_text": "Split every raise",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes relaxing with a coffee next to a slowly filling jar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "When your pay goes up, split the increase: half automatically to savings, investing or debt, half to spend guilt-free.\n\nA $3,000 raise might be roughly $190/month after tax (varies), so about $95 to savings and $95 to enjoy. Change the transfer or your 401(k) percentage before the first bigger paycheck lands.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "lifestylecreep",
+    "raise",
+    "savingmoney",
+    "careermoney",
+    "budgetingtips",
+    "moneyhabits",
+    "moneymadesimple"
+   ],
+   "description": "A simple rule for raises: send half the increase to savings or debt automatically and enjoy the rest, with a worked example.",
+   "thumbnail_text": "Split every raise",
+   "sources": [
+    "https://www.consumerfinance.gov/about-us/blog/how-to-save-automatically/",
+    "https://www.investor.gov/introduction-investing/investing-basics/save-and-invest"
+   ],
+   "claims_to_verify": [
+    "$3,000 raise ≈ $250/month gross; ≈ $190/month after tax is an illustrative estimate assuming roughly 25% combined tax; varies by bracket and state"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "credit scores and debt payoff",
+  "idea_angle": "Buy now, pay later stacks quietly: three 'small' four-payment plans can mean $300+ leaving checking on dates you didn't choose. Rules before using it: one plan at a time, autopay from a funded account, know the late fee, and track it in your bills.",
+  "script": {
+   "title": "Buy now, pay later: the stacking problem",
+   "hook": "Pay in four sounds tiny. Three of them at once is a car payment you forgot you had.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Pay in four sounds tiny. Three of them at once is a car payment you forgot you had.",
+     "on_screen_text": "Pay in 4 × 3 = a surprise bill",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes juggling three small boxes with calendars on them. No text, no logos, no real people."
+    },
+    {
+     "heading": "How it works",
+     "narration": "Buy now, pay later splits a purchase into installments, often four payments every two weeks, usually with no interest if you pay on time.",
+     "on_screen_text": "4 payments, every 2 weeks",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a box split into four equal slices along a timeline. No text, no logos, no real people."
+    },
+    {
+     "heading": "The stack",
+     "narration": "A $240 jacket, $360 headphones and a $600 phone: that's $300 every two weeks pulling from checking on dates set by someone else.",
+     "on_screen_text": "$300 every two weeks",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three timelines overlapping, coins dropping out of checking on many dates. No text, no logos, no real people."
+    },
+    {
+     "heading": "The costs",
+     "narration": "Miss one and you can face late fees, and some providers report payment history to credit bureaus. Check the terms.",
+     "on_screen_text": "Late fees. Possible credit reporting.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small warning triangle shape beside a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "The rules",
+     "narration": "One plan at a time, with every payment in your bills list. Only use it for something you could buy today with cash.",
+     "on_screen_text": "One plan. Listed. Affordable today.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding up one box and setting the others aside. No text, no logos, no real people."
+    },
+    {
+     "heading": "Takeaway",
+     "narration": "It's a payment plan, not free money. Treat it like a bill, because it is one.",
+     "on_screen_text": "It's a bill. Treat it like one.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes filing a box into a folder of bills. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Buy now, pay later is usually 4 payments every 2 weeks. One plan is easy to track. Three at once (say $240 + $360 + $600) is $300 leaving checking every two weeks.\n\nRules: one plan at a time, add every payment to your bills list, only use it for things you could afford with cash today. Late fees and credit reporting depend on the provider, so read the terms.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "buynowpaylater",
+    "bnpl",
+    "debt",
+    "budgetingtips",
+    "shoppingtips",
+    "creditscore",
+    "moneymadesimple"
+   ],
+   "description": "How buy now, pay later plans stack up, a worked example of three plans, and rules for using them safely.",
+   "thumbnail_text": "BNPL stacking",
+   "sources": [
+    "https://www.consumerfinance.gov/about-us/newsroom/cfpb-study-details-the-rapid-growth-of-buy-now-pay-later-lending/",
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-a-buy-now-pay-later-bnpl-loan-en-2119/"
+   ],
+   "claims_to_verify": [
+    "Common BNPL structure is 4 installments every 2 weeks, often interest-free if paid on time (varies by provider)",
+    "Example: ($240 + $360 + $600) / 4 = $300 per installment date (arithmetic)",
+    "Some BNPL providers report to credit bureaus and late fees vary; check current provider policies before posting"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "The 72-hour rule for wants over a set amount (say $50): put it in the cart, close the tab, and buy only if you still want it in three days and it fits this week's number. Timed for Black Friday.",
+  "script": {
+   "title": "The 72-hour cart rule",
+   "hook": "Before you buy anything over fifty dollars this week, try this. It costs nothing.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Before you buy anything over fifty dollars this week, try this. It costs nothing.",
+     "on_screen_text": "Before you hit buy",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes hovering a paw over a big round button. No text, no logos, no real people."
+    },
+    {
+     "heading": "The rule",
+     "narration": "Pick a number, like $50. Anything above it goes in the cart, and then you close the tab for seventy-two hours.",
+     "on_screen_text": "Over $50? Wait 72 hours.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a shopping cart parked next to a large hourglass. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why it works",
+     "narration": "Sales are designed for right now. Waiting separates 'I want this' from 'I want the feeling of buying this'.",
+     "on_screen_text": "Want it, or want the rush?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two thought bubbles, one with a gift box, one with sparkles. No text, no logos, no real people."
+    },
+    {
+     "heading": "The check",
+     "narration": "After three days, ask two things: do I still want it, and does it fit this week's spending number?",
+     "on_screen_text": "Still want it? Fits the week?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two checkboxes beside a cart. No text, no logos, no real people."
+    },
+    {
+     "heading": "Sale worry",
+     "narration": "If the deal disappears, that's fine. Another sale is almost always coming.",
+     "on_screen_text": "There's always another sale",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with several small tag shapes spread through the year. No text, no logos, no real people."
+    },
+    {
+     "heading": "Takeaway",
+     "narration": "You're not banning spending. You're giving future you a vote.",
+     "on_screen_text": "Give future you a vote",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes shaking hands with a slightly older the small round green piggy bank mascot with big eyes. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Pick a threshold (say $50). Anything above it goes in the cart, then you close the tab for 72 hours. After three days: do you still want it, and does it fit this week's spending number? If yes, buy it without guilt.\n\nUseful this week especially. Sales are built for right now; there's almost always another one coming.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "blackfriday",
+    "impulsebuying",
+    "mindfulspending",
+    "budgetingtips",
+    "savingmoney",
+    "holidayshopping",
+    "moneymadesimple"
+   ],
+   "description": "A simple 72-hour waiting rule for purchases over a threshold, with the two questions to ask before buying.",
+   "thumbnail_text": "The 72-hour rule",
+   "sources": [
+    "https://consumer.ftc.gov/articles/holiday-shopping",
+    "https://www.consumerfinance.gov/consumer-tools/budget/"
+   ],
+   "claims_to_verify": [
+    "No factual claims beyond general advice; $50 threshold is illustrative",
+    "If posting near Black Friday (Nov 27, 2026), confirm date reference in any on-screen copy"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Holiday spending plan in November: pick a total, divide by the weeks left until your last shopping day, and move that amount weekly into a gifts sinking fund. $420 over 7 weeks = $60/week.",
+  "script": {
+   "title": "Pay for December in November",
+   "hook": "December doesn't wreck budgets. Not planning for it in November does.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "December doesn't wreck budgets. Not planning for it in November does.",
+     "on_screen_text": "Plan December now",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes wrapping a small gift next to a calendar showing autumn leaves. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pick a total",
+     "narration": "Write down everyone you're buying for, plus travel, food and hosting, and pick one total for all of it. Say $420, to keep the math easy.",
+     "on_screen_text": "Pick one total: $420",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a list of simple gift icons beside a single coin stack. No text, no logos, no real people."
+    },
+    {
+     "heading": "Divide it",
+     "narration": "Count the weeks until your last shopping day. If that's seven weeks, you need to set aside $60 every week.",
+     "on_screen_text": "$420 ÷ 7 weeks = $60/week",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with seven small gift tags on seven weeks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Separate it",
+     "narration": "Move that $60 every week into a separate gifts fund, so holiday money never mixes with grocery money.",
+     "on_screen_text": "Weekly transfer to a gifts fund",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small jar with a ribbon receiving coins weekly. No text, no logos, no real people."
+    },
+    {
+     "heading": "Spend from it",
+     "narration": "Shop only from the fund, and when it's empty, the holidays are paid for. No January credit card surprise waiting for you.",
+     "on_screen_text": "When the fund's empty, you're done",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding an empty ribboned jar with a satisfied smile. No text, no logos, no real people."
+    },
+    {
+     "heading": "Takeaway",
+     "narration": "Next year, start in September. Same total, smaller weekly number.",
+     "on_screen_text": "Next year: start in September",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar flipping back to an early autumn page. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Holiday plan, done in November: list everyone and everything (gifts, travel, food, hosting), pick one total, divide by the weeks until your last shopping day, and move that amount weekly into a separate gifts fund. Example: $420 ÷ 7 weeks = $60/week. When the fund is empty, you're done.\n\nSinking funds like this are line 2 of the 20-Minute Budget. The 20-Minute Budget (guide + Excel/Google Sheets template) is in the link in bio. It's our own product.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "holidaybudget",
+    "sinkingfunds",
+    "christmasbudget",
+    "giftbudget",
+    "budgetingtips",
+    "holidayshopping",
+    "moneymadesimple"
+   ],
+   "description": "A simple November holiday spending plan: one total, divided by the weeks left, moved weekly into a gifts fund.",
+   "thumbnail_text": "Plan December now",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budget/",
+    "https://consumer.ftc.gov/articles/holiday-shopping"
+   ],
+   "claims_to_verify": [
+    "$420 / 7 weeks = $60 (arithmetic; adjust the weeks count to the actual posting date)",
+    "Product line: 'Funds' (sinking funds) is line 2 of the 20-Minute Budget (matches the guide)"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "first-time investing basics (index funds, retirement accounts)",
+  "idea_angle": "Money market account vs money market fund: nearly the same name, different protection. A money market account is a bank deposit (FDIC-insured). A money market fund is an investment at a brokerage: not FDIC-insured, and SIPC doesn't cover losses in value.",
+  "script": {
+   "title": "Money market account vs money market fund",
+   "hook": "Money market account and money market fund sound like the same thing. They're protected in totally different ways.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Money market account and money market fund sound like the same thing. They're protected in totally different ways.",
+     "on_screen_text": "Same name. Different safety net.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes looking at two identical-looking doors with different locks. No text, no logos, no real people."
+    },
+    {
+     "heading": "The account",
+     "narration": "A money market account is a deposit at a bank or credit union. It's FDIC or NCUA insured up to the limits, like savings.",
+     "on_screen_text": "Account = bank deposit, insured",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a columned bank building with an umbrella over it. No text, no logos, no real people."
+    },
+    {
+     "heading": "The fund",
+     "narration": "A money market fund is an investment you buy at a brokerage. It holds short-term, high-quality debt and aims to stay at one dollar a share.",
+     "on_screen_text": "Fund = an investment",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a basket of small short-term bond shapes. No text, no logos, no real people."
+    },
+    {
+     "heading": "The difference",
+     "narration": "A fund isn't FDIC insured, and SIPC protects you if the brokerage fails, not if the investment loses value. Losses are rare but have happened.",
+     "on_screen_text": "Not FDIC. SIPC ≠ loss protection.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a sturdy shield next to a slightly less certain shield. No text, no logos, no real people."
+    },
+    {
+     "heading": "Which for what",
+     "narration": "For an emergency fund you might need tomorrow, an insured account is the simplest choice. Funds can fit cash waiting to be invested.",
+     "on_screen_text": "Emergency fund → insured account",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two jars on shelves, one marked with an umbrella shape. No text, no logos, no real people."
+    },
+    {
+     "heading": "Takeaway",
+     "narration": "Read the last word: account means deposit. Fund means investment.",
+     "on_screen_text": "Account ≠ fund",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes pointing at the second of two words on a sign without letters. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Money market ACCOUNT: a bank or credit union deposit, FDIC/NCUA-insured up to the limits.\nMoney market FUND: an investment at a brokerage that aims to hold $1/share. Not FDIC-insured. SIPC covers a failed brokerage, not a drop in value.\n\nFor an emergency fund you might need tomorrow, the insured account is the simpler choice. Funds can make sense for cash waiting to be invested.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "moneymarket",
+    "savingsaccount",
+    "investingforbeginners",
+    "fdic",
+    "emergencyfund",
+    "cashmanagement",
+    "moneymadesimple"
+   ],
+   "description": "The difference between a money market account (insured bank deposit) and a money market fund (investment), and which fits an emergency fund.",
+   "thumbnail_text": "Account ≠ fund",
+   "sources": [
+    "https://www.investor.gov/introduction-investing/investing-basics/investment-products/mutual-funds-and-exchange-traded-1",
+    "https://www.fdic.gov/resources/deposit-insurance/financial-products-insured-by-ffic",
+    "https://www.sipc.org/for-investors/what-sipc-protects"
+   ],
+   "claims_to_verify": [
+    "Money market deposit accounts are FDIC/NCUA-insured up to the standard limit",
+    "Money market funds are not FDIC-insured; SIPC protects against brokerage failure, not investment losses",
+    "Money market funds seek to maintain a stable $1 NAV but can lose value (e.g., 2008 'breaking the buck'); check SEC wording"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "A save-worthy 8-point checklist to run before opening any high-yield savings account: insurance, APY, promo vs ongoing rate, fees, minimums, transfer speed, withdrawal limits, and how easy it is to leave.",
+  "script": {
+   "title": "Before you open a high-yield savings account",
+   "hook": "8 things to check before you open a high-yield savings account. Save this for when you compare.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "8 things to check before you open a high-yield savings account. Save this for when you compare.",
+     "on_screen_text": "Check these 8 things first",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a clipboard in front of a row of savings jars. No text, no logos, no real people."
+    },
+    {
+     "heading": "1. Insurance",
+     "narration": "Is it FDIC or NCUA insured? If it's an app, which partner bank actually holds the money? Look it up.",
+     "on_screen_text": "1. Insured, and by whom?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an umbrella over a jar, a magnifying glass nearby. No text, no logos, no real people."
+    },
+    {
+     "heading": "2. The real APY",
+     "narration": "Find the current APY, not the headline from last year. Rates on these accounts are variable.",
+     "on_screen_text": "2. Today's APY",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a dial with a gently moving needle. No text, no logos, no real people."
+    },
+    {
+     "heading": "3. Promo or ongoing",
+     "narration": "Some rates are intro offers that drop after a few months. Check what happens after the promo.",
+     "on_screen_text": "3. Promo rate or ongoing?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an hourglass beside a percent shape. No text, no logos, no real people."
+    },
+    {
+     "heading": "4. Fees and minimums",
+     "narration": "No monthly fee, no minimum balance to earn the rate. If there are conditions, write them down.",
+     "on_screen_text": "4. No fees, no minimums",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a crossed-out small fee ticket. No text, no logos, no real people."
+    },
+    {
+     "heading": "5. Transfer speed",
+     "narration": "How many days does a transfer to your checking take? One to three business days is normal. Plan around it.",
+     "on_screen_text": "5. How fast can you get it out?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small bridge with a coin crossing between two jars. No text, no logos, no real people."
+    },
+    {
+     "heading": "6. Withdrawal limits",
+     "narration": "Some banks still cap withdrawals or transfers per month. Know the number before an emergency.",
+     "on_screen_text": "6. Any monthly limits?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a gate with a small counter beside it. No text, no logos, no real people."
+    },
+    {
+     "heading": "7. Easy exit",
+     "narration": "Can you close the account online? Easy leaving is a good sign about the bank.",
+     "on_screen_text": "7. Can you leave easily?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an open door with a soft light. No text, no logos, no real people."
+    },
+    {
+     "heading": "8. Your why",
+     "narration": "Name the job: emergency fund, sinking funds, or a down payment. Then move only that money.",
+     "on_screen_text": "8. Give it one job",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes placing a single labeled-by-color jar on a shelf. No text, no logos, no real people."
+    },
+    {
+     "heading": "Save this",
+     "narration": "Save this checklist for the day you compare accounts. Follow for one money move a week.",
+     "on_screen_text": "Save this for later",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes tucking the clipboard into a folder. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Before opening a high-yield savings account, check:\n1. FDIC/NCUA insurance (and the partner bank, for apps)\n2. Today's APY\n3. Promo rate vs ongoing rate\n4. Monthly fees and minimums\n5. Transfer speed to checking\n6. Monthly withdrawal limits\n7. How easy it is to close\n8. The one job this money has\n\nThe high-yield savings account in our link in bio is an affiliate link: we may earn a commission if you open and fund an account, at no extra cost to you. Compare rates and terms yourself first.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "highyieldsavings",
+    "hysa",
+    "savingsaccount",
+    "emergencyfund",
+    "bankingtips",
+    "checklist",
+    "moneymadesimple"
+   ],
+   "description": "An 8-point checklist for comparing high-yield savings accounts: insurance, APY, promos, fees, transfers, limits and exit.",
+   "thumbnail_text": "HYSA checklist",
+   "sources": [
+    "https://www.fdic.gov/resources/deposit-insurance",
+    "https://banks.data.fdic.gov/bankfind-suite/bankfind",
+    "https://www.consumerfinance.gov/consumer-tools/bank-accounts/",
+    "https://ncua.gov/consumers/share-insurance-coverage"
+   ],
+   "claims_to_verify": [
+    "High-yield savings APYs are variable (bank account agreements)",
+    "ACH transfers typically take 1-3 business days (varies by bank)",
+    "Federal Regulation D's six-per-month savings withdrawal limit was removed as a requirement in 2020, but banks may still set their own limits",
+    "Confirm the affiliate HYSA has no monthly fee, no minimum, and is FDIC-insured before posting"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "Where to park money by when you'll need it: a timeline comparison of checking, high-yield savings, CDs, Treasury bills and long-term index funds, with what each is good and bad at.",
+  "script": {
+   "title": "Where should this money live?",
+   "hook": "The right account depends on one question: when will you need this money?",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "The right account depends on one question: when will you need this money?",
+     "on_screen_text": "When do you need it?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes standing at a fork with several signposts showing only clock shapes. No text, no logos, no real people."
+    },
+    {
+     "heading": "This month",
+     "narration": "Checking. Bills and weekly spending. Keep enough for the month plus a small cushion, and no more.",
+     "on_screen_text": "This month → checking",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a wallet beside a small calendar page. No text, no logos, no real people."
+    },
+    {
+     "heading": "Anytime, maybe tomorrow",
+     "narration": "High-yield savings. Emergency fund and sinking funds. Insured, variable rate, money out in a day or two.",
+     "on_screen_text": "Maybe tomorrow → HYSA",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an umbrella over a savings jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "A known date, 6–24 months",
+     "narration": "CDs. Rate locked for a set term. Early withdrawal usually costs a penalty, so match the term to your date.",
+     "on_screen_text": "Known date → CD",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a small padlock and a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Also short-term",
+     "narration": "Treasury bills. Short-term loans to the US government, bought through TreasuryDirect or a brokerage. Interest is exempt from state income tax.",
+     "on_screen_text": "Short-term → T-bills",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a plain government-style building with a small coin stack, no flags or seals. No text, no logos, no real people."
+    },
+    {
+     "heading": "5+ years away",
+     "narration": "Diversified index funds, ideally inside a retirement account. Higher expected growth, but values can drop sharply in any given year.",
+     "on_screen_text": "5+ years → index funds",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a young sapling growing into a tree over a long ground line. No text, no logos, no real people."
+    },
+    {
+     "heading": "The mistake",
+     "narration": "Investing your emergency fund, or leaving retirement money in cash for decades. Both are timeline mismatches.",
+     "on_screen_text": "Don't mix up the timelines",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two arrows pointing the wrong way on a timeline, a red cross between them. No text, no logos, no real people."
+    },
+    {
+     "heading": "Quick recap",
+     "narration": "This month goes in checking, and maybe-soon money in high-yield savings. Fixed dates suit a CD or T-bills, and five years plus suits index funds.",
+     "on_screen_text": "Match the account to the date",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a timeline with four simple icons from left to right. No text, no logos, no real people."
+    },
+    {
+     "heading": "Save this",
+     "narration": "Save this for the next time you're not sure where money should go. Follow for one money move a week.",
+     "on_screen_text": "Save this map",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes folding a map into a pocket. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Match the money to its timeline:\n• This month → checking\n• Could need it anytime → high-yield savings (insured, variable rate)\n• Known date in 6–24 months → CD or Treasury bills\n• 5+ years away → diversified index funds (values can fall in any year)\n\nOur high-yield savings pick is in the link in bio. It's an affiliate link: we may earn a commission if you open and fund an account, at no extra cost to you. Compare rates and terms yourself first.\n\nEducation only, not advice.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "savingsaccount",
+    "hysa",
+    "cds",
+    "treasurybills",
+    "indexfunds",
+    "emergencyfund",
+    "moneymadesimple"
+   ],
+   "description": "A timeline map of where to keep money: checking, high-yield savings, CDs, Treasury bills and index funds.",
+   "thumbnail_text": "Where should it live?",
+   "sources": [
+    "https://www.treasurydirect.gov/marketable-securities/treasury-bills/",
+    "https://www.investor.gov/introduction-investing/investing-basics/investment-products/certificates-deposit-cds",
+    "https://www.fdic.gov/resources/deposit-insurance",
+    "https://www.investor.gov/introduction-investing/investing-basics/save-and-invest"
+   ],
+   "claims_to_verify": [
+    "Treasury bill interest is subject to federal income tax but exempt from state and local income tax (TreasuryDirect)",
+    "CDs typically charge an early withdrawal penalty (varies by bank)",
+    "Index fund values can fall significantly in any given year; avoid implying any return"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "The 20-Minute Budget's four lines worked on a $3,000 take-home month: Bills $1,650, Funds $250, Goals $300, leaving $800/month = about $184/week to spend on everything else.",
+  "script": {
+   "title": "A whole budget in four lines",
+   "hook": "A full budget in four lines. Here it is on a $3,000 month.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "A full budget in four lines. Here it is on a $3,000 month.",
+     "on_screen_text": "Your whole budget, 4 lines",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes standing next to four neat stacked shelves. No text, no logos, no real people."
+    },
+    {
+     "heading": "Line 1: Bills",
+     "narration": "Rent, utilities, phone, insurance, transport, minimum debt payments. In this example: $1,650.",
+     "on_screen_text": "Bills: $1,650",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a shelf with a house, lightbulb and phone icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Line 2: Funds",
+     "narration": "Money for costs that aren't monthly but always come: car repairs, gifts, renewals, travel. Here: $250.",
+     "on_screen_text": "Funds: $250",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a shelf with small jars tied with ribbons. No text, no logos, no real people."
+    },
+    {
+     "heading": "Line 3: Goals",
+     "narration": "Paid first, automatically: emergency savings, extra debt payments, investing. Here: $300.",
+     "on_screen_text": "Goals: $300 (paid first)",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a shelf with a growing plant and a savings jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Line 4: Weekly",
+     "narration": "What's left: $3,000 minus $2,200 is $800 a month. Times twelve, divided by fifty-two, is about $184 a week.",
+     "on_screen_text": "$800/month ≈ $184/week",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a single wallet with a small calendar week. No text, no logos, no real people."
+    },
+    {
+     "heading": "What it covers",
+     "narration": "Groceries, gas, eating out, fun, little stuff. All from one weekly number. No categories to police.",
+     "on_screen_text": "One number covers the rest",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a wallet with a grocery bag, coffee cup and ticket floating around it. No text, no logos, no real people."
+    },
+    {
+     "heading": "When it's tight",
+     "narration": "If the weekly number is too small to live on, change Bills or Funds at the monthly reset, not mid-week.",
+     "on_screen_text": "Too tight? Fix it monthly.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes adjusting a shelf height with a small wrench. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why it sticks",
+     "narration": "A bad Tuesday can't touch rent, because rent was never in the weekly pot.",
+     "on_screen_text": "A bad week can't eat rent",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a sturdy wall between a wallet and a house icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Save this",
+     "narration": "Save this and try it with your own numbers. Follow for one money move a week.",
+     "on_screen_text": "Save it. Try your numbers.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a pencil over a blank four-line card. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "The four-line budget on a $3,000 take-home month (illustrative):\n1. Bills: $1,650\n2. Funds (irregular costs): $250\n3. Goals (paid first): $300\n4. Weekly: $800/month × 12 ÷ 52 ≈ $184/week for everything else\n\nThis is the system in The 20-Minute Budget. The guide and spreadsheet (it does the weekly math for you) are in the link in bio. It's our own product.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "budgetingtips",
+    "budgettemplate",
+    "weeklybudget",
+    "sinkingfunds",
+    "budgetforbeginners",
+    "moneysystems",
+    "moneymadesimple"
+   ],
+   "description": "The four-line 20-Minute Budget system worked on a $3,000 take-home month, from bills to a weekly spending number.",
+   "thumbnail_text": "Budget in 4 lines",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budget/",
+    "launch/product/The-20-Minute-Budget.pdf"
+   ],
+   "claims_to_verify": [
+    "$3,000 - ($1,650 + $250 + $300) = $800; $800 x 12 / 52 = $184.62 (arithmetic)",
+    "Example numbers are illustrative, not averages",
+    "Line names (Bills, Funds, Goals, Weekly) match the product guide"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "A 5-step weekly check-in that takes 20 minutes: log one number, roll over or absorb the difference, look three weeks ahead, top up one fund, set this week's number. Saves as a Sunday routine.",
+  "script": {
+   "title": "The Sunday 20-minute money check-in",
+   "hook": "The whole weekly money routine. Twenty minutes, five steps, once a week.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "The whole weekly money routine. Twenty minutes, five steps, once a week.",
+     "on_screen_text": "Weekly money routine: 20 min",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes on a sofa with a cup of tea and a small timer. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pick the slot",
+     "narration": "Same day, same time, every week. Sunday evening works for most people because the week is about to reset.",
+     "on_screen_text": "Same time every week",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with one evening slot circled on each week. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 1: one number",
+     "narration": "Check how much of last week's spending number you actually used. Write down one total. That's the only tracking.",
+     "on_screen_text": "1. How much did you spend?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a single number box on a notepad with a pencil. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 2: settle it",
+     "narration": "If you were under, move the extra to a goal or roll it into this week. If you were over, take it from this week's number, with no guilt.",
+     "on_screen_text": "2. Roll it over or absorb it",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small set of scales balancing coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 3: look ahead",
+     "narration": "Scan the next three weeks for anything unusual: a birthday, a trip, a renewal. Check the right fund can cover it.",
+     "on_screen_text": "3. Scan the next 3 weeks",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. binoculars pointed at a short calendar strip with a gift and plane shape. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 4: one top-up",
+     "narration": "If something's coming and a fund looks short, move a little money now while there's time.",
+     "on_screen_text": "4. Top up one fund",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes pouring a few coins into a ribboned jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 5: set the week",
+     "narration": "Confirm this week's spending number, move it to your spending account or card, and close the laptop.",
+     "on_screen_text": "5. Set this week's number",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a wallet being zipped shut next to a closed laptop. No text, no logos, no real people."
+    },
+    {
+     "heading": "Make it easy",
+     "narration": "Pair it with something pleasant. Tea, a playlist, a show after. A routine you like is a routine you keep.",
+     "on_screen_text": "Pair it with something nice",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a cozy lamp, mug and headphones on a small table. No text, no logos, no real people."
+    },
+    {
+     "heading": "Save this",
+     "narration": "Save this and set a recurring reminder now. Follow for one money move a week.",
+     "on_screen_text": "Save it. Set the reminder.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes tapping a bell-shaped reminder on a phone. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "The weekly 20-minute check-in:\n1. How much of last week's number did you spend? (one total)\n2. Under: roll it over or send it to a goal. Over: take it from this week.\n3. Scan the next 3 weeks for anything unusual.\n4. Top up one fund if something's coming.\n5. Set this week's number and close the laptop.\n\nThe 20-Minute Budget includes a Weekly Check-in tab that does steps 1–2 for you. Guide + spreadsheet in the link in bio. It's our own product.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "weeklybudget",
+    "sundayreset",
+    "budgetingtips",
+    "moneyroutine",
+    "budgettemplate",
+    "moneyhabits",
+    "moneymadesimple"
+   ],
+   "description": "A five-step, 20-minute weekly money check-in routine: one number, settle, look ahead, top up, set the week.",
+   "thumbnail_text": "Weekly 20-min check-in",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budget/",
+    "launch/product/The-20-Minute-Budget.pdf"
+   ],
+   "claims_to_verify": [
+    "Product claim: the spreadsheet's Weekly Check-in tab handles overspend and rollover (matches LISTING.md)"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "Size your emergency fund with your own numbers: list only essential monthly costs (worked example totals $2,240), then pick a target of 1 month (starter), 3 months, or 6 months depending on job stability and dependents.",
+  "script": {
+   "title": "How big should your emergency fund be?",
+   "hook": "'Three to six months of expenses' is vague. Here's how to get your actual number.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "'Three to six months of expenses' is vague. Here's how to get your actual number.",
+     "on_screen_text": "Find your real number",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a measuring tape around a savings jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Essentials only",
+     "narration": "Count only what you'd still pay if you lost your income: housing, utilities, groceries, insurance, transport, minimum debt payments.",
+     "on_screen_text": "Essentials only",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short shelf of essentials: house, lightbulb, grocery bag, car. No text, no logos, no real people."
+    },
+    {
+     "heading": "Worked example",
+     "narration": "Rent $1,200, utilities $120, groceries $350, phone $50, insurance $140, transport $180, minimums $200. Total: $2,240 a month.",
+     "on_screen_text": "Essentials: $2,240/month",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a simple receipt-shaped list of icons with a total bar at the bottom. No text, no logos, no real people."
+    },
+    {
+     "heading": "Starter goal",
+     "narration": "One month of essentials: $2,240. This covers most surprise bills, like a car repair or a vet visit.",
+     "on_screen_text": "Starter: 1 month = $2,240",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small jar one-third full. No text, no logos, no real people."
+    },
+    {
+     "heading": "Solid goal",
+     "narration": "Three months: $6,720. A reasonable target for steady jobs and no dependents.",
+     "on_screen_text": "Steady job: 3 months = $6,720",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the same jar two-thirds full. No text, no logos, no real people."
+    },
+    {
+     "heading": "Bigger goal",
+     "narration": "Six months: $13,440. Better if income is irregular, you're the only earner, or your field takes longer to rehire.",
+     "on_screen_text": "Less stable: 6 months = $13,440",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a large full jar with a sturdy lid. No text, no logos, no real people."
+    },
+    {
+     "heading": "Where it lives",
+     "narration": "Somewhere insured, separate from checking, and easy to reach in a day or two. A high-yield savings account is the usual pick.",
+     "on_screen_text": "Insured, separate, reachable",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an umbrella over a jar on its own shelf. No text, no logos, no real people."
+    },
+    {
+     "heading": "How fast",
+     "narration": "At $100 a week, the starter goal takes about 22 weeks. Any amount counts. Start, then automate.",
+     "on_screen_text": "$100/week → 22 weeks",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a path of small footprints toward a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Save this",
+     "narration": "Save this and fill in your own essentials tonight. Follow for one money move a week.",
+     "on_screen_text": "Save it. Do your numbers.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes writing on a notepad by lamplight. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Your emergency fund target, step by step:\n1. Add up essentials only (example: $2,240/month)\n2. Starter: 1 month ($2,240)\n3. Steady job: 3 months ($6,720)\n4. Irregular income or sole earner: 6 months ($13,440)\nKeep it insured, separate from checking, and reachable in a day or two.\n\nThe high-yield savings account in our link in bio is an affiliate link: we may earn a commission if you open and fund an account, at no extra cost to you. Compare rates and terms yourself first.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "emergencyfund",
+    "savingmoney",
+    "hysa",
+    "highyieldsavings",
+    "moneygoals",
+    "budgetingtips",
+    "moneymadesimple"
+   ],
+   "description": "How to size an emergency fund from essential monthly costs, with a worked $2,240/month example and 1-, 3- and 6-month targets.",
+   "thumbnail_text": "Your emergency fund number",
+   "sources": [
+    "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/",
+    "https://www.fdic.gov/resources/deposit-insurance"
+   ],
+   "claims_to_verify": [
+    "Example essentials sum: 1,200+120+350+50+140+180+200 = 2,240; x3 = 6,720; x6 = 13,440; 2,240/100 = 22.4 weeks (arithmetic)",
+    "'3-6 months of expenses' is a common rule of thumb, not an official standard; the 1/3/6 tiers are guidance"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "credit scores and debt payoff",
+  "idea_angle": "What actually makes up a FICO score (payment history 35%, amounts owed 30%, length of history 15%, new credit 10%, credit mix 10%) with one concrete action for each slice.",
+  "script": {
+   "title": "What your credit score is made of",
+   "hook": "Your credit score is five ingredients. Here's the recipe, and one move for each.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Your credit score is five ingredients. Here's the recipe, and one move for each.",
+     "on_screen_text": "The 5 ingredients of your score",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes in a chef hat next to a bowl with five ingredient jars. No text, no logos, no real people."
+    },
+    {
+     "heading": "Payment history: 35%",
+     "narration": "The biggest slice. Paying on time, every time. Move: autopay at least the minimum on every account.",
+     "on_screen_text": "35%: pay on time",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the largest slice of a pie with a calendar check icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Amounts owed: 30%",
+     "narration": "How much of your available credit you use. Move: keep balances low when your statement closes, ideally well under 30%.",
+     "on_screen_text": "30%: keep balances low",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a gauge with the needle in the low zone. No text, no logos, no real people."
+    },
+    {
+     "heading": "Length of history: 15%",
+     "narration": "How long your accounts have been open. Move: keep old no-fee cards open and use them lightly.",
+     "on_screen_text": "15%: let accounts age",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a tree trunk showing growth rings. No text, no logos, no real people."
+    },
+    {
+     "heading": "New credit: 10%",
+     "narration": "Recent applications and new accounts. Move: space out applications; several hard inquiries close together can dent your score.",
+     "on_screen_text": "10%: space out applications",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a few small doors spaced apart along a hallway. No text, no logos, no real people."
+    },
+    {
+     "heading": "Credit mix: 10%",
+     "narration": "Having different kinds of credit, like cards and installment loans. Move: don't borrow just to improve this. It's the smallest lever.",
+     "on_screen_text": "10%: don't borrow for this",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two different shaped keys on a ring. No text, no logos, no real people."
+    },
+    {
+     "heading": "What's not in it",
+     "narration": "Your income, your savings balance, and checking your own score don't count in FICO scores.",
+     "on_screen_text": "Not counted: income, savings",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small fence with a coin jar and a pay envelope outside it. No text, no logos, no real people."
+    },
+    {
+     "heading": "Priority order",
+     "narration": "If you do only two things: never miss a payment, and keep balances low. That's 65% of the recipe.",
+     "on_screen_text": "Two moves = 65% of it",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding up two fingers next to a pie with two big slices highlighted. No text, no logos, no real people."
+    },
+    {
+     "heading": "Save this",
+     "narration": "Save this before your next card application. Follow for one money move a week.",
+     "on_screen_text": "Save this recipe",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes placing a recipe card in a box. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "FICO score ingredients (general weights, per myFICO):\n• Payment history 35%: autopay the minimum\n• Amounts owed 30%: keep statement balances low\n• Length of history 15%: keep old no-fee cards open\n• New credit 10%: space out applications\n• Credit mix 10%: don't borrow just for this\n\nNot included: income, savings, or checking your own score.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "creditscore",
+    "fico",
+    "credittips",
+    "buildcredit",
+    "creditcards",
+    "financialliteracy",
+    "moneymadesimple"
+   ],
+   "description": "The five FICO score factors and their general weights, with one practical action for each.",
+   "thumbnail_text": "Your score's recipe",
+   "sources": [
+    "https://www.myfico.com/credit-education/whats-in-your-credit-score",
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-a-credit-score-en-315/"
+   ],
+   "claims_to_verify": [
+    "FICO general weights: payment history 35%, amounts owed 30%, length of history 15%, new credit 10%, credit mix 10% (myFICO; weights vary by individual profile)",
+    "Checking your own credit is a soft inquiry and doesn't affect your score",
+    "Income and savings balances are not in credit reports or FICO scores",
+    "'Well under 30%' utilization is general guidance, not a FICO rule"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Get one month ahead (spend last month's income this month): with $2,600 of monthly spending, saving $150/week builds the buffer in about 18 weeks; then payday timing stops mattering.",
+  "script": {
+   "title": "How to get one month ahead",
+   "hook": "Imagine paying this month's bills with last month's paycheck. Here's how to get there.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Imagine paying this month's bills with last month's paycheck. Here's how to get there.",
+     "on_screen_text": "Live on last month's pay",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes standing calmly one step ahead on a staircase of calendar pages. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why it matters",
+     "narration": "Living paycheck to paycheck isn't only about income. It's timing. Bills land before pay does, and every month feels tight.",
+     "on_screen_text": "The problem is timing",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two clocks slightly out of sync. No text, no logos, no real people."
+    },
+    {
+     "heading": "The target",
+     "narration": "A buffer equal to one month of spending, sitting in checking or a linked account. Say your month costs $2,600.",
+     "on_screen_text": "Target: one month = $2,600",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar sized like a calendar page. No text, no logos, no real people."
+    },
+    {
+     "heading": "Worked numbers",
+     "narration": "Set aside $150 a week. Twenty-six hundred divided by one-fifty is about eighteen weeks.",
+     "on_screen_text": "$150/week ≈ 18 weeks",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. eighteen small steps leading to the full jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Where it comes from",
+     "narration": "Any windfall goes in: tax refund, bonus, a sold bike. Each one cuts weeks off the plan.",
+     "on_screen_text": "Windfalls go straight in",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a gift box and a refund envelope dropping coins into the jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "The switch",
+     "narration": "Once the buffer is full, on the first of the month you move that month's whole budget over at once. Paydays just refill it.",
+     "on_screen_text": "Then: fund the month on day 1",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar page being filled all at once on the first day. No text, no logos, no real people."
+    },
+    {
+     "heading": "Not the same",
+     "narration": "This buffer isn't your emergency fund. It's a timing cushion. Keep emergency savings separate.",
+     "on_screen_text": "Buffer ≠ emergency fund",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two separate jars with a small divider between them. No text, no logos, no real people."
+    },
+    {
+     "heading": "Save this",
+     "narration": "Save this and pick your weekly amount today. Follow for one money move a week.",
+     "on_screen_text": "Save it. Pick your amount.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes writing a single number on a sticky note shape. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Getting one month ahead means this month's bills are paid from last month's income.\n• Target: one month of spending (example $2,600)\n• $150/week ≈ 18 weeks\n• Windfalls go straight in\n• Once full, fund each month on day 1; paydays just refill it\nKeep it separate from your emergency fund.\n\nThe 20-Minute Budget spreadsheet works out your monthly number from any pay schedule. Link in bio; it's our own product.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "paychecktopaycheck",
+    "budgetingtips",
+    "onemonthahead",
+    "moneygoals",
+    "savingmoney",
+    "cashflow",
+    "moneymadesimple"
+   ],
+   "description": "A step-by-step plan to get one month ahead on bills, with a $2,600 target built at $150 per week.",
+   "thumbnail_text": "Get 1 month ahead",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budget/",
+    "launch/product/The-20-Minute-Budget.pdf"
+   ],
+   "claims_to_verify": [
+    "$2,600 / $150 = 17.3, rounded up to about 18 weeks (arithmetic)",
+    "Product claim: the Setup tab converts weekly, biweekly or twice-monthly pay into a monthly figure (matches LISTING.md)"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "first-time investing basics (index funds, retirement accounts)",
+  "idea_angle": "A first-job open enrollment checklist (November is enrollment season for many employers): total-cost plan comparison, HSA if eligible, FSA use-it-or-lose-it rules, 401(k) rate, beneficiaries, disability cover.",
+  "script": {
+   "title": "Your open enrollment checklist",
+   "hook": "Open enrollment is the one week a year your employer lets you change your benefits. Don't click 'same as last year' blind.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Open enrollment is the one week a year your employer lets you change your benefits. Don't click 'same as last year' blind.",
+     "on_screen_text": "Don't auto-renew blind",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes at a desk with a stack of folders and a small calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "1. Total cost",
+     "narration": "Compare health plans by premiums plus what you'd realistically pay out of pocket, not premium alone.",
+     "on_screen_text": "1. Premium + likely costs",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two simple stacks being added together for each of two plans. No text, no logos, no real people."
+    },
+    {
+     "heading": "2. HSA check",
+     "narration": "On a qualifying high-deductible plan? A health savings account lets you save pre-tax for medical costs, and the money stays yours.",
+     "on_screen_text": "2. HDHP? Look at the HSA",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a small heart shape on it. No text, no logos, no real people."
+    },
+    {
+     "heading": "3. FSA rules",
+     "narration": "A flexible spending account also saves taxes, but unused money may be lost. Check your plan's carryover or grace period.",
+     "on_screen_text": "3. FSA: know the deadline",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an hourglass next to a jar with a heart. No text, no logos, no real people."
+    },
+    {
+     "heading": "4. Your 401(k)",
+     "narration": "Confirm you contribute at least enough to get any employer match. Add one percent if you can.",
+     "on_screen_text": "4. Get the full match",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar receiving coins from two directions. No text, no logos, no real people."
+    },
+    {
+     "heading": "5. Beneficiaries",
+     "narration": "Check who's named on your life insurance and retirement accounts. People forget to update this for years.",
+     "on_screen_text": "5. Update beneficiaries",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a simple form with two silhouetted outlines, no faces. No text, no logos, no real people."
+    },
+    {
+     "heading": "6. Disability cover",
+     "narration": "Your ability to earn is your biggest asset early on. See if your employer offers disability insurance, and what it costs.",
+     "on_screen_text": "6. Check disability insurance",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a shield in front of a paycheck envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "7. Write it down",
+     "narration": "Note the deadline, what you chose, and why. Next year's you will thank you.",
+     "on_screen_text": "7. Note the deadline",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with one day starred and a pencil. No text, no logos, no real people."
+    },
+    {
+     "heading": "Save this",
+     "narration": "Save this for your enrollment window. Follow for one money move a week.",
+     "on_screen_text": "Save this for enrollment",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes filing a folder with a check shape. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Open enrollment checklist:\n1. Compare plans by premium + likely out-of-pocket\n2. On an eligible HDHP? Look at the HSA\n3. FSA: check carryover/grace-period rules\n4. 401(k): at least enough for the full match\n5. Update beneficiaries\n6. Check disability insurance\n7. Write down the deadline and your choices\n\nEmployer plans vary; read your plan documents. Education only, not advice.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "openenrollment",
+    "employeebenefits",
+    "hsa",
+    "fsa",
+    "401k",
+    "firstjob",
+    "moneymadesimple"
+   ],
+   "description": "A seven-step open enrollment checklist for early-career workers: health plan total cost, HSA, FSA, 401(k) match, beneficiaries and disability cover.",
+   "thumbnail_text": "Open enrollment checklist",
+   "sources": [
+    "https://www.irs.gov/publications/p969",
+    "https://www.healthcare.gov/glossary/flexible-spending-account-fsa/",
+    "https://www.healthcare.gov/glossary/health-savings-account-hsa/",
+    "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/publications/top-10-ways-to-prepare-for-retirement"
+   ],
+   "claims_to_verify": [
+    "HSA eligibility requires enrollment in an HSA-eligible high-deductible health plan (IRS Pub 969)",
+    "HSA funds roll over year to year and stay with the account holder; FSA funds may be forfeited unless the plan offers a carryover or grace period",
+    "Employer open enrollment windows vary; many are in October-December (do not state a specific date)"
+   ]
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Build a complete budget in one evening with the four-line system (Bills, Funds, Goals, Weekly): what to gather, how to find true take-home, a fully worked fictional example, automation, the first check-in, and what to do when week one goes wrong.",
+  "script": {
+   "title": "Build your whole budget in one evening (step by step)",
+   "hook": "Most people don't fail at budgeting because they're bad with money. They fail because the budget they picked asks for fifty small decisions a day, and nobody has the energy for that after work. Tonight we'll build one that asks for one decision a month and a twenty-minute check-in once a week. You'll need about an hour, your last two months of bank and card statements, and something to write on. By the end you'll have four numbers that cover every dollar you earn, and one of them is the only number you'll think about day to day. We'll use a made-up person, Sam, so you can see real math.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Most people don't fail at budgeting because they're bad with money. They fail because the budget they picked asks for fifty small decisions a day, and nobody has the energy for that after work. Tonight we'll build one that asks for one decision a month and a twenty-minute check-in once a week. You'll need about an hour, your last two months of bank and card statements, and something to write on. By the end you'll have four numbers that cover every dollar you earn, and one of them is the only number you'll think about day to day. We'll use a made-up person, Sam, so you can see real math.",
+     "on_screen_text": "One evening. Four numbers.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes at a kitchen table at dusk with a lamp, a notepad and a cup of tea. No text, no logos, no real people."
+    },
+    {
+     "heading": "Gather your numbers",
+     "narration": "Before any planning, collect facts. Download two months of statements for every checking account and credit card. Two months matters, because one month can be unusual. Open them side by side and get a highlighter or a spreadsheet ready. You're looking for three things: what actually landed in your account from work, what repeated every month, and what showed up once but will clearly happen again, like a car registration or a friend's wedding. Don't judge anything yet. Judging slows you down and makes people quit in the first ten minutes. Tonight you're a researcher, not a critic.",
+     "on_screen_text": "Two months of statements",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two neat stacks of paper with a highlighter shape resting on top. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 1: true take-home",
+     "narration": "Your budget starts with money that actually arrives, not your salary. Find your normal paychecks and convert them to a monthly figure. Paid every two weeks? Multiply one paycheck by twenty-six, then divide by twelve. Paid weekly? Multiply by fifty-two, divide by twelve. Twice a month? Just double it. Sam is paid every two weeks, $1,400 each time. Fourteen hundred times twenty-six is $36,400, divided by twelve is about $3,033. We'll round down to $3,000 to keep a little slack. If your income varies, use your lowest normal month from the last six, and treat anything above that as a bonus to assign later.",
+     "on_screen_text": "Paycheck × 26 ÷ 12",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a paycheck envelope feeding a small calculator made of simple shapes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 2: Bills",
+     "narration": "Line one is Bills: every cost that repeats each month at roughly the same amount. Rent, power, internet, phone, car insurance, transit, minimum payments on every debt, and subscriptions. Go line by line through the statements. For bills that change with the seasons, like heating, use a slightly high average so winter doesn't surprise you. Sam's list comes to $1,650: rent $1,150, utilities and internet $140, phone $45, car insurance $110, gas and transit $105, a student loan minimum of $100. If your Bills line is above about sixty percent of take-home, the biggest wins will come from the bills themselves, not from skipping coffee.",
+     "on_screen_text": "Line 1, Bills: $1,650",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a shelf with a house, lightbulb, phone and car icon in a row. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 3: Funds",
+     "narration": "Line two is Funds, short for sinking funds. These are the costs that aren't monthly but always come: car repairs, gifts, medical copays, annual renewals, travel, new shoes. They're the real reason most budgets break, because they get treated as emergencies when they were completely predictable. Look back over twelve months, estimate a yearly amount for each, and divide by twelve. Sam sets aside $100 for car costs, $60 for gifts, $40 for medical and $50 for travel. That's $250 a month. The money sits in savings until the cost arrives, and then it's spent without any guilt, because that's exactly what it was for.",
+     "on_screen_text": "Line 2, Funds: $250",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a row of small ribbon-tied jars with car, gift and plane icons. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 4: Goals",
+     "narration": "Line three is Goals, and it gets paid first, not from whatever is left over. Goals can be a starter emergency fund, extra payments on high-interest debt, or investing for retirement. Pick an amount that's meaningful but not painful, because you can raise it at any monthly reset. Sam chooses $300: $200 toward a starter emergency fund until it reaches one month of essentials, and $100 extra on a credit card. If you have an employer retirement match, the contribution comes out of your paycheck before it ever reaches you, so it won't appear here, but make sure you're getting it. That match is part of your pay.",
+     "on_screen_text": "Line 3, Goals: $300 (first)",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a plant growing out of a savings jar with a small upward arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 5: your weekly number",
+     "narration": "Line four is the one you'll actually live with. Take home pay, minus Bills, minus Funds, minus Goals. For Sam that's $3,000 minus $1,650, minus $250, minus $300, which leaves $800 a month. To turn that into a weekly number, multiply by twelve and divide by fifty-two. That's about $184 a week. Groceries, eating out, coffee, fun, a birthday drink, a random lamp: all of it comes out of $184. There are no categories inside it to police. Sam decides the trade-offs at the checkout, which is where those decisions really happen anyway. When the week's money is gone, the week is done.",
+     "on_screen_text": "Line 4, Weekly: ≈ $184",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a single wallet resting on a small seven-day calendar strip. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 6: make it automatic",
+     "narration": "A plan you have to remember is a plan you'll forget. Set it up so the first three lines run without you. Bills and Goals leave checking automatically the day after payday. Funds go to a separate savings account, ideally one that earns a decent rate and is insured, so the money isn't sitting idle. The weekly number moves into a spending account, or onto one card you pay in full every month. Sam sets two automatic transfers per paycheck and turns on autopay for every bill. From now on, the only balance Sam needs to check is the spending one, and it only has to last until Sunday.",
+     "on_screen_text": "Automate lines 1–3",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a simple gear system moving coins from one jar into three others. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 7: the first check-in",
+     "narration": "Put a recurring twenty-minute event in your calendar for the same evening every week. At the first one, do five things. Write down how much of last week's number you spent. If there's money left, roll it into this week or send it to a goal. If you went over, take it from this week. Look three weeks ahead for anything unusual and check the right fund can cover it. Then confirm this week's number and close the laptop. That's the entire tracking system: one number a week, not every coffee. Most check-ins take ten minutes once the habit is set, sometimes less.",
+     "on_screen_text": "20 minutes, once a week",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes on a sofa with a timer, a mug and a closed laptop. No text, no logos, no real people."
+    },
+    {
+     "heading": "When week one goes wrong",
+     "narration": "It will, a little, and that's useful information, not failure. Maybe Sam spends $230 in the first week because of a friend's birthday dinner. The fix isn't guilt or a new budget. Sam takes the extra $46 out of next week, so week two is $138, and makes a note. If it keeps happening, the plan is wrong, not Sam. At the monthly reset, Sam can move money from Goals to the weekly number for a month, or find a bill to cut. Never rewrite the plan mid-week, in the heat of a bad day. Write it down and decide at the monthly reset, when you're calm.",
+     "on_screen_text": "Over? Take it from next week.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small stumble on a path with the small round green piggy bank mascot with big eyes getting back up and smiling. No text, no logos, no real people."
+    },
+    {
+     "heading": "The monthly reset",
+     "narration": "Once a month, give the whole plan twenty minutes. Check whether each bill is still accurate, whether the funds are on track for what's coming, and whether the weekly number felt livable. Adjust one or two things, not everything. This is where you raise a goal after a raise, add a new fund for a holiday trip, or cancel a subscription you noticed you never use. Over a few months, the numbers stop being guesses and start being yours. Sam's first reset moves $20 from gifts to car costs, because a tire looks worn. That's the system working: small adjustments, made calmly, in advance.",
+     "on_screen_text": "Monthly: adjust one or two things",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a control panel with two dials being nudged slightly. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Here's the whole evening in one breath. Find your true take-home pay. List Bills. Plan Funds for the costs that always come. Pay Goals first. Whatever's left becomes your weekly number. Automate the first three lines, then run a twenty-minute check-in every week and a twenty-minute reset every month. If you want this ready-made, our guide and spreadsheet, The 20-Minute Budget, walks through the same steps and does the weekly math for you. It's our own product and the link is in the bio. Either way, you can build it tonight with a notepad. Pick the evening, and put it on the calendar now.",
+     "on_screen_text": "Take-home → 4 lines → weekly",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a finished four-line card with a satisfied smile. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Build a full budget in one evening:\n1. True take-home (paycheck × 26 ÷ 12 if paid biweekly)\n2. Bills: everything that repeats monthly\n3. Funds: costs that always come (car, gifts, travel) ÷ 12\n4. Goals: paid first\n5. Weekly number = what's left × 12 ÷ 52\n6. Automate lines 1–3\n7. 20-minute check-in weekly, 20-minute reset monthly\n\nExample (fictional): $3,000 take-home → Bills $1,650, Funds $250, Goals $300, Weekly ≈ $184.\n\nWant it ready-made? The 20-Minute Budget (guide + Excel/Google Sheets template) is in the link in bio. It's our own product.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "budgeting",
+    "budgetforbeginners",
+    "budgettemplate",
+    "sinkingfunds",
+    "weeklybudget",
+    "personalfinance20s",
+    "moneymadesimple"
+   ],
+   "description": "Build a complete budget in one evening with four lines: Bills, Funds, Goals and one weekly spending number. Fully worked with a fictional example (Sam, $3,000 take-home).\n\nChapters\n0:00 One evening, four numbers\n0:45 Gather your numbers\n1:30 Step 1: true take-home\n2:20 Step 2: Bills\n3:10 Step 3: Funds\n3:55 Step 4: Goals\n4:45 Step 5: your weekly number\n5:35 Step 6: make it automatic\n6:20 Step 7: the first check-in\n7:05 When week one goes wrong\n7:50 The monthly reset\n8:35 Recap\n\nEducation only, not financial advice. The example person and numbers are made up. The 20-Minute Budget (link in bio) is our own product.",
+   "thumbnail_text": "Budget in one evening",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budget/",
+    "launch/product/The-20-Minute-Budget.pdf",
+    "https://www.investor.gov/introduction-investing/investing-basics/save-and-invest"
+   ],
+   "claims_to_verify": [
+    "Biweekly $1,400 x 26 / 12 = $3,033 (rounded down to $3,000 for slack)",
+    "Bills example: 1,150 + 140 + 45 + 110 + 105 + 100 = 1,650; Funds 100+60+40+50 = 250 (arithmetic)",
+    "$800 x 12 / 52 = $184.62; overspend $230 - $184 = $46; $184 - $46 = $138 (arithmetic)",
+    "'Bills above about 60% of take-home' is the product guide's rule of thumb, not an official standard",
+    "Sam is fictional; say so on screen"
+   ]
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "High-yield savings accounts explained end to end: why online banks pay more, worked interest numbers, how APY and compounding actually work, insurance, fees and limits, taxes on interest, what belongs in one and what doesn't, and a 5-minute way to choose.",
+  "script": {
+   "title": "High-yield savings accounts, explained properly",
+   "hook": "If your savings live at the same bank as your checking account, there's a decent chance they're earning almost nothing. That isn't a scam, exactly. It's just that many big banks don't need to compete for your savings, so they don't. High-yield savings accounts exist because other banks do want your deposits, and they pay for them. In this video we'll cover why the rates are different, what the numbers actually look like, how to tell if an account is safe, the fees and limits to check, how interest gets taxed, and what money belongs in one. Then a five-minute way to pick one.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "If your savings live at the same bank as your checking account, there's a decent chance they're earning almost nothing. That isn't a scam, exactly. It's just that many big banks don't need to compete for your savings, so they don't. High-yield savings accounts exist because other banks do want your deposits, and they pay for them. In this video we'll cover why the rates are different, what the numbers actually look like, how to tell if an account is safe, the fees and limits to check, how interest gets taxed, and what money belongs in one. Then a five-minute way to pick one.",
+     "on_screen_text": "Is your savings earning anything?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes peeking into a nearly empty jar inside a big quiet bank lobby. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why rates differ",
+     "narration": "A high-yield savings account is just a savings account with a higher interest rate. Most are at online banks or online divisions of traditional banks. Without a big branch network to pay for, they can pass more of their earnings to depositors. They also use higher rates to attract customers, the same way a store runs a sale. The rate is variable, meaning the bank can change it at any time, and rates across the whole market tend to rise and fall with the Federal Reserve's interest rate decisions. So a high-yield account isn't a locked deal. It's a better default, which you check in on once in a while.",
+     "on_screen_text": "Fewer branches, higher rates",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small modern building and a large columned building, coins flowing faster from the small one. No text, no logos, no real people."
+    },
+    {
+     "heading": "The numbers",
+     "narration": "Let's make it concrete with an emergency fund of $6,000. At a rate of 0.01% APY, which some large banks still pay on basic savings, that earns about sixty cents a year. At an illustrative 3.5% APY, the same $6,000 earns roughly $210 in a year, if the rate stays there. Add $200 a month for a year at that rate and you'd put in $2,400 and earn about forty dollars of interest on top. None of this will make you rich, and it isn't meant to. The point is that money you're keeping safe anyway shouldn't lose ground for no reason.",
+     "on_screen_text": "$6,000: 60¢ vs ≈ $210",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two jars, one with a single coin and one with a modest stack, on a balance scale. No text, no logos, no real people."
+    },
+    {
+     "heading": "APY and compounding",
+     "narration": "The number to compare is APY, the annual percentage yield. It includes compounding, which means the interest you earn starts earning interest too. Most savings accounts compound daily or monthly and pay interest monthly. With savings rates, compounding makes only a small difference in one year, so don't overthink daily versus monthly. Compare APY to APY. Be careful with headlines that show a high rate with an asterisk. It might be a promotional rate for a few months, or it might only apply up to a certain balance, or require a direct deposit. The fine print will say. If an offer needs a lot of conditions, it may not be worth the effort.",
+     "on_screen_text": "Compare APY to APY",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a snowball rolling gently and growing slightly bigger. No text, no logos, no real people."
+    },
+    {
+     "heading": "Is it safe?",
+     "narration": "Safety comes from deposit insurance, not from the app's design. At a bank, look for FDIC insurance, which covers deposits up to $250,000 per depositor, per insured bank, per ownership category, if the bank fails. At a credit union, the equivalent is NCUA insurance. Some savings apps aren't banks at all. They partner with a bank that holds your money. In that case, the insurance covers the partner bank failing, not the app company running into trouble. You can look up any bank in the FDIC's BankFind tool in about a minute. If you can't figure out where your money actually sits, that's your answer: pick a different account.",
+     "on_screen_text": "Insured, by whom?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a sturdy umbrella over a jar, with a small magnifying glass beside it. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fees and limits",
+     "narration": "A good high-yield account shouldn't charge a monthly maintenance fee or require a large minimum balance to earn its rate. Check anyway. Then look at how money gets out. Most connect to your checking account through an electronic transfer that usually takes one to three business days. That's a feature for an emergency fund, a small speed bump that stops casual spending, but plan around it. Some banks also limit how many withdrawals or transfers you can make per month. A federal rule used to cap certain savings withdrawals at six per month; that requirement was dropped in 2020, but some banks still set their own limits.",
+     "on_screen_text": "No fees. Know the transfer time.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small bridge with a coin crossing slowly between two jars, a clock above it. No text, no logos, no real people."
+    },
+    {
+     "heading": "Taxes on interest",
+     "narration": "Interest from a savings account is taxable income. If you earn ten dollars or more in a year, the bank usually sends a form 1099-INT, and you report it on your tax return. At the amounts most people in their twenties hold, this is small, but it's worth knowing so it isn't a surprise. It's taxed at your ordinary income tax rate, unlike some investments that get special treatment. Treasury bills are one alternative for short-term money that's exempt from state income tax, which can matter in high-tax states. For most people starting out, though, the simplicity of a savings account wins.",
+     "on_screen_text": "Interest is taxable",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small envelope with a coin, next to a simple calculator. No text, no logos, no real people."
+    },
+    {
+     "heading": "What belongs in one",
+     "narration": "A high-yield savings account is a great home for three kinds of money. First, your emergency fund, money you might need tomorrow without warning. Second, sinking funds, the money you're setting aside for car repairs, gifts and annual bills. Third, short-term goals within a couple of years, like a move, a deposit on an apartment, or a trip. Keeping these separate from checking makes them less tempting to spend. Some people open several accounts, or use a bank that lets you create labeled sub-accounts, so each pot has a name. Seeing 'car repairs' with $340 in it is weirdly calming when the check engine light comes on.",
+     "on_screen_text": "Emergency, funds, short-term goals",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three labeled-by-color jars on a shelf: umbrella, ribbon, plane. No text, no logos, no real people."
+    },
+    {
+     "heading": "What doesn't",
+     "narration": "Long-term money, especially for retirement, generally shouldn't live in savings for decades. Over long periods, cash has often struggled to keep up with inflation, while diversified investments have historically grown faster, with real ups and downs. That money belongs in a retirement account and low-cost investments. The opposite mistake also happens: investing your emergency fund to chase a higher return. If the market drops at the same time you lose your job, you'd be selling at the worst moment. So the rule is simple. Money for the next year or two goes in savings. Money for decades goes into investments. Don't swap them.",
+     "on_screen_text": "Short-term: save. Long-term: invest.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a timeline with a jar on the left and a growing tree on the right. No text, no logos, no real people."
+    },
+    {
+     "heading": "Choose in 5 minutes",
+     "narration": "Here's the quick way. One: confirm FDIC or NCUA insurance, and the partner bank if it's an app. Two: compare the current APY across two or three options, not just the one in an ad. Three: check there's no monthly fee and no minimum to earn the rate. Four: check transfer time and any monthly limits. Five: make sure it links easily to your checking account and that you can close it online. Then open it, move your emergency fund, and set up an automatic transfer every payday. You don't need the single highest rate in the country. You need a good rate at a safe bank that you'll actually use.",
+     "on_screen_text": "Insured, APY, fees, transfers, exit",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes ticking five checkboxes on a clipboard. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "A high-yield savings account is a regular insured savings account with a better, variable rate. The rate difference is mostly about how much the bank wants deposits, not about extra risk, as long as it's insured. Use it for emergency money, sinking funds and short-term goals. Keep long-term money invested. Compare by APY, check fees, transfers and limits, and remember interest is taxable. If you want a starting point, the high-yield savings account in our link in bio is an affiliate link, which means we may earn a commission if you open and fund an account, at no extra cost to you. Compare it with others first.",
+     "on_screen_text": "Insured. Better rate. Right job.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes carrying a jar across a bridge to a brighter little bank building. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "High-yield savings, the short version:\n• Higher rate, same insurance, if the bank is FDIC/NCUA-insured\n• Rates are variable; compare APY with APY\n• $6,000 at 0.01% ≈ 60¢/yr vs an illustrative 3.5% ≈ $210/yr\n• Check fees, minimums, transfer time and monthly limits\n• Interest is taxable (1099-INT at $10+)\n• Use it for emergency money, sinking funds and short-term goals, not decades-long money\n\nThe high-yield savings account in our link in bio is an affiliate link: we may earn a commission if you open and fund an account, at no extra cost to you. Compare rates and terms yourself first.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "highyieldsavings",
+    "hysa",
+    "savingsaccount",
+    "emergencyfund",
+    "apy",
+    "fdic",
+    "moneymadesimple"
+   ],
+   "description": "High-yield savings accounts explained: why online banks pay more, worked interest numbers, APY and compounding, FDIC/NCUA insurance, fees and limits, taxes on interest, and what money belongs in one.\n\nChapters\n0:00 Is your savings earning anything?\n0:40 Why rates differ\n1:30 The numbers\n2:20 APY and compounding\n3:10 Is it safe?\n4:00 Fees and limits\n4:50 Taxes on interest\n5:35 What belongs in one\n6:25 What doesn't\n7:10 Choose in 5 minutes\n8:00 Recap\n\nEducation only, not financial advice. Rates in this video are illustrative and change over time. The high-yield savings link in our bio is an affiliate link: we may earn a commission if you open and fund an account, at no extra cost to you.",
+   "thumbnail_text": "HYSA, explained",
+   "sources": [
+    "https://www.fdic.gov/resources/deposit-insurance",
+    "https://banks.data.fdic.gov/bankfind-suite/bankfind",
+    "https://www.fdic.gov/resources/bankers/national-rates/index.html",
+    "https://www.irs.gov/forms-pubs/about-form-1099-int",
+    "https://www.federalreserve.gov/supervisionreg/regdcg.htm",
+    "https://www.treasurydirect.gov/marketable-securities/treasury-bills/"
+   ],
+   "claims_to_verify": [
+    "$6,000 x 0.01% = $0.60; $6,000 x 3.5% = $210; $200/month for 12 months at 3.5% ≈ $2,439 (≈ $39 interest) (arithmetic)",
+    "3.5% APY is illustrative; check current HYSA rates on posting day",
+    "FDIC coverage: $250,000 per depositor, per insured bank, per ownership category",
+    "Regulation D six-per-month limit on certain savings withdrawals was removed as a requirement in April 2020 (Federal Reserve interim final rule)",
+    "Banks typically issue Form 1099-INT for interest of $10 or more",
+    "Treasury bill interest is exempt from state and local income tax",
+    "Savings rates generally move with the Federal Reserve's policy rate (general relationship, not exact)",
+    "Confirm the affiliate HYSA is FDIC-insured with no monthly fee before posting"
+   ]
+  }
+ }
+]

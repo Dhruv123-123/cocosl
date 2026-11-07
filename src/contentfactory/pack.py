@@ -9,6 +9,10 @@ media and a caption.txt holding the exact caption (brand AI disclosure and any a
 included), the facts to check before posting and, for videos, the narration script. It also writes
 POSTING_PLAN.md, calendar.csv, calendar.ics and CHECKS.md (guardrail results per post).
 
+A short may carry `tiktok_extra` (segments for a 60-90s TikTok cut) and `series` (e.g. "Rate My Budget").
+The TikTok cut is written to tiktok-cut.json beside the post and printed in caption.txt; it is not imported as
+a separate post, since it is the same video for another platform.
+
 Slots come from the brand cadence: shorts at the first post time on short days (to every account that
 takes shorts), carousels at the last post time on carousel days, long videos at the last post time on
 long days. Items fill slots in file order, so order the file the way you want it to go out. Days left
@@ -126,6 +130,10 @@ def plan(brand: BrandProfile, items: list[dict], start: date, days: int,
         sc = items[s.index]["script"]
         s.title = sc["title"]
         s.tags = revenue_tags(brand, sc.get("caption", ""))
+        if items[s.index].get("series"):
+            s.tags.insert(0, items[s.index]["series"])
+        if items[s.index].get("tiktok_extra"):
+            s.tags.append("TikTok long cut")
     leftover = [i for q in queues.values() for i in q]
     return sorted(slots, key=lambda s: s.when), leftover
 
@@ -133,6 +141,24 @@ def plan(brand: BrandProfile, items: list[dict], start: date, days: int,
 # ---------------------------------------------------------------- output files
 def slugify(text: str, n: int = 52) -> str:
     return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")[:n].strip("-")
+
+
+WORDS_PER_SECOND = 2.6
+
+
+def est_seconds(lines: list[str]) -> int:
+    """Rough spoken length, before pauses and the closing call to action."""
+    return round(sum(len(x.split()) for x in lines) / WORDS_PER_SECOND)
+
+
+def tiktok_segments(item: dict) -> list[dict]:
+    """The long TikTok cut: the base script with `tiktok_extra` inserted before its last segment.
+
+    Research (Nov 2026) found 60-90s TikToks break out about twice as often as short ones, while Reels and
+    Shorts don't reward length, so shorts can carry an optional `tiktok_extra` list of segments."""
+    segs = item["script"]["segments"]
+    extra = item.get("tiktok_extra") or []
+    return segs[:-1] + extra + segs[-1:] if extra else list(segs)
 
 
 def caption_txt(brand: BrandProfile, item: dict, slot: Slot | None) -> str:
@@ -149,7 +175,12 @@ def caption_txt(brand: BrandProfile, item: dict, slot: Slot | None) -> str:
     lines += [f"[ ] {c}" for c in sc.get("claims_to_verify", [])]
     lines += ["[ ] Platform AI-label toggle set where required", "", "Sources:"]
     lines += sc.get("sources", [])
-    if item["format"] in ("short", "long"):
+    if item.get("tiktok_extra"):
+        base = [s["narration"] for s in sc["segments"]]
+        cut = [s["narration"] for s in tiktok_segments(item)]
+        lines += ["", f"--- NARRATION: Reels / Shorts cut (~{est_seconds(base)}s) ---"] + base
+        lines += ["", f"--- NARRATION: TikTok cut (~{est_seconds(cut)}s, adds a worked example) ---"] + cut
+    elif item["format"] in ("short", "long"):
         lines += ["", "--- NARRATION SCRIPT ---"] + [s["narration"] for s in sc["segments"]]
     else:
         lines += ["", "--- SLIDE TEXT ---"] + [f"{i + 1}. {s['on_screen_text']}" for i, s in enumerate(sc["segments"])]
@@ -226,7 +257,7 @@ def export(factory, brand_slug: str, items: list[dict], out: Path, start: date, 
         fmt = item["format"]
         slot = by_index.get(idx)
         group = "carousels" if fmt == "carousel" else ("videos" if render_video else "videos-need-voice")
-        if slot is None:
+        if slot is None and days:  # with --days 0 the whole file is an undated library
             group = "spares"
         folder = f"{group}/{n:02d}-{slugify(item['script']['title'])}"
         dest = out / folder
@@ -258,6 +289,9 @@ def export(factory, brand_slug: str, items: list[dict], out: Path, start: date, 
                 jpg = t.with_suffix(".jpg")
                 shutil.copy(jpg if jpg.exists() else t, dest / f"thumbnail{jpg.suffix if jpg.exists() else t.suffix}")
                 shutil.rmtree(work, ignore_errors=True)
+        if item.get("tiktok_extra"):
+            cut = {**item["script"], "segments": tiktok_segments(item)}
+            (dest / "tiktok-cut.json").write_text(json.dumps(cut, indent=1, ensure_ascii=False))
         if slot:
             slot.folder, slot.post_id = folder, pid
         (dest / "caption.txt").write_text(caption_txt(brand, item, slot))

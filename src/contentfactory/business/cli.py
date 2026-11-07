@@ -10,7 +10,7 @@ def _p(obj):
 
 
 def register(sub, factory_fn) -> None:  # noqa: C901 - flat command table
-    from . import affiliates, invoices, pitch, products, revenue, ugc
+    from . import affiliates, invoices, onboarding, pitch, products, revenue, ugc
 
     # ---- clients / CRM
     s = sub.add_parser("clients", help="UGC clients: list, add, import leads, status, follow-ups")
@@ -55,7 +55,9 @@ def register(sub, factory_fn) -> None:  # noqa: C901 - flat command table
 
     # ---- orders
     s = sub.add_parser("order", help="create or advance a client order")
-    s.add_argument("action", choices=["create", "status", "list", "invoice"])
+    s.add_argument("action", choices=["create", "status", "list", "invoice", "brief", "checklist", "check"])
+    s.add_argument("--key", default="", help="checklist item key (order check)")
+    s.add_argument("--undo", action="store_true", help="untick (order check)")
     s.add_argument("--client", type=int)
     s.add_argument("--id", type=int)
     s.add_argument("--package", default="starter")
@@ -69,6 +71,18 @@ def register(sub, factory_fn) -> None:  # noqa: C901 - flat command table
             oid = ugc.create_order(db, a.client, a.package, addons=a.addon, rush=a.rush)
             o = ugc.get_order(db, oid)
             print(f"order #{oid}: {a.package} ${o['price_cents'] / 100:,.2f}")
+            print(f"Next: `factory order brief --id {oid}` and send the client the questionnaire.")
+        elif a.action == "brief":
+            o = ugc.get_order(db, a.id)
+            print(onboarding.questionnaire_markdown(o, ugc.get_client(db, o["client_id"]),
+                                                    pitch.SenderProfile.from_env().name))
+        elif a.action in ("checklist", "check"):
+            if a.action == "check":
+                onboarding.set_check(db, a.id, a.key, done=not a.undo)
+            onboarding.setup_order(db, a.id)
+            o = ugc.get_order(db, a.id)
+            for item in o["brief"]["checklist"]:
+                print(f"[{'x' if item['done'] else ' '}] {item['key']:16s} {item['label']}")
         elif a.action == "status":
             ugc.set_order_status(db, a.id, a.status)
             print(f"order #{a.id} -> {a.status}")
@@ -99,10 +113,11 @@ def register(sub, factory_fn) -> None:  # noqa: C901 - flat command table
 
     # ---- pitches
     s = sub.add_parser("pitch", help="draft outreach emails (never sends) and export them")
-    s.add_argument("action", choices=["draft", "export", "optout"])
+    s.add_argument("action", choices=["draft", "export", "optout", "today", "sent"])
     s.add_argument("--id", type=int)
     s.add_argument("--limit", type=int, default=25)
     s.add_argument("--out", default="")
+    s.add_argument("--export", action="store_true", help="pitch today: also write .eml drafts + today.csv")
 
     def pitch_cmd(a):
         f = factory_fn(a)
@@ -117,10 +132,73 @@ def register(sub, factory_fn) -> None:  # noqa: C901 - flat command table
         elif a.action == "export":
             out = a.out or str(f.settings.output_dir / "outreach" / date.today().isoformat())
             _p(pitch.export_drafts(f.db, out, sender))
+        elif a.action == "today":
+            plan = pitch.outreach_today(f.db)
+            print(f"Outreach for {plan['date']}: {plan['count']} email(s) to send (you send them; nothing is sent here)")
+            for x in plan["follow_ups"]:
+                late = f", {x['days_late']}d late" if x["days_late"] else ""
+                print(f"  follow-up {x['step']}/2  #{x['client']['id']} {x['client']['name']} <{x['client']['email']}>{late}")
+            for x in plan["first_touch"]:
+                print(f"  first pitch     #{x['client']['id']} {x['client']['name']} <{x['client']['email']}>")
+            if plan["to_draft"]:
+                print(f"  {len(plan['to_draft'])} lead(s) need a draft first: `factory pitch draft`")
+            if plan["count"]:
+                print("After sending each one: `factory pitch sent --id N`")
+            if a.export:
+                out = a.out or str(f.settings.output_dir / "outreach" / f"today-{plan['date']}")
+                _p(pitch.export_today(f.db, out, sender))
+        elif a.action == "sent":
+            res = pitch.mark_sent(f.db, a.id)
+            if res["kind"] == "pitch":
+                dues = ", ".join(st["due"] for st in res["cadence"]["steps"])
+                print(f"client #{a.id}: pitch marked sent; follow-up drafts due {dues}")
+            else:
+                print(f"client #{a.id}: follow-up {res['step']['n']} marked sent")
         else:
             pitch.mark_opt_out(f.db, a.id)
             print(f"client #{a.id} opted out")
     s.set_defaults(func=pitch_cmd)
+
+    # ---- proposals
+    s = sub.add_parser("proposal", help="build a 3-page client proposal (HTML + PDF) with concepts and pricing")
+    s.add_argument("--client", type=int, required=True)
+    s.add_argument("--package", default="growth", choices=list(ugc.PACKAGES))
+    s.add_argument("--addon", action="append", default=[], choices=[k for k in ugc.ADDONS if k != "rush"])
+    s.add_argument("--rush", action="store_true")
+    s.add_argument("--discount", type=float, default=0)
+    s.add_argument("--product", action="append", default=[], help="product to feature (repeatable)")
+    s.add_argument("--audience", default="")
+    s.add_argument("--offer", default="")
+    s.add_argument("--no-pdf", action="store_true")
+
+    def proposal_cmd(a):
+        from . import proposals
+        f = factory_fn(a)
+        res = proposals.build_proposal(f.db, a.client, a.package, a.addon, llm=f.llm, settings=f.settings,
+                                       pdf=not a.no_pdf, rush=a.rush, discount_pct=a.discount,
+                                       products=a.product or None, audience=a.audience, offer=a.offer)
+        print(f"Proposal {res['number']}: total ${res['total_cents'] / 100:,.2f}, "
+              f"deposit ${res['deposit_cents'] / 100:,.2f}")
+        print(f"  HTML: {res['html']}")
+        print(f"  PDF:  {res['pdf'] or ('(skipped)' if a.no_pdf else '(not available: needs node + playwright)')}")
+    s.set_defaults(func=proposal_cmd)
+
+    # ---- portfolio
+    s = sub.add_parser("portfolio", help="render the sample-ad portfolio (fictional brands) and its gallery page")
+    s.add_argument("action", choices=["build", "page"], help="build = render videos + page; page = page only")
+    s.add_argument("--ads", default="", help="ads.json (default: launch/ugc-service/portfolio/ads.json)")
+    s.add_argument("--out", default="", help="where videos/posters/portfolio.html go "
+                                             "(default: <output>/ugc-portfolio)")
+    s.add_argument("--copy-to", default="", help="also copy page + posters (no videos) here, e.g. the repo folder")
+
+    def portfolio_cmd(a):
+        from . import portfolio
+        f = factory_fn(a)
+        out = a.out or str(f.settings.output_dir / "ugc-portfolio")
+        res = portfolio.build_portfolio(f.settings, a.ads or None, out, copy_to=a.copy_to or None,
+                                        render=a.action == "build")
+        _p(res)
+    s.set_defaults(func=portfolio_cmd)
 
     # ---- invoices
     s = sub.add_parser("invoice", help="list, render, mark sent or paid")
