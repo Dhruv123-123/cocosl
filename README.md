@@ -23,7 +23,7 @@ factory demo                      # renders sample posts offline, no keys needed
 factory serve                     # dashboard at http://127.0.0.1:8000
 ```
 
-New here? **`docs/QUICKSTART.md`** gets you from clone to first scheduled post in 15 minutes. Then read **`launch/LAUNCH_DAY.md`** (the plan for day one) and **`docs/CREDENTIALS.md`** (the steps
+New here? **`QUICKSTART.md`** is the one-page version (ten commands). **`docs/QUICKSTART.md`** gets you from clone to first scheduled post in 15 minutes. Then read **`launch/LAUNCH_DAY.md`** (the plan for day one) and **`docs/CREDENTIALS.md`** (the steps
 only you can do: payouts, accounts, API keys).
 
 ## What's in the box
@@ -68,6 +68,7 @@ factory preflight --scheduled               # check queued media against each pl
 factory cleanup --older-than 60 [--yes]     # free disk from posts live everywhere 60+ days (lists unless --yes)
 factory voice 12 take.m4a                   # your own narration for post 12 (one take, or one file per line); re-renders it
 factory recordings                           # posts waiting on your voice or a screen recording, soonest first
+factory launch-check [--online]             # red/yellow/green: links, UTM tags, placeholders, disclosures, caption limits
 factory calendar --export output/calendar  # all brands: calendar.ics + calendar.html, flags caps and collisions
 ```
 
