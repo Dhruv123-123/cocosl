@@ -11,3 +11,4 @@ output/
 *.db-shm
 node_modules/
 launch/products/dist/*/*.html
+launch/etsy/dist/
