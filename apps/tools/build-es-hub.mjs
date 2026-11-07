@@ -16,9 +16,12 @@ const SCAMS = [
   { u: '../scam-checker/es/enlace/', t: 'Revisor de enlaces', d: '¿Este sitio web es confiable? Revisa un enlace antes de abrirlo: letras cambiadas, marcas falsas y dominios riesgosos.' },
   { u: '../scam-checker/es/estafas/', t: 'Guías de estafas comunes', d: 'USPS, peajes, IRS, Amazon, alertas de fraude, empleos falsos y más, explicados en español.' },
 ];
+const SAVE = [
+  { u: '../budget/reto-ahorro.html', t: 'Reto de ahorro de 52 semanas', d: 'Ahorra $1 más cada semana y junta $1,378 en un año, o pon tu propia meta. Marca cada semana, recibe recordatorios e imprime la tabla.' },
+];
 const calcs = pagesEs.map((p) => ({ u: `../money-calculators/es/${p.slug}/`, t: p.tile || p.h1, d: p.description }));
 const card = (c) => `      <a class="card${c.feature ? ' feature' : ''}" href="${esc(c.u)}"><span class="tag free">Gratis</span><h3>${esc(c.t)}</h3><p>${esc(c.d)}</p></a>`;
-const list = [...calcs, ...SCAMS];
+const list = [...calcs, ...SAVE, ...SCAMS];
 const itemList = { '@context': 'https://schema.org', '@type': 'ItemList', name: 'Herramientas de dinero gratis en español', itemListElement: list.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.t, url: c.u.replace(/^\.\.\//, '../') })) };
 
 const html = `<!doctype html>
@@ -55,7 +58,7 @@ ${style}
   <section id="calculadoras" aria-labelledby="h-calculadoras">
     <h2 id="h-calculadoras">Calculadoras de dinero</h2>
     <div class="grid">
-${calcs.map(card).join('\n')}
+${[...calcs, ...SAVE].map(card).join('\n')}
     </div>
   </section>
 

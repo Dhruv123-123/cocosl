@@ -48,6 +48,23 @@ const checks = [
     await page.check('[data-done=w4]');
     if (!/1 of 5 steps done/.test(await page.textContent('#progress'))) throw new Error('progress');
   }],
+  ['/budget/money-personality.html', '#result h2', async (page) => {
+    for (const q of await page.locator('.q-options').all()) await q.locator('input').nth(3).check();
+    if (!/The Worrier/.test(await page.textContent('#result'))) throw new Error('worrier result');
+    if ((await page.locator('#result a[href*="emergency-fund"]').count()) < 1) throw new Error('tool link');
+  }],
+  ['/budget/savings-challenge.html', '#progress .score-big', async (page) => {
+    await page.fill('[name=start]', '2026-01-05');
+    if (!/\$52\.00/.test(await page.textContent('#weeks'))) throw new Error('classic amounts');
+    await page.check('[data-week="1"]');
+    if (!/1\/52/.test(await page.textContent('#progress'))) throw new Error('tick');
+    await page.selectOption('[name=plan]', 'even');
+    await page.fill('[name=goal]', '5200');
+    if (!/\$100\.00/.test(await page.textContent('#weeks'))) throw new Error('even goal');
+  }],
+  ['/budget/reto-ahorro.html', '#progress .score-big', async (page) => {
+    if (!/Semana 1/.test(await page.textContent('#weeks'))) throw new Error('es weeks');
+  }],
   ['/budget/checkup.html', '#report .score-big', async (page) => {
     for (const r of await page.locator('.q-options').all()) await r.locator('input').nth(2).check();
     if (!/Grade F/.test(await page.textContent('#report'))) throw new Error('worst case grade');

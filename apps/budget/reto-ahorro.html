@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reto de ahorro de 52 semanas: tabla gratis para imprimir y llevar la cuenta</title>
+<meta name="description" content="Reto de ahorro de 52 semanas gratis. Ahorra $1,378 al estilo clásico ($1 más cada semana) o pon tu propia meta. Marca cada semana, ve si vas adelantado o atrasado, recibe recordatorios en tu calendario e imprime la tabla.">
+<meta property="og:title" content="Reto de ahorro de 52 semanas">
+<meta property="og:description" content="$1 más cada semana, $1,378 en un año, o tu propia meta. Gratis.">
+<meta name="theme-color" content="#0b1d13">
+<link rel="alternate" hreflang="en" href="savings-challenge.html">
+<link rel="alternate" hreflang="es" href="reto-ahorro.html">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Reto de ahorro de 52 semanas","applicationCategory":"FinanceApplication","operatingSystem":"Any","inLanguage":"es","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="../es/" style="color:inherit;text-decoration:none"><span class="mark">MS</span><span>Reto de 52 semanas</span></a>
+  <a class="badge" href="savings-challenge.html" hreflang="en" lang="en">English</a>
+</header>
+<main>
+  <h1 class="page-title">Reto de ahorro de 52 semanas</h1>
+  <p class="lede">Ahorra $1 la semana 1, $2 la semana 2, y así hasta $52. Al terminar el año tienes $1,378. O elige tu propia meta y estilo. Marca cada semana cuando pases el dinero a tu ahorro. Tu progreso se queda en este navegador.</p>
+
+  <form id="setup" class="card deal-form no-print">
+    <label class="full">Estilo <select name="plan"></select></label>
+    <label>Meta para el año ($) <input name="goal" type="number" min="0" step="1" inputmode="decimal"></label>
+    <label>La primera semana empieza <input name="start" type="date"></label>
+    <label class="pick full"><input type="checkbox" name="dollars"> <span>Redondear a dólares enteros</span></label>
+  </form>
+
+  <section id="progress" class="card" aria-live="polite"></section>
+
+  <section class="card">
+    <h2>Marca cada semana</h2>
+    <ul id="weeks" class="weeks"></ul>
+    <div class="row no-print" style="margin-top:12px">
+      <button id="ics" class="btn small" type="button">Agregar recordatorios semanales a mi calendario</button>
+      <button id="print" class="btn ghost small" type="button">Imprimir la tabla</button>
+      <button id="reset" class="btn ghost small" type="button">Empezar de nuevo</button>
+    </div>
+  </section>
+
+  <section class="card no-print">
+    <h2>Hazlo más fácil</h2>
+    <ul class="plain-list">
+      <li>Guarda el dinero en una cuenta de ahorro de alto rendimiento aparte, para que gane intereses y no se mezcle con tus gastos. <a href="../money-calculators/es/savings-interest/">Mira cuánto gana</a>.</li>
+      <li>Programa una transferencia automática el día de pago y solo márcala aquí.</li>
+      <li>¿Ahorras para emergencias? Usa la <a href="../money-calculators/es/emergency-fund/">calculadora de fondo de emergencia</a> para poner tu meta.</li>
+    </ul>
+  </section>
+
+  <section class="card faq no-print">
+    <h2>Preguntas</h2>
+    <h3>¿Cuánto se ahorra en el reto de 52 semanas?</h3>
+    <p>La versión clásica suma $1,378: $1 + $2 + … + $52. Si pones otra meta, las semanas se ajustan: con $5,000 empiezas con unos $3.63 y terminas con unos $188.</p>
+    <h3>¿Qué estilo elijo?</h3>
+    <p>El clásico empieza fácil. El de al revés pone las semanas grandes al principio, cuando tienes más ganas, y deja ligero el final del año y las fiestas. El parejo es lo mismo cada semana, lo más fácil de automatizar.</p>
+    <h3>¿Y si me salto una semana?</h3>
+    <p>Ponte al día. La herramienta te dice cuánto vas atrasado y un pequeño extra por semana para alcanzarlo. También puedes marcar las semanas en el orden que quieras.</p>
+  </section>
+</main>
+<footer class="no-print"><p><a href="../es/">Todas las herramientas</a> · No es asesoría financiera. Nada de lo que escribes se envía a ningún lado. Hecho por <a id="site-link" href="#">Money Made Simple</a>.</p></footer>
+<script type="module" src="savings-challenge.js"></script>
+</body>
+</html>

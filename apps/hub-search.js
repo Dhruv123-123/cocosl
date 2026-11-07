@@ -15,6 +15,9 @@ export const SYNONYMS = {
   sueldo: ['salario', 'neto', 'cheque'], salario: ['neto', 'cheque'], casa: ['rentar', 'comprar', 'hipoteca'], renta: ['rentar'], deuda: ['deudas', 'tarjeta'], deudas: ['deuda'],
   estafa: ['estafas', 'enlace'], fraude: ['estafa'], universidad: ['estudiantiles', 'prestamos'], prestamo: ['prestamos'], jubilacion: ['roth', '401'], ahorro: ['ahorros', 'emergencia', 'interes'],
   grad: ['first', 'paycheck'], graduate: ['first', 'paycheck'], job: ['first', 'paycheck'], w4: ['withholding', 'first'], checkup: ['checkup'], health: ['checkup'], review: ['checkup'],
+  deductions: ['refund', 'tax'], deduction: ['refund', 'tax'],
+  challenge: ['challenge', 'week'], '52': ['challenge', 'week'], weekly: ['challenge'], ahorro: ['ahorro', 'reto'], ahorrar: ['ahorro', 'reto'],
+  personality: ['personality'], quiz: ['personality', 'quiz'], type: ['personality'], start: ['personality'],
   savings: ['saving', 'emergency', 'interest'], retirement: ['401', 'roth'], ira: ['roth'], tax: ['tax', 'paycheck', 'refund'], refund: ['refund', 'tax'], irs: ['tax', 'refund'], w2: ['refund', 'tax'], reembolso: ['reembolso', 'impuestos'], impuestos: ['impuestos', 'reembolso'],
 };
 

@@ -215,3 +215,12 @@ textarea{font:inherit;width:100%;padding:10px 12px;border-radius:10px;border:1px
 .areas .bar{margin:0;height:8px}.areas b{text-align:right}
 .fixes{padding-left:20px}.fixes li{margin:8px 0}.fixes li.urgent{font-weight:600}
 @media print{.no-print,.checkup,header.top{display:none!important}.report{border:0}body{background:#fff;color:#000}}
+/* 52-week savings challenge */
+.weeks{list-style:none;padding:0;margin:8px 0 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:6px}
+.weeks li{border:1px solid var(--line);border-radius:10px;padding:6px 8px}
+.weeks li.is-done{background:rgba(31,158,122,.12);border-color:var(--green)}
+.weeks li.is-now{outline:2px solid var(--gold);outline-offset:-1px}
+.weeks .pick{font-size:14px;align-items:center}
+.weeks .pick small{font-size:12px}
+.big-bar{height:12px}
+@media print{.weeks{grid-template-columns:repeat(6,1fr)}.weeks li{break-inside:avoid}}
