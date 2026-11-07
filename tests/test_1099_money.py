@@ -302,3 +302,34 @@ def test_tax_season_posts_rotate_formats_and_are_ready():
     text = " ".join(p["linkedin"] for p in posts)
     for fact in ("$12,037", "72.5", "$16,100", "January 18, 2028", "October 15", "$2,000"):
         assert fact in text, fact
+
+
+def test_linkedin_kit_is_complete_and_ready_to_post():
+    kit = LAUNCH / "linkedin"
+    posts = json.loads((kit / "posts.json").read_text())
+    assert len(posts) == 30
+    days = [date.fromisoformat(p["date"]) for p in posts]
+    assert days[0] == date(2026, 11, 16) and all((b - a).days == 1 for a, b in zip(days, days[1:]))  # 30 days in a row
+    assert all(a["format"] != b["format"] for a, b in zip(posts, posts[1:]))
+    assert len({p["format"] for p in posts}) == 7
+    for p in posts:
+        assert p["chars"] == len(p["text"]) <= 1300, p["n"]  # well under LinkedIn's 3,000
+        assert len(p["hook"]) <= 120 and p["text"].startswith(p["hook"])  # shown before "see more"
+        assert "http" not in p["text"] and ".app" not in p["text"]  # links only in the first comment
+        outside_quotes = re.sub(r'"[^"]*"', "", p["text"])  # scripts quote what the reader would say
+        assert not re.search(r"\b(I|my|me|I've|I'm)\b", outside_quotes), p["n"]  # no invented first-person stories
+        if p["first_comment"]:
+            assert "1099money.netlify.app" in p["first_comment"]
+        if p["topic"] == "tax":
+            assert "not tax advice" in p["text"]
+    text = " ".join(p["text"] for p in posts)
+    for fact in ("$75 an hour", "$84,000", "$90,000", "1,200 hours", "15.3% on 92.35%", "January 15, 2027", "$2,000 or more"):
+        assert fact in text, fact  # same figures as apps/freelance-tax/test/rate.test.js and the 2026 tax model
+    comments = (kit / "COMMENTS.md").read_text()
+    assert len(re.findall(r"^\*\*\d+\.", comments, re.M)) >= 20
+    assert "http" not in comments and "1099money" not in comments
+    readme = (kit / "README.md").read_text()
+    tagline = re.search(r"> (Free rate, tax.+)", readme).group(1)
+    assert len(tagline) <= 120
+    for img in ("page-cover.png", "profile-banner.png", "page-logo.png"):
+        assert (kit / "images" / img).exists(), img
