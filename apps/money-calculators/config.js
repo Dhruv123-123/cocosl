@@ -33,6 +33,11 @@ export default {
     es: null, // set { name, price, url, pitch } once a Spanish edition exists; English product is hidden on /es/
   },
 
+  // The budget app (apps/budget). Used for the Budget Pro upsell box on the emergency fund
+  // calculator. Relative paths work on the all-in-one apps site; use full URLs if the budget app
+  // is deployed on its own. Set url to '' to hide the box.
+  budgetApp: { url: '../../budget/', pricingUrl: '../../budget/pricing.html' },
+
   // Affiliate offers. Keep `disclosure` true for anything that pays you.
   // complianceReview: brokerage / adviser offers need a FINRA 2210 / SEC Marketing Rule check before going live.
   affiliates: {

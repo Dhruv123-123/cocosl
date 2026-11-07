@@ -71,6 +71,19 @@ test('emergency fund months', () => {
   assert.equal(emergencyFund({ monthlyExpenses: 2000, monthsTarget: 3 }).reachable, false);
 });
 
+test('emergency fund: job stability sets the target, with a milestone timeline', () => {
+  const r = emergencyFund({ monthlyExpenses: 2000, monthsTarget: 0, stability: 'variable', currentSaved: 500, monthlySave: 500 });
+  assert.deepEqual([r.monthsTarget, r.suggested, r.target, r.months], [6, 6, 12000, 23]);
+  assert.deepEqual(r.milestones.map((m) => [m.key, m.amount, m.months]), [['starter', 1000, 1], ['oneMonth', 2000, 3], ['half', 6000, 11], ['target', 12000, 23]]);
+  assert.equal(emergencyFund({ monthlyExpenses: 2000, monthsTarget: 0, stability: 'unstable', monthlySave: 1 }).target, 18000);
+  assert.equal(emergencyFund({ monthlyExpenses: 2000, monthsTarget: 0, monthlySave: 1 }).monthsTarget, 4, 'no answer: fairly steady');
+  const own = emergencyFund({ monthlyExpenses: 2000, monthsTarget: 3, stability: 'unstable', monthlySave: 100 });
+  assert.deepEqual([own.monthsTarget, own.suggested], [3, 9], 'a number you type wins, and we still show the suggestion');
+  const done = emergencyFund({ monthlyExpenses: 500, monthsTarget: 3, currentSaved: 800, monthlySave: 0 });
+  assert.equal(done.reachable, false);
+  assert.deepEqual(done.milestones.map((m) => [m.key, m.months]), [['oneMonth', 0], ['half', 0], ['starter', null], ['target', null]], 'sorted by amount; reached ones show 0, unreachable ones null');
+});
+
 test('high-yield savings beats a 0.01% account', () => {
   const r = savingsInterest({ balance: 10000, apy: 4, months: 12 });
   close(r.interest, 400, 0.5);

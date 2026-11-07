@@ -78,3 +78,6 @@ select,textarea{font:inherit;padding:10px 12px;border-radius:10px;border:1px sol
 .split-table{width:100%;border-collapse:collapse;margin:8px 0}
 .split-table td{padding:6px 0;border-top:1px solid var(--line)}
 .split-table td:last-child{text-align:right;white-space:nowrap}
+.timeline{padding-left:20px;margin:6px 0 12px}.timeline li{margin:4px 0}
+.pro-box{border:2px solid var(--gold,#f2b134);border-radius:14px;padding:12px 14px;margin-top:14px}
+.pro-box p{margin:6px 0}

@@ -30,9 +30,10 @@ export const pages = [
     title: 'Emergency Fund Calculator: How Much and How Long',
     h1: 'Emergency fund calculator',
     description: 'Work out how big your emergency fund should be and how many months it will take to build it, with interest from a high-yield savings account.',
-    intro: 'Add up the bills you can\'t skip (rent, food, transport, insurance, minimum debt payments), pick how many months to cover, and see your timeline.',
+    intro: 'Add up the bills you can\'t skip (rent, food, transport, insurance, minimum debt payments), tell us how steady your income is, and see your target and timeline.',
     faq: [
       ['How many months should I save?', 'Three months of essential costs is a common target, six if your income is irregular or you support others. Start with a $1,000 starter fund.'],
+      ['Does job stability change how much I need?', 'Yes. Two steady incomes can get by with about three months. One income, commission or gig work, or kids depending on you points to six. If you are self-employed or work in a field with layoffs, nine months or more gives you time to find new work.'],
       ['Where should I keep it?', 'In a separate, FDIC or NCUA insured savings account you can reach in a day or two, but not with your spending card.'],
       ['Should I pay off debt first?', 'Many people build a small starter fund first so a surprise bill does not go on a credit card, then attack high-interest debt, then finish the full fund.'],
     ],

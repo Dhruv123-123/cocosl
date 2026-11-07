@@ -130,26 +130,41 @@ export function compareDebtStrategies(debts, extra = 0) {
   return { avalanche, snowball, interestSaved, monthsSaved: avalanche.feasible && snowball.feasible ? snowball.months - avalanche.months : null };
 }
 
-/** How long until a target emergency fund is reached. */
-export function emergencyFund({ monthlyExpenses, monthsTarget = 3, currentSaved = 0, monthlySave = 0, apy = 0 }) {
+/**
+ * Months of essential costs to keep, by how steady the household's income is. Common guidance is
+ * 3 to 6 months; we go higher for income that can stop suddenly or take long to replace.
+ */
+export const STABILITY = { steady: 3, average: 4, variable: 6, unstable: 9 };
+
+/** How long until a target emergency fund is reached. monthsTarget 0 = use the suggestion for `stability`. */
+export function emergencyFund({ monthlyExpenses, monthsTarget = 3, currentSaved = 0, monthlySave = 0, apy = 0, stability = '' }) {
   monthlyExpenses = num(monthlyExpenses, 'Monthly expenses');
+  const suggested = STABILITY[stability] || STABILITY.average;
+  if (!Number(monthsTarget)) monthsTarget = suggested;
   monthsTarget = num(monthsTarget, 'Months of expenses', { min: 1, max: 24 });
   currentSaved = num(currentSaved, 'Already saved');
   monthlySave = num(monthlySave, 'Monthly saving');
   apy = num(apy, 'APY', { max: 20 });
   const target = round2(monthlyExpenses * monthsTarget);
   const gap = round2(Math.max(0, target - currentSaved));
-  if (gap === 0) return { target, gap, months: 0, reachable: true };
-  if (monthlySave <= 0 && apy <= 0) return { target, gap, months: Infinity, reachable: false };
+  const base = { target, gap, monthsTarget, suggested, starterGoal: Math.min(1000, target) };
+  // Milestones on the way: a $1,000 starter fund, one month of costs, half the goal, the goal.
+  const marks = [['starter', Math.min(1000, target)], ['oneMonth', Math.min(monthlyExpenses, target)], ['half', round2(target / 2)], ['target', target]]
+    .filter(([, amt], i, all) => amt > 0 && all.findIndex(([, a]) => a === amt) === i)
+    .sort((a, b) => a[1] - b[1]);
+  const milestones = marks.map(([key, amount]) => ({ key, amount, months: currentSaved >= amount ? 0 : null }));
+  if (gap === 0) return { ...base, months: 0, reachable: true, milestones };
+  if (monthlySave <= 0 && apy <= 0) return { ...base, months: Infinity, reachable: false, milestones };
   const r = Math.pow(1 + apy / 100, 1 / 12) - 1;
   let bal = currentSaved;
   let months = 0;
   while (bal < target) {
     months++;
-    if (months > MAX_MONTHS) return { target, gap, months: Infinity, reachable: false };
+    if (months > MAX_MONTHS) return { ...base, months: Infinity, reachable: false, milestones };
     bal = bal * (1 + r) + monthlySave;
+    for (const m of milestones) if (m.months === null && bal >= m.amount) m.months = months;
   }
-  return { target, gap, months, reachable: true, starterGoal: Math.min(1000, target) };
+  return { ...base, months, reachable: true, milestones };
 }
 
 /** Interest earned in a high-yield savings account vs a typical big-bank savings rate. */

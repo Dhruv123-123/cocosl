@@ -80,6 +80,14 @@ const checks = [
     await page.click('[data-act=remind]'); if (!(await page.inputValue('#rem-body')).includes('Northwind')) throw new Error('no reminder text'); await page.click('#reminder .close button');
   }],
   ['/budget/subscriptions.html', '#results', async (page) => { await page.fill('#paste', ['08', '09', '10'].map((m) => `${m}/03 NETFLIX.COM 15.49\n${m}/09 SPOTIFY USA 11.99`).join('\n')); await page.click('#paste-form button'); }],
+  ['/budget/networth.html', '#trend .snaps', async (page) => {
+    await page.fill('[name=name]', 'Savings'); await page.fill('[name=value]', '4800'); await page.click('#item-form button');
+    await page.selectOption('#f-side', 'debt'); await page.fill('[name=value]', '3200'); await page.click('#item-form button');
+    await page.click('#snap');
+    const [dl] = await Promise.all([page.waitForEvent('download'), page.click('#pdf')]);
+    if (!/\.pdf$/.test(dl.suggestedFilename())) throw new Error('no pdf');
+  }],
+  ['/money-calculators/emergency-fund/?stability=variable', '#result .timeline'],
   ['/budget/disputes.html', '#disputes .dispute', async (page) => { await page.fill('[name=item]', 'Metro Bank Card'); await page.click('#dispute-form button[type=submit]'); await page.selectOption('[data-outcome] select', 'verified'); await page.click('[data-outcome] button'); }],
   ['/scam-checker/vendor/', '#result .score', async (page) => { await page.click('#example'); }],
   ['/budget/pricing.html?from=goals', '#compare tr', async (page) => { if (!(await page.locator('#from').isVisible())) throw new Error('limit message hidden'); }],

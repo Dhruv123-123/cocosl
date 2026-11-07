@@ -13,6 +13,15 @@ const lang = document.documentElement.lang.startsWith('es') ? 'es' : 'en';
 const T = TEXT[lang];
 const F = T.fields;
 
+// Budget Pro upsell on calculators that lead into budgeting (English only: the app is in English).
+function budgetProBox(where) {
+  const b = config.budgetApp;
+  if (lang !== 'en' || !b || !b.url) return '';
+  const pricing = `${b.pricingUrl}?from=${encodeURIComponent(where)}`;
+  return `<div class="pro-box"><p><b>Make it happen month by month.</b> Add this goal to the free 20-Minute Budget app and see each month's progress. Budget Pro adds unlimited goals, every past and future month and bank CSV import.</p>
+    <p><a class="btn small" href="${escapeHtml(b.url)}" data-upgrade="${escapeHtml(where)}-app">Open the budget app</a> <a href="${escapeHtml(pricing)}" data-upgrade="${escapeHtml(where)}">See Budget Pro</a></p></div>`;
+}
+
 const CALCS = {
   'compound-interest': {
     cta: 'brokerage',
@@ -24,12 +33,16 @@ const CALCS = {
   },
   'emergency-fund': {
     cta: 'hysa',
-    fields: [['monthlyExpenses', F.monthlyExpenses, 2000], ['monthsTarget', F.monthsTarget, 3], ['currentSaved', F.currentSaved, 500], ['monthlySave', F.monthlySave, 250], ['apy', F.apy, 4, 0.01]],
+    fields: [['monthlyExpenses', F.monthlyExpenses, 2000], ['monthsTarget', F.monthsTarget, 0], ['currentSaved', F.currentSaved, 500], ['monthlySave', F.monthlySave, 250], ['apy', F.apy, 4, 0.01]],
+    select: ['stability', F.stability, [['average', F.stAverage], ['steady', F.stSteady], ['variable', F.stVariable], ['unstable', F.stUnstable]]],
     render(v) {
       const r = calc.emergencyFund(v);
-      if (r.gap === 0) return T.efDone(r);
-      if (!r.reachable) return T.efNoSave(r);
-      return T.ef(v, r) + (r.starterGoal < r.target ? T.efStarter(r) : '');
+      const suggest = T.efSuggest(r, !Number(v.monthsTarget));
+      const timeline = `<h3>${T.efTimeline}</h3><ol class="timeline">${r.milestones.map((m) => `<li><b>${T.efMarks[m.key]}</b> ${money(m.amount)}: ${m.months === 0 ? T.efNow : m.months ? T.efIn(m.months) : T.efNever}</li>`).join('')}</ol>`;
+      const extra = suggest + budgetProBox('emergency-fund');
+      if (r.gap === 0) return T.efDone(r) + extra;
+      if (!r.reachable) return T.efNoSave(r) + extra;
+      return T.ef(v, r) + timeline + extra;
     },
   },
   'savings-interest': {

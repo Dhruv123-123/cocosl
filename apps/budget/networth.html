@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Net Worth Calculator and Tracker: Free, Private, PDF Export | Money Made Simple</title>
+<meta name="description" content="Add up what you own and what you owe to see your net worth, save a snapshot each month to watch it grow, and download a PDF. Free, no sign-up: it's saved in your browser and never sent to a server.">
+<meta property="og:title" content="What's your net worth? Find out in 5 minutes.">
+<meta property="og:description" content="A private net worth snapshot: what you own, what you owe, monthly snapshots and a PDF. Nothing leaves your browser.">
+<meta name="theme-color" content="#0b1d13">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Net worth snapshot","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How do I calculate my net worth?","acceptedAnswer":{"@type":"Answer","text":"Add up the value of everything you own (cash, investments, retirement accounts, your home and car at what they would sell for), then subtract everything you owe (credit cards, loans, mortgage). The difference is your net worth."}},
+{"@type":"Question","name":"Is a negative net worth bad?","acceptedAnswer":{"@type":"Answer","text":"It's common, especially early on with student loans or a new car loan. What matters most is the direction: if it rises from one snapshot to the next, you're making progress."}},
+{"@type":"Question","name":"How often should I check my net worth?","acceptedAnswer":{"@type":"Answer","text":"Once a month or once a quarter is plenty. Investments move day to day, so a regular snapshot shows the trend without the noise."}}
+]}</script>
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="./" style="color:inherit;text-decoration:none"><span class="mark">MS</span><span>Net worth snapshot</span></a>
+  <span class="badge">Free</span>
+</header>
+<main>
+  <h1 class="page-title">What's your net worth?</h1>
+  <p class="lede">Add what you own and what you owe. Save a snapshot once a month to watch the number move, and download it as a PDF. It's saved in this browser only and never sent to a server.</p>
+
+  <section id="stats" class="stats" aria-live="polite"></section>
+
+  <section class="card">
+    <h2>Add something you own or owe</h2>
+    <form id="item-form" class="deal-form">
+      <label>Own or owe? <select name="side" id="f-side"><option value="asset">I own it (asset)</option><option value="debt">I owe it (debt)</option></select></label>
+      <label>Category <select name="kind" id="f-kind"></select></label>
+      <label>Name <input name="name" maxlength="60" placeholder="Ally savings"></label>
+      <label>Value today ($) <input name="value" inputmode="decimal" required placeholder="4,200"></label>
+      <div class="row full"><button class="btn" type="submit">Add</button></div>
+    </form>
+    <p id="form-msg" class="tiny" aria-live="polite"></p>
+    <p class="tiny">Use what things would sell for today, not what you paid. For a home, take a cautious estimate.</p>
+  </section>
+
+  <section class="card nw-lists">
+    <div><h2>What you own</h2><table class="plan nw"><tbody id="assets"></tbody></table></div>
+    <div><h2>What you owe</h2><table class="plan nw"><tbody id="debts"></tbody></table></div>
+  </section>
+
+  <section class="card">
+    <div class="head"><h2>Snapshots</h2><span class="tiny">One a month shows the trend</span></div>
+    <div id="trend"></div>
+    <div class="row" style="margin-top:10px">
+      <button id="snap" class="btn small" type="button">Save today's snapshot</button>
+      <button id="pdf" class="btn ghost small" type="button">Download PDF</button>
+      <button id="csv" class="btn ghost small" type="button">Export CSV</button>
+      <button id="backup" class="btn ghost small" type="button">Download backup</button>
+      <label class="btn ghost small file">Restore<input id="restore" type="file" accept="application/json,.json" hidden></label>
+    </div>
+    <p id="data-msg" class="tiny" aria-live="polite"></p>
+    <label class="inline" style="margin-top:10px">Essential costs a month ($), optional <input id="costs" inputmode="decimal" placeholder="2,400"></label>
+    <ul id="notes" class="checks"></ul>
+  </section>
+
+  <section class="card pro-slot">
+    <h2>Grow the number every month</h2>
+    <p>Net worth goes up when what you spend is less than what you earn. The free <a href="./">20-Minute Budget</a> gives every dollar a job. Budget Pro adds every past and future month, bank CSV import and unlimited savings goals.</p>
+    <div class="row"><a class="btn small" href="./" data-upgrade="networth-app">Open the budget app</a><a class="btn ghost small" href="pricing.html?from=networth" data-upgrade="networth">See Budget Pro</a></div>
+  </section>
+
+  <section class="card faq">
+    <h2>Questions</h2>
+    <h3>How do I calculate my net worth?</h3>
+    <p>Add up the value of everything you own (cash, investments, retirement accounts, your home and car at what they would sell for), then subtract everything you owe (credit cards, loans, mortgage). The difference is your net worth.</p>
+    <h3>Is a negative net worth bad?</h3>
+    <p>It's common, especially early on with student loans or a new car loan. What matters most is the direction: if it rises from one snapshot to the next, you're making progress.</p>
+    <h3>How often should I check my net worth?</h3>
+    <p>Once a month or once a quarter is plenty. Investments move day to day, so a regular snapshot shows the trend without the noise.</p>
+  </section>
+</main>
+<footer><p><a href="./">Budget</a> · <a href="pricing.html">Pricing</a> · Not financial advice. Nothing you type is sent anywhere. Made by <a id="site-link" href="#">Money Made Simple</a>.</p></footer>
+<script type="module" src="networth.js"></script>
+</body>
+</html>

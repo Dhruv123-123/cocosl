@@ -7,7 +7,7 @@ import { money, duration } from './format.js';
 const en = {
   fields: {
     initial: 'Starting amount ($)', monthly: 'Added each month ($)', annualRate: 'Yearly return (%)', years: 'Years',
-    monthlyExpenses: 'Essential monthly costs ($)', monthsTarget: 'Months to cover', currentSaved: 'Already saved ($)', monthlySave: 'You can save each month ($)', apy: 'Savings APY (%)',
+    monthlyExpenses: 'Essential monthly costs ($)', monthsTarget: 'Months to cover (0 = our suggestion)', stability: 'How steady is your income?', stSteady: 'Very steady (two incomes, or a secure salaried job)', stAverage: 'Fairly steady (one salaried income)', stVariable: 'Up and down (commission, gig work, one income with kids)', stUnstable: 'Could stop suddenly (self-employed, seasonal, layoffs in my field)', currentSaved: 'Already saved ($)', monthlySave: 'You can save each month ($)', apy: 'Savings APY (%)',
     balance: 'Balance ($)', monthlyDeposit: 'Added each month ($)', hyApy: 'High-yield APY (%)', compareApy: 'Your current APY (%)', months: 'Months',
     cardBalance: 'Card balance ($)', apr: 'APR (%)', minPercent: 'Minimum: % of balance + interest', minFloor: 'Minimum payment floor ($)', fixedPayment: 'What if you paid each month ($)',
     annualContribution: 'Yearly contribution, before tax ($)', currentRate: 'Your tax bracket now (%)', retirementRate: 'Expected tax rate in retirement (%)', yearsToWithdraw: 'Years until you withdraw', annualReturn: 'Yearly return (%)',
@@ -23,7 +23,9 @@ const en = {
   efDone: (r) => `<p class="big">You're there</p><p>Your ${money(r.target)} goal is already covered. Keep it somewhere boring, insured and separate from spending money.</p>`,
   efNoSave: (r) => `<p class="big">Add a monthly amount</p><p>Your goal is ${money(r.target)}. Even $25 a week gets you moving.</p>`,
   efStarter: (r) => `<p>First milestone: <b>${money(r.starterGoal)}</b>. It covers most surprise bills and is the hardest part.</p>`,
-  ef: (v, r) => `<p class="big">${duration(r.months)}</p><p>That's how long until you have <b>${money(r.target)}</b> (${v.monthsTarget} months of costs). You need ${money(r.gap)} more.</p>`,
+  ef: (v, r) => `<p class="big">${duration(r.months)}</p><p>That's how long until you have <b>${money(r.target)}</b> (${r.monthsTarget} months of costs). You need ${money(r.gap)} more.</p>`,
+  efSuggest: (r, used) => `<p class="note">For income like yours we suggest about <b>${r.suggested} months</b> of essential costs${used ? '' : `; you picked ${r.monthsTarget}`}.</p>`,
+  efTimeline: 'Your timeline', efMarks: { starter: 'Starter fund', oneMonth: 'One month of costs', half: 'Halfway', target: 'Fully funded' }, efNow: 'Done', efNever: 'Not at this rate', efIn: (m) => `in ${duration(m)}`,
   savings: (v, r) => `<p class="big">+${money(r.difference, 2)}</p>
     <p>At ${v.apy}% APY you'd earn <b>${money(r.interest, 2)}</b> in interest over ${duration(v.months)}, versus <b>${money(r.compareInterest, 2)}</b> at ${v.compareApy}%.</p>
     <p class="note">APYs change. Check the current rate and that the bank is FDIC insured (or the credit union NCUA insured).</p>`,
@@ -85,7 +87,7 @@ const en = {
 const es = {
   fields: {
     initial: 'Monto inicial ($)', monthly: 'Aporte mensual ($)', annualRate: 'Rendimiento anual (%)', years: 'Años',
-    monthlyExpenses: 'Gastos esenciales al mes ($)', monthsTarget: 'Meses a cubrir', currentSaved: 'Ya ahorrado ($)', monthlySave: 'Puedes ahorrar al mes ($)', apy: 'APY de ahorro (%)',
+    monthlyExpenses: 'Gastos esenciales al mes ($)', monthsTarget: 'Meses a cubrir (0 = nuestra sugerencia)', stability: '¿Qué tan estable es tu ingreso?', stSteady: 'Muy estable (dos ingresos, o un empleo fijo seguro)', stAverage: 'Bastante estable (un solo sueldo fijo)', stVariable: 'Sube y baja (comisiones, trabajos por app, un ingreso con hijos)', stUnstable: 'Podría parar de golpe (independiente, temporada, despidos en mi área)', currentSaved: 'Ya ahorrado ($)', monthlySave: 'Puedes ahorrar al mes ($)', apy: 'APY de ahorro (%)',
     balance: 'Saldo ($)', monthlyDeposit: 'Depósito mensual ($)', hyApy: 'APY de alto rendimiento (%)', compareApy: 'Tu APY actual (%)', months: 'Meses',
     cardBalance: 'Saldo de la tarjeta ($)', apr: 'Tasa anual APR (%)', minPercent: 'Mínimo: % del saldo + intereses', minFloor: 'Pago mínimo base ($)', fixedPayment: '¿Y si pagaras cada mes? ($)',
     annualContribution: 'Aporte anual, antes de impuestos ($)', currentRate: 'Tu tasa de impuestos hoy (%)', retirementRate: 'Tasa esperada al jubilarte (%)', yearsToWithdraw: 'Años hasta retirar', annualReturn: 'Rendimiento anual (%)',
@@ -101,7 +103,9 @@ const es = {
   efDone: (r) => `<p class="big">¡Ya lo tienes!</p><p>Tu meta de ${money(r.target)} ya está cubierta. Guárdala en una cuenta aburrida, asegurada y separada del dinero para gastos.</p>`,
   efNoSave: (r) => `<p class="big">Agrega un monto mensual</p><p>Tu meta es ${money(r.target)}. Aunque sean $25 por semana, ya avanzas.</p>`,
   efStarter: (r) => `<p>Primera meta: <b>${money(r.starterGoal)}</b>. Cubre la mayoría de los gastos inesperados y es la parte más difícil.</p>`,
-  ef: (v, r) => `<p class="big">${duration(r.months, 'es')}</p><p>Es el tiempo hasta tener <b>${money(r.target)}</b> (${v.monthsTarget} meses de gastos). Te faltan ${money(r.gap)}.</p>`,
+  ef: (v, r) => `<p class="big">${duration(r.months, 'es')}</p><p>Es el tiempo hasta tener <b>${money(r.target)}</b> (${r.monthsTarget} meses de gastos). Te faltan ${money(r.gap)}.</p>`,
+  efSuggest: (r, used) => `<p class="note">Para un ingreso como el tuyo sugerimos unos <b>${r.suggested} meses</b> de gastos esenciales${used ? '' : `; elegiste ${r.monthsTarget}`}.</p>`,
+  efTimeline: 'Tu calendario', efMarks: { starter: 'Fondo inicial', oneMonth: 'Un mes de gastos', half: 'La mitad', target: 'Meta completa' }, efNow: 'Listo', efNever: 'No a este ritmo', efIn: (m) => `en ${duration(m, 'es')}`,
   savings: (v, r) => `<p class="big">+${money(r.difference, 2)}</p>
     <p>Con un APY de ${v.apy}% ganarías <b>${money(r.interest, 2)}</b> de intereses en ${duration(v.months, 'es')}, comparado con <b>${money(r.compareInterest, 2)}</b> al ${v.compareApy}%.</p>
     <p class="note">Los APY cambian. Revisa la tasa actual y que el banco esté asegurado por la FDIC (o la cooperativa por la NCUA).</p>`,
