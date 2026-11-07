@@ -190,3 +190,28 @@ textarea{font:inherit;width:100%;padding:10px 12px;border-radius:10px;border:1px
 @media (prefers-color-scheme:dark){:root{--pos-text:#2fbf71;--bad-text:#ff8f82}}
 .pos{color:var(--pos-text)}.pill.bad{color:var(--bad-text)}
 @media (prefers-color-scheme:dark){a{color:#9cc4ff}a:visited{color:#c3b4ff}}
+/* First paycheck guide */
+.guide{list-style:none;padding:0;margin:0}
+.step h2{display:flex;align-items:center;gap:10px}
+.step .num{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--gold);color:#0b1d13;font-size:16px;flex:none}
+.step.is-done .num{background:var(--pos-text);color:#fff}
+.step.is-done .num::after{content:""}
+.w4-steps{padding-left:20px;margin:12px 0}.w4-steps li{margin:6px 0}
+.done-box{margin-top:12px;font-weight:600}
+.callout{background:var(--paper);border-left:4px solid var(--gold);border-radius:8px;padding:10px 12px}
+.choices{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:10px}
+.choice{border:1px solid var(--line);border-radius:12px;padding:10px 12px}.choice h3{margin:0 0 4px;font-size:16px}.choice p{margin:4px 0}
+.progress .bar{margin-top:6px}
+/* Annual money checkup */
+.area-set{border:1px solid var(--line);margin:0 0 14px;min-width:0}
+.area-set legend{padding:0 6px}.area-set legend h2{margin:0;font-size:19px}
+.question{padding:10px 0;border-top:1px solid var(--line)}.question:first-of-type{border-top:0}
+.q-text{margin:0 0 6px;font-weight:600}.q-num{color:var(--muted)}
+.q-options{display:flex;flex-wrap:wrap;gap:6px 18px}
+.score-row{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap}
+.score-big{margin:0}.score-big b{font-size:52px;line-height:1}.score-big small{font-size:18px;color:var(--muted)}
+.grade{font-size:22px;font-weight:800;margin:0}
+.areas{list-style:none;padding:0;margin:12px 0}.areas li{display:grid;grid-template-columns:minmax(120px,1.2fr) 2fr 36px;gap:10px;align-items:center;padding:4px 0}
+.areas .bar{margin:0;height:8px}.areas b{text-align:right}
+.fixes{padding-left:20px}.fixes li{margin:8px 0}.fixes li.urgent{font-weight:600}
+@media print{.no-print,.checkup,header.top{display:none!important}.report{border:0}body{background:#fff;color:#000}}

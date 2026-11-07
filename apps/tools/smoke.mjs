@@ -38,6 +38,23 @@ const checks = [
     if (await page.locator('[name=orders]').isVisible()) throw new Error('seller fields shown for a driver');
     if (!/an hour, after costs and taxes/.test(await page.textContent('#result'))) throw new Error('result');
   }],
+  ['/budget/first-paycheck.html', '#match-out .callout', async (page) => {
+    await page.fill('#salary', '55000');
+    await page.selectOption('#w4 [name=jobs]', 'two');
+    if (!/Withholding Estimator/.test(await page.textContent('#w4-out'))) throw new Error('W-4 two-job advice');
+    if (!/\$1,650\.00/.test(await page.textContent('#match-out'))) throw new Error('match math');
+    await page.fill('#takehome', '3500');
+    if (!/\$1,750\.00/.test(await page.textContent('#budget-out'))) throw new Error('50/30/20');
+    await page.check('[data-done=w4]');
+    if (!/1 of 5 steps done/.test(await page.textContent('#progress'))) throw new Error('progress');
+  }],
+  ['/budget/checkup.html', '#report .score-big', async (page) => {
+    for (const r of await page.locator('.q-options').all()) await r.locator('input').nth(2).check();
+    if (!/Grade F/.test(await page.textContent('#report'))) throw new Error('worst case grade');
+    if (!/Fix these first/.test(await page.textContent('#report'))) throw new Error('fix list');
+    for (const r of await page.locator('.q-options').all()) await r.locator('input').first().check();
+    if (!/Grade A/.test(await page.textContent('#report'))) throw new Error('best case grade');
+  }],
   ['/budget/couples.html', '#split h3', async (page) => {
     await page.fill('[name=name0]', 'Alex'); await page.fill('[name=income0]', '6000');
     await page.fill('[name=name1]', 'Sam'); await page.fill('[name=income1]', '4000');

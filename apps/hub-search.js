@@ -14,6 +14,7 @@ export const SYNONYMS = {
   freelance: ['freelancer', 'invoice'], invoice: ['invoice', 'late'], subscriptions: ['subscription'], netflix: ['subscription'],
   sueldo: ['salario', 'neto', 'cheque'], salario: ['neto', 'cheque'], casa: ['rentar', 'comprar', 'hipoteca'], renta: ['rentar'], deuda: ['deudas', 'tarjeta'], deudas: ['deuda'],
   estafa: ['estafas', 'enlace'], fraude: ['estafa'], universidad: ['estudiantiles', 'prestamos'], prestamo: ['prestamos'], jubilacion: ['roth', '401'], ahorro: ['ahorros', 'emergencia', 'interes'],
+  grad: ['first', 'paycheck'], graduate: ['first', 'paycheck'], job: ['first', 'paycheck'], w4: ['withholding', 'first'], checkup: ['checkup'], health: ['checkup'], review: ['checkup'],
   savings: ['saving', 'emergency', 'interest'], retirement: ['401', 'roth'], ira: ['roth'], tax: ['tax', 'paycheck'],
 };
 
@@ -41,7 +42,7 @@ export function search(index, query, limit = 12) {
       let best = 0;
       for (const [i, a] of [t, ...(SYNONYMS[t] || [])].entries()) {
         const w = i ? 0.6 : 1; // a synonym counts a little less than the word typed
-        best = Math.max(best, w * ((hit(title, a) ? 6 : 0) + (hit(desc, a) ? 3 : 0) + (hit(keys, a) ? 1 : 0) + (hit(section, a) ? 1 : 0)));
+        best = Math.max(best, w * ((hit(title, a) ? 6 : 0) + (title[0]?.startsWith(a) ? 2 : 0) + (hit(desc, a) ? 3 : 0) + (hit(keys, a) ? 1 : 0) + (hit(section, a) ? 1 : 0)));
       }
       if (best) { matched++; score += best; }
     }
