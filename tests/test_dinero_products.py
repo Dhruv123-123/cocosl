@@ -530,3 +530,18 @@ def test_month10_flags_immigration_and_names_no_provider():
         assert not any(b in text for b in ("remitly", "western union", "fidelity", "vanguard", "schwab", "metlife")), i["key"]
     longs = [i for i in items if i["format"] == "long"]
     assert all(sum(len(g["narration"].split()) for g in i["script"]["segments"]) >= 900 for i in longs)
+
+
+def test_dinero_welcome_sequence_is_spanish_and_checks_clean(factory):
+    """brands/sequences/dinero-simple.yaml: five Spanish emails (days 0, 1, 3, 5, 7) around the free 7-day guide,
+    the ITIN email sends people to a licensed attorney, the last one offers the $5 kit, and sequence-check is clean."""
+    from contentfactory.funnel.sequences import load_sequence, validate_sequence
+    settings = factory.settings
+    brand = factory.brand("dinero-simple") if hasattr(factory, "brand") else factory.brands["dinero-simple"]
+    seq = load_sequence(settings, "dinero-simple")
+    assert [s.day_offset for s in seq.steps] == [0, 1, 3, 5, 7]
+    assert validate_sequence(settings, brand, seq) == []
+    itin = [s for s in seq.steps if "ITIN" in s.body_markdown]
+    assert itin and all("abogado de inmigración con licencia" in s.body_markdown for s in itin)
+    assert "Recortar Gastos" in seq.steps[-1].body_markdown or "{product_name}" in seq.steps[-1].body_markdown
+    assert "IA" in seq.footer_note and "no es asesoría financiera" in seq.footer_note
