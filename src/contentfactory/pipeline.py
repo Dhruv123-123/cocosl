@@ -182,6 +182,20 @@ class Factory:
         self.db.update("posts", post_id, {"status": "approved", "review_notes": notes})
         self.db.log("post.approved", "post", post_id, {"notes": notes}, actor=actor)
 
+    def choose_thumbnail(self, post_id: int, index: int, actor: str = "human") -> str:
+        """Use thumbnail variant `index` (0 = the original) as the post's thumbnail."""
+        post = self._post(post_id)
+        if post["status"] in ("scheduled", "published"):
+            raise PermissionError("The thumbnail is already on its way to the platforms; unschedule first")
+        assets = dict(post.get("assets") or {})
+        variants = assets.get("thumbnail_variants") or []
+        if not 0 <= index < len(variants):
+            raise ValueError(f"Post #{post_id} has {len(variants)} thumbnail option(s)")
+        assets["thumbnail"] = variants[index]
+        self.db.update("posts", post_id, {"assets": assets})
+        self.db.log("post.thumbnail_chosen", "post", post_id, {"thumbnail": variants[index]}, actor=actor)
+        return variants[index]
+
     def render_pending(self, post_id: int) -> bool:
         try:
             return bool(self.db.one("SELECT id FROM render_jobs WHERE post_id = ? AND status IN ('queued','running')",

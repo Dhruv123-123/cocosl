@@ -102,7 +102,19 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
     thumb = render_thumbnail(images[0], script.thumbnail_text or script.title, palette, brand.visual.font,
                              brand.visual.watermark, out / "thumbnail.png")
 
+    variants = []
+    if fmt == "long":  # A/B candidates for YouTube: different art and wording; pick one on the post page
+        texts = [script.thumbnail_text or script.title]
+        texts += [_short_words(t) for t in [*script.title_variants, script.title] if _short_words(t)]
+        texts = list(dict.fromkeys(texts))
+        arts = [images[min(i, len(images) - 1)] for i in (len(images) // 2, len(images) - 1)]
+        for k, (art, text) in enumerate(zip(arts, (texts[1:] + texts)[:2]), start=1):
+            variants.append(render_thumbnail(art, text, palette, brand.visual.font, brand.visual.watermark,
+                                             out / f"thumbnail-{k + 1}.png"))
     prov = _image_provenance(imgs)
+    for v in variants:
+        prov.append(provenance(str(v), "rendered", "pillow", "thumbnail variant"))
+        prov.append(provenance(str(v.with_suffix(".jpg")), "rendered", "pillow", "thumbnail variant (JPEG)"))
     prov.append(provenance(str(audio), "generated", tts.tool, " ".join(lines), provider=tts.provider,
                            note="Voice must be your own or licensed."))
     prov.append(provenance(str(srt), "rendered", "contentfactory.captions",
@@ -117,7 +129,8 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
         prov.append(provenance(str(music), "licensed", "user-music", "",
                                "user-supplied via FACTORY_MUSIC_DIR; keep the licence on file"))
     return {"video": video, "audio": audio, "captions_srt": srt, "images": [r.path for r in imgs], "slides": [],
-            "thumbnail": thumb, "duration": round(duration, 3), "provenance": prov}
+            "thumbnail": thumb, "thumbnail_variants": [thumb, *variants], "duration": round(duration, 3),
+            "provenance": prov}
 
 
 # ---------------------------------------------------------------- slides
@@ -138,7 +151,19 @@ def _render_slides(settings: Settings, brand: BrandProfile, script: Script, fmt:
             kicker = s.heading if s.heading and _norm(s.heading) != _norm(head) else ""
             texts.append(SlideText(head, s.narration, kicker))
     slides = render_carousel(kit, [r.path for r in imgs], texts, out / "slides")
+    variants = []
+    if fmt == "long":  # A/B candidates for YouTube: different art and wording; pick one on the post page
+        texts = [script.thumbnail_text or script.title]
+        texts += [_short_words(t) for t in [*script.title_variants, script.title] if _short_words(t)]
+        texts = list(dict.fromkeys(texts))
+        arts = [images[min(i, len(images) - 1)] for i in (len(images) // 2, len(images) - 1)]
+        for k, (art, text) in enumerate(zip(arts, (texts[1:] + texts)[:2]), start=1):
+            variants.append(render_thumbnail(art, text, palette, brand.visual.font, brand.visual.watermark,
+                                             out / f"thumbnail-{k + 1}.png"))
     prov = _image_provenance(imgs)
+    for v in variants:
+        prov.append(provenance(str(v), "rendered", "pillow", "thumbnail variant"))
+        prov.append(provenance(str(v.with_suffix(".jpg")), "rendered", "pillow", "thumbnail variant (JPEG)"))
     for p, t in zip(slides, texts):
         prov.append(provenance(str(p), "rendered", "pillow", t.headline))
         prov.append(provenance(str(p.with_suffix(".jpg")), "rendered", "pillow", t.headline,
@@ -208,5 +233,13 @@ def _relativize(assets: dict, build: Path, final: Path, root: Path) -> dict:
         out[key] = rel(assets.get(key))
     out["images"] = [rel(p) for p in assets.get("images", [])]
     out["slides"] = [rel(p) for p in assets.get("slides", [])]
+    if assets.get("thumbnail_variants"):
+        out["thumbnail_variants"] = [rel(p) for p in assets["thumbnail_variants"]]
     out["provenance"] = [{**e, "path": rel(e["path"])} for e in assets.get("provenance", [])]
     return out
+
+
+def _short_words(text: str, n: int = 5) -> str:
+    """Thumbnail wording from a title: the first few words, without trailing punctuation."""
+    words = (text or "").replace(":", " ").split()
+    return " ".join(words[:n]).rstrip(",.;:!?") if words else ""
