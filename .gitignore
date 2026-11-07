@@ -10,3 +10,4 @@ output/
 *.db-wal
 *.db-shm
 node_modules/
+launch/products/dist/*/*.html
