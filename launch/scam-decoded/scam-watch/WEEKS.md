@@ -15,3 +15,4 @@ Built by `python3 build.py` from `sites/scam-decoded/content/alerts/`. Hand `iss
 | 2027-01-11 | 2027-01-04 | "Unpaid toll" texts are back | 4 |
 | 2027-01-18 | 2027-01-11 | The "CEO" who emails HR for every employee's W-2 | 4 |
 | 2027-01-25 | 2027-01-18 | "Your grandson needs bail, a courier will pick up the cash" | 4 |
+| 2027-03-01 | 2027-02-22 | Recovery offices that will get your scam losses back, for a fee | 4 |

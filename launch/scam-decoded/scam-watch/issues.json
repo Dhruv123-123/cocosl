@@ -767,6 +767,77 @@
      "url": "https://www.irs.gov/identity-theft-central/identity-theft-guide-for-individuals"
     }
    ]
+  },
+  {
+   "id": "2027-w09",
+   "n": 12,
+   "send_date": "2027-03-01",
+   "deliver_by": "2027-02-22",
+   "source": "Scam Decoded alert cards, week of Mar 1, 2027: scam-recovery-for-a-fee, calls-from-the-ftc, free-trial-pay-shipping, debt-collectors-who-threaten-arrest, credit-repair-paid-up-front",
+   "topic": "Recovery offices that will get your scam losses back, for a fee",
+   "subject": "Scam alert: recovery offices that will get your scam losses back, for a fee",
+   "preheader": "Nobody real charges you upfront to get your money back. This is the second scam.",
+   "headline": "Recovery offices that will get your scam losses back, for a fee",
+   "example_label": "What it looks like (made-up example)",
+   "example": "\"This is the Federal Fraud Recovery Unit. We located $8,400 you lost last year. A $350 processing fee by gift card releases the refund today.\"",
+   "explain": [
+    "It arrives by call or email, usually from a \"fraud recovery\" office, a law firm or a government agency. They know you lost money before, and offer to get it back.",
+    "The refund needs a fee first: processing, retainer or tax. They want gift cards, crypto or a wire."
+   ],
+   "tell": "Nobody real charges you upfront to get your money back. This is the second scam.",
+   "promise": false,
+   "steps": [
+    "Hang up. Look up the agency or firm's number yourself and call it.",
+    "Never pay upfront for a refund, or give account numbers to \"deposit\" one.",
+    "**Paid already?** Call the gift card company or your bank on the number on the card right away and ask them to stop or reverse it."
+   ],
+   "quick_hits": [
+    "**Calls from \"the FTC\" about a prize, a virus or your account:** The caller uses the FTC's name, sometimes a real employee's. Hang up. The FTC never calls to demand money.",
+    "**Free trials that only cost shipping, then charge every month:** \"Free\" still needs your card, for shipping or a fee. Find the terms and the cancel steps before you sign up. No terms, no order.",
+    "**Debt collectors who threaten arrest and won't give an address:** A debt you don't recognize. Ask for the collector's name, address and the creditor, in writing. Pay nothing yet.",
+    "**Credit repair that wants $499 up front to wipe your record:** They promise to remove true, accurate information."
+   ],
+   "job": "Tell one person who'd get a call like this about it. The rule to pass on: Hang up. Look up the agency or firm's number yourself and call it.",
+   "lobby": {
+    "kicker": "Scam alert",
+    "headline": "Recovery offices that will get your scam losses back, for a fee",
+    "bullets": [
+     "They know you lost money before, and offer to get it back.",
+     "The refund needs a fee first: processing, retainer or tax.",
+     "Hang up."
+    ]
+   },
+   "social": {
+    "caption": "Scam alert: Recovery offices that will get your scam losses back, for a fee. They know you lost money before, and offer to get it back. Hang up. Look up the agency or firm's number yourself and call it. Report scams at ReportFraud.ftc.gov.",
+    "alt": "Scam alert: Recovery offices that will get your scam losses back, for a fee. Hang up."
+   },
+   "brief": {
+    "People may ask": "\"I got a call or email like this. Is it real?\"",
+    "What to say": "Hang up. Look up the agency or firm's number yourself and call it.",
+    "Escalate": "Paid already? Call the gift card company or your bank on the number on the card right away and ask them to stop or reverse it."
+   },
+   "sources": [
+    {
+     "name": "FTC: Refund and recovery scams",
+     "url": "https://consumer.ftc.gov/articles/refund-and-recovery-scams"
+    },
+    {
+     "name": "FTC consumer alert: The FTC won't demand money, threaten you, or promise you a prize",
+     "url": "https://consumer.ftc.gov/consumer-alerts/2023/07/ftc-wont-demand-money-threaten-you-or-promise-you-prize"
+    },
+    {
+     "name": "FTC: Getting in and out of free trials, auto-renewals and subscriptions",
+     "url": "https://consumer.ftc.gov/articles/getting-and-out-free-trials-auto-renewals-and-negative-option-subscriptions"
+    },
+    {
+     "name": "FTC: Fake and abusive debt collectors",
+     "url": "https://consumer.ftc.gov/articles/fake-abusive-debt-collectors"
+    },
+    {
+     "name": "FTC: Fixing your credit FAQs",
+     "url": "https://consumer.ftc.gov/articles/fixing-your-credit-faqs"
+    }
+   ]
   }
  ]
 }

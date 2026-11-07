@@ -60,6 +60,11 @@ Gaps: the plan has a card only on days with an alert. Write the next alert a few
 | Wed Jan 27 | 08:30 | warning | Investment "clubs" in group chats with a professor and big wins | `2027-01-27-investment-group-chat.png` |
 | Thu Jan 28 | 08:30 | watch | Fake IRS letters with a QR code to "claim your refund" | `2027-01-28-irs-qr-code-letter.png` |
 | Fri Jan 29 | 08:30 | warning | "A return was already filed with your SSN" | `2027-01-29-return-already-filed.png` |
+| Mon Mar 1 | 08:30 | urgent | Recovery offices that will get your scam losses back, for a fee | `2027-03-01-scam-recovery-for-a-fee.png` |
+| Tue Mar 2 | 08:30 | warning | Calls from "the FTC" about a prize, a virus or your account | `2027-03-02-calls-from-the-ftc.png` |
+| Wed Mar 3 | 08:30 | watch | Free trials that only cost shipping, then charge every month | `2027-03-03-free-trial-pay-shipping.png` |
+| Thu Mar 4 | 08:30 | warning | Debt collectors who threaten arrest and won't give an address | `2027-03-04-debt-collectors-who-threaten-arrest.png` |
+| Fri Mar 5 | 08:30 | warning | Credit repair that wants $499 up front to wipe your record | `2027-03-05-credit-repair-paid-up-front.png` |
 
 ## Captions
 
@@ -993,6 +998,96 @@ The giveaways: 1) Your e-file is rejected because your SSN was already used. 2) 
 What to do: Follow the IRS identity theft guide on irs.gov.
 
 Source: IRS: Identity theft guide for individuals (https://www.irs.gov/identity-theft-central/identity-theft-guide-for-individuals). The example on the card is made up.
+
+Not sure about a message? Paste it into our free scam checker (link in bio). It runs on your phone and sends nothing anywhere.
+
+#scamalert #scamawareness #fraudprevention #staysafeonline #scamdecoded
+```
+
+### 2027-03-01: Recovery offices that will get your scam losses back, for a fee
+
+Image: `2027-03-01-scam-recovery-for-a-fee.png`
+
+```
+Scam alert: Recovery offices that will get your scam losses back, for a fee.
+
+The giveaways: 1) They know you lost money before, and offer to get it back. 2) The refund needs a fee first: processing, retainer or tax. 3) They want gift cards, crypto or a wire.
+
+What to do: Hang up. Look up the agency or firm's number yourself and call it.
+
+Source: FTC: Refund and recovery scams (https://consumer.ftc.gov/articles/refund-and-recovery-scams). The example on the card is made up.
+
+Not sure about a message? Paste it into our free scam checker (link in bio). It runs on your phone and sends nothing anywhere.
+
+#scamalert #scamawareness #fraudprevention #staysafeonline #scamdecoded
+```
+
+### 2027-03-02: Calls from "the FTC" about a prize, a virus or your account
+
+Image: `2027-03-02-calls-from-the-ftc.png`
+
+```
+Scam alert: Calls from "the FTC" about a prize, a virus or your account.
+
+The giveaways: 1) The caller uses the FTC's name, sometimes a real employee's. 2) They want money, often in crypto, gift cards or a wire. 3) They threaten arrest, or promise a prize.
+
+What to do: Hang up. The FTC never calls to demand money.
+
+Source: FTC consumer alert: The FTC won't demand money, threaten you, or promise you a prize (https://consumer.ftc.gov/consumer-alerts/2023/07/ftc-wont-demand-money-threaten-you-or-promise-you-prize). The example on the card is made up.
+
+Not sure about a message? Paste it into our free scam checker (link in bio). It runs on your phone and sends nothing anywhere.
+
+#scamalert #scamawareness #fraudprevention #staysafeonline #scamdecoded
+```
+
+### 2027-03-03: Free trials that only cost shipping, then charge every month
+
+Image: `2027-03-03-free-trial-pay-shipping.png`
+
+```
+Scam alert: Free trials that only cost shipping, then charge every month.
+
+The giveaways: 1) "Free" still needs your card, for shipping or a fee. 2) A pre-checked box or tiny line signs you up to repeat charges. 3) No clear way to cancel.
+
+What to do: Find the terms and the cancel steps before you sign up. No terms, no order.
+
+Source: FTC: Getting in and out of free trials, auto-renewals and subscriptions (https://consumer.ftc.gov/articles/getting-and-out-free-trials-auto-renewals-and-negative-option-subscriptions). The example on the card is made up.
+
+Not sure about a message? Paste it into our free scam checker (link in bio). It runs on your phone and sends nothing anywhere.
+
+#scamalert #scamawareness #fraudprevention #staysafeonline #scamdecoded
+```
+
+### 2027-03-04: Debt collectors who threaten arrest and won't give an address
+
+Image: `2027-03-04-debt-collectors-who-threaten-arrest.png`
+
+```
+Scam alert: Debt collectors who threaten arrest and won't give an address.
+
+The giveaways: 1) A debt you don't recognize. 2) Threats of arrest or the police. 3) They won't give a mailing address or phone number.
+
+What to do: Ask for the collector's name, address and the creditor, in writing. Pay nothing yet.
+
+Source: FTC: Fake and abusive debt collectors (https://consumer.ftc.gov/articles/fake-abusive-debt-collectors). The example on the card is made up.
+
+Not sure about a message? Paste it into our free scam checker (link in bio). It runs on your phone and sends nothing anywhere.
+
+#scamalert #scamawareness #fraudprevention #staysafeonline #scamdecoded
+```
+
+### 2027-03-05: Credit repair that wants $499 up front to wipe your record
+
+Image: `2027-03-05-credit-repair-paid-up-front.png`
+
+```
+Scam alert: Credit repair that wants $499 up front to wipe your record.
+
+The giveaways: 1) They promise to remove true, accurate information. 2) They want payment before they've done anything. 3) They tell you not to contact the credit bureaus.
+
+What to do: Get your free reports at AnnualCreditReport.com, the only official site.
+
+Source: FTC: Fixing your credit FAQs (https://consumer.ftc.gov/articles/fixing-your-credit-faqs). The example on the card is made up.
 
 Not sure about a message? Paste it into our free scam checker (link in bio). It runs on your phone and sends nothing anywhere.
 

@@ -938,7 +938,7 @@ def build() -> list[str]:
     sm = "".join(f"<url><loc>{absu(p)}</loc></url>" for p in indexed)
     (OUT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n'
                                      f'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{sm}</urlset>\n')
-    (OUT / "robots.txt").write_text(f"User-agent: *\nDisallow: {u('/emails/')}\nDisallow: {u('/weekly/')}\nDisallow: {u('/free/thanks/')}\nDisallow: {u('/holiday/thanks/')}\n"
+    (OUT / "robots.txt").write_text(f"User-agent: *\nDisallow: {u('/emails/')}\nDisallow: {u('/weekly/')}\nDisallow: {u('/free/thanks/')}\nDisallow: {u('/holiday/thanks/')}\nDisallow: {u('/renting/thanks/')}\n"
                                     f"Sitemap: {absu('/sitemap.xml')}\n")
     return indexed
 

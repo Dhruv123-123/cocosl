@@ -67,6 +67,7 @@ FOOTAGE = {
     "Spring break scams": ("Fake booking sites", "Screen-record a search for a big hotel chain: point at the 'Sponsored' result, then type the chain's real address yourself and compare the domains. Book nothing."),
     "Job scams 2027": ("Fake recruiters", "Screen-record checking a recruiter email domain against a real, public company's careers page."),
     "Filing last minute?": ("Free extensions", "Screen-record irs.gov (typed in): the Free File page and the extension page for Form 4868."),
+    "Your consumer rights in 2027": ("Right 3: free credit reports", "Screen-record typing annualcreditreport.com, then the 'request your free credit reports' page. Stop before any personal details."),
     "After the storm": ("Hiring safely", "Screen-record your state's contractor license lookup: search a common business name and show the license status field."),
     "After Tax Day": ("Refund trackers", "Screen-record typing irs.gov and opening Where's My Refund. Stop before entering anything."),
     "How 1 hacked email": ("Two-step", "Screen-record turning on 2-step verification in your own email account settings (blur codes and the address)."),

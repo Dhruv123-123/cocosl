@@ -8,7 +8,7 @@ From a pasted scam message (drafts every field, plus a card to look at):
 
 --text guesses the scam type from the words in the message, circles up to 3 giveaways (links, money, deadlines,
 codes, gift cards, secrecy), and borrows the tells, steps and official source from the newest alert of the same
-type. The date defaults to the next free weekday after the last alert. The draft gets `status: draft`, so the site
+type. The date defaults to the first free weekday after the first alert (holidays skipped). The draft gets `status: draft`, so the site
 build skips it, and its card goes to launch/scam-decoded/alert-cards/drafts/. Read every line against the source,
 rewrite the example so it's clearly made up (no real names, numbers or links), then delete the status line and build.
 """
@@ -87,9 +87,11 @@ def find_flags(text: str, limit: int = 3) -> list[str]:
 
 
 def next_free_weekday(after: str | None = None) -> str:
+    """The first open weekday after `after`, or else the first gap in the calendar (so a block of alerts written ahead,
+    like National Consumer Protection Week, doesn't make drafts skip the empty weeks before it)."""
     taken = {front(p).get("alert_date", "") for p in ALERTS.glob("[0-9]*.md")}
-    last = max([t for t in taken if t] or [dt.date.today().isoformat()])
-    d = dt.date.fromisoformat(after or last)
+    first = min([t for t in taken if t] or [dt.date.today().isoformat()])
+    d = dt.date.fromisoformat(after or first)
     while True:
         d += dt.timedelta(days=1)
         if d.weekday() < 5 and d.strftime("%m-%d") not in HOLIDAYS and d.isoformat() not in taken:

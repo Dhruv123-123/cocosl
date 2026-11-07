@@ -784,3 +784,146 @@ def test_red_flags_printables_are_etsy_safe_signage(tmp_path):
     assert "How it's made" in etsy and "Personal use only" in etsy and "not legal, financial" in etsy
     assert "http" not in etsy and "scamdecoded." not in etsy.lower()
     assert all(f"mockup-0{i}" in listing for i in (1, 2, 3))
+
+
+def test_ncpw_pack_alerts_carousels_and_long_video():
+    import datetime as dt
+    from contentfactory.schemas import Script
+    from contentfactory import guardrails as G
+    root = CONTENT.parent
+    items = json.loads((root / "ncpw-2027.json").read_text())
+    assert [i["format"] for i in items] == ["carousel", "carousel", "long"]
+    dates = [i["post_on"] for i in items]
+    assert "2027-02-28" <= dates[0][:10] and dates[-1][:10] <= "2027-03-06"  # NCPW 2027: Feb 28 - Mar 6
+    taken, earlier = set(), set()
+    for f in root.glob("*.json"):
+        if f.name == "ncpw-2027.json":
+            continue
+        data = json.loads(f.read_text())
+        for i in data if isinstance(data, list) else []:
+            if isinstance(i, dict) and "script" in i:
+                earlier.add(i["script"]["title"])
+                if i.get("post_on"):
+                    taken.add(i["post_on"])
+    for line in (root / "POSTING_PLAN_WEEKS_13-21.md").read_text().splitlines():
+        cells = [c.strip() for c in line.strip().strip("|").split("|")]
+        m = re.match(r"\w{3} (Feb|Mar) (\d+)$", cells[0]) if len(cells) == 5 else None
+        if m:
+            day = f"2027-{2 if m.group(1) == 'Feb' else 3:02d}-{int(m.group(2)):02d}"
+            for col, time in ((1, "12:00"), (2, "12:00"), (3, "19:30"), (4, "10:00")):
+                if cells[col]:
+                    taken.add(f"{day} {time}")
+    assert not taken & set(dates), taken & set(dates)
+    for item in items:
+        sc = Script.model_validate(item["script"])
+        assert sc.title not in earlier and sc.claims_to_verify and len(sc.hashtags) <= 5
+        assert all("ftc.gov" in u for u in sc.sources), sc.title
+        assert item["topic"] != "consumer rights" or "https://consumer.ftc.gov/ncpw" in sc.sources
+        assert all(len(s.on_screen_text.split()) <= 12 for s in sc.segments)
+        text = G.script_text(item["script"])
+        assert "guarantee" not in text.lower()
+        for pats in (G.HYPE_PATTERNS, G.TESTIMONIAL_PATTERNS, G.ENGAGEMENT_BAIT):
+            assert G.check_patterns(text, pats, "x", "warn", "x").level == "ok", sc.title
+    long = items[-1]
+    assert sum(len(s["narration"].split()) for s in long["script"]["segments"]) >= 800
+    assert any(s.get("footage") for s in long["script"]["segments"]) and "Maya" in json.dumps(long)
+    assert long["script"]["title"] in (root / "LONG_VIDEO_RECORDINGS.md").read_text()
+    # one alert a day, Mon Mar 1 - Fri Mar 5, each from an FTC page
+    alerts = sorted((root.parent.parent / "sites" / "scam-decoded" / "content" / "alerts").glob("5[3-7]-*.md"))
+    days = []
+    for f in alerts:
+        meta = dict(l.split(": ", 1) for l in f.read_text().split("---")[1].strip().splitlines() if ": " in l)
+        assert "ftc.gov" in meta["source_url"] and len(meta["flags"].split("|")) == 3
+        days.append(meta["alert_date"])
+    assert days == [f"2027-03-0{d}" for d in range(1, 6)]
+    plan = (root / "POSTING_PLAN_NCPW_2027.md").read_text()
+    assert all(f"#{n} " in plan for n in range(3)) and plan.count("`5") == 5
+
+
+def test_news_hook_shorts_nov_2026_in_free_noon_slots():
+    from contentfactory.schemas import Script
+    from contentfactory import guardrails as G
+    root = CONTENT.parent
+    items = json.loads((root / "news-nov-2026.json").read_text())
+    assert len(items) == 5 and {i["topic"] for i in items} >= {"ghost tapping", "impostor ads", "open enrollment ads"}
+    dates = [i["post_on"] for i in items]
+    taken, earlier = set(), set()
+    for f in root.glob("*.json"):
+        if f.name == "news-nov-2026.json":
+            continue
+        data = json.loads(f.read_text())
+        for i in data if isinstance(data, list) else []:
+            if isinstance(i, dict) and "script" in i:
+                earlier.add(i["script"]["title"])
+                if i.get("post_on"):
+                    taken.add(i["post_on"])
+    months = {"Nov": "2026-11", "Dec": "2026-12"}
+    for name in ("POSTING_PLAN_WEEKS_3-6.md", "POSTING_PLAN.md"):
+        for line in (root / name).read_text().splitlines():
+            cells = [c.strip() for c in line.strip().strip("|").split("|")]
+            m = re.search(r"\w{3} (Nov|Dec) (\d+)", cells[0]) if len(cells) >= 4 else None
+            if m:
+                day = f"{months[m.group(1)]}-{int(m.group(2)):02d}"
+                for col, time in ((1, "12:00"), (2, "12:00"), (3, "19:30")):
+                    if cells[col]:
+                        taken.add(f"{day} {time}")
+                if len(cells) == 5 and cells[4]:
+                    taken.add(f"{day} 10:00")
+    assert not taken & set(dates), taken & set(dates)
+    assert all(a["look"] != b["look"] for a, b in zip(items, items[1:]))
+    for item in items:
+        sc = Script.model_validate(item["script"])
+        words = sum(len(s.narration.split()) for s in sc.segments)
+        assert 60 <= words <= 120 and len(sc.title) <= 60 and sc.title not in earlier, sc.title
+        assert any(ch.isdigit() for ch in sc.hook.split(".")[0][:60]) and len(sc.hashtags) <= 5
+        assert sc.claims_to_verify and all("ftc.gov" in u or "bbb.org" in u for u in sc.sources)
+        assert all(len(s.on_screen_text.split()) <= 12 for s in sc.segments)
+        text = G.script_text(item["script"])
+        assert "checker" in sc.caption and "guarantee" not in text.lower()
+        for pats in (G.HYPE_PATTERNS, G.TESTIMONIAL_PATTERNS, G.ENGAGEMENT_BAIT):
+            assert G.check_patterns(text, pats, "x", "warn", "x").level == "ok", sc.title
+
+
+def test_moving_season_pack_and_renting_checklist():
+    from contentfactory.schemas import Script
+    from contentfactory import guardrails as G
+    root = CONTENT.parent
+    items = json.loads((root / "moving-season-2027.json").read_text())
+    assert len(items) == 12 and sum(i["format"] == "carousel" for i in items) == 2
+    dates = [i["post_on"] for i in items]
+    assert dates == sorted(dates) and dates[0] > "2027-07-03 23:59"  # after the last planned week (weeks 31-34)
+    taken, earlier = set(), set()
+    for f in root.glob("*.json"):
+        if f.name == "moving-season-2027.json":
+            continue
+        data = json.loads(f.read_text())
+        for i in data if isinstance(data, list) else []:
+            if isinstance(i, dict) and "script" in i:
+                earlier.add(i["script"]["title"])
+                if i.get("post_on"):
+                    taken.add(i["post_on"])
+    assert not taken & set(dates)
+    videos = [i for i in items if i["format"] == "short"]
+    assert all(a["look"] != b["look"] for a, b in zip(videos, videos[1:]))
+    for item in items:
+        sc = Script.model_validate(item["script"])
+        if item["format"] == "short":
+            assert 60 <= sum(len(s.narration.split()) for s in sc.segments) <= 120 and len(sc.title) <= 60
+        assert sc.title not in earlier and any(ch.isdigit() for ch in sc.hook.split(".")[0][:60])
+        assert sc.claims_to_verify and len(sc.hashtags) <= 5
+        assert all("ftc.gov" in u or "fmcsa.dot.gov" in u for u in sc.sources), sc.title
+        assert all(len(s.on_screen_text.split()) <= 12 for s in sc.segments)
+        assert "checker" in sc.caption and "checklist" in sc.caption  # every post points to the free /renting/ checklist
+        text = G.script_text(item["script"])
+        assert "guarantee" not in text.lower()
+        for pats in (G.HYPE_PATTERNS, G.TESTIMONIAL_PATTERNS, G.ENGAGEMENT_BAIT):
+            assert G.check_patterns(text, pats, "x", "warn", "x").level == "ok", sc.title
+    site = root.parent.parent / "sites" / "scam-decoded"
+    cfg = json.loads((site / "site.json").read_text())["renting_checklist"]
+    pdf = site / "static" / "downloads" / cfg["file"]
+    assert pdf.read_bytes()[:4] == b"%PDF"
+    html = (site / "lead-magnet" / "renting-safely-checklist.html").read_text()
+    assert html.count('class="page"') == 1 and "ReportFraud.ftc.gov" in html and "FMCSA" in html
+    page = (site / "content" / "pages" / "renting.md").read_text()
+    assert "{{signup:renting-checklist|" in page and "/renting/thanks/" in page
+    assert "{{download:renting_checklist}}" in (site / "content" / "pages" / "renting-thanks.md").read_text()

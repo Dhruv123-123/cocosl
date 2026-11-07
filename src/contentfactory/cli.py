@@ -288,16 +288,6 @@ def cmd_import(args):
         print(f"post #{pid} [{post['format']}/{post['status']}] {post['title']}")
 
 
-def cmd_launch_pack(args):
-    from .launch_pack import build_pack
-    f = _factory(args)
-    res = build_pack(f, args.brand, Path(args.file), Path(args.out),
-                     render_videos=True if args.render_videos else None, extras=not args.no_extras)
-    for r in res["items"]:
-        print(f"post #{r['post_id']} [{r['format']}] {r['folder']}")
-    print(f"\nPack written to {res['out']} (see CONTENTS.md). Everything is in the review queue, unapproved.")
-
-
 def _pack_review(f, pid: int, value) -> None:
     """A pack item's "review": "native_review" | ["native_review", "legal_review"] marks the post (review gate)."""
     if not value:
@@ -311,6 +301,16 @@ def _pack_review(f, pid: int, value) -> None:
         require(f, pid, new, note="from the pack")
     except PermissionError as e:
         print(f"  post #{pid}: {e} (review marker not applied)")
+
+
+def cmd_launch_pack(args):
+    from .launch_pack import build_pack
+    f = _factory(args)
+    res = build_pack(f, args.brand, Path(args.file), Path(args.out),
+                     render_videos=True if args.render_videos else None, extras=not args.no_extras)
+    for r in res["items"]:
+        print(f"post #{r['post_id']} [{r['format']}] {r['folder']}")
+    print(f"\nPack written to {res['out']} (see CONTENTS.md). Everything is in the review queue, unapproved.")
 
 
 def cmd_niche(args):

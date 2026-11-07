@@ -212,6 +212,18 @@ def test_holiday_parents_guide_opt_in_and_seniors_upsell(tmp_path, monkeypatch):
     assert "/holiday/</loc>" in (out / "sitemap.xml").read_text()
 
 
+def test_renting_checklist_opt_in(tmp_path, monkeypatch):
+    mod, out = build(tmp_path, monkeypatch)
+    cfg = json.loads((ROOT / "site.json").read_text())["renting_checklist"]
+    assert (out / "downloads" / cfg["file"]).read_bytes()[:4] == b"%PDF"
+    landing = (out / "renting" / "index.html").read_text()
+    assert 'action="/renting/thanks/"' in landing and 'value="renting-checklist"' in landing
+    thanks = (out / "renting" / "thanks" / "index.html").read_text()
+    assert f'/downloads/{cfg["file"]}' in thanks and "noindex" in thanks
+    assert "/renting/thanks/" in (out / "robots.txt").read_text()
+    assert "/renting/</loc>" in (out / "sitemap.xml").read_text()
+
+
 def test_breach_checklist_page_is_static_and_links_official_sites():
     import re
     html = (ROOT / "public" / "breached" / "index.html").read_text()
