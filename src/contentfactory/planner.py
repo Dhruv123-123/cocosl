@@ -22,7 +22,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-ACTIVE = ("queued", "publishing", "published", "dry_run", "needs_check")
+ACTIVE = ("queued", "publishing", "published", "dry_run", "needs_check", "manual")
 
 
 def _zone(name: str):
@@ -30,6 +30,11 @@ def _zone(name: str):
         return ZoneInfo(name)
     except Exception:
         return timezone.utc
+
+
+def is_manual(platform: str) -> bool:
+    from .manual import is_manual as _m
+    return _m(platform)
 
 
 def entries(factory, days: int = 14, start: datetime | None = None) -> list[dict]:
@@ -47,6 +52,7 @@ def entries(factory, days: int = 14, start: datetime | None = None) -> list[dict
         r["at"] = datetime.fromisoformat(r["scheduled_at"])
         r["local"] = r["at"].astimezone(tz)
         r["flags"] = []
+        r["by_hand"] = is_manual(r["platform"])
     return rows
 
 
@@ -116,6 +122,9 @@ def to_ics(rows: list[dict], duration_minutes: int = 15) -> str:
         end = start + timedelta(minutes=duration_minutes)
         summary = f"[{r['brand']}] {r['platform']} {r['format']}: {r['title']}"
         desc = f"Post #{r['post_id']}, publication #{r['pub_id']}, status {r['status']}"
+        if r.get("by_hand"):
+            summary = "POST BY HAND: " + summary
+            desc += "\nThe factory doesn't upload this one. Open the package (factory manual) and post it from the app."
         if r["flags"]:
             summary = "⚠ " + summary
             desc += "\nProblems: " + "; ".join(r["flags"])
@@ -156,7 +165,8 @@ def to_html(rows: list[dict], problems: list[str], start: datetime, days: int) -
             items = "".join(
                 f'<div class="item{" bad" if r["flags"] else ""}" style="border-left-color:{color[r["brand"]]}" '
                 f'title="{html.escape("; ".join(r["flags"]) or r["status"])}">'
-                f'<b>{r["at"]:%H:%M}</b> {html.escape(r["platform"])} · {html.escape(r["format"])}<br>'
+                f'<b>{r["at"]:%H:%M}</b> {html.escape(r["platform"])} · {html.escape(r["format"])}'
+                f'{" · <em>post by hand</em>" if r.get("by_hand") else ""}<br>'
                 f'<span>{html.escape(r["title"][:70])}</span></div>' for r in cells.get(d, []))
             week.append(f'<td><div class="d">{d:%a %b %d}</div>{items}</td>')
         weeks.append("<tr>" + "".join(week) + "</tr>")

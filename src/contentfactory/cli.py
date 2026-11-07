@@ -308,6 +308,21 @@ def cmd_serve(args):
     uvicorn.run(app, host=args.host, port=args.port)
 
 
+def cmd_ui(args):
+    """The dashboard on this machine only, opened at /today."""
+    import threading
+    import webbrowser
+
+    import uvicorn
+
+    from .web.app import create_app
+    url = f"http://127.0.0.1:{args.port}/today"
+    print(f"Dashboard: {url} (only reachable from this computer; Ctrl+C to stop)")
+    if not args.no_browser:
+        threading.Timer(1.5, lambda: webbrowser.open(url)).start()
+    uvicorn.run(create_app(_factory(args)), host="127.0.0.1", port=args.port, log_level="warning")
+
+
 def cmd_demo(args):
     """Offline end-to-end run that produces real files you can look at."""
     import os
@@ -461,6 +476,11 @@ def build_parser() -> argparse.ArgumentParser:
     s.add_argument("--port", type=int, default=8000)
     s.set_defaults(func=cmd_serve)
 
+    s = sub.add_parser("ui", help="local dashboard (127.0.0.1 only): calendar, review queue, recordings, launch check")
+    s.add_argument("--port", type=int, default=8000)
+    s.add_argument("--no-browser", action="store_true")
+    s.set_defaults(func=cmd_ui)
+
     s = sub.add_parser("demo", help="offline end-to-end demo that renders sample posts")
     s.add_argument("--brand")
     s.set_defaults(func=cmd_demo)
@@ -475,7 +495,8 @@ def _extend(sub) -> None:
                 "contentfactory.community.cli", "contentfactory.site",
                 "contentfactory.renderq", "contentfactory.doctor", "contentfactory.backup",
                 "contentfactory.publish.preflight", "contentfactory.cleanup",
-                "contentfactory.planner", "contentfactory.launch_check", "contentfactory.stats"):
+                "contentfactory.planner", "contentfactory.launch_check", "contentfactory.stats",
+                "contentfactory.scaffold", "contentfactory.manual"):
         try:
             module = __import__(mod, fromlist=["register"])
         except ImportError:
