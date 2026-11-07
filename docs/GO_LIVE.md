@@ -128,8 +128,9 @@ $24). It's being moved to an archive; don't list those on Gumroad.
 - [ ] **Before each post, tick `launch/VERIFY_BEFORE_POSTING.md`:** the real HYSA APY (scripts use an
       illustrative 3.5%), that the linked bank is FDIC-insured with no monthly fee, take-home pay and tax
       estimates, the student-loan autopay discount and HSA/FSA limits. 15 min once, then 2 min per piece
-- [ ] Post by hand from `content-factory/launch-pack/POSTING_PLAN.md` (Nov 7–20): carousels are ready now;
-      videos wait for a voice (Stage 6). Check every number, keep the AI disclosure, switch on the
+- [ ] Post by hand from `launch/money-made-simple/LAUNCH_WEEK.md` (PR #5): Days 1–14 from Day 1 (default
+      Mon Nov 16), each platform at its own time, plus bios, pins and the first 8 Pinterest pins. Carousels are
+      ready now; videos wait for a voice (Stage 6). Check every number, keep the AI disclosure, switch on the
       platform AI label. 10 min/post
 - [ ] `SUPPORT_EMAIL` in `.env` (reply-to on the factory's welcome emails and sales pages). 2 min
 - [ ] Month 1 (Nov 21 – Dec 20) follows `content-factory/month-1/POSTING_PLAN.md`; import `calendar.ics`
@@ -354,24 +355,24 @@ the platform AI label. TikTok always goes up by hand from `factory ui` → Post 
 **Start Money Made Simple first and alone for at least a week.** Add one brand a week after that, in the
 order below, so you're never learning two sets of accounts at once.
 
-- **Money Made Simple** (`launch/money-made-simple/POSTING_PLAN.md`, 12:30 and 19:00 ET):
-  Day 1 short *The two-account trick that stops overdrafts* + carousel *The 20-minute monthly money date* ·
-  Day 2 short *Freeze your credit for free tonight* + long *Feel behind on money? A 30-day reset plan* ·
-  Day 3 short *Budget weekly, not monthly* + carousel *$1,000 emergency fund in 8 weeks* ·
-  Day 4 short *The raise you're ignoring: your 401(k) match* ·
-  Day 5 short *Paid in full, score still dropped?* + carousel *Check your credit report like an auditor* ·
-  Days 6–7 continue the plan. Month 1 (`content-factory/month-1/`) picks up on Nov 21.
+- **Money Made Simple** (`launch/money-made-simple/LAUNCH_WEEK.md`, the source of truth; Shorts 12:30 on
+  YouTube/IG/FB and 18:00 on TikTok, carousels 19:00 on Instagram and 11:00 on Pinterest, long videos 19:00):
+  with the default Day 1 of Mon Nov 16: Day 1 short *Stop overdraft fees: the two-account trick* + carousel
+  *The 20-minute monthly money date* · Day 2 short *Freeze your credit for free tonight* + long *How to get your
+  finances in order: a 30-day money reset* · Day 3 short *Budget weekly, not monthly* + carousel *$1,000
+  emergency fund in 8 weeks* · Day 4 short *401(k) match explained: the raise you're ignoring* · from Fri Nov 20
+  the dated packs take over (Black Friday add-on, then month 1 from Nov 21).
 - **Tiny Histories** (`launch/tiny-histories/POSTING_PLAN.md`, 17:00 ET, one post per platform per day):
   Day 1 long *Why your keyboard says QWERTY* + carousel *Jeans exist because of a $68 patent fee* ·
   Day 2 short *OK started as a misspelled joke* · Day 3 long *The fork was a scandal for 600 years* +
   carousel *Where the dollar sign came from* · Day 4 short *The barcode was drawn in the sand* ·
   Day 5 long *The Earl of Sandwich didn't invent the sandwich* + carousel *Nobody wanted the first shopping cart* ·
   Day 6 short *The glue that was too weak (Post-it)*.
-- **Scam Decoded** (`launch/scam-decoded/POSTING_PLAN.md`; each day is a Short, its 60–90 s TikTok cut, and
-  sometimes a carousel): Day 1 *$0 and 10 minutes: freeze your credit* · Day 2 *1 family safe word beats an
-  AI voice clone* (kit) · Day 3 *That $3.95 'unpaid toll' text* · Day 4 *0 real banks ask you to move money* ·
-  Day 5 *$110M+ lost at Bitcoin ATMs* · Day 6 *Read back a 6-digit code…* · Day 7 *3 ways to pay only
-  scammers insist on*.
+- **Scam Decoded** (`launch/scam-decoded/LAUNCH_WEEK.md` on PR #9, the source of truth): Day 1 is your call,
+  default **Mon Nov 30** (Cyber Monday, MMS day 15), with Mon Nov 23 as the earlier option. Day 1 is the channel
+  trailer (face cam, script in the file) plus the long *How to protect your parents from scams*. Week 1 runs at
+  half cadence on purpose. Anything dated before Day 1 is skipped, and the dated packs and 08:30 alert cards
+  resume from day 15. Bios, pins and every claim's source are in the same file.
 - **1099 Money** (`launch/1099-money/POSTING_PLAN.md`, written from Mon Nov 16 but held until the brand-3 gates pass (Stage 9), 12:30 and 19:00 ET):
   Day 1 short *Your first 1099 has no tax taken out* + carousel *$60K freelance income: what you actually owe* ·
   Day 2 short *The 15.3% tax nobody warned you about* · Day 3 short *Made $400 on the side? Read this* +
@@ -711,9 +712,9 @@ Do this once per brand, the morning its first post goes out. ≈ 45 minutes the 
 
 | Brand | First post | Extra checks for its launch day |
 |---|---|---|
-| Money Made Simple | short *The two-account trick that stops overdrafts*, 12:30 ET | the six Gumroad products and `BILLCUT5`/`BUDGET5`/`AUDIT5`/`DEBTFREE5`/`INVEST5` exist; `LAUNCH` ends Nov 14; swap in the real HYSA APY before any savings post; affiliate link only once approved |
+| Money Made Simple | short *Stop overdraft fees: the two-account trick*, Day 1 (default Mon Nov 16) 12:30 ET | the six Gumroad products and `BILLCUT5`/`BUDGET5`/`AUDIT5`/`DEBTFREE5`/`INVEST5` exist; `LAUNCH` ends Nov 14; swap in the real HYSA APY before any savings post; affiliate link only once approved |
 | Tiny Histories | long *Why your keyboard says QWERTY*, 17:00 ET | open the four source links in `VERIFY_BEFORE_POSTING.md`; contested stories stay worded as uncertain; no product link yet |
-| Scam Decoded | short *$0 and 10 minutes: freeze your credit* plus its TikTok cut | check `@scamdecoded` handles are yours; no real phone numbers or links on any slide; captions say a credit freeze is free; the $9 kit is live before the Day 2 kit post; Aura/1Password/NordVPN links only once approved |
+| Scam Decoded | channel trailer + long *How to protect your parents from scams*, Day 1 (default Mon Nov 30) 10:00 ET | check `@scamdecoded` handles are yours; no real phone numbers or links on any slide; captions say a credit freeze is free; the $9 kit is live before the Day 2 kit post; Aura/1Password/NordVPN links only once approved |
 | 1099 Money | short *Your first 1099 has no tax taken out*, **Mon Nov 16** 12:30 ET | confirm the 2026 figures and 2027 dates against irs.gov and ssa.gov; the $15 Quarterly Tax Tracker is live before the Day 1 product carousel |
 | Dinero Simple | short *El truco de las dos cuentas que evita sobregiros*, 12:30 ET | **the fluent reviewer has signed off** (`factory review-language <id> --by NAME` on every post); `RECORTE5` and `FECHA5` exist; Spanish voice, never the English one |
 | Ad studio | Post 1 *Before → after*, **Mon Nov 16** | studio site and order page are live; the caption says the sample is a spec ad for a made-up shop; first cold emails went out Nov 10, so the account is live when leads look it up |
