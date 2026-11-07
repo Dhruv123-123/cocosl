@@ -16,6 +16,7 @@ def _items(name="content.json"):
 
 MONTH1 = "month-1/content.json"
 MONTH2 = "month-2/content.json"
+MONTH3 = "month-3/content.json"
 
 
 def test_brand_loads_with_placeholder_affiliates(factory):
@@ -29,7 +30,7 @@ def test_brand_loads_with_placeholder_affiliates(factory):
 import pytest
 
 
-@pytest.mark.parametrize("name,counts", [("content.json", [14, 8, 2]), (MONTH1, [22, 13, 4]), (MONTH2, [22, 14, 4])])
+@pytest.mark.parametrize("name,counts", [("content.json", [14, 8, 2]), (MONTH1, [22, 13, 4]), (MONTH2, [22, 14, 4]), (MONTH3, [22, 13, 5])])
 def test_content_is_valid(factory, name, counts):
     from contentfactory.schemas import Script
     brand = factory.brand("1099-money")
@@ -68,6 +69,15 @@ def test_month_2_has_no_repeat_titles_and_fills_31_days(factory):
     month = _items(MONTH2)
     assert not earlier & {i["script"]["title"].lower() for i in month}
     slots, leftover = plan(factory.brand("1099-money"), month, date(2026, 12, 30), 31)
+    assert not leftover
+    assert {s.day for s in slots} == set(range(1, 32))
+
+
+def test_month_3_has_no_repeat_titles_and_fills_31_days(factory):
+    earlier = {i["script"]["title"].lower() for i in _items() + _items(MONTH1) + _items(MONTH2)}
+    month = _items(MONTH3)
+    assert not earlier & {i["script"]["title"].lower() for i in month}
+    slots, leftover = plan(factory.brand("1099-money"), month, date(2027, 1, 30), 31)
     assert not leftover
     assert {s.day for s in slots} == set(range(1, 32))
 
